@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant scrollMetric(QScrollerProperties::ScrollMetric metric) const
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_SETSCROLLMETRIC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefaultScrollerProperties(const QScrollerProperties &sp)
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void unsetDefaultScrollerProperties()
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_UNSETDEFAULTSCROLLERPROPERTIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSCROLLERPROPERTIES_NEWFROM)

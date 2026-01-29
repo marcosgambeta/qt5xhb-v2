@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString fileName() const = 0
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

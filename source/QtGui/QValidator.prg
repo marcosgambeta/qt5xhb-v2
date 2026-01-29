@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QVALIDATOR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void fixup(QString &input) const
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QVALIDATOR_FIXUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QLocale locale() const
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QValidator::State validate(QString &input, int &pos) const = 0

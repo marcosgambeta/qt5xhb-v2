@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QTCPSERVER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QTCPSERVER_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isListening() const
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int maxPendingConnections() const
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QTCPSERVER_PAUSEACCEPTING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resumeAccepting()
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QTCPSERVER_RESUMEACCEPTING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setProxy(const QNetworkProxy &networkProxy)
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QNetworkProxy proxy() const

@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void drawControl(QStyle::ControlElement ce, const QStyleOption &opt)
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex &opt)
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void drawItemText(const QRect &r, int flags, const QPalette &pal, bool enabled, const QString &text,
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void drawItemPixmap(const QRect &r, int flags, const QPixmap &pixmap)
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStyle *style() const

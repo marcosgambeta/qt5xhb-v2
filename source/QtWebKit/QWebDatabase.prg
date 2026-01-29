@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QWEBDATABASE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString displayName() const
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QWEBDATABASE_REMOVEALLDATABASES)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void removeDatabase(const QWebDatabase &db)
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QWEBDATABASE_REMOVEDATABASE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QWEBDATABASE_NEWFROM)

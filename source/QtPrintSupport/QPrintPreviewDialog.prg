@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void open(QObject *receiver, const char *member)
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPrinter *printer()
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setVisible(bool visible)
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void paintRequested(QPrinter *printer)

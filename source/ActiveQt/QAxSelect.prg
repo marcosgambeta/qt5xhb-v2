@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QAXSELECT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString clsid() const

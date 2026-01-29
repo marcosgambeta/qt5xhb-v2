@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addLayout(QLayout *layout, int stretch = 0)
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDLAYOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addSpacerItem(QSpacerItem *spacerItem)
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDSPACERITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addSpacing(int size)
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addStretch(int stretch = 0)
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDSTRETCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addStrut(int size)
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDSTRUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addWidget(QWidget *widget, int stretch = 0, Qt::Alignment alignment = 0)
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBoxLayout::Direction direction() const
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTLAYOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertSpacerItem(int index, QSpacerItem *spacerItem)
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTSPACERITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertSpacing(int index, int size)
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertStretch(int index, int stretch = 0)
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTSTRETCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertWidget(int index, QWidget *widget, int stretch = 0, Qt::Alignment alignment = 0)
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDirection(QBoxLayout::Direction direction)
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETDIRECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSpacing(int spacing)
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStretch(int index, int stretch)
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCHFACTOR)
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int count() const
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INVALIDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QLayoutItem *itemAt(int index) const
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const

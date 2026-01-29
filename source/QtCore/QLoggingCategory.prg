@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEnabled(QtMsgType type) const
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_SETENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isDebugEnabled() const
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_SETFILTERRULES)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLOGGINGCATEGORY_NEWFROM)

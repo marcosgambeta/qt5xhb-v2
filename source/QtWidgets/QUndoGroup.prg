@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QUNDOGROUP_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUndoStack *activeStack() const
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool canRedo() const
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QUndoStack *> stacks() const
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setActiveStack(QUndoStack *stack)
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void undo()
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void activeStackChanged(QUndoStack *stack)

@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QAXBINDABLE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QAxAggregated *createAggregate()
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QAXBINDABLE_REPORTERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool writeData(QIODevice *sink)

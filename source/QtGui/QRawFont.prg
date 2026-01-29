@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QRAWFONT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QRAWFONT_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString familyName() const
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QRAWFONT_SETPIXELSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal pixelSize() const
@@ -604,7 +604,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void loadFromData(const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference)
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QRAWFONT_SUPPORTSCHARACTER)

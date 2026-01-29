@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETROTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

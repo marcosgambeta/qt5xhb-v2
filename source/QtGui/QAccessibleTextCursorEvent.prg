@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCursorPosition(int position)
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int cursorPosition() const

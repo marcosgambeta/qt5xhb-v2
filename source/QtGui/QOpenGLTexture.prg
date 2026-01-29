@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DESTROY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BIND)
       obj->bind();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     // void bind(uint unit, QOpenGLTexture::TextureUnitReset reset = QOpenGLTexture::DontResetTextureUnit)
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BIND)
                               : PQOPENGLTEXTURE_TEXTUREUNITRESET(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_RELEASE)
       obj->release();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     // void release(uint unit, QOpenGLTexture::TextureUnitReset reset = QOpenGLTexture::DontResetTextureUnit)
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_RELEASE)
                                  : PQOPENGLTEXTURE_TEXTUREUNITRESET(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPLEVELS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETLAYERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ALLOCATESTORAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -677,7 +677,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPBASELEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -719,7 +719,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPMAXLEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -761,7 +761,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPLEVELRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -783,7 +783,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETAUTOMIPMAPGENERATIONENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -818,7 +818,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEMIPMAPS)
       obj->generateMipMaps();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISOPTLOG(2)) {
     // void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
@@ -829,7 +829,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEMIPMAPS)
       obj->generateMipMaps(PINT(1), OPBOOL(2, true));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
       obj->setSwizzleMask(PQOPENGLTEXTURE_SWIZZLECOMPONENT(1), PQOPENGLTEXTURE_SWIZZLEVALUE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setSwizzleMask(QOpenGLTexture::SwizzleValue r, QOpenGLTexture::SwizzleValue g, QOpenGLTexture::SwizzleValue
@@ -860,7 +860,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
                           PQOPENGLTEXTURE_SWIZZLEVALUE(3), PQOPENGLTEXTURE_SWIZZLEVALUE(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -905,7 +905,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETDEPTHSTENCILMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -947,7 +947,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINIFICATIONFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -989,7 +989,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAGNIFICATIONFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINMAGFILTERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAXIMUMANISOTROPY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETWRAPMODE)
       obj->setWrapMode(PQOPENGLTEXTURE_WRAPMODE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setWrapMode(QOpenGLTexture::CoordinateDirection direction, QOpenGLTexture::WrapMode mode)
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETWRAPMODE)
       obj->setWrapMode(PQOPENGLTEXTURE_COORDINATEDIRECTION(1), PQOPENGLTEXTURE_WRAPMODE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR3)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR4)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1269,7 +1269,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR3)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1317,7 +1317,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR4)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINIMUMLEVELOFDETAIL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAXIMUMLEVELOFDETAIL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETLEVELOFDETAILRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETLEVELOFDETAILBIAS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addState(QAbstractState *state)
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ADDSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeState(QAbstractState *state)
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_REMOVESTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStateMachine::Error error() const
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_CLEARERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isRunning() const
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_SETANIMATED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addDefaultAnimation(QAbstractAnimation *animation)
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ADDDEFAULTANIMATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QAbstractAnimation*> defaultAnimations() const
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_REMOVEDEFAULTANIMATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QState::RestorePolicy globalRestorePolicy() const
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_SETGLOBALRESTOREPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void postEvent(QEvent *event, QStateMachine::EventPriority priority = QStateMachine::NormalPriority)
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTEVENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int postDelayedEvent(QEvent *event, int delay)
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void started()

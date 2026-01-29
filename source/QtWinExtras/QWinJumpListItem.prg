@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETFILEPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETWORKINGDIRECTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETDESCRIPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETARGUMENTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

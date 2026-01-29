@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QQmlImageProviderBase::Flags flags() const = 0

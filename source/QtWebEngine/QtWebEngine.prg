@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QTWEBENGINE_INITIALIZE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

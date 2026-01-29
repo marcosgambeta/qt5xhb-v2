@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_SETLABEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_SETLABELBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_SETFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_SETPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_SETBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_SETSHAPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

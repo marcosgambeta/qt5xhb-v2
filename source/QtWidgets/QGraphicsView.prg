@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Alignment alignment() const
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
       obj->centerOn(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void centerOn(qreal x, qreal y)
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
       obj->centerOn(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
     // void centerOn(const QGraphicsItem *item)
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
       obj->centerOn(PQGRAPHICSITEM(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
       obj->ensureVisible(*PQRECTF(1), OPINT(2, 50), OPINT(3, 50));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5) &&
              ISNUMORNIL(6)) {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
       obj->ensureVisible(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5, 50), OPINT(6, 50));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISBETWEEN(1, 3) && HB_ISOBJECT(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // void ensureVisible(const QGraphicsItem *item, int xmargin = 50, int ymargin = 50)
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
       obj->ensureVisible(PQGRAPHICSITEM(1), OPINT(2, 50), OPINT(3, 50));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
       obj->fitInView(*PQRECTF(1), HB_ISNIL(2) ? Qt::IgnoreAspectRatio : PQT_ASPECTRATIOMODE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // void fitInView(qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio)
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
                      HB_ISNIL(5) ? Qt::IgnoreAspectRatio : PQT_ASPECTRATIOMODE(5));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISBETWEEN(1, 2) && HB_ISOBJECT(1) && ISNUMORNIL(2)) {
     // void fitInView(const QGraphicsItem *item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio)
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
       obj->fitInView(PQGRAPHICSITEM(1), HB_ISNIL(2) ? Qt::IgnoreAspectRatio : PQT_ASPECTRATIOMODE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPainter::RenderHints renderHints() const
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RESETCACHEDCONTENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resetMatrix()
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RESETMATRIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resetTransform()
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RESETTRANSFORM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QGraphicsView::ViewportAnchor resizeAnchor() const
@@ -692,7 +692,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ROTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::ItemSelectionMode rubberBandSelectionMode() const
@@ -730,7 +730,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QGraphicsScene *scene() const
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBackgroundBrush(const QBrush &brush)
@@ -807,7 +807,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETBACKGROUNDBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCacheMode(QGraphicsView::CacheMode mode)
@@ -827,7 +827,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETCACHEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDragMode(QGraphicsView::DragMode mode)
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETDRAGMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setForegroundBrush(const QBrush &brush)
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETFOREGROUNDBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setInteractive(bool allowed)
@@ -887,7 +887,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETINTERACTIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMatrix(const QMatrix &matrix, bool combine = false)
@@ -907,7 +907,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETMATRIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOptimizationFlag(QGraphicsView::OptimizationFlag flag, bool enabled = true)
@@ -927,7 +927,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETOPTIMIZATIONFLAG)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOptimizationFlags(QGraphicsView::OptimizationFlags flags)
@@ -947,7 +947,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRenderHint(QPainter::RenderHint hint, bool enabled = true)
@@ -967,7 +967,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRENDERHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRenderHints(QPainter::RenderHints hints)
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRENDERHINTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setResizeAnchor(QGraphicsView::ViewportAnchor anchor)
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRESIZEANCHOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRubberBandSelectionMode(Qt::ItemSelectionMode mode)
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScene(QGraphicsScene *scene)
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENERECT)
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENERECT)
       obj->setSceneRect(*PQRECTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setSceneRect(qreal x, qreal y, qreal w, qreal h)
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENERECT)
       obj->setSceneRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETTRANSFORM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTransformationAnchor(QGraphicsView::ViewportAnchor anchor)
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setViewportUpdateMode(QGraphicsView::ViewportUpdateMode mode)
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void shear(qreal sh, qreal sv)
@@ -1154,7 +1154,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SHEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTransform transform() const
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_TRANSLATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTransform viewportTransform() const
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INVALIDATESCENE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void updateScene(const QList<QRectF> &rects)
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_UPDATESCENE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void updateSceneRect(const QRectF &rect)
@@ -1349,7 +1349,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_UPDATESCENERECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

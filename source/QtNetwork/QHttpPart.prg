@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QHTTPPART_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBody(const QByteArray &body)
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBodyDevice(QIODevice *device)
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QHTTPPART_SETHEADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QHTTPPART_SETRAWHEADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QHttpPart &other) Q_DECL_NOTHROW
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QHTTPPART_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QHTTPPART_NEWFROM)

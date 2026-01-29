@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QList<QByteArray> availableDevices(QAudio::Mode) const = 0

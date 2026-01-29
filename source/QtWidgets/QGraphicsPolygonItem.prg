@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::FillRule fillRule() const
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPolygon(const QPolygonF &polygon)
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETPOLYGON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QRectF boundingRect() const
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_PAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QPainterPath shape() const

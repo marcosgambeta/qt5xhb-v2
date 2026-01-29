@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QWEBSOCKET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ABORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETPROXY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETMASKGENERATOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETREADBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QWEBSOCKET_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETPAUSEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -729,7 +729,7 @@ HB_FUNC_STATIC(QWEBSOCKET_IGNORESSLERRORS)
       obj->ignoreSslErrors(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(0)) {
     // void ignoreSslErrors()
@@ -740,7 +740,7 @@ HB_FUNC_STATIC(QWEBSOCKET_IGNORESSLERRORS)
       obj->ignoreSslErrors();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETSSLCONFIGURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -809,7 +809,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -831,7 +831,7 @@ HB_FUNC_STATIC(QWEBSOCKET_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -853,7 +853,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

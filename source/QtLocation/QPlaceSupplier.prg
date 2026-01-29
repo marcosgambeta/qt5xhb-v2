@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SETSUPPLIERID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

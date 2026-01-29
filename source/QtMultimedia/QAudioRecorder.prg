@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString audioInput() const
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_SETAUDIOINPUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString audioInputDescription(const QString &name) const

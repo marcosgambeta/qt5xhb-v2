@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QNetworkConfiguration currentConfiguration() const = 0
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void configurationChanged(const QNetworkConfiguration &configuration)

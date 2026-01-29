@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QQuickItem *activeFocusItem() const
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETCLEARBEFORERENDERING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setColor(const QColor &color)
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPersistentOpenGLContext(bool persistent)
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPersistentSceneGraph(bool persistent)
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETPERSISTENTSCENEGRAPH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
       obj->setRenderTarget(PQOPENGLFRAMEBUFFEROBJECT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZE(2)) {
     // void setRenderTarget(uint fboId, const QSize &size)
     auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
       obj->setRenderTarget(PUINT(1), *PQSIZE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RELEASERESOURCES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void update()
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_UPDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void afterRendering()

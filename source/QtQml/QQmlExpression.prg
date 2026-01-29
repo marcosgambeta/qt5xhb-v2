@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clearError()
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_CLEARERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int columnNumber() const
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETEXPRESSION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNotifyOnValueChanged(bool notifyOnChange)
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETNOTIFYONVALUECHANGED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSourceLocation(const QString &url, int line, int column = 0)
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETSOURCELOCATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString sourceFile() const

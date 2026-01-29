@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QTEMPORARYDIR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoRemove() const
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QTEMPORARYDIR_SETAUTOREMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEMPORARYDIR_NEWFROM)

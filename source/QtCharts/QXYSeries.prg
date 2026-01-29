@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QXYSERIES_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTSVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QXYSERIES_SETCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCLIPPING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
       obj->append(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void append(const QPointF &point)
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
       obj->append(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void append(const QList<QPointF> &points)
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
       obj->append(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
       obj->replace(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2)) {
     // void replace(const QPointF &oldPoint, const QPointF &newPoint)
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
       obj->replace(*PQPOINTF(1), *PQPOINTF(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void replace(int index, qreal newX, qreal newY)
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
       obj->replace(PINT(1), PQREAL(2), PQREAL(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2)) {
     // void replace(int index, const QPointF &newPoint)
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
       obj->replace(PINT(1), *PQPOINTF(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void replace(QList<QPointF> points)
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
       obj->replace(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void replace(QVector<QPointF> points)
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
       obj->replace(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
       obj->remove(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void remove(const QPointF &point)
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
       obj->remove(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void remove(int index)
@@ -556,7 +556,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
       obj->remove(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVEPOINTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QXYSERIES_INSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QXYSERIES_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -772,7 +772,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -814,7 +814,7 @@ HB_FUNC_STATIC(QXYSERIES_SETBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

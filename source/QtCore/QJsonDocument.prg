@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QJsonArray array() const
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETARRAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setObject(const QJsonObject &object)
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray toBinaryData() const

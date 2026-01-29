@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // uint count() const

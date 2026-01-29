@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QImageIOPlugin::Capabilities capabilities(QIODevice *device, const QByteArray &format) const = 0

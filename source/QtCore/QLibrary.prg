@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QLIBRARY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool load()
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString fileName() const
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
       obj->setFileNameAndVersion(PQSTRING(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void setFileNameAndVersion(const QString &fileName, const QString &version)
     auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
       obj->setFileNameAndVersion(PQSTRING(1), PQSTRING(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QLIBRARY_SETLOADHINTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QLibrary::LoadHints loadHints() const

@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_SETSTARTVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_SETLABELSPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_APPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_REMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_REPLACELABEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

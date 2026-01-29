@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QSTYLEPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QStyle *create(const QString &key) = 0

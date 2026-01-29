@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool openUrl(const QUrl &url)
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void unsetUrlHandler(const QString &scheme)
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_UNSETURLHANDLER)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDESKTOPSERVICES_NEWFROM)

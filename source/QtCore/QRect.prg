@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QRECT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void adjust(int dx1, int dy1, int dx2, int dy2)
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QRECT_ADJUST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect adjusted(int dx1, int dy1, int dx2, int dy2) const
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QRECT_GETCOORDS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void getRect(int *x, int *y, int *width, int *height) const
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QRECT_GETRECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int height() const
@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QRECT_MOVEBOTTOM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void moveBottomLeft(const QPoint &position)
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QRECT_MOVEBOTTOMLEFT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void moveBottomRight(const QPoint &position)
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QRECT_MOVEBOTTOMRIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void moveCenter(const QPoint &position)
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QRECT_MOVECENTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void moveLeft(int x)
@@ -566,7 +566,7 @@ HB_FUNC_STATIC(QRECT_MOVELEFT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void moveRight(int x)
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(QRECT_MOVERIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QRECT_MOVETO)
@@ -599,7 +599,7 @@ HB_FUNC_STATIC(QRECT_MOVETO)
       obj->moveTo(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void moveTo(const QPoint &position)
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -608,7 +608,7 @@ HB_FUNC_STATIC(QRECT_MOVETO)
       obj->moveTo(*PQPOINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QRECT_MOVETOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void moveTopLeft(const QPoint &position)
@@ -651,7 +651,7 @@ HB_FUNC_STATIC(QRECT_MOVETOPLEFT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void moveTopRight(const QPoint &position)
@@ -671,7 +671,7 @@ HB_FUNC_STATIC(QRECT_MOVETOPRIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect normalized() const
@@ -727,7 +727,7 @@ HB_FUNC_STATIC(QRECT_SETBOTTOM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBottomLeft(const QPoint &position)
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QRECT_SETBOTTOMLEFT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBottomRight(const QPoint &position)
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QRECT_SETBOTTOMRIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCoords(int x1, int y1, int x2, int y2)
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QRECT_SETCOORDS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHeight(int height)
@@ -807,7 +807,7 @@ HB_FUNC_STATIC(QRECT_SETHEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLeft(int x)
@@ -827,7 +827,7 @@ HB_FUNC_STATIC(QRECT_SETLEFT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRect(int x, int y, int width, int height)
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QRECT_SETRECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRight(int x)
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QRECT_SETRIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSize(const QSize &size)
@@ -887,7 +887,7 @@ HB_FUNC_STATIC(QRECT_SETSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTop(int y)
@@ -907,7 +907,7 @@ HB_FUNC_STATIC(QRECT_SETTOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTopLeft(const QPoint &position)
@@ -927,7 +927,7 @@ HB_FUNC_STATIC(QRECT_SETTOPLEFT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTopRight(const QPoint &position)
@@ -947,7 +947,7 @@ HB_FUNC_STATIC(QRECT_SETTOPRIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidth(int width)
@@ -967,7 +967,7 @@ HB_FUNC_STATIC(QRECT_SETWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setX(int x)
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QRECT_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setY(int y)
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC(QRECT_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize size() const
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATE)
       obj->translate(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void translate(const QPoint &offset)
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATE)
       obj->translate(*PQPOINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

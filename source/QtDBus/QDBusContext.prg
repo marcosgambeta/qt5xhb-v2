@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool calledFromDBus() const
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SETDELAYEDREPLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
       obj->sendErrorReply(PQSTRING(1), OPQSTRING(2, QString()));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2)) {
     // void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
     auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
       obj->sendErrorReply(PQDBUSERROR_ERRORTYPE(1), OPQSTRING(2, QString()));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

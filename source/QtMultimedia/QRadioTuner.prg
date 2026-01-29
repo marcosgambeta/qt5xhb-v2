@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QRADIOTUNER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRadioTuner::State state() const
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SETBAND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int frequency() const
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SETFREQUENCY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isStereo() const
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SETSTEREOMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int signalStrength() const
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SETVOLUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isMuted() const
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SETMUTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isSearching() const
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SEARCHFORWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void searchBackward()
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SEARCHBACKWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void searchAllStations(QRadioTuner::SearchMode searchMode = QRadioTuner::SearchFast)
@@ -557,7 +557,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SEARCHALLSTATIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void cancelSearch()
@@ -577,7 +577,7 @@ HB_FUNC_STATIC(QRADIOTUNER_CANCELSEARCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void start()
@@ -597,7 +597,7 @@ HB_FUNC_STATIC(QRADIOTUNER_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -617,7 +617,7 @@ HB_FUNC_STATIC(QRADIOTUNER_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stateChanged(QRadioTuner::State state)

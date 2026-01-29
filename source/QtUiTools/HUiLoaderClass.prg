@@ -65,7 +65,7 @@ HB_FUNC_STATIC(HUILOADER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *createAction(QObject *parent = nullptr, const QString &name = QString())
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCreateActionGroupCB (PHB_ITEM block)
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCreateLayoutCB (PHB_ITEM block)
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCreateWidgetCB (PHB_ITEM block)
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEWIDGETCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QPICTUREIO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QPicture &picture() const
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETPICTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStatus(int)
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETSTATUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const char *)
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIODevice(QIODevice *)
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETIODEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFileName(const QString &)
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setQuality(int)
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETQUALITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDescription(const QString &)
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETDESCRIPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setParameters(const char *)
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETPARAMETERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setGamma(float)
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETGAMMA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool read()

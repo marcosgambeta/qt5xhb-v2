@@ -58,7 +58,7 @@ HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEventFilterCB (PHB_ITEM block)
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QWEBPAGE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isModified() const
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVIEWPORTSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize preferredContentsSize() const
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPREFERREDCONTENTSSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool forwardUnsupportedContent() const
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebPage::LinkDelegationPolicy linkDelegationPolicy() const
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETLINKDELEGATIONPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPalette palette() const
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPALETTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isContentEditable() const
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETCONTENTEDITABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebPage::VisibilityState visibilityState() const
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVISIBILITYSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *action (WebAction action) const
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETNETWORKACCESSMANAGER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPluginFactory(QWebPluginFactory *factory)
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPLUGINFACTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setView(QWidget *view)
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVIEW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebSettings *settings() const
@@ -865,7 +865,7 @@ HB_FUNC_STATIC(QWEBPAGE_TRIGGERACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUndoStack *undoStack () const
@@ -906,7 +906,7 @@ HB_FUNC_STATIC(QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *view() const
@@ -982,7 +982,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETACTUALVISIBLECONTENTRECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFeaturePermission(QWebFrame *frame, QWebPage::Feature feature, QWebPage::PermissionPolicy policy)
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETFEATUREPERMISSION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList supportedContentTypes() const

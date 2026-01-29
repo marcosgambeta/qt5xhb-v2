@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QMATRIX_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QMATRIX_SETMATRIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal m11() const
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QMATRIX_MAP1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void map(qreal x, qreal y, qreal *tx, qreal *ty) const
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QMATRIX_MAP2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMATRIX_MAP)
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QMATRIX_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isIdentity() const

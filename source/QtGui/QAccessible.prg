@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QACCESSIBLE_UPDATEACCESSIBILITY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool isActive()
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void cleanup()
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QACCESSIBLE_CLEANUP)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

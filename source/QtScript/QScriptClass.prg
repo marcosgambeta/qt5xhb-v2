@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptEngine *engine() const
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool supportsExtension(QScriptClass::Extension extension) const

@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDomNamedNodeMap entities() const

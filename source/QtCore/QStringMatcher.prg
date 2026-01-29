@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPattern(const QString &pattern)
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCaseSensitivity(Qt::CaseSensitivity cs)
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)

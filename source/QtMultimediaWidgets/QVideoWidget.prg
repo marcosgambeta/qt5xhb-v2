@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMediaObject *mediaObject() const
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_SETFULLSCREEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAspectRatioMode(Qt::AspectRatioMode mode)
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_SETASPECTRATIOMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBrightness(int brightness)
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_SETBRIGHTNESS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setContrast(int contrast)
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_SETCONTRAST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHue(int hue)
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_SETHUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSaturation(int saturation)
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_SETSATURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void fullScreenChanged(bool fullScreen)

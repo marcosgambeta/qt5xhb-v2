@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // double bottom() const
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETBOTTOM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDecimals(int)
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETDECIMALS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNotation(QDoubleValidator::Notation)
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETNOTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setRange(double minimum, double maximum, int decimals = 0)
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTop(double)
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETTOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // double top() const

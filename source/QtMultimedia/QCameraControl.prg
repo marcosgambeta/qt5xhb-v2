@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool canChangeProperty(QCameraControl::PropertyChangeType changeType, QCamera::Status status) const = 0
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_SETCAPTUREMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setState(QCamera::State state) = 0
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_SETSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QCamera::State state() const = 0

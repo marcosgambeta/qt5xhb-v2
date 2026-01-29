@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAudioFormat::Endian byteOrder() const
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETBYTEORDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setChannelCount(int channelCount)
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETCHANNELCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCodec(const QString &codec)
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETCODEC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSampleRate(int sampleRate)
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLERATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSampleSize(int sampleSize)
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSampleType(QAudioFormat::SampleType sampleType)
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLETYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint32 bytesForDuration(qint64 duration) const

@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void activateCurrentItem()
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void filterIndices(const QString &filter, const QString &wildcard = QString())
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void linkActivated(const QUrl &link, const QString &keyword)

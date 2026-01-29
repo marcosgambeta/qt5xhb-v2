@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScopeObject(QObject *object)
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScript(const QString &script)
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCRIPT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEWFROM)

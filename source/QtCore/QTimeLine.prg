@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QTIMELINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int currentFrame() const
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURVESHAPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDirection(QTimeLine::Direction direction)
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDIRECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDuration(int duration)
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEasingCurve(const QEasingCurve &curve)
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEndFrame(int frame)
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QTIMELINE_SETENDFRAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFrameRange(int startFrame, int endFrame)
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QTIMELINE_SETFRAMERANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLoopCount(int count)
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QTIMELINE_SETLOOPCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStartFrame(int frame)
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QTIMELINE_SETSTARTFRAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUpdateInterval(int interval)
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QTIMELINE_SETUPDATEINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int startFrame() const
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QTIMELINE_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentTime(int msec)
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURRENTTIME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPaused(bool paused)
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QTIMELINE_SETPAUSED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void start()
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QTIMELINE_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QTIMELINE_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toggleDirection()
@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QTIMELINE_TOGGLEDIRECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void finished()

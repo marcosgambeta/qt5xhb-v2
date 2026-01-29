@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSSLERROR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSslCertificate certificate() const
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSSLERROR_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSSLERROR_NEWFROM)

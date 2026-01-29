@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QABSTRACTURIRESOLVER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QUrl resolve(const QUrl &relative, const QUrl &baseURI) const = 0

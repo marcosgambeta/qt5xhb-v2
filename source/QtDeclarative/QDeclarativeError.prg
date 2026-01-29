@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDescription(const QString &description)
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETDESCRIPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLine(int line)
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUrl(const QUrl &url)
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString toString() const

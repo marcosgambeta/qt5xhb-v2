@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination)

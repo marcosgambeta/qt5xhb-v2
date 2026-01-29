@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QTILTREADING_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QTILTREADING_SETYROTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QTILTREADING_SETXROTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

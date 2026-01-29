@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPointF center() const
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTER)
       obj->setCenter(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setCenter(qreal x, qreal y)
     auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTER)
       obj->setCenter(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTERRADIUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
       obj->setFocalPoint(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setFocalPoint(qreal x, qreal y)
     auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
       obj->setFocalPoint(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALRADIUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRadius(qreal radius)
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETRADIUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

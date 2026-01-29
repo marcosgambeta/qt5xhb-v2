@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QMAGNETOMETER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QMAGNETOMETER_SETRETURNGEOVALUES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

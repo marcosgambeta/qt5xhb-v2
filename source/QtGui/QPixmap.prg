@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QPIXMAP_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QPixmap &other)
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QPIXMAP_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QPIXMAP_FILL)
       obj->fill(HB_ISNIL(1) ? Qt::white : *PQCOLOR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISOBJECT(1) && ISQPOINT(2)) {
     // void fill(const QPaintDevice *device, const QPoint &ofs)
     auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QPIXMAP_FILL)
       obj->fill(PQPAINTDEVICE(1), *PQPOINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && HB_ISOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void fill(const QPaintDevice *device, int xofs, int yofs)
     auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QPIXMAP_FILL)
       obj->fill(PQPAINTDEVICE(1), PINT(2), PINT(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QPIXMAP_SETMASK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal devicePixelRatio() const
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QPIXMAP_SETDEVICEPIXELRATIO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasAlpha() const
@@ -677,7 +677,7 @@ HB_FUNC_STATIC(QPIXMAP_SCROLL)
       obj->scroll(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PINT(6), HB_ISNIL(7) ? nullptr : PQREGION(7));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3) && ISQREGIONORNIL(4)) {
     // void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = nullptr)
     auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QPIXMAP_SCROLL)
       obj->scroll(PINT(1), PINT(2), *PQRECT(3), HB_ISNIL(4) ? nullptr : PQREGION(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -745,7 +745,7 @@ HB_FUNC_STATIC(QPIXMAP_DETACH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isQBitmap() const

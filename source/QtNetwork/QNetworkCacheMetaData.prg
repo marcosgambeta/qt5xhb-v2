@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QNetworkCacheMetaData &other) Q_DECL_NOTHROW
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // RawHeaderList rawHeaders() const
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETLASTMODIFIED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDateTime expirationDate() const
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETEXPIRATIONDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool saveToDisk() const
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETSAVETODISK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // AttributesMap attributes() const

@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QLISTVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int batchSize() const
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QLISTVIEW_CLEARPROPERTYFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QListView::Flow flow() const
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETBATCHSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlow(QListView::Flow flow)
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETFLOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setGridSize(const QSize &size)
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETGRIDSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLayoutMode(QListView::LayoutMode mode)
@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETLAYOUTMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setModelColumn(int column)
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETMODELCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMovement(QListView::Movement movement)
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETMOVEMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setResizeMode(QListView::ResizeMode mode)
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETRESIZEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRowHidden(int row, bool hide)
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETROWHIDDEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSelectionRectVisible(bool show)
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETSELECTIONRECTVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSpacing(int space)
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformItemSizes(bool enable)
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETUNIFORMITEMSIZES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setViewMode(QListView::ViewMode mode)
@@ -604,7 +604,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETVIEWMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWordWrap(bool on)
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETWORDWRAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWrapping(bool enable)
@@ -644,7 +644,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETWRAPPING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int spacing() const
@@ -754,7 +754,7 @@ HB_FUNC_STATIC(QLISTVIEW_SCROLLTO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QRect visualRect(const QModelIndex &index) const

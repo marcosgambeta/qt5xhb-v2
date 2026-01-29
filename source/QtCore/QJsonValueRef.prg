@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QJsonValue::Type type() const

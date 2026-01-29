@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QDATE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDate addDays(int ndays) const
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QDATE_GETDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const

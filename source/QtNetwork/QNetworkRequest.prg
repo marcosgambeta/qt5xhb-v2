@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant attribute(QNetworkRequest::Attribute code, const QVariant &defaultValue = QVariant()) const
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETHEADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOriginatingObject(QObject *object)
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETORIGINATINGOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPriority(QNetworkRequest::Priority priority)
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETPRIORITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRawHeader(const QByteArray &headerName, const QByteArray &value)
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETRAWHEADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSslConfiguration(const QSslConfiguration &configuration)
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETSSLCONFIGURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUrl(const QUrl &url)
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSslConfiguration sslConfiguration() const
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int maximumRedirectsAllowed() const
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETMAXIMUMREDIRECTSALLOWED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

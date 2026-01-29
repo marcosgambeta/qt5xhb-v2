@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon icon() const
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize iconSize() const
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETICONSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QKeySequence shortcut() const
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETSHORTCUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isChecked() const
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoRepeat() const
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoExclusive() const
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOEXCLUSIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int autoRepeatDelay() const
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATDELAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int autoRepeatInterval() const
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isDown() const
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETDOWN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QButtonGroup *group() const
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ANIMATECLICK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void click()
@@ -633,7 +633,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_CLICK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toggle()
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_TOGGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clicked(bool checked = false)

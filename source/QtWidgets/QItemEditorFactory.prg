@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QWidget *createEditor(int userType, QWidget *parent) const
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static const QItemEditorFactory *defaultFactory()
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_SETDEFAULTFACTORY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QITEMEDITORFACTORY_NEWFROM)

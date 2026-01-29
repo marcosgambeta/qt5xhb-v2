@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QQUICKITEM_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool acceptHoverEvents() const
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QQUICKITEM_FORCEACTIVEFOCUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void grabMouse()
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QQUICKITEM_GRABMOUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasActiveFocus() const
@@ -815,7 +815,7 @@ HB_FUNC_STATIC(QQUICKITEM_POLISH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resetHeight()
@@ -835,7 +835,7 @@ HB_FUNC_STATIC(QQUICKITEM_RESETHEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resetWidth()
@@ -855,7 +855,7 @@ HB_FUNC_STATIC(QQUICKITEM_RESETWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal rotation() const
@@ -930,7 +930,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETACCEPTHOVEREVENTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAcceptedMouseButtons(Qt::MouseButtons buttons)
@@ -950,7 +950,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETACCEPTEDMOUSEBUTTONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAntialiasing(bool)
@@ -970,7 +970,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETANTIALIASING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBaselineOffset(qreal)
@@ -990,7 +990,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETBASELINEOFFSET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setClip(bool)
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETCLIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCursor(const QCursor &cursor)
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETCURSOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEnabled(bool)
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFiltersChildMouseEvents(bool filter)
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETFILTERSCHILDMOUSEEVENTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlag(QQuickItem::Flag flag, bool enabled = true)
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETFLAG)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlags(QQuickItem::Flags flags)
@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFocus(bool)
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETFOCUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHeight(qreal)
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETHEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setImplicitHeight(qreal)
@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETIMPLICITHEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setImplicitWidth(qreal)
@@ -1190,7 +1190,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETIMPLICITWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setKeepMouseGrab(bool keep)
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETKEEPMOUSEGRAB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setKeepTouchGrab(bool keep)
@@ -1230,7 +1230,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETKEEPTOUCHGRAB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOpacity(qreal)
@@ -1250,7 +1250,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETOPACITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setParentItem(QQuickItem *parent)
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETPARENTITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRotation(qreal)
@@ -1290,7 +1290,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETROTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScale(qreal)
@@ -1310,7 +1310,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETSCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSmooth(bool)
@@ -1330,7 +1330,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETSMOOTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setState(const QString &)
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTransformOrigin(QQuickItem::TransformOrigin)
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETTRANSFORMORIGIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVisible(bool)
@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidth(qreal)
@@ -1410,7 +1410,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setX(qreal)
@@ -1430,7 +1430,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setY(qreal)
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setZ(qreal)
@@ -1470,7 +1470,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool smooth() const
@@ -1508,7 +1508,7 @@ HB_FUNC_STATIC(QQUICKITEM_STACKAFTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stackBefore(const QQuickItem *sibling)
@@ -1528,7 +1528,7 @@ HB_FUNC_STATIC(QQUICKITEM_STACKBEFORE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString state() const
@@ -1603,7 +1603,7 @@ HB_FUNC_STATIC(QQUICKITEM_UNGRABMOUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void ungrabTouchPoints()
@@ -1623,7 +1623,7 @@ HB_FUNC_STATIC(QQUICKITEM_UNGRABTOUCHPOINTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void unsetCursor()
@@ -1643,7 +1643,7 @@ HB_FUNC_STATIC(QQUICKITEM_UNSETCURSOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal width() const
@@ -1754,7 +1754,7 @@ HB_FUNC_STATIC(QQUICKITEM_UPDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

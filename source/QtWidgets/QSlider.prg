@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSLIDER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int tickInterval() const
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSlider::TickPosition tickPosition() const
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool event(QEvent *event)

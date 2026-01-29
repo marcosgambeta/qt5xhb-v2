@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOSTART)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toEnd()
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int position() const
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int toNextBoundary()

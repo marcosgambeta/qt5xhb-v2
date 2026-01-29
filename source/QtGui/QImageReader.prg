@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QIMAGEREADER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoDetectImageFormat() const
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETAUTODETECTIMAGEFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBackgroundColor(const QColor &color)
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETBACKGROUNDCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setClipRect(const QRect &rect)
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETCLIPRECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDecideFormatFromContent(bool ignored)
@@ -589,7 +589,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETDECIDEFORMATFROMCONTENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDevice(QIODevice *device)
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFileName(const QString &fileName)
@@ -629,7 +629,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const QByteArray &format)
@@ -649,7 +649,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setQuality(int quality)
@@ -669,7 +669,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETQUALITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScaledClipRect(const QRect &rect)
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDCLIPRECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScaledSize(const QSize &size)
@@ -709,7 +709,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize size() const

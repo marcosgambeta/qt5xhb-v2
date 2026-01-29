@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_SETIMAGEID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_SETMIMETYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

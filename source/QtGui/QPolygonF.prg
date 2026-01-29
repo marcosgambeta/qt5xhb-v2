@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QPOLYGONF_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QPolygonF &other)
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QPOLYGONF_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
       obj->translate(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void translate(const QPointF &offset)
     auto obj = static_cast<QPolygonF *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
       obj->translate(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

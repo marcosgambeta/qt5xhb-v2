@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int key() const
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETKEY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setModifierMask(Qt::KeyboardModifiers modifierMask)
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETMODIFIERMASK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

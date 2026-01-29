@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SETPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_REFRESH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

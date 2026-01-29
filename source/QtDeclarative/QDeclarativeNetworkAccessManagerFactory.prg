@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QNetworkAccessManager *create(QObject *parent) = 0

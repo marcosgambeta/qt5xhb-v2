@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant currentValue() const = 0
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant maximumValue() const = 0

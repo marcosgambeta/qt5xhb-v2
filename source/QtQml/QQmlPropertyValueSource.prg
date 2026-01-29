@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setTarget(const QQmlProperty &property) = 0
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_SETTARGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_NEWFROM)

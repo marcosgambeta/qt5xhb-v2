@@ -95,7 +95,7 @@ HB_FUNC_STATIC(Q3DSCATTER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDSERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(Q3DSCATTER_REMOVESERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(Q3DSCATTER_RELEASEAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

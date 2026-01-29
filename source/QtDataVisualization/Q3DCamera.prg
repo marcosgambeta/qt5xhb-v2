@@ -106,7 +106,7 @@ HB_FUNC_STATIC(Q3DCAMERA_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETXROTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETYROTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETZOOMLEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPRESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPXROTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPYROTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETTARGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMINZOOMLEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMAXZOOMLEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(Q3DCAMERA_COPYVALUESFROM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

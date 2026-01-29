@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QGEOROUTE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QGEOROUTE_SETROUTEID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QGEOROUTE_SETREQUEST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QGEOROUTE_SETBOUNDS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QGEOROUTE_SETFIRSTROUTESEGMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QGEOROUTE_SETTRAVELTIME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QGEOROUTE_SETDISTANCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QGEOROUTE_SETTRAVELMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QGEOROUTE_SETPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

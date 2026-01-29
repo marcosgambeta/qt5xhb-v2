@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int captureCount() const
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPatternOptions(QRegularExpression::PatternOptions options)
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERNOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QRegularExpression &other)
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QString escape(const QString &str)

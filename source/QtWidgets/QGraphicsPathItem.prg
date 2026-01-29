@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPainterPath path() const
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_SETPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QRectF boundingRect() const
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_PAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QPainterPath shape() const

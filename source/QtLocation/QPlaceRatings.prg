@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QPLACERATINGS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QPLACERATINGS_SETAVERAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QPLACERATINGS_SETCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QPLACERATINGS_SETMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

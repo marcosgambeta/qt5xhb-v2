@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QICONENGINE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize actualSize(const QSize &size, QIcon::Mode mode, QIcon::State state)
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void addPixmap(const QPixmap &pixmap, QIcon::Mode mode, QIcon::State state)
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QICONENGINE_PAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QPixmap pixmap(const QSize &size, QIcon::Mode mode, QIcon::State state)
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QICONENGINE_VIRTUAL_HOOK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool write(QDataStream &out) const

@@ -98,7 +98,7 @@ HB_FUNC_STATIC(Q3DSURFACE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETFLIPHORIZONTALGRID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ADDSERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(Q3DSURFACE_REMOVESERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ADDAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(Q3DSURFACE_RELEASEAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

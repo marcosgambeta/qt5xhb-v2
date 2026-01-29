@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QObject *beginCreate(QDeclarativeContext *context)
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_COMPLETECREATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QObject *create(QDeclarativeContext *context = nullptr)
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_LOADURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal progress() const
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDeclarativeComponent::Status status() const

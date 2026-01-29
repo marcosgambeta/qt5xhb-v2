@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addChild(QTreeWidgetItem *child)
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ADDCHILD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addChildren(const QList<QTreeWidgetItem *> &children)
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ADDCHILDREN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush background(int column) const
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_INSERTCHILD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertChildren(int index, const QList<QTreeWidgetItem *> &children)
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_INSERTCHILDREN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isDisabled() const
@@ -641,7 +641,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_READ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeChild(QTreeWidgetItem *child)
@@ -661,7 +661,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_REMOVECHILD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBackground(int column, const QBrush &brush)
@@ -681,7 +681,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETBACKGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCheckState(int column, Qt::CheckState state)
@@ -701,7 +701,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETCHECKSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setChildIndicatorPolicy(QTreeWidgetItem::ChildIndicatorPolicy policy)
@@ -721,7 +721,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETCHILDINDICATORPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setData(int column, int role, const QVariant &value)
@@ -741,7 +741,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDisabled(bool disabled)
@@ -761,7 +761,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETDISABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setExpanded(bool expand)
@@ -781,7 +781,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETEXPANDED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFirstColumnSpanned(bool span)
@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFIRSTCOLUMNSPANNED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlags(Qt::ItemFlags flags)
@@ -821,7 +821,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFont(int column, const QFont &font)
@@ -841,7 +841,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setForeground(int column, const QBrush &brush)
@@ -861,7 +861,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFOREGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHidden(bool hide)
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETHIDDEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIcon(int column, const QIcon &icon)
@@ -901,7 +901,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSelected(bool select)
@@ -921,7 +921,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSELECTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSizeHint(int column, const QSize &size)
@@ -941,7 +941,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSIZEHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStatusTip(int column, const QString &statusTip)
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSTATUSTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(int column, const QString &text)
@@ -981,7 +981,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextAlignment(int column, int alignment)
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTEXTALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setToolTip(int column, const QString &toolTip)
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTOOLTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWhatsThis(int column, const QString &whatsThis)
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETWHATSTHIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint(int column) const
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SORTCHILDREN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString statusTip(int column) const
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_WRITE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QColor backgroundColor(int column) const
@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETBACKGROUNDCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QColor textColor(int column) const
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTEXTCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTREEWIDGETITEM_NEWFROM)

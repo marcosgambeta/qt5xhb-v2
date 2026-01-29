@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QCameraExposure::FlashModes flashMode() const = 0
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_SETFLASHMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void flashReady(bool ready)

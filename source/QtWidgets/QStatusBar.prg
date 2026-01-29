@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QSTATUSBAR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addPermanentWidget(QWidget *widget, int stretch = 0)
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addWidget(QWidget *widget, int stretch = 0)
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ADDWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString currentMessage() const
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QSTATUSBAR_REMOVEWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSizeGripEnabled(bool)
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QSTATUSBAR_SETSIZEGRIPENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clearMessage()
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void showMessage(const QString &message, int timeout = 0)
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QSTATUSBAR_SHOWMESSAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void messageChanged(const QString &message)

@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QINAPPSTORE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Q_INVOKABLE void restorePurchases()
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QINAPPSTORE_RESTOREPURCHASES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Q_INVOKABLE void registerProduct(QInAppProduct::ProductType productType, const QString &identifier)
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QINAPPSTORE_REGISTERPRODUCT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Q_INVOKABLE QInAppProduct *registeredProduct(const QString &identifier) const
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QINAPPSTORE_SETPLATFORMPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void productRegistered(QInAppProduct *product)

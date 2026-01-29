@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QTANDROID_STARTACTIVITY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QTANDROID_HIDESPLASHSCREEN)
 
     QtAndroid::hideSplashScreen();
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // static void hideSplashScreen(int duration)
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QTANDROID_HIDESPLASHSCREEN)
 
     QtAndroid::hideSplashScreen(PINT(1));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

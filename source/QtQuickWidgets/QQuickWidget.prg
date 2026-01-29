@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETSOURCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETRESIZEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETCONTENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

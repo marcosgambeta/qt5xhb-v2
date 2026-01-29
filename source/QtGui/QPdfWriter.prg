@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QPDFWRITER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString title() const
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString creator() const
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETCREATOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool newPage()
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZE)
       obj->setPageSize(PQPAGEDPAINTDEVICE_PAGESIZE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPAGESIZE(1)) {
     // bool setPageSize(const QPageSize &pageSize)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZEMM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int resolution() const
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETRESOLUTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPDFVERSION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

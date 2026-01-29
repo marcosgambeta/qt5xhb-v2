@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int addDynamicProperty(const QString &propertyName, const QVariant &value) = 0

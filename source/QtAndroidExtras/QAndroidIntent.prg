@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_PUTEXTRA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_PUTEXTRA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

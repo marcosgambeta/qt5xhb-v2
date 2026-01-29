@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETTIMESTAMP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETOPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETHIGH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETLOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETCLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

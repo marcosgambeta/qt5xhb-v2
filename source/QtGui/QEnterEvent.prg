@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QENTEREVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPoint pos() const

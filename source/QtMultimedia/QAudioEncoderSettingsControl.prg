@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QAudioEncoderSettings audioSettings() const = 0
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_SETAUDIOSETTINGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QStringList supportedAudioCodecs() const = 0

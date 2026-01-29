@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETDATAPROXY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETSELECTEDITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETITEMSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

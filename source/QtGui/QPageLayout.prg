@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETUNITS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETMINIMUMMARGINS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

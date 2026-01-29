@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QCOLLATORSORTKEY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QCollatorSortKey &other)
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QCOLLATORSORTKEY_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int compare(const QCollatorSortKey &key) const

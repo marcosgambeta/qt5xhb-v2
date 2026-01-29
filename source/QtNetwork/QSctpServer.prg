@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QSCTPSERVER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QSCTPSERVER_SETMAXIMUMCHANNELCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }

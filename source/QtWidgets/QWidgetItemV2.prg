@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint() const

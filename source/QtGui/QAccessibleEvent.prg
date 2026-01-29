@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAccessible::Event type() const
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_SETCHILD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int child() const

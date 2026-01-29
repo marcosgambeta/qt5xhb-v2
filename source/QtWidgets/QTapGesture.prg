@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QTAPGESTURE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPointF position() const
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QTAPGESTURE_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

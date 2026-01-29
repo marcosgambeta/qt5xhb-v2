@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QQUICKVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QQmlEngine *engine() const
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QQUICKVIEW_SETRESIZEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl source() const
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QQUICKVIEW_SETSOURCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void statusChanged(QQuickView::Status status)

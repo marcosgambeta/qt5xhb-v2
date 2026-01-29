@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSQLDATABASE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void close()
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QSQLDATABASE_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool commit()
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETCONNECTOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString connectionName() const
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETDATABASENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSqlDriver *driver() const
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETHOSTNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isOpen() const
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETNUMERICALPRECISIONPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSQLDATABASE_OPEN)
@@ -523,7 +523,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETPASSWORD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int port() const
@@ -561,7 +561,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETPORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSqlIndex primaryIndex(const QString &tablename) const
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETUSERNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
@@ -807,7 +807,7 @@ HB_FUNC_STATIC(QSQLDATABASE_REGISTERSQLDRIVER)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void removeDatabase(const QString &connectionName)
@@ -823,7 +823,7 @@ HB_FUNC_STATIC(QSQLDATABASE_REMOVEDATABASE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSQLDATABASE_NEWFROM)

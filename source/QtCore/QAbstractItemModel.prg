@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QModelIndex buddy(const QModelIndex &index) const
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_FETCHMORE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual Qt::ItemFlags flags(const QModelIndex &index) const
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize span(const QModelIndex &index) const
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REVERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool submit()

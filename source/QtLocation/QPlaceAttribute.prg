@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_SETLABEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

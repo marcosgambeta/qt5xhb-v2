@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QBOXSET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QBOXSET_SETPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QBOXSET_SETBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QBOXSET_APPEND)
       obj->append(PQREAL(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void append(const QList<qreal> &values)
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QBOXSET_APPEND)
       obj->append(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QBOXSET_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QBOXSET_SETLABEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QBOXSET_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -55,7 +55,7 @@ HB_FUNC_STATIC(QACCESSIBLEPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QAccessibleInterface *create(const QString &key, QObject *object) = 0

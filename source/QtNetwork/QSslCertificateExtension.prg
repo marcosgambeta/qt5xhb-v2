@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QSslCertificateExtension &other) Q_DECL_NOTHROW
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString oid() const

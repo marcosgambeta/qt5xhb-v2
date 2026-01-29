@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QObject *extension(QObject *object, const QString &iid) const = 0

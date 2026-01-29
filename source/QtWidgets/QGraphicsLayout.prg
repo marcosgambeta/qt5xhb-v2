@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void activate()
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ACTIVATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int count() const = 0
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_INVALIDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isActivated() const
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_REMOVEAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setContentsMargins(qreal left, qreal top, qreal right, qreal bottom)
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_SETCONTENTSMARGINS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void widgetEvent(QEvent *e)
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_WIDGETEVENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void getContentsMargins(qreal *left, qreal *top, qreal *right, qreal *bottom) const
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_GETCONTENTSMARGINS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void updateGeometry()
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_UPDATEGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool instantInvalidatePropagation()
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

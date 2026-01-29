@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool create()
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_DONECURRENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSurfaceFormat format() const
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScreen(QScreen *screen)
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SETSCREEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setShareContext(QOpenGLContext *shareContext)
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SETSHARECONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QOpenGLContext *shareContext() const
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SWAPBUFFERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool areSharing(QOpenGLContext *first, QOpenGLContext *second)

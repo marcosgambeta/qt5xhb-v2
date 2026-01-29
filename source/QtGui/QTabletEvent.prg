@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QTABLETEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTabletEvent::TabletDevice device() const

@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QXmlItem current() const

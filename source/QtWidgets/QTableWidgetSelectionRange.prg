@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int bottomRow() const

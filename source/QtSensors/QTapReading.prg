@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QTAPREADING_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QTAPREADING_SETTAPDIRECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QTAPREADING_SETDOUBLETAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

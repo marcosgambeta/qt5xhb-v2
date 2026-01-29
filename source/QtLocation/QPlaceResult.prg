@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QPLACERESULT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETSPONSORED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

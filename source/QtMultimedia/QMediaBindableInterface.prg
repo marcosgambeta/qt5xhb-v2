@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QMEDIABINDABLEINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QMediaObject *mediaObject() const = 0

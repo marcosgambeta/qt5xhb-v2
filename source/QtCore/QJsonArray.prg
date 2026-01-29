@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QJSONARRAY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void append(const QJsonValue &value)
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QJSONARRAY_APPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QJsonValue at(int i) const
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QJSONARRAY_INSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEmpty() const
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QJSONARRAY_POP_BACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void pop_front()
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QJSONARRAY_POP_FRONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void prepend(const QJsonValue &value)
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QJSONARRAY_PREPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void push_back(const QJsonValue &value)
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QJSONARRAY_PUSH_BACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void push_front(const QJsonValue &value)
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QJSONARRAY_PUSH_FRONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeAt(int i)
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QJSONARRAY_REMOVEAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeFirst()
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QJSONARRAY_REMOVEFIRST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeLast()
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QJSONARRAY_REMOVELAST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void replace(int i, const QJsonValue &value)
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QJSONARRAY_REPLACE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int size() const

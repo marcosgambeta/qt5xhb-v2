@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSHORTCUT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoRepeat() const
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setContext(Qt::ShortcutContext context)
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEnabled(bool enable)
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setKey(const QKeySequence &key)
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWhatsThis(const QString &text)
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString whatsThis() const

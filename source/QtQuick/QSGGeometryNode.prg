@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSGMaterial *material() const
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_SETMATERIAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOpaqueMaterial(QSGMaterial *material)
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_SETOPAQUEMATERIAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

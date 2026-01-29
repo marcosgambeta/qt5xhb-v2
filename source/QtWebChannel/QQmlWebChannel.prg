@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_CONNECTTO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_DISCONNECTFROM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

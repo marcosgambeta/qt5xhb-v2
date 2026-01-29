@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QSGTEXTURE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void bind() = 0
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSGTEXTURE_BIND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRectF convertToNormalizedSourceRect(const QRectF &rect) const
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETFILTERING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHorizontalWrapMode(QSGTexture::WrapMode hwrap)
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETHORIZONTALWRAPMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMipmapFiltering(QSGTexture::Filtering filter)
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETMIPMAPFILTERING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVerticalWrapMode(QSGTexture::WrapMode vwrap)
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETVERTICALWRAPMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int textureId() const = 0
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QSGTEXTURE_UPDATEBINDOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSGTexture::WrapMode verticalWrapMode() const

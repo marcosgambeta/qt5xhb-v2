@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void beginPaint(const QRegion &region)
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_BEGINPAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void endPaint()
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_ENDPAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void flush(const QRegion &region, QWindow *win = nullptr, const QPoint &offset = QPoint())
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasStaticContents() const
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool scroll(const QRegion &area, int dx, int dy)
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SETSTATICCONTENTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize size() const

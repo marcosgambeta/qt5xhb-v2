@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QOpenGLDebugMessage &debugMessage)
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QOpenGLDebugMessage::Source source() const

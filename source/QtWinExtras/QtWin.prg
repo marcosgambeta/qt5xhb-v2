@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QTWIN_SETWINDOWEXCLUDEDFROMPEEK)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QTWIN_SETWINDOWDISALLOWPEEK)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QTWIN_SETWINDOWFLIP3DPOLICY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -401,13 +401,13 @@ HB_FUNC_STATIC(QTWIN_EXTENDFRAMEINTOCLIENTAREA)
     // static void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QtWin::extendFrameIntoClientArea(PQWINDOW(1), PINT(2), PINT(3), PINT(4), PINT(5));
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(2) && ISQWINDOW(1) && ISQMARGINS(2)) {
     // static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QtWin::extendFrameIntoClientArea(PQWINDOW(1), *PQMARGINS(2));
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QTWIN_RESETEXTENDEDFRAME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -438,13 +438,13 @@ HB_FUNC_STATIC(QTWIN_ENABLEBLURBEHINDWINDOW)
     // static void enableBlurBehindWindow(QWindow *window, const QRegion &region)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QtWin::enableBlurBehindWindow(PQWINDOW(1), *PQREGION(2));
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && ISQWINDOW(1)) {
     // static void enableBlurBehindWindow(QWindow *window)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QtWin::enableBlurBehindWindow(PQWINDOW(1));
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QTWIN_DISABLEBLURBEHINDWINDOW)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC(QTWIN_SETCOMPOSITIONENABLED)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QTWIN_SETCURRENTPROCESSEXPLICITAPPUSERMODELID)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QTWIN_MARKFULLSCREENWINDOW)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QTWIN_TASKBARACTIVATETAB)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QTWIN_TASKBARACTIVATETABALT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -605,7 +605,7 @@ HB_FUNC_STATIC(QTWIN_TASKBARADDTAB)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QTWIN_TASKBARDELETETAB)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

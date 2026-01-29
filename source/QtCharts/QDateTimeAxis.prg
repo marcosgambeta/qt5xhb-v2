@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETMIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETMAX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETTICKCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

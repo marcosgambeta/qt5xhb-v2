@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QFILE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QFILE_COPY)
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QFILE_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QFILE_UNSETERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool atEnd() const
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QFILE_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isSequential() const

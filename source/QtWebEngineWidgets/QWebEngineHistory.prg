@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_GOTOITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

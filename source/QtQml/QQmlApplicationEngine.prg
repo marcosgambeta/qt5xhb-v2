@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
       obj->load(*PQURL(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void load(const QString &filePath)
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
       obj->load(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOADDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

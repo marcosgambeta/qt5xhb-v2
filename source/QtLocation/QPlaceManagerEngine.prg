@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SETLOCALES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

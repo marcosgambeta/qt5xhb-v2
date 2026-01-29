@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QSQLFIELD_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QSQLFIELD_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant defaultValue() const
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETDEFAULTVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isAutoValue() const
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETAUTOVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isGenerated() const
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETGENERATED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREADONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETLENGTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString name() const
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int precision() const
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETPRECISION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSqlField::RequiredStatus requiredStatus() const
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIREDSTATUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRequired(bool required)
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIRED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant::Type type() const
@@ -523,7 +523,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant value() const
@@ -561,7 +561,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSqlType(int type)
@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETSQLTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int typeID() const

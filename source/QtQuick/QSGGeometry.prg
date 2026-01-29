@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void allocate(int vertexCount, int indexCount = 0)
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ALLOCATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int attributeCount() const
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKINDEXDATADIRTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void markVertexDataDirty()
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKVERTEXDATADIRTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDrawingMode(GLenum mode)
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETDRAWINGMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIndexDataPattern(QSGGeometry::DataPattern p)
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETINDEXDATAPATTERN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLineWidth(float width)
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETLINEWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVertexDataPattern(QSGGeometry::DataPattern p)
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETVERTEXDATAPATTERN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int sizeOfIndex() const
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_UPDATERECTGEOMETRY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void updateTexturedRectGeometry(QSGGeometry *g, const QRectF &rect, const QRectF &textureRect)
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_UPDATETEXTUREDRECTGEOMETRY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSGGEOMETRY_NEWFROM)

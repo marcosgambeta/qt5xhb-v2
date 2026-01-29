@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const QTextCharFormat &format)
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextCharFormat format() const

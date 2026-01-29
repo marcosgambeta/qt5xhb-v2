@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QPLACECONTENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETSUPPLIER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETUSER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETATTRIBUTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

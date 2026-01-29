@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
       obj->append(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1)) {
     // void append(const QXmlStreamAttribute &attribute)
     auto obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
       obj->append(*PQXMLSTREAMATTRIBUTE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void append(const QString &qualifiedName, const QString &value)
     auto obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
       obj->append(PQSTRING(1), PQSTRING(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

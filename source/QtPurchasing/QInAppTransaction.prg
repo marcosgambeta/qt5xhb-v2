@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QInAppTransaction::TransactionStatus status() const
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_FINALIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Q_INVOKABLE virtual QString platformProperty(const QString &propertyName) const

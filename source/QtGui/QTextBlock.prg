@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CLEARLAYOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextBlockFormat blockFormat() const
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int userState() const
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int revision() const
@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETREVISION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isVisible() const
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int blockNumber() const
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETLINECOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int lineCount() const

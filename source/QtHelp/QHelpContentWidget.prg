@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QHELPCONTENTWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QModelIndex indexOf(const QUrl &link)

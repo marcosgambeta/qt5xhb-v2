@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRectF clipRect() const
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_SETCLIPRECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIsRectangular(bool rectHint)
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_SETISRECTANGULAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

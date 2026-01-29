@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QHelpContentItem *contentItemAt(const QModelIndex &index) const
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isCreatingContents() const

@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextListFormat::Style style() const
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETINDENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int indent() const
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERPREFIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString numberPrefix() const
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERSUFFIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString numberSuffix() const

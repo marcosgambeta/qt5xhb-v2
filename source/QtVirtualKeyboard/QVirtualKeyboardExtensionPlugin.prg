@@ -55,7 +55,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void registerTypes(const char *uri) const
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

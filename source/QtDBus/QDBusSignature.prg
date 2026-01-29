@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QDBUSSIGNATURE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString signature() const
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QDBUSSIGNATURE_SETSIGNATURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDBUSSIGNATURE_NEWFROM)

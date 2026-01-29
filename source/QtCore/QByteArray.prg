@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QBYTEARRAY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray &append(const QByteArray &ba)
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CHOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const char *constData() const
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
       obj->push_back(*PQBYTEARRAY(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void push_back(const char *str)
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
       obj->push_back(PCONSTCHAR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void push_back(char ch)
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
       obj->push_back(PCHAR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
       obj->push_front(*PQBYTEARRAY(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void push_front(const char *str)
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
       obj->push_front(PCONSTCHAR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void push_front(char ch)
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
       obj->push_front(PCHAR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1419,7 +1419,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RESERVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resize(int size)
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray right(int len) const
@@ -1751,7 +1751,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SQUEEZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QBYTEARRAY_STARTSWITH)
@@ -2110,7 +2110,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TRUNCATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QBYTEARRAY_FROMBASE64)

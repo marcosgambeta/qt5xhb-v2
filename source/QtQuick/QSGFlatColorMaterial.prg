@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QColor &color() const
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_SETCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

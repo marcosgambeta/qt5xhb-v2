@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_MAKECURRENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_DONECURRENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSENSORCHANGESINTERFACE_SENSORSCHANGED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

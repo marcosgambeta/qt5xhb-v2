@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isConnected() const
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTEROBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QObject *objectRegisteredAt(const QString &path) const
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMBUS)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void disconnectFromPeer(const QString &name)
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMPEER)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QByteArray localMachineId()

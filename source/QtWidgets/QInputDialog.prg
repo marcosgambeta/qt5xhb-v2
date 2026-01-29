@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString cancelButtonText() const
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList comboBoxItems() const
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int doubleDecimals() const
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEDECIMALS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // double doubleMaximum() const
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // double doubleMinimum() const
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // double doubleValue() const
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QInputDialog::InputMode inputMode() const
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int intMaximum() const
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int intMinimum() const
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int intStep() const
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTSTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int intValue() const
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isComboBoxEditable() const
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXEDITABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString labelText() const
@@ -618,7 +618,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString okButtonText() const
@@ -656,7 +656,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void open(QObject *receiver, const char *member)
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QInputDialog::InputDialogOptions options() const
@@ -714,7 +714,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDoubleRange(double min, double max)
@@ -734,7 +734,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLERANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIntRange(int min, int max)
@@ -754,7 +754,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QInputDialog::InputDialogOption option, bool on = true)
@@ -774,7 +774,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool testOption(QInputDialog::InputDialogOption option) const
@@ -830,7 +830,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString textValue() const
@@ -868,7 +868,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void done(int result)
@@ -888,7 +888,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DONE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize minimumSizeHint() const
@@ -926,7 +926,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint() const

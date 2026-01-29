@@ -117,7 +117,7 @@ HB_FUNC_STATIC(Q3DBARS_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(Q3DBARS_SETMULTISERIESUNIFORM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARTHICKNESS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARSPACINGRELATIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(Q3DBARS_SETROWAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(Q3DBARS_SETCOLUMNAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -414,7 +414,7 @@ HB_FUNC_STATIC(Q3DBARS_SETVALUEAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(Q3DBARS_SETPRIMARYSERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(Q3DBARS_SETFLOORLEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(Q3DBARS_ADDSERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(Q3DBARS_REMOVESERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(Q3DBARS_INSERTSERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(Q3DBARS_ADDAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -669,7 +669,7 @@ HB_FUNC_STATIC(Q3DBARS_RELEASEAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

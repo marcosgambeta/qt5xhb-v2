@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSGTexture::Filtering filtering() const
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETFILTERING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETRECT)
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETRECT)
       obj->setRect(*PQRECTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setRect(qreal x, qreal y, qreal w, qreal h)
     auto obj = static_cast<QSGSimpleTextureNode *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETRECT)
       obj->setRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETTEXTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSGTexture *texture() const

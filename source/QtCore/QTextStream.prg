@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEXTSTREAM_SETCODEC)
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETCODEC)
       obj->setCodec(PQTEXTCODEC(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void setCodec(const char *codecName)
     auto obj = static_cast<QTextStream *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETCODEC)
       obj->setCodec(PCONSTCHAR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETAUTODETECTUNICODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoDetectUnicode() const
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETGENERATEBYTEORDERMARK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool generateByteOrderMark() const
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETLOCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QLocale locale() const
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIODevice *device() const
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETSTATUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resetStatus()
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_RESETSTATUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool atEnd() const
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void flush()
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_FLUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool seek(qint64 pos)
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SKIPWHITESPACE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString readLine(qint64 maxlen = 0)
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETFIELDALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextStream::FieldAlignment fieldAlignment() const
@@ -608,7 +608,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETPADCHAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QChar padChar() const
@@ -646,7 +646,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETFIELDWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int fieldWidth() const
@@ -684,7 +684,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETNUMBERFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextStream::NumberFlags numberFlags() const
@@ -722,7 +722,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETINTEGERBASE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int integerBase() const
@@ -760,7 +760,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETREALNUMBERNOTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextStream::RealNumberNotation realNumberNotation() const
@@ -798,7 +798,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETREALNUMBERPRECISION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int realNumberPrecision() const

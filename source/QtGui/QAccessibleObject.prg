@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAccessibleInterface *childAt(int x, int y) const

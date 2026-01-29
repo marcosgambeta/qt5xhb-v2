@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScreen *screen() const

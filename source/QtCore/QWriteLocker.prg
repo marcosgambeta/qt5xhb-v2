@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QWRITELOCKER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QReadWriteLock *readWriteLock() const
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QWRITELOCKER_RELOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void unlock()
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QWRITELOCKER_UNLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QWRITELOCKER_NEWFROM)

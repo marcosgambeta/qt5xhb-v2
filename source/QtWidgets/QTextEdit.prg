@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QTEXTEDIT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool acceptRichText() const
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ENSURECURSORVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool find(const QString &exp, QTextDocument::FindFlags options = 0)
@@ -658,7 +658,7 @@ HB_FUNC_STATIC(QTEXTEDIT_MERGECURRENTCHARFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void moveCursor(QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor)
@@ -678,7 +678,7 @@ HB_FUNC_STATIC(QTEXTEDIT_MOVECURSOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool overwriteMode() const
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QTEXTEDIT_PRINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAcceptRichText(bool accept)
@@ -736,7 +736,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETACCEPTRICHTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoFormatting(QTextEdit::AutoFormatting features)
@@ -756,7 +756,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETAUTOFORMATTING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentCharFormat(const QTextCharFormat &format)
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTCHARFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCursorWidth(int width)
@@ -796,7 +796,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETCURSORWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDocument(QTextDocument *document)
@@ -816,7 +816,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDocumentTitle(const QString &title)
@@ -836,7 +836,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENTTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLineWrapColumnOrWidth(int w)
@@ -856,7 +856,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLineWrapMode(QTextEdit::LineWrapMode mode)
@@ -876,7 +876,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETLINEWRAPMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOverwriteMode(bool overwrite)
@@ -896,7 +896,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETOVERWRITEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setReadOnly(bool ro)
@@ -916,7 +916,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETREADONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabChangesFocus(bool b)
@@ -936,7 +936,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTABCHANGESFOCUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabStopWidth(int width)
@@ -956,7 +956,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTABSTOPWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextCursor(const QTextCursor &cursor)
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCURSOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextInteractionFlags(Qt::TextInteractionFlags flags)
@@ -996,7 +996,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTINTERACTIONFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUndoRedoEnabled(bool enable)
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETUNDOREDOENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWordWrapMode(QTextOption::WrapMode policy)
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETWORDWRAPMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool tabChangesFocus() const
@@ -1218,7 +1218,7 @@ HB_FUNC_STATIC(QTEXTEDIT_APPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void copy()
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC(QTEXTEDIT_COPY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void cut()
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertHtml(const QString &text)
@@ -1298,7 +1298,7 @@ HB_FUNC_STATIC(QTEXTEDIT_INSERTHTML)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertPlainText(const QString &text)
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC(QTEXTEDIT_INSERTPLAINTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void paste()
@@ -1338,7 +1338,7 @@ HB_FUNC_STATIC(QTEXTEDIT_PASTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void redo()
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC(QTEXTEDIT_REDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void scrollToAnchor(const QString &name)
@@ -1378,7 +1378,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SCROLLTOANCHOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void selectAll()
@@ -1398,7 +1398,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SELECTALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAlignment(Qt::Alignment a)
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentFont(const QFont &f)
@@ -1438,7 +1438,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFontFamily(const QString &fontFamily)
@@ -1458,7 +1458,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTFAMILY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFontItalic(bool italic)
@@ -1478,7 +1478,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTITALIC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFontPointSize(qreal s)
@@ -1498,7 +1498,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTPOINTSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFontUnderline(bool underline)
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTUNDERLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFontWeight(int weight)
@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTWEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHtml(const QString &text)
@@ -1558,7 +1558,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETHTML)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPlainText(const QString &text)
@@ -1578,7 +1578,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETPLAINTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &text)
@@ -1598,7 +1598,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextBackgroundColor(const QColor &c)
@@ -1618,7 +1618,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTBACKGROUNDCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextColor(const QColor &c)
@@ -1638,7 +1638,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void undo()
@@ -1658,7 +1658,7 @@ HB_FUNC_STATIC(QTEXTEDIT_UNDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void zoomIn(int range = 1)
@@ -1678,7 +1678,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ZOOMIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void zoomOut(int range = 1)
@@ -1698,7 +1698,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ZOOMOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMarkdown(const QString &markdown)
@@ -1719,7 +1719,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETMARKDOWN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

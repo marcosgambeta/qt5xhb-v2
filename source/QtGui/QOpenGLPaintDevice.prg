@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int devType() const
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDevicePixelRatio(qreal devicePixelRatio)
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETDEVICEPIXELRATIO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal dotsPerMeterX() const
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETDOTSPERMETERX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDotsPerMeterY(qreal)
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETDOTSPERMETERY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPaintFlipped(bool flipped)
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETPAINTFLIPPED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool paintFlipped() const
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_ENSUREACTIVETARGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

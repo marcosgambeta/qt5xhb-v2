@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QNetworkConfiguration::BearerType bearerType() const
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int connectTimeout() const

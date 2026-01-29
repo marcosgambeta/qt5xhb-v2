@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void forceCompletion()
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_FORCECOMPLETION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QQmlIncubator::IncubationMode incubationMode() const

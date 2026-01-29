@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QVECTOR4D_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setY(float y)
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setZ(float z)
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setW(float w)
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // float length() const
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QVECTOR4D_NORMALIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVector2D toVector2D() const

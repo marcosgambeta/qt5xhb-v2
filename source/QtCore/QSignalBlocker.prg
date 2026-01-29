@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSIGNALBLOCKER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QSIGNALBLOCKER_REBLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QSIGNALBLOCKER_UNBLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

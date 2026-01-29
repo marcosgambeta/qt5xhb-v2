@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QACTIONGROUP_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDisabled(bool b)
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEnabled(bool)
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setExclusive(bool)
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVisible(bool)
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void hovered(QAction *action)

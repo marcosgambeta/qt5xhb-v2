@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW)
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMode(QLCDNumber::Mode)
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSegmentStyle(QLCDNumber::SegmentStyle)
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool smallDecimalPoint() const
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
         obj->display(PQSTRING(1));
       }
 
-      hb_itemReturn(hb_stackSelfItem());
+      RETURN_SELF();
 
     } else if (HB_ISNUM(1)) {
       PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
             obj->display(PDOUBLE(1));
           }
 
-          hb_itemReturn(hb_stackSelfItem());
+          RETURN_SELF();
 
         } else if (HB_IS_INTEGER(pNum)) {
           // void display(int num)
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
             obj->display(PINT(1));
           }
 
-          hb_itemReturn(hb_stackSelfItem());
+          RETURN_SELF();
 
         } else {
           hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETBINMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDecMode()
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDECMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHexMode()
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETHEXMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOctMode()
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETOCTMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSmallDecimalPoint(bool)
@@ -461,7 +461,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSMALLDECIMALPOINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void overflow()

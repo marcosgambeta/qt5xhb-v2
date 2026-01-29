@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString textRemoved() const

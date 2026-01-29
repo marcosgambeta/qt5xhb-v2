@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QMediaObject *mediaObject() const

@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QModelIndex filter(const QString &filter, const QString &wildcard = QString())

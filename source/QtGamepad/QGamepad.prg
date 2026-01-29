@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QGAMEPAD_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QGAMEPAD_SETDEVICEID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

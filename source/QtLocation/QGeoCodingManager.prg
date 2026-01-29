@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_SETLOCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

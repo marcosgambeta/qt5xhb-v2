@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QMETADATAREADERCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isMetaDataAvailable() const = 0

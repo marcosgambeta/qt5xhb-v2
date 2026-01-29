@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_SETCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_SETBORDERCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_SETMARKERSHAPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_SETMARKERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_SETBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_SETPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPointF startPos() const
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETVIEWPORTSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setContentPosRange(const QRectF &rect)
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETCONTENTPOSRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setContentPos(const QPointF &pos)
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETCONTENTPOS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QPAGESIZE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QPAGESIZE_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

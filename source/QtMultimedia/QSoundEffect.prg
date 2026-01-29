@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl source() const
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETSOURCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int loopCount() const
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETLOOPCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int loopsRemaining() const
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETVOLUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isMuted() const
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETMUTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isPlaying() const
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETCATEGORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isLoaded() const
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_PLAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QStringList supportedMimeTypes()

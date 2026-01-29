@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QDOMELEMENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString attribute(const QString &name, const QString &defValue = QString()) const
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeAttributeNS(const QString &nsURI, const QString &localName)
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDomAttr removeAttributeNode(const QDomAttr &oldAttr)
@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttribute(const QString &name, int value)
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttribute(const QString &name, uint value)
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE3)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttribute(const QString &name, qlonglong value)
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE4)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttribute(const QString &name, qulonglong value)
@@ -443,7 +443,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE5)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttribute(const QString &name, float value)
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE6)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttribute(const QString &name, double value)
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE7)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE)
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeNS(const QString nsURI, const QString &qName, int value)
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeNS(const QString nsURI, const QString &qName, uint value)
@@ -554,7 +554,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS3)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeNS(const QString nsURI, const QString &qName, qlonglong value)
@@ -574,7 +574,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS4)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeNS(const QString nsURI, const QString &qName, qulonglong value)
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS5)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeNS(const QString nsURI, const QString &qName, double value)
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS6)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS)
@@ -681,7 +681,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETTAGNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString tagName() const

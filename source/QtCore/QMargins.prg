@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QMARGINS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QMARGINS_SETLEFT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTop(int top)
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QMARGINS_SETTOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRight(int right)
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QMARGINS_SETRIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBottom(int bottom)
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QMARGINS_SETBOTTOM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMARGINS_NEWFROM)

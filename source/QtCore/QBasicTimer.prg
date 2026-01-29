@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QBASICTIMER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isActive() const
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QBASICTIMER_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QBASICTIMER_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int timerId() const

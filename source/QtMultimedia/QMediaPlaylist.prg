@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMediaPlaylist::PlaybackMode playbackMode() const
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_SETPLAYBACKMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMediaContent currentMedia() const
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_SETCURRENTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMEDIAPLAYLIST_ADDMEDIA)
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
       obj->load(*PQNETWORKREQUEST(1), OPCONSTCHAR(2, nullptr));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISCHARORNIL(2)) {
     // void load(const QUrl &location, const char *format = nullptr)
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
       obj->load(*PQURL(1), OPCONSTCHAR(2, nullptr));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISCHARORNIL(2)) {
     // void load(QIODevice *device, const char *format = nullptr)
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
       obj->load(PQIODEVICE(1), OPCONSTCHAR(2, nullptr));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_NEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void previous()
@@ -550,7 +550,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_PREVIOUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void shuffle()
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_SHUFFLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool moveMedia(int from, int to)

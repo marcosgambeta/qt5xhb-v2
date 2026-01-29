@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QDIRMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDIRMODEL_INDEX)
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QDIRMODEL_SORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList mimeTypes() const
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QDIRMODEL_SETICONPROVIDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFileIconProvider *iconProvider() const
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QDIRMODEL_SETNAMEFILTERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList nameFilters() const
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QDIRMODEL_SETFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDir::Filters filter() const
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QDIRMODEL_SETSORTING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDir::SortFlags sorting() const
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QDIRMODEL_SETRESOLVESYMLINKS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool resolveSymlinks() const
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QDIRMODEL_SETREADONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isReadOnly() const
@@ -585,7 +585,7 @@ HB_FUNC_STATIC(QDIRMODEL_SETLAZYCHILDCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool lazyChildCount() const
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QDIRMODEL_REFRESH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

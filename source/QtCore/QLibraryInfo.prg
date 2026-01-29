@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QString licensee()

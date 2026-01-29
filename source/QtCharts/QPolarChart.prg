@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QPOLARCHART_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QPOLARCHART_ADDAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

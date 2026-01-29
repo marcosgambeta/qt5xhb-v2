@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QINAPPPRODUCT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString identifier() const
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QINAPPPRODUCT_PURCHASE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

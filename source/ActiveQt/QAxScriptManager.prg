@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_ADDOBJECT)
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ADDOBJECT)
       obj->addObject(PQAXBASE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     // void addObject(QObject *object)
     GET_PTR_FROM_SELF(obj);
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ADDOBJECT)
       obj->addObject(PQOBJECT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

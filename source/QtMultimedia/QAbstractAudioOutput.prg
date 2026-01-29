@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_START)
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_START)
       obj->start(PQIODEVICE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // virtual QIODevice *start() = 0
     auto obj = qobject_cast<QAbstractAudioOutput *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void reset() = 0
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void suspend() = 0
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_SUSPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void resume() = 0
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int bytesFree() const = 0
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_SETBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int bufferSize() const = 0
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_SETNOTIFYINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int notifyInterval() const = 0
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QAudioFormat format() const = 0
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_SETVOLUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual qreal volume() const
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_SETCATEGORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void errorChanged(QAudio::Error error)

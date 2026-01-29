@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString description() const
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETDESCRIPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isFlat() const
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETFLAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

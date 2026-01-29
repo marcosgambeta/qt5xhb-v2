@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QMediaService *create(const QString &key) override = 0
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_RELEASE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

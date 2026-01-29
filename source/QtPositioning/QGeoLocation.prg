@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QGEOLOCATION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QGEOLOCATION_SETADDRESS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QGEOLOCATION_SETCOORDINATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QGEOLOCATION_SETBOUNDINGBOX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

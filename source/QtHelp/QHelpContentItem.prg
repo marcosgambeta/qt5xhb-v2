@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QHelpContentItem *child(int row) const

@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QDOMNODELIST_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDomNode at(int index) const

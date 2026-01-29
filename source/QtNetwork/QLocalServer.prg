@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QLOCALSERVER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QLocalServer::SocketOptions socketOptions() const
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SETSOCKETOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void close()
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QLOCALSERVER_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString errorString() const
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SETMAXPENDINGCONNECTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool waitForNewConnection(int msec = 0, bool *timedOut = nullptr)

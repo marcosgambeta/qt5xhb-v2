@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMimeType mimeTypeForName(const QString &nameOrAlias) const

@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_DESTROY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_BEGIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_END)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_RECORDTIMESTAMP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }

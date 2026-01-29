@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void appendData(const QString &arg)
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_APPENDDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString data() const
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETEDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertData(unsigned long offset, const QString &arg)
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_INSERTDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // uint length() const
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_REPLACEDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setData(const QString &v)
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString substringData(unsigned long offset, unsigned long count)

@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool contains(const QString &name) const

@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QKeySequence &key() const

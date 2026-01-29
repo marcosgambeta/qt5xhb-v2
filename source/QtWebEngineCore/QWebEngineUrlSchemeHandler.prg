@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QWEBENGINEURLSCHEMEHANDLER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void requestStarted(QWebEngineUrlRequestJob *) = 0
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QWEBENGINEURLSCHEMEHANDLER_REQUESTSTARTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

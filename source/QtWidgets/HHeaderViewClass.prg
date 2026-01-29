@@ -61,7 +61,7 @@ HB_FUNC_STATIC(HHEADERVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void paintSection(QPainter *painter, const QRect &rect, int logicalIndex) const
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(HHEADERVIEW_SETPAINTSECTIONCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

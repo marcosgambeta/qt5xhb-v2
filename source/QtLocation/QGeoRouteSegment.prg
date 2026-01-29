@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETNEXTROUTESEGMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETTRAVELTIME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETDISTANCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETMANEUVER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

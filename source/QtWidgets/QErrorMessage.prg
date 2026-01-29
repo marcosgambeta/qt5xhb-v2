@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
       obj->showMessage(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void showMessage(const QString &message, const QString &type)
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
       obj->showMessage(PQSTRING(1), PQSTRING(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

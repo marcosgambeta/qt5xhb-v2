@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void fixup(QString &input) const
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_FIXUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasAcceptableInput() const
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_INTERPRETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isAccelerated() const
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETACCELERATED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Alignment alignment() const
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractSpinBox::ButtonSymbols buttonSymbols() const
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETBUTTONSYMBOLS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractSpinBox::CorrectionMode correctionMode() const
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETCORRECTIONMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasFrame() const
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETFRAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool keyboardTracking() const
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETKEYBOARDTRACKING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isReadOnly() const
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETREADONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString specialValueText() const
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETSPECIALVALUETEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool wrapping() const
@@ -495,7 +495,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETWRAPPING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void stepBy(int steps)
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_STEPBY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void selectAll()
@@ -667,7 +667,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SELECTALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stepDown()
@@ -687,7 +687,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_STEPDOWN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stepUp()
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_STEPUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isGroupSeparatorShown() const
@@ -748,7 +748,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETGROUPSEPARATORSHOWN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

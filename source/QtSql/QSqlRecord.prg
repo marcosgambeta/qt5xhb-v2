@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QSQLRECORD_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void append(const QSqlField &field)
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSQLRECORD_APPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSQLRECORD_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clearValues()
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QSQLRECORD_CLEARVALUES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool contains(const QString &name) const
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QSQLRECORD_INSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEmpty() const
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QSQLRECORD_REMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void replace(int pos, const QSqlField &field)
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QSQLRECORD_REPLACE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSQLRECORD_SETGENERATED)
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETGENERATED)
       obj->setGenerated(PQSTRING(1), PBOOL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
     // void setGenerated(int index, bool generated)
     GET_PTR_FROM_SELF(obj);
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETGENERATED)
       obj->setGenerated(PINT(1), PBOOL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETNULL)
       obj->setNull(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void setNull(const QString &name)
     GET_PTR_FROM_SELF(obj);
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETNULL)
       obj->setNull(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETVALUE)
       obj->setValue(PINT(1), *PQVARIANT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
     // void setValue(const QString &name, const QVariant &val)
     GET_PTR_FROM_SELF(obj);
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETVALUE)
       obj->setValue(PQSTRING(1), *PQVARIANT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

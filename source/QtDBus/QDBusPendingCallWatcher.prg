@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isFinished() const
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_WAITFORFINISHED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void finished(QDBusPendingCallWatcher *self)

@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QREGION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QRegion &other)
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QREGION_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEmpty() const
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
       obj->translate(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void translate(const QPoint &p)
     auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
       obj->translate(*PQPOINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

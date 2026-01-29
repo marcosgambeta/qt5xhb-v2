@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush background() const
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::CheckState checkState() const
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETCHECKSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QListWidgetItem *clone() const
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::ItemFlags flags() const
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFont font() const
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush foreground() const
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFOREGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon icon() const
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isHidden() const
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETHIDDEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isSelected() const
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSELECTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QListWidget *listWidget() const
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_READ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint() const
@@ -577,7 +577,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSIZEHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString statusTip() const
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSTATUSTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int textAlignment() const
@@ -691,7 +691,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXTALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString toolTip() const
@@ -729,7 +729,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTOOLTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int type() const
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETWHATSTHIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void write(QDataStream &out) const
@@ -805,7 +805,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_WRITE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QColor backgroundColor() const
@@ -843,7 +843,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUNDCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QColor textColor() const
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXTCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLISTWIDGETITEM_NEWFROM)

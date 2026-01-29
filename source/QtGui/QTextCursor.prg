@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QTextCursor &other)
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int position() const
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
       obj->insertText(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTCHARFORMAT(2)) {
     // void insertText(const QString &text, const QTextCharFormat &format)
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
       obj->insertText(PQSTRING(1), *PQTEXTCHARFORMAT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETVISUALNAVIGATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVerticalMovementX(int x)
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETVERTICALMOVEMENTX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int verticalMovementX() const
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETKEEPPOSITIONONINSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool keepPositionOnInsert() const
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_DELETECHAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void deletePreviousChar()
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_DELETEPREVIOUSCHAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void select(QTextCursor::SelectionType selection)
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SELECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasSelection() const
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_REMOVESELECTEDTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clearSelection()
@@ -566,7 +566,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CLEARSELECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int selectionStart() const
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SELECTEDTABLECELLS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextBlock block() const
@@ -722,7 +722,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETCHARFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void mergeCharFormat(const QTextCharFormat &modifier)
@@ -742,7 +742,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MERGECHARFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextBlockFormat blockFormat() const
@@ -780,7 +780,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETBLOCKFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void mergeBlockFormat(const QTextBlockFormat &modifier)
@@ -800,7 +800,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MERGEBLOCKFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextCharFormat blockCharFormat() const
@@ -838,7 +838,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETBLOCKCHARFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void mergeBlockCharFormat(const QTextCharFormat &modifier)
@@ -858,7 +858,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MERGEBLOCKCHARFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool atBlockStart() const
@@ -943,7 +943,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
       obj->insertBlock();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1)) {
     // void insertBlock(const QTextBlockFormat &format)
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -952,7 +952,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
       obj->insertBlock(*PQTEXTBLOCKFORMAT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQTEXTBLOCKFORMAT(1) && ISQTEXTCHARFORMAT(2)) {
     // void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charFormat)
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
       obj->insertBlock(*PQTEXTBLOCKFORMAT(1), *PQTEXTCHARFORMAT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTFRAGMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertHtml(const QString &html)
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTHTML)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
       obj->insertImage(*PQTEXTIMAGEFORMAT(1), PQTEXTFRAMEFORMAT_POSITION(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQTEXTIMAGEFORMAT(1)) {
     // void insertImage(const QTextImageFormat &format)
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
       obj->insertImage(*PQTEXTIMAGEFORMAT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void insertImage(const QString &name)
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
       obj->insertImage(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISCHARORNIL(2)) {
     // void insertImage(const QImage &image, const QString &name = QString())
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
       obj->insertImage(*PQIMAGE(1), OPQSTRING(2, QString()));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1212,7 +1212,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_BEGINEDITBLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void joinPreviousEditBlock()
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_JOINPREVIOUSEDITBLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void endEditBlock()
@@ -1252,7 +1252,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_ENDEDITBLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isCopyOf(const QTextCursor &other) const

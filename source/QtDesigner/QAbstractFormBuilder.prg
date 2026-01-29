@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QWidget *load(QIODevice *device, QWidget *parent = nullptr)
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SAVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWorkingDirectory(const QDir &directory)
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDir workingDirectory() const

@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isWritable() const = 0
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_SETMETADATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QStringList availableMetaData() const = 0

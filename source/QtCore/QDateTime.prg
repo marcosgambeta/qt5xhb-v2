@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QDATETIME_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDateTime addDays(int ndays) const
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QDATETIME_SETDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMSecsSinceEpoch(qint64 msecs)
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QDATETIME_SETMSECSSINCEEPOCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTime(const QTime &time)
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTimeSpec(Qt::TimeSpec spec)
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIMESPEC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTime_t(uint seconds)
@@ -414,7 +414,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIME_T)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTime time() const

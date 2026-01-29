@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void beginStructure()
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINSTRUCTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void endStructure()
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_ENDSTRUCTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDBUSARGUMENT_BEGINARRAY)
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINARRAY)
       obj->beginArray(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // void beginArray() const
     auto obj = static_cast<QDBusArgument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINARRAY)
       obj->beginArray();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_ENDARRAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDBUSARGUMENT_BEGINMAP)
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINMAP)
       obj->beginMap(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // void beginMap() const
     auto obj = static_cast<QDBusArgument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINMAP)
       obj->beginMap();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_ENDMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void beginMapEntry()
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINMAPENTRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void endMapEntry()
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_ENDMAPENTRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void appendVariant(const QVariant &v)
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_APPENDVARIANT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString currentSignature() const

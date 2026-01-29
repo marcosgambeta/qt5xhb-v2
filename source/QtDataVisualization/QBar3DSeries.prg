@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETDATAPROXY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETSELECTEDBAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETMESHANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

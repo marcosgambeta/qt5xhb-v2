@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QAXBASE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant asVariant() const
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QAXBASE_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString control() const
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLECLASSINFO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void disableEventSink()
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLEEVENTSINK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void disableMetaObject()
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLEMETAOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QAXBASE_SETPROPERTYWRITABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList verbs() const
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QAXBASE_SETCLASSCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 column() const
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLine(qint64 newLine)
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUri(const QUrl &newUri)
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETURI)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl uri() const

@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void advance()
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ADVANCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void install()
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_INSTALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void uninstall()
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_UNINSTALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isRunning() const
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_SETSTARTTIME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 startTime() const

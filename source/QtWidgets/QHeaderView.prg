@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QHEADERVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool cascadingSectionResizes() const
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETCASCADINGSECTIONRESIZES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int count() const
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETDEFAULTALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int defaultSectionSize() const
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETDEFAULTSECTIONSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int hiddenSectionCount() const
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QHEADERVIEW_HIDESECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool highlightSections() const
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETHIGHLIGHTSECTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isSectionHidden(int logicalIndex) const
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATORSHOWN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int length() const
@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETMINIMUMSECTIONSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void moveSection(int from, int to)
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QHEADERVIEW_MOVESECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int offset() const
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resizeSections(QHeaderView::ResizeMode mode)
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool restoreState(const QByteArray &state)
@@ -811,7 +811,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONHIDDEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSortIndicator(int logicalIndex, Qt::SortOrder order)
@@ -831,7 +831,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool stretchLastSection() const
@@ -869,7 +869,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSTRETCHLASTSECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void showSection(int logicalIndex)
@@ -889,7 +889,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SHOWSECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::SortOrder sortIndicatorOrder() const
@@ -963,7 +963,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SWAPSECTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int visualIndex(int logicalIndex) const
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC(QHEADERVIEW_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setModel(QAbstractItemModel *model)
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint() const
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC(QHEADERVIEW_HEADERDATACHANGED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOffset(int offset)
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETOFFSET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOffsetToLastSection()
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETOFFSETTOLASTSECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOffsetToSectionPosition(int visualIndex)
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETOFFSETTOSECTIONPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVisible(bool v)
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSectionsMovable(bool movable)
@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONSMOVABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool sectionsMovable() const
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONSCLICKABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool sectionsClickable() const
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONRESIZEMODE)
       obj->setSectionResizeMode(PQHEADERVIEW_RESIZEMODE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setSectionResizeMode(int logicalIndex, QHeaderView::ResizeMode mode)
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONRESIZEMODE)
       obj->setSectionResizeMode(PINT(1), PQHEADERVIEW_RESIZEMODE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1298,7 +1298,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETRESIZECONTENTSPRECISION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int resizeContentsPrecision() const
@@ -1354,7 +1354,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETMAXIMUMSECTIONSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void doItemsLayout()
@@ -1374,7 +1374,7 @@ HB_FUNC_STATIC(QHEADERVIEW_DOITEMSLAYOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void geometriesChanged()

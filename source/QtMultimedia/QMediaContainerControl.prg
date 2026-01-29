@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString containerDescription(const QString &formatMimeType) const = 0
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QStringList supportedContainers() const = 0

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QTOUCH3DINPUTHANDLER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QTOUCH3DINPUTHANDLER_TOUCHEVENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVector3D origin() const
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETORIGIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setXScale(qreal)
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETXSCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setYScale(qreal)
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETYSCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setZScale(qreal)
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETZSCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal xScale() const
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_APPLYTO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void originChanged()

@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QWIDGETITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSizePolicy::ControlTypes controlTypes() const
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QWIDGETITEM_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const

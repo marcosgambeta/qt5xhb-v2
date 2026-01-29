@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QDOMATTR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString name() const
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QDOMATTR_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool specified() const

@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_ADDBUTTON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_REMOVEBUTTON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETBUTTONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

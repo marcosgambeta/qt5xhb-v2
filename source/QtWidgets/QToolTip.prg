@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QTOOLTIP_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFont font()
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QTOOLTIP_HIDETEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isVisible()
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QTOOLTIP_SETFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPalette(const QPalette &palette)
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QTOOLTIP_SETPALETTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
       obj->showText(*PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && ISQWIDGETORNIL(3)) {
     // void showText(const QPoint &pos, const QString &text, QWidget *w = nullptr)
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
       obj->showText(*PQPOINT(1), PQSTRING(2), OPQWIDGET(3, nullptr));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

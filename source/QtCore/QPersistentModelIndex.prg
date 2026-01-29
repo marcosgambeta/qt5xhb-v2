@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QPersistentModelIndex &other)
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int row() const

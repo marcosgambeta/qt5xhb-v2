@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QQUATERNION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
       obj->setVector(*PQVECTOR3D(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void setVector(float x, float y, float z)
     auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
       obj->setVector(PFLOAT(1), PFLOAT(2), PFLOAT(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QQUATERNION_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setY(float y)
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QQUATERNION_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setZ(float z)
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QQUATERNION_SETZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScalar(float scalar)
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QQUATERNION_SETSCALAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // float length() const
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QQUATERNION_NORMALIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QQuaternion conjugate() const

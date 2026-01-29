@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QUrl baseUri(const QXmlNodeModelIndex &n) const = 0

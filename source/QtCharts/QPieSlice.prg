@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QPIESLICE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QPIESLICE_SETLABEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QPIESLICE_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QPIESLICE_SETLABELVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QPIESLICE_SETLABELPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QPIESLICE_SETEXPLODED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QPIESLICE_SETPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QPIESLICE_SETBORDERCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QPIESLICE_SETBORDERWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QPIESLICE_SETBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -562,7 +562,7 @@ HB_FUNC_STATIC(QPIESLICE_SETCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -604,7 +604,7 @@ HB_FUNC_STATIC(QPIESLICE_SETLABELBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -646,7 +646,7 @@ HB_FUNC_STATIC(QPIESLICE_SETLABELCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -688,7 +688,7 @@ HB_FUNC_STATIC(QPIESLICE_SETLABELFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -730,7 +730,7 @@ HB_FUNC_STATIC(QPIESLICE_SETLABELARMLENGTHFACTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -772,7 +772,7 @@ HB_FUNC_STATIC(QPIESLICE_SETEXPLODEDISTANCEFACTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

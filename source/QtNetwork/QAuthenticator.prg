@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString user() const
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETUSER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString password() const
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETPASSWORD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString realm() const
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETREALM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_DETACH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QAUTHENTICATOR_NEWFROM)

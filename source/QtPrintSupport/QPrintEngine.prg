@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QPRINTENGINE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool abort() = 0
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QPRINTENGINE_SETPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPRINTENGINE_NEWFROM)

@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QPANGESTURE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal acceleration() const
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QPANGESTURE_SETACCELERATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLastOffset(const QPointF &value)
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QPANGESTURE_SETLASTOFFSET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOffset(const QPointF &value)
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QPANGESTURE_SETOFFSET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

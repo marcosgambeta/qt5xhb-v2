@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITESYSTEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSIGNALSTRENGTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_REMOVEATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

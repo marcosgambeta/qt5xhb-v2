@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::DockWidgetAreas allowedAreas() const
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETALLOWEDAREAS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFeatures(QDockWidget::DockWidgetFeatures features)
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETFEATURES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFloating(bool floating)
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETFLOATING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTitleBarWidget(QWidget *widget)
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETTITLEBARWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidget(QWidget *widget)
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *titleBarWidget() const

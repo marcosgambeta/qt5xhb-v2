@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QJSONOBJECT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool contains(const QString &key) const
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QJSONOBJECT_REMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int size() const

@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QVALUEAXIS_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QVALUEAXIS_SETTICKCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QVALUEAXIS_SETMIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QVALUEAXIS_SETMAX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QVALUEAXIS_SETLABELFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QVALUEAXIS_SETMINORTICKCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QVALUEAXIS_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QVALUEAXIS_APPLYNICENUMBERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

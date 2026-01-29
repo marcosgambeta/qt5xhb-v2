@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QX11INFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QX11INFO_SETAPPTIME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QX11INFO_SETAPPUSERTIME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QX11INFO_SETNEXTSTARTUPID)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

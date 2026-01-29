@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETPAUSED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SHOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_HIDE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_PAUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -461,7 +461,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

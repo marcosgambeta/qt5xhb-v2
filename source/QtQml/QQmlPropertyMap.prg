@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear(const QString &key)
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool contains(const QString &key) const
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_INSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEmpty() const

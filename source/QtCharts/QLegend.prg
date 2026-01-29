@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QLEGEND_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QLEGEND_SETBACKGROUNDVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QLEGEND_SETCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QLEGEND_SETBORDERCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QLEGEND_SETFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QLEGEND_SETLABELCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QLEGEND_SETREVERSEMARKERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QLEGEND_SETSHOWTOOLTIPS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QLEGEND_SETMARKERSHAPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QLEGEND_PAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QLEGEND_SETBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QLEGEND_SETPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QLEGEND_SETLABELBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QLEGEND_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(QLEGEND_DETACHFROMCHART)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QLEGEND_ATTACHTOCHART)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

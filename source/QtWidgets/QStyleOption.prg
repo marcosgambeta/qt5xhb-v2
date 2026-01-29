@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void init(const QWidget *w)
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_INIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void initFrom(const QWidget *w)
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_INITFROM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int version
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETVERSION)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int type
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETTYPE)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStyle::State state
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETSTATE)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::LayoutDirection direction
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETDIRECTION)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect rect
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETRECT)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFontMetrics fontMetrics
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETFONTMETRICS)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPalette palette
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETPALETTE)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QObject *styleObject
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETSTYLEOBJECT)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSTYLEOPTION_NEWFROM)

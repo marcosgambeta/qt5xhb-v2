@@ -54,7 +54,7 @@ HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSGGeometry *geometry()
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStyle *baseStyle() const
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_SETBASESTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void drawPrimitive(QStyle::PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWPRIMITIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void drawControl(QStyle::ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void drawComplexControl(QStyle::ComplexControl control, const QStyleOptionComplex *option, QPainter *painter, const
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWCOMPLEXCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled, const QString
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawItemPixmap(QPainter *painter, const QRect &rect, int alignment, const QPixmap &pixmap) const
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeFromContents(QStyle::ContentsType type, const QStyleOption *option, const QSize &size, const QWidget
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
       obj->polish(PQWIDGET(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && ISQPALETTE(1)) {
     // void polish(QPalette &pal)
@@ -516,7 +516,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
       obj->polish(*PQPALETTE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // void polish(QApplication *app)
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
       obj->polish(PQAPPLICATION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_UNPOLISH)
       obj->unpolish(PQWIDGET(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // void unpolish(QApplication *app)
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_UNPOLISH)
       obj->unpolish(PQAPPLICATION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

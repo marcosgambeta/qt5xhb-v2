@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QObject *eventSource() const
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEventType(QEvent::Type type)
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

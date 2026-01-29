@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDeclarativeEngine *engine() const
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETRESIZEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSource(const QUrl &url)
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETSOURCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl source() const

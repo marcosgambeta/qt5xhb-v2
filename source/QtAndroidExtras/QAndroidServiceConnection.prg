@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_ONSERVICECONNECTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_ONSERVICEDISCONNECTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

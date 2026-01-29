@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QMultimedia::AvailabilityStatus availability() const = 0

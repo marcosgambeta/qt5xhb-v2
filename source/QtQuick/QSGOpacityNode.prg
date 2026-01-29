@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QSGOPACITYNODE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal opacity() const
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSGOPACITYNODE_SETOPACITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

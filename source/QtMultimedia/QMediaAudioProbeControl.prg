@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void audioBufferProbed(const QAudioBuffer &buffer)

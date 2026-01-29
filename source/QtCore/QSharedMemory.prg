@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setKey(const QString &key)
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETKEY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString key() const
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETNATIVEKEY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString nativeKey() const

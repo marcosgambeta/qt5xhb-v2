@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QSslCertificate &other) Q_DECL_NOTHROW
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray version() const

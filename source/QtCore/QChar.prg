@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QCHAR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QChar::Category category() const

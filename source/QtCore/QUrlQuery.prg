@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QURLQUERY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addQueryItem(const QString &key, const QString &value)
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QURLQUERY_ADDQUERYITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList allQueryItemValues(const QString &key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded)
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QURLQUERY_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasQueryItem(const QString &key) const
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEALLQUERYITEMS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeQueryItem(const QString &key)
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEQUERYITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setQuery(const QString &queryString)
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QURLQUERY_SETQUERY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QUrlQuery &other)
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QURLQUERY_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const

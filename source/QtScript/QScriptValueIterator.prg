@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptValue::PropertyFlags flags() const
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void previous()
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_PREVIOUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void remove()
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_REMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptString scriptName() const
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toBack()
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOBACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toFront()
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOFRONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptValue value() const

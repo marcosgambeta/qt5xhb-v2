@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QMENU_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *actionAt(const QPoint &pt) const
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QMENU_SETACTIVEACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMENU_ADDACTION)
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       obj->addAction(PQACTION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QMENU_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *defaultAction() const
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QMENU_SETDEFAULTACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMENU_EXEC)
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QMENU_HIDETEAROFFMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon icon() const
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QMENU_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *insertMenu(QAction *before, QMenu *menu)
@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QMENU_SETTEAROFFENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isTearOffMenuVisible() const
@@ -608,7 +608,7 @@ HB_FUNC_STATIC(QMENU_POPUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool separatorsCollapsible() const
@@ -646,7 +646,7 @@ HB_FUNC_STATIC(QMENU_SETSEPARATORSCOLLAPSIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString title() const
@@ -684,7 +684,7 @@ HB_FUNC_STATIC(QMENU_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint() const
@@ -804,7 +804,7 @@ HB_FUNC_STATIC(QMENU_SETNOREPLAYFOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAsDockMenu()
@@ -826,7 +826,7 @@ HB_FUNC_STATIC(QMENU_SETASDOCKMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -869,7 +869,7 @@ HB_FUNC_STATIC(QMENU_SETTOOLTIPSVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

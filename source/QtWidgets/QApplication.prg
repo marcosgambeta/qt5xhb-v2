@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QAPPLICATION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isSessionRestored() const
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QAPPLICATION_ABOUTQT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void closeAllWindows()
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QAPPLICATION_CLOSEALLWINDOWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStyleSheet(const QString &sheet)
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTYLESHEET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QWidget *activeModalWidget()
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QAPPLICATION_ALERT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QWidgetList allWidgets()
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QAPPLICATION_BEEP)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void changeOverrideCursor(const QCursor &cursor)
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QAPPLICATION_CHANGEOVERRIDECURSOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QClipboard *clipboard()
@@ -813,7 +813,7 @@ HB_FUNC_STATIC(QAPPLICATION_RESTOREOVERRIDECURSOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setActiveWindow(QWidget *active)
@@ -829,7 +829,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETACTIVEWINDOW)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setColorSpec(int spec)
@@ -845,7 +845,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETCOLORSPEC)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setCursorFlashTime(int)
@@ -861,7 +861,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETCURSORFLASHTIME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setDesktopSettingsAware(bool on)
@@ -877,7 +877,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETDESKTOPSETTINGSAWARE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setDoubleClickInterval(int)
@@ -893,7 +893,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETDOUBLECLICKINTERVAL)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setEffectEnabled(Qt::UIEffect effect, bool enable = true)
@@ -909,7 +909,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETEFFECTENABLED)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setFont(const QFont &font, const char *className = nullptr)
@@ -925,7 +925,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETFONT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setGlobalStrut(const QSize &)
@@ -941,7 +941,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETGLOBALSTRUT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setKeyboardInputInterval(int)
@@ -957,7 +957,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETKEYBOARDINPUTINTERVAL)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setLayoutDirection(Qt::LayoutDirection direction)
@@ -973,7 +973,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETLAYOUTDIRECTION)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setOverrideCursor(const QCursor &cursor)
@@ -989,7 +989,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETOVERRIDECURSOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setPalette(const QPalette &palette, const char *className = nullptr)
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETPALETTE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setQuitOnLastWindowClosed(bool quit)
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETQUITONLASTWINDOWCLOSED)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setStartDragDistance(int l)
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTARTDRAGDISTANCE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setStartDragTime(int ms)
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTARTDRAGTIME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QAPPLICATION_SETSTYLE)
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTYLE)
 
     QApplication::setStyle(PQSTYLE(1));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QStyle *setStyle(const QString &style)
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETWHEELSCROLLLINES)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setWindowIcon(const QIcon &icon)
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETWINDOWICON)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static int startDragDistance()

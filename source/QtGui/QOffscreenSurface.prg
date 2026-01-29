@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSurface::SurfaceType surfaceType() const
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_CREATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void destroy()
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_DESTROY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSurfaceFormat format() const
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SETSCREEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void screenChanged(QScreen *screen)

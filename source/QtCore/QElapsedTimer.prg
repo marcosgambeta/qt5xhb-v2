@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 elapsed() const
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QElapsedTimer::ClockType clockType()

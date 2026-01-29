@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QTRANSFORM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isAffine() const
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QTRANSFORM_SETMATRIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTransform inverted(bool *invertible = nullptr) const
@@ -698,7 +698,7 @@ HB_FUNC_STATIC(QTRANSFORM_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTRANSFORM_MAP)
@@ -771,7 +771,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       hb_storni(par4, 4);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void map(qreal x, qreal y, qreal *tx, qreal *ty) const
     auto obj = static_cast<QTransform *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -784,7 +784,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       hb_stornd(par4, 4);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

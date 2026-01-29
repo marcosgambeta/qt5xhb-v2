@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::MouseButton button() const

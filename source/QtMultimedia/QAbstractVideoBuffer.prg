@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant handle() const
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_UNMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void release()
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_RELEASE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_NEWFROM)

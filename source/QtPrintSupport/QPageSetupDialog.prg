@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void open(QObject *receiver, const char *member)
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPrinter *printer()
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int exec()
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_DONE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

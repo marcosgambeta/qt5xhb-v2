@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETROWLABELS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETCOLUMNLABELS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETITEM)
       obj->setItem(PINT(1), PINT(2), *PQBARDATAITEM(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2)) {
     // void setItem(const QPoint &position, const QBarDataItem &item)
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETITEM)
       obj->setItem(*PQPOINT(1), *PQBARDATAITEM(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_REMOVEROWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

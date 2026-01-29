@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QDRAG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::DropAction defaultAction() const
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QDRAG_SETDRAGCURSOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHotSpot(const QPoint &hotspot)
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QDRAG_SETHOTSPOT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMimeData(QMimeData *data)
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QDRAG_SETMIMEDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPixmap(const QPixmap &pixmap)
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QDRAG_SETPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QObject *source() const

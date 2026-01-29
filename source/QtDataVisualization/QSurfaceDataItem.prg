@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

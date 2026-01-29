@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QGesture *create(QObject *target)
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static Qt::GestureType registerRecognizer(QGestureRecognizer *recognizer)
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_UNREGISTERRECOGNIZER)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGESTURERECOGNIZER_NEWFROM)

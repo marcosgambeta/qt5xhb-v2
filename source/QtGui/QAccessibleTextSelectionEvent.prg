@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSelection(int start, int end)
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int selectionStart() const

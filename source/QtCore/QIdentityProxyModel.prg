@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int columnCount(const QModelIndex &parent = QModelIndex()) const
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_SETSOURCEMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())

@@ -85,7 +85,7 @@ HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

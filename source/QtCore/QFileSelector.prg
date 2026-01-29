@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QFILESELECTOR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QFILESELECTOR_SELECT)
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SETEXTRASELECTORS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList allSelectors() const

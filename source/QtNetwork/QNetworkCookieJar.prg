@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QList<QNetworkCookie> cookiesForUrl(const QUrl &url) const

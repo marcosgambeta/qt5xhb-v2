@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoClose() const
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTOCLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoReset() const
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTORESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString labelText() const
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETLABELTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int maximum() const
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int minimum() const
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int minimumDuration() const
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETMINIMUMDURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void open(QObject *receiver, const char *member)
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBar(QProgressBar *bar)
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETBAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCancelButton(QPushButton *cancelButton)
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLabel(QLabel *label)
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETLABEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int value() const
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool wasCanceled() const
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_CANCEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reset()
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCancelButtonText(const QString &text)
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRange(int minimum, int maximum)
@@ -566,7 +566,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void canceled()

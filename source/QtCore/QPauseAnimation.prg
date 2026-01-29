@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QPAUSEANIMATION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDuration(int msecs)
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QPAUSEANIMATION_SETDURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int duration() const

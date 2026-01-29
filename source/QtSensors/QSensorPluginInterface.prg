@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSENSORPLUGININTERFACE_REGISTERSENSORS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

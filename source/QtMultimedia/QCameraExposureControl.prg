@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant actualValue(QCameraExposureControl::ExposureParameter parameter) const = 0

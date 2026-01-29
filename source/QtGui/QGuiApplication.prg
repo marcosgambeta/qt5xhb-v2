@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool notify(QObject * object, QEvent * event)
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_CHANGEOVERRIDECURSOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QClipboard * clipboard()
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_RESTOREOVERRIDECURSOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QList<QScreen*> screens()
@@ -608,7 +608,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setDesktopSettingsAware(bool on)
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setFont(const QFont &font)
@@ -640,7 +640,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETFONT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setLayoutDirection(Qt::LayoutDirection direction)
@@ -656,7 +656,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETLAYOUTDIRECTION)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setOverrideCursor(const QCursor &cursor)
@@ -672,7 +672,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETOVERRIDECURSOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setPalette(const QPalette &pal)
@@ -688,7 +688,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETPALETTE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setQuitOnLastWindowClosed(bool quit)
@@ -704,7 +704,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QStyleHints * styleHints()
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETFALLBACKSESSIONMANAGEMENTENABLED)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -885,7 +885,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETHIGHDPISCALEFACTORROUNDINGPOLICY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -903,7 +903,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SYNC)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -945,7 +945,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

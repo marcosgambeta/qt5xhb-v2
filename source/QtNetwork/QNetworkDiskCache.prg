@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString cacheDirectory() const
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 maximumCacheSize() const
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 cacheSize() const Q_DECL_OVERRIDE
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIODevice *data(const QUrl &url) Q_DECL_OVERRIDE
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QNetworkCacheMetaData fileMetaData(const QString &fileName) const
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

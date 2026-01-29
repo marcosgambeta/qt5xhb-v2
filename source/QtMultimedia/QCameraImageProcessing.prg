@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETCONTRAST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDenoisingLevel(qreal value)
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETDENOISINGLEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setManualWhiteBalance(qreal colorTemperature)
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETMANUALWHITEBALANCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSaturation(qreal value)
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETSATURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSharpeningLevel(qreal level)
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETSHARPENINGLEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWhiteBalanceMode(QCameraImageProcessing::WhiteBalanceMode mode)
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETWHITEBALANCEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal sharpeningLevel() const
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETBRIGHTNESS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETCOLORFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

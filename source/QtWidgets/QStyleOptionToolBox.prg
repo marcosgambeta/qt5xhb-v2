@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETTEXT)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon icon
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETICON)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // TabPosition position
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETPOSITION)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // SelectedPosition selectedPosition
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETSELECTEDPOSITION)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

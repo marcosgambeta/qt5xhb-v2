@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int bitRate() const
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETBITRATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setChannelCount(int channels)
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCHANNELCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCodec(const QString &codec)
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCODEC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEncodingMode(QMultimedia::EncodingMode mode)
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEncodingOption(const QString &option, const QVariant &value)
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setQuality(QMultimedia::EncodingQuality quality)
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETQUALITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSampleRate(int rate)
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETSAMPLERATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_NEWFROM)

@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int colorCount() const

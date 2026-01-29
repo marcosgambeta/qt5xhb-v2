@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QTEXTLIST_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int count() const
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QTEXTLIST_REMOVEITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void remove(const QTextBlock &)
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QTEXTLIST_REMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void add(const QTextBlock &block)
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QTEXTLIST_ADD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const QTextListFormat &format)
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QTEXTLIST_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextListFormat format() const

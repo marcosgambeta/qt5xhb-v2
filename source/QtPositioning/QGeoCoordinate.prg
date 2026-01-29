@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_SETLATITUDE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_SETLONGITUDE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_SETALTITUDE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

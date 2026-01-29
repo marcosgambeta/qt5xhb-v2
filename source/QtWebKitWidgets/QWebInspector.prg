@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebPage *page() const
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_SETPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool event(QEvent *ev)

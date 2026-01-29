@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QTHREAD_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractEventDispatcher *eventDispatcher() const
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QTHREAD_EXIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isFinished() const
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QTHREAD_SETEVENTDISPATCHER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPriority(QThread::Priority priority)
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QTHREAD_SETPRIORITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStackSize(uint stackSize)
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QTHREAD_SETSTACKSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // uint stackSize() const
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QTHREAD_QUIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void start(QThread::Priority priority = QThread::InheritPriority)
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QTHREAD_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void terminate()
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QTHREAD_TERMINATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QThread *currentThread()
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QTHREAD_MSLEEP)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void sleep(unsigned long secs)
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QTHREAD_SLEEP)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void usleep(unsigned long usecs)
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QTHREAD_USLEEP)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void yieldCurrentThread()
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QTHREAD_YIELDCURRENTTHREAD)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void finished()

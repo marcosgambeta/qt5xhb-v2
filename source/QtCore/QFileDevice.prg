@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QFILEDEVICE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFileDevice::FileError error() const
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QFILEDEVICE_UNSETERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool atEnd() const
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QFILEDEVICE_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isSequential() const

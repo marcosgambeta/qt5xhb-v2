@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QTEXTTABLE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resize(int rows, int cols)
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QTEXTTABLE_RESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertRows(int pos, int num)
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QTEXTTABLE_INSERTROWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertColumns(int pos, int num)
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QTEXTTABLE_INSERTCOLUMNS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void appendRows(int count)
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QTEXTTABLE_APPENDROWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void appendColumns(int count)
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QTEXTTABLE_APPENDCOLUMNS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeRows(int pos, int num)
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVEROWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeColumns(int pos, int num)
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVECOLUMNS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
       obj->mergeCells(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
     // void mergeCells(const QTextCursor &cursor)
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
       obj->mergeCells(*PQTEXTCURSOR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QTEXTTABLE_SPLITCELL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int rows() const
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QTEXTTABLE_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextTableFormat format() const

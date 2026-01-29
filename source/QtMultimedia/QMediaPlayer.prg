@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMediaContent media() const
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETMEDIA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMediaContent currentMedia() const
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETPLAYLIST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 duration() const
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int volume() const
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVOLUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isMuted() const
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETMUTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int bufferStatus() const
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETAUDIOROLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -606,7 +606,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVIDEOOUTPUT)
       obj->setVideoOutput(PQVIDEOWIDGET(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQGRAPHICSVIDEOITEM(1)) {
     // void setVideoOutput(QGraphicsVideoItem *output)
     auto obj = qobject_cast<QMediaPlayer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVIDEOOUTPUT)
       obj->setVideoOutput(PQGRAPHICSVIDEOITEM(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQABSTRACTVIDEOSURFACE(1)) {
     // void setVideoOutput(QAbstractVideoSurface *surface)
     auto obj = qobject_cast<QMediaPlayer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVIDEOOUTPUT)
       obj->setVideoOutput(PQABSTRACTVIDEOSURFACE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -665,7 +665,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_PAUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void play()
@@ -685,7 +685,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_PLAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNetworkConfigurations(const QList<QNetworkConfiguration> &configurations)
@@ -712,7 +712,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETNETWORKCONFIGURATIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPlaybackRate(qreal rate)
@@ -732,7 +732,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETPLAYBACKRATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -752,7 +752,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs = QStringList(),

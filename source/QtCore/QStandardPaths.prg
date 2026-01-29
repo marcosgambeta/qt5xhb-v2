@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_SETTESTMODEENABLED)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool isTestModeEnabled()

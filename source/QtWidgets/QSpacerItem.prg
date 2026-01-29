@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QSPACERITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void changeSize(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy =
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QSPACERITEM_CHANGESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual Qt::Orientations expandingDirections() const
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QSPACERITEM_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const

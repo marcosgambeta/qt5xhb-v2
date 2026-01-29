@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon fileIcon(const QModelIndex &index) const
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFileIconProvider *iconProvider() const
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETICONPROVIDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETREADONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDateTime lastModified(const QModelIndex &index) const
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERDISABLES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList nameFilters() const
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFile::Permissions permissions(const QModelIndex &index) const
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETRESOLVESYMLINKS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool rmdir(const QModelIndex &index) const
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FETCHMORE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::ItemFlags flags(const QModelIndex &index) const
@@ -930,7 +930,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::DropActions supportedDropActions() const

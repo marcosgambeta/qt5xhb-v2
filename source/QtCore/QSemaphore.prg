@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSEMAPHORE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void acquire(int n = 1)
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSEMAPHORE_ACQUIRE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSEMAPHORE_RELEASE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int available() const

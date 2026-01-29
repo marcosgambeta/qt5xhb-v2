@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QQMLENGINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addImageProvider(const QString &providerId, QQmlImageProviderBase *provider)
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMAGEPROVIDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addImportPath(const QString &path)
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMPORTPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool addNamedBundle(const QString &name, const QString &fileName)
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDPLUGINPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl baseUrl() const
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QQMLENGINE_CLEARCOMPONENTCACHE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QQmlImageProviderBase *imageProvider(const QString &providerId) const
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QQMLENGINE_REMOVEIMAGEPROVIDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QQmlContext *rootContext() const
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETBASEURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setImportPathList(const QStringList &paths)
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETIMPORTPATHLIST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIncubationController(QQmlIncubationController *controller)
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETINCUBATIONCONTROLLER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNetworkAccessManagerFactory(QQmlNetworkAccessManagerFactory *factory)
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETNETWORKACCESSMANAGERFACTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOfflineStoragePath(const QString &dir)
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOFFLINESTORAGEPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOutputWarningsToStandardError(bool enabled)
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPluginPathList(const QStringList &paths)
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETPLUGINPATHLIST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void trimComponentCache()
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QQMLENGINE_TRIMCOMPONENTCACHE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QQmlContext *contextForObject(const QObject *object)
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETCONTEXTFOROBJECT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setObjectOwnership(QObject *object, QQmlEngine::ObjectOwnership ownership)
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOBJECTOWNERSHIP)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void quit()

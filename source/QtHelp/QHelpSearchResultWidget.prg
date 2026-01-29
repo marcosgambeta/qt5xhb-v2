@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl linkAt(const QPoint &point)

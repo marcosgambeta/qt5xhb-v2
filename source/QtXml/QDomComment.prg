@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QDOMCOMMENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDomNode::NodeType nodeType() cons

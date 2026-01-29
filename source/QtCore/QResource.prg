@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QRESOURCE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString absoluteFilePath() const
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QRESOURCE_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLocale(const QLocale &locale)
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QRESOURCE_SETLOCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 size() const

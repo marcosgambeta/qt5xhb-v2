@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void resume()
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractSocket::PauseModes pauseMode() const
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETPAUSEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
                              : PQABSTRACTSOCKET_NETWORKLAYERPROTOCOL(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // virtual void connectToHost(const QHostAddress &address, quint16 port, QIODevice::OpenMode mode =
     // QIODevice::ReadWrite)
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
       obj->connectToHost(*PQHOSTADDRESS(1), PQUINT16(2), HB_ISNIL(3) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_DISCONNECTFROMHOST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETREADBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void abort()
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_ABORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual qintptr socketDescriptor() const
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant socketOption(QAbstractSocket::SocketOption option)
@@ -621,7 +621,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isSequential() const Q_DECL_OVERRIDE
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETPROXY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QNetworkProxy proxy() const

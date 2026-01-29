@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString buttonText(QWizard::WizardButton which) const
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETBUTTONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void cleanupPage()
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_CLEANUPPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void initializePage()
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_INITIALIZEPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isCommitPage() const
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETCOMMITPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isComplete() const
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETFINALPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int nextId() const
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString subTitle() const
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETSUBTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString title() const
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool validatePage()

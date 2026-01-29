@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant data(int role = Qt::UserRole + 1) const
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon icon() const
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString toolTip() const
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETTOOLTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString statusTip() const
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETSTATUSTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString whatsThis() const
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETWHATSTHIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint() const
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETSIZEHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFont font() const
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Alignment textAlignment() const
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETTEXTALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush background() const
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETBACKGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush foreground() const
@@ -585,7 +585,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETFOREGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::CheckState checkState() const
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETCHECKSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString accessibleText() const
@@ -661,7 +661,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETACCESSIBLETEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString accessibleDescription() const
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETACCESSIBLEDESCRIPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::ItemFlags flags() const
@@ -737,7 +737,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEnabled() const
@@ -775,7 +775,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEditable() const
@@ -813,7 +813,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETEDITABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isSelectable() const
@@ -851,7 +851,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETSELECTABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isCheckable() const
@@ -889,7 +889,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETCHECKABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isTristate() const
@@ -927,7 +927,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETTRISTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isDragEnabled() const
@@ -965,7 +965,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETDRAGENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isDropEnabled() const
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETDROPENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStandardItem *parent() const
@@ -1133,7 +1133,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETROWCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int columnCount() const
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETCOLUMNCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasChildren() const
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETCHILD)
       obj->setChild(PINT(1), PINT(2), PQSTANDARDITEM(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
     // void setChild(int row, QStandardItem *item)
     auto obj = static_cast<QStandardItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1230,7 +1230,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETCHILD)
       obj->setChild(PINT(1), PQSTANDARDITEM(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROW)
       obj->insertRow(PINT(1), par2);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
     // void insertRow(int row, QStandardItem *item)
     auto obj = static_cast<QStandardItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1262,7 +1262,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROW)
       obj->insertRow(PINT(1), PQSTANDARDITEM(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1292,7 +1292,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSTANDARDITEM_INSERTROWS)
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROWS)
       obj->insertRows(PINT(1), par2);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void insertRows(int row, int count)
     auto obj = static_cast<QStandardItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1321,7 +1321,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROWS)
       obj->insertRows(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTCOLUMNS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeRow(int row)
@@ -1364,7 +1364,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_REMOVEROW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeColumn(int column)
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_REMOVECOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeRows(int row, int count)
@@ -1404,7 +1404,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_REMOVEROWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeColumns(int column, int count)
@@ -1424,7 +1424,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_REMOVECOLUMNS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSTANDARDITEM_APPENDROW)
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDROW)
       obj->appendRow(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQSTANDARDITEM(1)) {
     // void appendRow(QStandardItem *item)
     auto obj = static_cast<QStandardItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1453,7 +1453,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDROW)
       obj->appendRow(PQSTANDARDITEM(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1483,7 +1483,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDROWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void appendColumn(const QList<QStandardItem*> &items)
@@ -1510,7 +1510,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStandardItem *takeChild(int row, int column = 0)
@@ -1623,7 +1623,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SORTCHILDREN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QStandardItem *clone() const
@@ -1680,7 +1680,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_READ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void write(QDataStream &out) const
@@ -1700,7 +1700,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_WRITE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clearData()
@@ -1721,7 +1721,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_CLEARDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

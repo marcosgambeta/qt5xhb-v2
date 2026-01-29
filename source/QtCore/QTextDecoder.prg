@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QTEXTDECODER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toUnicode(QString *target, const char *chars, int len)

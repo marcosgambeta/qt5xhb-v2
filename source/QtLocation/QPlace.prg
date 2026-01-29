@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QPLACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QPLACE_SETCATEGORIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QPLACE_SETCATEGORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QPLACE_SETLOCATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QPLACE_SETRATINGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QPLACE_SETSUPPLIER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QPLACE_SETATTRIBUTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QPLACE_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QPLACE_SETTOTALCONTENTCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QPLACE_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -562,7 +562,7 @@ HB_FUNC_STATIC(QPLACE_SETPLACEID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -684,7 +684,7 @@ HB_FUNC_STATIC(QPLACE_SETDETAILSFETCHED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -746,7 +746,7 @@ HB_FUNC_STATIC(QPLACE_SETEXTENDEDATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QPLACE_REMOVEEXTENDEDATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -859,7 +859,7 @@ HB_FUNC_STATIC(QPLACE_SETCONTACTDETAILS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(QPLACE_APPENDCONTACTDETAIL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -903,7 +903,7 @@ HB_FUNC_STATIC(QPLACE_REMOVECONTACTDETAILS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -945,7 +945,7 @@ HB_FUNC_STATIC(QPLACE_SETVISIBILITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

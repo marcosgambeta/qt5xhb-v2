@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::ArrowType arrowType() const
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETARROWTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoRaise(bool enable)
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETAUTORAISE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMenu (QMenu *menu)
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETPOPUPMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETDEFAULTACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setToolButtonStyle(Qt::ToolButtonStyle style)
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETTOOLBUTTONSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void showMenu ()
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SHOWMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

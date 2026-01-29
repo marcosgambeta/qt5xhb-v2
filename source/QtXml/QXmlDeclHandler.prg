@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QXMLDECLHANDLER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool attributeDecl(const QString &eName, const QString &aName, const QString &type, const QString

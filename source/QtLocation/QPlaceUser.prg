@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QPLACEUSER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QPLACEUSER_SETUSERID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QPLACEUSER_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

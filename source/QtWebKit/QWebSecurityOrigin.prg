@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 databaseQuota() const
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_SETDATABASEQUOTA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void addLocalScheme(const QString &scheme)
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_ADDLOCALSCHEME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QList<QWebSecurityOrigin> allOrigins()
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_REMOVELOCALSCHEME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QWEBSECURITYORIGIN_NEWFROM)

@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QTextCodec *codec() const
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_SETCODEC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void atomicValue(const QVariant &value)
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ATOMICVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void attribute(const QXmlName &name, const QStringRef &value)
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void characters(const QStringRef &value)
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_CHARACTERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void comment(const QString &value)
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_COMMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void endDocument()
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDDOCUMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void endElement()
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDELEMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void endOfSequence()
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDOFSEQUENCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void namespaceBinding(const QXmlName &nb)
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_NAMESPACEBINDING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void processingInstruction(const QXmlName &name, const QString &value)
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_PROCESSINGINSTRUCTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void startDocument()
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTDOCUMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void startElement(const QXmlName &name)
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTELEMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void startOfSequence()
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTOFSEQUENCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

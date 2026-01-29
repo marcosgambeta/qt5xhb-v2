@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QFONTMETRICS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int ascent() const

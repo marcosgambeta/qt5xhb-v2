@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString deviceDescription(const QByteArray &service, const QByteArray &device) = 0

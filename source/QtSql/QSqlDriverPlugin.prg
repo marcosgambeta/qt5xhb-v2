@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QSQLDRIVERPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSqlDriver *create(const QString &key) = 0

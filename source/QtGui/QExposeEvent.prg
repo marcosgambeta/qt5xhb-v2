@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QEXPOSEEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QRegion &region() const

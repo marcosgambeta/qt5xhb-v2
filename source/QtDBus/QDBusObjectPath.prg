@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QDBUSOBJECTPATH_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString path() const
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QDBUSOBJECTPATH_SETPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDBUSOBJECTPATH_NEWFROM)

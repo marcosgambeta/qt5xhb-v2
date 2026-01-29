@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHTERM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHAREA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRECOMMENDATIONID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETVISIBILITYSCOPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRELEVANCEHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETLIMIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QCHART_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QCHART_SETTHEME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QCHART_SETBACKGROUNDVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QCHART_SETDROPSHADOWENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QCHART_SETBACKGROUNDROUNDNESS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QCHART_SETANIMATIONOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QCHART_SETANIMATIONDURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QCHART_SETANIMATIONEASINGCURVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QCHART_SETMARGINS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QCHART_SETPLOTAREABACKGROUNDVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -611,7 +611,7 @@ HB_FUNC_STATIC(QCHART_SETLOCALIZENUMBERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QCHART_SETLOCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -695,7 +695,7 @@ HB_FUNC_STATIC(QCHART_ADDSERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QCHART_REMOVESERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -739,7 +739,7 @@ HB_FUNC_STATIC(QCHART_REMOVEALLSERIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -800,7 +800,7 @@ HB_FUNC_STATIC(QCHART_SETAXISX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -822,7 +822,7 @@ HB_FUNC_STATIC(QCHART_SETAXISY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -886,7 +886,7 @@ HB_FUNC_STATIC(QCHART_ADDAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -908,7 +908,7 @@ HB_FUNC_STATIC(QCHART_REMOVEAXIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -971,7 +971,7 @@ HB_FUNC_STATIC(QCHART_CREATEDEFAULTAXES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -993,7 +993,7 @@ HB_FUNC_STATIC(QCHART_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC(QCHART_SETTITLEFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC(QCHART_SETTITLEBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC(QCHART_SETBACKGROUNDBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC(QCHART_SETBACKGROUNDPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC(QCHART_ZOOMIN)
       obj->zoomIn();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // void zoomIn(const QRectF &rect)
@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC(QCHART_ZOOMIN)
       obj->zoomIn(*PQRECTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC(QCHART_ZOOMOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC(QCHART_ZOOM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC(QCHART_ZOOMRESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC(QCHART_SCROLL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC(QCHART_SETPLOTAREABACKGROUNDBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1381,7 +1381,7 @@ HB_FUNC_STATIC(QCHART_SETPLOTAREABACKGROUNDPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

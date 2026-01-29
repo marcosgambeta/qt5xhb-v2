@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int currentLoop() const
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETCURRENTTIME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractAnimation::Direction direction() const
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETDIRECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int duration() const = 0
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETLOOPCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractAnimation::State state() const
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_PAUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resume()
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPaused(bool paused)
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETPAUSED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void start(QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped)
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void currentLoopChanged(int currentLoop)

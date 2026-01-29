@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QGEOADDRESS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTRYCODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETCITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETDISTRICT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETPOSTALCODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETSTREET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QGEOADDRESS_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

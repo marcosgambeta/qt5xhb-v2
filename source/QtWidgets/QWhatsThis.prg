@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QWHATSTHIS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QAction *createAction(QObject *parent = nullptr)
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QWHATSTHIS_ENTERWHATSTHISMODE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void hideText()
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QWHATSTHIS_HIDETEXT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool inWhatsThisMode()
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void showText(const QPoint &pos, const QString &text, QWidget *w = nullptr)
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QWHATSTHIS_SHOWTEXT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QWHATSTHIS_NEWFROM)

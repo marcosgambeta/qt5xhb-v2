@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QTILTSENSOR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QTILTSENSOR_CALIBRATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

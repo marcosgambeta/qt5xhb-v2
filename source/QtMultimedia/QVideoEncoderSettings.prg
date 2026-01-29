@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int bitRate() const
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETBITRATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCodec(const QString &codec)
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETCODEC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEncodingMode(QMultimedia::EncodingMode mode)
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETENCODINGMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEncodingOption(const QString &option, const QVariant &value)
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETENCODINGOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFrameRate(qreal rate)
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETFRAMERATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setQuality(QMultimedia::EncodingQuality quality)
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETQUALITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETRESOLUTION)
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETRESOLUTION)
       obj->setResolution(*PQSIZE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setResolution(int width, int height)
     auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETRESOLUTION)
       obj->setResolution(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

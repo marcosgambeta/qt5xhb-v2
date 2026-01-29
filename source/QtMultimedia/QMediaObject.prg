@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int notifyInterval() const
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_SETNOTIFYINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QMultimedia::AvailabilityStatus availability() const
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_UNBIND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void availabilityChanged(bool available)

@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QObject *beginCreate(QQmlContext *publicContext)
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_COMPLETECREATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
       obj->create(*PQQMLINCUBATOR(1), OPQQMLCONTEXT(2, nullptr), OPQQMLCONTEXT(3, nullptr));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_LOADURL)
       obj->loadUrl(*PQURL(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQURL(1) && HB_ISNUM(2)) {
     // void loadUrl(const QUrl &url, QQmlComponent::CompilationMode mode)
     auto obj = qobject_cast<QQmlComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_LOADURL)
       obj->loadUrl(*PQURL(1), PQQMLCOMPONENT_COMPILATIONMODE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void progressChanged(qreal progress)

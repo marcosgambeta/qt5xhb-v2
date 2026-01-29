@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool booleanLiteral(bool *ok) const

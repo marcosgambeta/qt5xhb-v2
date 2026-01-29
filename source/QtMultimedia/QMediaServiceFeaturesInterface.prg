@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray &service) const = 0

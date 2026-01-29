@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_SETFOCUSMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QCameraFocus::FocusPointMode focusPointMode() const
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_SETFOCUSPOINTMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPointF customFocusPoint() const
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_SETCUSTOMFOCUSPOINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QCameraFocusZoneList focusZones() const
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ZOOMTO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void digitalZoomChanged(qreal value)

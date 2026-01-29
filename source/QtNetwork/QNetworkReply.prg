@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void close() Q_DECL_OVERRIDE
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isSequential() const Q_DECL_OVERRIDE
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SETREADBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QNetworkAccessManager *manager() const
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SETSSLCONFIGURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void abort() = 0
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ABORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
       obj->ignoreSslErrors(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // virtual void ignoreSslErrors()
     auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
       obj->ignoreSslErrors();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

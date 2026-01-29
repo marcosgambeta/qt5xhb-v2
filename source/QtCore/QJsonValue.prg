@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QJSONVALUE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isArray() const

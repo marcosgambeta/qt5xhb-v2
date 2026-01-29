@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETOPACITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETUSEOPENGL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SHOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_HIDE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

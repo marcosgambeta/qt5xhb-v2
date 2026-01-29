@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl documentUri() const
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETMESSAGEHANDLER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNetworkAccessManager(QNetworkAccessManager *manager)
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETNETWORKACCESSMANAGER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUriResolver(const QAbstractUriResolver *resolver)
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETURIRESOLVER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QAbstractUriResolver *uriResolver() const

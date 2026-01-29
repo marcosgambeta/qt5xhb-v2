@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QBITMAP_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QBITMAP_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBitmap transformed(const QTransform &matrix) const

@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETCATEGORIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMAX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
       obj->append(PQSTRINGLIST(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void append(const QString &category)
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
       obj->append(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_REMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_INSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_REPLACE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString errorString() const
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLoadHints(QLibrary::LoadHints loadHints)
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_SETLOADHINTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool unload()

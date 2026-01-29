@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QFONTDATABASE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool bold(const QString &family, const QString &style) const

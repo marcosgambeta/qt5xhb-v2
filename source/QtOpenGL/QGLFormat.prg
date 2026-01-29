@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QGLFORMAT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool accum() const
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAccumBufferSize(int size)
@@ -516,7 +516,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUMBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAlpha(bool enable)
@@ -536,7 +536,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAlphaBufferSize(int size)
@@ -556,7 +556,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHABUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBlueBufferSize(int size)
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETBLUEBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDepth(bool enable)
@@ -596,7 +596,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDepthBufferSize(int size)
@@ -616,7 +616,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTHBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDirectRendering(bool enable)
@@ -636,7 +636,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDoubleBuffer(bool enable)
@@ -656,7 +656,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setGreenBufferSize(int size)
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETGREENBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QGL::FormatOptions opt)
@@ -696,7 +696,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOverlay(bool enable)
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPlane(int plane)
@@ -736,7 +736,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPLANE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setProfile(QGLFormat::OpenGLContextProfile profile)
@@ -756,7 +756,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRedBufferSize(int size)
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETREDBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRgba(bool enable)
@@ -796,7 +796,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSampleBuffers(bool enable)
@@ -816,7 +816,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSamples(int numSamples)
@@ -836,7 +836,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStencil(bool enable)
@@ -856,7 +856,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStencilBufferSize(int size)
@@ -876,7 +876,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCILBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStereo(bool enable)
@@ -896,7 +896,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSwapInterval(int interval)
@@ -916,7 +916,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSWAPINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVersion(int major, int minor)
@@ -936,7 +936,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETVERSION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool stencil() const
@@ -1112,7 +1112,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTFORMAT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setDefaultOverlayFormat(const QGLFormat &f)
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTOVERLAYFORMAT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGLFORMAT_NEWFROM)

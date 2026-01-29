@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QBUFFER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray &buffer()
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QBUFFER_SETBUFFER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QBUFFER_SETDATA)
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QBUFFER_SETDATA)
       obj->setData(*PQBYTEARRAY(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // void setData(const char *data, int size)
     auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QBUFFER_SETDATA)
       obj->setData(PCONSTCHAR(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QBUFFER_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool open(QBuffer::OpenMode flags)

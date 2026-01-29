@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RELEASE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void cancel()
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_CANCEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRestartHint(QSessionManager::RestartHint)
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSessionManager::RestartHint restartHint() const
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList restartCommand() const
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList discardCommand() const
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
       obj->setManagerProperty(PQSTRING(1), PQSTRING(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // void setManagerProperty(const QString &name, const QStringList &value)
     auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
       obj->setManagerProperty(PQSTRING(1), PQSTRINGLIST(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_REQUESTPHASE2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

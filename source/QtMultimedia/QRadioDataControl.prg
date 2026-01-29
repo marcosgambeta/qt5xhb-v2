@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString stationId() const = 0
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isAlternativeFrequenciesEnabled() const = 0

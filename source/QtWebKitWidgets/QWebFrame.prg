@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETTEXTSIZEMULTIPLIER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal zoomFactor() const
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETZOOMFACTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString title() const
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl requestedUrl() const
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasFocus() const
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QWebFrame *> childFrames() const
@@ -555,7 +555,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
       obj->load(*PQURL(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && ISNUMORNIL(2) && ISQBYTEARRAYORNIL(3)) {
     // void load(const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
     // QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray())
@@ -567,7 +567,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
                 HB_ISNIL(3) ? QByteArray() : *PQBYTEARRAY(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -639,7 +639,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRegion() : *PQREGION(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISNUM(2) && ISQREGIONORNIL(3)) {
     // void render(QPainter *, QWebFrame::RenderLayers layer, const QRegion &clip = QRegion())
     GET_PTR_FROM_SELF(obj);
@@ -648,7 +648,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
       obj->render(PQPAINTER(1), PQWEBFRAME_RENDERLAYERS(2), HB_ISNIL(3) ? QRegion() : *PQREGION(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -671,7 +671,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect scrollBarGeometry(Qt::Orientation orientation) const
@@ -781,7 +781,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLTOANCHOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebSecurityOrigin securityOrigin() const
@@ -819,7 +819,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFocus()
@@ -839,7 +839,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETFOCUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
@@ -859,7 +859,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETHTML)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScrollBarPolicy(Qt::Orientation orientation, Qt::ScrollBarPolicy policy)
@@ -879,7 +879,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScrollBarValue(Qt::Orientation orientation, int value)
@@ -899,7 +899,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString toHtml() const
@@ -974,7 +974,7 @@ HB_FUNC_STATIC(QWEBFRAME_PRINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QBARSET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QBARSET_SETLABEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QBARSET_SETPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QBARSET_SETBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QBARSET_SETLABELBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QBARSET_SETLABELFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QBARSET_SETCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QBARSET_SETBORDERCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QBARSET_SETLABELCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QBARSET_APPEND)
       obj->append(PQREAL(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void append(const QList<qreal> &values)
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QBARSET_APPEND)
       obj->append(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QBARSET_INSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QBARSET_REMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -556,7 +556,7 @@ HB_FUNC_STATIC(QBARSET_REPLACE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

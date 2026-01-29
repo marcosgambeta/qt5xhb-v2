@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setKey(const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString key() const

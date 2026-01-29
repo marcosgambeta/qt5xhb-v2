@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::MouseButtons buttons() const

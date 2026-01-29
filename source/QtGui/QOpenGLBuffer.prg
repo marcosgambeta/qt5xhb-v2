@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QOPENGLBUFFER_ALLOCATE)
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_ALLOCATE)
       obj->allocate(static_cast<const void *>(hb_parptr(1)), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void allocate(int count)
     auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_ALLOCATE)
       obj->allocate(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_DESTROY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isCreated() const
@@ -252,13 +252,13 @@ HB_FUNC_STATIC(QOPENGLBUFFER_RELEASE)
       obj->release();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // static void release(QOpenGLBuffer::Type type)
 
     QOpenGLBuffer::release(PQOPENGLBUFFER_TYPE(1));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_SETUSAGEPATTERN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int size() const
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_WRITE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

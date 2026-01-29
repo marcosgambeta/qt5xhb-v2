@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isActive() const

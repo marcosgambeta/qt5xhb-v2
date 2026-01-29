@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSizeF intrinsicSize(QTextDocument *doc, int posInDocument, const QTextFormat &format) = 0
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DRAWOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_NEWFROM)

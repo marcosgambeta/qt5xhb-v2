@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SETUPDATEINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STARTUPDATES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STOPUPDATES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_REQUESTUPDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

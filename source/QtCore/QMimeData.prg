@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QMIMEDATA_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QMIMEDATA_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant colorData() const
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QMIMEDATA_REMOVEFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setColorData(const QVariant &color)
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETCOLORDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setData(const QString &mimeType, const QByteArray &data)
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHtml(const QString &html)
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETHTML)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setImageData(const QVariant &image)
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETIMAGEDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &text)
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUrls(const QList<QUrl> &urls)
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETURLS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const

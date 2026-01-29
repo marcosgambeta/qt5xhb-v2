@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static int cacheLimit()
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_SETCACHELIMIT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QPixmap *find(const QString &key)
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_REMOVE1)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // [1]static void remove(const QString &key)
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_CLEAR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPIXMAPCACHE_NEWFROM)

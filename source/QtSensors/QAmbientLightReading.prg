@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QAMBIENTLIGHTREADING_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QAMBIENTLIGHTREADING_SETLIGHTLEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

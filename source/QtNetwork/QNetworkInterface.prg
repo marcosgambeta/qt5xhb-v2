@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QNetworkAddressEntry> addressEntries() const
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QNETWORKINTERFACE_NEWFROM)

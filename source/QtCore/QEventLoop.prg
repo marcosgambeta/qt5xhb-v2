@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QEVENTLOOP_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int exec(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isRunning() const
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
       obj->processEvents(PQEVENTLOOP_PROCESSEVENTSFLAGS(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void quit()
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QEVENTLOOP_QUIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

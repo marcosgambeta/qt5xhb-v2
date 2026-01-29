@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void append(const QWebElementCollection &other)
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebElement at(int i) const

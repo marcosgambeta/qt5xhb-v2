@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QTIMER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int interval() const
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QTIMER_SETINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSingleShot(bool singleShot)
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QTIMER_SETSINGLESHOT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int timerId() const
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QTIMER_START)
       obj->start(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // void start()
     auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QTIMER_START)
       obj->start();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QTIMER_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void singleShot(int msec, QObject *receiver, const char *member)
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QTIMER_SINGLESHOT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void timeout()

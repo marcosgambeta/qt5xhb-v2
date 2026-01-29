@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSSLKEY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSsl::KeyAlgorithm algorithm() const
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QSSLKEY_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QSSLKEY_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::HANDLE handle() const

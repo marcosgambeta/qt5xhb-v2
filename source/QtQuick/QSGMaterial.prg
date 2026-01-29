@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QSGMATERIAL_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int compare(const QSGMaterial *other) const
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSGMATERIAL_SETFLAG)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSGMaterialType *type() const = 0

@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_SETCENTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_SETRADIUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_TRANSLATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

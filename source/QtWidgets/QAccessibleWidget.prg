@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList keyBindingsForAction(const QString &actionName) const

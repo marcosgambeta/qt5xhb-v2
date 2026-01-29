@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QMIMETYPE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QMimeType &other)
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QMIMETYPE_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const

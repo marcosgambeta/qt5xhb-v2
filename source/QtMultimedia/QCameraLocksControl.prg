@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QCamera::LockStatus lockStatus(QCamera::LockType lock) const = 0
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SEARCHANDLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QCamera::LockTypes supportedLocks() const = 0
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_UNLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason)

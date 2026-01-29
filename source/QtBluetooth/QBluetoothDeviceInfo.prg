@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETCACHED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETRSSI)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS)
       obj->setServiceUuids(par1, PQBLUETOOTHDEVICEINFO_DATACOMPLETENESS(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   }
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS)
       obj->setServiceUuids(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   }
 #endif
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETCORECONFIGURATIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETDEVICEUUID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QDEBUG_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QDebug &other)
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QDEBUG_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDebug &space()
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QDEBUG_SETAUTOINSERTSPACES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDebug &maybeQuote(char c = '"')
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QDEBUG_SETVERBOSITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

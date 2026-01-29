@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QPALETTE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QBrush &alternateBase() const
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QPALETTE_SETBRUSH)
       obj->setBrush(PQPALETTE_COLORROLE(1), *PQBRUSH(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBRUSH(3)) {
     // void setBrush(QPalette::ColorGroup group, QPalette::ColorRole role, const QBrush &brush)
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QPALETTE_SETBRUSH)
       obj->setBrush(PQPALETTE_COLORGROUP(1), PQPALETTE_COLORROLE(2), *PQBRUSH(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
       obj->setColor(PQPALETTE_COLORGROUP(1), PQPALETTE_COLORROLE(2), HB_ISOBJECT(3) ? *PQCOLOR(3) : QColor(hb_parc(3)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
     // void setColor(QPalette::ColorRole role, const QColor &color)
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -578,7 +578,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
       obj->setColor(PQPALETTE_COLORROLE(1), HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -605,7 +605,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLORGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentColorGroup(QPalette::ColorGroup cg)
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QPALETTE_SETCURRENTCOLORGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QBrush &shadow() const

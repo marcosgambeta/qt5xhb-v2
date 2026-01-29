@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSHAPE)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETTEXT)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon icon
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETICON)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int row
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETROW)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // TabPosition position
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETPOSITION)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // SelectedPosition selectedPosition
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSELECTEDPOSITION)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // CornerWidgets cornerWidgets
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETCORNERWIDGETS)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize iconSize
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETICONSIZE)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool documentMode
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETDOCUMENTMODE)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize leftButtonSize
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETLEFTBUTTONSIZE)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize rightButtonSize
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETRIGHTBUTTONSIZE)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // TabFeatures features
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETFEATURES)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

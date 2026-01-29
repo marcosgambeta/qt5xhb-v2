@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_REGISTEROBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_DEREGISTEROBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_SETBLOCKUPDATES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_CONNECTTO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_DISCONNECTFROM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

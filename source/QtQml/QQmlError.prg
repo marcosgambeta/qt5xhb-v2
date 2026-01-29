@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QQMLERROR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int column() const
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QQMLERROR_SETCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDescription(const QString &description)
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QQMLERROR_SETDESCRIPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLine(int line)
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QQMLERROR_SETLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUrl(const QUrl &url)
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QQMLERROR_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString toString() const

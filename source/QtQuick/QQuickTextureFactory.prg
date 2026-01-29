@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSGTexture *createTexture(QQuickWindow *window) const = 0

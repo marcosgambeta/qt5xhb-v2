@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QLINEF_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPointF p1() const
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QLINEF_SETP1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setP2(const QPointF &p2)
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QLINEF_SETP2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAngle(qreal angle)
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QLINEF_SETANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLength(qreal length)
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QLINEF_SETLENGTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QLINEF_SETLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPoints(const QPointF &p1, const QPointF &p2)
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QLINEF_SETPOINTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QLine toLine() const
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QLINEF_TRANSLATE)
       obj->translate(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void translate(qreal dx, qreal dy)
     auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(QLINEF_TRANSLATE)
       obj->translate(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isParameterSupported(QCameraImageProcessingControl::ProcessingParameter parameter) const = 0
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

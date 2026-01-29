@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidget(QWidget *widget)
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_SETWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *widget() const

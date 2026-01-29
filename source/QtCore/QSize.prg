@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QSIZE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize boundedTo(const QSize &otherSize) const
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QSIZE_SCALE)
       obj->scale(PINT(1), PINT(2), PQT_ASPECTRATIOMODE(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2)) {
     // void scale(const QSize &size, Qt::AspectRatioMode mode)
     auto obj = static_cast<QSize *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QSIZE_SCALE)
       obj->scale(*PQSIZE(1), PQT_ASPECTRATIOMODE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QSIZE_SETHEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidth(int width)
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QSIZE_SETWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void transpose()
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QSIZE_TRANSPOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int width() const

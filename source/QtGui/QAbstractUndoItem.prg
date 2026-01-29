@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QABSTRACTUNDOITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void undo() = 0
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QABSTRACTUNDOITEM_UNDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void redo() = 0
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QABSTRACTUNDOITEM_REDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QABSTRACTUNDOITEM_NEWFROM)

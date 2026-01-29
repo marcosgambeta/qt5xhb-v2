@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QHostAddress &other) Q_DECL_NOTHROW
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
       obj->setAddress(PQUINT32(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool setAddress(const QString &address)
     auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEqual(const QHostAddress &address, QHostAddress::ConversionMode mode = QHostAddress::TolerantConversion) const
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isInSubnet(const QHostAddress &subnet, int netmask) const

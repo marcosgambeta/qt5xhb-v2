@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QMediaTimeRange availablePlaybackRanges() const = 0
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_PAUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void play() = 0
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_PLAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual qreal playbackRate() const = 0
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETMEDIA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setMuted(bool mute) = 0
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETMUTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setPlaybackRate(qreal rate) = 0
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETPLAYBACKRATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setPosition(qint64 position) = 0
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setVolume(int volume) = 0
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETVOLUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QMediaPlayer::State state() const = 0
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int volume() const = 0

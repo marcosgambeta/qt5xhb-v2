@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool canWrite() const
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETCOMPRESSION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDevice(QIODevice *device)
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFileName(const QString &fileName)
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const QByteArray &format)
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setGamma(float gamma)
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETGAMMA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setQuality(int quality)
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETQUALITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &key, const QString &text)
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool supportsOption(QImageIOHandler::ImageOption option) const

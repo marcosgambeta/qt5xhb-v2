@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDnsLookup::Error error() const
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDnsLookup::Type type() const
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QHostAddress nameserver() const
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETNAMESERVER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -579,7 +579,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ABORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void lookup()
@@ -599,7 +599,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_LOOKUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void finished()

@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QRegExp &regExp() const
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QValidator::State validate(QString &input, int &pos) const

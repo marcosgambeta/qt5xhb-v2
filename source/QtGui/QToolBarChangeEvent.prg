@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool toggle() const

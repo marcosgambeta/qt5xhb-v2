@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QUNDOSTACK_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void beginMacro(const QString &text)
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QUNDOSTACK_BEGINMACRO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool canRedo() const
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QUndoCommand *command(int index) const
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QUNDOSTACK_ENDMACRO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int index() const
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QUNDOSTACK_PUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString redoText() const
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QUNDOSTACK_SETUNDOLIMIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text(int idx) const
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QUNDOSTACK_REDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setActive(bool active = true)
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QUNDOSTACK_SETACTIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setClean()
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QUNDOSTACK_SETCLEAN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIndex(int idx)
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QUNDOSTACK_SETINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void undo()
@@ -557,7 +557,7 @@ HB_FUNC_STATIC(QUNDOSTACK_UNDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void canRedoChanged(bool canRedo)

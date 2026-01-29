@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDepthBufferSize(int size)
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETDEPTHBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int depthBufferSize() const
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETSTENCILBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int stencilBufferSize() const
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETREDBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int redBufferSize() const
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETGREENBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int greenBufferSize() const
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETBLUEBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int blueBufferSize() const
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETALPHABUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int alphaBufferSize() const
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETSAMPLES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int samples() const
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETSWAPBEHAVIOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSurfaceFormat::SwapBehavior swapBehavior() const
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETPROFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSurfaceFormat::OpenGLContextProfile profile() const
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETRENDERABLETYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSurfaceFormat::RenderableType renderableType() const
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETMAJORVERSION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int majorVersion() const
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETMINORVERSION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int minorVersion() const
@@ -621,7 +621,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETSTEREO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QSurfaceFormat::FormatOptions opt)
@@ -641,7 +641,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool testOption(QSurfaceFormat::FormatOptions opt) const

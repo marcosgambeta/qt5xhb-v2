@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QGRAPHICSTRANSFORM_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void applyTo(QMatrix4x4 *matrix) const = 0
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QGRAPHICSTRANSFORM_APPLYTO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

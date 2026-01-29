@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_SETIDENTIFIER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_ADDCATEGORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

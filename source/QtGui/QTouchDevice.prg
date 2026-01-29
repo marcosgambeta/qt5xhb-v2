@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString name() const
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setType(QTouchDevice::DeviceType devType)
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_SETTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCapabilities(QTouchDevice::Capabilities caps)
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_SETCAPABILITIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTOUCHDEVICE_NEWFROM)

@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QICON_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize actualSize(const QSize &size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addPixmap(const QPixmap &pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off)
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QICON_PAINT)
                  HB_ISNIL(4) ? QIcon::Normal : PQICON_MODE(4), HB_ISNIL(5) ? QIcon::Off : PQICON_STATE(5));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(5, 8) && ISQPAINTER(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              ISNUMORNIL(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
     // void paint(QPainter *painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QICON_PAINT)
                  HB_ISNIL(7) ? QIcon::Normal : PQICON_MODE(7), HB_ISNIL(8) ? QIcon::Off : PQICON_STATE(8));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QICON_SETTHEMENAME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setThemeSearchPaths(const QStringList &paths)
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QICON_SETTHEMESEARCHPATHS)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QString themeName()
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QICON_SETFALLBACKTHEMENAME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

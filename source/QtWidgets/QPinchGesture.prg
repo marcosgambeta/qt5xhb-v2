@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPointF centerPoint() const
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETCENTERPOINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setChangeFlags(QPinchGesture::ChangeFlags value)
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETCHANGEFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLastCenterPoint(const QPointF &value)
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETLASTCENTERPOINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLastRotationAngle(qreal value)
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETLASTROTATIONANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLastScaleFactor(qreal value)
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETLASTSCALEFACTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRotationAngle(qreal value)
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETROTATIONANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScaleFactor(qreal value)
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETSCALEFACTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStartCenterPoint(const QPointF &value)
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETSTARTCENTERPOINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTotalChangeFlags(QPinchGesture::ChangeFlags value)
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETTOTALCHANGEFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTotalRotationAngle(qreal value)
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETTOTALROTATIONANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTotalScaleFactor(qreal value)
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETTOTALSCALEFACTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPointF startCenterPoint() const

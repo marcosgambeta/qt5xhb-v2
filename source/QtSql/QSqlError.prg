@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QSQLERROR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString databaseText() const
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString driverText() const
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDRIVERTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QSQLERROR_SETNUMBER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QSQLERROR_SETTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString nativeErrorCode() const
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QSQLERROR_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

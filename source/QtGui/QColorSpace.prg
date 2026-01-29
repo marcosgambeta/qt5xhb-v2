@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QCOLORSPACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETTRANSFERFUNCTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETPRIMARIES)
       obj->setPrimaries(PQCOLORSPACE_PRIMARIES(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else if (ISNUMPAR(4) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4)) {
     // void setPrimaries(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETPRIMARIES)
       obj->setPrimaries(*PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

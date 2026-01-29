@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QAUDIODECODER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString sourceFilename() const
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAudioDecoder::State state() const
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETAUDIOFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 duration() const
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void start()
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QAUDIODECODER_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QAUDIODECODER_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs = QStringList())

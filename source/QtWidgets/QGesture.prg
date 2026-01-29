@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QGESTURE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QGesture::GestureCancelPolicy gestureCancelPolicy() const
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QGESTURE_SETGESTURECANCELPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHotSpot(const QPointF &value)
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QGESTURE_SETHOTSPOT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::GestureState state() const
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QGESTURE_UNSETHOTSPOT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

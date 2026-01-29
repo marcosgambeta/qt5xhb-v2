@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QSOUND_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int loops() const
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSOUND_SETLOOPS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString fileName() const
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QSOUND_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSOUND_PLAY)
@@ -198,13 +198,13 @@ HB_FUNC_STATIC(QSOUND_PLAY)
       obj->play();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static void play(const QString &filename)
 
     QSound::play(PQSTRING(1));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

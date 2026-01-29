@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QJSVALUE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool deleteProperty(const QString &name)
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QJSVALUE_SETPROPERTY)
       obj->setProperty(PQSTRING(1), *PQJSVALUE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQJSVALUE(2)) {
     // void setProperty(quint32 arrayIndex, const QJSValue &value)
     auto obj = static_cast<QJSValue *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QJSVALUE_SETPROPERTY)
       obj->setProperty(PQUINT32(1), *PQJSVALUE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QJSVALUE_SETPROTOTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool strictlyEquals(const QJSValue &other) const

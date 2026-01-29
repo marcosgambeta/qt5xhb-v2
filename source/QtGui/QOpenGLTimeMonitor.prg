@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_SETSAMPLECOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_DESTROY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 #endif
 }

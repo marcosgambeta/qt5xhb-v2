@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringRef namespaceUri() const

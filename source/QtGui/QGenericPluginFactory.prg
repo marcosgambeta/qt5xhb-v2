@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QGENERICPLUGINFACTORY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QObject *create(const QString &key, const QString &specification)

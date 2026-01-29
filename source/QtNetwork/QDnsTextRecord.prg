@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString name() const
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // quint32 timeToLive() const

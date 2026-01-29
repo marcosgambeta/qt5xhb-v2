@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QJSENGINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void collectGarbage()
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QJSValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)

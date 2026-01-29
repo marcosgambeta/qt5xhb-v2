@@ -55,7 +55,7 @@ HB_FUNC_STATIC(QICONENGINEPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QIconEngine *create(const QString &filename = QString()) = 0

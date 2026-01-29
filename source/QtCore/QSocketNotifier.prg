@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qintptr socket() const
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_SETENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

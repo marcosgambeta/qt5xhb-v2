@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_SETAUDIOROLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

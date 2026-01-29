@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QDATASTREAM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIODevice *device() const
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void unsetDevice()
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QDATASTREAM_UNSETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool atEnd() const
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETSTATUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resetStatus()
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QDATASTREAM_RESETSTATUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDataStream::FloatingPointPrecision floatingPointPrecision() const
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETFLOATINGPOINTPRECISION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDataStream::ByteOrder byteOrder() const
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETBYTEORDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int version() const
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETVERSION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDataStream &readBytes(char *&, uint &len)
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QDATASTREAM_ABORTTRANSACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QDATASTREAM_ROLLBACKTRANSACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QDATASTREAM_STARTTRANSACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

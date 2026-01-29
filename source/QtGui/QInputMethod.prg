@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SETINPUTITEMTRANSFORM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVisible(bool visible)
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void commit()
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_COMMIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void hide()
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_HIDE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void invokeAction(QInputMethod::Action a, int cursorPosition)
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INVOKEACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reset()
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void show()
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SHOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void update(Qt::InputMethodQueries queries)
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_UPDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void animatingChanged()

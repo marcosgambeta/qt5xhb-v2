@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QTEXTFRAME_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFrameFormat(const QTextFrameFormat &format)
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QTEXTFRAME_SETFRAMEFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextFrameFormat frameFormat() const

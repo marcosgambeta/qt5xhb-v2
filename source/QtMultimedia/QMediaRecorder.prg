@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMediaRecorder::State state() const
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETMUTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal volume() const
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETVOLUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isMetaDataAvailable() const
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETAUDIOSETTINGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setContainerFormat(const QString &container)
@@ -567,7 +567,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETCONTAINERFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEncodingSettings(const QAudioEncoderSettings &audioSettings, const QVideoEncoderSettings &videoSettings =
@@ -590,7 +590,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETENCODINGSETTINGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMetaData(const QString &key, const QVariant &value)
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETMETADATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVideoSettings(const QVideoEncoderSettings &videoSettings)
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETVIDEOSETTINGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList supportedAudioCodecs() const
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_PAUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void record()
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_RECORD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -887,7 +887,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void actualLocationChanged(const QUrl &location)

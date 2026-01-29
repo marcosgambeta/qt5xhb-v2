@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_SETLANGUAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

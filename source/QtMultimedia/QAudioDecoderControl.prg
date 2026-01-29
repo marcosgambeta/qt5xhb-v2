@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QAudioFormat audioFormat() const = 0
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETAUDIOFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QIODevice *sourceDevice() const = 0
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setSourceFilename(const QString &fileName) = 0
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString sourceFilename() const = 0
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QAudioDecoder::State state() const = 0
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void bufferAvailableChanged(bool available)

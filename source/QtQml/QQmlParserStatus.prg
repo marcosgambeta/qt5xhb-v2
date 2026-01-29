@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QQMLPARSERSTATUS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void classBegin() = 0
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QQMLPARSERSTATUS_CLASSBEGIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void componentComplete() = 0
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QQMLPARSERSTATUS_COMPONENTCOMPLETE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QQMLPARSERSTATUS_NEWFROM)

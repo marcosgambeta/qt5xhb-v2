@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEVARIANT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEBINDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEFILEDESCRIPTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

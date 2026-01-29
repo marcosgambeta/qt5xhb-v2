@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QBARDATAITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QBARDATAITEM_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QBARDATAITEM_SETROTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

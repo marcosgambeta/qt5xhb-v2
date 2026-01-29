@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QSSLCIPHER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString authenticationMethod() const
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QSSLCIPHER_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSSLCIPHER_NEWFROM)

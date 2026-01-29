@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QCURSOR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QBitmap *bitmap() const
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QCURSOR_SETSHAPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::CursorShape shape() const
@@ -237,13 +237,13 @@ HB_FUNC_STATIC(QCURSOR_SETPOS)
 
     QCursor::setPos(PINT(1), PINT(2));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // static void setPos(const QPoint &p)
 
     QCursor::setPos(*PQPOINT(1));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

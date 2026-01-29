@@ -52,7 +52,7 @@ HB_FUNC_STATIC(QINPUTEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::KeyboardModifiers modifiers() const

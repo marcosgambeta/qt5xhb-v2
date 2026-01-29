@@ -66,7 +66,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRowCountCB(PHB_ITEM block)
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETROWCOUNTCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDataCB(PHB_ITEM block)
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETDATACB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHeaderDataCB(PHB_ITEM block)
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETHEADERDATACB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlagsCB(PHB_ITEM block)
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETFLAGSCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSetDataCB(PHB_ITEM block)
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETSETDATACB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int rowCount(const QModelIndex &parent = QModelIndex()) const
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_RELOADDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

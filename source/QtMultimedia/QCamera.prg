@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QCAMERA_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QCamera::State state() const
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QCAMERA_SETCAPTUREMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QCAMERA_LOCKSTATUS)
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDER)
       obj->setViewfinder(PQVIDEOWIDGET(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQGRAPHICSVIDEOITEM(1)) {
     // void setViewfinder(QGraphicsVideoItem *viewfinder)
     GET_PTR_FROM_SELF(obj);
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDER)
       obj->setViewfinder(PQGRAPHICSVIDEOITEM(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQABSTRACTVIDEOSURFACE(1)) {
     // void setViewfinder(QAbstractVideoSurface *surface)
     GET_PTR_FROM_SELF(obj);
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDER)
       obj->setViewfinder(PQABSTRACTVIDEOSURFACE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QCAMERA_LOAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QCAMERA_SEARCHANDLOCK)
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QCAMERA_SEARCHANDLOCK)
       obj->searchAndLock();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void searchAndLock(QCamera::LockTypes locks)
     GET_PTR_FROM_SELF(obj);
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QCAMERA_SEARCHANDLOCK)
       obj->searchAndLock(PQCAMERA_LOCKTYPES(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QCAMERA_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QCAMERA_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void unload()
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QCAMERA_UNLOAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QCAMERA_UNLOCK)
@@ -521,7 +521,7 @@ HB_FUNC_STATIC(QCAMERA_UNLOCK)
       obj->unlock();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void unlock(QCamera::LockTypes locks)
     GET_PTR_FROM_SELF(obj);
@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QCAMERA_UNLOCK)
       obj->unlock(PQCAMERA_LOCKTYPES(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDERSETTINGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

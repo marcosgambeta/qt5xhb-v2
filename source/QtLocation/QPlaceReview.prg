@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETDATETIME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETLANGUAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETRATING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETREVIEWID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

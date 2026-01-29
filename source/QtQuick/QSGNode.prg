@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSGNODE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void appendChildNode(QSGNode *node)
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QSGNODE_APPENDCHILDNODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSGNode *childAtIndex(int i) const
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QSGNODE_INSERTCHILDNODEAFTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void insertChildNodeBefore(QSGNode *node, QSGNode *before)
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QSGNODE_INSERTCHILDNODEBEFORE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isSubtreeBlocked() const
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QSGNODE_MARKDIRTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSGNode *nextSibling() const
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QSGNODE_PREPENDCHILDNODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void preprocess()
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QSGNODE_PREPROCESS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSGNode *previousSibling() const
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QSGNODE_REMOVEALLCHILDNODES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeChildNode(QSGNode *node)
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QSGNODE_REMOVECHILDNODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlag(QSGNode::Flag f, bool enabled = true)
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAG)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlags(QSGNode::Flags f, bool enabled = true)
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSGNode::NodeType type() const

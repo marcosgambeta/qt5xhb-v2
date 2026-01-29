@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QWebEngineHttpRequest &other)
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebEngineHttpRequest::Method method() const
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETMETHOD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl url() const
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray postData() const
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETPOSTDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasHeader(const QByteArray &headerName) const
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETHEADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void unsetHeader(const QByteArray &headerName)
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_UNSETHEADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

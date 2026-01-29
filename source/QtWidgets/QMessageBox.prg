@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
       obj->addButton(PQABSTRACTBUTTON(1), PQMESSAGEBOX_BUTTONROLE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QPushButton *addButton(const QString &text, QMessageBox::ButtonRole role)
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDETAILEDTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPixmap iconPixmap() const
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICONPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString informativeText() const
@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETINFORMATIVETEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void open(QObject *receiver, const char *member)
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeButton(QAbstractButton *button)
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_REMOVEBUTTON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
       obj->setDefaultButton(PQPUSHBUTTON(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setDefaultButton(QMessageBox::StandardButton button)
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
       obj->setDefaultButton(PQMESSAGEBOX_STANDARDBUTTON(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
       obj->setEscapeButton(PQABSTRACTBUTTON(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setEscapeButton(QMessageBox::StandardButton button)
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
       obj->setEscapeButton(PQMESSAGEBOX_STANDARDBUTTON(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -568,7 +568,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWMODALITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWindowTitle(const QString &title)
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMessageBox::StandardButton standardButton(QAbstractButton *button) const
@@ -644,7 +644,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETSTANDARDBUTTONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const
@@ -682,7 +682,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::TextFormat textFormat() const
@@ -720,7 +720,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVisible (bool visible)
@@ -741,7 +741,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void aboutQt(QWidget *parent, const QString &title = QString())
@@ -792,7 +792,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUTQT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QMessageBox::StandardButton critical(QWidget *parent, const QString &title, const QString &text,
@@ -902,7 +902,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTINTERACTIONFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QCheckBox *checkBox() const
@@ -941,7 +941,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETCHECKBOX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QPixmap standardIcon(QMessageBox::Icon icon)
@@ -993,7 +993,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETBUTTONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void buttonClicked(QAbstractButton *button)

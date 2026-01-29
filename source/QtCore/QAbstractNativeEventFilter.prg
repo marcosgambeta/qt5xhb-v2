@@ -52,7 +52,7 @@ HB_FUNC_STATIC(QABSTRACTNATIVEEVENTFILTER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) = 0

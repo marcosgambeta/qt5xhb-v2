@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_LOAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETHTML)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETCONTENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_TRIGGERPAGEACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETZOOMFACTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -491,7 +491,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_BACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_FORWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -557,7 +557,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_RELOAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

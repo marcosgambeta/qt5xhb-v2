@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setValue(const QVariant &val)
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant value() const

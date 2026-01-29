@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl requestUrl() const
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REPLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void fail(QWebEngineUrlRequestJob::Error error)
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_FAIL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void redirect(const QUrl &url)
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REDIRECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

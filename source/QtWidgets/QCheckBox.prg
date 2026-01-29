@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QCHECKBOX_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::CheckState checkState() const
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QCHECKBOX_SETCHECKSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTristate(bool y = true)
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QCHECKBOX_SETTRISTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize minimumSizeHint() const

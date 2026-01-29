@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

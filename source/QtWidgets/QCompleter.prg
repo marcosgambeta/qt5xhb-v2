@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QCOMPLETER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::CaseSensitivity caseSensitivity() const
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCASESENSITIVITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCompletionColumn(int column)
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCompletionMode(QCompleter::CompletionMode mode)
@@ -461,7 +461,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCompletionRole(int role)
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONROLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool setCurrentRow(int row)
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMAXVISIBLEITEMS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setModel(QAbstractItemModel *model)
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setModelSorting(QCompleter::ModelSorting sorting)
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMODELSORTING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPopup(QAbstractItemView *popup)
@@ -579,7 +579,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETPOPUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidget(QWidget *widget)
@@ -599,7 +599,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QStringList splitPath(const QString &path) const
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCompletionPrefix(const QString &prefix)
@@ -694,7 +694,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONPREFIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWrapAround(bool wrap)
@@ -714,7 +714,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETWRAPAROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFilterMode(Qt::MatchFlags filterMode)
@@ -735,7 +735,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETFILTERMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

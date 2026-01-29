@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool loadPicture(const QString &format, const QString &filename, QPicture *pic)

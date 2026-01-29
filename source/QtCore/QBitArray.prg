@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QBITARRAY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool at(int i) const
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QBITARRAY_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clearBit(int i)
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QBITARRAY_CLEARBIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QBITARRAY_COUNT)
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QBITARRAY_FILL)
       obj->fill(PBOOL(1), PINT(2), PINT(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QBITARRAY_RESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QBITARRAY_SETBIT)
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
       obj->setBit(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
     // void setBit(int i, bool value)
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
       obj->setBit(PINT(1), PBOOL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QBITARRAY_TRUNCATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QBITARRAY_NEWFROM)

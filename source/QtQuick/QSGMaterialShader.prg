@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void activate()
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_ACTIVATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void deactivate()
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_DEACTIVATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QOpenGLShaderProgram *program()

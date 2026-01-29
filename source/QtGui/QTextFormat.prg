@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QTextFormat &other)
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void merge(const QTextFormat &other)
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_MERGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETOBJECTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant property(int propertyId) const
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasProperty(int propertyId) const
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
       obj->setProperty(PINT(1), *PQVARIANT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1) && HB_ISARRAY(2)) {
     // void setProperty(int propertyId, const QVector<QTextLength> &lengths)
     auto obj = static_cast<QTextFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
       obj->setProperty(PINT(1), par2);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -560,7 +560,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETOBJECTTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int objectType() const
@@ -850,7 +850,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETLAYOUTDIRECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::LayoutDirection layoutDirection() const
@@ -888,7 +888,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETBACKGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush background() const
@@ -926,7 +926,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARBACKGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setForeground(const QBrush &brush)
@@ -946,7 +946,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETFOREGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush foreground() const
@@ -984,7 +984,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARFOREGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEXTFORMAT_NEWFROM)

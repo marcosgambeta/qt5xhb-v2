@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QDRAGENTEREVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal baselineOffset() const
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_FORCEACTIVEFOCUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal implicitHeight() const
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETBASELINEOFFSET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setClip(bool)
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETCLIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setKeepMouseGrab(bool keep)
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETKEEPMOUSEGRAB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setParentItem(QDeclarativeItem *parent)
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETPARENTITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSmooth(bool smooth)
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETSMOOTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTransformOrigin(QDeclarativeItem::TransformOrigin origin)
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETTRANSFORMORIGIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool smooth() const

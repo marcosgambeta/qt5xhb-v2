@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QPIESERIES_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QPIESERIES_SETHORIZONTALPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QPIESERIES_SETVERTICALPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QPIESERIES_SETPIESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QPIESERIES_SETPIESTARTANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QPIESERIES_SETPIEENDANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QPIESERIES_SETHOLESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(QPIESERIES_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QPIESERIES_SETLABELSVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -645,7 +645,7 @@ HB_FUNC_STATIC(QPIESERIES_SETLABELSPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

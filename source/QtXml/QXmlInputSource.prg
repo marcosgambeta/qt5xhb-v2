@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString data() const
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_FETCHDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QChar next()
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
       obj->setData(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // virtual void setData(const QByteArray &dat)
     GET_PTR_FROM_SELF(obj);
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
       obj->setData(*PQBYTEARRAY(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

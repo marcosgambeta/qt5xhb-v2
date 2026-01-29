@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glActiveTexture(GLenum texture)
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLACTIVETEXTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glAttachShader(GLuint program, GLuint shader)
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLATTACHSHADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glBindAttribLocation(GLuint program, GLuint index, const char *name)
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDATTRIBLOCATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glBindBuffer(GLenum target, GLuint buffer)
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDBUFFER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glBindFramebuffer(GLenum target, GLuint framebuffer)
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDFRAMEBUFFER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDRENDERBUFFER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glBlendEquation(GLenum mode)
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDFUNCSEPARATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // GLenum glCheckFramebufferStatus(GLenum target)
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCLEARDEPTHF)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glCompileShader(GLuint shader)
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPILESHADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // GLuint glCreateProgram()
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glDeleteRenderbuffers(GLsizei n, const GLuint *renderbuffers)
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETESHADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glDepthRangef(GLclampf zNear, GLclampf zFar)
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDEPTHRANGEF)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glDetachShader(GLuint program, GLuint shader)
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDETACHSHADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glDisableVertexAttribArray(GLuint index)
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glEnableVertexAttribArray(GLuint index)
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
@@ -568,7 +568,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glGenBuffers(GLsizei n, GLuint *buffers)
@@ -611,7 +611,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei *length, GLint *size, GLenum *type,
@@ -775,7 +775,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLLINKPROGRAM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glReleaseShaderCompiler()
@@ -795,7 +795,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRELEASESHADERCOMPILER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
@@ -815,7 +815,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRENDERBUFFERSTORAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glSampleCoverage(GLclampf value, GLboolean invert)
@@ -835,7 +835,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSAMPLECOVERAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
@@ -855,7 +855,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILFUNCSEPARATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glStencilMaskSeparate(GLenum face, GLuint mask)
@@ -875,7 +875,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILMASKSEPARATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass)
@@ -895,7 +895,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILOPSEPARATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glUniform1f(GLint location, GLfloat x)
@@ -915,7 +915,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1F)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glUniform1i(GLint location, GLint x)
@@ -935,7 +935,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1I)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glUniform2f(GLint location, GLfloat x, GLfloat y)
@@ -955,7 +955,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2F)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glUniform2i(GLint location, GLint x, GLint y)
@@ -975,7 +975,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2I)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glUniform3f(GLint location, GLfloat x, GLfloat y, GLfloat z)
@@ -995,7 +995,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3F)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glUniform3i(GLint location, GLint x, GLint y, GLint z)
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3I)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glUniform4f(GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4F)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glUniform4i(GLint location, GLint x, GLint y, GLint z, GLint w)
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4I)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glUseProgram(GLuint program)
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUSEPROGRAM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glValidateProgram(GLuint program)
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVALIDATEPROGRAM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glVertexAttrib1f(GLuint indx, GLfloat x)
@@ -1115,7 +1115,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB1F)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y)
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB2F)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z)
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB3F)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB4F)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasOpenGLFeature(QGLFunctions::OpenGLFeature feature) const
@@ -1213,7 +1213,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QGLFunctions::OpenGLFeatures openGLFeatures() const

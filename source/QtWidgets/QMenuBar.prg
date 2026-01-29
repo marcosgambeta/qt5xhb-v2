@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QMENUBAR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *activeAction() const
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDACTION)
       obj->addAction(PQACTION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QMENUBAR_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *insertMenu(QAction *before, QMenu *menu)
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QMENUBAR_SETDEFAULTUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNativeMenuBar() const
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QMENUBAR_SETNATIVEMENUBAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setActiveAction(QAction *act)
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QMENUBAR_SETACTIVEACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int heightForWidth(int) const
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QMENUBAR_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect actionGeometry(QAction *) const
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QMENUBAR_SETCORNERWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefaultAction (QAction *act)
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QMENUBAR_SETDEFAULTACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QMENUBAR_WCECOMMANDS)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC(QMENUBAR_WCEREFRESH)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

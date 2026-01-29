@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QTEXTLINE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLEADINGINCLUDED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool leadingIncluded() const
@@ -414,7 +414,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLINEWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
       obj->setNumColumns(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setNumColumns(int columns, qreal alignmentWidth)
     auto obj = static_cast<QTextLine *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
       obj->setNumColumns(PINT(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPointF position() const

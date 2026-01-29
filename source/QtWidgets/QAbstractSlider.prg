@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int maximum() const
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int minimum() const
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Orientation orientation() const
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int pageStep() const
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETPAGESTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool invertedAppearance() const
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDAPPEARANCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool invertedControls() const
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDCONTROLS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRange(int min, int max)
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isSliderDown() const
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERDOWN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int singleStep() const
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSINGLESTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int sliderPosition() const
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void triggerAction(QAbstractSlider::SliderAction action)
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_TRIGGERACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int value() const
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasTracking() const
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETTRACKING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void actionTriggered(int action)

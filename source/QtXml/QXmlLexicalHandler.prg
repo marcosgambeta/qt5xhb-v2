@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool comment(const QString &ch) = 0

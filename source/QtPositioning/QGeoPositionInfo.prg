@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_SETTIMESTAMP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_SETCOORDINATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_SETATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_REMOVEATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

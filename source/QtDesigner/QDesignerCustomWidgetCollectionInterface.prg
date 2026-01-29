@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QList<QDesignerCustomWidgetInterface*> customWidgets() const = 0

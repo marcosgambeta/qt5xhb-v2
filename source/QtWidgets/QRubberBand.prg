@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QRUBBERBAND_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QRUBBERBAND_MOVE)
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QRUBBERBAND_MOVE)
       obj->move(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void move(const QPoint &p)
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QRUBBERBAND_MOVE)
       obj->move(*PQPOINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QRUBBERBAND_RESIZE)
       obj->resize(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void resize(const QSize &size)
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QRUBBERBAND_RESIZE)
       obj->resize(*PQSIZE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
       obj->setGeometry(*PQRECT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setGeometry(int x, int y, int width, int height)
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
       obj->setGeometry(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

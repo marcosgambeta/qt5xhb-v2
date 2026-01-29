@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QVARIANT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QVariant &other)
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QVARIANT_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant::Type type() const
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QVARIANT_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void detach()
@@ -703,7 +703,7 @@ HB_FUNC_STATIC(QVARIANT_DETACH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isDetached() const
@@ -1424,7 +1424,7 @@ HB_FUNC_STATIC(QVARIANT_LOAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC(QVARIANT_SAVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

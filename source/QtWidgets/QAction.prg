@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QACTION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QActionGroup *actionGroup() const
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QACTION_ACTIVATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QGraphicsWidget *> associatedGraphicsWidgets() const
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QACTION_SETACTIONGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoRepeat(bool)
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QACTION_SETAUTOREPEAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCheckable(bool)
@@ -667,7 +667,7 @@ HB_FUNC_STATIC(QACTION_SETCHECKABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setData(const QVariant &userData)
@@ -687,7 +687,7 @@ HB_FUNC_STATIC(QACTION_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFont(const QFont &font)
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QACTION_SETFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIcon(const QIcon &icon)
@@ -727,7 +727,7 @@ HB_FUNC_STATIC(QACTION_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIconText(const QString &text)
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QACTION_SETICONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIconVisibleInMenu(bool visible)
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QACTION_SETICONVISIBLEINMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMenu(QMenu *menu)
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QACTION_SETMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMenuRole(QAction::MenuRole menuRole)
@@ -807,7 +807,7 @@ HB_FUNC_STATIC(QACTION_SETMENUROLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPriority(QAction::Priority priority)
@@ -827,7 +827,7 @@ HB_FUNC_STATIC(QACTION_SETPRIORITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSeparator(bool b)
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QACTION_SETSEPARATOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setShortcut(const QKeySequence &shortcut)
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setShortcutContext(Qt::ShortcutContext context)
@@ -887,7 +887,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
@@ -907,7 +907,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
       obj->setShortcuts(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setShortcuts(QKeySequence::StandardKey key)
@@ -917,7 +917,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
       obj->setShortcuts(PQKEYSEQUENCE_STANDARDKEY(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
 
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -941,7 +941,7 @@ HB_FUNC_STATIC(QACTION_SETSTATUSTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &text)
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QACTION_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setToolTip(const QString &tip)
@@ -981,7 +981,7 @@ HB_FUNC_STATIC(QACTION_SETTOOLTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWhatsThis(const QString &what)
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC(QACTION_SETWHATSTHIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QKeySequence shortcut() const
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC(QACTION_HOVER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setChecked(bool)
@@ -1207,7 +1207,7 @@ HB_FUNC_STATIC(QACTION_SETCHECKED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDisabled(bool b)
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC(QACTION_SETDISABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEnabled(bool)
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC(QACTION_SETENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVisible(bool)
@@ -1267,7 +1267,7 @@ HB_FUNC_STATIC(QACTION_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toggle()
@@ -1287,7 +1287,7 @@ HB_FUNC_STATIC(QACTION_TOGGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void trigger()
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC(QACTION_TRIGGER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void changed()

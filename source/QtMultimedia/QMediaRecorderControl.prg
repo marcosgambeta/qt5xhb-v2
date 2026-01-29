@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void applySettings() = 0
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_APPLYSETTINGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual qint64 duration() const = 0
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETMUTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setState(QMediaRecorder::State state) = 0
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setVolume(qreal gain) = 0
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETVOLUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void actualLocationChanged(const QUrl &location)

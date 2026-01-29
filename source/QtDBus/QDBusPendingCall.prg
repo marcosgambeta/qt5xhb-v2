@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void swap(QDBusPendingCall &other)
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isFinished() const
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_WAITFORFINISHED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
       obj->connectToServer(HB_ISNIL(1) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // void connectToServer(const QString &name, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
       obj->connectToServer(PQSTRING(1), HB_ISNIL(2) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DISCONNECTFROMSERVER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setServerName(const QString &name)
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSERVERNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString serverName() const
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ABORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isSequential() const Q_DECL_OVERRIDE
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QLocalSocket::LocalSocketError error() const
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETREADBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool setSocketDescriptor(qintptr socketDescriptor, QLocalSocket::LocalSocketState socketState =

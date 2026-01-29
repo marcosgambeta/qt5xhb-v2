@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QSQLRESULT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant handle() const

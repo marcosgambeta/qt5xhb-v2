@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QTHREADPOOL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void start(QRunnable *runnable, int priority = 0)
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void QThreadPool::start(std::function<void ()> functionToRun, int priority = 0)
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int maxThreadCount() const
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int activeThreadCount() const
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void releaseThread()
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool waitForDone(int msecs = -1)
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QTHREADPOOL_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETSTACKSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

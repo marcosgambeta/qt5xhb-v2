@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QPOINTF_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QPOINTF_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setY(qreal y)
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QPOINTF_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPoint toPoint() const

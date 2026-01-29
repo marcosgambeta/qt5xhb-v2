@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int audioBitRate() const
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETAUDIOBITRATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAudioCodec(const QString &codec)
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETAUDIOCODEC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setChannelCount(int channels)
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETCHANNELCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDataSize(const qint64 size)
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETDATASIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLanguage(const QString &language)
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETLANGUAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMEDIARESOURCE_SETRESOLUTION)
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETRESOLUTION)
       obj->setResolution(*PQSIZE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setResolution(int width, int height)
     auto obj = static_cast<QMediaResource *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -414,7 +414,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETRESOLUTION)
       obj->setResolution(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETSAMPLERATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVideoBitRate(int rate)
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETVIDEOBITRATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVideoCodec(const QString &codec)
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETVIDEOCODEC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl url() const

@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::InputMethodQueries queries() const
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant value(Qt::InputMethodQuery query) const
