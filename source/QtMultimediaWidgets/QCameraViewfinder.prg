@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIAOBJECT
+REQUEST QMediaObject
 #endif
 
 CLASS QCameraViewfinder INHERIT QVideoWidget
@@ -50,7 +50,9 @@ RETURN
 #include <QtMultimediaWidgets/QCameraViewfinder>
 #endif
 
-    // QCameraViewfinder(QWidget *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraViewfinder *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QCameraViewfinder(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QCAMERAVIEWFINDER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -63,17 +65,15 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDER_NEW)
 
 HB_FUNC_STATIC(QCAMERAVIEWFINDER_DELETE)
 {
-  auto obj = qobject_cast<QCameraViewfinder *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QMediaObject *mediaObject() const
 HB_FUNC_STATIC(QCAMERAVIEWFINDER_MEDIAOBJECT)
 {
-  auto obj = qobject_cast<QCameraViewfinder *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
