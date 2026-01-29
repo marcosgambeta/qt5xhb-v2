@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QVARIANT
+REQUEST QByteArray
+REQUEST QVariant
 #endif
 
 CLASS QMacPasteboardMime
@@ -68,7 +68,9 @@ RETURN
 #endif
 #endif
 
-    // QMacPasteboardMime(char)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QMacPasteboardMime(char)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -84,10 +86,8 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_NEW)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_DELETE)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTORNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTORNAME)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_CANCONVERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CANCONVERT)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_MIMEFOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_MIMEFOR)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_FLAVORFOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_FLAVORFOR)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTTOMIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTTOMIME)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTFROMMIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTFROMMIME)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
