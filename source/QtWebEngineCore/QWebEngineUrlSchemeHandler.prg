@@ -49,7 +49,10 @@ RETURN
 #include <QtWebEngineCore/QWebEngineUrlSchemeHandler>
 #endif
 
-    // QWebEngineUrlSchemeHandler(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QWebEngineUrlSchemeHandler *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWebEngineUrlSchemeHandler(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWEBENGINEURLSCHEMEHANDLER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -63,7 +66,7 @@ HB_FUNC_STATIC(QWEBENGINEURLSCHEMEHANDLER_NEW)
 // ~QWebEngineUrlSchemeHandler()
 HB_FUNC_STATIC(QWEBENGINEURLSCHEMEHANDLER_DELETE)
 {
-  auto obj = qobject_cast<QWebEngineUrlSchemeHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -73,7 +76,7 @@ HB_FUNC_STATIC(QWEBENGINEURLSCHEMEHANDLER_DELETE)
 // virtual void requestStarted(QWebEngineUrlRequestJob *) = 0
 HB_FUNC_STATIC(QWEBENGINEURLSCHEMEHANDLER_REQUESTSTARTED)
 {
-  auto obj = qobject_cast<QWebEngineUrlSchemeHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

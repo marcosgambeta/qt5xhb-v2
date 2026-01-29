@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QURL
+REQUEST QByteArray
+REQUEST QUrl
 #endif
 
 CLASS QWebEngineHttpRequest
@@ -69,6 +69,8 @@ RETURN
 #include <QtWebEngineCore/QWebEngineHttpRequest>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQURLORNIL(1) && ISNUMORNIL(2)) {
@@ -76,15 +78,11 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
     auto obj = new QWebEngineHttpRequest(HB_ISNIL(1) ? QUrl() : *PQURL(1),
                                          HB_ISNIL(2) ? QWebEngineHttpRequest::Get : PQWEBENGINEHTTPREQUEST_METHOD(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  elseif(ISNUMPAR(1) && ISQWEBENGINEHTTPREQUEST(1))
-  {
+  } else if (ISNUMPAR(1) && ISQWEBENGINEHTTPREQUEST(1)) {
     // QWebEngineHttpRequest(const QWebEngineHttpRequest &other)
     auto obj = new QWebEngineHttpRequest(*PQWEBENGINEHTTPREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -92,7 +90,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
 // ~QWebEngineHttpRequest()
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_DELETE)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -102,7 +100,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_DELETE)
 // void swap(QWebEngineHttpRequest &other)
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SWAP)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +120,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SWAP)
 // QWebEngineHttpRequest::Method method() const
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_METHOD)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +138,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_METHOD)
 // void setMethod(QWebEngineHttpRequest::Method method)
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETMETHOD)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +158,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETMETHOD)
 // QUrl url() const
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_URL)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +176,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_URL)
 // void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETURL)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +196,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETURL)
 // QByteArray postData() const
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_POSTDATA)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +214,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_POSTDATA)
 // void setPostData(const QByteArray &postData)
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETPOSTDATA)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,7 +234,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETPOSTDATA)
 // bool hasHeader(const QByteArray &headerName) const
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HASHEADER)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,7 +252,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HASHEADER)
 // QVector<QByteArray> headers() const
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADERS)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +262,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADERS)
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (const auto &item : list) {
+        for (auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -294,7 +292,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADERS)
 // QByteArray header(const QByteArray &headerName) const
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADER)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +310,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADER)
 // void setHeader(const QByteArray &headerName, const QByteArray &value)
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETHEADER)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +330,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETHEADER)
 // void unsetHeader(const QByteArray &headerName)
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_UNSETHEADER)
 {
-  auto obj = static_cast<QWebEngineHttpRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

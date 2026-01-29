@@ -55,10 +55,12 @@ RETURN
 #include <QtWebEngineCore/QWebEngineCookieStore>
 #endif
 
-    // virtual ~QWebEngineCookieStore()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWebEngineCookieStore *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QWebEngineCookieStore()
 HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETE)
 {
-  auto obj = qobject_cast<QWebEngineCookieStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETE)
 // void setCookie(const QNetworkCookie &cookie, const QUrl &origin = QUrl())
 HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_SETCOOKIE)
 {
-  auto obj = qobject_cast<QWebEngineCookieStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_SETCOOKIE)
 // void deleteCookie(const QNetworkCookie &cookie, const QUrl &origin = QUrl())
 HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETECOOKIE)
 {
-  auto obj = qobject_cast<QWebEngineCookieStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +110,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETECOOKIE)
 // void deleteSessionCookies()
 HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETESESSIONCOOKIES)
 {
-  auto obj = qobject_cast<QWebEngineCookieStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETESESSIONCOOKIES)
 // void deleteAllCookies()
 HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETEALLCOOKIES)
 {
-  auto obj = qobject_cast<QWebEngineCookieStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +150,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETEALLCOOKIES)
 // void loadAllCookies()
 HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_LOADALLCOOKIES)
 {
-  auto obj = qobject_cast<QWebEngineCookieStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_LOADALLCOOKIES)
 // void cookieAdded(const QNetworkCookie &cookie)
 HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_ONCOOKIEADDED)
 {
-  auto sender = qobject_cast<QWebEngineCookieStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -190,7 +192,6 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_ONCOOKIEADDED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -209,7 +210,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_ONCOOKIEADDED)
 // void cookieRemoved(const QNetworkCookie &cookie)
 HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED)
 {
-  auto sender = qobject_cast<QWebEngineCookieStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -231,7 +232,6 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

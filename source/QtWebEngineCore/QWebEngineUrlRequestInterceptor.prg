@@ -48,7 +48,10 @@ RETURN
 #include <QtWebEngineCore/QWebEngineUrlRequestInterceptor>
 #endif
 
-    // QWebEngineUrlRequestInterceptor(QObject *p = nullptr)
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QWebEngineUrlRequestInterceptor *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWebEngineUrlRequestInterceptor(QObject *p = nullptr)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINTERCEPTOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -62,7 +65,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINTERCEPTOR_NEW)
 // virtual void interceptRequest(QWebEngineUrlRequestInfo &info) = 0
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINTERCEPTOR_INTERCEPTREQUEST)
 {
-  auto obj = qobject_cast<QWebEngineUrlRequestInterceptor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

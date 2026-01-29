@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QURL
+REQUEST QByteArray
+REQUEST QUrl
 #endif
 
 CLASS QWebEngineUrlRequestJob INHERIT QObject
@@ -54,10 +54,12 @@ RETURN
 #include <QtWebEngineCore/QWebEngineUrlRequestJob>
 #endif
 
-    // ~QWebEngineUrlRequestJob()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QWebEngineUrlRequestJob()
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_DELETE)
 {
-  auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -67,7 +69,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_DELETE)
 // QUrl requestUrl() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTURL)
 {
-  auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -85,7 +87,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTURL)
 // QByteArray requestMethod() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTMETHOD)
 {
-  auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTMETHOD)
 // void reply(const QByteArray &contentType, QIODevice *device)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REPLY)
 {
-  auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +125,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REPLY)
 // void fail(QWebEngineUrlRequestJob::Error error)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_FAIL)
 {
-  auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_FAIL)
 // void redirect(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REDIRECT)
 {
-  auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
