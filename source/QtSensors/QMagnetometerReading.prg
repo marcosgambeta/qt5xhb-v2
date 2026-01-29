@@ -56,13 +56,13 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QMAGNETOMETERREADING_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_DELETE)
 HB_FUNC_STATIC(QMAGNETOMETERREADING_X)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_X)
 HB_FUNC_STATIC(QMAGNETOMETERREADING_SETX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETX)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETX)
 HB_FUNC_STATIC(QMAGNETOMETERREADING_Y)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_Y)
 HB_FUNC_STATIC(QMAGNETOMETERREADING_SETY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETY)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETY)
 HB_FUNC_STATIC(QMAGNETOMETERREADING_Z)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_Z)
 HB_FUNC_STATIC(QMAGNETOMETERREADING_SETZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETZ)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETZ)
 HB_FUNC_STATIC(QMAGNETOMETERREADING_CALIBRATIONLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_CALIBRATIONLEVEL)
 HB_FUNC_STATIC(QMAGNETOMETERREADING_SETCALIBRATIONLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QMagnetometerReading *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETCALIBRATIONLEVEL)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 

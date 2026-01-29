@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCELEROMETERREADING
+REQUEST QAccelerometerReading
 #endif
 
 CLASS QAccelerometer INHERIT QSensor
@@ -58,7 +58,9 @@ RETURN
 #endif
 #endif
 
-    // QAccelerometer(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAccelerometer *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QAccelerometer(QObject *parent = nullptr)
 HB_FUNC_STATIC(QACCELEROMETER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -74,10 +76,8 @@ HB_FUNC_STATIC(QACCELEROMETER_NEW)
 HB_FUNC_STATIC(QACCELEROMETER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QAccelerometer *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QACCELEROMETER_DELETE)
 HB_FUNC_STATIC(QACCELEROMETER_ACCELERATIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QAccelerometer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QACCELEROMETER_ACCELERATIONMODE)
 HB_FUNC_STATIC(QACCELEROMETER_SETACCELERATIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QAccelerometer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QACCELEROMETER_SETACCELERATIONMODE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QACCELEROMETER_SETACCELERATIONMODE)
 HB_FUNC_STATIC(QACCELEROMETER_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QAccelerometer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QACCELEROMETER_READING)
 HB_FUNC_STATIC(QACCELEROMETER_ONACCELERATIONMODECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto sender = qobject_cast<QAccelerometer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -172,7 +172,6 @@ HB_FUNC_STATIC(QACCELEROMETER_ONACCELERATIONMODECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

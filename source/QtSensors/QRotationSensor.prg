@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QROTATIONREADING
+REQUEST QRotationReading
 #endif
 
 CLASS QRotationSensor INHERIT QSensor
@@ -58,7 +58,9 @@ RETURN
 #endif
 #endif
 
-    // QRotationSensor(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QRotationSensor *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QRotationSensor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QROTATIONSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -74,10 +76,8 @@ HB_FUNC_STATIC(QROTATIONSENSOR_NEW)
 HB_FUNC_STATIC(QROTATIONSENSOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QRotationSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_DELETE)
 HB_FUNC_STATIC(QROTATIONSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QRotationSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_READING)
 HB_FUNC_STATIC(QROTATIONSENSOR_HASZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QRotationSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_HASZ)
 HB_FUNC_STATIC(QROTATIONSENSOR_SETHASZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QRotationSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_SETHASZ)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_SETHASZ)
 HB_FUNC_STATIC(QROTATIONSENSOR_ONHASZCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto sender = qobject_cast<QRotationSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -171,7 +171,6 @@ HB_FUNC_STATIC(QROTATIONSENSOR_ONHASZCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

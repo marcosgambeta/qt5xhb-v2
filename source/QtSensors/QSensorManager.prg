@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSENSORBACKEND
+REQUEST QSensorBackend
 #endif
 
 CLASS QSensorManager
@@ -66,13 +66,13 @@ RETURN
 
 #include <QtSensors/QSensorBackend>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSensorManager *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSENSORMANAGER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = static_cast<QSensorManager *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSENSORMANAGER_REGISTERBACKEND)
   }
 #endif
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSENSORMANAGER_UNREGISTERBACKEND)
   }
 #endif
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QSENSORMANAGER_SETDEFAULTBACKEND)
   }
 #endif
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 

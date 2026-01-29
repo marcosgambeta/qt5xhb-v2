@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSENSORGESTURERECOGNIZER
+REQUEST QSensorGestureRecognizer
 #endif
 
 CLASS QSensorGestureManager INHERIT QObject
@@ -59,7 +59,9 @@ RETURN
 #endif
 #endif
 
-    // QSensorGestureManager(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSensorGestureManager *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QSensorGestureManager(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -75,10 +77,8 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_NEW)
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QSensorGestureManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_DELETE)
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QSensorGestureManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER)
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_GESTUREIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QSensorGestureManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_GESTUREIDS)
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QSensorGestureManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER)
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto sender = qobject_cast<QSensorGestureManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -184,7 +184,6 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

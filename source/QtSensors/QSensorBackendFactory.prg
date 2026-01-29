@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSENSORBACKEND
+REQUEST QSensorBackend
 #endif
 
 CLASS QSensorBackendFactory
@@ -61,11 +61,13 @@ RETURN
 
 #include <QtSensors/QSensorBackend>
 
-    // virtual QSensorBackend *createBackend(QSensor *sensor) = 0
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSensorBackendFactory *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual QSensorBackend *createBackend(QSensor *sensor) = 0
 HB_FUNC_STATIC(QSENSORBACKENDFACTORY_CREATEBACKEND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = static_cast<QSensorBackendFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

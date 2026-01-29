@@ -58,11 +58,13 @@ RETURN
 #endif
 #endif
 
-    // virtual bool filter(QSensorReading *reading) = 0
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSensorFilter *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual bool filter(QSensorReading *reading) = 0
 HB_FUNC_STATIC(QSENSORFILTER_FILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = static_cast<QSensorFilter *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

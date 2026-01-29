@@ -58,7 +58,9 @@ RETURN
 #endif
 #endif
 
-    // QLightSensor(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QLightSensor *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QLightSensor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QLIGHTSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -74,10 +76,8 @@ HB_FUNC_STATIC(QLIGHTSENSOR_NEW)
 HB_FUNC_STATIC(QLIGHTSENSOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QLightSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_DELETE)
 HB_FUNC_STATIC(QLIGHTSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QLightSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_READING)
 HB_FUNC_STATIC(QLIGHTSENSOR_FIELDOFVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QLightSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_FIELDOFVIEW)
 HB_FUNC_STATIC(QLIGHTSENSOR_SETFIELDOFVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QLightSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_SETFIELDOFVIEW)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_SETFIELDOFVIEW)
 HB_FUNC_STATIC(QLIGHTSENSOR_ONFIELDOFVIEWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto sender = qobject_cast<QLightSensor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -171,7 +171,6 @@ HB_FUNC_STATIC(QLIGHTSENSOR_ONFIELDOFVIEWCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

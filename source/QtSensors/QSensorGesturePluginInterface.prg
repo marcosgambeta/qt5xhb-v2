@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSENSORGESTURERECOGNIZER
+REQUEST QSensorGestureRecognizer
 #endif
 
 CLASS QSensorGesturePluginInterface
@@ -62,22 +62,22 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSensorGesturePluginInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = static_cast<QSensorGesturePluginInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
 
-// virtual QList<QSensorGestureRecognizer*> createRecognizers() = 0
+// virtual QList<QSensorGestureRecognizer *> createRecognizers() = 0
 HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = static_cast<QSensorGesturePluginInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS)
 HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_SUPPORTEDIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = static_cast<QSensorGesturePluginInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_SUPPORTEDIDS)
 HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = static_cast<QSensorGesturePluginInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
