@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKCONFIGURATION
+REQUEST QNetworkConfiguration
 #endif
 
 CLASS QNetworkConfigurationManager INHERIT QObject
@@ -61,7 +61,10 @@ RETURN
 #include <QtNetwork/QNetworkConfigurationManager>
 #endif
 
-    // QNetworkConfigurationManager(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QNetworkConfigurationManager(QObject *parent = nullptr)
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -75,10 +78,8 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_NEW)
 // virtual ~QNetworkConfigurationManager()
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DELETE)
 {
-  auto obj = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
@@ -86,7 +87,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DELETE)
 // QNetworkConfiguration::StateFlags()) const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 {
-  auto obj = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +128,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 // QNetworkConfigurationManager::Capabilities capabilities() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 {
-  auto obj = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +146,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 // QNetworkConfiguration configurationFromIdentifier(const QString &identifier) const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 {
-  auto obj = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +164,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 // QNetworkConfiguration defaultConfiguration() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION)
 {
-  auto obj = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +182,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION)
 // bool isOnline() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ISONLINE)
 {
-  auto obj = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +200,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ISONLINE)
 // void updateConfigurations()
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 {
-  auto obj = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +220,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 // void configurationAdded(const QNetworkConfiguration &config)
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED)
 {
-  auto sender = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -242,7 +243,6 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED)
 // void configurationChanged(const QNetworkConfiguration &config)
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED)
 {
-  auto sender = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -284,7 +284,6 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -303,7 +302,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED)
 // void configurationRemoved(const QNetworkConfiguration &config)
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED)
 {
-  auto sender = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -326,7 +325,6 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -345,7 +343,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED)
 // void onlineStateChanged(bool isOnline)
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED)
 {
-  auto sender = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -367,7 +365,6 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -386,7 +383,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED)
 // void updateCompleted()
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED)
 {
-  auto sender = qobject_cast<QNetworkConfigurationManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -406,7 +403,6 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

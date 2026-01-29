@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKCOOKIE
+REQUEST QNetworkCookie
 #endif
 
 CLASS QNetworkCookieJar INHERIT QObject
@@ -56,7 +56,9 @@ RETURN
 
 #include <QtNetwork/QNetworkCookie>
 
-    // QNetworkCookieJar(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QNetworkCookieJar(QObject *parent = nullptr)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -70,17 +72,15 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_NEW)
 // virtual ~QNetworkCookieJar()
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_DELETE)
 {
-  auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QList<QNetworkCookie> cookiesForUrl(const QUrl &url) const
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_COOKIESFORURL)
 {
-  auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_COOKIESFORURL)
 // virtual bool setCookiesFromUrl(const QList<QNetworkCookie> &cookieList, const QUrl &url)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_SETCOOKIESFROMURL)
 {
-  auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_SETCOOKIESFROMURL)
 // virtual bool insertCookie(const QNetworkCookie &cookie)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_INSERTCOOKIE)
 {
-  auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_INSERTCOOKIE)
 // virtual bool updateCookie(const QNetworkCookie &cookie)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_UPDATECOOKIE)
 {
-  auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_UPDATECOOKIE)
 // virtual bool deleteCookie(const QNetworkCookie &cookie)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_DELETECOOKIE)
 {
-  auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

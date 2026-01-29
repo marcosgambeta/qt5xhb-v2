@@ -69,6 +69,8 @@ RETURN
 #include <QtNetwork/QNetworkConfiguration>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -87,17 +89,15 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NEW)
 // ~QNetworkConfiguration()
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_DELETE)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QNetworkConfiguration::BearerType bearerType() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPE)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPE)
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPEFAMILY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPEFAMILY)
 // QString bearerTypeName() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPENAME)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPENAME)
 // QList<QNetworkConfiguration> children() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_CHILDREN)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_CHILDREN)
       auto pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (const auto &item : list) {
+        for (auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_CHILDREN)
 // QString identifier() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_IDENTIFIER)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_IDENTIFIER)
 // bool isRoamingAvailable() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISROAMINGAVAILABLE)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISROAMINGAVAILABLE)
 // bool isValid() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISVALID)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISVALID)
 // QString name() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_NAME)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NAME)
 // QNetworkConfiguration::Purpose purpose() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_PURPOSE)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_PURPOSE)
 // QNetworkConfiguration::StateFlags state() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_STATE)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_STATE)
 // QNetworkConfiguration::Type type() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_TYPE)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_TYPE)
 // void swap(QNetworkConfiguration &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_SWAP)
 {
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_SWAP)
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_CONNECTTIMEOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_CONNECTTIMEOUT)
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_SETCONNECTTIMEOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

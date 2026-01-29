@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDATETIME
-REQUEST QURL
+REQUEST QDateTime
+REQUEST QUrl
 #endif
 
 CLASS QNetworkCacheMetaData
@@ -69,6 +69,8 @@ RETURN
 
 #include <QtCore/QDateTime>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -87,17 +89,15 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_NEW)
 // ~QNetworkCacheMetaData()
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_DELETE)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void swap(QNetworkCacheMetaData &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SWAP)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SWAP)
 // bool isValid() const
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_ISVALID)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_ISVALID)
 // QUrl url() const
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_URL)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_URL)
 // void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETURL)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETURL)
 // QDateTime lastModified() const
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_LASTMODIFIED)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_LASTMODIFIED)
 // void setLastModified(const QDateTime &dateTime)
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETLASTMODIFIED)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETLASTMODIFIED)
 // QDateTime expirationDate() const
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_EXPIRATIONDATE)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_EXPIRATIONDATE)
 // void setExpirationDate(const QDateTime &dateTime)
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETEXPIRATIONDATE)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETEXPIRATIONDATE)
 // bool saveToDisk() const
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SAVETODISK)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SAVETODISK)
 // void setSaveToDisk(bool allow)
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETSAVETODISK)
 {
-  auto obj = static_cast<QNetworkCacheMetaData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

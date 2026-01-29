@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKPROXY
+REQUEST QNetworkProxy
 #endif
 
 CLASS QNetworkProxyFactory
@@ -61,22 +61,22 @@ RETURN
 #include <QtNetwork/QNetworkProxyFactory>
 #endif
 
-    // QNetworkProxyFactory() [ABSTRACT]
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QNetworkProxyFactory *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-    // virtual ~QNetworkProxyFactory()
+// QNetworkProxyFactory() [ABSTRACT]
+
+// virtual ~QNetworkProxyFactory()
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_DELETE)
 {
-  auto obj = static_cast<QNetworkProxyFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QList<QNetworkProxy> queryProxy(const QNetworkProxyQuery &query = QNetworkProxyQuery()) = 0
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
 {
-  auto obj = static_cast<QNetworkProxyFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

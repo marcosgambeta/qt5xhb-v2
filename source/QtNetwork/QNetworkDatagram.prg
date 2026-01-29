@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QHOSTADDRESS
+REQUEST QByteArray
+REQUEST QHostAddress
 #endif
 
 CLASS QNetworkDatagram
@@ -78,6 +78,8 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -108,10 +110,8 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DELETE)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SWAP)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_CLEAR)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_ISVALID)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_ISNULL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_ISNULL)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_INTERFACEINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_INTERFACEINDEX)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETINTERFACEINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETINTERFACEINDEX)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERADDRESS)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONADDRESS)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERPORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERPORT)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONPORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONPORT)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETSENDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETSENDER)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDESTINATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDESTINATION)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_HOPLIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_HOPLIMIT)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETHOPLIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETHOPLIMIT)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_DATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DATA)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDATA)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_MAKEREPLY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QNetworkDatagram *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSCTPSOCKET
+REQUEST QSctpSocket
 #endif
 
 CLASS QSctpServer INHERIT QTcpServer
@@ -62,10 +62,11 @@ RETURN
 #endif
 #endif
 
-    // QSctpServer(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSctpServer *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QSctpServer(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSCTPSERVER_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QSctpServer(OPQOBJECT(1, nullptr));
@@ -74,7 +75,6 @@ HB_FUNC_STATIC(QSCTPSERVER_NEW)
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
-#endif
 }
 
 // virtual ~QSctpServer()
@@ -82,10 +82,8 @@ HB_FUNC_STATIC(QSCTPSERVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  auto obj = qobject_cast<QSctpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 #endif
@@ -96,7 +94,7 @@ HB_FUNC_STATIC(QSCTPSERVER_SETMAXIMUMCHANNELCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  auto obj = qobject_cast<QSctpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +118,7 @@ HB_FUNC_STATIC(QSCTPSERVER_MAXIMUMCHANNELCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  auto obj = qobject_cast<QSctpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +140,7 @@ HB_FUNC_STATIC(QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  auto obj = qobject_cast<QSctpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

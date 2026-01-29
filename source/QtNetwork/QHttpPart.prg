@@ -60,6 +60,8 @@ RETURN
 #include <QtNetwork/QHttpPart>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QHTTPPART_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -78,17 +80,15 @@ HB_FUNC_STATIC(QHTTPPART_NEW)
 // ~QHttpPart()
 HB_FUNC_STATIC(QHTTPPART_DELETE)
 {
-  auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void setBody(const QByteArray &body)
 HB_FUNC_STATIC(QHTTPPART_SETBODY)
 {
-  auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODY)
 // void setBodyDevice(QIODevice *device)
 HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
 {
-  auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
 // void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
 HB_FUNC_STATIC(QHTTPPART_SETHEADER)
 {
-  auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QHTTPPART_SETHEADER)
 // void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
 HB_FUNC_STATIC(QHTTPPART_SETRAWHEADER)
 {
-  auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QHTTPPART_SETRAWHEADER)
 // void swap(QHttpPart &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QHTTPPART_SWAP)
 {
-  auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -48,7 +48,9 @@ RETURN
 #include <QtNetwork/QTcpSocket>
 #endif
 
-    // QTcpSocket(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTcpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QTcpSocket(QObject *parent = nullptr)
 HB_FUNC_STATIC(QTCPSOCKET_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -62,10 +64,8 @@ HB_FUNC_STATIC(QTCPSOCKET_NEW)
 // virtual ~QTcpSocket()
 HB_FUNC_STATIC(QTCPSOCKET_DELETE)
 {
-  auto obj = qobject_cast<QTcpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 

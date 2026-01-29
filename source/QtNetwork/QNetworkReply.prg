@@ -11,12 +11,12 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QNETWORKACCESSMANAGER
-REQUEST QNETWORKREQUEST
-REQUEST QSSLCONFIGURATION
-REQUEST QURL
-REQUEST QVARIANT
+REQUEST QByteArray
+REQUEST QNetworkAccessManager
+REQUEST QNetworkRequest
+REQUEST QSslConfiguration
+REQUEST QUrl
+REQUEST QVariant
 #endif
 
 CLASS QNetworkReply INHERIT QIODevice
@@ -86,20 +86,20 @@ RETURN
 
 #include <QtNetwork/QSslConfiguration>
 
-    // ~QNetworkReply()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QNetworkReply()
 HB_FUNC_STATIC(QNETWORKREPLY_DELETE)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void close() Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKREPLY_CLOSE)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_CLOSE)
 // virtual bool isSequential() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKREPLY_ISSEQUENTIAL)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ISSEQUENTIAL)
 // qint64 readBufferSize() const
 HB_FUNC_STATIC(QNETWORKREPLY_READBUFFERSIZE)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_READBUFFERSIZE)
 // virtual void setReadBufferSize(qint64 size)
 HB_FUNC_STATIC(QNETWORKREPLY_SETREADBUFFERSIZE)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SETREADBUFFERSIZE)
 // QNetworkAccessManager *manager() const
 HB_FUNC_STATIC(QNETWORKREPLY_MANAGER)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_MANAGER)
 // QNetworkAccessManager::Operation operation() const
 HB_FUNC_STATIC(QNETWORKREPLY_OPERATION)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_OPERATION)
 // QNetworkRequest request() const
 HB_FUNC_STATIC(QNETWORKREPLY_REQUEST)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_REQUEST)
 // QNetworkReply::NetworkError error() const
 HB_FUNC_STATIC(QNETWORKREPLY_ERROR)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ERROR)
 // bool isFinished() const
 HB_FUNC_STATIC(QNETWORKREPLY_ISFINISHED)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ISFINISHED)
 // bool isRunning() const
 HB_FUNC_STATIC(QNETWORKREPLY_ISRUNNING)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ISRUNNING)
 // QUrl url() const
 HB_FUNC_STATIC(QNETWORKREPLY_URL)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_URL)
 // QVariant header(QNetworkRequest::KnownHeaders header) const
 HB_FUNC_STATIC(QNETWORKREPLY_HEADER)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_HEADER)
 // bool hasRawHeader(const QByteArray &headerName) const
 HB_FUNC_STATIC(QNETWORKREPLY_HASRAWHEADER)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_HASRAWHEADER)
 // QList<QByteArray> rawHeaderList() const
 HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADERLIST)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADERLIST)
 // QByteArray rawHeader(const QByteArray &headerName) const
 HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADER)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADER)
 // QVariant attribute(QNetworkRequest::Attribute code) const
 HB_FUNC_STATIC(QNETWORKREPLY_ATTRIBUTE)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ATTRIBUTE)
 // QSslConfiguration sslConfiguration() const
 HB_FUNC_STATIC(QNETWORKREPLY_SSLCONFIGURATION)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SSLCONFIGURATION)
 // void setSslConfiguration(const QSslConfiguration &configuration)
 HB_FUNC_STATIC(QNETWORKREPLY_SETSSLCONFIGURATION)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SETSSLCONFIGURATION)
 // virtual void abort() = 0
 HB_FUNC_STATIC(QNETWORKREPLY_ABORT)
 {
-  auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void ignoreSslErrors(const QList<QSslError> &errors)
-    auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       QList<QSslError> par1;
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
     RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // virtual void ignoreSslErrors()
-    auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->ignoreSslErrors();
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
 // void downloadProgress(qint64 bytesReceived, qint64 bytesTotal)
 HB_FUNC_STATIC(QNETWORKREPLY_ONDOWNLOADPROGRESS)
 {
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -529,7 +529,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONDOWNLOADPROGRESS)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -548,7 +547,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONDOWNLOADPROGRESS)
 // void error(QNetworkReply::NetworkError code)
 HB_FUNC_STATIC(QNETWORKREPLY_ONERROR)
 {
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -570,7 +569,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONERROR)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -589,7 +587,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONERROR)
 // void finished()
 HB_FUNC_STATIC(QNETWORKREPLY_ONFINISHED)
 {
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -608,7 +606,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONFINISHED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -627,7 +624,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONFINISHED)
 // void metaDataChanged()
 HB_FUNC_STATIC(QNETWORKREPLY_ONMETADATACHANGED)
 {
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -646,7 +643,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONMETADATACHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -665,7 +661,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONMETADATACHANGED)
 // void uploadProgress(qint64 bytesSent, qint64 bytesTotal)
 HB_FUNC_STATIC(QNETWORKREPLY_ONUPLOADPROGRESS)
 {
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -689,7 +685,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONUPLOADPROGRESS)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -709,7 +704,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONUPLOADPROGRESS)
 HB_FUNC_STATIC(QNETWORKREPLY_ONENCRYPTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -728,7 +723,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONENCRYPTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -750,7 +744,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONENCRYPTED)
 // void sslErrors(const QList<QSslError> &errors)
 HB_FUNC_STATIC(QNETWORKREPLY_ONSSLERRORS)
 {
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -789,7 +783,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONSSLERRORS)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -809,7 +802,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONSSLERRORS)
 HB_FUNC_STATIC(QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -833,7 +826,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -856,7 +848,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED)
 HB_FUNC_STATIC(QNETWORKREPLY_ONREDIRECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -878,7 +870,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONREDIRECTED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -901,7 +892,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONREDIRECTED)
 HB_FUNC_STATIC(QNETWORKREPLY_ONREDIRECTALLOWED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -920,7 +911,6 @@ HB_FUNC_STATIC(QNETWORKREPLY_ONREDIRECTALLOWED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

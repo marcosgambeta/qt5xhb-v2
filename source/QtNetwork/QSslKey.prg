@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
+REQUEST QByteArray
 #endif
 
 CLASS QSslKey
@@ -65,6 +65,8 @@ RETURN
 #include <QtNetwork/QSslKey>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSSLKEY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,14 +74,15 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
     auto obj = new QSslKey();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) &&
-             ISOPTQBYTEARRAY(5)) {
+             ISQBYTEARRAYORNIL(5)) {
     // QSslKey(const QByteArray &encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
     // QSsl::KeyType type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
     auto obj =
         new QSslKey(*PQBYTEARRAY(1), PQSSL_KEYALGORITHM(2), HB_ISNIL(3) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(3),
                     HB_ISNIL(4) ? QSsl::PrivateKey : PQSSL_KEYTYPE(4), HB_ISNIL(5) ? QByteArray() : *PQBYTEARRAY(5));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISOPTQBYTEARRAY(5)) {
+  } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) &&
+             ISQBYTEARRAYORNIL(5)) {
     // QSslKey(QIODevice *device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType
     // type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
     auto obj =
@@ -102,17 +105,15 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
 // ~QSslKey()
 HB_FUNC_STATIC(QSSLKEY_DELETE)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QSsl::KeyAlgorithm algorithm() const
 HB_FUNC_STATIC(QSSLKEY_ALGORITHM)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +131,7 @@ HB_FUNC_STATIC(QSSLKEY_ALGORITHM)
 // void clear()
 HB_FUNC_STATIC(QSSLKEY_CLEAR)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +151,7 @@ HB_FUNC_STATIC(QSSLKEY_CLEAR)
 // bool isNull() const
 HB_FUNC_STATIC(QSSLKEY_ISNULL)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +169,7 @@ HB_FUNC_STATIC(QSSLKEY_ISNULL)
 // int length() const
 HB_FUNC_STATIC(QSSLKEY_LENGTH)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +187,7 @@ HB_FUNC_STATIC(QSSLKEY_LENGTH)
 // QByteArray toDer(const QByteArray &passPhrase = QByteArray()) const
 HB_FUNC_STATIC(QSSLKEY_TODER)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +205,7 @@ HB_FUNC_STATIC(QSSLKEY_TODER)
 // QByteArray toPem(const QByteArray &passPhrase = QByteArray()) const
 HB_FUNC_STATIC(QSSLKEY_TOPEM)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +223,7 @@ HB_FUNC_STATIC(QSSLKEY_TOPEM)
 // QSsl::KeyType type() const
 HB_FUNC_STATIC(QSSLKEY_TYPE)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +241,7 @@ HB_FUNC_STATIC(QSSLKEY_TYPE)
 // void swap(QSslKey &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QSSLKEY_SWAP)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,7 +261,7 @@ HB_FUNC_STATIC(QSSLKEY_SWAP)
 // Qt::HANDLE handle() const
 HB_FUNC_STATIC(QSSLKEY_HANDLE)
 {
-  auto obj = static_cast<QSslKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

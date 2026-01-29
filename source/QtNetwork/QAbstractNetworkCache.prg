@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIODEVICE
-REQUEST QNETWORKCACHEMETADATA
+REQUEST QIODevice
+REQUEST QNetworkCacheMetaData
 #endif
 
 CLASS QAbstractNetworkCache INHERIT QObject
@@ -59,20 +59,20 @@ RETURN
 
 #include <QtCore/QIODevice>
 
-    // virtual ~QAbstractNetworkCache()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QAbstractNetworkCache()
 HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_DELETE)
 {
-  auto obj = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual qint64 cacheSize() const = 0
 HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_CACHESIZE)
 {
-  auto obj = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_CACHESIZE)
 // virtual QIODevice *data(const QUrl &url) = 0
 HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_DATA)
 {
-  auto obj = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_DATA)
 // virtual void insert(QIODevice *device) = 0
 HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_INSERT)
 {
-  auto obj = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_INSERT)
 // virtual QNetworkCacheMetaData metaData(const QUrl &url) = 0
 HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_METADATA)
 {
-  auto obj = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_METADATA)
 // virtual QIODevice *prepare(const QNetworkCacheMetaData &metaData) = 0
 HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_PREPARE)
 {
-  auto obj = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_PREPARE)
 // virtual bool remove(const QUrl &url) = 0
 HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_REMOVE)
 {
-  auto obj = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_REMOVE)
 // virtual void updateMetaData(const QNetworkCacheMetaData &metaData) = 0
 HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_UPDATEMETADATA)
 {
-  auto obj = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_UPDATEMETADATA)
 // virtual void clear() = 0
 HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_CLEAR)
 {
-  auto obj = qobject_cast<QAbstractNetworkCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

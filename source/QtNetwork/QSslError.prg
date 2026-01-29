@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSSLCERTIFICATE
+REQUEST QSslCertificate
 #endif
 
 CLASS QSslError
@@ -60,6 +60,8 @@ RETURN
 #include <QtNetwork/QSslError>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSslError *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSSLERROR_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -86,17 +88,15 @@ HB_FUNC_STATIC(QSSLERROR_NEW)
 // ~QSslError()
 HB_FUNC_STATIC(QSSLERROR_DELETE)
 {
-  auto obj = static_cast<QSslError *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QSslCertificate certificate() const
 HB_FUNC_STATIC(QSSLERROR_CERTIFICATE)
 {
-  auto obj = static_cast<QSslError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSSLERROR_CERTIFICATE)
 // QSslError::SslError error() const
 HB_FUNC_STATIC(QSSLERROR_ERROR)
 {
-  auto obj = static_cast<QSslError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QSSLERROR_ERROR)
 // QString errorString() const
 HB_FUNC_STATIC(QSSLERROR_ERRORSTRING)
 {
-  auto obj = static_cast<QSslError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSSLERROR_ERRORSTRING)
 // void swap(QSslError &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QSSLERROR_SWAP)
 {
-  auto obj = static_cast<QSslError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

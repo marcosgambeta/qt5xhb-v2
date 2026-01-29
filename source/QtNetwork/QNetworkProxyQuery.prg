@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKCONFIGURATION
-REQUEST QURL
+REQUEST QNetworkConfiguration
+REQUEST QUrl
 #endif
 
 CLASS QNetworkProxyQuery
@@ -75,6 +75,8 @@ RETURN
 #include <QtCore/QUrl>
 #include <QtNetwork/QNetworkConfiguration>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -130,17 +132,15 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
 // ~QNetworkProxyQuery()
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_DELETE)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int localPort() const
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_LOCALPORT)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_LOCALPORT)
 // QString peerHostName() const
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERHOSTNAME)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERHOSTNAME)
 // int peerPort() const
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERPORT)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERPORT)
 // QString protocolTag() const
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_PROTOCOLTAG)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_PROTOCOLTAG)
 // QNetworkProxyQuery::QueryType queryType() const
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_QUERYTYPE)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_QUERYTYPE)
 // void setLocalPort(int port)
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETLOCALPORT)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETLOCALPORT)
 // void setPeerHostName(const QString &hostname)
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERHOSTNAME)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERHOSTNAME)
 // void setPeerPort(int port)
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERPORT)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERPORT)
 // void setProtocolTag(const QString &protocolTag)
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPROTOCOLTAG)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPROTOCOLTAG)
 // void setQueryType(QNetworkProxyQuery::QueryType type)
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETQUERYTYPE)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETQUERYTYPE)
 // void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETURL)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETURL)
 // QUrl url() const
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_URL)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_URL)
 // void swap(QNetworkProxyQuery &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_SWAP)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SWAP)
 // QNetworkConfiguration networkConfiguration() const
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_NETWORKCONFIGURATION)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NETWORKCONFIGURATION)
 // void setNetworkConfiguration(const QNetworkConfiguration &networkConfiguration)
 HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETNETWORKCONFIGURATION)
 {
-  auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

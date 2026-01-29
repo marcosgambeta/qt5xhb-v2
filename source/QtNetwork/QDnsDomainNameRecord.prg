@@ -59,6 +59,8 @@ RETURN
 #include <QtNetwork/QDnsDomainNameRecord>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDnsDomainNameRecord *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -77,17 +79,15 @@ HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_NEW)
 // ~QDnsDomainNameRecord()
 HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_DELETE)
 {
-  auto obj = static_cast<QDnsDomainNameRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString name() const
 HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_NAME)
 {
-  auto obj = static_cast<QDnsDomainNameRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_NAME)
 // void swap(QDnsDomainNameRecord &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_SWAP)
 {
-  auto obj = static_cast<QDnsDomainNameRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_SWAP)
 // quint32 timeToLive() const
 HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_TIMETOLIVE)
 {
-  auto obj = static_cast<QDnsDomainNameRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_TIMETOLIVE)
 // QString value() const
 HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_VALUE)
 {
-  auto obj = static_cast<QDnsDomainNameRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

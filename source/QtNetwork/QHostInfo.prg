@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QHOSTADDRESS
+REQUEST QHostAddress
 #endif
 
 CLASS QHostInfo
@@ -72,6 +72,8 @@ RETURN
 #include <QtNetwork/QHostInfo>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QHOSTINFO_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -90,10 +92,8 @@ HB_FUNC_STATIC(QHOSTINFO_NEW)
 // ~QHostInfo()
 HB_FUNC_STATIC(QHOSTINFO_DELETE)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QHOSTINFO_DELETE)
 HB_FUNC_STATIC(QHOSTINFO_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QHOSTINFO_SWAP)
 // QString hostName() const
 HB_FUNC_STATIC(QHOSTINFO_HOSTNAME)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QHOSTINFO_HOSTNAME)
 // void setHostName(const QString &name)
 HB_FUNC_STATIC(QHOSTINFO_SETHOSTNAME)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETHOSTNAME)
 // QList<QHostAddress> addresses() const
 HB_FUNC_STATIC(QHOSTINFO_ADDRESSES)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QHOSTINFO_ADDRESSES)
 // void setAddresses(const QList<QHostAddress> &addresses)
 HB_FUNC_STATIC(QHOSTINFO_SETADDRESSES)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETADDRESSES)
 // QHostInfo::HostInfoError error() const
 HB_FUNC_STATIC(QHOSTINFO_ERROR)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QHOSTINFO_ERROR)
 // void setError(QHostInfo::HostInfoError error)
 HB_FUNC_STATIC(QHOSTINFO_SETERROR)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETERROR)
 // QString errorString() const
 HB_FUNC_STATIC(QHOSTINFO_ERRORSTRING)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QHOSTINFO_ERRORSTRING)
 // void setErrorString(const QString &errorString)
 HB_FUNC_STATIC(QHOSTINFO_SETERRORSTRING)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETERRORSTRING)
 // void setLookupId(int id)
 HB_FUNC_STATIC(QHOSTINFO_SETLOOKUPID)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETLOOKUPID)
 // int lookupId() const
 HB_FUNC_STATIC(QHOSTINFO_LOOKUPID)
 {
-  auto obj = static_cast<QHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

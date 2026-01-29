@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
+REQUEST QByteArray
 #endif
 
 CLASS QHttpMultiPart INHERIT QObject
@@ -53,6 +53,8 @@ RETURN
 #include <QtNetwork/QHttpMultiPart>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -71,17 +73,15 @@ HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
 // ~QHttpMultiPart()
 HB_FUNC_STATIC(QHTTPMULTIPART_DELETE)
 {
-  auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void append(const QHttpPart &httpPart)
 HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 {
-  auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 // QByteArray boundary() const
 HB_FUNC_STATIC(QHTTPMULTIPART_BOUNDARY)
 {
-  auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_BOUNDARY)
 // void setBoundary(const QByteArray &boundary)
 HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 {
-  auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 // void setContentType(QHttpMultiPart::ContentType contentType)
 HB_FUNC_STATIC(QHTTPMULTIPART_SETCONTENTTYPE)
 {
-  auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

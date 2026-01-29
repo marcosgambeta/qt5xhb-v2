@@ -77,7 +77,9 @@ RETURN
 #include <QtNetwork/QLocalSocket>
 #endif
 
-    // QLocalSocket(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QLocalSocket(QObject *parent = nullptr)
 HB_FUNC_STATIC(QLOCALSOCKET_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -91,10 +93,8 @@ HB_FUNC_STATIC(QLOCALSOCKET_NEW)
 // ~QLocalSocket()
 HB_FUNC_STATIC(QLOCALSOCKET_DELETE)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // void connectToServer(QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-    auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->connectToServer(HB_ISNIL(1) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(1));
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
     RETURN_SELF();
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // void connectToServer(const QString &name, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-    auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->connectToServer(PQSTRING(1), HB_ISNIL(2) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(2));
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
 // void disconnectFromServer()
 HB_FUNC_STATIC(QLOCALSOCKET_DISCONNECTFROMSERVER)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DISCONNECTFROMSERVER)
 // void setServerName(const QString &name)
 HB_FUNC_STATIC(QLOCALSOCKET_SETSERVERNAME)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSERVERNAME)
 // QString serverName() const
 HB_FUNC_STATIC(QLOCALSOCKET_SERVERNAME)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SERVERNAME)
 // QString fullServerName() const
 HB_FUNC_STATIC(QLOCALSOCKET_FULLSERVERNAME)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_FULLSERVERNAME)
 // void abort()
 HB_FUNC_STATIC(QLOCALSOCKET_ABORT)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ABORT)
 // virtual bool isSequential() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_ISSEQUENTIAL)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ISSEQUENTIAL)
 // virtual qint64 bytesAvailable() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_BYTESAVAILABLE)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_BYTESAVAILABLE)
 // virtual qint64 bytesToWrite() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_BYTESTOWRITE)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_BYTESTOWRITE)
 // virtual bool canReadLine() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_CANREADLINE)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CANREADLINE)
 // virtual bool open(QIODevice::OpenMode openMode = QIODevice::ReadWrite) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_OPEN)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_OPEN)
 // virtual void close() Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_CLOSE)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CLOSE)
 // QLocalSocket::LocalSocketError error() const
 HB_FUNC_STATIC(QLOCALSOCKET_ERROR)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ERROR)
 // bool flush()
 HB_FUNC_STATIC(QLOCALSOCKET_FLUSH)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_FLUSH)
 // bool isValid() const
 HB_FUNC_STATIC(QLOCALSOCKET_ISVALID)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ISVALID)
 // qint64 readBufferSize() const
 HB_FUNC_STATIC(QLOCALSOCKET_READBUFFERSIZE)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_READBUFFERSIZE)
 // void setReadBufferSize(qint64 size)
 HB_FUNC_STATIC(QLOCALSOCKET_SETREADBUFFERSIZE)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,16 +425,14 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETREADBUFFERSIZE)
 // QLocalSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 HB_FUNC_STATIC(QLOCALSOCKET_SETSOCKETDESCRIPTOR)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->setSocketDescriptor(PQINTPTR(1),
-                                     HB_ISNIL(2)
-                                         ? static_cast<QLocalSocket::LocalSocketState>(QLocalSocket::ConnectedState)
-                                         : PQLOCALSOCKET_LOCALSOCKETSTATE(2),
+                                     HB_ISNIL(2) ? QLocalSocket::ConnectedState : PQLOCALSOCKET_LOCALSOCKETSTATE(2),
                                      HB_ISNIL(3) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -447,7 +445,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSOCKETDESCRIPTOR)
 // qintptr socketDescriptor() const
 HB_FUNC_STATIC(QLOCALSOCKET_SOCKETDESCRIPTOR)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,7 +463,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SOCKETDESCRIPTOR)
 // QLocalSocket::LocalSocketState state() const
 HB_FUNC_STATIC(QLOCALSOCKET_STATE)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,7 +481,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_STATE)
 // bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_WAITFORBYTESWRITTEN)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,7 +499,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORBYTESWRITTEN)
 // bool waitForConnected(int msecs = 30000)
 HB_FUNC_STATIC(QLOCALSOCKET_WAITFORCONNECTED)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -519,7 +517,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORCONNECTED)
 // bool waitForDisconnected(int msecs = 30000)
 HB_FUNC_STATIC(QLOCALSOCKET_WAITFORDISCONNECTED)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -537,7 +535,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORDISCONNECTED)
 // bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_WAITFORREADYREAD)
 {
-  auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,7 +553,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORREADYREAD)
 // void connected()
 HB_FUNC_STATIC(QLOCALSOCKET_ONCONNECTED)
 {
-  auto sender = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -574,7 +572,6 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONCONNECTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -593,7 +590,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONCONNECTED)
 // void disconnected()
 HB_FUNC_STATIC(QLOCALSOCKET_ONDISCONNECTED)
 {
-  auto sender = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -612,7 +609,6 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONDISCONNECTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -631,7 +627,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONDISCONNECTED)
 // void error(QLocalSocket::LocalSocketError socketError)
 HB_FUNC_STATIC(QLOCALSOCKET_ONERROR)
 {
-  auto sender = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -653,7 +649,6 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONERROR)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -672,7 +667,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONERROR)
 // void stateChanged(QLocalSocket::LocalSocketState socketState)
 HB_FUNC_STATIC(QLOCALSOCKET_ONSTATECHANGED)
 {
-  auto sender = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -694,7 +689,6 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONSTATECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

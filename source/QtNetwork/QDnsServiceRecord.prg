@@ -62,6 +62,8 @@ RETURN
 #include <QtNetwork/QDnsServiceRecord>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDNSSERVICERECORD_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -80,17 +82,15 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_NEW)
 // ~QDnsServiceRecord()
 HB_FUNC_STATIC(QDNSSERVICERECORD_DELETE)
 {
-  auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString name() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_NAME)
 {
-  auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_NAME)
 // quint16 port() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_PORT)
 {
-  auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_PORT)
 // quint16 priority() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_PRIORITY)
 {
-  auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_PRIORITY)
 // void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QDNSSERVICERECORD_SWAP)
 {
-  auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_SWAP)
 // QString target() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_TARGET)
 {
-  auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_TARGET)
 // quint32 timeToLive() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_TIMETOLIVE)
 {
-  auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_TIMETOLIVE)
 // quint16 weight() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_WEIGHT)
 {
-  auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

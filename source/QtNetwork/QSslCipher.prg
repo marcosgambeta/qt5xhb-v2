@@ -65,6 +65,8 @@ RETURN
 #include <QtNetwork/QSslCipher>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSSLCIPHER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -93,17 +95,15 @@ HB_FUNC_STATIC(QSSLCIPHER_NEW)
 // ~QSslCipher()
 HB_FUNC_STATIC(QSSLCIPHER_DELETE)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString authenticationMethod() const
 HB_FUNC_STATIC(QSSLCIPHER_AUTHENTICATIONMETHOD)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QSSLCIPHER_AUTHENTICATIONMETHOD)
 // QString encryptionMethod() const
 HB_FUNC_STATIC(QSSLCIPHER_ENCRYPTIONMETHOD)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QSSLCIPHER_ENCRYPTIONMETHOD)
 // bool isNull() const
 HB_FUNC_STATIC(QSSLCIPHER_ISNULL)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QSSLCIPHER_ISNULL)
 // QString keyExchangeMethod() const
 HB_FUNC_STATIC(QSSLCIPHER_KEYEXCHANGEMETHOD)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QSSLCIPHER_KEYEXCHANGEMETHOD)
 // QString name() const
 HB_FUNC_STATIC(QSSLCIPHER_NAME)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NAME)
 // QSsl::SslProtocol protocol() const
 HB_FUNC_STATIC(QSSLCIPHER_PROTOCOL)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QSSLCIPHER_PROTOCOL)
 // QString protocolString() const
 HB_FUNC_STATIC(QSSLCIPHER_PROTOCOLSTRING)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QSSLCIPHER_PROTOCOLSTRING)
 // int supportedBits() const
 HB_FUNC_STATIC(QSSLCIPHER_SUPPORTEDBITS)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QSSLCIPHER_SUPPORTEDBITS)
 // int usedBits() const
 HB_FUNC_STATIC(QSSLCIPHER_USEDBITS)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QSSLCIPHER_USEDBITS)
 // void swap(QSslCipher &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QSSLCIPHER_SWAP)
 {
-  auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

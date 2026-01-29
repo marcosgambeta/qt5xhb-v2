@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
+REQUEST QByteArray
 #endif
 
 CLASS QDnsTextRecord
@@ -60,6 +60,8 @@ RETURN
 #include <QtNetwork/QDnsTextRecord>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDNSTEXTRECORD_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -78,17 +80,15 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_NEW)
 // ~QDnsTextRecord()
 HB_FUNC_STATIC(QDNSTEXTRECORD_DELETE)
 {
-  auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString name() const
 HB_FUNC_STATIC(QDNSTEXTRECORD_NAME)
 {
-  auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_NAME)
 // void swap(QDnsTextRecord &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QDNSTEXTRECORD_SWAP)
 {
-  auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_SWAP)
 // quint32 timeToLive() const
 HB_FUNC_STATIC(QDNSTEXTRECORD_TIMETOLIVE)
 {
-  auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_TIMETOLIVE)
 // QList<QByteArray> values() const
 HB_FUNC_STATIC(QDNSTEXTRECORD_VALUES)
 {
-  auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

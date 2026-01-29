@@ -70,7 +70,9 @@ RETURN
 #include <QtNetwork/QHostAddress>
 #endif
 
-    // QHostAddress(quint32 ip4Addr)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QHostAddress(quint32 ip4Addr)
 HB_FUNC_STATIC(QHOSTADDRESS_NEW2)
 {
   auto obj = new QHostAddress(PQUINT32(1));
@@ -108,10 +110,8 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
 // ~QHostAddress()
 HB_FUNC_STATIC(QHOSTADDRESS_DELETE)
 {
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_DELETE)
 HB_FUNC_STATIC(QHOSTADDRESS_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setAddress(quint32 ip4Addr)
-    auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setAddress(PQUINT32(1));
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
     RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool setAddress(const QString &address)
-    auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->setAddress(PQSTRING(1)));
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
 // QAbstractSocket::NetworkLayerProtocol protocol() const
 HB_FUNC_STATIC(QHOSTADDRESS_PROTOCOL)
 {
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
 {
   if (ISNUMPAR(0)) {
     // quint32 toIPv4Address() const
-    auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQUINT32(obj->toIPv4Address());
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
   } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
     // quint32 toIPv4Address(bool *ok) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-    auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       bool par1;
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
 // QString toString() const
 HB_FUNC_STATIC(QHOSTADDRESS_TOSTRING)
 {
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOSTRING)
 // QString scopeId() const
 HB_FUNC_STATIC(QHOSTADDRESS_SCOPEID)
 {
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SCOPEID)
 // void setScopeId(const QString &id)
 HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 {
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 HB_FUNC_STATIC(QHOSTADDRESS_ISEQUAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISEQUAL)
 // bool isNull() const
 HB_FUNC_STATIC(QHOSTADDRESS_ISNULL)
 {
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISNULL)
 // void clear()
 HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 {
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 // bool isInSubnet(const QHostAddress &subnet, int netmask) const
 HB_FUNC_STATIC(QHOSTADDRESS_ISINSUBNET)
 {
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISINSUBNET)
 // bool isLoopback() const
 HB_FUNC_STATIC(QHOSTADDRESS_ISLOOPBACK)
 {
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISLOOPBACK)
 HB_FUNC_STATIC(QHOSTADDRESS_ISMULTICAST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-  auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
