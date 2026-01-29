@@ -4,8 +4,8 @@
 // Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HUILOADER_H
-#define HUILOADER_H
+#ifndef HUILOADER_HPP
+#define HUILOADER_HPP
 
 #include <QtUiTools/QUiLoader>
 #include <QtWidgets/QAction>
@@ -40,4 +40,4 @@ public:
   void setCreateWidgetCB(PHB_ITEM block);
 };
 
-#endif /* HUILOADER_H */
+#endif // HUILOADER_HPP

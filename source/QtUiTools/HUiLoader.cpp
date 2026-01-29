@@ -39,7 +39,7 @@ HUiLoader::~HUiLoader()
 
 QAction *HUiLoader::createAction(QObject *parent, const QString &name)
 {
-  QAction *action = QUiLoader::createAction(parent, name);
+  auto action = QUiLoader::createAction(parent, name);
 
   if (m_createActionBlock != nullptr) {
     auto pAction = Qt5xHb::returnQObjectObject(action);
@@ -52,7 +52,7 @@ QAction *HUiLoader::createAction(QObject *parent, const QString &name)
 
 QActionGroup *HUiLoader::createActionGroup(QObject *parent, const QString &name)
 {
-  QActionGroup *actionGroup = QUiLoader::createActionGroup(parent, name);
+  auto actionGroup = QUiLoader::createActionGroup(parent, name);
 
   if (m_createActionGroupBlock != nullptr) {
     auto pActionGroup = Qt5xHb::returnQObjectObject(actionGroup);
@@ -65,7 +65,7 @@ QActionGroup *HUiLoader::createActionGroup(QObject *parent, const QString &name)
 
 QLayout *HUiLoader::createLayout(const QString &className, QObject *parent, const QString &name)
 {
-  QLayout *layout = QUiLoader::createLayout(className, parent, name);
+  auto layout = QUiLoader::createLayout(className, parent, name);
 
   if (m_createLayoutBlock != nullptr) {
     auto pLayout = Qt5xHb::returnQObjectObject(layout);
@@ -78,7 +78,7 @@ QLayout *HUiLoader::createLayout(const QString &className, QObject *parent, cons
 
 QWidget *HUiLoader::createWidget(const QString &className, QWidget *parent, const QString &name)
 {
-  QWidget *widget = QUiLoader::createWidget(className, parent, name);
+  auto widget = QUiLoader::createWidget(className, parent, name);
 
   if (m_createWidgetBlock != nullptr) {
     auto pWidget = Qt5xHb::returnQWidgetObject(widget);
