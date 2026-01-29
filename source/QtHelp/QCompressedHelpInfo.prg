@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVERSIONNUMBER
+REQUEST QVersionNumber
 #endif
 
 CLASS QCompressedHelpInfo
@@ -67,6 +67,8 @@ RETURN
 
 #include <QtCore/QVersionNumber>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QCompressedHelpInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -90,10 +92,8 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NEW)
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
-  auto obj = static_cast<QCompressedHelpInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_DELETE)
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
-  auto obj = static_cast<QCompressedHelpInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_SWAP)
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NAMESPACENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
-  auto obj = static_cast<QCompressedHelpInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NAMESPACENAME)
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_COMPONENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
-  auto obj = static_cast<QCompressedHelpInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_COMPONENT)
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_VERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
-  auto obj = static_cast<QCompressedHelpInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

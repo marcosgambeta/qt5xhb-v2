@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QURL
-REQUEST QVARIANT
+REQUEST QByteArray
+REQUEST QUrl
+REQUEST QVariant
 #endif
 
 CLASS QHelpEngineCore INHERIT QObject
@@ -82,7 +82,9 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    // QHelpEngineCore(const QString &collectionFile, QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QHelpEngineCore(const QString &collectionFile, QObject *parent = nullptr)
 HB_FUNC_STATIC(QHELPENGINECORE_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
@@ -95,17 +97,15 @@ HB_FUNC_STATIC(QHELPENGINECORE_NEW)
 
 HB_FUNC_STATIC(QHELPENGINECORE_DELETE)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool addCustomFilter(const QString &filterName, const QStringList &attributes)
 HB_FUNC_STATIC(QHELPENGINECORE_ADDCUSTOMFILTER)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ADDCUSTOMFILTER)
 // bool autoSaveFilter() const
 HB_FUNC_STATIC(QHELPENGINECORE_AUTOSAVEFILTER)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_AUTOSAVEFILTER)
 // QString collectionFile() const
 HB_FUNC_STATIC(QHELPENGINECORE_COLLECTIONFILE)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_COLLECTIONFILE)
 // bool copyCollectionFile(const QString &fileName)
 HB_FUNC_STATIC(QHELPENGINECORE_COPYCOLLECTIONFILE)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_COPYCOLLECTIONFILE)
 // QString currentFilter() const
 HB_FUNC_STATIC(QHELPENGINECORE_CURRENTFILTER)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CURRENTFILTER)
 // QStringList customFilters() const
 HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMFILTERS)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMFILTERS)
 // QVariant customValue(const QString &key, const QVariant &defaultValue = QVariant()) const
 HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 // QString documentationFileName(const QString &namespaceName)
 HB_FUNC_STATIC(QHELPENGINECORE_DOCUMENTATIONFILENAME)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_DOCUMENTATIONFILENAME)
 // QString error() const
 HB_FUNC_STATIC(QHELPENGINECORE_ERROR)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ERROR)
 // QByteArray fileData(const QUrl &url) const
 HB_FUNC_STATIC(QHELPENGINECORE_FILEDATA)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,14 +286,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
 {
   if (ISNUMPAR(0)) {
     // QStringList filterAttributes() const
-    auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQSTRINGLIST(obj->filterAttributes());
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QStringList filterAttributes(const QString &filterName) const
-    auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQSTRINGLIST(obj->filterAttributes(PQSTRING(1)));
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
 // QUrl findFile(const QUrl &url) const
 HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
 // bool registerDocumentation(const QString &documentationFileName)
 HB_FUNC_STATIC(QHELPENGINECORE_REGISTERDOCUMENTATION)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTERDOCUMENTATION)
 // QStringList registeredDocumentations() const
 HB_FUNC_STATIC(QHELPENGINECORE_REGISTEREDDOCUMENTATIONS)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTEREDDOCUMENTATIONS)
 // bool removeCustomFilter(const QString &filterName)
 HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMFILTER)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMFILTER)
 // bool removeCustomValue(const QString &key)
 HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMVALUE)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMVALUE)
 // void setAutoSaveFilter(bool save)
 HB_FUNC_STATIC(QHELPENGINECORE_SETAUTOSAVEFILTER)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETAUTOSAVEFILTER)
 // void setCollectionFile(const QString &fileName)
 HB_FUNC_STATIC(QHELPENGINECORE_SETCOLLECTIONFILE)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCOLLECTIONFILE)
 // void setCurrentFilter(const QString &filterName)
 HB_FUNC_STATIC(QHELPENGINECORE_SETCURRENTFILTER)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCURRENTFILTER)
 // bool setCustomValue(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QHELPENGINECORE_SETCUSTOMVALUE)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCUSTOMVALUE)
 // bool setupData()
 HB_FUNC_STATIC(QHELPENGINECORE_SETUPDATA)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETUPDATA)
 // bool unregisterDocumentation(const QString &namespaceName)
 HB_FUNC_STATIC(QHELPENGINECORE_UNREGISTERDOCUMENTATION)
 {
-  auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_NAMESPACENAME)
 // void currentFilterChanged(const QString &newFilter)
 HB_FUNC_STATIC(QHELPENGINECORE_ONCURRENTFILTERCHANGED)
 {
-  auto sender = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -560,7 +560,6 @@ HB_FUNC_STATIC(QHELPENGINECORE_ONCURRENTFILTERCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -579,7 +578,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ONCURRENTFILTERCHANGED)
 // void setupFinished()
 HB_FUNC_STATIC(QHELPENGINECORE_ONSETUPFINISHED)
 {
-  auto sender = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -598,7 +597,6 @@ HB_FUNC_STATIC(QHELPENGINECORE_ONSETUPFINISHED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -617,7 +615,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ONSETUPFINISHED)
 // void setupStarted()
 HB_FUNC_STATIC(QHELPENGINECORE_ONSETUPSTARTED)
 {
-  auto sender = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -636,7 +634,6 @@ HB_FUNC_STATIC(QHELPENGINECORE_ONSETUPSTARTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -655,7 +652,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ONSETUPSTARTED)
 // void warning(const QString &msg)
 HB_FUNC_STATIC(QHELPENGINECORE_ONWARNING)
 {
-  auto sender = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -677,7 +674,6 @@ HB_FUNC_STATIC(QHELPENGINECORE_ONWARNING)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

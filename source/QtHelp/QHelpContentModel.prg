@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QHELPCONTENTITEM
-REQUEST QMODELINDEX
-REQUEST QVARIANT
+REQUEST QHelpContentItem
+REQUEST QModelIndex
+REQUEST QVariant
 #endif
 
 CLASS QHelpContentModel INHERIT QAbstractItemModel
@@ -61,19 +61,19 @@ RETURN
 #include <QtHelp/QHelpContentModel>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHELPCONTENTMODEL_DELETE)
 {
-  auto obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QHelpContentItem *contentItemAt(const QModelIndex &index) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
 {
-  auto obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
 // void createContents(const QString &customFilterName)
 HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
 {
-  auto obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
 // bool isCreatingContents() const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
 {
-  auto obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
 // virtual int columnCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
 {
-  auto obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
 // virtual QVariant data(const QModelIndex &index, int role) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
 {
-  auto obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
 // virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
 {
-  auto obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
 // virtual QModelIndex parent(const QModelIndex &index) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
 {
-  auto obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
 // virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ROWCOUNT)
 {
-  auto obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ROWCOUNT)
 // void contentsCreated()
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ONCONTENTSCREATED)
 {
-  auto sender = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -239,7 +239,6 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ONCONTENTSCREATED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -258,7 +257,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ONCONTENTSCREATED)
 // void contentsCreationStarted()
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED)
 {
-  auto sender = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -278,7 +277,6 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -55,6 +55,8 @@ RETURN
 #include <QtHelp/QHelpSearchQuery>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QHelpSearchQuery *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QHELPSEARCHQUERY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,10 +74,8 @@ HB_FUNC_STATIC(QHELPSEARCHQUERY_NEW)
 
 HB_FUNC_STATIC(QHELPSEARCHQUERY_DELETE)
 {
-  auto obj = static_cast<QHelpSearchQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
+REQUEST QUrl
 #endif
 
 CLASS QHelpContentItem
@@ -64,19 +64,19 @@ RETURN
 
 #include <QtCore/QUrl>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QHELPCONTENTITEM_DELETE)
 {
-  auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QHelpContentItem *child(int row) const
 HB_FUNC_STATIC(QHELPCONTENTITEM_CHILD)
 {
-  auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_CHILD)
 // int childCount() const
 HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDCOUNT)
 {
-  auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDCOUNT)
 // int childPosition(QHelpContentItem *child) const
 HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDPOSITION)
 {
-  auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDPOSITION)
 // QHelpContentItem *parent() const
 HB_FUNC_STATIC(QHELPCONTENTITEM_PARENT)
 {
-  auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_PARENT)
 // int row() const
 HB_FUNC_STATIC(QHELPCONTENTITEM_ROW)
 {
-  auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_ROW)
 // QString title() const
 HB_FUNC_STATIC(QHELPCONTENTITEM_TITLE)
 {
-  auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_TITLE)
 // QUrl url() const
 HB_FUNC_STATIC(QHELPCONTENTITEM_URL)
 {
-  auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

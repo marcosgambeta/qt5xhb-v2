@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
+REQUEST QUrl
 #endif
 
 CLASS QHelpSearchResultWidget INHERIT QWidget
@@ -51,19 +51,19 @@ RETURN
 #include <QtHelp/QHelpSearchResultWidget>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QHelpSearchResultWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_DELETE)
 {
-  auto obj = qobject_cast<QHelpSearchResultWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QUrl linkAt(const QPoint &point)
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 {
-  auto obj = qobject_cast<QHelpSearchResultWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 // void requestShowLink(const QUrl &link)
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK)
 {
-  auto sender = qobject_cast<QHelpSearchResultWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -103,7 +103,6 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

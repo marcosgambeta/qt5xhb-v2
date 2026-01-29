@@ -51,19 +51,19 @@ RETURN
 #include <QtHelp/QHelpIndexWidget>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QHelpIndexWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHELPINDEXWIDGET_DELETE)
 {
-  auto obj = qobject_cast<QHelpIndexWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void activateCurrentItem()
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 {
-  auto obj = qobject_cast<QHelpIndexWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 // void filterIndices(const QString &filter, const QString &wildcard = QString())
 HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 {
-  auto obj = qobject_cast<QHelpIndexWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 // void linkActivated(const QUrl &link, const QString &keyword)
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ONLINKACTIVATED)
 {
-  auto sender = qobject_cast<QHelpIndexWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -128,7 +128,6 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ONLINKACTIVATED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
+REQUEST QModelIndex
 #endif
 
 CLASS QHelpIndexModel INHERIT QStringListModel
@@ -53,10 +53,12 @@ RETURN
 #include <QtHelp/QHelpIndexModel>
 #endif
 
-    // void createIndex(const QString &customFilterName)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// void createIndex(const QString &customFilterName)
 HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 {
-  auto obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -76,7 +78,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 // QModelIndex filter(const QString &filter, const QString &wildcard = QString())
 HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 {
-  auto obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 // bool isCreatingIndex() const
 HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 {
-  auto obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 // void indexCreated()
 HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATED)
 {
-  auto sender = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -131,7 +133,6 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -150,7 +151,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATED)
 // void indexCreationStarted()
 HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATIONSTARTED)
 {
-  auto sender = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -170,7 +171,6 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATIONSTARTED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
