@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETDESCRIPTION)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void setFileName(const QString &fileName)
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETFILENAME)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void setOutputDevice(QIODevice *outputDevice)
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETOUTPUTDEVICE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void setResolution(int dpi)
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETRESOLUTION)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void setSize(const QSize &size)
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETSIZE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void setTitle(const QString &title)
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETTITLE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
       obj->setViewBox(*PQRECT(1));
     }
 
-    RETURN_SELF();
+    hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // void setViewBox(const QRectF &viewBox)
     GET_PTR_FROM_SELF(obj);
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
       obj->setViewBox(*PQRECTF(1));
     }
 
-    RETURN_SELF();
+    hb_itemReturn(hb_stackSelfItem());
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

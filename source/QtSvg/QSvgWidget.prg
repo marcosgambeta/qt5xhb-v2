@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
       obj->load(PQSTRING(1));
     }
 
-    RETURN_SELF();
+    hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // void load(const QByteArray &contents)
     GET_PTR_FROM_SELF(obj);
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
       obj->load(*PQBYTEARRAY(1));
     }
 
-    RETURN_SELF();
+    hb_itemReturn(hb_stackSelfItem());
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

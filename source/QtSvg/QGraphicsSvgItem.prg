@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void setMaximumCacheSize(const QSize &size)
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void setSharedRenderer(QSvgRenderer *renderer)
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETSHAREDRENDERER)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // virtual QRectF boundingRect() const
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_PAINT)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // virtual int type() const
