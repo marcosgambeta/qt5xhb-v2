@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODBUSDATAUNIT
-REQUEST QMODBUSRESPONSE
+REQUEST QModbusDataUnit
+REQUEST QModbusResponse
 #endif
 
 CLASS QModbusReply INHERIT QObject
@@ -63,7 +63,9 @@ RETURN
 #endif
 #endif
 
-    // QModbusReply(QModbusReply::ReplyType type, int serverAddress, QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QModbusReply(QModbusReply::ReplyType type, int serverAddress, QObject *parent = nullptr)
 HB_FUNC_STATIC(QMODBUSREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_NEW)
 HB_FUNC_STATIC(QMODBUSREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_TYPE)
 HB_FUNC_STATIC(QMODBUSREPLY_SERVERADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +122,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SERVERADDRESS)
 HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 HB_FUNC_STATIC(QMODBUSREPLY_RESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_RESULT)
 HB_FUNC_STATIC(QMODBUSREPLY_RAWRESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_RAWRESULT)
 HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +229,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 HB_FUNC_STATIC(QMODBUSREPLY_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -246,7 +248,6 @@ HB_FUNC_STATIC(QMODBUSREPLY_ONFINISHED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -269,7 +270,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ONFINISHED)
 HB_FUNC_STATIC(QMODBUSREPLY_ONERROROCCURRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QModbusReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -291,7 +292,6 @@ HB_FUNC_STATIC(QMODBUSREPLY_ONERROROCCURRED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

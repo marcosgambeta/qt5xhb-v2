@@ -52,7 +52,9 @@ RETURN
 #endif
 #endif
 
-    // QModbusTcpClient(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QModbusTcpClient *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QModbusTcpClient(QObject *parent = nullptr)
 HB_FUNC_STATIC(QMODBUSTCPCLIENT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -69,10 +71,8 @@ HB_FUNC_STATIC(QMODBUSTCPCLIENT_NEW)
 HB_FUNC_STATIC(QMODBUSTCPCLIENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusTcpClient *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }

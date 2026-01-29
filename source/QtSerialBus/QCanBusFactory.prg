@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCANBUSDEVICE
+REQUEST QCanBusDevice
 #endif
 
 CLASS QCanBusFactory
@@ -59,11 +59,13 @@ RETURN
 #endif
 #endif
 
-    // virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QCanBusFactory *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
 HB_FUNC_STATIC(QCANBUSFACTORY_CREATEDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = static_cast<QCanBusFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

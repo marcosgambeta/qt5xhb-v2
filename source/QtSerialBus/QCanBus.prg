@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCANBUSDEVICE
-REQUEST QCANBUSDEVICEINFO
+REQUEST QCanBusDevice
+REQUEST QCanBusDeviceInfo
 #endif
 
 CLASS QCanBus INHERIT QObject
@@ -56,7 +56,9 @@ RETURN
 #endif
 #endif
 
-    // static QCanBus *instance()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCanBus *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// static QCanBus *instance()
 HB_FUNC_STATIC(QCANBUS_INSTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QCANBUS_INSTANCE)
 HB_FUNC_STATIC(QCANBUS_PLUGINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCanBus *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QCANBUS_PLUGINS)
 HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = qobject_cast<QCanBus *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
       auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (const auto &item : list) {
+        for (auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
 HB_FUNC_STATIC(QCANBUS_CREATEDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCanBus *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

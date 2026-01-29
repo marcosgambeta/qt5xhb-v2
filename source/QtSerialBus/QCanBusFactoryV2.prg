@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCANBUSDEVICE
-REQUEST QCANBUSDEVICEINFO
+REQUEST QCanBusDevice
+REQUEST QCanBusDeviceInfo
 #endif
 
 CLASS QCanBusFactoryV2 INHERIT QCanBusFactory
@@ -52,11 +52,13 @@ RETURN
 #endif
 #endif
 
-    // virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QCanBusFactoryV2 *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
 HB_FUNC_STATIC(QCANBUSFACTORYV2_CREATEDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QCanBusFactoryV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QCANBUSFACTORYV2_CREATEDEVICE)
 HB_FUNC_STATIC(QCANBUSFACTORYV2_AVAILABLEDEVICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QCanBusFactoryV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QCANBUSFACTORYV2_AVAILABLEDEVICES)
       auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (const auto &item : list) {
+        for (auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);

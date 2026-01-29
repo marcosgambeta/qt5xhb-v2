@@ -53,7 +53,9 @@ RETURN
 #endif
 #endif
 
-    // QModbusRtuSerialMaster(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QModbusRtuSerialMaster *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QModbusRtuSerialMaster(QObject *parent = nullptr)
 HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -70,10 +72,8 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_NEW)
 HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusRtuSerialMaster *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_DELETE)
 HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusRtuSerialMaster *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -55,14 +55,14 @@ RETURN
 #endif
 #endif
 
-    // ~QModbusClient()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QModbusClient *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QModbusClient()
 HB_FUNC_STATIC(QMODBUSCLIENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusClient *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QMODBUSCLIENT_DELETE)
 HB_FUNC_STATIC(QMODBUSCLIENT_TIMEOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusClient *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QMODBUSCLIENT_TIMEOUT)
 HB_FUNC_STATIC(QMODBUSCLIENT_NUMBEROFRETRIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QModbusClient *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QMODBUSCLIENT_NUMBEROFRETRIES)
 HB_FUNC_STATIC(QMODBUSCLIENT_ONTIMEOUTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QModbusClient *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -141,7 +141,6 @@ HB_FUNC_STATIC(QMODBUSCLIENT_ONTIMEOUTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
