@@ -11,12 +11,12 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKACCESSMANAGER
-REQUEST QQMLCONTEXT
-REQUEST QQMLIMAGEPROVIDERBASE
-REQUEST QQMLINCUBATIONCONTROLLER
-REQUEST QQMLNETWORKACCESSMANAGERFACTORY
-REQUEST QURL
+REQUEST QNetworkAccessManager
+REQUEST QQmlContext
+REQUEST QQmlImageProviderBase
+REQUEST QQmlIncubationController
+REQUEST QQmlNetworkAccessManagerFactory
+REQUEST QUrl
 #endif
 
 CLASS QQmlEngine INHERIT QJSEngine
@@ -88,7 +88,9 @@ RETURN
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtQml/QQmlContext>
 
-    // QQmlEngine(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QQmlEngine(QObject *parent = nullptr)
 HB_FUNC_STATIC(QQMLENGINE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -101,17 +103,15 @@ HB_FUNC_STATIC(QQMLENGINE_NEW)
 
 HB_FUNC_STATIC(QQMLENGINE_DELETE)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void addImageProvider(const QString &providerId, QQmlImageProviderBase *provider)
 HB_FUNC_STATIC(QQMLENGINE_ADDIMAGEPROVIDER)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMAGEPROVIDER)
 // void addImportPath(const QString &path)
 HB_FUNC_STATIC(QQMLENGINE_ADDIMPORTPATH)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMPORTPATH)
 // bool addNamedBundle(const QString &name, const QString &fileName)
 HB_FUNC_STATIC(QQMLENGINE_ADDNAMEDBUNDLE)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDNAMEDBUNDLE)
 // void addPluginPath(const QString &path)
 HB_FUNC_STATIC(QQMLENGINE_ADDPLUGINPATH)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDPLUGINPATH)
 // QUrl baseUrl() const
 HB_FUNC_STATIC(QQMLENGINE_BASEURL)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QQMLENGINE_BASEURL)
 // void clearComponentCache()
 HB_FUNC_STATIC(QQMLENGINE_CLEARCOMPONENTCACHE)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QQMLENGINE_CLEARCOMPONENTCACHE)
 // QQmlImageProviderBase *imageProvider(const QString &providerId) const
 HB_FUNC_STATIC(QQMLENGINE_IMAGEPROVIDER)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QQMLENGINE_IMAGEPROVIDER)
 // QStringList importPathList() const
 HB_FUNC_STATIC(QQMLENGINE_IMPORTPATHLIST)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QQMLENGINE_IMPORTPATHLIST)
 // QQmlIncubationController *incubationController() const
 HB_FUNC_STATIC(QQMLENGINE_INCUBATIONCONTROLLER)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QQMLENGINE_INCUBATIONCONTROLLER)
 // QNetworkAccessManager *networkAccessManager() const
 HB_FUNC_STATIC(QQMLENGINE_NETWORKACCESSMANAGER)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QQMLENGINE_NETWORKACCESSMANAGER)
 // QQmlNetworkAccessManagerFactory *networkAccessManagerFactory() const
 HB_FUNC_STATIC(QQMLENGINE_NETWORKACCESSMANAGERFACTORY)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QQMLENGINE_NETWORKACCESSMANAGERFACTORY)
 // QString offlineStoragePath() const
 HB_FUNC_STATIC(QQMLENGINE_OFFLINESTORAGEPATH)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QQMLENGINE_OFFLINESTORAGEPATH)
 // bool outputWarningsToStandardError() const
 HB_FUNC_STATIC(QQMLENGINE_OUTPUTWARNINGSTOSTANDARDERROR)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QQMLENGINE_OUTPUTWARNINGSTOSTANDARDERROR)
 // QStringList pluginPathList() const
 HB_FUNC_STATIC(QQMLENGINE_PLUGINPATHLIST)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QQMLENGINE_PLUGINPATHLIST)
 // void removeImageProvider(const QString &providerId)
 HB_FUNC_STATIC(QQMLENGINE_REMOVEIMAGEPROVIDER)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QQMLENGINE_REMOVEIMAGEPROVIDER)
 // QQmlContext *rootContext() const
 HB_FUNC_STATIC(QQMLENGINE_ROOTCONTEXT)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QQMLENGINE_ROOTCONTEXT)
 // void setBaseUrl(const QUrl &url)
 HB_FUNC_STATIC(QQMLENGINE_SETBASEURL)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETBASEURL)
 // void setImportPathList(const QStringList &paths)
 HB_FUNC_STATIC(QQMLENGINE_SETIMPORTPATHLIST)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETIMPORTPATHLIST)
 // void setIncubationController(QQmlIncubationController *controller)
 HB_FUNC_STATIC(QQMLENGINE_SETINCUBATIONCONTROLLER)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,7 +475,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETINCUBATIONCONTROLLER)
 // void setNetworkAccessManagerFactory(QQmlNetworkAccessManagerFactory *factory)
 HB_FUNC_STATIC(QQMLENGINE_SETNETWORKACCESSMANAGERFACTORY)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,7 +495,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETNETWORKACCESSMANAGERFACTORY)
 // void setOfflineStoragePath(const QString &dir)
 HB_FUNC_STATIC(QQMLENGINE_SETOFFLINESTORAGEPATH)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOFFLINESTORAGEPATH)
 // void setOutputWarningsToStandardError(bool enabled)
 HB_FUNC_STATIC(QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 // void setPluginPathList(const QStringList &paths)
 HB_FUNC_STATIC(QQMLENGINE_SETPLUGINPATHLIST)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,7 +555,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETPLUGINPATHLIST)
 // void trimComponentCache()
 HB_FUNC_STATIC(QQMLENGINE_TRIMCOMPONENTCACHE)
 {
-  auto obj = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -636,7 +636,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOBJECTOWNERSHIP)
 // void quit()
 HB_FUNC_STATIC(QQMLENGINE_ONQUIT)
 {
-  auto sender = qobject_cast<QQmlEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -655,7 +655,6 @@ HB_FUNC_STATIC(QQMLENGINE_ONQUIT)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

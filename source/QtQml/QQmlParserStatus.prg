@@ -56,19 +56,19 @@ RETURN
 #include <QtQml/QQmlParserStatus>
 #endif
 
-HB_FUNC_STATIC(QQMLPARSERSTATUS_DELETE)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QQmlParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+    HB_FUNC_STATIC(QQMLPARSERSTATUS_DELETE)
 {
-  auto obj = static_cast<QQmlParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void classBegin() = 0
 HB_FUNC_STATIC(QQMLPARSERSTATUS_CLASSBEGIN)
 {
-  auto obj = static_cast<QQmlParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QQMLPARSERSTATUS_CLASSBEGIN)
 // virtual void componentComplete() = 0
 HB_FUNC_STATIC(QQMLPARSERSTATUS_COMPONENTCOMPLETE)
 {
-  auto obj = static_cast<QQmlParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

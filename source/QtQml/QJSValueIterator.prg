@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QJSVALUE
+REQUEST QJSValue
 #endif
 
 CLASS QJSValueIterator
@@ -60,7 +60,9 @@ RETURN
 #include <QtQml/QJSValueIterator>
 #endif
 
-    // QJSValueIterator(const QJSValue &object)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QJSValueIterator(const QJSValue &object)
 HB_FUNC_STATIC(QJSVALUEITERATOR_NEW)
 {
   if (ISNUMPAR(1) && ISQJSVALUE(1)) {
@@ -73,17 +75,15 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_NEW)
 
 HB_FUNC_STATIC(QJSVALUEITERATOR_DELETE)
 {
-  auto obj = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool hasNext() const
 HB_FUNC_STATIC(QJSVALUEITERATOR_HASNEXT)
 {
-  auto obj = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_HASNEXT)
 // QString name() const
 HB_FUNC_STATIC(QJSVALUEITERATOR_NAME)
 {
-  auto obj = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_NAME)
 // bool next()
 HB_FUNC_STATIC(QJSVALUEITERATOR_NEXT)
 {
-  auto obj = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_NEXT)
 // QJSValue value() const
 HB_FUNC_STATIC(QJSVALUEITERATOR_VALUE)
 {
-  auto obj = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

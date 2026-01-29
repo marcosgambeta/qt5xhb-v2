@@ -61,6 +61,8 @@ RETURN
 #include <QtQml/QQmlScriptString>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -78,17 +80,15 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEW)
 
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_DELETE)
 {
-  auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool booleanLiteral(bool *ok) const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_BOOLEANLITERAL)
 {
-  auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_BOOLEANLITERAL)
 // bool isEmpty() const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISEMPTY)
 {
-  auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISEMPTY)
 // bool isNullLiteral() const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISNULLLITERAL)
 {
-  auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISNULLLITERAL)
 // bool isUndefinedLiteral() const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL)
 {
-  auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL)
 // qreal numberLiteral(bool *ok) const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_NUMBERLITERAL)
 {
-  auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NUMBERLITERAL)
 // QString stringLiteral() const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_STRINGLITERAL)
 {
-  auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

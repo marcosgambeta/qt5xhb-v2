@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QJSVALUE
+REQUEST QJSValue
 #endif
 
 CLASS QJSEngine INHERIT QObject
@@ -55,6 +55,8 @@ RETURN
 #include <QtQml/QJSEngine>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QJSENGINE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,17 +74,15 @@ HB_FUNC_STATIC(QJSENGINE_NEW)
 
 HB_FUNC_STATIC(QJSENGINE_DELETE)
 {
-  auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void collectGarbage()
 HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
 {
-  auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
 // QJSValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)
 HB_FUNC_STATIC(QJSENGINE_EVALUATE)
 {
-  auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QJSENGINE_EVALUATE)
 // QJSValue globalObject() const
 HB_FUNC_STATIC(QJSENGINE_GLOBALOBJECT)
 {
-  auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QJSENGINE_GLOBALOBJECT)
 // QJSValue newArray(uint length = 0)
 HB_FUNC_STATIC(QJSENGINE_NEWARRAY)
 {
-  auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWARRAY)
 // QJSValue newObject()
 HB_FUNC_STATIC(QJSENGINE_NEWOBJECT)
 {
-  auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWOBJECT)
 // QJSValue newQObject(QObject *object)
 HB_FUNC_STATIC(QJSENGINE_NEWQOBJECT)
 {
-  auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

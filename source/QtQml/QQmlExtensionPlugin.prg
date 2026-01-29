@@ -49,19 +49,19 @@ RETURN
 #include <QtQml/QQmlExtensionPlugin>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QQmlExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_DELETE)
 {
-  auto obj = qobject_cast<QQmlExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void initializeEngine(QQmlEngine *engine, const char *uri)
 HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_INITIALIZEENGINE)
 {
-  auto obj = qobject_cast<QQmlExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_INITIALIZEENGINE)
 // virtual void registerTypes(const char *uri) = 0
 HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_REGISTERTYPES)
 {
-  auto obj = qobject_cast<QQmlExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

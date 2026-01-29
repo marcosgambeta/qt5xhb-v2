@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QQMLENGINE
+REQUEST QQmlEngine
 #endif
 
 CLASS QQmlIncubationController
@@ -62,7 +62,9 @@ RETURN
 
 #include <QtQml/QQmlEngine>
 
-    // QQmlIncubationController()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QQmlIncubationController()
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -75,17 +77,15 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_NEW)
 
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_DELETE)
 {
-  auto obj = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QQmlEngine *engine() const
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_ENGINE)
 {
-  auto obj = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_ENGINE)
 // void incubateFor(int msecs)
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEFOR)
 {
-  auto obj = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEFOR)
 // void incubateWhile(volatile bool *flag, int msecs = 0)
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEWHILE)
 {
-  auto obj = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEWHILE)
 // int incubatingObjectCount() const
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT)
 {
-  auto obj = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

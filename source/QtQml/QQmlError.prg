@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
+REQUEST QUrl
 #endif
 
 CLASS QQmlError
@@ -66,6 +66,8 @@ RETURN
 #include <QtQml/QQmlError>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QQMLERROR_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -83,17 +85,15 @@ HB_FUNC_STATIC(QQMLERROR_NEW)
 
 HB_FUNC_STATIC(QQMLERROR_DELETE)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int column() const
 HB_FUNC_STATIC(QQMLERROR_COLUMN)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QQMLERROR_COLUMN)
 // QString description() const
 HB_FUNC_STATIC(QQMLERROR_DESCRIPTION)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QQMLERROR_DESCRIPTION)
 // bool isValid() const
 HB_FUNC_STATIC(QQMLERROR_ISVALID)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QQMLERROR_ISVALID)
 // int line() const
 HB_FUNC_STATIC(QQMLERROR_LINE)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QQMLERROR_LINE)
 // void setColumn(int column)
 HB_FUNC_STATIC(QQMLERROR_SETCOLUMN)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QQMLERROR_SETCOLUMN)
 // void setDescription(const QString &description)
 HB_FUNC_STATIC(QQMLERROR_SETDESCRIPTION)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QQMLERROR_SETDESCRIPTION)
 // void setLine(int line)
 HB_FUNC_STATIC(QQMLERROR_SETLINE)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QQMLERROR_SETLINE)
 // void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QQMLERROR_SETURL)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QQMLERROR_SETURL)
 // QString toString() const
 HB_FUNC_STATIC(QQMLERROR_TOSTRING)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QQMLERROR_TOSTRING)
 // QUrl url() const
 HB_FUNC_STATIC(QQMLERROR_URL)
 {
-  auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

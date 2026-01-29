@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QQmlApplicationEngine INHERIT QQmlEngine
@@ -58,6 +58,8 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QQmlApplicationEngine *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -86,19 +88,17 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
 HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QQmlApplicationEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
 
-// QList<QObject*> rootObjects()
+// QList<QObject *> rootObjects()
 HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ROOTOBJECTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QQmlApplicationEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
   if (ISNUMPAR(1) && ISQURL(1)) {
     // void load(const QUrl &url)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-    auto obj = qobject_cast<QQmlApplicationEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->load(*PQURL(1));
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void load(const QString &filePath)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-    auto obj = qobject_cast<QQmlApplicationEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->load(PQSTRING(1));
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOADDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QQmlApplicationEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOADDATA)
 HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ONOBJECTCREATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto sender = qobject_cast<QQmlApplicationEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -212,7 +212,6 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ONOBJECTCREATED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

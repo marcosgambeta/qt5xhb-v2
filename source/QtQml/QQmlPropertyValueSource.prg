@@ -55,19 +55,19 @@ RETURN
 #include <QtQml/QQmlPropertyValueSource>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QQmlPropertyValueSource *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_DELETE)
 {
-  auto obj = static_cast<QQmlPropertyValueSource *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void setTarget(const QQmlProperty &property) = 0
 HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_SETTARGET)
 {
-  auto obj = static_cast<QQmlPropertyValueSource *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMETAOBJECT
-REQUEST QOBJECT
+REQUEST QMetaObject
+REQUEST QObject
 #endif
 
 CLASS QQmlListReference
@@ -68,6 +68,8 @@ RETURN
 #include <QtQml/QQmlListReference>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QQMLLISTREFERENCE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -85,17 +87,15 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_NEW)
 
 HB_FUNC_STATIC(QQMLLISTREFERENCE_DELETE)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool append(QObject *object) const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_APPEND)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_APPEND)
 // QObject *at(int index) const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_AT)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_AT)
 // bool canAppend() const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAPPEND)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAPPEND)
 // bool canAt() const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAT)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAT)
 // bool canClear() const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCLEAR)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCLEAR)
 // bool canCount() const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCOUNT)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCOUNT)
 // bool clear() const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_CLEAR)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CLEAR)
 // int count() const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_COUNT)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_COUNT)
 // bool isValid() const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_ISVALID)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,13 +258,13 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_ISVALID)
 // const QMetaObject *listElementType() const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_LISTELEMENTTYPE)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->listElementType();
+      const auto ptr = obj->listElementType();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_LISTELEMENTTYPE)
 // QObject *object() const
 HB_FUNC_STATIC(QQMLLISTREFERENCE_OBJECT)
 {
-  auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
