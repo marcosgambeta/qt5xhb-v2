@@ -112,7 +112,7 @@ RETURN
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWebSocket *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // QWebSocket(const QString &origin = QString(), QWebSocketProtocol::Version version =
-    // QWebSocketProtocol::VersionLatest, QObject * parent = nullptr)
+// QWebSocketProtocol::VersionLatest, QObject *parent = nullptr)
 HB_FUNC_STATIC(QWEBSOCKET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETPROXY)
 #endif
 }
 
-// const QMaskGenerator * maskGenerator() const
+// const QMaskGenerator *maskGenerator() const
 HB_FUNC_STATIC(QWEBSOCKET_MASKGENERATOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QWEBSOCKET_MASKGENERATOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->maskGenerator();
+      const auto ptr = obj->maskGenerator();
       Qt5xHb::createReturnQObjectClass(ptr, "QMASKGENERATOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QWEBSOCKET_MASKGENERATOR)
 #endif
 }
 
-// void setMaskGenerator(const QMaskGenerator * maskGenerator)
+// void setMaskGenerator(const QMaskGenerator *maskGenerator)
 HB_FUNC_STATIC(QWEBSOCKET_SETMASKGENERATOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -880,7 +880,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONABOUTTOCLOSE)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -922,7 +921,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONCONNECTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -964,7 +962,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONDISCONNECTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1009,7 +1006,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONSTATECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1028,7 +1024,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONSTATECHANGED)
 #endif
 }
 
-// void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator * pAuthenticator)
+// void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator *pAuthenticator)
 HB_FUNC_STATIC(QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -1058,7 +1054,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED)
                                  hb_itemRelease(pArg2);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1100,7 +1095,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONREADCHANNELFINISHED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1147,7 +1141,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONTEXTFRAMERECEIVED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1194,7 +1187,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBINARYFRAMERECEIVED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1239,7 +1231,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONTEXTMESSAGERECEIVED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1284,7 +1275,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBINARYMESSAGERECEIVED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1329,7 +1319,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONERROR)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1376,7 +1365,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONPONG)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1420,7 +1408,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBYTESWRITTEN)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1482,7 +1469,6 @@ HB_FUNC_STATIC(QWEBSOCKET_ONSSLERRORS)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -93,7 +93,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWebSocketServer *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QWebSocketServer(const QString &serverName, QWebSocketServer::SslMode secureMode, QObject * parent = nullptr)
+// QWebSocketServer(const QString &serverName, QWebSocketServer::SslMode secureMode, QObject *parent = nullptr)
 HB_FUNC_STATIC(QWEBSOCKETSERVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_HASPENDINGCONNECTIONS)
 #endif
 }
 
-// virtual QWebSocket * nextPendingConnection()
+// virtual QWebSocket *nextPendingConnection()
 HB_FUNC_STATIC(QWEBSOCKETSERVER_NEXTPENDINGCONNECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SUPPORTEDVERSIONS)
 #endif
       auto list = obj->supportedVersions();
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list) {
+      for (auto item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -625,7 +625,6 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONACCEPTERROR)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -670,7 +669,6 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONSERVERERROR)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -689,7 +687,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONSERVERERROR)
 #endif
 }
 
-// void originAuthenticationRequired(QWebSocketCorsAuthenticator * pAuthenticator)
+// void originAuthenticationRequired(QWebSocketCorsAuthenticator *pAuthenticator)
 HB_FUNC_STATIC(QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -718,7 +716,6 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -760,7 +757,6 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONNEWCONNECTION)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -805,7 +801,6 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONPEERVERIFYERROR)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -867,7 +862,6 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONSSLERRORS)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -909,7 +903,6 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONCLOSED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
