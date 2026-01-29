@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACE
+REQUEST QPlace
 #endif
 
 CLASS QPlaceResult INHERIT QPlaceSearchResult
@@ -57,7 +57,9 @@ RETURN
 #endif
 #endif
 
-    // QPlaceResult()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QPlaceResult *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QPlaceResult()
 HB_FUNC_STATIC(QPLACERESULT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -73,10 +75,8 @@ HB_FUNC_STATIC(QPLACERESULT_NEW)
 HB_FUNC_STATIC(QPLACERESULT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceResult *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QPLACERESULT_DELETE)
 HB_FUNC_STATIC(QPLACERESULT_DISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QPLACERESULT_DISTANCE)
 HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 HB_FUNC_STATIC(QPLACERESULT_PLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QPLACERESULT_PLACE)
 HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 HB_FUNC_STATIC(QPLACERESULT_ISSPONSORED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QPLACERESULT_ISSPONSORED)
 HB_FUNC_STATIC(QPLACERESULT_SETSPONSORED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

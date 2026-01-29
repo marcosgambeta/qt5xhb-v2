@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACECONTENTREQUEST
+REQUEST QPlaceContentRequest
 #endif
 
 CLASS QPlaceContentReply INHERIT QPlaceReply
@@ -58,7 +58,9 @@ RETURN
 #endif
 #endif
 
-    // QPlaceContentReply(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPlaceContentReply *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QPlaceContentReply(QObject *parent = nullptr)
 HB_FUNC_STATIC(QPLACECONTENTREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -74,10 +76,8 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_NEW)
 HB_FUNC_STATIC(QPLACECONTENTREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceContentReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_DELETE)
 HB_FUNC_STATIC(QPLACECONTENTREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceContentReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_TYPE)
 HB_FUNC_STATIC(QPLACECONTENTREPLY_TOTALCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceContentReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_TOTALCOUNT)
 HB_FUNC_STATIC(QPLACECONTENTREPLY_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceContentReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_REQUEST)
 HB_FUNC_STATIC(QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceContentReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST)
 HB_FUNC_STATIC(QPLACECONTENTREPLY_NEXTPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceContentReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

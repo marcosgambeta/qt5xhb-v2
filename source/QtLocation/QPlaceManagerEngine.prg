@@ -11,17 +11,17 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QLOCALE
-REQUEST QPLACE
-REQUEST QPLACECATEGORY
-REQUEST QPLACECONTENTREPLY
-REQUEST QPLACEDETAILSREPLY
-REQUEST QPLACEIDREPLY
-REQUEST QPLACEMATCHREPLY
-REQUEST QPLACEREPLY
-REQUEST QPLACESEARCHREPLY
-REQUEST QPLACESEARCHSUGGESTIONREPLY
-REQUEST QURL
+REQUEST QLocale
+REQUEST QPlace
+REQUEST QPlaceCategory
+REQUEST QPlaceContentReply
+REQUEST QPlaceDetailsReply
+REQUEST QPlaceIdReply
+REQUEST QPlaceMatchReply
+REQUEST QPlaceReply
+REQUEST QPlaceSearchReply
+REQUEST QPlaceSearchSuggestionReply
+REQUEST QUrl
 #endif
 
 CLASS QPlaceManagerEngine INHERIT QObject
@@ -94,13 +94,13 @@ RETURN
 
 #include <QtLocation/QPlaceSearchReply>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_DELETE)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_MANAGERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_MANAGERNAME)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_MANAGERVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_MANAGERVERSION)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_GETPLACEDETAILS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_GETPLACEDETAILS)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_GETPLACECONTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_GETPLACECONTENT)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_SEARCH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SEARCH)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_SEARCHSUGGESTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SEARCHSUGGESTIONS)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_SAVEPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SAVEPLACE)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_REMOVEPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_REMOVEPLACE)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_SAVECATEGORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SAVECATEGORY)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_REMOVECATEGORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_REMOVECATEGORY)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_INITIALIZECATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_INITIALIZECATEGORIES)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_PARENTCATEGORYID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_PARENTCATEGORYID)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_CHILDCATEGORYIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_CHILDCATEGORYIDS)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_CATEGORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_CATEGORY)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_CHILDCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_CHILDCATEGORIES)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_LOCALES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_LOCALES)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_SETLOCALES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SETLOCALES)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_CONSTRUCTICONURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_CONSTRUCTICONURL)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_COMPATIBLEPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -550,7 +550,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_COMPATIBLEPLACE)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_MATCHINGPLACES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_MATCHINGPLACES)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -593,7 +593,6 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONFINISHED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -616,7 +615,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONFINISHED)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -643,7 +642,6 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONERROR)
                 hb_itemRelease(pArg3);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -666,7 +664,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONERROR)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -688,7 +686,6 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEADDED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -711,7 +708,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEADDED)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEUPDATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -733,7 +730,6 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEUPDATED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -756,7 +752,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEUPDATED)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -778,7 +774,6 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEREMOVED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -801,7 +796,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEREMOVED)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -826,7 +821,6 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYADDED)
                                  hb_itemRelease(pArg2);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -849,7 +843,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYADDED)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYUPDATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -874,7 +868,6 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYUPDATED)
                                  hb_itemRelease(pArg2);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -897,7 +890,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYUPDATED)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -922,7 +915,6 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYREMOVED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -945,7 +937,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYREMOVED)
 HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONDATACHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QPlaceManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -964,7 +956,6 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONDATACHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

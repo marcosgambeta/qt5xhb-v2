@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGEOCODEREPLY
-REQUEST QLOCALE
+REQUEST QGeoCodeReply
+REQUEST QLocale
 #endif
 
 CLASS QGeoCodingManager INHERIT QObject
@@ -64,13 +64,13 @@ RETURN
 
 #include <QtCore/QLocale>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGEOCODINGMANAGER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_DELETE)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERNAME)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
   if (ISBETWEEN(1, 2) && ISQGEOADDRESS(1) && ISQGEOSHAPEORNIL(2)) {
     // QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->geocode(*PQGEOADDRESS(1), HB_ISNIL(2) ? QGeoShape() : *PQGEOSHAPE(2));
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
     // QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds =
     // QGeoShape())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->geocode(PQSTRING(1), OPINT(2, -1), OPINT(3, 0), HB_ISNIL(4) ? QGeoShape() : *PQGEOSHAPE(4));
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_REVERSEGEOCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_REVERSEGEOCODE)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_SETLOCALE)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_LOCALE)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -232,7 +232,6 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_ONFINISHED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -255,7 +254,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_ONFINISHED)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -282,7 +281,6 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_ONERROR)
                                  hb_itemRelease(pArg3);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

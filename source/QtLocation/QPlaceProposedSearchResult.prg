@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACESEARCHREQUEST
+REQUEST QPlaceSearchRequest
 #endif
 
 CLASS QPlaceProposedSearchResult INHERIT QPlaceSearchResult
@@ -55,7 +55,9 @@ RETURN
 
 #include <QtLocation/QPlaceSearchRequest>
 
-    // QPlaceProposedSearchResult()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QPlaceProposedSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QPlaceProposedSearchResult()
 HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -71,10 +73,8 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_NEW)
 HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceProposedSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_DELETE)
 HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceProposedSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST)
 HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceProposedSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGEOSHAPE
-REQUEST QPLACECATEGORY
-REQUEST QVARIANT
+REQUEST QGeoShape
+REQUEST QPlaceCategory
+REQUEST QVariant
 #endif
 
 CLASS QPlaceSearchRequest
@@ -83,6 +83,8 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtPositioning/QGeoShape>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -105,10 +107,8 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_NEW)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_DELETE)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHTERM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHTERM)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHTERM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHTERM)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_CATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_CATEGORIES)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORY)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORIES)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHAREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHAREA)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHAREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHAREA)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_RECOMMENDATIONID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_RECOMMENDATIONID)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRECOMMENDATIONID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRECOMMENDATIONID)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHCONTEXT)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHCONTEXT)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_VISIBILITYSCOPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_VISIBILITYSCOPE)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETVISIBILITYSCOPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETVISIBILITYSCOPE)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_RELEVANCEHINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_RELEVANCEHINT)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRELEVANCEHINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRELEVANCEHINT)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_LIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_LIMIT)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETLIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETLIMIT)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchRequest *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

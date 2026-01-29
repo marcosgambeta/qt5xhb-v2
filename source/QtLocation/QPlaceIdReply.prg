@@ -55,7 +55,9 @@ RETURN
 #endif
 #endif
 
-    // QPlaceIdReply(QPlaceIdReply::OperationType operationType, QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPlaceIdReply *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QPlaceIdReply(QPlaceIdReply::OperationType operationType, QObject *parent = nullptr)
 HB_FUNC_STATIC(QPLACEIDREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -71,10 +73,8 @@ HB_FUNC_STATIC(QPLACEIDREPLY_NEW)
 HB_FUNC_STATIC(QPLACEIDREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceIdReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_DELETE)
 HB_FUNC_STATIC(QPLACEIDREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceIdReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_TYPE)
 HB_FUNC_STATIC(QPLACEIDREPLY_OPERATIONTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceIdReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_OPERATIONTYPE)
 HB_FUNC_STATIC(QPLACEIDREPLY_ID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceIdReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

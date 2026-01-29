@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACEICON
+REQUEST QPlaceIcon
 #endif
 
 CLASS QPlaceSearchResult
@@ -67,6 +67,8 @@ RETURN
 
 #include <QtLocation/QPlaceIcon>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QPlaceSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPLACESEARCHRESULT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -89,10 +91,8 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_NEW)
 HB_FUNC_STATIC(QPLACESEARCHRESULT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_DELETE)
 HB_FUNC_STATIC(QPLACESEARCHRESULT_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_TYPE)
 HB_FUNC_STATIC(QPLACESEARCHRESULT_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_TITLE)
 HB_FUNC_STATIC(QPLACESEARCHRESULT_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_SETTITLE)
 HB_FUNC_STATIC(QPLACESEARCHRESULT_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_ICON)
 HB_FUNC_STATIC(QPLACESEARCHRESULT_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QPlaceSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

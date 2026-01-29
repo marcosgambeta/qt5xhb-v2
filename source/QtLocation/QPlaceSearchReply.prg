@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACESEARCHREQUEST
-REQUEST QPLACESEARCHRESULT
+REQUEST QPlaceSearchRequest
+REQUEST QPlaceSearchResult
 #endif
 
 CLASS QPlaceSearchReply INHERIT QPlaceReply
@@ -61,7 +61,9 @@ RETURN
 
 #include <QtLocation/QPlaceSearchRequest>
 
-    // QPlaceSearchReply(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPlaceSearchReply *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QPlaceSearchReply(QObject *parent = nullptr)
 HB_FUNC_STATIC(QPLACESEARCHREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -77,10 +79,8 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_NEW)
 HB_FUNC_STATIC(QPLACESEARCHREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceSearchReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_DELETE)
 HB_FUNC_STATIC(QPLACESEARCHREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceSearchReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_TYPE)
 HB_FUNC_STATIC(QPLACESEARCHREPLY_RESULTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceSearchReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_RESULTS)
 HB_FUNC_STATIC(QPLACESEARCHREPLY_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceSearchReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_REQUEST)
 HB_FUNC_STATIC(QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceSearchReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST)
 HB_FUNC_STATIC(QPLACESEARCHREPLY_NEXTPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QPlaceSearchReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
