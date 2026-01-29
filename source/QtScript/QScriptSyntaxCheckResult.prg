@@ -59,7 +59,9 @@ RETURN
 #include <QtScript/QScriptSyntaxCheckResult>
 #endif
 
-    // QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult &other)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QScriptSyntaxCheckResult *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult &other)
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTSYNTAXCHECKRESULT(1)) {
@@ -72,17 +74,15 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEW)
 
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_DELETE)
 {
-  auto obj = static_cast<QScriptSyntaxCheckResult *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int errorColumnNumber() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER)
 {
-  auto obj = static_cast<QScriptSyntaxCheckResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER)
 // int errorLineNumber() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER)
 {
-  auto obj = static_cast<QScriptSyntaxCheckResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER)
 // QString errorMessage() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE)
 {
-  auto obj = static_cast<QScriptSyntaxCheckResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE)
 // QScriptSyntaxCheckResult::State state() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_STATE)
 {
-  auto obj = static_cast<QScriptSyntaxCheckResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

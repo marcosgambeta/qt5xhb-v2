@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSCRIPTCLASSPROPERTYITERATOR
-REQUEST QSCRIPTENGINE
-REQUEST QSCRIPTVALUE
-REQUEST QVARIANT
+REQUEST QScriptClassPropertyIterator
+REQUEST QScriptEngine
+REQUEST QScriptValue
+REQUEST QVariant
 #endif
 
 CLASS QScriptClass
@@ -70,7 +70,9 @@ RETURN
 
 #include <QtScript/QScriptEngine>
 
-    // QScriptClass(QScriptEngine *engine)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QScriptClass(QScriptEngine *engine)
 HB_FUNC_STATIC(QSCRIPTCLASS_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTENGINE(1)) {
@@ -83,17 +85,15 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NEW)
 
 HB_FUNC_STATIC(QSCRIPTCLASS_DELETE)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QScriptEngine *engine() const
 HB_FUNC_STATIC(QSCRIPTCLASS_ENGINE)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_ENGINE)
 // virtual QVariant extension(QScriptClass::Extension extension, const QVariant &argument = QVariant())
 HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 // virtual QString name() const
 HB_FUNC_STATIC(QSCRIPTCLASS_NAME)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NAME)
 // virtual QScriptClassPropertyIterator *newIterator(const QScriptValue &object)
 HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
 // virtual QScriptValue property(const QScriptValue &object, const QScriptString &name, uint id)
 HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
 // virtual QScriptValue::PropertyFlags propertyFlags(const QScriptValue &object, const QScriptString &name, uint id)
 HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTYFLAGS)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTYFLAGS)
 // virtual QScriptValue prototype() const
 HB_FUNC_STATIC(QSCRIPTCLASS_PROTOTYPE)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROTOTYPE)
 // virtual void setProperty(QScriptValue &object, const QScriptString &name, uint id, const QScriptValue &value)
 HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,13 +236,13 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // virtual bool supportsExtension(QScriptClass::Extension extension) const
 HB_FUNC_STATIC(QSCRIPTCLASS_SUPPORTSEXTENSION)
 {
-  auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
