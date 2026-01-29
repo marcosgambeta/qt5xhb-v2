@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QSGTEXTURE
-REQUEST QSIZE
+REQUEST QImage
+REQUEST QSGTexture
+REQUEST QSize
 #endif
 
 CLASS QQuickTextureFactory INHERIT QObject
@@ -56,19 +56,19 @@ RETURN
 
 #include <QtQuick/QSGTexture>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QQuickTextureFactory *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_DELETE)
 {
-  auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QSGTexture *createTexture(QQuickWindow *window) const = 0
 HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_CREATETEXTURE)
 {
-  auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_CREATETEXTURE)
 // virtual QImage image() const
 HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_IMAGE)
 {
-  auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_IMAGE)
 // virtual int textureByteCount() const = 0
 HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT)
 {
-  auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT)
 // virtual QSize textureSize() const = 0
 HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTURESIZE)
 {
-  auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

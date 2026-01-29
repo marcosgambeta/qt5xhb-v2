@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QQMLCONTEXT
-REQUEST QQMLENGINE
-REQUEST QQUICKITEM
-REQUEST QSIZE
-REQUEST QURL
+REQUEST QQmlContext
+REQUEST QQmlEngine
+REQUEST QQuickItem
+REQUEST QSize
+REQUEST QUrl
 #endif
 
 CLASS QQuickView INHERIT QQuickWindow
@@ -69,6 +69,8 @@ RETURN
 #include <QtQml/QQmlEngine>
 #include <QtQuick/QQuickItem>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QQUICKVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWINDOWORNIL(1)) {
@@ -90,17 +92,15 @@ HB_FUNC_STATIC(QQUICKVIEW_NEW)
 
 HB_FUNC_STATIC(QQUICKVIEW_DELETE)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QQmlEngine *engine() const
 HB_FUNC_STATIC(QQUICKVIEW_ENGINE)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QQUICKVIEW_ENGINE)
 // QSize initialSize() const
 HB_FUNC_STATIC(QQUICKVIEW_INITIALSIZE)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QQUICKVIEW_INITIALSIZE)
 // QQuickView::ResizeMode resizeMode() const
 HB_FUNC_STATIC(QQUICKVIEW_RESIZEMODE)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QQUICKVIEW_RESIZEMODE)
 // QQmlContext *rootContext() const
 HB_FUNC_STATIC(QQUICKVIEW_ROOTCONTEXT)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QQUICKVIEW_ROOTCONTEXT)
 // QQuickItem *rootObject() const
 HB_FUNC_STATIC(QQUICKVIEW_ROOTOBJECT)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QQUICKVIEW_ROOTOBJECT)
 // void setResizeMode(QQuickView::ResizeMode)
 HB_FUNC_STATIC(QQUICKVIEW_SETRESIZEMODE)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QQUICKVIEW_SETRESIZEMODE)
 // QUrl source() const
 HB_FUNC_STATIC(QQUICKVIEW_SOURCE)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QQUICKVIEW_SOURCE)
 // QQuickView::Status status() const
 HB_FUNC_STATIC(QQUICKVIEW_STATUS)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QQUICKVIEW_STATUS)
 // void setSource(const QUrl &url)
 HB_FUNC_STATIC(QQUICKVIEW_SETSOURCE)
 {
-  auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QQUICKVIEW_SETSOURCE)
 // void statusChanged(QQuickView::Status status)
 HB_FUNC_STATIC(QQUICKVIEW_ONSTATUSCHANGED)
 {
-  auto sender = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -291,7 +291,6 @@ HB_FUNC_STATIC(QQUICKVIEW_ONSTATUSCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -48,7 +48,9 @@ RETURN
 #include <QtQuick/QSGOpacityNode>
 #endif
 
-    // QSGOpacityNode()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGOpacityNode *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QSGOpacityNode()
 HB_FUNC_STATIC(QSGOPACITYNODE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,17 +63,15 @@ HB_FUNC_STATIC(QSGOPACITYNODE_NEW)
 
 HB_FUNC_STATIC(QSGOPACITYNODE_DELETE)
 {
-  auto obj = static_cast<QSGOpacityNode *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // qreal opacity() const
 HB_FUNC_STATIC(QSGOPACITYNODE_OPACITY)
 {
-  auto obj = static_cast<QSGOpacityNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QSGOPACITYNODE_OPACITY)
 // void setOpacity(qreal opacity)
 HB_FUNC_STATIC(QSGOPACITYNODE_SETOPACITY)
 {
-  auto obj = static_cast<QSGOpacityNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

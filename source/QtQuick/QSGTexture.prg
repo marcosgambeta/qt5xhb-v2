@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QSIZE
+REQUEST QRectF
+REQUEST QSize
 #endif
 
 CLASS QSGTexture INHERIT QObject
@@ -67,19 +67,19 @@ RETURN
 #include <QtQuick/QSGTexture>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSGTEXTURE_DELETE)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void bind() = 0
 HB_FUNC_STATIC(QSGTEXTURE_BIND)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSGTEXTURE_BIND)
 // QRectF convertToNormalizedSourceRect(const QRectF &rect) const
 HB_FUNC_STATIC(QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT)
 // QSGTexture::Filtering filtering() const
 HB_FUNC_STATIC(QSGTEXTURE_FILTERING)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QSGTEXTURE_FILTERING)
 // virtual bool hasAlphaChannel() const = 0
 HB_FUNC_STATIC(QSGTEXTURE_HASALPHACHANNEL)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QSGTEXTURE_HASALPHACHANNEL)
 // virtual bool hasMipmaps() const = 0
 HB_FUNC_STATIC(QSGTEXTURE_HASMIPMAPS)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QSGTEXTURE_HASMIPMAPS)
 // QSGTexture::WrapMode horizontalWrapMode() const
 HB_FUNC_STATIC(QSGTEXTURE_HORIZONTALWRAPMODE)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QSGTEXTURE_HORIZONTALWRAPMODE)
 // virtual bool isAtlasTexture() const
 HB_FUNC_STATIC(QSGTEXTURE_ISATLASTEXTURE)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QSGTEXTURE_ISATLASTEXTURE)
 // QSGTexture::Filtering mipmapFiltering() const
 HB_FUNC_STATIC(QSGTEXTURE_MIPMAPFILTERING)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QSGTEXTURE_MIPMAPFILTERING)
 // virtual QRectF normalizedTextureSubRect() const
 HB_FUNC_STATIC(QSGTEXTURE_NORMALIZEDTEXTURESUBRECT)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QSGTEXTURE_NORMALIZEDTEXTURESUBRECT)
 // virtual QSGTexture *removedFromAtlas() const
 HB_FUNC_STATIC(QSGTEXTURE_REMOVEDFROMATLAS)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QSGTEXTURE_REMOVEDFROMATLAS)
 // void setFiltering(QSGTexture::Filtering filter)
 HB_FUNC_STATIC(QSGTEXTURE_SETFILTERING)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETFILTERING)
 // void setHorizontalWrapMode(QSGTexture::WrapMode hwrap)
 HB_FUNC_STATIC(QSGTEXTURE_SETHORIZONTALWRAPMODE)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETHORIZONTALWRAPMODE)
 // void setMipmapFiltering(QSGTexture::Filtering filter)
 HB_FUNC_STATIC(QSGTEXTURE_SETMIPMAPFILTERING)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETMIPMAPFILTERING)
 // void setVerticalWrapMode(QSGTexture::WrapMode vwrap)
 HB_FUNC_STATIC(QSGTEXTURE_SETVERTICALWRAPMODE)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETVERTICALWRAPMODE)
 // virtual int textureId() const = 0
 HB_FUNC_STATIC(QSGTEXTURE_TEXTUREID)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QSGTEXTURE_TEXTUREID)
 // virtual QSize textureSize() const = 0
 HB_FUNC_STATIC(QSGTEXTURE_TEXTURESIZE)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QSGTEXTURE_TEXTURESIZE)
 // void updateBindOptions(bool force = false)
 HB_FUNC_STATIC(QSGTEXTURE_UPDATEBINDOPTIONS)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QSGTEXTURE_UPDATEBINDOPTIONS)
 // QSGTexture::WrapMode verticalWrapMode() const
 HB_FUNC_STATIC(QSGTEXTURE_VERTICALWRAPMODE)
 {
-  auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

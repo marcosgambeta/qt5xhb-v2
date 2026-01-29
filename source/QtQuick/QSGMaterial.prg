@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSGMATERIALSHADER
-REQUEST QSGMATERIALTYPE
+REQUEST QSGMaterialShader
+REQUEST QSGMaterialType
 #endif
 
 CLASS QSGMaterial
@@ -61,19 +61,19 @@ RETURN
 #include <QtQuick/QSGMaterial>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSGMATERIAL_DELETE)
 {
-  auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual int compare(const QSGMaterial *other) const
 HB_FUNC_STATIC(QSGMATERIAL_COMPARE)
 {
-  auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSGMATERIAL_COMPARE)
 // virtual QSGMaterialShader *createShader() const = 0
 HB_FUNC_STATIC(QSGMATERIAL_CREATESHADER)
 {
-  auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QSGMATERIAL_CREATESHADER)
 // QSGMaterial::Flags flags() const
 HB_FUNC_STATIC(QSGMATERIAL_FLAGS)
 {
-  auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QSGMATERIAL_FLAGS)
 // void setFlag(QSGMaterial::Flags flags, bool on = true)
 HB_FUNC_STATIC(QSGMATERIAL_SETFLAG)
 {
-  auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QSGMATERIAL_SETFLAG)
 // virtual QSGMaterialType *type() const = 0
 HB_FUNC_STATIC(QSGMATERIAL_TYPE)
 {
-  auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -43,4 +43,6 @@ RETURN
 #include <QtQuick/QSGSimpleMaterial>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGSimpleMaterial *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 #pragma ENDDUMP

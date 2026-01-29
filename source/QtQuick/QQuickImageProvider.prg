@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QPIXMAP
-REQUEST QQUICKTEXTUREFACTORY
+REQUEST QImage
+REQUEST QPixmap
+REQUEST QQuickTextureFactory
 #endif
 
 CLASS QQuickImageProvider INHERIT QQmlImageProviderBase
@@ -54,7 +54,9 @@ RETURN
 #include <QtQuick/QQuickImageProvider>
 #endif
 
-    // QQuickImageProvider(QQmlImageProviderBase::ImageType type, QQmlImageProviderBase::Flags flags = 0)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QQuickImageProvider(QQmlImageProviderBase::ImageType type, QQmlImageProviderBase::Flags flags = 0)
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
@@ -69,17 +71,15 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
 
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_DELETE)
 {
-  auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QQmlImageProviderBase::Flags flags() const = 0
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
 {
-  auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
 // virtual QQmlImageProviderBase::ImageType imageType() const = 0
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
 {
-  auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
 // virtual QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize)
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 {
-  auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 // virtual QPixmap requestPixmap(const QString &id, QSize *size, const QSize &requestedSize)
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 {
-  auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 // virtual QQuickTextureFactory *requestTexture(const QString &id, QSize *size, const QSize &requestedSize)
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTTEXTURE)
 {
-  auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

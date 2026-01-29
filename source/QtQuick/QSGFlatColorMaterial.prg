@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
+REQUEST QColor
 #endif
 
 CLASS QSGFlatColorMaterial INHERIT QSGMaterial
@@ -49,7 +49,9 @@ RETURN
 #include <QtQuick/QSGFlatColorMaterial>
 #endif
 
-    // QSGFlatColorMaterial()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGFlatColorMaterial *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QSGFlatColorMaterial()
 HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -62,23 +64,21 @@ HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_NEW)
 
 HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_DELETE)
 {
-  auto obj = static_cast<QSGFlatColorMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const QColor &color() const
 HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_COLOR)
 {
-  auto obj = static_cast<QSGFlatColorMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->color();
+      const auto ptr = &obj->color();
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_COLOR)
 // void setColor(const QColor &color)
 HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_SETCOLOR)
 {
-  auto obj = static_cast<QSGFlatColorMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

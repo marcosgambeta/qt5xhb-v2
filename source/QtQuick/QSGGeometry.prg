@@ -73,19 +73,19 @@ RETURN
 #include <QtQuick/QSGGeometry>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSGGEOMETRY_DELETE)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void allocate(int vertexCount, int indexCount = 0)
 HB_FUNC_STATIC(QSGGEOMETRY_ALLOCATE)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ALLOCATE)
 // int attributeCount() const
 HB_FUNC_STATIC(QSGGEOMETRY_ATTRIBUTECOUNT)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ATTRIBUTECOUNT)
 // GLenum drawingMode() const
 HB_FUNC_STATIC(QSGGEOMETRY_DRAWINGMODE)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_DRAWINGMODE)
 // int indexCount() const
 HB_FUNC_STATIC(QSGGEOMETRY_INDEXCOUNT)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXCOUNT)
 // QSGGeometry::DataPattern indexDataPattern() const
 HB_FUNC_STATIC(QSGGEOMETRY_INDEXDATAPATTERN)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXDATAPATTERN)
 // int indexType() const
 HB_FUNC_STATIC(QSGGEOMETRY_INDEXTYPE)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXTYPE)
 // float lineWidth() const
 HB_FUNC_STATIC(QSGGEOMETRY_LINEWIDTH)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_LINEWIDTH)
 // void markIndexDataDirty()
 HB_FUNC_STATIC(QSGGEOMETRY_MARKINDEXDATADIRTY)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKINDEXDATADIRTY)
 // void markVertexDataDirty()
 HB_FUNC_STATIC(QSGGEOMETRY_MARKVERTEXDATADIRTY)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKVERTEXDATADIRTY)
 // void setDrawingMode(GLenum mode)
 HB_FUNC_STATIC(QSGGEOMETRY_SETDRAWINGMODE)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETDRAWINGMODE)
 // void setIndexDataPattern(QSGGeometry::DataPattern p)
 HB_FUNC_STATIC(QSGGEOMETRY_SETINDEXDATAPATTERN)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETINDEXDATAPATTERN)
 // void setLineWidth(float width)
 HB_FUNC_STATIC(QSGGEOMETRY_SETLINEWIDTH)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETLINEWIDTH)
 // void setVertexDataPattern(QSGGeometry::DataPattern p)
 HB_FUNC_STATIC(QSGGEOMETRY_SETVERTEXDATAPATTERN)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETVERTEXDATAPATTERN)
 // int sizeOfIndex() const
 HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFINDEX)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFINDEX)
 // int sizeOfVertex() const
 HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFVERTEX)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFVERTEX)
 // int vertexCount() const
 HB_FUNC_STATIC(QSGGEOMETRY_VERTEXCOUNT)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXCOUNT)
 // QSGGeometry::DataPattern vertexDataPattern() const
 HB_FUNC_STATIC(QSGGEOMETRY_VERTEXDATAPATTERN)
 {
-  auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

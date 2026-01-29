@@ -11,15 +11,15 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEINTERFACE
-REQUEST QCOLOR
-REQUEST QIMAGE
-REQUEST QOPENGLCONTEXT
-REQUEST QOPENGLFRAMEBUFFEROBJECT
-REQUEST QQMLINCUBATIONCONTROLLER
-REQUEST QQUICKITEM
-REQUEST QSGTEXTURE
-REQUEST QSIZE
+REQUEST QAccessibleInterface
+REQUEST QColor
+REQUEST QImage
+REQUEST QOpenGLContext
+REQUEST QOpenGLFramebufferObject
+REQUEST QQmlIncubationController
+REQUEST QQuickItem
+REQUEST QSGTexture
+REQUEST QSize
 #endif
 
 CLASS QQuickWindow INHERIT QWindow
@@ -93,7 +93,9 @@ RETURN
 #include <QtQuick/QQuickItem>
 #include <QtQuick/QSGTexture>
 
-    // QQuickWindow(QWindow *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QQuickWindow(QWindow *parent = nullptr)
 HB_FUNC_STATIC(QQUICKWINDOW_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWINDOWORNIL(1)) {
@@ -106,17 +108,15 @@ HB_FUNC_STATIC(QQUICKWINDOW_NEW)
 
 HB_FUNC_STATIC(QQUICKWINDOW_DELETE)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QQuickItem *activeFocusItem() const
 HB_FUNC_STATIC(QQUICKWINDOW_ACTIVEFOCUSITEM)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ACTIVEFOCUSITEM)
 // bool clearBeforeRendering() const
 HB_FUNC_STATIC(QQUICKWINDOW_CLEARBEFORERENDERING)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CLEARBEFORERENDERING)
 // QColor color() const
 HB_FUNC_STATIC(QQUICKWINDOW_COLOR)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_COLOR)
 // QQuickItem *contentItem() const
 HB_FUNC_STATIC(QQUICKWINDOW_CONTENTITEM)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CONTENTITEM)
 // QQuickWindow::CreateTextureOption(0)) const
 HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMID)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMID)
 // QSGTexture *createTextureFromImage(const QImage &image) const
 HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMIMAGE)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMIMAGE)
 // QImage grabWindow()
 HB_FUNC_STATIC(QQUICKWINDOW_GRABWINDOW)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_GRABWINDOW)
 // QQmlIncubationController *incubationController() const
 HB_FUNC_STATIC(QQUICKWINDOW_INCUBATIONCONTROLLER)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_INCUBATIONCONTROLLER)
 // bool isPersistentOpenGLContext() const
 HB_FUNC_STATIC(QQUICKWINDOW_ISPERSISTENTOPENGLCONTEXT)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ISPERSISTENTOPENGLCONTEXT)
 // bool isPersistentSceneGraph() const
 HB_FUNC_STATIC(QQUICKWINDOW_ISPERSISTENTSCENEGRAPH)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ISPERSISTENTSCENEGRAPH)
 // QQuickItem *mouseGrabberItem() const
 HB_FUNC_STATIC(QQUICKWINDOW_MOUSEGRABBERITEM)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_MOUSEGRABBERITEM)
 // QOpenGLContext *openglContext() const
 HB_FUNC_STATIC(QQUICKWINDOW_OPENGLCONTEXT)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_OPENGLCONTEXT)
 // QOpenGLFramebufferObject *renderTarget() const
 HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGET)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGET)
 // uint renderTargetId() const
 HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGETID)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGETID)
 // QSize renderTargetSize() const
 HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGETSIZE)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGETSIZE)
 // bool sendEvent(QQuickItem *item, QEvent *e)
 HB_FUNC_STATIC(QQUICKWINDOW_SENDEVENT)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SENDEVENT)
 // void setClearBeforeRendering(bool enabled)
 HB_FUNC_STATIC(QQUICKWINDOW_SETCLEARBEFORERENDERING)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETCLEARBEFORERENDERING)
 // void setColor(const QColor &color)
 HB_FUNC_STATIC(QQUICKWINDOW_SETCOLOR)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETCOLOR)
 // void setPersistentOpenGLContext(bool persistent)
 HB_FUNC_STATIC(QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,7 +475,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT)
 // void setPersistentSceneGraph(bool persistent)
 HB_FUNC_STATIC(QQUICKWINDOW_SETPERSISTENTSCENEGRAPH)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
 {
   if (ISNUMPAR(1) && ISQOPENGLFRAMEBUFFEROBJECT(1)) {
     // void setRenderTarget(QOpenGLFramebufferObject *fbo)
-    auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setRenderTarget(PQOPENGLFRAMEBUFFEROBJECT(1));
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
     RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZE(2)) {
     // void setRenderTarget(uint fboId, const QSize &size)
-    auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setRenderTarget(PUINT(1), *PQSIZE(2));
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
 // virtual QAccessibleInterface *accessibleRoot() const
 HB_FUNC_STATIC(QQUICKWINDOW_ACCESSIBLEROOT)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ACCESSIBLEROOT)
 // void releaseResources()
 HB_FUNC_STATIC(QQUICKWINDOW_RELEASERESOURCES)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RELEASERESOURCES)
 // void update()
 HB_FUNC_STATIC(QQUICKWINDOW_UPDATE)
 {
-  auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -579,7 +579,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_UPDATE)
 // void afterRendering()
 HB_FUNC_STATIC(QQUICKWINDOW_ONAFTERRENDERING)
 {
-  auto sender = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -598,7 +598,6 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONAFTERRENDERING)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -617,7 +616,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONAFTERRENDERING)
 // void beforeRendering()
 HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORERENDERING)
 {
-  auto sender = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -636,7 +635,6 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORERENDERING)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -655,7 +653,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORERENDERING)
 // void beforeSynchronizing()
 HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORESYNCHRONIZING)
 {
-  auto sender = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -674,7 +672,6 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORESYNCHRONIZING)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -693,7 +690,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORESYNCHRONIZING)
 // void colorChanged(const QColor &color)
 HB_FUNC_STATIC(QQUICKWINDOW_ONCOLORCHANGED)
 {
-  auto sender = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -715,7 +712,6 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONCOLORCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -734,7 +730,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONCOLORCHANGED)
 // void frameSwapped()
 HB_FUNC_STATIC(QQUICKWINDOW_ONFRAMESWAPPED)
 {
-  auto sender = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -753,7 +749,6 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONFRAMESWAPPED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -772,7 +767,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONFRAMESWAPPED)
 // void sceneGraphInitialized()
 HB_FUNC_STATIC(QQUICKWINDOW_ONSCENEGRAPHINITIALIZED)
 {
-  auto sender = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -791,7 +786,6 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONSCENEGRAPHINITIALIZED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -810,7 +804,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONSCENEGRAPHINITIALIZED)
 // void sceneGraphInvalidated()
 HB_FUNC_STATIC(QQUICKWINDOW_ONSCENEGRAPHINVALIDATED)
 {
-  auto sender = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -829,7 +823,6 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONSCENEGRAPHINVALIDATED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

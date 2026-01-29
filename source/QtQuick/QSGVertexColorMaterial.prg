@@ -46,7 +46,9 @@ RETURN
 #include <QtQuick/QSGVertexColorMaterial>
 #endif
 
-    // QSGVertexColorMaterial()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGVertexColorMaterial *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QSGVertexColorMaterial()
 HB_FUNC_STATIC(QSGVERTEXCOLORMATERIAL_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -59,10 +61,8 @@ HB_FUNC_STATIC(QSGVERTEXCOLORMATERIAL_NEW)
 
 HB_FUNC_STATIC(QSGVERTEXCOLORMATERIAL_DELETE)
 {
-  auto obj = static_cast<QSGVertexColorMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 

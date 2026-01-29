@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOPENGLSHADERPROGRAM
+REQUEST QOpenGLShaderProgram
 #endif
 
 CLASS QSGMaterialShader
@@ -58,19 +58,19 @@ RETURN
 #include <QtQuick/QSGMaterialShader>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGMaterialShader *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSGMATERIALSHADER_DELETE)
 {
-  auto obj = static_cast<QSGMaterialShader *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void activate()
 HB_FUNC_STATIC(QSGMATERIALSHADER_ACTIVATE)
 {
-  auto obj = static_cast<QSGMaterialShader *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_ACTIVATE)
 // virtual void deactivate()
 HB_FUNC_STATIC(QSGMATERIALSHADER_DEACTIVATE)
 {
-  auto obj = static_cast<QSGMaterialShader *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_DEACTIVATE)
 // QOpenGLShaderProgram *program()
 HB_FUNC_STATIC(QSGMATERIALSHADER_PROGRAM)
 {
-  auto obj = static_cast<QSGMaterialShader *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

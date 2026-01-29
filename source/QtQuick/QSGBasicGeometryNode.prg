@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSGGEOMETRY
+REQUEST QSGGeometry
 #endif
 
 CLASS QSGBasicGeometryNode INHERIT QSGNode
@@ -48,19 +48,19 @@ RETURN
 #include <QtQuick/QSGBasicGeometryNode>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGBasicGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_DELETE)
 {
-  auto obj = static_cast<QSGBasicGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QSGGeometry *geometry()
 HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_GEOMETRY)
 {
-  auto obj = static_cast<QSGBasicGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_GEOMETRY)
 // void setGeometry(QSGGeometry *geometry)
 HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_SETGEOMETRY)
 {
-  auto obj = static_cast<QSGBasicGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

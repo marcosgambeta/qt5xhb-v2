@@ -46,7 +46,9 @@ RETURN
 #include <QtQuick/QSGTransformNode>
 #endif
 
-    // QSGTransformNode()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGTransformNode *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QSGTransformNode()
 HB_FUNC_STATIC(QSGTRANSFORMNODE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -59,10 +61,8 @@ HB_FUNC_STATIC(QSGTRANSFORMNODE_NEW)
 
 HB_FUNC_STATIC(QSGTRANSFORMNODE_DELETE)
 {
-  auto obj = static_cast<QSGTransformNode *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 

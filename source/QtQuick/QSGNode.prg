@@ -75,7 +75,9 @@ RETURN
 #include <QtQuick/QSGNode>
 #endif
 
-    // QSGNode()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QSGNode()
 HB_FUNC_STATIC(QSGNODE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -88,17 +90,15 @@ HB_FUNC_STATIC(QSGNODE_NEW)
 
 HB_FUNC_STATIC(QSGNODE_DELETE)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void appendChildNode(QSGNode *node)
 HB_FUNC_STATIC(QSGNODE_APPENDCHILDNODE)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QSGNODE_APPENDCHILDNODE)
 // QSGNode *childAtIndex(int i) const
 HB_FUNC_STATIC(QSGNODE_CHILDATINDEX)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSGNODE_CHILDATINDEX)
 // int childCount() const
 HB_FUNC_STATIC(QSGNODE_CHILDCOUNT)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QSGNODE_CHILDCOUNT)
 // QSGNode *firstChild() const
 HB_FUNC_STATIC(QSGNODE_FIRSTCHILD)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QSGNODE_FIRSTCHILD)
 // QSGNode::Flags flags() const
 HB_FUNC_STATIC(QSGNODE_FLAGS)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QSGNODE_FLAGS)
 // void insertChildNodeAfter(QSGNode *node, QSGNode *after)
 HB_FUNC_STATIC(QSGNODE_INSERTCHILDNODEAFTER)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QSGNODE_INSERTCHILDNODEAFTER)
 // void insertChildNodeBefore(QSGNode *node, QSGNode *before)
 HB_FUNC_STATIC(QSGNODE_INSERTCHILDNODEBEFORE)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QSGNODE_INSERTCHILDNODEBEFORE)
 // virtual bool isSubtreeBlocked() const
 HB_FUNC_STATIC(QSGNODE_ISSUBTREEBLOCKED)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QSGNODE_ISSUBTREEBLOCKED)
 // QSGNode *lastChild() const
 HB_FUNC_STATIC(QSGNODE_LASTCHILD)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QSGNODE_LASTCHILD)
 // void markDirty(QSGNode::DirtyState bits)
 HB_FUNC_STATIC(QSGNODE_MARKDIRTY)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QSGNODE_MARKDIRTY)
 // QSGNode *nextSibling() const
 HB_FUNC_STATIC(QSGNODE_NEXTSIBLING)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QSGNODE_NEXTSIBLING)
 // QSGNode *parent() const
 HB_FUNC_STATIC(QSGNODE_PARENT)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QSGNODE_PARENT)
 // void prependChildNode(QSGNode *node)
 HB_FUNC_STATIC(QSGNODE_PREPENDCHILDNODE)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QSGNODE_PREPENDCHILDNODE)
 // virtual void preprocess()
 HB_FUNC_STATIC(QSGNODE_PREPROCESS)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QSGNODE_PREPROCESS)
 // QSGNode *previousSibling() const
 HB_FUNC_STATIC(QSGNODE_PREVIOUSSIBLING)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QSGNODE_PREVIOUSSIBLING)
 // void removeAllChildNodes()
 HB_FUNC_STATIC(QSGNODE_REMOVEALLCHILDNODES)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QSGNODE_REMOVEALLCHILDNODES)
 // void removeChildNode(QSGNode *node)
 HB_FUNC_STATIC(QSGNODE_REMOVECHILDNODE)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QSGNODE_REMOVECHILDNODE)
 // void setFlag(QSGNode::Flag f, bool enabled = true)
 HB_FUNC_STATIC(QSGNODE_SETFLAG)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAG)
 // void setFlags(QSGNode::Flags f, bool enabled = true)
 HB_FUNC_STATIC(QSGNODE_SETFLAGS)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAGS)
 // QSGNode::NodeType type() const
 HB_FUNC_STATIC(QSGNODE_TYPE)
 {
-  auto obj = static_cast<QSGNode *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
