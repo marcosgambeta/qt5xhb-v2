@@ -11,16 +11,13 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
+REQUEST QByteArray
 #endif
 
 CLASS QGLShader INHERIT QObject
 
    METHOD new
    METHOD delete
-   METHOD compileSourceCode1
-   METHOD compileSourceCode2
-   METHOD compileSourceCode3
    METHOD compileSourceCode
    METHOD compileSourceFile
    METHOD isCompiled
@@ -59,6 +56,8 @@ RETURN
 #include <QtOpenGL/QGLShader>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGLSHADER_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
@@ -76,73 +75,34 @@ HB_FUNC_STATIC(QGLSHADER_NEW)
 
 HB_FUNC_STATIC(QGLSHADER_DELETE)
 {
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
-}
-
-// bool compileSourceCode(const char *source)
-HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
-{
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
-  if (obj != nullptr) {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-#endif
-      RBOOL(obj->compileSourceCode(PCONSTCHAR(1)));
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-    }
-#endif
-  }
-}
-
-// bool compileSourceCode(const QByteArray &source)
-HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
-{
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
-  if (obj != nullptr) {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
-#endif
-      RBOOL(obj->compileSourceCode(*PQBYTEARRAY(1)));
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-    }
-#endif
-  }
-}
-
-// bool compileSourceCode(const QString &source)
-HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE3)
-{
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
-  if (obj != nullptr) {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-#endif
-      RBOOL(obj->compileSourceCode(PQSTRING(1)));
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-    }
-#endif
-  }
 }
 
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
 {
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
-    HB_FUNC_EXEC(QGLSHADER_COMPILESOURCECODE2);
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    // bool compileSourceCode(const char *source)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != nullptr) {
+      RBOOL(obj->compileSourceCode(PCONSTCHAR(1)));
+    }
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
+    // bool compileSourceCode(const QByteArray &source)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != nullptr) {
+      RBOOL(obj->compileSourceCode(*PQBYTEARRAY(1)));
+    }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    HB_FUNC_EXEC(QGLSHADER_COMPILESOURCECODE3);
+    // bool compileSourceCode(const QString &source)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != nullptr) {
+      RBOOL(obj->compileSourceCode(PQSTRING(1)));
+    }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -151,7 +111,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
 // bool compileSourceFile(const QString &fileName)
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 {
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +129,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 // bool isCompiled() const
 HB_FUNC_STATIC(QGLSHADER_ISCOMPILED)
 {
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +147,7 @@ HB_FUNC_STATIC(QGLSHADER_ISCOMPILED)
 // QString log() const
 HB_FUNC_STATIC(QGLSHADER_LOG)
 {
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +165,7 @@ HB_FUNC_STATIC(QGLSHADER_LOG)
 // GLuint shaderId() const
 HB_FUNC_STATIC(QGLSHADER_SHADERID)
 {
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +183,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERID)
 // QGLShader::ShaderType shaderType() const
 HB_FUNC_STATIC(QGLSHADER_SHADERTYPE)
 {
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +201,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERTYPE)
 // QByteArray sourceCode() const
 HB_FUNC_STATIC(QGLSHADER_SOURCECODE)
 {
-  auto obj = qobject_cast<QGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

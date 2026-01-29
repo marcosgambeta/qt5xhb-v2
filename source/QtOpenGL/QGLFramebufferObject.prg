@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGLFRAMEBUFFEROBJECTFORMAT
-REQUEST QIMAGE
-REQUEST QPAINTENGINE
-REQUEST QSIZE
+REQUEST QGLFramebufferObjectFormat
+REQUEST QImage
+REQUEST QPaintEngine
+REQUEST QSize
 #endif
 
 CLASS QGLFramebufferObject INHERIT QPaintDevice
@@ -65,6 +65,8 @@ RETURN
 #include <QtOpenGL/QGLFramebufferObject>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQSIZE(1) && ISNUMORNIL(2)) {
@@ -102,17 +104,15 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_NEW)
 
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_DELETE)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QGLFramebufferObject::Attachment attachment() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ATTACHMENT)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ATTACHMENT)
 // bool bind()
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_BIND)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_DRAWTEXTURE)
 {
   if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void drawTexture(const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
-    auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_DRAWTEXTURE)
     RETURN_SELF();
   } else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
-    auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_DRAWTEXTURE)
 // QGLFramebufferObjectFormat format() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_FORMAT)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_FORMAT)
 // GLuint handle() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HANDLE)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HANDLE)
 // bool isBound() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISBOUND)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISBOUND)
 // bool isValid() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISVALID)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISVALID)
 // bool release()
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_RELEASE)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_RELEASE)
 // QSize size() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_SIZE)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_SIZE)
 // GLuint texture() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TEXTURE)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TEXTURE)
 // QImage toImage() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TOIMAGE)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TOIMAGE)
 // virtual QPaintEngine *paintEngine() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_PAINTENGINE)
 {
-  auto obj = static_cast<QGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

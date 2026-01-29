@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
-REQUEST QGLFORMAT
-REQUEST QPAINTDEVICE
+REQUEST QColor
+REQUEST QGLFormat
+REQUEST QPaintDevice
 #endif
 
 CLASS QGLContext
@@ -76,7 +76,9 @@ RETURN
 #include <QtOpenGL/QGLContext>
 #endif
 
-    // QGLContext(const QGLFormat &format)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QGLContext(const QGLFormat &format)
 HB_FUNC_STATIC(QGLCONTEXT_NEW)
 {
   if (ISNUMPAR(1) && ISQGLFORMAT(1)) {
@@ -89,10 +91,8 @@ HB_FUNC_STATIC(QGLCONTEXT_NEW)
 
 HB_FUNC_STATIC(QGLCONTEXT_DELETE)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
@@ -100,35 +100,35 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
 {
   if (ISNUMPAR(4) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // GLuint bindTexture(const QImage &image, GLenum target, GLint format, QGLContext::BindOptions options)
-    auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), PQGLCONTEXT_BINDOPTIONS(4)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // GLuint bindTexture(const QString &fileName)
-    auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(PQSTRING(1)));
     }
   } else if (ISBETWEEN(1, 3) && ISQIMAGE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // GLuint bindTexture(const QImage &image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
-    auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
   } else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // GLuint bindTexture(const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
-    auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
   } else if (ISNUMPAR(4) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // GLuint bindTexture(const QPixmap &pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
-    auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), PQGLCONTEXT_BINDOPTIONS(4)));
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
 // void deleteTexture(GLuint id)
 HB_FUNC_STATIC(QGLCONTEXT_DELETETEXTURE)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DELETETEXTURE)
 // QPaintDevice *device() const
 HB_FUNC_STATIC(QGLCONTEXT_DEVICE)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DEVICE)
 // virtual void doneCurrent()
 HB_FUNC_STATIC(QGLCONTEXT_DONECURRENT)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
 {
   if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void drawTexture(const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
-    auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
     RETURN_SELF();
   } else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
-    auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
 // QGLFormat format() const
 HB_FUNC_STATIC(QGLCONTEXT_FORMAT)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QGLCONTEXT_FORMAT)
 // bool isSharing() const
 HB_FUNC_STATIC(QGLCONTEXT_ISSHARING)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QGLCONTEXT_ISSHARING)
 // bool isValid() const
 HB_FUNC_STATIC(QGLCONTEXT_ISVALID)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QGLCONTEXT_ISVALID)
 // virtual void makeCurrent()
 HB_FUNC_STATIC(QGLCONTEXT_MAKECURRENT)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QGLCONTEXT_MAKECURRENT)
 // QColor overlayTransparentColor() const
 HB_FUNC_STATIC(QGLCONTEXT_OVERLAYTRANSPARENTCOLOR)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QGLCONTEXT_OVERLAYTRANSPARENTCOLOR)
 // QGLFormat requestedFormat() const
 HB_FUNC_STATIC(QGLCONTEXT_REQUESTEDFORMAT)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QGLCONTEXT_REQUESTEDFORMAT)
 // void reset()
 HB_FUNC_STATIC(QGLCONTEXT_RESET)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QGLCONTEXT_RESET)
 // void setFormat(const QGLFormat &format)
 HB_FUNC_STATIC(QGLCONTEXT_SETFORMAT)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SETFORMAT)
 // virtual void swapBuffers() const
 HB_FUNC_STATIC(QGLCONTEXT_SWAPBUFFERS)
 {
-  auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QGLCONTEXT_CURRENTCONTEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = QGLContext::currentContext();
+    const auto ptr = QGLContext::currentContext();
     Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
