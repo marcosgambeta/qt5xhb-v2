@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QWEBPAGE
+REQUEST QSize
+REQUEST QWebPage
 #endif
 
 CLASS QWebInspector INHERIT QWidget
@@ -54,7 +54,9 @@ RETURN
 #include <QtWebKitWidgets/QWebInspector>
 #endif
 
-    // QWebInspector(QWidget *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWebInspector *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWebInspector(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QWEBINSPECTOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_NEW)
 // ~QWebInspector()
 HB_FUNC_STATIC(QWEBINSPECTOR_DELETE)
 {
-  auto obj = qobject_cast<QWebInspector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_DELETE)
 // QWebPage *page() const
 HB_FUNC_STATIC(QWEBINSPECTOR_PAGE)
 {
-  auto obj = qobject_cast<QWebInspector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_PAGE)
 // void setPage(QWebPage *page)
 HB_FUNC_STATIC(QWEBINSPECTOR_SETPAGE)
 {
-  auto obj = qobject_cast<QWebInspector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_SETPAGE)
 // virtual bool event(QEvent *ev)
 HB_FUNC_STATIC(QWEBINSPECTOR_EVENT)
 {
-  auto obj = qobject_cast<QWebInspector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_EVENT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QWEBINSPECTOR_SIZEHINT)
 {
-  auto obj = qobject_cast<QWebInspector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

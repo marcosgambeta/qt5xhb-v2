@@ -11,12 +11,12 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPIXMAP
-REQUEST QPOINT
-REQUEST QRECT
-REQUEST QURL
-REQUEST QWEBELEMENT
-REQUEST QWEBFRAME
+REQUEST QPixmap
+REQUEST QPoint
+REQUEST QRect
+REQUEST QUrl
+REQUEST QWebElement
+REQUEST QWebFrame
 #endif
 
 CLASS QWebHitTestResult
@@ -82,6 +82,8 @@ RETURN
 
 #include <QtWebKit/QWebElement>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QWEBHITTESTRESULT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_NEW)
 // ~QWebHitTestResult()
 HB_FUNC_STATIC(QWEBHITTESTRESULT_DELETE)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_DELETE)
 // QString alternateText() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_ALTERNATETEXT)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ALTERNATETEXT)
 // QRect boundingRect() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_BOUNDINGRECT)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_BOUNDINGRECT)
 // QWebElement element() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_ELEMENT)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ELEMENT)
 // QWebElement enclosingBlockElement() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT)
 // QWebFrame *frame() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_FRAME)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +203,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_FRAME)
 // QUrl imageUrl() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_IMAGEURL)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +221,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_IMAGEURL)
 // bool isContentEditable() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_ISCONTENTEDITABLE)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +239,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ISCONTENTEDITABLE)
 // bool isContentSelected() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_ISCONTENTSELECTED)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +257,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ISCONTENTSELECTED)
 // bool isNull() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_ISNULL)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +275,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ISNULL)
 // QWebElement linkElement() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKELEMENT)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +293,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKELEMENT)
 // QWebFrame *linkTargetFrame() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTARGETFRAME)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +312,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTARGETFRAME)
 // QString linkText() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTEXT)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +330,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTEXT)
 // QUrl linkTitle() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTITLE)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,7 +348,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTITLE)
 // QUrl linkUrl() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKURL)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +366,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKURL)
 // QPixmap pixmap() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_PIXMAP)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,7 +384,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_PIXMAP)
 // QPoint pos() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_POS)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,7 +402,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_POS)
 // QString title() const
 HB_FUNC_STATIC(QWEBHITTESTRESULT_TITLE)
 {
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -419,7 +421,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_TITLE)
 HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTITLESTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -439,7 +441,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTITLESTRING)
 HB_FUNC_STATIC(QWEBHITTESTRESULT_MEDIAURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
