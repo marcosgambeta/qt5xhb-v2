@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
+REQUEST QUrl
 #endif
 
 CLASS QWebEngineCertificateError
@@ -64,7 +64,9 @@ RETURN
 #endif
 #endif
 
-    // QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorDescription)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWebEngineCertificateError *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorDescription)
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_NEW)
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineCertificateError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_DELETE)
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineCertificateError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERROR)
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineCertificateError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_URL)
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineCertificateError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +154,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE)
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineCertificateError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,12 +11,12 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
-REQUEST QMENU
-REQUEST QURL
-REQUEST QWEBENGINEHISTORY
-REQUEST QWEBENGINESETTINGS
-REQUEST QWIDGET
+REQUEST QAction
+REQUEST QMenu
+REQUEST QUrl
+REQUEST QWebEngineHistory
+REQUEST QWebEngineSettings
+REQUEST QWidget
 #endif
 
 CLASS QWebEnginePage INHERIT QObject
@@ -98,7 +98,9 @@ RETURN
 #include <QtWidgets/QAction>
 #include <QtWidgets/QMenu>
 
-    // QWebEnginePage(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWebEnginePage(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWEBENGINEPAGE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_NEW)
 HB_FUNC_STATIC(QWEBENGINEPAGE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_DELETE)
 HB_FUNC_STATIC(QWEBENGINEPAGE_HISTORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +149,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_HISTORY)
 HB_FUNC_STATIC(QWEBENGINEPAGE_VIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_VIEW)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +192,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETVIEW)
 HB_FUNC_STATIC(QWEBENGINEPAGE_HASSELECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +212,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_HASSELECTION)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SELECTEDTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +232,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SELECTEDTEXT)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ACTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +253,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ACTION)
 HB_FUNC_STATIC(QWEBENGINEPAGE_TRIGGERACTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +275,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_TRIGGERACTION)
 HB_FUNC_STATIC(QWEBENGINEPAGE_EVENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,7 +295,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_EVENT)
 HB_FUNC_STATIC(QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +317,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,7 +339,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
 HB_FUNC_STATIC(QWEBENGINEPAGE_LOAD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +361,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_LOAD)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETHTML)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -381,7 +383,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETHTML)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETCONTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -403,7 +405,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETCONTENT)
 HB_FUNC_STATIC(QWEBENGINEPAGE_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -423,7 +425,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_TITLE)
 HB_FUNC_STATIC(QWEBENGINEPAGE_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -443,7 +445,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_URL)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,7 +467,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETURL)
 HB_FUNC_STATIC(QWEBENGINEPAGE_REQUESTEDURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -485,7 +487,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_REQUESTEDURL)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ICONURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -505,7 +507,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ICONURL)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ZOOMFACTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -525,7 +527,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ZOOMFACTOR)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETZOOMFACTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -547,7 +549,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETZOOMFACTOR)
 HB_FUNC_STATIC(QWEBENGINEPAGE_RUNJAVASCRIPT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -569,7 +571,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_RUNJAVASCRIPT)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -590,7 +592,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETTINGS)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADSTARTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -609,7 +611,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADSTARTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -632,7 +633,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADSTARTED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADPROGRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -653,7 +654,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADPROGRESS)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADPROGRESS)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -698,7 +698,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADFINISHED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -721,7 +720,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADFINISHED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONLINKHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -743,7 +742,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLINKHOVERED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -766,7 +764,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLINKHOVERED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONSELECTIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -785,7 +783,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONSELECTIONCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -808,7 +805,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONSELECTIONCHANGED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -830,7 +827,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -853,7 +849,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -872,7 +868,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -895,7 +890,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -920,7 +915,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -943,7 +937,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -968,7 +962,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -991,7 +984,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1016,7 +1009,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1039,7 +1031,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1067,7 +1059,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED)
                                  hb_itemRelease(pArg3);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1090,7 +1081,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONTITLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1112,7 +1103,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONTITLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1135,7 +1125,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONTITLECHANGED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1157,7 +1147,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONURLCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1180,7 +1169,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONURLCHANGED)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONICONURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebEnginePage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1202,7 +1191,6 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONICONURLCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

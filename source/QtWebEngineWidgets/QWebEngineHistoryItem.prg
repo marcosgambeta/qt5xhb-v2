@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDATETIME
-REQUEST QURL
+REQUEST QDateTime
+REQUEST QUrl
 #endif
 
 CLASS QWebEngineHistoryItem
@@ -67,7 +67,9 @@ RETURN
 #endif
 #endif
 
-    // QWebEngineHistoryItem(const QWebEngineHistoryItem &other)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWebEngineHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QWebEngineHistoryItem(const QWebEngineHistoryItem &other)
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -83,7 +85,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_NEW)
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -95,7 +97,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_DELETE)
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ORIGINALURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ORIGINALURL)
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_URL)
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +157,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_TITLE)
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_LASTVISITED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +177,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_LASTVISITED)
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ICONURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ICONURL)
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWEBENGINEHISTORYITEM
+REQUEST QWebEngineHistoryItem
 #endif
 
 CLASS QWebEngineHistory
@@ -73,11 +73,13 @@ RETURN
 #endif
 #endif
 
-    // void clear()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// void clear()
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CLEAR)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +111,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMS)
       auto pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (const auto &item : list) {
+        for (auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -141,7 +143,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMS)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEMS)
       auto pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (const auto &item : list) {
+        for (auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -183,7 +185,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEMS)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEMS)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +247,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOBACK)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOFORWARD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +267,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOFORWARD)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_BACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,7 +289,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACK)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,7 +311,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARD)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_GOTOITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +333,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_GOTOITEM)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -351,7 +353,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEM)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +373,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEM)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,7 +393,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEM)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,7 +413,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMAT)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEMINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -431,7 +433,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEMINDEX)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineHistory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

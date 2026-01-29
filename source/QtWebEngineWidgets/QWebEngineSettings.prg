@@ -69,7 +69,9 @@ RETURN
 #endif
 #endif
 
-    // static QWebEngineSettings *globalSettings()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// static QWebEngineSettings *globalSettings()
 HB_FUNC_STATIC(QWEBENGINESETTINGS_GLOBALSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_GLOBALSETTINGS)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTFAMILY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTFAMILY)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTFAMILY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTFAMILY)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTFAMILY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +156,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTFAMILY)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +176,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTSIZE)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTSIZE)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +220,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTSIZE)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +242,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETATTRIBUTE)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_TESTATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,7 +262,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_TESTATTRIBUTE)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,7 +284,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETATTRIBUTE)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_DEFAULTTEXTENCODING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,7 +304,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_DEFAULTTEXTENCODING)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QWebEngineSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
