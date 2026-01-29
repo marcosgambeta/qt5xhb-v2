@@ -323,6 +323,39 @@ PHB_ITEM Signals::returnQObject(QObject *ptr, const char *classname)
   return pObject;
 }
 
+PHB_ITEM Signals::returnQObject(const QObject *ptr, const char *classname)
+{
+  PHB_DYNS pDynSym = nullptr;
+
+  if (ptr != nullptr)
+  {
+    pDynSym = hb_dynsymFindName(ptr->metaObject()->className());
+  }
+
+  if (pDynSym == nullptr)
+  {
+    pDynSym = hb_dynsymFindName(classname);
+  }
+
+  auto pObject = hb_itemNew(nullptr);
+
+  if (pDynSym != nullptr)
+  {
+    hb_vmPushDynSym(pDynSym);
+    hb_vmPushNil();
+    hb_vmDo(0);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    auto pItem = hb_itemNew(nullptr);
+    hb_itemPutPtr(pItem, const_cast<QObject *>(ptr));
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
+  } else {
+    hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
+  }
+
+  return pObject;
+}
+
 bool Signals::storeConnection(int index, QMetaObject::Connection connection)
 {
   m_list4->replace(index, connection);
