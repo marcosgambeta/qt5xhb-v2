@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPRINTER
+REQUEST QPrinter
 #endif
 
 CLASS QPrintDialog INHERIT QAbstractPrintDialog
@@ -62,6 +62,8 @@ RETURN
 
 #include <QtPrintSupport/QPrinter>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPRINTDIALOG_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQPRINTER(1) && ISQWIDGETORNIL(2)) {
@@ -79,17 +81,15 @@ HB_FUNC_STATIC(QPRINTDIALOG_NEW)
 
 HB_FUNC_STATIC(QPRINTDIALOG_DELETE)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QPRINTDIALOG_OPEN)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_OPEN)
 // QAbstractPrintDialog::PrintDialogOptions options() const
 HB_FUNC_STATIC(QPRINTDIALOG_OPTIONS)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_OPTIONS)
 // QPrinter *printer()
 HB_FUNC_STATIC(QPRINTDIALOG_PRINTER)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_PRINTER)
 // void setOption(QPrintDialog::PrintDialogOption option, bool on = true)
 HB_FUNC_STATIC(QPRINTDIALOG_SETOPTION)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETOPTION)
 // void setOptions(QPrintDialog::PrintDialogOptions options)
 HB_FUNC_STATIC(QPRINTDIALOG_SETOPTIONS)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETOPTIONS)
 // bool testOption(QPrintDialog::PrintDialogOption option) const
 HB_FUNC_STATIC(QPRINTDIALOG_TESTOPTION)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_TESTOPTION)
 // void done(int result)
 HB_FUNC_STATIC(QPRINTDIALOG_DONE)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_DONE)
 // int exec()
 HB_FUNC_STATIC(QPRINTDIALOG_EXEC)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_EXEC)
 // void setVisible(bool visible)
 HB_FUNC_STATIC(QPRINTDIALOG_SETVISIBLE)
 {
-  auto obj = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETVISIBLE)
 // void accepted(QPrinter *printer)
 HB_FUNC_STATIC(QPRINTDIALOG_ONACCEPTED)
 {
-  auto sender = qobject_cast<QPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -284,7 +284,6 @@ HB_FUNC_STATIC(QPRINTDIALOG_ONACCEPTED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

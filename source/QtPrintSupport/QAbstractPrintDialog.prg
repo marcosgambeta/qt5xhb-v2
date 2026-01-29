@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPRINTER
+REQUEST QPrinter
 #endif
 
 CLASS QAbstractPrintDialog INHERIT QDialog
@@ -63,19 +63,19 @@ RETURN
 #include <QtPrintSupport/QAbstractPrintDialog>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_DELETE)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual int exec() = 0
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_EXEC)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_EXEC)
 // int fromPage() const
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_FROMPAGE)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_FROMPAGE)
 // int maxPage() const
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_MAXPAGE)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_MAXPAGE)
 // int minPage() const
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_MINPAGE)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_MINPAGE)
 // QAbstractPrintDialog::PrintRange printRange() const
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_PRINTRANGE)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_PRINTRANGE)
 // QPrinter *printer() const
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_PRINTER)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_PRINTER)
 // void setFromTo(int from, int to)
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETFROMTO)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETFROMTO)
 // void setMinMax(int min, int max)
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETMINMAX)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,10 +221,10 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETMINMAX)
   RETURN_SELF();
 }
 
-// void setOptionTabs(const QList<QWidget*> &tabs)
+// void setOptionTabs(const QList<QWidget *> &tabs)
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETOPTIONTABS)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETOPTIONTABS)
 // void setPrintRange(QAbstractPrintDialog::PrintRange range)
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETPRINTRANGE)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETPRINTRANGE)
 // int toPage() const
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_TOPAGE)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_TOPAGE)
 // void addEnabledOption(QAbstractPrintDialog::PrintDialogOption option)
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ADDENABLEDOPTION)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ADDENABLEDOPTION)
 // void setEnabledOptions(QAbstractPrintDialog::PrintDialogOptions options)
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS)
 // QAbstractPrintDialog::PrintDialogOptions enabledOptions() const
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ENABLEDOPTIONS)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ENABLEDOPTIONS)
 // bool isOptionEnabled(QAbstractPrintDialog::PrintDialogOption option) const
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ISOPTIONENABLED)
 {
-  auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QPrintEngine
@@ -61,19 +61,19 @@ RETURN
 #include <QtPrintSupport/QPrintEngine>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPRINTENGINE_DELETE)
 {
-  auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual bool abort() = 0
 HB_FUNC_STATIC(QPRINTENGINE_ABORT)
 {
-  auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QPRINTENGINE_ABORT)
 // virtual int metric(QPaintDevice::PaintDeviceMetric id) const = 0
 HB_FUNC_STATIC(QPRINTENGINE_METRIC)
 {
-  auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QPRINTENGINE_METRIC)
 // virtual bool newPage() = 0
 HB_FUNC_STATIC(QPRINTENGINE_NEWPAGE)
 {
-  auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QPRINTENGINE_NEWPAGE)
 // virtual QPrinter::PrinterState printerState() const = 0
 HB_FUNC_STATIC(QPRINTENGINE_PRINTERSTATE)
 {
-  auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QPRINTENGINE_PRINTERSTATE)
 // virtual QVariant property(QPrintEngine::PrintEnginePropertyKey key) const = 0
 HB_FUNC_STATIC(QPRINTENGINE_PROPERTY)
 {
-  auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QPRINTENGINE_PROPERTY)
 // virtual void setProperty(QPrintEngine::PrintEnginePropertyKey key, const QVariant &value) = 0
 HB_FUNC_STATIC(QPRINTENGINE_SETPROPERTY)
 {
-  auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

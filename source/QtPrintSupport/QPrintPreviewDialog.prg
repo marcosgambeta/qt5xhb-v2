@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPRINTER
+REQUEST QPrinter
 #endif
 
 CLASS QPrintPreviewDialog INHERIT QDialog
@@ -57,6 +57,8 @@ RETURN
 
 #include <QtPrintSupport/QPrinter>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_NEW)
 {
   if (ISBETWEEN(1, 3) && ISQPRINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
@@ -76,17 +78,15 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_NEW)
 
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DELETE)
 {
-  auto obj = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
 {
-  auto obj = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
 // QPrinter *printer()
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_PRINTER)
 {
-  auto obj = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_PRINTER)
 // virtual void done(int result)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
 {
-  auto obj = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
 // virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_SETVISIBLE)
 {
-  auto obj = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_SETVISIBLE)
 // void paintRequested(QPrinter *printer)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_ONPAINTREQUESTED)
 {
-  auto sender = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -187,7 +187,6 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_ONPAINTREQUESTED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

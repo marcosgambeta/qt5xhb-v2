@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPRINTER
+REQUEST QPrinter
 #endif
 
 CLASS QPageSetupDialog INHERIT QDialog
@@ -54,6 +54,8 @@ RETURN
 #include <QtPrintSupport/QPageSetupDialog>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQPRINTER(1) && ISQWIDGETORNIL(2)) {
@@ -71,17 +73,15 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 
 HB_FUNC_STATIC(QPAGESETUPDIALOG_DELETE)
 {
-  auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
-// void open(QObject *receiver, const char *member)
+// void open( QObject *receiver, const char *member)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 {
-  auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 // QPrinter *printer()
 HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 {
-  auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 // virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 {
-  auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 // virtual int exec()
 HB_FUNC_STATIC(QPAGESETUPDIALOG_EXEC)
 {
-  auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_EXEC)
 // void done(int result)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_DONE)
 {
-  auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
