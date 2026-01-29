@@ -54,7 +54,9 @@ RETURN
 #endif
 #endif
 
-    // QQmlWebChannel(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QQmlWebChannel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QQmlWebChannel(QObject *parent = nullptr)
 HB_FUNC_STATIC(QQMLWEBCHANNEL_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_NEW)
 HB_FUNC_STATIC(QQMLWEBCHANNEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QQmlWebChannel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_DELETE)
 HB_FUNC_STATIC(QQMLWEBCHANNEL_CONNECTTO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QQmlWebChannel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_CONNECTTO)
 HB_FUNC_STATIC(QQMLWEBCHANNEL_DISCONNECTFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QQmlWebChannel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

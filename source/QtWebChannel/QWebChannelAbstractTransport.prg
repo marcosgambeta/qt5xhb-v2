@@ -56,10 +56,13 @@ RETURN
 
 #include <QtCore/QJsonObject>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QWebChannelAbstractTransport *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebChannelAbstractTransport *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_DELETE)
 HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QWebChannelAbstractTransport *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,7 +96,7 @@ HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE)
 HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QWebChannelAbstractTransport *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -119,7 +122,6 @@ HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED)
                                  hb_itemRelease(pArg2);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
