@@ -29,7 +29,7 @@ HB_FUNC(QTNETWORKAUTH_VERSION_STR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   hb_retc(static_cast<const char *>(QTNETWORKAUTH_VERSION_STR));
 #else
-  hb_retc("");
+  hb_retc(static_cast<const char *>(""));
 #endif
 }
 

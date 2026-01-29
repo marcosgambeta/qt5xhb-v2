@@ -56,14 +56,15 @@ RETURN
 #endif
 #endif
 
-    // virtual ~QAbstractOAuthReplyHandler()
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QAbstractOAuthReplyHandler *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QAbstractOAuthReplyHandler()
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = qobject_cast<QAbstractOAuthReplyHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -72,7 +73,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_DELETE)
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_CALLBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = qobject_cast<QAbstractOAuthReplyHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +93,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_CALLBACK)
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = qobject_cast<QAbstractOAuthReplyHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +115,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED)
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto sender = qobject_cast<QAbstractOAuthReplyHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -137,7 +138,6 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED)
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto sender = qobject_cast<QAbstractOAuthReplyHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -182,7 +182,6 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
