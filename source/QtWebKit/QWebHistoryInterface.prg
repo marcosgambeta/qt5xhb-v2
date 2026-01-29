@@ -51,9 +51,11 @@ RETURN
 #include <QtWebKit/QWebHistoryInterface>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWebHistoryInterface *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DELETE)
 {
-  auto obj = qobject_cast<QWebHistoryInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -63,7 +65,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DELETE)
 // virtual void addHistoryEntry(const QString &url) = 0
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_ADDHISTORYENTRY)
 {
-  auto obj = qobject_cast<QWebHistoryInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -83,7 +85,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_ADDHISTORYENTRY)
 // virtual bool historyContains(const QString &url) const = 0
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_HISTORYCONTAINS)
 {
-  auto obj = qobject_cast<QWebHistoryInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

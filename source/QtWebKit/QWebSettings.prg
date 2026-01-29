@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QPIXMAP
-REQUEST QURL
+REQUEST QIcon
+REQUEST QPixmap
+REQUEST QUrl
 #endif
 
 CLASS QWebSettings
@@ -93,10 +93,12 @@ RETURN
 
 #include <QtCore/QUrl>
 
-    // QString defaultTextEncoding() const
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QString defaultTextEncoding() const
 HB_FUNC_STATIC(QWEBSETTINGS_DEFAULTTEXTENCODING)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_DEFAULTTEXTENCODING)
 // QString fontFamily(QWebSettings::FontFamily which) const
 HB_FUNC_STATIC(QWEBSETTINGS_FONTFAMILY)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTFAMILY)
 // int fontSize(QWebSettings::FontSize type) const
 HB_FUNC_STATIC(QWEBSETTINGS_FONTSIZE)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTSIZE)
 // QString localStoragePath() const
 HB_FUNC_STATIC(QWEBSETTINGS_LOCALSTORAGEPATH)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_LOCALSTORAGEPATH)
 // void resetAttribute(QWebSettings::WebAttribute attribute)
 HB_FUNC_STATIC(QWEBSETTINGS_RESETATTRIBUTE)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +190,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETATTRIBUTE)
 // void resetFontFamily(QWebSettings::FontFamily which)
 HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTFAMILY)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +210,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTFAMILY)
 // void resetFontSize(QWebSettings::FontSize type)
 HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTSIZE)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +230,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTSIZE)
 // void setAttribute(QWebSettings::WebAttribute attribute, bool on)
 HB_FUNC_STATIC(QWEBSETTINGS_SETATTRIBUTE)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +250,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETATTRIBUTE)
 // void setDefaultTextEncoding(const QString &encoding)
 HB_FUNC_STATIC(QWEBSETTINGS_SETDEFAULTTEXTENCODING)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +270,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETDEFAULTTEXTENCODING)
 // void setFontFamily(QWebSettings::FontFamily which, const QString &family)
 HB_FUNC_STATIC(QWEBSETTINGS_SETFONTFAMILY)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,7 +290,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTFAMILY)
 // void setFontSize(QWebSettings::FontSize type, int size)
 HB_FUNC_STATIC(QWEBSETTINGS_SETFONTSIZE)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,7 +310,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTSIZE)
 // void setLocalStoragePath(const QString &path)
 HB_FUNC_STATIC(QWEBSETTINGS_SETLOCALSTORAGEPATH)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +330,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETLOCALSTORAGEPATH)
 // void setUserStyleSheetUrl(const QUrl &location)
 HB_FUNC_STATIC(QWEBSETTINGS_SETUSERSTYLESHEETURL)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +350,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETUSERSTYLESHEETURL)
 // bool testAttribute(QWebSettings::WebAttribute attribute) const
 HB_FUNC_STATIC(QWEBSETTINGS_TESTATTRIBUTE)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,7 +368,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_TESTATTRIBUTE)
 // QUrl userStyleSheetUrl() const
 HB_FUNC_STATIC(QWEBSETTINGS_USERSTYLESHEETURL)
 {
-  auto obj = static_cast<QWebSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

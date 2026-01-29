@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QWebPluginFactory INHERIT QObject
@@ -50,20 +50,22 @@ RETURN
 #include <QtWebKit/QWebPluginFactory>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWebPluginFactory *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QWEBPLUGINFACTORY_DELETE)
 {
-  auto obj = qobject_cast<QWebPluginFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// virtual QObject *create(const QString &mimeType, const QUrl &url, const QStringList &argumentNames, const
-// QStringList &argumentValues) const = 0
+// virtual QObject *create(const QString &mimeType, const QUrl &url, const QStringList &argumentNames, const QStringList
+// &argumentValues) const = 0
 HB_FUNC_STATIC(QWEBPLUGINFACTORY_CREATE)
 {
-  auto obj = qobject_cast<QWebPluginFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_CREATE)
 // virtual void refreshPlugins()
 HB_FUNC_STATIC(QWEBPLUGINFACTORY_REFRESHPLUGINS)
 {
-  auto obj = qobject_cast<QWebPluginFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

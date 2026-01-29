@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDATETIME
-REQUEST QICON
-REQUEST QURL
-REQUEST QVARIANT
+REQUEST QDateTime
+REQUEST QIcon
+REQUEST QUrl
+REQUEST QVariant
 #endif
 
 CLASS QWebHistoryItem
@@ -69,7 +69,9 @@ RETURN
 
 #include <QtCore/QVariant>
 
-    // QWebHistoryItem(const QWebHistoryItem &other)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QWebHistoryItem(const QWebHistoryItem &other)
 HB_FUNC_STATIC(QWEBHISTORYITEM_NEW)
 {
   if (ISNUMPAR(1) && ISQWEBHISTORYITEM(1)) {
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_NEW)
 
 HB_FUNC_STATIC(QWEBHISTORYITEM_DELETE)
 {
-  auto obj = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_DELETE)
 // QIcon icon() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_ICON)
 {
-  auto obj = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_ICON)
 // bool isValid() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_ISVALID)
 {
-  auto obj = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_ISVALID)
 // QDateTime lastVisited() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_LASTVISITED)
 {
-  auto obj = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_LASTVISITED)
 // QUrl originalUrl() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_ORIGINALURL)
 {
-  auto obj = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_ORIGINALURL)
 // void setUserData(const QVariant &userData)
 HB_FUNC_STATIC(QWEBHISTORYITEM_SETUSERDATA)
 {
-  auto obj = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +186,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_SETUSERDATA)
 // QString title() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_TITLE)
 {
-  auto obj = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_TITLE)
 // QUrl url() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_URL)
 {
-  auto obj = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +222,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_URL)
 // QVariant userData() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_USERDATA)
 {
-  auto obj = static_cast<QWebHistoryItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
