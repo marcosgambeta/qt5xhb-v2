@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QString driverText() const
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDRIVERTEXT)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // bool isValid() const
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QSQLERROR_SETNUMBER)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QString text() const
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QSQLERROR_SETTYPE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QString nativeErrorCode() const
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QSQLERROR_SWAP)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 

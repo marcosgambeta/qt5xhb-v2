@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETEDITSTRATEGY)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // int fieldIndex(const QString &fieldName) const
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // bool insertRecord(int row, const QSqlRecord &record)
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
   }
 }
 
-HB_FUNC(QSQLTABLEMODEL_ISDIRTY)
+HB_FUNC_STATIC(QSQLTABLEMODEL_ISDIRTY)
 {
   if (ISNUMPAR(0)) {
     // bool isDirty() const
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTROW)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // virtual bool select()
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SORT)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // virtual void setSort(int column, Qt::SortOrder order)
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETSORT)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // virtual void setTable(const QString &tableName)
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETTABLE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QString tableName() const
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_CLEAR)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERT)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void revertAll()
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTALL)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // bool submit()
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMITALL)
   }
 }
 
-HB_FUNC(QSQLTABLEMODEL_RECORD)
+HB_FUNC_STATIC(QSQLTABLEMODEL_RECORD)
 {
   if (ISNUMPAR(0)) {
     // QSqlRecord record() const
@@ -716,7 +716,6 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREDELETE)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -757,7 +756,6 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREINSERT)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -800,7 +798,6 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREUPDATE)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -843,7 +840,6 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONPRIMEINSERT)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

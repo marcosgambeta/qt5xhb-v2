@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CLOSE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // virtual bool commitTransaction()
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // virtual QString sqlStatement(QSqlDriver::StatementType type, const QString &tableName, const QSqlRecord &rec, bool
@@ -578,7 +578,6 @@ HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION1)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -626,7 +625,6 @@ HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION2)
                 hb_itemRelease(pArg3);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSQLFIELD_CLEAR)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QVariant defaultValue() const
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETDEFAULTVALUE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // bool isAutoValue() const
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETAUTOVALUE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // bool isGenerated() const
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETGENERATED)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // bool isNull() const
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREADONLY)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // bool isValid() const
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETLENGTH)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QString name() const
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETNAME)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // int precision() const
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETPRECISION)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QSqlField::RequiredStatus requiredStatus() const
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIREDSTATUS)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void setRequired(bool required)
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIRED)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QVariant::Type type() const
@@ -521,7 +521,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETTYPE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QVariant value() const
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETVALUE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // void setSqlType(int type)
@@ -579,7 +579,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETSQLTYPE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // int typeID() const

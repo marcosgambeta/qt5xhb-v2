@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QSQLINDEX_APPEND)
       obj->append(*PQSQLFIELD(1));
     }
 
-    RETURN_SELF();
+    hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQSQLFIELD(1) && HB_ISLOG(2)) {
     // void append(const QSqlField &field, bool desc)
     GET_PTR_FROM_SELF(obj);
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSQLINDEX_APPEND)
       obj->append(*PQSQLFIELD(1), PBOOL(2));
     }
 
-    RETURN_SELF();
+    hb_itemReturn(hb_stackSelfItem());
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSQLINDEX_SETCURSORNAME)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // bool isDescending(int i) const
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QSQLINDEX_SETDESCENDING)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QString name() const
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QSQLINDEX_SETNAME)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP
