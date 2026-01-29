@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETLOCALE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETVOICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETRATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETPITCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETVOLUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_PAUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

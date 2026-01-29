@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_SETFIELDOFVIEW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

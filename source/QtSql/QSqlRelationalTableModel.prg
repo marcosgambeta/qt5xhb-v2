@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void revertRow(int row)
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REVERTROW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setJoinMode(QSqlRelationalTableModel::JoinMode joinMode)
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETJOINMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

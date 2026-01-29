@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETMODELDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

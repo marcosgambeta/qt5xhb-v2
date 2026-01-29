@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

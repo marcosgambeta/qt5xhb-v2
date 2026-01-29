@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool commitTransaction()
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString sqlStatement(QSqlDriver::StatementType type, const QString &tableName, const QSqlRecord &rec, bool

@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMETHOD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<int> inputModes() const
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<int> patternRecognitionModes() const
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCANCEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Q_INVOKABLE bool virtualKeyRelease(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers)

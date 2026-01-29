@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_SETTEMPERATURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

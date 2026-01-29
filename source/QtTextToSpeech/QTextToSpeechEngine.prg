@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_PAUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

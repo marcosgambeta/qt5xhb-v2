@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QUILOADER_ADDPLUGINPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList availableLayouts() const
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QUILOADER_CLEARPLUGINPATHS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QAction *createAction(QObject *parent = nullptr, const QString &name = QString())
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QUILOADER_SETLANGUAGECHANGEENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWorkingDirectory(const QDir &dir)
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QUILOADER_SETWORKINGDIRECTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDir workingDirectory() const

@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETPORTNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETPORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QSERIALPORT_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETSETTINGSRESTOREDONCLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -726,7 +726,7 @@ HB_FUNC_STATIC(QSERIALPORT_CLEARERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETREADBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

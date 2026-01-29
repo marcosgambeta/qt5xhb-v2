@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETTRACEID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList channels() const
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int length() const
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETFINAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isCanceled() const
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCANCELED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal opacity() const
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETOPACITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Q_INVOKABLE QVariantList points(int pos = 0, int count = -1) const
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Q_INVOKABLE QVariantList channelData(const QString &channel, int pos = 0, int count = -1) const

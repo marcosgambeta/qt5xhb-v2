@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSENSORMANAGER_REGISTERBACKEND)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSENSORMANAGER_UNREGISTERBACKEND)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QSENSORMANAGER_SETDEFAULTBACKEND)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

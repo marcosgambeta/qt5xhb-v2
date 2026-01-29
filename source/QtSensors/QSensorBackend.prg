@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_ADDDATARATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SETDATARATES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_ADDOUTPUTRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SETDESCRIPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_NEWREADINGAVAILABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SENSORSTOPPED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SENSORBUSY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SENSORERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

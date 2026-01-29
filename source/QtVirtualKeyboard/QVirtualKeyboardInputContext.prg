@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SETANIMATING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString locale() const
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
       obj->commit();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
     GET_PTR_FROM_SELF(obj);
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
       obj->commit(PQSTRING(1), OPINT(2, 0), OPINT(3, 0));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void preeditTextChanged()

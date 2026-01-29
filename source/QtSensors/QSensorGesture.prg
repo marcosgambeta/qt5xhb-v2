@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_STARTDETECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_STOPDETECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

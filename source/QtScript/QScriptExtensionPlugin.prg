@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QStringList keys() const = 0

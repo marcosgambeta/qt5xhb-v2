@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

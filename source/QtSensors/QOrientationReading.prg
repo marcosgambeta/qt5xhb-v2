@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QORIENTATIONREADING_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

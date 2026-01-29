@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QALTIMETERREADING_SETALTITUDE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

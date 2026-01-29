@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTITEMSELECTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool selectionListRemoveItem(QVirtualKeyboardSelectionListModel::Type type, int index)
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void update()
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_UPDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void selectionListChanged(QVirtualKeyboardSelectionListModel::Type type)

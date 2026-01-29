@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QLIGHTREADING_SETLUX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

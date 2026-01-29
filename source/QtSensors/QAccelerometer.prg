@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QACCELEROMETER_SETACCELERATIONMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

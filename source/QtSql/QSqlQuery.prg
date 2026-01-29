@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QSQLQUERY_ADDBINDVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int at() const
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
       obj->bindValue(PQSTRING(1), *PQVARIANT(2), HB_ISNIL(3) ? QSql::In : PQSQL_PARAMTYPE(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
     // void bindValue(int pos, const QVariant &val, QSql::ParamType paramType = QSql::In)
     GET_PTR_FROM_SELF(obj);
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
       obj->bindValue(PINT(1), *PQVARIANT(2), HB_ISNIL(3) ? QSql::In : PQSQL_PARAMTYPE(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QSQLQUERY_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QSqlDriver *driver() const
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QSQLQUERY_FINISH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool first()
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QSQLQUERY_SETFORWARDONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSQLQUERY_ISNULL)
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QSQLQUERY_SETNUMERICALPRECISIONPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool prepare(const QString &query)

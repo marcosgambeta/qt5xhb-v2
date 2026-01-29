@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_SETACTIVATIONOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setThisObject(const QScriptValue &thisObject)
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_SETTHISOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptContext::ExecutionState state() const

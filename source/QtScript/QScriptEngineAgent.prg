@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void contextPush()
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptEngine *engine() const
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONCATCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void exceptionThrow(qint64 scriptId, const QScriptValue &exception, bool hasHandler)
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONTHROW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant extension(QScriptEngineAgent::Extension extension, const QVariant &argument = QVariant())
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONENTRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void functionExit(qint64 scriptId, const QScriptValue &returnValue)
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONEXIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void positionChange(qint64 scriptId, int lineNumber, int columnNumber)
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_POSITIONCHANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void scriptLoad(qint64 id, const QString &program, const QString &fileName, int baseLineNumber)
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTLOAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void scriptUnload(qint64 id)
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTUNLOAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool supportsExtension(QScriptEngineAgent::Extension extension) const

@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QSENSOR_SETIDENTIFIER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QSENSOR_SETACTIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QSENSOR_SETALWAYSON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QSENSOR_SETSKIPDUPLICATES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QSENSOR_SETDATARATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QSENSOR_SETOUTPUTRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QSENSOR_ADDFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QSENSOR_REMOVEFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -670,7 +670,7 @@ HB_FUNC_STATIC(QSENSOR_SETAXESORIENTATIONMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -712,7 +712,7 @@ HB_FUNC_STATIC(QSENSOR_SETCURRENTORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -754,7 +754,7 @@ HB_FUNC_STATIC(QSENSOR_SETUSERORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -796,7 +796,7 @@ HB_FUNC_STATIC(QSENSOR_SETMAXBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -838,7 +838,7 @@ HB_FUNC_STATIC(QSENSOR_SETEFFICIENTBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -880,7 +880,7 @@ HB_FUNC_STATIC(QSENSOR_SETBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -922,7 +922,7 @@ HB_FUNC_STATIC(QSENSOR_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

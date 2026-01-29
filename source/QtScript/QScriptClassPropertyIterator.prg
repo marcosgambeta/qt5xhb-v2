@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_NEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptValue object() const
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void toBack() = 0
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_TOBACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void toFront() = 0
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_TOFRONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_NEWFROM)

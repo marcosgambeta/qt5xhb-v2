@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QMAGNETOMETERREADING_SETCALIBRATIONLEVEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

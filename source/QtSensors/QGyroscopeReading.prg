@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QGYROSCOPEREADING_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QGYROSCOPEREADING_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QGYROSCOPEREADING_SETZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 

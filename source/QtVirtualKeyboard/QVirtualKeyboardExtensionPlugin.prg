@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP
