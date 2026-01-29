@@ -58,14 +58,14 @@ RETURN
 #endif
 #endif
 
-    // virtual ~QTextToSpeechPlugin()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextToSpeechPlugin *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual ~QTextToSpeechPlugin()
 HB_FUNC_STATIC(QTEXTTOSPEECHPLUGIN_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = static_cast<QTextToSpeechPlugin *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
