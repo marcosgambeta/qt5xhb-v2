@@ -54,7 +54,9 @@ RETURN
 #include <QtWebEngine/QtWebEngine>
 #endif
 
-    // static void initialize()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QtWebEngine *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// static void initialize()
 HB_FUNC_STATIC(QTWEBENGINE_INITIALIZE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
