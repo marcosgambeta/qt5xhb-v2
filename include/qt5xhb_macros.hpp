@@ -237,6 +237,8 @@
     hb_itemRelease(ptr); \
   }
 
+#define RETURN_SELF() hb_itemReturn(hb_stackSelfItem())
+
 #define PQTMSGTYPE(n) static_cast<QtMsgType>(hb_parni(n))
 
 #endif // QT5XHB_MACROS_HPP
