@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSURFACE3DSERIES
-REQUEST QSURFACEDATAITEM
+REQUEST QSurface3DSeries
+REQUEST QSurfaceDataItem
 #endif
 
 CLASS QSurfaceDataProxy INHERIT QAbstractDataProxy
@@ -70,9 +70,11 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 #include <QtDataVisualization/QSurface3DSeries>
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // QSurfaceDataProxy(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_NEW)
@@ -91,10 +93,8 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_NEW)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_DELETE)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ROWCOUNT)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_COLUMNCOUNT)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,20 +165,20 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->itemAt(PINT(1), PINT(2));
+      const auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
     }
 #endif
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // const QSurfaceDataItem *itemAt(const QPoint &position) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->itemAt(*PQPOINT(1));
+      const auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
     }
 #endif
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSURFACEDATAITEM(3)) {
     // void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setItem(PINT(1), PINT(2), *PQSURFACEDATAITEM(3));
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
   } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSURFACEDATAITEM(2)) {
     // void setItem(const QPoint &position, const QSurfaceDataItem &item)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setItem(*PQPOINT(1), *PQSURFACEDATAITEM(2));
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_REMOVEROWS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_REMOVEROWS)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONARRAYRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -261,7 +261,6 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONARRAYRESET)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -284,7 +283,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONARRAYRESET)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -306,7 +305,6 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -329,7 +327,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONITEMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -353,7 +351,6 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONITEMCHANGED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -376,7 +373,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONITEMCHANGED)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -398,7 +395,6 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWCOUNTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -421,7 +417,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWCOUNTCHANGED)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -445,7 +441,6 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSADDED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -468,7 +463,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSADDED)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -492,7 +487,6 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSCHANGED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -515,7 +509,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSCHANGED)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSINSERTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -539,7 +533,6 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSINSERTED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -562,7 +555,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSINSERTED)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -586,7 +579,6 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSREMOVED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -609,7 +601,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSREMOVED)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -631,7 +623,6 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONSERIESCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

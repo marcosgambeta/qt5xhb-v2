@@ -11,14 +11,14 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST Q3DSCENE
-REQUEST Q3DTHEME
-REQUEST QABSTRACT3DAXIS
-REQUEST QABSTRACT3DINPUTHANDLER
-REQUEST QCUSTOM3DITEM
-REQUEST QIMAGE
-REQUEST QLOCALE
-REQUEST QVECTOR3D
+REQUEST Q3DScene
+REQUEST Q3DTheme
+REQUEST QAbstract3DAxis
+REQUEST QAbstract3DInputHandler
+REQUEST QCustom3DItem
+REQUEST QImage
+REQUEST QLocale
+REQUEST QVector3D
 #endif
 
 CLASS QAbstract3DGraph INHERIT QWindow
@@ -132,19 +132,19 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 #include <QtDataVisualization/QAbstract3DAxis>
 #include <QtDataVisualization/QCustom3DItem>
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // virtual ~QAbstract3DGraph()
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_DELETE)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVETHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVETHEME)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVETHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVETHEME)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTIONMODE)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSELECTIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSELECTIONMODE)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWQUALITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWQUALITY)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSHADOWQUALITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSHADOWQUALITY)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SCENE)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_MEASUREFPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_MEASUREFPS)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMEASUREFPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMEASUREFPS)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_CURRENTFPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CURRENTFPS)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISORTHOPROJECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISORTHOPROJECTION)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETORTHOPROJECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETORTHOPROJECTION)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDELEMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDELEMENT)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ASPECTRATIO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ASPECTRATIO)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETASPECTRATIO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETASPECTRATIO)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_OPTIMIZATIONHINTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_OPTIMIZATIONHINTS)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISPOLAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISPOLAR)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETPOLAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETPOLAR)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RADIALLABELOFFSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RADIALLABELOFFSET)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETRADIALLABELOFFSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -636,7 +636,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETRADIALLABELOFFSET)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_HORIZONTALASPECTRATIO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -656,7 +656,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_HORIZONTALASPECTRATIO)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETHORIZONTALASPECTRATIO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -678,7 +678,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETHORIZONTALASPECTRATIO)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISREFLECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -698,7 +698,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISREFLECTION)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -720,7 +720,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTION)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_REFLECTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -740,7 +740,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REFLECTIVITY)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -762,7 +762,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTIVITY)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -782,7 +782,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_LOCALE)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -804,7 +804,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETLOCALE)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_QUERIEDGRAPHPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -824,7 +824,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_QUERIEDGRAPHPOSITION)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_MARGIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -844,7 +844,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_MARGIN)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMARGIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -866,7 +866,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMARGIN)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDINPUTHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -888,7 +888,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDINPUTHANDLER)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASEINPUTHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -906,11 +906,11 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASEINPUTHANDLER)
 #endif
 }
 
-// QList<QAbstract3DInputHandler*> inputHandlers() const
+// QList<QAbstract3DInputHandler *> inputHandlers() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_INPUTHANDLERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -949,7 +949,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_INPUTHANDLERS)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDTHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -971,7 +971,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDTHEME)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASETHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -989,11 +989,11 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASETHEME)
 #endif
 }
 
-// QList<Q3DTheme*> themes() const
+// QList<Q3DTheme *> themes() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_THEMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_THEMES)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWSSUPPORTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1052,7 +1052,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWSSUPPORTED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_CLEARSELECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CLEARSELECTION)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDCUSTOMITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDCUSTOMITEM)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMS)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1138,7 +1138,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEM)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASECUSTOMITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1178,11 +1178,11 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASECUSTOMITEM)
 #endif
 }
 
-// QList<QCustom3DItem*> customItems() const
+// QList<QCustom3DItem *> customItems() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_CUSTOMITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CUSTOMITEMS)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDAXIS)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDLABELINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1262,7 +1262,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDLABELINDEX)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEMINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEMINDEX)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RENDERTOIMAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RENDERTOIMAGE)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_HASCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1343,7 +1343,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_HASCONTEXT)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1366,7 +1366,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1389,7 +1388,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1411,7 +1410,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1434,7 +1432,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1456,7 +1454,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1479,7 +1476,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1501,7 +1498,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1524,7 +1520,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1546,7 +1542,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1569,7 +1564,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONLOCALECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1591,7 +1586,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONLOCALECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1614,7 +1608,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONLOCALECHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMARGINCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1636,7 +1630,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMARGINCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1659,7 +1652,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMARGINCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1681,7 +1674,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1704,7 +1696,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1728,7 +1720,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1751,7 +1742,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1773,7 +1764,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1796,7 +1786,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONPOLARCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1818,7 +1808,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONPOLARCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1841,7 +1830,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONPOLARCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1863,7 +1852,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1886,7 +1874,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1908,7 +1896,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1931,7 +1918,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1953,7 +1940,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1976,7 +1962,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIONCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1998,7 +1984,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -2021,7 +2006,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -2044,7 +2029,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -2067,7 +2051,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -2090,7 +2074,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -2113,7 +2096,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -2136,7 +2119,6 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

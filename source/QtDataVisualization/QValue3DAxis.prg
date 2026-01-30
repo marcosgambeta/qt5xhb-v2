@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVALUE3DAXISFORMATTER
+REQUEST QValue3DAxisFormatter
 #endif
 
 CLASS QValue3DAxis INHERIT QAbstract3DAxis
@@ -69,7 +69,9 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // QValue3DAxis(QObject *parent = nullptr)
 HB_FUNC_STATIC(QVALUE3DAXIS_NEW)
@@ -88,10 +90,8 @@ HB_FUNC_STATIC(QVALUE3DAXIS_NEW)
 HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
 HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
 HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
 HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
 HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETREVERSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETREVERSED)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONFORMATTERCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -333,7 +333,6 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONFORMATTERCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -356,7 +355,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONFORMATTERCHANGED)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONLABELFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -378,7 +377,6 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONLABELFORMATCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -401,7 +399,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONLABELFORMATCHANGED)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONREVERSEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -423,7 +421,6 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONREVERSEDCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -446,7 +443,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONREVERSEDCHANGED)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -468,7 +465,6 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -491,7 +487,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -513,7 +509,6 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

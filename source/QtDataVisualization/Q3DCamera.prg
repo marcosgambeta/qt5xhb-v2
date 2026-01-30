@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVECTOR3D
+REQUEST QVector3D
 #endif
 
 CLASS Q3DCamera INHERIT Q3DObject
@@ -83,7 +83,9 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // Q3DCamera(QObject *parent = nullptr)
 HB_FUNC_STATIC(Q3DCAMERA_NEW)
@@ -102,10 +104,8 @@ HB_FUNC_STATIC(Q3DCAMERA_NEW)
 HB_FUNC_STATIC(Q3DCAMERA_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(Q3DCAMERA_DELETE)
 HB_FUNC_STATIC(Q3DCAMERA_XROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(Q3DCAMERA_XROTATION)
 HB_FUNC_STATIC(Q3DCAMERA_SETXROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETXROTATION)
 HB_FUNC_STATIC(Q3DCAMERA_YROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(Q3DCAMERA_YROTATION)
 HB_FUNC_STATIC(Q3DCAMERA_SETYROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETYROTATION)
 HB_FUNC_STATIC(Q3DCAMERA_ZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ZOOMLEVEL)
 HB_FUNC_STATIC(Q3DCAMERA_SETZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETZOOMLEVEL)
 HB_FUNC_STATIC(Q3DCAMERA_CAMERAPRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(Q3DCAMERA_CAMERAPRESET)
 HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPRESET)
 HB_FUNC_STATIC(Q3DCAMERA_WRAPXROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(Q3DCAMERA_WRAPXROTATION)
 HB_FUNC_STATIC(Q3DCAMERA_SETWRAPXROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPXROTATION)
 HB_FUNC_STATIC(Q3DCAMERA_WRAPYROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(Q3DCAMERA_WRAPYROTATION)
 HB_FUNC_STATIC(Q3DCAMERA_SETWRAPYROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPYROTATION)
 HB_FUNC_STATIC(Q3DCAMERA_TARGET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(Q3DCAMERA_TARGET)
 HB_FUNC_STATIC(Q3DCAMERA_SETTARGET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETTARGET)
 HB_FUNC_STATIC(Q3DCAMERA_MINZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(Q3DCAMERA_MINZOOMLEVEL)
 HB_FUNC_STATIC(Q3DCAMERA_SETMINZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMINZOOMLEVEL)
 HB_FUNC_STATIC(Q3DCAMERA_MAXZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(Q3DCAMERA_MAXZOOMLEVEL)
 HB_FUNC_STATIC(Q3DCAMERA_SETMAXZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMAXZOOMLEVEL)
 HB_FUNC_STATIC(Q3DCAMERA_COPYVALUESFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(Q3DCAMERA_COPYVALUESFROM)
 HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -536,7 +536,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPOSITION)
 HB_FUNC_STATIC(Q3DCAMERA_ONCAMERAPRESETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -558,7 +558,6 @@ HB_FUNC_STATIC(Q3DCAMERA_ONCAMERAPRESETCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -581,7 +580,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONCAMERAPRESETCHANGED)
 HB_FUNC_STATIC(Q3DCAMERA_ONMAXZOOMLEVELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -603,7 +602,6 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMAXZOOMLEVELCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -626,7 +624,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMAXZOOMLEVELCHANGED)
 HB_FUNC_STATIC(Q3DCAMERA_ONMINZOOMLEVELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -648,7 +646,6 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMINZOOMLEVELCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -671,7 +668,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMINZOOMLEVELCHANGED)
 HB_FUNC_STATIC(Q3DCAMERA_ONTARGETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -693,7 +690,6 @@ HB_FUNC_STATIC(Q3DCAMERA_ONTARGETCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -716,7 +712,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONTARGETCHANGED)
 HB_FUNC_STATIC(Q3DCAMERA_ONWRAPXROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -738,7 +734,6 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPXROTATIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -761,7 +756,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPXROTATIONCHANGED)
 HB_FUNC_STATIC(Q3DCAMERA_ONWRAPYROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -783,7 +778,6 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPYROTATIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -806,7 +800,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPYROTATIONCHANGED)
 HB_FUNC_STATIC(Q3DCAMERA_ONXROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -828,7 +822,6 @@ HB_FUNC_STATIC(Q3DCAMERA_ONXROTATIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -851,7 +844,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONXROTATIONCHANGED)
 HB_FUNC_STATIC(Q3DCAMERA_ONYROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -873,7 +866,6 @@ HB_FUNC_STATIC(Q3DCAMERA_ONYROTATIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -896,7 +888,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONYROTATIONCHANGED)
 HB_FUNC_STATIC(Q3DCAMERA_ONZOOMLEVELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -918,7 +910,6 @@ HB_FUNC_STATIC(Q3DCAMERA_ONZOOMLEVELCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

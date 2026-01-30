@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTITEMMODEL
-REQUEST QREGEXP
+REQUEST QAbstractItemModel
+REQUEST QRegExp
 #endif
 
 CLASS QItemModelBarDataProxy INHERIT QBarDataProxy
@@ -115,7 +115,9 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 {
@@ -168,8 +170,8 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
   } else if (ISBETWEEN(7, 8) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
              HB_ISCHAR(5) && HB_ISARRAY(6) && HB_ISARRAY(7) && ISQOBJECTORNIL(8)) {
     // QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const
-    // QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList &
-    // columnCategories, QObject *parent = nullptr)
+    // QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList
+    // &columnCategories, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelBarDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5),
                                           PQSTRINGLIST(6), PQSTRINGLIST(7), OPQOBJECT(8, nullptr));
@@ -184,10 +186,8 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_DELETE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ITEMMODEL)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETITEMMODEL)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -491,7 +491,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_USEMODELCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_USEMODELCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETUSEMODELCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETUSEMODELCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOROWCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETAUTOROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETAUTOROWCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -595,7 +595,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOCOLUMNCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -617,7 +617,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEPATTERN)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -659,7 +659,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLEPATTERN)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEPATTERN)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -701,7 +701,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLEPATTERN)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -721,7 +721,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEPATTERN)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -743,7 +743,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLEPATTERN)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -763,7 +763,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEPATTERN)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLEPATTERN)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -805,7 +805,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEREPLACE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -827,7 +827,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLEREPLACE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEREPLACE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -869,7 +869,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLEREPLACE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -889,7 +889,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEREPLACE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -911,7 +911,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLEREPLACE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -931,7 +931,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEREPLACE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -953,7 +953,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLEREPLACE)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -973,7 +973,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -996,7 +996,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_REMAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1018,7 +1018,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_REMAP)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWCATEGORYINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWCATEGORYINDEX)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1080,7 +1080,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1103,7 +1102,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1125,7 +1124,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1148,7 +1146,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1168,7 +1166,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1191,7 +1188,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1213,7 +1210,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1236,7 +1232,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1258,7 +1254,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1281,7 +1276,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1303,7 +1298,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1326,7 +1320,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1336,21 +1330,19 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED)
 
     if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
-        auto connection =
-            QObject::connect(sender, &QItemModelBarDataProxy::itemModelChanged,
-                             [sender, indexOfCodeBlock](const QAbstractItemModel *arg1) {
-                               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+        auto connection = QObject::connect(sender, &QItemModelBarDataProxy::itemModelChanged,
+                                           [sender, indexOfCodeBlock](const QAbstractItemModel *arg1) {
+                                             auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr) {
-                                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELBARDATAPROXY");
-                                 auto pArg1 = Qt5xHb::Signals_return_qobject(const_cast<QAbstractItemModel *>(arg1),
-                                                                             "QABSTRACTITEMMODEL");
-                                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
-                                 hb_itemRelease(pSender);
-                                 hb_itemRelease(pArg1);
-                               }
-                             });
-
+                                             if (cb != nullptr) {
+                                               auto pSender =
+                                                   Qt5xHb::Signals_return_qobject(sender, "QITEMMODELBARDATAPROXY");
+                                               auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTITEMMODEL");
+                                               hb_vmEvalBlockV(cb, 2, pSender, pArg1);
+                                               hb_itemRelease(pSender);
+                                               hb_itemRelease(pArg1);
+                                             }
+                                           });
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1373,7 +1365,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1397,7 +1389,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1420,7 +1411,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1442,7 +1433,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1465,7 +1455,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1488,7 +1478,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1511,7 +1500,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1534,7 +1523,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1557,7 +1545,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1577,7 +1565,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1600,7 +1587,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1622,7 +1609,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1645,7 +1631,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLECHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1667,7 +1653,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1690,7 +1675,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1712,7 +1697,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1735,7 +1719,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1757,7 +1741,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1780,7 +1763,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1802,7 +1785,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1825,7 +1807,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1847,7 +1829,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1870,7 +1851,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1892,7 +1873,6 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

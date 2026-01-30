@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSCATTER3DSERIES
-REQUEST QVALUE3DAXIS
+REQUEST QScatter3DSeries
+REQUEST QValue3DAxis
 #endif
 
 CLASS Q3DScatter INHERIT QAbstract3DGraph
@@ -72,7 +72,9 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // Q3DScatter(const QSurfaceFormat *format = nullptr, QWindow *parent = nullptr)
 HB_FUNC_STATIC(Q3DSCATTER_NEW)
@@ -91,10 +93,8 @@ HB_FUNC_STATIC(Q3DSCATTER_NEW)
 HB_FUNC_STATIC(Q3DSCATTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(Q3DSCATTER_DELETE)
 HB_FUNC_STATIC(Q3DSCATTER_AXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISX)
 HB_FUNC_STATIC(Q3DSCATTER_SETAXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISX)
 HB_FUNC_STATIC(Q3DSCATTER_AXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISY)
 HB_FUNC_STATIC(Q3DSCATTER_SETAXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISY)
 HB_FUNC_STATIC(Q3DSCATTER_AXISZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISZ)
 HB_FUNC_STATIC(Q3DSCATTER_SETAXISZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISZ)
 HB_FUNC_STATIC(Q3DSCATTER_SELECTEDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SELECTEDSERIES)
 HB_FUNC_STATIC(Q3DSCATTER_ADDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDSERIES)
 HB_FUNC_STATIC(Q3DSCATTER_REMOVESERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,11 +293,11 @@ HB_FUNC_STATIC(Q3DSCATTER_REMOVESERIES)
 #endif
 }
 
-// QList<QScatter3DSeries*> seriesList() const
+// QList<QScatter3DSeries *> seriesList() const
 HB_FUNC_STATIC(Q3DSCATTER_SERIESLIST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SERIESLIST)
 HB_FUNC_STATIC(Q3DSCATTER_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDAXIS)
 HB_FUNC_STATIC(Q3DSCATTER_RELEASEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -376,11 +376,11 @@ HB_FUNC_STATIC(Q3DSCATTER_RELEASEAXIS)
 #endif
 }
 
-// QList<QValue3DAxis*> axes() const
+// QList<QValue3DAxis *> axes() const
 HB_FUNC_STATIC(Q3DSCATTER_AXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXES)
 HB_FUNC_STATIC(Q3DSCATTER_ONAXISXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -441,7 +441,6 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISXCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -464,7 +463,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISXCHANGED)
 HB_FUNC_STATIC(Q3DSCATTER_ONAXISYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -486,7 +485,6 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISYCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -509,7 +507,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISYCHANGED)
 HB_FUNC_STATIC(Q3DSCATTER_ONAXISZCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -531,7 +529,6 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISZCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -554,7 +551,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISZCHANGED)
 HB_FUNC_STATIC(Q3DSCATTER_ONSELECTEDSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -576,7 +573,6 @@ HB_FUNC_STATIC(Q3DSCATTER_ONSELECTEDSERIESCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

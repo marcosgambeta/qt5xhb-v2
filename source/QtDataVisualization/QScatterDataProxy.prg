@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSCATTER3DSERIES
-REQUEST QSCATTERDATAITEM
+REQUEST QScatter3DSeries
+REQUEST QScatterDataItem
 #endif
 
 CLASS QScatterDataProxy INHERIT QAbstractDataProxy
@@ -69,9 +69,11 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 #include <QtDataVisualization/QScatter3DSeries>
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // QScatterDataProxy(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_NEW)
@@ -90,10 +92,8 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_NEW)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_DELETE)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMCOUNT)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,13 +144,13 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_SERIES)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = obj->itemAt(PINT(1));
+      const auto ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QSCATTERDATAITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMAT)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_SETITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_SETITEM)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ADDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ADDITEM)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_INSERTITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_INSERTITEM)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_REMOVEITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_REMOVEITEMS)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONARRAYRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -274,7 +274,6 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONARRAYRESET)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -297,7 +296,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONARRAYRESET)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -319,7 +318,6 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMCOUNTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -342,7 +340,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMCOUNTCHANGED)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -366,7 +364,6 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSADDED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -389,7 +386,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSADDED)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -413,7 +410,6 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSCHANGED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -436,7 +432,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSCHANGED)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSINSERTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -460,7 +456,6 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSINSERTED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -483,7 +478,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSINSERTED)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -507,7 +502,6 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSREMOVED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -530,7 +524,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSREMOVED)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -552,7 +546,6 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONSERIESCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

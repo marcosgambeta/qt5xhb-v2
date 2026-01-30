@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST Q3DSCENE
-REQUEST QPOINT
+REQUEST Q3DScene
+REQUEST QPoint
 #endif
 
 CLASS QAbstract3DInputHandler INHERIT QObject
@@ -63,16 +63,16 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // virtual ~QAbstract3DInputHandler()
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_DELETE)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -238,7 +238,6 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -261,7 +260,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -283,7 +282,6 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -306,7 +304,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONSCENECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -328,7 +326,6 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONSCENECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
-REQUEST QFONT
+REQUEST QColor
+REQUEST QFont
 #endif
 
 CLASS QCustom3DLabel INHERIT QCustom3DItem
@@ -76,7 +76,9 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
 {
@@ -88,8 +90,8 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
 #endif
   } else if (ISBETWEEN(5, 6) && HB_ISCHAR(1) && ISQFONT(2) && ISQVECTOR3D(3) && ISQVECTOR3D(4) && ISQQUATERNION(5) &&
              ISQOBJECTORNIL(6)) {
-    // QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling,
-    // const QQuaternion &rotation, QObject *parent = nullptr)
+    // QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const
+    // QQuaternion &rotation, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QCustom3DLabel(PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5),
                                   OPQOBJECT(6, nullptr));
@@ -104,10 +106,8 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_DELETE)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFONT)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXTCOLOR)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDCOLOR)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBORDERENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBORDERENABLED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBORDERENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBORDERENABLED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBACKGROUNDENABLED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDENABLED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ISFACINGCAMERA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISFACINGCAMERA)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFACINGCAMERA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFACINGCAMERA)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -432,7 +432,6 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -455,7 +454,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -477,7 +476,6 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -500,7 +498,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -522,7 +520,6 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -545,7 +542,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFACINGCAMERACHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -567,7 +564,6 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFACINGCAMERACHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -590,7 +586,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFACINGCAMERACHANGED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFONTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -612,7 +608,6 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFONTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -635,7 +630,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFONTCHANGED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -657,7 +652,6 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -680,7 +674,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCHANGED)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -702,7 +696,6 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCOLORCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

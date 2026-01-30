@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST Q3DSCENE
-REQUEST QVECTOR3D
+REQUEST Q3DScene
+REQUEST QVector3D
 #endif
 
 CLASS Q3DObject INHERIT QObject
@@ -60,9 +60,11 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 #include <QtDataVisualization/Q3DScene>
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // Q3DObject(QObject *parent = nullptr)
 HB_FUNC_STATIC(Q3DOBJECT_NEW)
@@ -81,10 +83,8 @@ HB_FUNC_STATIC(Q3DOBJECT_NEW)
 HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 HB_FUNC_STATIC(Q3DOBJECT_ONPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -200,7 +200,6 @@ HB_FUNC_STATIC(Q3DOBJECT_ONPOSITIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

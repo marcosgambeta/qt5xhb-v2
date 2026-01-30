@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVECTOR3D
+REQUEST QVector3D
 #endif
 
 CLASS QSurfaceDataItem
@@ -68,7 +68,9 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem())
 
 HB_FUNC_STATIC(QSURFACEDATAITEM_NEW)
 {
@@ -99,10 +101,8 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_NEW)
 HB_FUNC_STATIC(QSURFACEDATAITEM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_DELETE)
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETPOSITION)
 HB_FUNC_STATIC(QSURFACEDATAITEM_POSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_POSITION)
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETX)
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETY)
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETZ)
 HB_FUNC_STATIC(QSURFACEDATAITEM_X)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_X)
 HB_FUNC_STATIC(QSURFACEDATAITEM_Y)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_Y)
 HB_FUNC_STATIC(QSURFACEDATAITEM_Z)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -52,7 +52,9 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // QValue3DAxisFormatter(QObject *parent = nullptr)
 HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_NEW)
@@ -71,10 +73,8 @@ HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_NEW)
 HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }

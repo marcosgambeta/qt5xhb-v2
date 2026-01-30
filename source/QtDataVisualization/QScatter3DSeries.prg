@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSCATTERDATAPROXY
+REQUEST QScatterDataProxy
 #endif
 
 CLASS QScatter3DSeries INHERIT QAbstract3DSeries
@@ -64,7 +64,9 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 HB_FUNC_STATIC(QSCATTER3DSERIES_NEW)
 {
@@ -89,10 +91,8 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_NEW)
 HB_FUNC_STATIC(QSCATTER3DSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DELETE)
 HB_FUNC_STATIC(QSCATTER3DSERIES_DATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DATAPROXY)
 HB_FUNC_STATIC(QSCATTER3DSERIES_SETDATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETDATAPROXY)
 HB_FUNC_STATIC(QSCATTER3DSERIES_SELECTEDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SELECTEDITEM)
 HB_FUNC_STATIC(QSCATTER3DSERIES_SETSELECTEDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETSELECTEDITEM)
 HB_FUNC_STATIC(QSCATTER3DSERIES_ITEMSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ITEMSIZE)
 HB_FUNC_STATIC(QSCATTER3DSERIES_SETITEMSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_INVALIDSELECTIONINDEX)
 HB_FUNC_STATIC(QSCATTER3DSERIES_ONDATAPROXYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -266,7 +266,6 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONDATAPROXYCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -289,7 +288,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONDATAPROXYCHANGED)
 HB_FUNC_STATIC(QSCATTER3DSERIES_ONITEMSIZECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -311,7 +310,6 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONITEMSIZECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -334,7 +332,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONITEMSIZECHANGED)
 HB_FUNC_STATIC(QSCATTER3DSERIES_ONSELECTEDITEMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QScatter3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -356,7 +354,6 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONSELECTEDITEMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

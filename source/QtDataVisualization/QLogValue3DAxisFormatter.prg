@@ -62,7 +62,9 @@ RETURN
 #endif
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
+
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // QLogValue3DAxisFormatter(QObject *parent = nullptr)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_NEW)
@@ -81,10 +83,8 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_NEW)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_DELETE)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_BASE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_BASE)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETBASE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETBASE)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -241,7 +241,6 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -264,7 +263,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONBASECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -286,7 +285,6 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONBASECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -309,7 +307,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONBASECHANGED)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto sender = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -331,7 +329,6 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
