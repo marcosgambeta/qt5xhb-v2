@@ -55,10 +55,12 @@ RETURN
 #include <QtDeclarative/QDeclarativeParserStatus>
 #endif
 
-    // virtual void classBegin() = 0
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDeclarativeParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual void classBegin() = 0
 HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_CLASSBEGIN)
 {
-  auto obj = static_cast<QDeclarativeParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_CLASSBEGIN)
 // virtual void componentComplete() = 0
 HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE)
 {
-  auto obj = static_cast<QDeclarativeParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

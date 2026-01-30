@@ -48,10 +48,13 @@ RETURN
 #include <QtDeclarative/QDeclarativeExtensionPlugin>
 #endif
 
-    // virtual void initializeEngine(QDeclarativeEngine *engine, const char *uri)
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QDeclarativeExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual void initializeEngine(QDeclarativeEngine *engine, const char *uri)
 HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE)
 {
-  auto obj = qobject_cast<QDeclarativeExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE)
 // virtual void registerTypes(const char *uri) = 0
 HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES)
 {
-  auto obj = qobject_cast<QDeclarativeExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QDeclarativeListReference
@@ -65,6 +65,8 @@ RETURN
 #include <QtDeclarative/QDeclarativeListReference>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -83,7 +85,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEW)
 // bool append(QObject *object) const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_APPEND)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_APPEND)
 // QObject *at(int index) const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_AT)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +122,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_AT)
 // bool canAppend() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAPPEND)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +140,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAPPEND)
 // bool canAt() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAT)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAT)
 // bool canClear() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCLEAR)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +176,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCLEAR)
 // bool canCount() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCOUNT)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +194,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCOUNT)
 // bool clear() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CLEAR)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +212,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CLEAR)
 // int count() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_COUNT)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +230,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_COUNT)
 // bool isValid() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_ISVALID)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +248,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_ISVALID)
 // QObject *object() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_OBJECT)
 {
-  auto obj = static_cast<QDeclarativeListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

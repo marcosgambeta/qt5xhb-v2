@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QDeclarativePropertyMap INHERIT QObject
@@ -59,7 +59,9 @@ RETURN
 #include <QtDeclarative/QDeclarativePropertyMap>
 #endif
 
-    // QDeclarativePropertyMap(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QDeclarativePropertyMap(QObject *parent = nullptr)
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -72,17 +74,15 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_NEW)
 
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_DELETE)
 {
-  auto obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void clear(const QString &key)
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CLEAR)
 {
-  auto obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CLEAR)
 // bool contains(const QString &key) const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CONTAINS)
 {
-  auto obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CONTAINS)
 // int count() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_COUNT)
 {
-  auto obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_COUNT)
 // void insert(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_INSERT)
 {
-  auto obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_INSERT)
 // bool isEmpty() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ISEMPTY)
 {
-  auto obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ISEMPTY)
 // QStringList keys() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_KEYS)
 {
-  auto obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_KEYS)
 // int size() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_SIZE)
 {
-  auto obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_SIZE)
 // QVariant value(const QString &key) const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_VALUE)
 {
-  auto obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_VALUE)
 // void valueChanged(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ONVALUECHANGED)
 {
-  auto sender = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -255,7 +255,6 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ONVALUECHANGED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
