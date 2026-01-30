@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDBUSCONNECTION
-REQUEST QDBUSERROR
-REQUEST QDBUSMESSAGE
-REQUEST QDBUSPENDINGCALL
+REQUEST QDBusConnection
+REQUEST QDBusError
+REQUEST QDBusMessage
+REQUEST QDBusPendingCall
 #endif
 
 CLASS QDBusAbstractInterface INHERIT QDBusAbstractInterfaceBase
@@ -66,19 +66,19 @@ RETURN
 
 #include <QtDBus/QDBusPendingCall>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_DELETE)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isValid() const
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ISVALID)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ISVALID)
 // QDBusConnection connection() const
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CONNECTION)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CONNECTION)
 // QString service() const
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_SERVICE)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_SERVICE)
 // QString path() const
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_PATH)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_PATH)
 // QString interface() const
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_INTERFACE)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_INTERFACE)
 // QDBusError lastError() const
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_LASTERROR)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_LASTERROR)
 // void setTimeout(int timeout)
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_SETTIMEOUT)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_SETTIMEOUT)
 // int timeout() const
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_TIMEOUT)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
     // QDBusMessage call(const QString &method, const QVariant &arg1 = QVariant(), const QVariant &arg2 = QVariant(),
     // const QVariant &arg3 = QVariant(), const QVariant &arg4 = QVariant(), const QVariant &arg5 = QVariant(), const
     // QVariant &arg6 = QVariant(), const QVariant &arg7 = QVariant(), const QVariant &arg8 = QVariant())
-    auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQDBUSMESSAGE(obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *PQVARIANT(2),
@@ -241,10 +241,10 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
              ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) &&
              ISQVARIANTORNIL(9) && ISQVARIANTORNIL(10)) {
     // QDBusMessage call(QDBus::CallMode mode, const QString &method, const QVariant &arg1 = QVariant(), const QVariant
-    // & arg2 = QVariant(), const QVariant &arg3 = QVariant(), const QVariant &arg4 = QVariant(), const QVariant &arg5 =
+    // &arg2 = QVariant(), const QVariant &arg3 = QVariant(), const QVariant &arg4 = QVariant(), const QVariant &arg5 =
     // QVariant(), const QVariant &arg6 = QVariant(), const QVariant &arg7 = QVariant(), const QVariant &arg8 =
     // QVariant())
-    auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQDBUSMESSAGE(obj->call(PQDBUS_CALLMODE(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *PQVARIANT(3),
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
 // QDBusMessage callWithArgumentList(QDBus::CallMode mode, const QString &method, const QList<QVariant> &args)
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK)
   if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISQOBJECT(3) && HB_ISCHAR(4) && HB_ISCHAR(5)) {
     // bool callWithCallback(const QString &method, const QList<QVariant> &args, QObject *receiver, const char *member,
     // const char *errorSlot)
-    auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       QList<QVariant> par2;
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK)
     }
   } else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISQOBJECT(3) && HB_ISCHAR(4)) {
     // bool callWithCallback(const QString &method, const QList<QVariant> &args, QObject *receiver, const char *member)
-    auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       QList<QVariant> par2;
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK)
 // const QVariant &arg6 = QVariant(), const QVariant &arg7 = QVariant(), const QVariant &arg8 = QVariant())
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ASYNCCALL)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ASYNCCALL)
 // QDBusPendingCall asyncCallWithArgumentList(const QString &method, const QList<QVariant> &args)
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST)
 {
-  auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

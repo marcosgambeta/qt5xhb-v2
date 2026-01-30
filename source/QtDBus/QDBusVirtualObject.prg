@@ -51,14 +51,14 @@ RETURN
 #endif
 #endif
 
-    // virtual ~QDBusVirtualObject()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDBusVirtualObject *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QDBusVirtualObject()
 HB_FUNC_STATIC(QDBUSVIRTUALOBJECT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QDBusVirtualObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }

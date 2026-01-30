@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDBUSCONNECTION
+REQUEST QDBusConnection
 #endif
 
 CLASS QDBusServiceWatcher INHERIT QObject
@@ -63,7 +63,9 @@ RETURN
 
 #include <QtDBus/QDBusConnection>
 
-    HB_FUNC(QDBUSSERVICEWATCHER_NEW)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+HB_FUNC_STATIC(QDBUSSERVICEWATCHER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     // QDBusServiceWatcher(QObject *parent = nullptr)
@@ -84,17 +86,15 @@ RETURN
 
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_DELETE)
 {
-  auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QStringList watchedServices() const
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_WATCHEDSERVICES)
 {
-  auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_WATCHEDSERVICES)
 // void setWatchedServices(const QStringList &services)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHEDSERVICES)
 {
-  auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHEDSERVICES)
 // void addWatchedService(const QString &newService)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE)
 {
-  auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE)
 // bool removeWatchedService(const QString &service)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE)
 {
-  auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE)
 // QDBusServiceWatcher::WatchMode watchMode() const
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_WATCHMODE)
 {
-  auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_WATCHMODE)
 // void setWatchMode(QDBusServiceWatcher::WatchMode mode)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHMODE)
 {
-  auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHMODE)
 // QDBusConnection connection() const
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_CONNECTION)
 {
-  auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_CONNECTION)
 // void setConnection(const QDBusConnection &connection)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETCONNECTION)
 {
-  auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETCONNECTION)
 // void serviceRegistered(const QString &service)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEREGISTERED)
 {
-  auto sender = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -268,7 +268,6 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEREGISTERED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -287,7 +286,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEREGISTERED)
 // void serviceUnregistered(const QString &service)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED)
 {
-  auto sender = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -309,7 +308,6 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -328,7 +326,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED)
 // void serviceOwnerChanged(const QString &service, const QString &oldOwner, const QString &newOwner)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED)
 {
-  auto sender = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -355,7 +353,6 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED)
                                  hb_itemRelease(pArg3);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

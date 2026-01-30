@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMETAOBJECT
+REQUEST QMetaObject
 #endif
 
 CLASS QDBusInterface INHERIT QDBusAbstractInterface
@@ -51,7 +51,9 @@ RETURN
 #include <QtDBus/QDBusInterface>
 #endif
 
-    // QDBusInterface(const QString &service, const QString &path, const QString &interface = QString(), const
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDBusInterface *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QDBusInterface(const QString &service, const QString &path, const QString &interface = QString(), const
     // QDBusConnection &connection = QDBusConnection::sessionBus(), QObject *parent = nullptr)
 HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 {
@@ -68,23 +70,21 @@ HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 
 HB_FUNC_STATIC(QDBUSINTERFACE_DELETE)
 {
-  auto obj = qobject_cast<QDBusInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual const QMetaObject *metaObject() const
 HB_FUNC_STATIC(QDBUSINTERFACE_METAOBJECT)
 {
-  auto obj = qobject_cast<QDBusInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->metaObject();
+      const auto ptr = obj->metaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_METAOBJECT)
 // virtual void *qt_metacast(const char *)
 HB_FUNC_STATIC(QDBUSINTERFACE_QT_METACAST)
 {
-  auto obj = qobject_cast<QDBusInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

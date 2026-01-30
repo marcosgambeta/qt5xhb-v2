@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDBUSERROR
-REQUEST QDBUSMESSAGE
+REQUEST QDBusError
+REQUEST QDBusMessage
 #endif
 
 CLASS QDBusPendingCall
@@ -66,7 +66,9 @@ RETURN
 #include <QtDBus/QDBusPendingCall>
 #endif
 
-    // QDBusPendingCall(const QDBusPendingCall &other)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QDBusPendingCall(const QDBusPendingCall &other)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_NEW)
 {
   if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1)) {
@@ -79,17 +81,15 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_NEW)
 
 HB_FUNC_STATIC(QDBUSPENDINGCALL_DELETE)
 {
-  auto obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void swap(QDBusPendingCall &other)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_SWAP)
 {
-  auto obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_SWAP)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_ISFINISHED)
 {
 #ifndef Q_QDOC
-  auto obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISFINISHED)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_WAITFORFINISHED)
 {
 #ifndef Q_QDOC
-  auto obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_WAITFORFINISHED)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_ISERROR)
 {
 #ifndef Q_QDOC
-  auto obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISERROR)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_ISVALID)
 {
 #ifndef Q_QDOC
-  auto obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISVALID)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_ERROR)
 {
 #ifndef Q_QDOC
-  auto obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ERROR)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_REPLY)
 {
 #ifndef Q_QDOC
-  auto obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

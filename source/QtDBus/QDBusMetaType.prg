@@ -57,12 +57,12 @@ RETURN
 #include <QtDBus/QDBusMetaType>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDBusMetaType *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDBUSMETATYPE_DELETE)
 {
-  auto obj = static_cast<QDBusMetaType *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 

@@ -50,10 +50,12 @@ RETURN
 #include <QtDBus/QDBusConnectionInterface>
 #endif
 
-    // void serviceRegistered(const QString &service)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// void serviceRegistered(const QString &service)
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED)
 {
-  auto sender = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -75,7 +77,6 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -94,7 +95,7 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED)
 // void serviceUnregistered(const QString &service)
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED)
 {
-  auto sender = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -116,7 +117,6 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED)
 // void serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner)
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED)
 {
-  auto sender = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -162,7 +162,6 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED)
                                  hb_itemRelease(pArg3);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -181,7 +180,7 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED)
 // void callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call)
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED)
 {
-  auto sender = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -206,7 +205,6 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED)
                                  hb_itemRelease(pArg2);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

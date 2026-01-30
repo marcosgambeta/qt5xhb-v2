@@ -61,7 +61,9 @@ RETURN
 #include <QtDBus/QDBusSignature>
 #endif
 
-    // QDBusSignature()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDBusSignature *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QDBusSignature()
 HB_FUNC_STATIC(QDBUSSIGNATURE_NEW1)
 {
   auto obj = new QDBusSignature();
@@ -106,17 +108,15 @@ HB_FUNC(QDBUSSIGNATURE_NEW)
 
 HB_FUNC_STATIC(QDBUSSIGNATURE_DELETE)
 {
-  auto obj = static_cast<QDBusSignature *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString signature() const
 HB_FUNC_STATIC(QDBUSSIGNATURE_SIGNATURE)
 {
-  auto obj = static_cast<QDBusSignature *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QDBUSSIGNATURE_SIGNATURE)
 // void setSignature(const QString &signature)
 HB_FUNC_STATIC(QDBUSSIGNATURE_SETSIGNATURE)
 {
-  auto obj = static_cast<QDBusSignature *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
