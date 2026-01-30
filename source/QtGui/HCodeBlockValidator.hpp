@@ -4,8 +4,8 @@
 // Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HCODEBLOCKVALIDATOR_H
-#define HCODEBLOCKVALIDATOR_H
+#ifndef HCODEBLOCKVALIDATOR_HPP
+#define HCODEBLOCKVALIDATOR_HPP
 
 #include <QtGui/QValidator>
 
@@ -28,4 +28,4 @@ private:
   PHB_ITEM m_block;
 };
 
-#endif /* HCODEBLOCKVALIDATOR_H */
+#endif // HCODEBLOCKVALIDATOR_HPP

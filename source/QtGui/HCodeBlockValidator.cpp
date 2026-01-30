@@ -26,18 +26,14 @@ HCodeBlockValidator::~HCodeBlockValidator()
 
 QValidator::State HCodeBlockValidator::validate(QString &input, int &pos) const
 {
-  /*
-    executa o codeblock de validação
-  */
+  // executa o codeblock de validação
   auto pInput = hb_itemPutC(NULL, input.toLatin1().data());
   auto pPos = hb_itemPutNI(NULL, pos);
   auto pRet = hb_vmEvalBlockV(m_block, 2, pInput, pPos);
   hb_itemRelease(pInput);
   hb_itemRelease(pPos);
 
-  /*
-    processa o resultado armazenado em pRet {cString,nPos,nState}
-  */
+  // processa o resultado armazenado em pRet {cString,nPos,nState}
   auto pTemp1 = hb_arrayGetItemPtr(pRet, 1);
   char *str = hb_itemGetC(pTemp1);
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
@@ -55,9 +51,7 @@ QValidator::State HCodeBlockValidator::validate(QString &input, int &pos) const
   hb_itemRelease(pTemp2);
   hb_itemRelease(pTemp3);
 
-  /*
-    libera item
-  */
+  // libera item
   hb_itemRelease(pRet);
 }
 

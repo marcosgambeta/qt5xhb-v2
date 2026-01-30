@@ -37,6 +37,8 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) auto p = (HCodeBlockValidator *)Qt5xHb::itemGetPtrStackSelfItem()
+
 HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -48,16 +50,14 @@ HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_NEW)
     auto obj = new HCodeBlockValidator(PBLOCKORSYMBOL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
 HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_DELETE)
 {
-  auto obj = (HCodeBlockValidator *)Qt5xHb::itemGetPtrStackSelfItem();
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
