@@ -11,13 +11,13 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QCHILDEVENT
-REQUEST QEVENT
-REQUEST QMETAOBJECT
-REQUEST QTHREAD
-REQUEST QTIMEREVENT
-REQUEST QVARIANT
+REQUEST QByteArray
+REQUEST QChildEvent
+REQUEST QEvent
+REQUEST QMetaObject
+REQUEST QThread
+REQUEST QTimerEvent
+REQUEST QVariant
 #endif
 
 CLASS QObject
@@ -289,9 +289,9 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-    void _qtxhb_processOnEventMethod(QEvent::Type event);
+void _qtxhb_processOnEventMethod(QEvent::Type event);
 
-// Q_INVOKABLE QObject(QObject * parent = nullptr)
+// Q_INVOKABLE QObject(QObject *parent = nullptr)
 HB_FUNC_STATIC(QOBJECT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QOBJECT_DYNAMICPROPERTYNAMES)
 #endif
 }
 
-// virtual bool event(QEvent * e)
+// virtual bool event(QEvent *e)
 HB_FUNC_STATIC(QOBJECT_EVENT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QOBJECT_EVENT)
   }
 }
 
-// virtual bool eventFilter(QObject * watched, QEvent * event)
+// virtual bool eventFilter(QObject *watched, QEvent *event)
 HB_FUNC_STATIC(QOBJECT_EVENTFILTER)
 {
   GET_PTR_FROM_SELF(obj);
@@ -596,7 +596,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
   }
 }
 
-// bool inherits(const char * className) const
+// bool inherits(const char *className) const
 HB_FUNC_STATIC(QOBJECT_INHERITS)
 {
   GET_PTR_FROM_SELF(obj);
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QOBJECT_INHERITS)
   }
 }
 
-// void installEventFilter(QObject * filterObj)
+// void installEventFilter(QObject *filterObj)
 HB_FUNC_STATIC(QOBJECT_INSTALLEVENTFILTER)
 {
   GET_PTR_FROM_SELF(obj);
@@ -690,7 +690,7 @@ HB_FUNC_STATIC(QOBJECT_KILLTIMER)
   RETURN_SELF();
 }
 
-// virtual const QMetaObject * metaObject() const
+// virtual const QMetaObject *metaObject() const
 HB_FUNC_STATIC(QOBJECT_METAOBJECT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -709,7 +709,7 @@ HB_FUNC_STATIC(QOBJECT_METAOBJECT)
   }
 }
 
-// void moveToThread(QThread * targetThread)
+// void moveToThread(QThread *targetThread)
 HB_FUNC_STATIC(QOBJECT_MOVETOTHREAD)
 {
   GET_PTR_FROM_SELF(obj);
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QOBJECT_SETOBJECTNAME)
   RETURN_SELF();
 }
 
-// QObject * parent() const
+// QObject *parent() const
 HB_FUNC_STATIC(QOBJECT_PARENT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -786,7 +786,7 @@ HB_FUNC_STATIC(QOBJECT_PARENT)
   }
 }
 
-// void setParent(QObject * parent)
+// void setParent(QObject *parent)
 HB_FUNC_STATIC(QOBJECT_SETPARENT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -806,7 +806,7 @@ HB_FUNC_STATIC(QOBJECT_SETPARENT)
   RETURN_SELF();
 }
 
-// QVariant property (const char * name) const
+// QVariant property (const char *name) const
 HB_FUNC_STATIC(QOBJECT_PROPERTY)
 {
 #ifndef QT_NO_PROPERTIES
@@ -826,7 +826,7 @@ HB_FUNC_STATIC(QOBJECT_PROPERTY)
 #endif
 }
 
-// bool setProperty (const char * name, const QVariant &value)
+// bool setProperty (const char *name, const QVariant &value)
 HB_FUNC_STATIC(QOBJECT_SETPROPERTY)
 {
 #ifndef QT_NO_PROPERTIES
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QOBJECT_SETPROPERTY)
 #endif
 }
 
-// void removeEventFilter(QObject * obj)
+// void removeEventFilter(QObject *obj)
 HB_FUNC_STATIC(QOBJECT_REMOVEEVENTFILTER)
 {
   GET_PTR_FROM_SELF(obj);
@@ -902,7 +902,7 @@ HB_FUNC_STATIC(QOBJECT_STARTTIMER)
   }
 }
 
-// QThread * thread() const
+// QThread *thread() const
 HB_FUNC_STATIC(QOBJECT_THREAD)
 {
   GET_PTR_FROM_SELF(obj);
@@ -941,7 +941,7 @@ HB_FUNC_STATIC(QOBJECT_DELETELATER)
   RETURN_SELF();
 }
 
-// static QString tr(const char * sourceText, const char * disambiguation = nullptr, int n = -1)
+// static QString tr(const char *sourceText, const char *disambiguation = nullptr, int n = -1)
 HB_FUNC_STATIC(QOBJECT_TR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1943,7 +1943,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECT)
   }
 }
 
-// void destroyed(QObject * obj = nullptr)
+// void destroyed(QObject *obj = nullptr)
 HB_FUNC_STATIC(QOBJECT_ONDESTROYED)
 {
   GET_PTR_FROM_SELF(sender);
