@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QGenericPluginFactory
@@ -57,19 +57,19 @@ RETURN
 #include <QtGui/QGenericPluginFactory>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGenericPluginFactory *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGENERICPLUGINFACTORY_DELETE)
 {
-  auto obj = static_cast<QGenericPluginFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QObject *create(const QString &key, const QString &specification)
 HB_FUNC_STATIC(QGENERICPLUGINFACTORY_CREATE)
 {
-  auto obj = static_cast<QGenericPluginFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QGENERICPLUGINFACTORY_CREATE)
 // QStringList keys()
 HB_FUNC_STATIC(QGENERICPLUGINFACTORY_KEYS)
 {
-  auto obj = static_cast<QGenericPluginFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

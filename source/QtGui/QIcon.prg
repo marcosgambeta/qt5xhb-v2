@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPIXMAP
-REQUEST QSIZE
+REQUEST QPixmap
+REQUEST QSize
 #endif
 
 CLASS QIcon
@@ -78,6 +78,8 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QICON_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QICON_NEW)
     // QIcon(const QPixmap &pixmap)
     auto obj = new QIcon(*PQPIXMAP(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && ISQICON(1)) {
+  } else if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1))) {
     // QIcon(const QIcon &other)
     auto obj = new QIcon(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
@@ -103,17 +105,15 @@ HB_FUNC_STATIC(QICON_NEW)
 
 HB_FUNC_STATIC(QICON_DELETE)
 {
-  auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QSize actualSize(const QSize &size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
 HB_FUNC_STATIC(QICON_ACTUALSIZE)
 {
-  auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
 // state = QIcon::Off)
 HB_FUNC_STATIC(QICON_ADDFILE)
 {
-  auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 // void addPixmap(const QPixmap &pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off)
 HB_FUNC_STATIC(QICON_ADDPIXMAP)
 {
-  auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
 // QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
 HB_FUNC_STATIC(QICON_AVAILABLESIZES)
 {
-  auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QICON_AVAILABLESIZES)
 // qint64 cacheKey() const
 HB_FUNC_STATIC(QICON_CACHEKEY)
 {
-  auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QICON_CACHEKEY)
 // bool isNull() const
 HB_FUNC_STATIC(QICON_ISNULL)
 {
-  auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QICON_ISNULL)
 // QString name() const
 HB_FUNC_STATIC(QICON_NAME)
 {
-  auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QICON_PAINT)
   if (ISBETWEEN(2, 5) && ISQPAINTER(1) && ISQRECT(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // void paint(QPainter *painter, const QRect &rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode =
     // QIcon::Normal, QIcon::State state = QIcon::Off) const
-    auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->paint(PQPAINTER(1), *PQRECT(2), HB_ISNIL(3) ? Qt::AlignCenter : PQT_ALIGNMENT(3),
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QICON_PAINT)
              ISNUMORNIL(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
     // void paint(QPainter *painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode
     // mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
-    auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->paint(PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5), HB_ISNIL(6) ? Qt::AlignCenter : PQT_ALIGNMENT(6),
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
 {
   if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QPixmap pixmap(const QSize &size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
-    auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQPIXMAP(obj->pixmap(*PQSIZE(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     }
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QPixmap pixmap(int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
-    auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQPIXMAP(obj->pixmap(PINT(1), PINT(2), HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3),
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     }
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QPixmap pixmap(int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
-    auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQPIXMAP(obj->pixmap(PINT(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QICON_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
     // QVariant toVariant()
-    auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto variant = new QVariant();

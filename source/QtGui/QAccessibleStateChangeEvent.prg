@@ -45,12 +45,12 @@ RETURN
 #include <QtGui/QAccessibleStateChangeEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QACCESSIBLESTATECHANGEEVENT_DELETE)
 {
-  auto obj = static_cast<QAccessibleStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 

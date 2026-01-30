@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEBRIDGE
+REQUEST QAccessibleBridge
 #endif
 
 CLASS QAccessibleBridgePlugin INHERIT QObject
@@ -49,19 +49,19 @@ RETURN
 #include <QtGui/QAccessibleBridgePlugin>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAccessibleBridgePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_DELETE)
 {
-  auto obj = qobject_cast<QAccessibleBridgePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QAccessibleBridge *create(const QString &key) = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_CREATE)
 {
-  auto obj = qobject_cast<QAccessibleBridgePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

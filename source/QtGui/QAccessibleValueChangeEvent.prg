@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QAccessibleValueChangeEvent INHERIT QAccessibleEvent
@@ -49,7 +49,9 @@ RETURN
 #include <QtGui/QAccessibleValueChangeEvent>
 #endif
 
-    // QAccessibleValueChangeEvent(QObject *obj, const QVariant &val)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleValueChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAccessibleValueChangeEvent(QObject *obj, const QVariant &val)
 HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2)) {
@@ -62,17 +64,15 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_NEW)
 
 HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_DELETE)
 {
-  auto obj = static_cast<QAccessibleValueChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void setValue(const QVariant &val)
 HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_SETVALUE)
 {
-  auto obj = static_cast<QAccessibleValueChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_SETVALUE)
 // QVariant value() const
 HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_VALUE)
 {
-  auto obj = static_cast<QAccessibleValueChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

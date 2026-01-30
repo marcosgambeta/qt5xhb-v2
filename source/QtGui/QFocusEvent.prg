@@ -49,7 +49,9 @@ RETURN
 #include <QtGui/QFocusEvent>
 #endif
 
-    // QFocusEvent(QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QFocusEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QFocusEvent(QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason)
 HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
@@ -62,17 +64,15 @@ HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 
 HB_FUNC_STATIC(QFOCUSEVENT_DELETE)
 {
-  auto obj = static_cast<QFocusEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool gotFocus() const
 HB_FUNC_STATIC(QFOCUSEVENT_GOTFOCUS)
 {
-  auto obj = static_cast<QFocusEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_GOTFOCUS)
 // bool lostFocus() const
 HB_FUNC_STATIC(QFOCUSEVENT_LOSTFOCUS)
 {
-  auto obj = static_cast<QFocusEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_LOSTFOCUS)
 // Qt::FocusReason reason() const
 HB_FUNC_STATIC(QFOCUSEVENT_REASON)
 {
-  auto obj = static_cast<QFocusEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

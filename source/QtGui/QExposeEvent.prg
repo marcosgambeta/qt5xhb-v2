@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QREGION
+REQUEST QRegion
 #endif
 
 CLASS QExposeEvent INHERIT QEvent
@@ -48,7 +48,9 @@ RETURN
 #include <QtGui/QExposeEvent>
 #endif
 
-    // QExposeEvent(const QRegion &rgn)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QExposeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QExposeEvent(const QRegion &rgn)
 HB_FUNC_STATIC(QEXPOSEEVENT_NEW)
 {
   if (ISNUMPAR(1) && ISQREGION(1)) {
@@ -61,23 +63,21 @@ HB_FUNC_STATIC(QEXPOSEEVENT_NEW)
 
 HB_FUNC_STATIC(QEXPOSEEVENT_DELETE)
 {
-  auto obj = static_cast<QExposeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const QRegion &region() const
 HB_FUNC_STATIC(QEXPOSEEVENT_REGION)
 {
-  auto obj = static_cast<QExposeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->region();
+      const auto ptr = &obj->region();
       Qt5xHb::createReturnClass(ptr, "QREGION", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

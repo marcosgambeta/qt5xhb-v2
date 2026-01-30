@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPIXMAP
-REQUEST QSIZE
+REQUEST QPixmap
+REQUEST QSize
 #endif
 
 CLASS QIconEngine
@@ -68,19 +68,19 @@ RETURN
 #include <QtGui/QIconEngine>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QICONENGINE_DELETE)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QSize actualSize(const QSize &size, QIcon::Mode mode, QIcon::State state)
 HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 // virtual void addFile(const QString &fileName, const QSize &size, QIcon::Mode mode, QIcon::State state)
 HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 // virtual void addPixmap(const QPixmap &pixmap, QIcon::Mode mode, QIcon::State state)
 HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 // virtual QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
 HB_FUNC_STATIC(QICONENGINE_AVAILABLESIZES)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QICONENGINE_AVAILABLESIZES)
 // virtual QIconEngine *clone() const = 0
 HB_FUNC_STATIC(QICONENGINE_CLONE)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QICONENGINE_CLONE)
 // virtual QString iconName() const
 HB_FUNC_STATIC(QICONENGINE_ICONNAME)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QICONENGINE_ICONNAME)
 // virtual QString key() const
 HB_FUNC_STATIC(QICONENGINE_KEY)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QICONENGINE_KEY)
 // virtual void paint(QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State state) = 0
 HB_FUNC_STATIC(QICONENGINE_PAINT)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QICONENGINE_PAINT)
 // virtual QPixmap pixmap(const QSize &size, QIcon::Mode mode, QIcon::State state)
 HB_FUNC_STATIC(QICONENGINE_PIXMAP)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QICONENGINE_PIXMAP)
 // virtual bool read(QDataStream &in)
 HB_FUNC_STATIC(QICONENGINE_READ)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QICONENGINE_READ)
 // virtual void virtual_hook(int id, void *data)
 HB_FUNC_STATIC(QICONENGINE_VIRTUAL_HOOK)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QICONENGINE_VIRTUAL_HOOK)
 // virtual bool write(QDataStream &out) const
 HB_FUNC_STATIC(QICONENGINE_WRITE)
 {
-  auto obj = static_cast<QIconEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

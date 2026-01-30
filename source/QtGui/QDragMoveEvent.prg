@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
+REQUEST QRect
 #endif
 
 CLASS QDragMoveEvent INHERIT QDropEvent
@@ -50,7 +50,9 @@ RETURN
 #include <QtGui/QDragMoveEvent>
 #endif
 
-    // QDragMoveEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QDragMoveEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
     // Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove)
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
@@ -65,10 +67,8 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 
 HB_FUNC_STATIC(QDRAGMOVEEVENT_DELETE)
 {
-  auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
     // void accept(const QRect &rectangle)
-    auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->accept(*PQRECT(1));
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
     RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // void accept()
-    auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->accept();
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 // QRect answerRect() const
 HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 {
-  auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
     // void ignore(const QRect &rectangle)
-    auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->ignore(*PQRECT(1));
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
     RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // void ignore()
-    auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->ignore();

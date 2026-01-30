@@ -56,19 +56,19 @@ RETURN
 #include <QtGui/QAccessibleBridge>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleBridge *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_DELETE)
 {
-  auto obj = static_cast<QAccessibleBridge *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void setRootObject(QAccessibleInterface *) = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SETROOTOBJECT)
 {
-  auto obj = static_cast<QAccessibleBridge *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SETROOTOBJECT)
 // virtual void notifyAccessibilityUpdate(QAccessibleEvent *event) = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
 {
-  auto obj = static_cast<QAccessibleBridge *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

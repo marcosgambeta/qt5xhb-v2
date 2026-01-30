@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEINTERFACE
+REQUEST QAccessibleInterface
 #endif
 
 CLASS QAccessible INHERIT QObject
@@ -52,7 +52,9 @@ RETURN
 #include <QtGui/QAccessible>
 #endif
 
-    // static QAccessibleInterface *queryAccessibleInterface(QObject *)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAccessible *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// static QAccessibleInterface *queryAccessibleInterface(QObject *)
 HB_FUNC_STATIC(QACCESSIBLE_QUERYACCESSIBLEINTERFACE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

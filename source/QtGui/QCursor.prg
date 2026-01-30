@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBITMAP
-REQUEST QPIXMAP
-REQUEST QPOINT
+REQUEST QBitmap
+REQUEST QPixmap
+REQUEST QPoint
 #endif
 
 CLASS QCursor
@@ -68,6 +68,8 @@ RETURN
 
 #include <QtGui/QPixmap>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QCURSOR_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -97,23 +99,21 @@ HB_FUNC_STATIC(QCURSOR_NEW)
 
 HB_FUNC_STATIC(QCURSOR_DELETE)
 {
-  auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const QBitmap *bitmap() const
 HB_FUNC_STATIC(QCURSOR_BITMAP)
 {
-  auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->bitmap();
+      const auto ptr = obj->bitmap();
       Qt5xHb::createReturnClass(ptr, "QBITMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QCURSOR_BITMAP)
 // QPoint hotSpot() const
 HB_FUNC_STATIC(QCURSOR_HOTSPOT)
 {
-  auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,13 +144,13 @@ HB_FUNC_STATIC(QCURSOR_HOTSPOT)
 // const QBitmap *mask() const
 HB_FUNC_STATIC(QCURSOR_MASK)
 {
-  auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->mask();
+      const auto ptr = obj->mask();
       Qt5xHb::createReturnClass(ptr, "QBITMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QCURSOR_MASK)
 // QPixmap pixmap() const
 HB_FUNC_STATIC(QCURSOR_PIXMAP)
 {
-  auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QCURSOR_PIXMAP)
 // void setShape(Qt::CursorShape shape)
 HB_FUNC_STATIC(QCURSOR_SETSHAPE)
 {
-  auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QCURSOR_SETSHAPE)
 // Qt::CursorShape shape() const
 HB_FUNC_STATIC(QCURSOR_SHAPE)
 {
-  auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,15 +234,11 @@ HB_FUNC_STATIC(QCURSOR_SETPOS)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static void setPos(int x, int y)
-
     QCursor::setPos(PINT(1), PINT(2));
-
     RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // static void setPos(const QPoint &p)
-
     QCursor::setPos(*PQPOINT(1));
-
     RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

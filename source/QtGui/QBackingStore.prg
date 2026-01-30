@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPAINTDEVICE
-REQUEST QREGION
-REQUEST QSIZE
-REQUEST QWINDOW
+REQUEST QPaintDevice
+REQUEST QRegion
+REQUEST QSize
+REQUEST QWindow
 #endif
 
 CLASS QBackingStore
@@ -70,7 +70,9 @@ RETURN
 #include <QtGui/QBackingStore>
 #endif
 
-    // QBackingStore(QWindow *window)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QBackingStore(QWindow *window)
 HB_FUNC_STATIC(QBACKINGSTORE_NEW)
 {
   if (ISNUMPAR(1) && ISQWINDOW(1)) {
@@ -83,17 +85,15 @@ HB_FUNC_STATIC(QBACKINGSTORE_NEW)
 
 HB_FUNC_STATIC(QBACKINGSTORE_DELETE)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void beginPaint(const QRegion &region)
 HB_FUNC_STATIC(QBACKINGSTORE_BEGINPAINT)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_BEGINPAINT)
 // void endPaint()
 HB_FUNC_STATIC(QBACKINGSTORE_ENDPAINT)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_ENDPAINT)
 // void flush(const QRegion &region, QWindow *win = nullptr, const QPoint &offset = QPoint())
 HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
 // bool hasStaticContents() const
 HB_FUNC_STATIC(QBACKINGSTORE_HASSTATICCONTENTS)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_HASSTATICCONTENTS)
 // QPaintDevice *paintDevice()
 HB_FUNC_STATIC(QBACKINGSTORE_PAINTDEVICE)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_PAINTDEVICE)
 // void resize(const QSize &size)
 HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
 // bool scroll(const QRegion &area, int dx, int dy)
 HB_FUNC_STATIC(QBACKINGSTORE_SCROLL)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SCROLL)
 // void setStaticContents(const QRegion &region)
 HB_FUNC_STATIC(QBACKINGSTORE_SETSTATICCONTENTS)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SETSTATICCONTENTS)
 // QSize size() const
 HB_FUNC_STATIC(QBACKINGSTORE_SIZE)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SIZE)
 // QRegion staticContents() const
 HB_FUNC_STATIC(QBACKINGSTORE_STATICCONTENTS)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_STATICCONTENTS)
 // QWindow *window() const
 HB_FUNC_STATIC(QBACKINGSTORE_WINDOW)
 {
-  auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

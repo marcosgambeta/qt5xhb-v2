@@ -11,17 +11,17 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEACTIONINTERFACE
-REQUEST QACCESSIBLEEDITABLETEXTINTERFACE
-REQUEST QACCESSIBLEIMAGEINTERFACE
-REQUEST QACCESSIBLETABLECELLINTERFACE
-REQUEST QACCESSIBLETABLEINTERFACE
-REQUEST QACCESSIBLETEXTINTERFACE
-REQUEST QACCESSIBLEVALUEINTERFACE
-REQUEST QCOLOR
-REQUEST QOBJECT
-REQUEST QRECT
-REQUEST QWINDOW
+REQUEST QAccessibleActionInterface
+REQUEST QAccessibleEditableTextInterface
+REQUEST QAccessibleImageInterface
+REQUEST QAccessibleTableCellInterface
+REQUEST QAccessibleTableInterface
+REQUEST QAccessibleTextInterface
+REQUEST QAccessibleValueInterface
+REQUEST QColor
+REQUEST QObject
+REQUEST QRect
+REQUEST QWindow
 #endif
 
 CLASS QAccessibleInterface
@@ -90,10 +90,12 @@ RETURN
 
 #include <QtGui/QWindow>
 
-    // virtual bool isValid() const = 0
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual bool isValid() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ISVALID)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +113,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ISVALID)
 // virtual QObject *object() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_OBJECT)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +132,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_OBJECT)
 // virtual QWindow *window() const
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_WINDOW)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +151,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_WINDOW)
 // virtual QAccessibleInterface *focusChild() const
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_FOCUSCHILD)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_FOCUSCHILD)
 // virtual QAccessibleInterface *childAt(int x, int y) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDAT)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDAT)
 // virtual QAccessibleInterface *parent() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_PARENT)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_PARENT)
 // virtual QAccessibleInterface *child(int index) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILD)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILD)
 // virtual int childCount() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDCOUNT)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDCOUNT)
 // virtual int indexOfChild(const QAccessibleInterface *) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INDEXOFCHILD)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INDEXOFCHILD)
 // virtual QString text(QAccessible::Text t) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 // virtual void setText(QAccessible::Text t, const QString &text) = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +301,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 // virtual QRect rect() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,7 +319,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
 // virtual QAccessible::Role role() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ROLE)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ROLE)
 // virtual QColor foregroundColor() const
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_FOREGROUNDCOLOR)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,7 +355,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_FOREGROUNDCOLOR)
 // virtual QColor backgroundColor() const
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_BACKGROUNDCOLOR)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +373,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_BACKGROUNDCOLOR)
 // QAccessibleTextInterface *textInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXTINTERFACE)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -390,7 +392,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXTINTERFACE)
 // QAccessibleEditableTextInterface *editableTextInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_EDITABLETEXTINTERFACE)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -409,7 +411,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_EDITABLETEXTINTERFACE)
 // QAccessibleValueInterface *valueInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_VALUEINTERFACE)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,7 +430,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_VALUEINTERFACE)
 // QAccessibleActionInterface *actionInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ACTIONINTERFACE)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,7 +449,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ACTIONINTERFACE)
 // QAccessibleImageInterface *imageInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_IMAGEINTERFACE)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -466,7 +468,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_IMAGEINTERFACE)
 // QAccessibleTableInterface *tableInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TABLEINTERFACE)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -485,7 +487,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TABLEINTERFACE)
 // QAccessibleTableCellInterface *tableCellInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TABLECELLINTERFACE)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -504,7 +506,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TABLECELLINTERFACE)
 // void virtual_hook(int id, void *data)
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_VIRTUAL_HOOK)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -524,7 +526,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_VIRTUAL_HOOK)
 // virtual void *interface_cast(QAccessible::InterfaceType)
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INTERFACE_CAST)
 {
-  auto obj = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

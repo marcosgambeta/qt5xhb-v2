@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINTF
+REQUEST QPointF
 #endif
 
 CLASS QMouseEvent INHERIT QInputEvent
@@ -56,6 +56,8 @@ RETURN
 #include <QtGui/QMouseEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QMOUSEEVENT_NEW)
 {
   if (ISNUMPAR(5) && HB_ISNUM(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
@@ -84,17 +86,15 @@ HB_FUNC_STATIC(QMOUSEEVENT_NEW)
 
 HB_FUNC_STATIC(QMOUSEEVENT_DELETE)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // Qt::MouseButton button() const
 HB_FUNC_STATIC(QMOUSEEVENT_BUTTON)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_BUTTON)
 // Qt::MouseButtons buttons() const
 HB_FUNC_STATIC(QMOUSEEVENT_BUTTONS)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_BUTTONS)
 // int globalX() const
 HB_FUNC_STATIC(QMOUSEEVENT_GLOBALX)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_GLOBALX)
 // int globalY() const
 HB_FUNC_STATIC(QMOUSEEVENT_GLOBALY)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,13 +166,13 @@ HB_FUNC_STATIC(QMOUSEEVENT_GLOBALY)
 // const QPointF &localPos() const
 HB_FUNC_STATIC(QMOUSEEVENT_LOCALPOS)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->localPos();
+      const auto ptr = &obj->localPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -185,13 +185,13 @@ HB_FUNC_STATIC(QMOUSEEVENT_LOCALPOS)
 // const QPointF &screenPos() const
 HB_FUNC_STATIC(QMOUSEEVENT_SCREENPOS)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->screenPos();
+      const auto ptr = &obj->screenPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -204,13 +204,13 @@ HB_FUNC_STATIC(QMOUSEEVENT_SCREENPOS)
 // const QPointF &windowPos() const
 HB_FUNC_STATIC(QMOUSEEVENT_WINDOWPOS)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->windowPos();
+      const auto ptr = &obj->windowPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_WINDOWPOS)
 // int x() const
 HB_FUNC_STATIC(QMOUSEEVENT_X)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_X)
 // int y() const
 HB_FUNC_STATIC(QMOUSEEVENT_Y)
 {
-  auto obj = static_cast<QMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

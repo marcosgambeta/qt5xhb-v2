@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
+REQUEST QUrl
 #endif
 
 CLASS QFileOpenEvent INHERIT QEvent
@@ -51,19 +51,19 @@ RETURN
 
 #include <QtCore/QUrl>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QFileOpenEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QFILEOPENEVENT_DELETE)
 {
-  auto obj = static_cast<QFileOpenEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString file() const
 HB_FUNC_STATIC(QFILEOPENEVENT_FILE)
 {
-  auto obj = static_cast<QFileOpenEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_FILE)
 // bool openFile(QFile &file, QIODevice::OpenMode flags) const
 HB_FUNC_STATIC(QFILEOPENEVENT_OPENFILE)
 {
-  auto obj = static_cast<QFileOpenEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_OPENFILE)
 // QUrl url() const
 HB_FUNC_STATIC(QFILEOPENEVENT_URL)
 {
-  auto obj = static_cast<QFileOpenEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

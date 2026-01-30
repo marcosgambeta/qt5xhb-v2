@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QSIZE
+REQUEST QRect
+REQUEST QSize
 #endif
 
 CLASS QFontMetrics
@@ -24,6 +24,7 @@ CLASS QFontMetrics
    METHOD delete
    METHOD ascent
    METHOD averageCharWidth
+   METHOD boudingRect
    METHOD boundingRect
    METHOD descent
    METHOD elidedText
@@ -77,13 +78,15 @@ RETURN
 #include <QtGui/QFontMetrics>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QFONTMETRICS_NEW)
 {
   if (ISNUMPAR(1) && ISQFONT(1)) {
     // QFontMetrics(const QFont &font)
     auto obj = new QFontMetrics(*PQFONT(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2)) {
+  } else if (ISNUMPAR(2) && ISQFONT(1) && ISQPAINTDEVICE(2)) {
     // QFontMetrics(const QFont &font, QPaintDevice *paintdevice)
     auto obj = new QFontMetrics(*PQFONT(1), PQPAINTDEVICE(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -98,17 +101,15 @@ HB_FUNC_STATIC(QFONTMETRICS_NEW)
 
 HB_FUNC_STATIC(QFONTMETRICS_DELETE)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int ascent() const
 HB_FUNC_STATIC(QFONTMETRICS_ASCENT)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +127,7 @@ HB_FUNC_STATIC(QFONTMETRICS_ASCENT)
 // int averageCharWidth() const
 HB_FUNC_STATIC(QFONTMETRICS_AVERAGECHARWIDTH)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,33 +146,33 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
 {
   if (ISNUMPAR(1) && ISQCHAR(1)) {
     // QRect boundingRect(QChar ch) const
-    auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQRECT(obj->boundingRect(*PQCHAR(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QRect boundingRect(const QString &text) const
-    auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQRECT(obj->boundingRect(PQSTRING(1)));
     }
   } else if (ISBETWEEN(6, 8) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-             HB_ISCHAR(6) && ISNUMORNIL(7) && ISARRAYORNIL(8)) {
-    // QRect boundingRect(int x, int y, int width, int height, int flags, const QString &text, int tabStops = 0, int *
-    // tabArray = nullptr) const
-    auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+             HB_ISCHAR(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
+    // QRect boundingRect(int x, int y, int width, int height, int flags, const QString &text, int tabStops = 0, int
+    // *tabArray = nullptr) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       int par8;
       RQRECT(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6), OPINT(7, 0), &par8));
       hb_storni(par8, 8);
     }
-  } else if (ISBETWEEN(3, 5) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISARRAYORNIL(5)) {
+  } else if (ISBETWEEN(3, 5) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // QRect boundingRect(const QRect &rect, int flags, const QString &text, int tabStops = 0, int *tabArray = nullptr)
     // const
-    auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       int par5;
@@ -186,7 +187,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
 // int descent() const
 HB_FUNC_STATIC(QFONTMETRICS_DESCENT)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +205,7 @@ HB_FUNC_STATIC(QFONTMETRICS_DESCENT)
 // QString elidedText(const QString &text, Qt::TextElideMode mode, int width, int flags = 0) const
 HB_FUNC_STATIC(QFONTMETRICS_ELIDEDTEXT)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +223,7 @@ HB_FUNC_STATIC(QFONTMETRICS_ELIDEDTEXT)
 // int height() const
 HB_FUNC_STATIC(QFONTMETRICS_HEIGHT)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +241,7 @@ HB_FUNC_STATIC(QFONTMETRICS_HEIGHT)
 // bool inFontUcs4(uint character) const
 HB_FUNC_STATIC(QFONTMETRICS_INFONTUCS4)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +259,7 @@ HB_FUNC_STATIC(QFONTMETRICS_INFONTUCS4)
 // int leading() const
 HB_FUNC_STATIC(QFONTMETRICS_LEADING)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +277,7 @@ HB_FUNC_STATIC(QFONTMETRICS_LEADING)
 // int lineSpacing() const
 HB_FUNC_STATIC(QFONTMETRICS_LINESPACING)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +295,7 @@ HB_FUNC_STATIC(QFONTMETRICS_LINESPACING)
 // int lineWidth() const
 HB_FUNC_STATIC(QFONTMETRICS_LINEWIDTH)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +313,7 @@ HB_FUNC_STATIC(QFONTMETRICS_LINEWIDTH)
 // int maxWidth() const
 HB_FUNC_STATIC(QFONTMETRICS_MAXWIDTH)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +331,7 @@ HB_FUNC_STATIC(QFONTMETRICS_MAXWIDTH)
 // int minLeftBearing() const
 HB_FUNC_STATIC(QFONTMETRICS_MINLEFTBEARING)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +349,7 @@ HB_FUNC_STATIC(QFONTMETRICS_MINLEFTBEARING)
 // int minRightBearing() const
 HB_FUNC_STATIC(QFONTMETRICS_MINRIGHTBEARING)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,7 +367,7 @@ HB_FUNC_STATIC(QFONTMETRICS_MINRIGHTBEARING)
 // int overlinePos() const
 HB_FUNC_STATIC(QFONTMETRICS_OVERLINEPOS)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,7 +385,7 @@ HB_FUNC_STATIC(QFONTMETRICS_OVERLINEPOS)
 // QSize size(int flags, const QString &text, int tabStops = 0, int *tabArray = nullptr) const
 HB_FUNC_STATIC(QFONTMETRICS_SIZE)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,7 +405,7 @@ HB_FUNC_STATIC(QFONTMETRICS_SIZE)
 // int strikeOutPos() const
 HB_FUNC_STATIC(QFONTMETRICS_STRIKEOUTPOS)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,7 +423,7 @@ HB_FUNC_STATIC(QFONTMETRICS_STRIKEOUTPOS)
 // QRect tightBoundingRect(const QString &text) const
 HB_FUNC_STATIC(QFONTMETRICS_TIGHTBOUNDINGRECT)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,7 +441,7 @@ HB_FUNC_STATIC(QFONTMETRICS_TIGHTBOUNDINGRECT)
 // int underlinePos() const
 HB_FUNC_STATIC(QFONTMETRICS_UNDERLINEPOS)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,14 +460,14 @@ HB_FUNC_STATIC(QFONTMETRICS_WIDTH)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // int width(const QString &text, int len = -1) const
-    auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->width(PQSTRING(1), OPINT(2, -1)));
     }
   } else if (ISNUMPAR(1) && ISQCHAR(1)) {
     // int width(QChar ch) const
-    auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->width(*PQCHAR(1)));
@@ -479,7 +480,7 @@ HB_FUNC_STATIC(QFONTMETRICS_WIDTH)
 // int xHeight() const
 HB_FUNC_STATIC(QFONTMETRICS_XHEIGHT)
 {
-  auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

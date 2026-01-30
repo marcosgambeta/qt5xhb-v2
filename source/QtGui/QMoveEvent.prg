@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINT
+REQUEST QPoint
 #endif
 
 CLASS QMoveEvent INHERIT QEvent
@@ -49,7 +49,9 @@ RETURN
 #include <QtGui/QMoveEvent>
 #endif
 
-    // QMoveEvent(const QPoint &pos, const QPoint &oldPos)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QMoveEvent(const QPoint &pos, const QPoint &oldPos)
 HB_FUNC_STATIC(QMOVEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2)) {
@@ -62,23 +64,21 @@ HB_FUNC_STATIC(QMOVEEVENT_NEW)
 
 HB_FUNC_STATIC(QMOVEEVENT_DELETE)
 {
-  auto obj = static_cast<QMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const QPoint &oldPos() const
 HB_FUNC_STATIC(QMOVEEVENT_OLDPOS)
 {
-  auto obj = static_cast<QMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->oldPos();
+      const auto ptr = &obj->oldPos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -91,13 +91,13 @@ HB_FUNC_STATIC(QMOVEEVENT_OLDPOS)
 // const QPoint &pos() const
 HB_FUNC_STATIC(QMOVEEVENT_POS)
 {
-  auto obj = static_cast<QMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->pos();
+      const auto ptr = &obj->pos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

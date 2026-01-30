@@ -49,7 +49,9 @@ RETURN
 #include <QtGui/QAccessibleTextUpdateEvent>
 #endif
 
-    // QAccessibleTextUpdateEvent(QObject *obj, int position, const QString &oldText, const QString &text)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleTextUpdateEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAccessibleTextUpdateEvent(QObject *obj, int position, const QString &oldText, const QString &text)
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_NEW)
 {
   if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4)) {
@@ -62,17 +64,15 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_NEW)
 
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_DELETE)
 {
-  auto obj = static_cast<QAccessibleTextUpdateEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString textRemoved() const
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTREMOVED)
 {
-  auto obj = static_cast<QAccessibleTextUpdateEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTREMOVED)
 // QString textInserted() const
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTINSERTED)
 {
-  auto obj = static_cast<QAccessibleTextUpdateEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTINSERTED)
 // int changePosition() const
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_CHANGEPOSITION)
 {
-  auto obj = static_cast<QAccessibleTextUpdateEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

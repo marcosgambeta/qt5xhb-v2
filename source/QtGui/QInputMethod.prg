@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QLOCALE
-REQUEST QRECTF
-REQUEST QTRANSFORM
+REQUEST QLocale
+REQUEST QRectF
+REQUEST QTransform
 #endif
 
 CLASS QInputMethod INHERIT QObject
@@ -75,10 +75,12 @@ RETURN
 #include <QtCore/QRectF>
 #include <QtGui/QTransform>
 
-    // QRectF cursorRectangle() const
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QRectF cursorRectangle() const
 HB_FUNC_STATIC(QINPUTMETHOD_CURSORRECTANGLE)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_CURSORRECTANGLE)
 // Qt::LayoutDirection inputDirection() const
 HB_FUNC_STATIC(QINPUTMETHOD_INPUTDIRECTION)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INPUTDIRECTION)
 // QTransform inputItemTransform() const
 HB_FUNC_STATIC(QINPUTMETHOD_INPUTITEMTRANSFORM)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INPUTITEMTRANSFORM)
 // bool isAnimating() const
 HB_FUNC_STATIC(QINPUTMETHOD_ISANIMATING)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ISANIMATING)
 // bool isVisible() const
 HB_FUNC_STATIC(QINPUTMETHOD_ISVISIBLE)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ISVISIBLE)
 // QRectF keyboardRectangle() const
 HB_FUNC_STATIC(QINPUTMETHOD_KEYBOARDRECTANGLE)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_KEYBOARDRECTANGLE)
 // QLocale locale() const
 HB_FUNC_STATIC(QINPUTMETHOD_LOCALE)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_LOCALE)
 // void setInputItemTransform(const QTransform &transform)
 HB_FUNC_STATIC(QINPUTMETHOD_SETINPUTITEMTRANSFORM)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +226,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SETINPUTITEMTRANSFORM)
 // void setVisible(bool visible)
 HB_FUNC_STATIC(QINPUTMETHOD_SETVISIBLE)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +246,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SETVISIBLE)
 // void commit()
 HB_FUNC_STATIC(QINPUTMETHOD_COMMIT)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +266,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_COMMIT)
 // void hide()
 HB_FUNC_STATIC(QINPUTMETHOD_HIDE)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +286,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_HIDE)
 // void invokeAction(QInputMethod::Action a, int cursorPosition)
 HB_FUNC_STATIC(QINPUTMETHOD_INVOKEACTION)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +306,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INVOKEACTION)
 // void reset()
 HB_FUNC_STATIC(QINPUTMETHOD_RESET)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +326,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_RESET)
 // void show()
 HB_FUNC_STATIC(QINPUTMETHOD_SHOW)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +346,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SHOW)
 // void update(Qt::InputMethodQueries queries)
 HB_FUNC_STATIC(QINPUTMETHOD_UPDATE)
 {
-  auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +366,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_UPDATE)
 // void animatingChanged()
 HB_FUNC_STATIC(QINPUTMETHOD_ONANIMATINGCHANGED)
 {
-  auto sender = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -383,7 +385,6 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONANIMATINGCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -402,7 +403,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONANIMATINGCHANGED)
 // void cursorRectangleChanged()
 HB_FUNC_STATIC(QINPUTMETHOD_ONCURSORRECTANGLECHANGED)
 {
-  auto sender = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -421,7 +422,6 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONCURSORRECTANGLECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONCURSORRECTANGLECHANGED)
 // void inputDirectionChanged(Qt::LayoutDirection newDirection)
 HB_FUNC_STATIC(QINPUTMETHOD_ONINPUTDIRECTIONCHANGED)
 {
-  auto sender = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -462,7 +462,6 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONINPUTDIRECTIONCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -481,7 +480,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONINPUTDIRECTIONCHANGED)
 // void keyboardRectangleChanged()
 HB_FUNC_STATIC(QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED)
 {
-  auto sender = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -501,7 +500,6 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -520,7 +518,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED)
 // void localeChanged()
 HB_FUNC_STATIC(QINPUTMETHOD_ONLOCALECHANGED)
 {
-  auto sender = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -539,7 +537,6 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONLOCALECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -558,7 +555,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONLOCALECHANGED)
 // void visibleChanged()
 HB_FUNC_STATIC(QINPUTMETHOD_ONVISIBLECHANGED)
 {
-  auto sender = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -577,7 +574,6 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONVISIBLECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

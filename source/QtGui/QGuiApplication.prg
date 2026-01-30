@@ -57,12 +57,12 @@ REQUEST QScrollEvent
 REQUEST QScrollPrepareEvent
 REQUEST QShortcutEvent
 REQUEST QShowEvent
-REQUEST QStatustipEvent
-REQUEST QSTyleHints
+REQUEST QStatusTipEvent
+REQUEST QStyleHints
 REQUEST QTabletEvent
 REQUEST QToolBarChangeEvent
 REQUEST QTouchEvent
-REQUEST QWhatsthisClickedEvent
+REQUEST QWhatsThisClickedEvent
 REQUEST QWheelEvent
 REQUEST QWindow
 REQUEST QWindowStateChangeEvent
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_DELETE)
   RETURN_SELF();
 }
 
-// virtual bool notify(QObject * object, QEvent * event)
+// virtual bool notify(QObject *object, QEvent *event)
 HB_FUNC_STATIC(QGUIAPPLICATION_NOTIFY)
 {
   GET_PTR_FROM_SELF(obj);
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_CHANGEOVERRIDECURSOR)
   RETURN_SELF();
 }
 
-// static QClipboard * clipboard()
+// static QClipboard *clipboard()
 HB_FUNC_STATIC(QGUIAPPLICATION_CLIPBOARD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_EXEC)
 #endif
 }
 
-// static QObject * focusObject()
+// static QObject *focusObject()
 HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSOBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSOBJECT)
 #endif
 }
 
-// static QWindow * focusWindow()
+// static QWindow *focusWindow()
 HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSWINDOW)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_FONT)
 #endif
 }
 
-// static QInputMethod * inputMethod()
+// static QInputMethod *inputMethod()
 HB_FUNC_STATIC(QGUIAPPLICATION_INPUTMETHOD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_LAYOUTDIRECTION)
 #endif
 }
 
-// static QWindow * modalWindow()
+// static QWindow *modalWindow()
 HB_FUNC_STATIC(QGUIAPPLICATION_MODALWINDOW)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_MOUSEBUTTONS)
 #endif
 }
 
-// static QCursor * overrideCursor()
+// static QCursor *overrideCursor()
 HB_FUNC_STATIC(QGUIAPPLICATION_OVERRIDECURSOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_PLATFORMNAME)
 #endif
 }
 
-// static QScreen * primaryScreen()
+// static QScreen *primaryScreen()
 HB_FUNC_STATIC(QGUIAPPLICATION_PRIMARYSCREEN)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -560,7 +560,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_RESTOREOVERRIDECURSOR)
   RETURN_SELF();
 }
 
-// static QList<QScreen*> screens()
+// static QList<QScreen *> screens()
 HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -705,7 +705,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED)
   RETURN_SELF();
 }
 
-// static QStyleHints * styleHints()
+// static QStyleHints *styleHints()
 HB_FUNC_STATIC(QGUIAPPLICATION_STYLEHINTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -720,7 +720,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_STYLEHINTS)
 #endif
 }
 
-// static QWindow * topLevelAt(const QPoint &pos)
+// static QWindow *topLevelAt(const QPoint &pos)
 HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -834,7 +834,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ISSAVINGSESSION)
   }
 }
 
-// static QScreen * screenAt(const QPoint &point)
+// static QScreen *screenAt(const QPoint &point)
 HB_FUNC_STATIC(QGUIAPPLICATION_SCREENAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -973,7 +973,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1017,7 +1016,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONCOMMITDATAREQUEST)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1033,7 +1031,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONCOMMITDATAREQUEST)
   hb_retl(result);
 }
 
-// void focusObjectChanged(QObject * focusObject)
+// void focusObjectChanged(QObject *focusObject)
 HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSOBJECTCHANGED)
 {
   GET_PTR_FROM_SELF(sender);
@@ -1058,7 +1056,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSOBJECTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1074,7 +1071,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSOBJECTCHANGED)
   hb_retl(result);
 }
 
-// void focusWindowChanged(QWindow * focusWindow)
+// void focusWindowChanged(QWindow *focusWindow)
 HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSWINDOWCHANGED)
 {
   GET_PTR_FROM_SELF(sender);
@@ -1099,7 +1096,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSWINDOWCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1141,7 +1137,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1182,7 +1177,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTDATABASECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1220,7 +1214,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLASTWINDOWCLOSED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1262,7 +1255,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1307,7 +1299,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPALETTECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1326,7 +1317,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPALETTECHANGED)
 #endif
 }
 
-// void primaryScreenChanged(QScreen * screen)
+// void primaryScreenChanged(QScreen *screen)
 HB_FUNC_STATIC(QGUIAPPLICATION_ONPRIMARYSCREENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -1352,7 +1343,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPRIMARYSCREENCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1396,7 +1386,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSAVESTATEREQUEST)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1412,7 +1401,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSAVESTATEREQUEST)
   hb_retl(result);
 }
 
-// void screenAdded(QScreen * screen)
+// void screenAdded(QScreen *screen)
 HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENADDED)
 {
   GET_PTR_FROM_SELF(sender);
@@ -1437,7 +1426,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENADDED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1453,7 +1441,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENADDED)
   hb_retl(result);
 }
 
-// void screenRemoved(QScreen * screen)
+// void screenRemoved(QScreen *screen)
 HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -1479,7 +1467,6 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENREMOVED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

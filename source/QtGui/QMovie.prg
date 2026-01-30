@@ -11,13 +11,13 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QCOLOR
-REQUEST QIMAGE
-REQUEST QIODEVICE
-REQUEST QPIXMAP
-REQUEST QRECT
-REQUEST QSIZE
+REQUEST QByteArray
+REQUEST QColor
+REQUEST QIODevice
+REQUEST QImage
+REQUEST QPixmap
+REQUEST QRect
+REQUEST QSize
 #endif
 
 CLASS QMovie INHERIT QObject
@@ -94,17 +94,19 @@ RETURN
 #include <QtGui/QColor>
 #include <QtGui/QPixmap>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QMOVIE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     // QMovie(QObject *parent = nullptr)
     auto obj = new QMovie(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) && ISQOBJECTORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISQBYTEARRAYORNIL(2) && ISQOBJECTORNIL(3)) {
     // QMovie(QIODevice *device, const QByteArray &format = QByteArray(), QObject *parent = nullptr)
     auto obj = new QMovie(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *PQBYTEARRAY(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISOPTQBYTEARRAY(2) && ISQOBJECTORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQBYTEARRAYORNIL(2) && ISQOBJECTORNIL(3)) {
     // QMovie(const QString &fileName, const QByteArray &format = QByteArray(), QObject *parent = nullptr)
     auto obj = new QMovie(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *PQBYTEARRAY(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -115,17 +117,15 @@ HB_FUNC_STATIC(QMOVIE_NEW)
 
 HB_FUNC_STATIC(QMOVIE_DELETE)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QColor backgroundColor() const
 HB_FUNC_STATIC(QMOVIE_BACKGROUNDCOLOR)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QMOVIE_BACKGROUNDCOLOR)
 // QMovie::CacheMode cacheMode() const
 HB_FUNC_STATIC(QMOVIE_CACHEMODE)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QMOVIE_CACHEMODE)
 // int currentFrameNumber() const
 HB_FUNC_STATIC(QMOVIE_CURRENTFRAMENUMBER)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QMOVIE_CURRENTFRAMENUMBER)
 // QImage currentImage() const
 HB_FUNC_STATIC(QMOVIE_CURRENTIMAGE)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QMOVIE_CURRENTIMAGE)
 // QPixmap currentPixmap() const
 HB_FUNC_STATIC(QMOVIE_CURRENTPIXMAP)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QMOVIE_CURRENTPIXMAP)
 // QIODevice *device() const
 HB_FUNC_STATIC(QMOVIE_DEVICE)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QMOVIE_DEVICE)
 // QString fileName() const
 HB_FUNC_STATIC(QMOVIE_FILENAME)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QMOVIE_FILENAME)
 // QByteArray format() const
 HB_FUNC_STATIC(QMOVIE_FORMAT)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QMOVIE_FORMAT)
 // int frameCount() const
 HB_FUNC_STATIC(QMOVIE_FRAMECOUNT)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QMOVIE_FRAMECOUNT)
 // QRect frameRect() const
 HB_FUNC_STATIC(QMOVIE_FRAMERECT)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QMOVIE_FRAMERECT)
 // bool isValid() const
 HB_FUNC_STATIC(QMOVIE_ISVALID)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QMOVIE_ISVALID)
 // bool jumpToFrame(int frameNumber)
 HB_FUNC_STATIC(QMOVIE_JUMPTOFRAME)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QMOVIE_JUMPTOFRAME)
 // int loopCount() const
 HB_FUNC_STATIC(QMOVIE_LOOPCOUNT)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QMOVIE_LOOPCOUNT)
 // int nextFrameDelay() const
 HB_FUNC_STATIC(QMOVIE_NEXTFRAMEDELAY)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QMOVIE_NEXTFRAMEDELAY)
 // QSize scaledSize()
 HB_FUNC_STATIC(QMOVIE_SCALEDSIZE)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QMOVIE_SCALEDSIZE)
 // void setBackgroundColor(const QColor &color)
 HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 // void setCacheMode(QMovie::CacheMode mode)
 HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 // void setDevice(QIODevice *device)
 HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 // void setFileName(const QString &fileName)
 HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 // void setFormat(const QByteArray &format)
 HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 // void setScaledSize(const QSize &size)
 HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,7 +516,7 @@ HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
 // int speed() const
 HB_FUNC_STATIC(QMOVIE_SPEED)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QMOVIE_SPEED)
 // QMovie::MovieState state() const
 HB_FUNC_STATIC(QMOVIE_STATE)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QMOVIE_STATE)
 // bool jumpToNextFrame()
 HB_FUNC_STATIC(QMOVIE_JUMPTONEXTFRAME)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(QMOVIE_JUMPTONEXTFRAME)
 // void setPaused(bool paused)
 HB_FUNC_STATIC(QMOVIE_SETPAUSED)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -590,7 +590,7 @@ HB_FUNC_STATIC(QMOVIE_SETPAUSED)
 // void setSpeed(int percentSpeed)
 HB_FUNC_STATIC(QMOVIE_SETSPEED)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QMOVIE_SETSPEED)
 // void start()
 HB_FUNC_STATIC(QMOVIE_START)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QMOVIE_START)
 // void stop()
 HB_FUNC_STATIC(QMOVIE_STOP)
 {
-  auto obj = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -650,7 +650,7 @@ HB_FUNC_STATIC(QMOVIE_STOP)
 // void error(QImageReader::ImageReaderError error)
 HB_FUNC_STATIC(QMOVIE_ONERROR)
 {
-  auto sender = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -672,7 +672,6 @@ HB_FUNC_STATIC(QMOVIE_ONERROR)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -691,7 +690,7 @@ HB_FUNC_STATIC(QMOVIE_ONERROR)
 // void finished()
 HB_FUNC_STATIC(QMOVIE_ONFINISHED)
 {
-  auto sender = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -710,7 +709,6 @@ HB_FUNC_STATIC(QMOVIE_ONFINISHED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -729,7 +727,7 @@ HB_FUNC_STATIC(QMOVIE_ONFINISHED)
 // void frameChanged(int frameNumber)
 HB_FUNC_STATIC(QMOVIE_ONFRAMECHANGED)
 {
-  auto sender = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -750,7 +748,6 @@ HB_FUNC_STATIC(QMOVIE_ONFRAMECHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -769,7 +766,7 @@ HB_FUNC_STATIC(QMOVIE_ONFRAMECHANGED)
 // void resized(const QSize &size)
 HB_FUNC_STATIC(QMOVIE_ONRESIZED)
 {
-  auto sender = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -790,7 +787,6 @@ HB_FUNC_STATIC(QMOVIE_ONRESIZED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -809,7 +805,7 @@ HB_FUNC_STATIC(QMOVIE_ONRESIZED)
 // void started()
 HB_FUNC_STATIC(QMOVIE_ONSTARTED)
 {
-  auto sender = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -828,7 +824,6 @@ HB_FUNC_STATIC(QMOVIE_ONSTARTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -847,7 +842,7 @@ HB_FUNC_STATIC(QMOVIE_ONSTARTED)
 // void stateChanged(QMovie::MovieState state)
 HB_FUNC_STATIC(QMOVIE_ONSTATECHANGED)
 {
-  auto sender = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -869,7 +864,6 @@ HB_FUNC_STATIC(QMOVIE_ONSTATECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -888,7 +882,7 @@ HB_FUNC_STATIC(QMOVIE_ONSTATECHANGED)
 // void updated(const QRect &rect)
 HB_FUNC_STATIC(QMOVIE_ONUPDATED)
 {
-  auto sender = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -909,7 +903,6 @@ HB_FUNC_STATIC(QMOVIE_ONUPDATED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

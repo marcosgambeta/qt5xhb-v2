@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEINTERFACE
-REQUEST QOBJECT
+REQUEST QAccessibleInterface
+REQUEST QObject
 #endif
 
 CLASS QAccessibleEvent
@@ -62,7 +62,9 @@ RETURN
 #include <QtGui/QAccessibleEvent>
 #endif
 
-    // QAccessibleEvent(QObject *obj, QAccessible::Event typ)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAccessibleEvent(QObject *obj, QAccessible::Event typ)
 HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
@@ -75,17 +77,15 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 
 HB_FUNC_STATIC(QACCESSIBLEEVENT_DELETE)
 {
-  auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QAccessible::Event type() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_TYPE)
 {
-  auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_TYPE)
 // QObject *object() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_OBJECT)
 {
-  auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_OBJECT)
 // void setChild(int chld)
 HB_FUNC_STATIC(QACCESSIBLEEVENT_SETCHILD)
 {
-  auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_SETCHILD)
 // int child() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 {
-  auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 // virtual QAccessibleInterface *accessibleInterface() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_ACCESSIBLEINTERFACE)
 {
-  auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

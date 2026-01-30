@@ -56,19 +56,19 @@ RETURN
 #include <QtGui/QAbstractUndoItem>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAbstractUndoItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTUNDOITEM_DELETE)
 {
-  auto obj = static_cast<QAbstractUndoItem *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void undo() = 0
 HB_FUNC_STATIC(QABSTRACTUNDOITEM_UNDO)
 {
-  auto obj = static_cast<QAbstractUndoItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QABSTRACTUNDOITEM_UNDO)
 // virtual void redo() = 0
 HB_FUNC_STATIC(QABSTRACTUNDOITEM_REDO)
 {
-  auto obj = static_cast<QAbstractUndoItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINTF
+REQUEST QPointF
 #endif
 
 CLASS QConicalGradient INHERIT QGradient
@@ -51,6 +51,8 @@ RETURN
 #include <QtGui/QConicalGradient>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QConicalGradient *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QCONICALGRADIENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,17 +74,15 @@ HB_FUNC_STATIC(QCONICALGRADIENT_NEW)
 
 HB_FUNC_STATIC(QCONICALGRADIENT_DELETE)
 {
-  auto obj = static_cast<QConicalGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // qreal angle() const
 HB_FUNC_STATIC(QCONICALGRADIENT_ANGLE)
 {
-  auto obj = static_cast<QConicalGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_ANGLE)
 // QPointF center() const
 HB_FUNC_STATIC(QCONICALGRADIENT_CENTER)
 {
-  auto obj = static_cast<QConicalGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_CENTER)
 // void setAngle(qreal angle)
 HB_FUNC_STATIC(QCONICALGRADIENT_SETANGLE)
 {
-  auto obj = static_cast<QConicalGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void setCenter(const QPointF &center)
-    auto obj = static_cast<QConicalGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setCenter(*PQPOINTF(1));
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
     RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setCenter(qreal x, qreal y)
-    auto obj = static_cast<QConicalGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setCenter(PQREAL(1), PQREAL(2));

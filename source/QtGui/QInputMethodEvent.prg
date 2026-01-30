@@ -51,6 +51,8 @@ RETURN
 #include <QtGui/QInputMethodEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -68,17 +70,15 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
 
 HB_FUNC_STATIC(QINPUTMETHODEVENT_DELETE)
 {
-  auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const QString &commitString() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_COMMITSTRING)
 {
-  auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_COMMITSTRING)
 // const QString &preeditString() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_PREEDITSTRING)
 {
-  auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_PREEDITSTRING)
 // int replacementLength() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
 {
-  auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
 // int replacementStart() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
 {
-  auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
 // void setCommitString(const QString &commitString, int replaceFrom = 0, int replaceLength = 0)
 HB_FUNC_STATIC(QINPUTMETHODEVENT_SETCOMMITSTRING)
 {
-  auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

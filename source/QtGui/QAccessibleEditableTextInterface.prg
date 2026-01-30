@@ -57,19 +57,19 @@ RETURN
 #include <QtGui/QAccessibleEditableTextInterface>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleEditableTextInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETE)
 {
-  auto obj = static_cast<QAccessibleEditableTextInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void deleteText(int startOffset, int endOffset) = 0
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT)
 {
-  auto obj = static_cast<QAccessibleEditableTextInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT)
 // virtual void insertText(int offset, const QString &text) = 0
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT)
 {
-  auto obj = static_cast<QAccessibleEditableTextInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT)
 // virtual void replaceText(int startOffset, int endOffset, const QString &text) = 0
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_REPLACETEXT)
 {
-  auto obj = static_cast<QAccessibleEditableTextInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

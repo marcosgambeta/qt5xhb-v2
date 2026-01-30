@@ -49,7 +49,9 @@ RETURN
 #include <QtGui/QAccessibleTextSelectionEvent>
 #endif
 
-    // QAccessibleTextSelectionEvent(QObject *obj, int start, int end)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleTextSelectionEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAccessibleTextSelectionEvent(QObject *obj, int start, int end)
 HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_NEW)
 {
   if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
@@ -62,17 +64,15 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_NEW)
 
 HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_DELETE)
 {
-  auto obj = static_cast<QAccessibleTextSelectionEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void setSelection(int start, int end)
 HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION)
 {
-  auto obj = static_cast<QAccessibleTextSelectionEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION)
 // int selectionStart() const
 HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SELECTIONSTART)
 {
-  auto obj = static_cast<QAccessibleTextSelectionEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SELECTIONSTART)
 // int selectionEnd() const
 HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SELECTIONEND)
 {
-  auto obj = static_cast<QAccessibleTextSelectionEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

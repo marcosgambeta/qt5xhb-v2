@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINT
-REQUEST QPOINTF
+REQUEST QPoint
+REQUEST QPointF
 #endif
 
 CLASS QEnterEvent INHERIT QEvent
@@ -57,7 +57,9 @@ RETURN
 #include <QtGui/QEnterEvent>
 #endif
 
-    // QEnterEvent(const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QEnterEvent(const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos)
 HB_FUNC_STATIC(QENTEREVENT_NEW)
 {
   if (ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3)) {
@@ -70,17 +72,15 @@ HB_FUNC_STATIC(QENTEREVENT_NEW)
 
 HB_FUNC_STATIC(QENTEREVENT_DELETE)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QPoint pos() const
 HB_FUNC_STATIC(QENTEREVENT_POS)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QENTEREVENT_POS)
 // QPoint globalPos() const
 HB_FUNC_STATIC(QENTEREVENT_GLOBALPOS)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALPOS)
 // int x() const
 HB_FUNC_STATIC(QENTEREVENT_X)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QENTEREVENT_X)
 // int y() const
 HB_FUNC_STATIC(QENTEREVENT_Y)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QENTEREVENT_Y)
 // int globalX() const
 HB_FUNC_STATIC(QENTEREVENT_GLOBALX)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALX)
 // int globalY() const
 HB_FUNC_STATIC(QENTEREVENT_GLOBALY)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,13 +188,13 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALY)
 // const QPointF &localPos() const
 HB_FUNC_STATIC(QENTEREVENT_LOCALPOS)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->localPos();
+      const auto ptr = &obj->localPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -207,13 +207,13 @@ HB_FUNC_STATIC(QENTEREVENT_LOCALPOS)
 // const QPointF &windowPos() const
 HB_FUNC_STATIC(QENTEREVENT_WINDOWPOS)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->windowPos();
+      const auto ptr = &obj->windowPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -226,13 +226,13 @@ HB_FUNC_STATIC(QENTEREVENT_WINDOWPOS)
 // const QPointF &screenPos() const
 HB_FUNC_STATIC(QENTEREVENT_SCREENPOS)
 {
-  auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->screenPos();
+      const auto ptr = &obj->screenPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QLOCALE
+REQUEST QLocale
 #endif
 
 CLASS QIntValidator INHERIT QValidator
@@ -60,6 +60,8 @@ RETURN
 #include <QtGui/QIntValidator>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QINTVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -77,17 +79,15 @@ HB_FUNC_STATIC(QINTVALIDATOR_NEW)
 
 HB_FUNC_STATIC(QINTVALIDATOR_DELETE)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int bottom() const
 HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
 // virtual void fixup(QString &input) const
 HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 // QLocale locale() const
 HB_FUNC_STATIC(QINTVALIDATOR_LOCALE)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_LOCALE)
 // void setBottom(int)
 HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 // void setLocale(const QLocale &locale)
 HB_FUNC_STATIC(QINTVALIDATOR_SETLOCALE)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETLOCALE)
 // virtual void setRange(int bottom, int top)
 HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 // void setTop(int)
 HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
 // int top() const
 HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 // virtual QValidator::State validate(QString &input, int &pos) const = 0
 HB_FUNC_STATIC(QINTVALIDATOR_VALIDATE)
 {
-  auto obj = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_VALIDATE)
 // void changed()
 HB_FUNC_STATIC(QINTVALIDATOR_ONCHANGED)
 {
-  auto sender = qobject_cast<QIntValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -284,7 +284,6 @@ HB_FUNC_STATIC(QINTVALIDATOR_ONCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

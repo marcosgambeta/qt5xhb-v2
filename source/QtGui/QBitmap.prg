@@ -54,6 +54,8 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QBitmap *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QBITMAP_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -83,17 +85,15 @@ HB_FUNC_STATIC(QBITMAP_NEW)
 
 HB_FUNC_STATIC(QBITMAP_DELETE)
 {
-  auto obj = static_cast<QBitmap *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void clear()
 HB_FUNC_STATIC(QBITMAP_CLEAR)
 {
-  auto obj = static_cast<QBitmap *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QBITMAP_CLEAR)
 // QBitmap transformed(const QTransform &matrix) const
 HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 {
-  auto obj = static_cast<QBitmap *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QBITMAP_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
     // QVariant toVariant()
-    auto obj = static_cast<QBitmap *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto variant = new QVariant();

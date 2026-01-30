@@ -56,7 +56,9 @@ RETURN
 #include <QtGui/QAccessibleTableModelChangeEvent>
 #endif
 
-    // QAccessibleTableModelChangeEvent(QObject *obj, QAccessibleTableModelChangeEvent::ModelChangeType changeType)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAccessibleTableModelChangeEvent(QObject *obj, QAccessibleTableModelChangeEvent::ModelChangeType changeType)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
@@ -69,17 +71,15 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_NEW)
 
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_DELETE)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void setModelChangeType(QAccessibleTableModelChangeEvent::ModelChangeType changeType)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE)
 // QAccessibleTableModelChangeEvent::ModelChangeType modelChangeType() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE)
 // void setFirstRow(int row)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW)
 // void setFirstColumn(int col)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN)
 // void setLastRow(int row)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW)
 // void setLastColumn(int col)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN)
 // int firstRow() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW)
 // int firstColumn() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN)
 // int lastRow() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW)
 // int lastColumn() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTCOLUMN)
 {
-  auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

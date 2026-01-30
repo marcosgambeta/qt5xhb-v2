@@ -46,7 +46,9 @@ RETURN
 #include <QtGui/QApplicationStateChangeEvent>
 #endif
 
-    // QApplicationStateChangeEvent(Qt::ApplicationState state)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QApplicationStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QApplicationStateChangeEvent(Qt::ApplicationState state)
 HB_FUNC_STATIC(QAPPLICATIONSTATECHANGEEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -60,7 +62,7 @@ HB_FUNC_STATIC(QAPPLICATIONSTATECHANGEEVENT_NEW)
 // Qt::ApplicationState applicationState() const
 HB_FUNC_STATIC(QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE)
 {
-  auto obj = static_cast<QApplicationStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

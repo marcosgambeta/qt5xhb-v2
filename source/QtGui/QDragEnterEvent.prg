@@ -46,7 +46,9 @@ RETURN
 #include <QtGui/QDragEnterEvent>
 #endif
 
-    // QDragEnterEvent(const QPoint &point, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDragEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QDragEnterEvent(const QPoint &point, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
     // Qt::KeyboardModifiers modifiers)
 HB_FUNC_STATIC(QDRAGENTEREVENT_NEW)
 {
@@ -61,10 +63,8 @@ HB_FUNC_STATIC(QDRAGENTEREVENT_NEW)
 
 HB_FUNC_STATIC(QDRAGENTEREVENT_DELETE)
 {
-  auto obj = static_cast<QDragEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
