@@ -56,6 +56,8 @@ RETURN
 
 using namespace QtCharts;
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPolarChart *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 // QPolarChart(QGraphicsItem *parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags())
 HB_FUNC_STATIC(QPOLARCHART_NEW)
 {
@@ -74,10 +76,8 @@ HB_FUNC_STATIC(QPOLARCHART_NEW)
 HB_FUNC_STATIC(QPOLARCHART_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QPolarChart *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QPOLARCHART_DELETE)
 HB_FUNC_STATIC(QPOLARCHART_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = qobject_cast<QPolarChart *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,8 +105,8 @@ HB_FUNC_STATIC(QPOLARCHART_ADDAXIS)
 }
 
 // QList<QAbstractAxis*> axes(PolarOrientations polarOrientation = PolarOrientations(PolarOrientationRadial |
-// PolarOrientationAngular), QAbstractSeries *series = nullptr) const
-// static QPolarChart::PolarOrientation axisPolarOrientation(QAbstractAxis *axis)
+// PolarOrientationAngular), QAbstractSeries *series = nullptr) const static QPolarChart::PolarOrientation
+// axisPolarOrientation(QAbstractAxis *axis)
 HB_FUNC_STATIC(QPOLARCHART_AXISPOLARORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

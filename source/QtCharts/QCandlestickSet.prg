@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBRUSH
-REQUEST QPEN
+REQUEST QBrush
+REQUEST QPen
 #endif
 
 CLASS QCandlestickSet INHERIT QObject
@@ -85,6 +85,8 @@ RETURN
 using namespace QtCharts;
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QCANDLESTICKSET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQOBJECTORNIL(2)) {
@@ -109,10 +111,8 @@ HB_FUNC_STATIC(QCANDLESTICKSET_NEW)
 HB_FUNC_STATIC(QCANDLESTICKSET_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_DELETE)
 HB_FUNC_STATIC(QCANDLESTICKSET_TIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_TIMESTAMP)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETTIMESTAMP)
 HB_FUNC_STATIC(QCANDLESTICKSET_OPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_OPEN)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETOPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETOPEN)
 HB_FUNC_STATIC(QCANDLESTICKSET_HIGH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_HIGH)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETHIGH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETHIGH)
 HB_FUNC_STATIC(QCANDLESTICKSET_LOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_LOW)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETLOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETLOW)
 HB_FUNC_STATIC(QCANDLESTICKSET_CLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_CLOSE)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETCLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETCLOSE)
 HB_FUNC_STATIC(QCANDLESTICKSET_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_BRUSH)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETBRUSH)
 HB_FUNC_STATIC(QCANDLESTICKSET_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_PEN)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETPEN)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONBRUSHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -434,7 +434,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONBRUSHCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -457,7 +456,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONBRUSHCHANGED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -476,7 +475,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONCLICKED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -499,7 +497,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONCLICKED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONCLOSECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -518,7 +516,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONCLOSECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -541,7 +538,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONCLOSECHANGED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -560,7 +557,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONDOUBLECLICKED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -583,7 +579,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONDOUBLECLICKED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONHIGHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -602,7 +598,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONHIGHCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -625,7 +620,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONHIGHCHANGED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -646,7 +641,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONHOVERED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -669,7 +663,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONHOVERED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONLOWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -688,7 +682,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONLOWCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -711,7 +704,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONLOWCHANGED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONOPENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -730,7 +723,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONOPENCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -753,7 +745,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONOPENCHANGED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONPENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -772,7 +764,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONPENCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -795,7 +786,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONPENCHANGED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -814,7 +805,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONPRESSED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -837,7 +827,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONPRESSED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -856,7 +846,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONRELEASED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -879,7 +868,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONRELEASED)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONTIMESTAMPCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  auto sender = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -898,7 +887,6 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONTIMESTAMPCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

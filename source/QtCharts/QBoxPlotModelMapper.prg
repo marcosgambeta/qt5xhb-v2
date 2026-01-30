@@ -51,4 +51,6 @@ RETURN
 
 using namespace QtCharts;
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 #pragma ENDDUMP
