@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPIXMAP
+REQUEST QPixmap
 #endif
 
 CLASS QPixmapCache
@@ -66,12 +66,12 @@ RETURN
 #include <QtGui/QPixmapCache>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QPixmapCache *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPIXMAPCACHE_DELETE)
 {
-  auto obj = static_cast<QPixmapCache *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
@@ -166,8 +166,10 @@ HB_FUNC_STATIC(QPIXMAPCACHE_INSERT1)
 #endif
 }
 
-// [1]static bool insert(const QString &key, const QPixmap &pixmap)
-// [2]static Key insert(const QPixmap &pixmap)
+/*
+[1]static bool insert(const QString &key, const QPixmap &pixmap)
+[2]static Key insert(const QPixmap &pixmap)
+*/
 
 HB_FUNC_STATIC(QPIXMAPCACHE_INSERT)
 {
@@ -189,8 +191,10 @@ HB_FUNC_STATIC(QPIXMAPCACHE_REMOVE1)
   RETURN_SELF();
 }
 
-// [1]static void remove(const QString &key)
-// [2]static void remove(const Key &key)
+/*
+[1]static void remove(const QString &key)
+[2]static void remove(const Key &key)
+*/
 
 HB_FUNC_STATIC(QPIXMAPCACHE_REMOVE)
 {

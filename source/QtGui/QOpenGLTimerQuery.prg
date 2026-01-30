@@ -62,7 +62,9 @@ RETURN
 #endif
 #endif
 
-    // QOpenGLTimerQuery(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QOpenGLTimerQuery(QObject *parent = nullptr)
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_NEW)
 {
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
@@ -79,10 +81,8 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 #endif
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_CREATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_DESTROY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISCREATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_OBJECTID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_BEGIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_END)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_WAITFORTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_RECORDTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISRESULTAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_WAITFORRESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  auto obj = qobject_cast<QOpenGLTimerQuery *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

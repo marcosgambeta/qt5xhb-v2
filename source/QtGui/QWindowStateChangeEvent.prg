@@ -48,7 +48,9 @@ RETURN
 #include <QtGui/QWindowStateChangeEvent>
 #endif
 
-    // QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride = false)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWindowStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride = false)
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
@@ -61,17 +63,15 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_NEW)
 
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_DELETE)
 {
-  auto obj = static_cast<QWindowStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // Qt::WindowStates oldState() const
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_OLDSTATE)
 {
-  auto obj = static_cast<QWindowStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_OLDSTATE)
 // bool isOverride() const
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_ISOVERRIDE)
 {
-  auto obj = static_cast<QWindowStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

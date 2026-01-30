@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINTF
+REQUEST QPointF
 #endif
 
 CLASS QRadialGradient INHERIT QGradient
@@ -25,6 +25,7 @@ CLASS QRadialGradient INHERIT QGradient
    METHOD radius
    METHOD setCenter
    METHOD setCenterRadius
+   METHOD setFocalPointF
    METHOD setFocalPoint
    METHOD setFocalRadius
    METHOD setRadius
@@ -56,6 +57,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QtGui/QRadialGradient>
 #endif
+
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem())
 
 HB_FUNC_STATIC(QRADIALGRADIENT_NEW)
 {
@@ -94,17 +97,15 @@ HB_FUNC_STATIC(QRADIALGRADIENT_NEW)
 
 HB_FUNC_STATIC(QRADIALGRADIENT_DELETE)
 {
-  auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QPointF center() const
 HB_FUNC_STATIC(QRADIALGRADIENT_CENTER)
 {
-  auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +123,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_CENTER)
 // qreal centerRadius() const
 HB_FUNC_STATIC(QRADIALGRADIENT_CENTERRADIUS)
 {
-  auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +141,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_CENTERRADIUS)
 // QPointF focalPoint() const
 HB_FUNC_STATIC(QRADIALGRADIENT_FOCALPOINT)
 {
-  auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +159,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_FOCALPOINT)
 // qreal focalRadius() const
 HB_FUNC_STATIC(QRADIALGRADIENT_FOCALRADIUS)
 {
-  auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +177,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_FOCALRADIUS)
 // qreal radius() const
 HB_FUNC_STATIC(QRADIALGRADIENT_RADIUS)
 {
-  auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +196,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTER)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void setCenter(const QPointF &center)
-    auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setCenter(*PQPOINTF(1));
@@ -204,7 +205,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTER)
     RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setCenter(qreal x, qreal y)
-    auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setCenter(PQREAL(1), PQREAL(2));
@@ -219,7 +220,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTER)
 // void setCenterRadius(qreal radius)
 HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTERRADIUS)
 {
-  auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,11 +237,11 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTERRADIUS)
   RETURN_SELF();
 }
 
-HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
+HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINTF)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void setFocalPoint(const QPointF &focalPoint)
-    auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setFocalPoint(*PQPOINTF(1));
@@ -249,7 +250,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
     RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setFocalPoint(qreal x, qreal y)
-    auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setFocalPoint(PQREAL(1), PQREAL(2));
@@ -264,7 +265,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
 // void setFocalRadius(qreal radius)
 HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALRADIUS)
 {
-  auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +285,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALRADIUS)
 // void setRadius(qreal radius)
 HB_FUNC_STATIC(QRADIALGRADIENT_SETRADIUS)
 {
-  auto obj = static_cast<QRadialGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

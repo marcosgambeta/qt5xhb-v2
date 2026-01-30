@@ -61,10 +61,12 @@ RETURN
 #include <QtGui/QSessionManager>
 #endif
 
-    // QString sessionId() const
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QString sessionId() const
 HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONID)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONID)
 // QString sessionKey() const
 HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONKEY)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONKEY)
 // bool allowsInteraction()
 HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSINTERACTION)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSINTERACTION)
 // bool allowsErrorInteraction()
 HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSERRORINTERACTION)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +138,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSERRORINTERACTION)
 // void release()
 HB_FUNC_STATIC(QSESSIONMANAGER_RELEASE)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RELEASE)
 // void cancel()
 HB_FUNC_STATIC(QSESSIONMANAGER_CANCEL)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +178,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_CANCEL)
 // void setRestartHint(QSessionManager::RestartHint)
 HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTHINT)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTHINT)
 // QSessionManager::RestartHint restartHint() const
 HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTHINT)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +216,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTHINT)
 // void setRestartCommand(const QStringList &)
 HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +236,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
 // QStringList restartCommand() const
 HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTCOMMAND)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +254,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTCOMMAND)
 // void setDiscardCommand(const QStringList &)
 HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +274,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
 // QStringList discardCommand() const
 HB_FUNC_STATIC(QSESSIONMANAGER_DISCARDCOMMAND)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +293,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void setManagerProperty(const QString &name, const QString &value)
-    auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setManagerProperty(PQSTRING(1), PQSTRING(2));
@@ -300,7 +302,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
     RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // void setManagerProperty(const QString &name, const QStringList &value)
-    auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setManagerProperty(PQSTRING(1), PQSTRINGLIST(2));
@@ -315,7 +317,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
 // bool isPhase2() const
 HB_FUNC_STATIC(QSESSIONMANAGER_ISPHASE2)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,7 +335,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ISPHASE2)
 // void requestPhase2()
 HB_FUNC_STATIC(QSESSIONMANAGER_REQUESTPHASE2)
 {
-  auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

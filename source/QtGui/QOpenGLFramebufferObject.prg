@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QOPENGLFRAMEBUFFEROBJECTFORMAT
-REQUEST QSIZE
+REQUEST QImage
+REQUEST QOpenGLFramebufferObjectFormat
+REQUEST QSize
 #endif
 
 CLASS QOpenGLFramebufferObject
@@ -85,7 +85,9 @@ RETURN
 
 #include <QtGui/QImage>
 
-    // QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW1)
 {
   auto obj = new QOpenGLFramebufferObject(*PQSIZE(1), OPGLENUM(2, GL_TEXTURE_2D));
@@ -202,17 +204,15 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW)
 
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_DELETE)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QOpenGLFramebufferObjectFormat format() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_FORMAT)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_FORMAT)
 // bool isValid() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ISVALID)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ISVALID)
 // bool isBound() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ISBOUND)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ISBOUND)
 // bool bind()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BIND)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BIND)
 // bool release()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_RELEASE)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_RELEASE)
 // int width() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_WIDTH)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_WIDTH)
 // int height() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HEIGHT)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HEIGHT)
 // GLuint texture() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_TEXTURE)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_TEXTURE)
 // QSize size() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SIZE)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SIZE)
 // QImage toImage() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_TOIMAGE)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_TOIMAGE)
 // QOpenGLFramebufferObject::Attachment attachment() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ATTACHMENT)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ATTACHMENT)
 // void setAttachment(QOpenGLFramebufferObject::Attachment attachment)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SETATTACHMENT)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SETATTACHMENT)
 // GLuint handle() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HANDLE)
 {
-  auto obj = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -491,22 +491,18 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
 {
   if (ISBETWEEN(4, 6) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQRECT(2) && ISQOPENGLFRAMEBUFFEROBJECT(3) && ISQRECT(4) &&
       ISNUMORNIL(5) && ISNUMORNIL(6)) {
-    // static void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect, QOpenGLFramebufferObject *
-    // source, const QRect &sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST)
-
+    // static void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect, QOpenGLFramebufferObject
+    // *source, const QRect &sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST)
     QOpenGLFramebufferObject::blitFramebuffer(PQOPENGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQOPENGLFRAMEBUFFEROBJECT(3),
                                               *PQRECT(4), OPGLBITFIELD(5, GL_COLOR_BUFFER_BIT),
                                               OPGLENUM(6, GL_NEAREST));
-
     RETURN_SELF();
   } else if (ISBETWEEN(2, 4) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQOPENGLFRAMEBUFFEROBJECT(2) && ISNUMORNIL(3) &&
              ISNUMORNIL(4)) {
     // static void blitFramebuffer(QOpenGLFramebufferObject *target, QOpenGLFramebufferObject *source, GLbitfield
     // buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST)
-
     QOpenGLFramebufferObject::blitFramebuffer(PQOPENGLFRAMEBUFFEROBJECT(1), PQOPENGLFRAMEBUFFEROBJECT(2),
                                               OPGLBITFIELD(3, GL_COLOR_BUFFER_BIT), OPGLENUM(4, GL_NEAREST));
-
     RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

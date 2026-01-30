@@ -63,6 +63,8 @@ RETURN
 #include <QtGui/QOpenGLDebugMessage>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QOpenGLDebugMessage *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -80,17 +82,15 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_NEW)
 
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_DELETE)
 {
-  auto obj = static_cast<QOpenGLDebugMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void swap(QOpenGLDebugMessage &debugMessage)
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SWAP)
 {
-  auto obj = static_cast<QOpenGLDebugMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SWAP)
 // QOpenGLDebugMessage::Source source() const
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SOURCE)
 {
-  auto obj = static_cast<QOpenGLDebugMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SOURCE)
 // QOpenGLDebugMessage::Type type() const
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_TYPE)
 {
-  auto obj = static_cast<QOpenGLDebugMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_TYPE)
 // QOpenGLDebugMessage::Severity severity() const
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SEVERITY)
 {
-  auto obj = static_cast<QOpenGLDebugMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SEVERITY)
 // GLuint id() const
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_ID)
 {
-  auto obj = static_cast<QOpenGLDebugMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_ID)
 // QString message() const
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_MESSAGE)
 {
-  auto obj = static_cast<QOpenGLDebugMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QREGION
+REQUEST QRect
+REQUEST QRegion
 #endif
 
 CLASS QPaintEvent INHERIT QEvent
@@ -50,6 +50,8 @@ RETURN
 #include <QtGui/QPaintEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QPaintEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPAINTEVENT_NEW)
 {
   if (ISNUMPAR(1) && ISQREGION(1)) {
@@ -67,23 +69,21 @@ HB_FUNC_STATIC(QPAINTEVENT_NEW)
 
 HB_FUNC_STATIC(QPAINTEVENT_DELETE)
 {
-  auto obj = static_cast<QPaintEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const QRect &rect() const
 HB_FUNC_STATIC(QPAINTEVENT_RECT)
 {
-  auto obj = static_cast<QPaintEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->rect();
+      const auto ptr = &obj->rect();
       Qt5xHb::createReturnClass(ptr, "QRECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -96,13 +96,13 @@ HB_FUNC_STATIC(QPAINTEVENT_RECT)
 // const QRegion &region() const
 HB_FUNC_STATIC(QPAINTEVENT_REGION)
 {
-  auto obj = static_cast<QPaintEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->region();
+      const auto ptr = &obj->region();
       Qt5xHb::createReturnClass(ptr, "QREGION", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

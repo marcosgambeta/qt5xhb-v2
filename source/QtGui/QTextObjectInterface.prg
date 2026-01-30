@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZEF
+REQUEST QSizeF
 #endif
 
 CLASS QTextObjectInterface
@@ -57,19 +57,19 @@ RETURN
 #include <QtGui/QTextObjectInterface>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextObjectInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DELETE)
 {
-  auto obj = static_cast<QTextObjectInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QSizeF intrinsicSize(QTextDocument *doc, int posInDocument, const QTextFormat &format) = 0
 HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_INTRINSICSIZE)
 {
-  auto obj = static_cast<QTextObjectInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_INTRINSICSIZE)
 // QTextFormat &format) = 0
 HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DRAWOBJECT)
 {
-  auto obj = static_cast<QTextObjectInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

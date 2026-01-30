@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QLOCALE
+REQUEST QLocale
 #endif
 
 CLASS QValidator INHERIT QObject
@@ -52,19 +52,19 @@ RETURN
 #include <QtGui/QValidator>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QVALIDATOR_DELETE)
 {
-  auto obj = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void fixup(QString &input) const
 HB_FUNC_STATIC(QVALIDATOR_FIXUP)
 {
-  auto obj = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QVALIDATOR_FIXUP)
 // QLocale locale() const
 HB_FUNC_STATIC(QVALIDATOR_LOCALE)
 {
-  auto obj = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QVALIDATOR_LOCALE)
 // void setLocale(const QLocale &locale)
 HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
 {
-  auto obj = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
 // virtual QValidator::State validate(QString &input, int &pos) const = 0
 HB_FUNC_STATIC(QVALIDATOR_VALIDATE)
 {
-  auto obj = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTCHARFORMAT
-REQUEST QTEXTCURSOR
+REQUEST QTextCharFormat
+REQUEST QTextCursor
 #endif
 
 CLASS QTextTableCell
@@ -71,6 +71,8 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTTABLECELL_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -88,17 +90,15 @@ HB_FUNC_STATIC(QTEXTTABLECELL_NEW)
 
 HB_FUNC_STATIC(QTEXTTABLECELL_DELETE)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void setFormat(const QTextCharFormat &format)
 HB_FUNC_STATIC(QTEXTTABLECELL_SETFORMAT)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_SETFORMAT)
 // QTextCharFormat format() const
 HB_FUNC_STATIC(QTEXTTABLECELL_FORMAT)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_FORMAT)
 // int row() const
 HB_FUNC_STATIC(QTEXTTABLECELL_ROW)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_ROW)
 // int column() const
 HB_FUNC_STATIC(QTEXTTABLECELL_COLUMN)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_COLUMN)
 // int rowSpan() const
 HB_FUNC_STATIC(QTEXTTABLECELL_ROWSPAN)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_ROWSPAN)
 // int columnSpan() const
 HB_FUNC_STATIC(QTEXTTABLECELL_COLUMNSPAN)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_COLUMNSPAN)
 // bool isValid() const
 HB_FUNC_STATIC(QTEXTTABLECELL_ISVALID)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_ISVALID)
 // QTextCursor firstCursorPosition() const
 HB_FUNC_STATIC(QTEXTTABLECELL_FIRSTCURSORPOSITION)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_FIRSTCURSORPOSITION)
 // QTextCursor lastCursorPosition() const
 HB_FUNC_STATIC(QTEXTTABLECELL_LASTCURSORPOSITION)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_LASTCURSORPOSITION)
 // int firstPosition() const
 HB_FUNC_STATIC(QTEXTTABLECELL_FIRSTPOSITION)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_FIRSTPOSITION)
 // int lastPosition() const
 HB_FUNC_STATIC(QTEXTTABLECELL_LASTPOSITION)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_LASTPOSITION)
 // int tableCellFormatIndex() const
 HB_FUNC_STATIC(QTEXTTABLECELL_TABLECELLFORMATINDEX)
 {
-  auto obj = static_cast<QTextTableCell *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

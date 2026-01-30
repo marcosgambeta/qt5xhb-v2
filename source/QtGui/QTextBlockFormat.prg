@@ -70,7 +70,9 @@ RETURN
 #include <QtGui/QTextBlockFormat>
 #endif
 
-    // QTextBlockFormat()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QTextBlockFormat()
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -83,17 +85,15 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_NEW)
 
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_DELETE)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isValid() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_ISVALID)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_ISVALID)
 // void setAlignment(Qt::Alignment alignment)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETALIGNMENT)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETALIGNMENT)
 // Qt::Alignment alignment() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_ALIGNMENT)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_ALIGNMENT)
 // void setTopMargin(qreal margin)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETTOPMARGIN)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETTOPMARGIN)
 // qreal topMargin() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_TOPMARGIN)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_TOPMARGIN)
 // void setBottomMargin(qreal margin)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETBOTTOMMARGIN)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETBOTTOMMARGIN)
 // qreal bottomMargin() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_BOTTOMMARGIN)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_BOTTOMMARGIN)
 // void setLeftMargin(qreal margin)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETLEFTMARGIN)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETLEFTMARGIN)
 // qreal leftMargin() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LEFTMARGIN)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LEFTMARGIN)
 // void setRightMargin(qreal margin)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETRIGHTMARGIN)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETRIGHTMARGIN)
 // qreal rightMargin() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_RIGHTMARGIN)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_RIGHTMARGIN)
 // void setTextIndent(qreal aindent)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETTEXTINDENT)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETTEXTINDENT)
 // qreal textIndent() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_TEXTINDENT)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_TEXTINDENT)
 // void setIndent(int indent)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETINDENT)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETINDENT)
 // int indent() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_INDENT)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_INDENT)
 // void setLineHeight(qreal height, int heightType)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETLINEHEIGHT)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,14 +398,14 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LINEHEIGHT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
-    auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQREAL(obj->lineHeight(PQREAL(1), PQREAL(2)));
     }
   } else if (ISNUMPAR(0)) {
     // qreal lineHeight() const
-    auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQREAL(obj->lineHeight());
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LINEHEIGHT)
 // int lineHeightType() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LINEHEIGHTTYPE)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LINEHEIGHTTYPE)
 // void setNonBreakableLines(bool b)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETNONBREAKABLELINES)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETNONBREAKABLELINES)
 // bool nonBreakableLines() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_NONBREAKABLELINES)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_NONBREAKABLELINES)
 // void setPageBreakPolicy(QTextBlockFormat::PageBreakFlags flags)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY)
 // QTextBlockFormat::PageBreakFlags pageBreakPolicy() const
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_PAGEBREAKPOLICY)
 {
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_PAGEBREAKPOLICY)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_HEADINGLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_HEADINGLEVEL)
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETHEADINGLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-  auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

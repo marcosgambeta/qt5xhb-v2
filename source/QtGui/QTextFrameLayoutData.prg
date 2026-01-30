@@ -54,12 +54,12 @@ RETURN
 #include <QtGui/QTextFrameLayoutData>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextFrameLayoutData *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTFRAMELAYOUTDATA_DELETE)
 {
-  auto obj = static_cast<QTextFrameLayoutData *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 

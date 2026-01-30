@@ -61,6 +61,8 @@ RETURN
 #include <QtGui/QOpenGLBuffer>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QOPENGLBUFFER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -82,10 +84,8 @@ HB_FUNC_STATIC(QOPENGLBUFFER_NEW)
 
 HB_FUNC_STATIC(QOPENGLBUFFER_DELETE)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_ALLOCATE)
 {
   if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2)) {
     // void allocate(const void *data, int count)
-    auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->allocate(static_cast<const void *>(hb_parptr(1)), PINT(2));
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_ALLOCATE)
     RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void allocate(int count)
-    auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->allocate(PINT(1));
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_ALLOCATE)
 // bool bind()
 HB_FUNC_STATIC(QOPENGLBUFFER_BIND)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_BIND)
 // GLuint bufferId() const
 HB_FUNC_STATIC(QOPENGLBUFFER_BUFFERID)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_BUFFERID)
 // bool create()
 HB_FUNC_STATIC(QOPENGLBUFFER_CREATE)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_CREATE)
 // void destroy()
 HB_FUNC_STATIC(QOPENGLBUFFER_DESTROY)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_DESTROY)
 // bool isCreated() const
 HB_FUNC_STATIC(QOPENGLBUFFER_ISCREATED)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_ISCREATED)
 // void *map(QOpenGLBuffer::Access access)
 HB_FUNC_STATIC(QOPENGLBUFFER_MAP)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_MAP)
 // bool read(int offset, void *data, int count)
 HB_FUNC_STATIC(QOPENGLBUFFER_READ)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_RELEASE)
 {
   if (ISNUMPAR(0)) {
     // void release()
-    auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->release();
@@ -255,9 +255,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_RELEASE)
     RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // static void release(QOpenGLBuffer::Type type)
-
     QOpenGLBuffer::release(PQOPENGLBUFFER_TYPE(1));
-
     RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -267,7 +265,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_RELEASE)
 // void setUsagePattern(QOpenGLBuffer::UsagePattern value)
 HB_FUNC_STATIC(QOPENGLBUFFER_SETUSAGEPATTERN)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,7 +285,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_SETUSAGEPATTERN)
 // int size() const
 HB_FUNC_STATIC(QOPENGLBUFFER_SIZE)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,7 +303,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_SIZE)
 // QOpenGLBuffer::Type type() const
 HB_FUNC_STATIC(QOPENGLBUFFER_TYPE)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +321,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_TYPE)
 // bool unmap()
 HB_FUNC_STATIC(QOPENGLBUFFER_UNMAP)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +339,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_UNMAP)
 // QOpenGLBuffer::UsagePattern usagePattern() const
 HB_FUNC_STATIC(QOPENGLBUFFER_USAGEPATTERN)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +357,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_USAGEPATTERN)
 // void write(int offset, const void *data, int count)
 HB_FUNC_STATIC(QOPENGLBUFFER_WRITE)
 {
-  auto obj = static_cast<QOpenGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINT
-REQUEST QPOINTF
+REQUEST QPoint
+REQUEST QPointF
 #endif
 
 CLASS QWheelEvent INHERIT QInputEvent
@@ -61,6 +61,8 @@ RETURN
 #include <QtGui/QWheelEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QWHEELEVENT_NEW)
 {
   if (ISBETWEEN(4, 5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
@@ -90,17 +92,15 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
 
 HB_FUNC_STATIC(QWHEELEVENT_DELETE)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QPoint pixelDelta() const
 HB_FUNC_STATIC(QWHEELEVENT_PIXELDELTA)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QWHEELEVENT_PIXELDELTA)
 // QPoint angleDelta() const
 HB_FUNC_STATIC(QWHEELEVENT_ANGLEDELTA)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QWHEELEVENT_ANGLEDELTA)
 // int delta() const
 HB_FUNC_STATIC(QWHEELEVENT_DELTA)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QWHEELEVENT_DELTA)
 // Qt::Orientation orientation() const
 HB_FUNC_STATIC(QWHEELEVENT_ORIENTATION)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QWHEELEVENT_ORIENTATION)
 // QPoint pos() const
 HB_FUNC_STATIC(QWHEELEVENT_POS)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POS)
 // QPoint globalPos() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
 // int x() const
 HB_FUNC_STATIC(QWHEELEVENT_X)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QWHEELEVENT_X)
 // int y() const
 HB_FUNC_STATIC(QWHEELEVENT_Y)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QWHEELEVENT_Y)
 // int globalX() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALX)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALX)
 // int globalY() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALY)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,13 +280,13 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALY)
 // const QPointF &posF() const
 HB_FUNC_STATIC(QWHEELEVENT_POSF)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->posF();
+      const auto ptr = &obj->posF();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -299,13 +299,13 @@ HB_FUNC_STATIC(QWHEELEVENT_POSF)
 // const QPointF &globalPosF() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOSF)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->globalPosF();
+      const auto ptr = &obj->globalPosF();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOSF)
 // Qt::MouseButtons buttons() const
 HB_FUNC_STATIC(QWHEELEVENT_BUTTONS)
 {
-  auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

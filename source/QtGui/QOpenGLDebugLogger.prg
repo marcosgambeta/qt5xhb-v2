@@ -59,7 +59,9 @@ RETURN
 #include <QtGui/QOpenGLDebugLogger>
 #endif
 
-    // QOpenGLDebugLogger(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QOpenGLDebugLogger(QObject *parent = nullptr)
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -72,17 +74,15 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_NEW)
 
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_DELETE)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool initialize()
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_INITIALIZE)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_INITIALIZE)
 // bool isLogging() const
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_ISLOGGING)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_ISLOGGING)
 // QOpenGLDebugLogger::LoggingMode loggingMode() const
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_LOGGINGMODE)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_LOGGINGMODE)
 // qint64 maximumMessageLength() const
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH)
 // QOpenGLDebugMessage::ApplicationSource)
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_PUSHGROUP)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_PUSHGROUP)
 // void popGroup()
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_POPGROUP)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_POPGROUP)
 // void logMessage(const QOpenGLDebugMessage &debugMessage)
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_LOGMESSAGE)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,15 +216,13 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_LOGMESSAGE)
 // void startLogging(QOpenGLDebugLogger::LoggingMode loggingMode = QOpenGLDebugLogger::AsynchronousLogging)
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_STARTLOGGING)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->startLogging(HB_ISNIL(1)
-                            ? static_cast<QOpenGLDebugLogger::LoggingMode>(QOpenGLDebugLogger::AsynchronousLogging)
-                            : PQOPENGLDEBUGLOGGER_LOGGINGMODE(1));
+      obj->startLogging(HB_ISNIL(1) ? QOpenGLDebugLogger::AsynchronousLogging : PQOPENGLDEBUGLOGGER_LOGGINGMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -238,7 +236,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_STARTLOGGING)
 // void stopLogging()
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_STOPLOGGING)
 {
-  auto obj = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +256,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_STOPLOGGING)
 // void messageLogged(const QOpenGLDebugMessage &debugMessage)
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_ONMESSAGELOGGED)
 {
-  auto sender = qobject_cast<QOpenGLDebugLogger *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -280,7 +278,6 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_ONMESSAGELOGGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

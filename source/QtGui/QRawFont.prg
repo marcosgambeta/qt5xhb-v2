@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QIMAGE
-REQUEST QPAINTERPATH
-REQUEST QPOINTF
-REQUEST QRECTF
+REQUEST QByteArray
+REQUEST QImage
+REQUEST QPainterPath
+REQUEST QPointF
+REQUEST QRectF
 #endif
 
 CLASS QRawFont
@@ -92,6 +92,8 @@ RETURN
 #include <QtGui/QImage>
 #include <QtGui/QPainterPath>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QRAWFONT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -121,17 +123,15 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
 
 HB_FUNC_STATIC(QRAWFONT_DELETE)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isValid() const
 HB_FUNC_STATIC(QRAWFONT_ISVALID)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QRAWFONT_ISVALID)
 // void swap(QRawFont &other)
 HB_FUNC_STATIC(QRAWFONT_SWAP)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QRAWFONT_SWAP)
 // QString familyName() const
 HB_FUNC_STATIC(QRAWFONT_FAMILYNAME)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QRAWFONT_FAMILYNAME)
 // QString styleName() const
 HB_FUNC_STATIC(QRAWFONT_STYLENAME)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QRAWFONT_STYLENAME)
 // QFont::Style style() const
 HB_FUNC_STATIC(QRAWFONT_STYLE)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QRAWFONT_STYLE)
 // int weight() const
 HB_FUNC_STATIC(QRAWFONT_WEIGHT)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QRAWFONT_WEIGHT)
 // QVector<quint32> glyphIndexesForString(const QString &text) const
 HB_FUNC_STATIC(QRAWFONT_GLYPHINDEXESFORSTRING)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QRAWFONT_GLYPHINDEXESFORSTRING)
 // QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
 HB_FUNC_STATIC(QRAWFONT_ADVANCESFORGLYPHINDEXES)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QRAWFONT_ADVANCESFORGLYPHINDEXES)
 // QRawFont::SubPixelAntialiasing, const QTransform &transform = QTransform()) const
 HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
 // QPainterPath pathForGlyph(quint32 glyphIndex) const
 HB_FUNC_STATIC(QRAWFONT_PATHFORGLYPH)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QRAWFONT_PATHFORGLYPH)
 // QRectF boundingRect(quint32 glyphIndex) const
 HB_FUNC_STATIC(QRAWFONT_BOUNDINGRECT)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QRAWFONT_BOUNDINGRECT)
 // void setPixelSize(qreal pixelSize)
 HB_FUNC_STATIC(QRAWFONT_SETPIXELSIZE)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QRAWFONT_SETPIXELSIZE)
 // qreal pixelSize() const
 HB_FUNC_STATIC(QRAWFONT_PIXELSIZE)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QRAWFONT_PIXELSIZE)
 // QFont::HintingPreference hintingPreference() const
 HB_FUNC_STATIC(QRAWFONT_HINTINGPREFERENCE)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QRAWFONT_HINTINGPREFERENCE)
 // qreal ascent() const
 HB_FUNC_STATIC(QRAWFONT_ASCENT)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QRAWFONT_ASCENT)
 // qreal descent() const
 HB_FUNC_STATIC(QRAWFONT_DESCENT)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QRAWFONT_DESCENT)
 // qreal leading() const
 HB_FUNC_STATIC(QRAWFONT_LEADING)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QRAWFONT_LEADING)
 // qreal xHeight() const
 HB_FUNC_STATIC(QRAWFONT_XHEIGHT)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QRAWFONT_XHEIGHT)
 // qreal averageCharWidth() const
 HB_FUNC_STATIC(QRAWFONT_AVERAGECHARWIDTH)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QRAWFONT_AVERAGECHARWIDTH)
 // qreal maxCharWidth() const
 HB_FUNC_STATIC(QRAWFONT_MAXCHARWIDTH)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -536,7 +536,7 @@ HB_FUNC_STATIC(QRAWFONT_MAXCHARWIDTH)
 // qreal lineThickness() const
 HB_FUNC_STATIC(QRAWFONT_LINETHICKNESS)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -554,7 +554,7 @@ HB_FUNC_STATIC(QRAWFONT_LINETHICKNESS)
 // qreal underlinePosition() const
 HB_FUNC_STATIC(QRAWFONT_UNDERLINEPOSITION)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QRAWFONT_UNDERLINEPOSITION)
 // qreal unitsPerEm() const
 HB_FUNC_STATIC(QRAWFONT_UNITSPEREM)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -590,7 +590,7 @@ HB_FUNC_STATIC(QRAWFONT_UNITSPEREM)
 // void loadFromFile(const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference)
 HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
 // void loadFromData(const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference)
 HB_FUNC_STATIC(QRAWFONT_LOADFROMDATA)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -629,16 +629,16 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMDATA)
 
 HB_FUNC_STATIC(QRAWFONT_SUPPORTSCHARACTER)
 {
-  if (ISNUMPAR(1) && HB_ISARRAY(1)) {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool supportsCharacter(uint ucs4) const
-    auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->supportsCharacter(PUINT(1)));
     }
   } else if (ISNUMPAR(1) && ISQCHAR(1)) {
     // bool supportsCharacter(QChar character) const
-    auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->supportsCharacter(*PQCHAR(1)));
@@ -651,7 +651,7 @@ HB_FUNC_STATIC(QRAWFONT_SUPPORTSCHARACTER)
 // QList<QFontDatabase::WritingSystem> supportedWritingSystems() const
 HB_FUNC_STATIC(QRAWFONT_SUPPORTEDWRITINGSYSTEMS)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QRAWFONT_SUPPORTEDWRITINGSYSTEMS)
 // QByteArray fontTable(const char *tagName) const
 HB_FUNC_STATIC(QRAWFONT_FONTTABLE)
 {
-  auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

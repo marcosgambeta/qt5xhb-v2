@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTDOCUMENT
-REQUEST QTEXTFORMAT
+REQUEST QTextDocument
+REQUEST QTextFormat
 #endif
 
 CLASS QTextObject INHERIT QObject
@@ -54,10 +54,12 @@ RETURN
 
 #include <QtGui/QTextDocument>
 
-    // QTextFormat format() const
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTextObject *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QTextFormat format() const
 HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
 {
-  auto obj = qobject_cast<QTextObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -75,7 +77,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
 // int formatIndex() const
 HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
 {
-  auto obj = qobject_cast<QTextObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,7 +95,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
 // QTextDocument *document() const
 HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
 {
-  auto obj = qobject_cast<QTextObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
 // int objectIndex() const
 HB_FUNC_STATIC(QTEXTOBJECT_OBJECTINDEX)
 {
-  auto obj = qobject_cast<QTextObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

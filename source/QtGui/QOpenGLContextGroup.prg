@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOPENGLCONTEXT
+REQUEST QOpenGLContext
 #endif
 
 CLASS QOpenGLContextGroup INHERIT QObject
@@ -50,19 +50,19 @@ RETURN
 #include <QtGui/QOpenGLContextGroup>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QOpenGLContextGroup *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_DELETE)
 {
-  auto obj = qobject_cast<QOpenGLContextGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
-// QList<QOpenGLContext*> shares() const
+// QList<QOpenGLContext *> shares() const
 HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
 {
-  auto obj = qobject_cast<QOpenGLContextGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

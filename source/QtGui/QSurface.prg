@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QSURFACEFORMAT
+REQUEST QSize
+REQUEST QSurfaceFormat
 #endif
 
 CLASS QSurface
@@ -60,19 +60,19 @@ RETURN
 #include <QtGui/QSurface>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSURFACE_DELETE)
 {
-  auto obj = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QSurface::SurfaceClass surfaceClass() const
 HB_FUNC_STATIC(QSURFACE_SURFACECLASS)
 {
-  auto obj = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSURFACE_SURFACECLASS)
 // virtual QSurfaceFormat format() const = 0
 HB_FUNC_STATIC(QSURFACE_FORMAT)
 {
-  auto obj = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QSURFACE_FORMAT)
 // virtual QSurface::SurfaceType surfaceType() const = 0
 HB_FUNC_STATIC(QSURFACE_SURFACETYPE)
 {
-  auto obj = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QSURFACE_SURFACETYPE)
 // virtual QSize size() const = 0
 HB_FUNC_STATIC(QSURFACE_SIZE)
 {
-  auto obj = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

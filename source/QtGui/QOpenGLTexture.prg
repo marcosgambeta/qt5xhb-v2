@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
+REQUEST QColor
 #endif
 
 CLASS QOpenGLTexture
@@ -51,6 +51,7 @@ CLASS QOpenGLTexture
    METHOD setMipLevelRange
    METHOD setAutoMipMapGenerationEnabled
    METHOD isAutoMipMapGenerationEnabled
+   METHOD generatedMipMaps
    METHOD generateMipMaps
    METHOD setSwizzleMask
    METHOD swizzleMask
@@ -125,6 +126,8 @@ RETURN
 
 #include <QtGui/QColor>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QOPENGLTEXTURE_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -149,10 +152,8 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_NEW)
 HB_FUNC_STATIC(QOPENGLTEXTURE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -161,7 +162,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DELETE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_CREATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +182,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_CREATE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_DESTROY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +204,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DESTROY)
 HB_FUNC_STATIC(QOPENGLTEXTURE_ISCREATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +224,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISCREATED)
 HB_FUNC_STATIC(QOPENGLTEXTURE_TEXTUREID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +245,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BIND)
   if (ISNUMPAR(0)) {
     // void bind()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->bind();
@@ -255,12 +256,10 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BIND)
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     // void bind(uint unit, QOpenGLTexture::TextureUnitReset reset = QOpenGLTexture::DontResetTextureUnit)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->bind(PUINT(1), HB_ISNIL(2)
-                              ? static_cast<QOpenGLTexture::TextureUnitReset>(QOpenGLTexture::DontResetTextureUnit)
-                              : PQOPENGLTEXTURE_TEXTUREUNITRESET(2));
+      obj->bind(PUINT(1), HB_ISNIL(2) ? QOpenGLTexture::DontResetTextureUnit : PQOPENGLTEXTURE_TEXTUREUNITRESET(2));
     }
 
     RETURN_SELF();
@@ -275,7 +274,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_RELEASE)
   if (ISNUMPAR(0)) {
     // void release()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->release();
@@ -286,12 +285,10 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_RELEASE)
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     // void release(uint unit, QOpenGLTexture::TextureUnitReset reset = QOpenGLTexture::DontResetTextureUnit)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->release(PUINT(1), HB_ISNIL(2)
-                                 ? static_cast<QOpenGLTexture::TextureUnitReset>(QOpenGLTexture::DontResetTextureUnit)
-                                 : PQOPENGLTEXTURE_TEXTUREUNITRESET(2));
+      obj->release(PUINT(1), HB_ISNIL(2) ? QOpenGLTexture::DontResetTextureUnit : PQOPENGLTEXTURE_TEXTUREUNITRESET(2));
     }
 
     RETURN_SELF();
@@ -306,7 +303,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISBOUND)
   if (ISNUMPAR(0)) {
     // bool isBound() const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->isBound());
@@ -315,7 +312,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISBOUND)
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool isBound(uint unit)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->isBound(PUINT(1)));
@@ -330,7 +327,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISBOUND)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -352,7 +349,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETFORMAT)
 HB_FUNC_STATIC(QOPENGLTEXTURE_FORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +369,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_FORMAT)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,7 +391,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSIZE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_WIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -414,7 +411,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_WIDTH)
 HB_FUNC_STATIC(QOPENGLTEXTURE_HEIGHT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -434,7 +431,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_HEIGHT)
 HB_FUNC_STATIC(QOPENGLTEXTURE_DEPTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,7 +451,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DEPTH)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPLEVELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,7 +473,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPLEVELS)
 HB_FUNC_STATIC(QOPENGLTEXTURE_MIPLEVELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -496,7 +493,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MIPLEVELS)
 HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMMIPLEVELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,7 +513,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMMIPLEVELS)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETLAYERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -538,7 +535,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETLAYERS)
 HB_FUNC_STATIC(QOPENGLTEXTURE_LAYERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -558,7 +555,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_LAYERS)
 HB_FUNC_STATIC(QOPENGLTEXTURE_FACES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -578,7 +575,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_FACES)
 HB_FUNC_STATIC(QOPENGLTEXTURE_ALLOCATESTORAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -600,7 +597,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ALLOCATESTORAGE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_ISSTORAGEALLOCATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -621,7 +618,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISSTORAGEALLOCATED)
 HB_FUNC_STATIC(QOPENGLTEXTURE_CREATETEXTUREVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -643,7 +640,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_CREATETEXTUREVIEW)
 HB_FUNC_STATIC(QOPENGLTEXTURE_ISTEXTUREVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -663,7 +660,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISTEXTUREVIEW)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPBASELEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -685,7 +682,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPBASELEVEL)
 HB_FUNC_STATIC(QOPENGLTEXTURE_MIPBASELEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -705,7 +702,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MIPBASELEVEL)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPMAXLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -727,7 +724,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPMAXLEVEL)
 HB_FUNC_STATIC(QOPENGLTEXTURE_MIPMAXLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -747,7 +744,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MIPMAXLEVEL)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPLEVELRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -769,7 +766,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPLEVELRANGE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETAUTOMIPMAPGENERATIONENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -791,7 +788,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETAUTOMIPMAPGENERATIONENABLED)
 HB_FUNC_STATIC(QOPENGLTEXTURE_ISAUTOMIPMAPGENERATIONENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -807,12 +804,12 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISAUTOMIPMAPGENERATIONENABLED)
 #endif
 }
 
-HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEMIPMAPS)
+HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEDMIPMAPS)
 {
   if (ISNUMPAR(0)) {
     // void generateMipMaps()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->generateMipMaps();
@@ -820,10 +817,10 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEMIPMAPS)
 
     RETURN_SELF();
 #endif
-  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISOPTLOG(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
     // void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->generateMipMaps(PINT(1), OPBOOL(2, true));
@@ -841,7 +838,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setSwizzleMask(QOpenGLTexture::SwizzleComponent component, QOpenGLTexture::SwizzleValue value)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setSwizzleMask(PQOPENGLTEXTURE_SWIZZLECOMPONENT(1), PQOPENGLTEXTURE_SWIZZLEVALUE(2));
@@ -853,7 +850,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
     // void setSwizzleMask(QOpenGLTexture::SwizzleValue r, QOpenGLTexture::SwizzleValue g, QOpenGLTexture::SwizzleValue
     // b, QOpenGLTexture::SwizzleValue a)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setSwizzleMask(PQOPENGLTEXTURE_SWIZZLEVALUE(1), PQOPENGLTEXTURE_SWIZZLEVALUE(2),
@@ -871,7 +868,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SWIZZLEMASK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -891,7 +888,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SWIZZLEMASK)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETDEPTHSTENCILMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -913,7 +910,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETDEPTHSTENCILMODE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_DEPTHSTENCILMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -933,7 +930,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DEPTHSTENCILMODE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINIFICATIONFILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -955,7 +952,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINIFICATIONFILTER)
 HB_FUNC_STATIC(QOPENGLTEXTURE_MINIFICATIONFILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -975,7 +972,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MINIFICATIONFILTER)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAGNIFICATIONFILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -997,7 +994,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAGNIFICATIONFILTER)
 HB_FUNC_STATIC(QOPENGLTEXTURE_MAGNIFICATIONFILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1017,7 +1014,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAGNIFICATIONFILTER)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINMAGFILTERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1039,7 +1036,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINMAGFILTERS)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAXIMUMANISOTROPY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1061,7 +1058,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAXIMUMANISOTROPY)
 HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMANISOTROPY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1082,7 +1079,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETWRAPMODE)
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setWrapMode(QOpenGLTexture::WrapMode mode)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setWrapMode(PQOPENGLTEXTURE_WRAPMODE(1));
@@ -1093,7 +1090,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETWRAPMODE)
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setWrapMode(QOpenGLTexture::CoordinateDirection direction, QOpenGLTexture::WrapMode mode)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setWrapMode(PQOPENGLTEXTURE_COORDINATEDIRECTION(1), PQOPENGLTEXTURE_WRAPMODE(2));
@@ -1110,7 +1107,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETWRAPMODE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_WRAPMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1130,7 +1127,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_WRAPMODE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1152,7 +1149,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR1)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1174,7 +1171,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR2)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR3)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1196,7 +1193,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR3)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR4)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1233,7 +1230,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR)
 HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1253,7 +1250,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR1)
 HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1277,7 +1274,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR2)
 HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR3)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1301,7 +1298,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR3)
 HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR4)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1336,7 +1333,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINIMUMLEVELOFDETAIL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1358,7 +1355,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINIMUMLEVELOFDETAIL)
 HB_FUNC_STATIC(QOPENGLTEXTURE_MINIMUMLEVELOFDETAIL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1378,7 +1375,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MINIMUMLEVELOFDETAIL)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAXIMUMLEVELOFDETAIL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1400,7 +1397,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAXIMUMLEVELOFDETAIL)
 HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMLEVELOFDETAIL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1420,7 +1417,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMLEVELOFDETAIL)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETLEVELOFDETAILRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1442,7 +1439,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETLEVELOFDETAILRANGE)
 HB_FUNC_STATIC(QOPENGLTEXTURE_SETLEVELOFDETAILBIAS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1464,7 +1461,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETLEVELOFDETAILBIAS)
 HB_FUNC_STATIC(QOPENGLTEXTURE_LEVELOFDETAILBIAS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1485,13 +1482,11 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BOUNDTEXTUREID)
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // static GLuint boundTextureId(QOpenGLTexture::BindingTarget target)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-
     RGLUINT(QOpenGLTexture::boundTextureId(PQOPENGLTEXTURE_BINDINGTARGET(1)));
 #endif
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static GLuint boundTextureId(uint unit, QOpenGLTexture::BindingTarget target)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-
     RGLUINT(QOpenGLTexture::boundTextureId(PUINT(1), PQOPENGLTEXTURE_BINDINGTARGET(2)));
 #endif
   } else {

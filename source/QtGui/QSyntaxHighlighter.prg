@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTDOCUMENT
+REQUEST QTextDocument
 #endif
 
 CLASS QSyntaxHighlighter INHERIT QObject
@@ -54,20 +54,20 @@ RETURN
 
 #include <QtGui/QTextDocument>
 
-    // virtual ~QSyntaxHighlighter()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QSyntaxHighlighter()
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DELETE)
 {
-  auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void setDocument(QTextDocument *doc)
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
 {
-  auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
 // QTextDocument *document() const
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 {
-  auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 // void rehighlight()
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
 {
-  auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
 // void rehighlightBlock(const QTextBlock &block)
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK)
 {
-  auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZEF
-REQUEST QTEXTOPTION
+REQUEST QSizeF
+REQUEST QTextOption
 #endif
 
 CLASS QStaticText
@@ -70,6 +70,8 @@ RETURN
 #include <QtGui/QStaticText>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTATICTEXT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -91,17 +93,15 @@ HB_FUNC_STATIC(QSTATICTEXT_NEW)
 
 HB_FUNC_STATIC(QSTATICTEXT_DELETE)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void swap(QStaticText &other)
 HB_FUNC_STATIC(QSTATICTEXT_SWAP)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SWAP)
 // void setText(const QString &text)
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
 // QString text() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXT)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXT)
 // void setTextFormat(Qt::TextFormat textFormat)
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTFORMAT)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTFORMAT)
 // Qt::TextFormat textFormat() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXTFORMAT)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTFORMAT)
 // void setTextWidth(qreal textWidth)
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTWIDTH)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTWIDTH)
 // qreal textWidth() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXTWIDTH)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTWIDTH)
 // void setTextOption(const QTextOption &textOption)
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTOPTION)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTOPTION)
 // QTextOption textOption() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXTOPTION)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTOPTION)
 // QSizeF size() const
 HB_FUNC_STATIC(QSTATICTEXT_SIZE)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SIZE)
 // void prepare(const QTransform &matrix = QTransform(), const QFont &font = QFont())
 HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
 // void setPerformanceHint(QStaticText::PerformanceHint performanceHint)
 HB_FUNC_STATIC(QSTATICTEXT_SETPERFORMANCEHINT)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETPERFORMANCEHINT)
 // QStaticText::PerformanceHint performanceHint() const
 HB_FUNC_STATIC(QSTATICTEXT_PERFORMANCEHINT)
 {
-  auto obj = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

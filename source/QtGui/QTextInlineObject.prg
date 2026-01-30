@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QTEXTFORMAT
+REQUEST QRectF
+REQUEST QTextFormat
 #endif
 
 CLASS QTextInlineObject
@@ -70,7 +70,9 @@ RETURN
 #include <QtGui/QTextInlineObject>
 #endif
 
-    // QTextInlineObject()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QTextInlineObject()
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -83,17 +85,15 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_NEW)
 
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_DELETE)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isValid() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_ISVALID)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_ISVALID)
 // QRectF rect() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_RECT)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_RECT)
 // qreal width() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_WIDTH)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_WIDTH)
 // qreal ascent() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_ASCENT)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_ASCENT)
 // qreal descent() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_DESCENT)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_DESCENT)
 // qreal height() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_HEIGHT)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_HEIGHT)
 // Qt::LayoutDirection textDirection() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_TEXTDIRECTION)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_TEXTDIRECTION)
 // void setWidth(qreal w)
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETWIDTH)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETWIDTH)
 // void setAscent(qreal a)
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETASCENT)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETASCENT)
 // void setDescent(qreal d)
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETDESCENT)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETDESCENT)
 // int textPosition() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_TEXTPOSITION)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_TEXTPOSITION)
 // int formatIndex() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_FORMATINDEX)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_FORMATINDEX)
 // QTextFormat format() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_FORMAT)
 {
-  auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,14 +11,14 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBRUSH
-REQUEST QFONT
-REQUEST QPAINTER
-REQUEST QPAINTERPATH
-REQUEST QPEN
-REQUEST QPOINTF
-REQUEST QREGION
-REQUEST QTRANSFORM
+REQUEST QBrush
+REQUEST QFont
+REQUEST QPainter
+REQUEST QPainterPath
+REQUEST QPen
+REQUEST QPointF
+REQUEST QRegion
+REQUEST QTransform
 #endif
 
 CLASS QPaintEngineState
@@ -82,19 +82,19 @@ RETURN
 
 #include <QtGui/QPainterPath>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPAINTENGINESTATE_DELETE)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QBrush backgroundBrush() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDBRUSH)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDBRUSH)
 // Qt::BGMode backgroundMode() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDMODE)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDMODE)
 // QBrush brush() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSH)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSH)
 // bool brushNeedsResolving() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHNEEDSRESOLVING)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHNEEDSRESOLVING)
 // QPointF brushOrigin() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHORIGIN)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHORIGIN)
 // Qt::ClipOperation clipOperation() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPOPERATION)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPOPERATION)
 // QPainterPath clipPath() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPPATH)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPPATH)
 // QRegion clipRegion() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPREGION)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPREGION)
 // QPainter::CompositionMode compositionMode() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_COMPOSITIONMODE)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_COMPOSITIONMODE)
 // QFont font() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_FONT)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_FONT)
 // bool isClipEnabled() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_ISCLIPENABLED)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_ISCLIPENABLED)
 // qreal opacity() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_OPACITY)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_OPACITY)
 // QPainter *painter() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_PAINTER)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_PAINTER)
 // QPen pen() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_PEN)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_PEN)
 // bool penNeedsResolving() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_PENNEEDSRESOLVING)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_PENNEEDSRESOLVING)
 // QPainter::RenderHints renderHints() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_RENDERHINTS)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_RENDERHINTS)
 // QPaintEngine::DirtyFlags state() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_STATE)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_STATE)
 // QTransform transform() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_TRANSFORM)
 {
-  auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

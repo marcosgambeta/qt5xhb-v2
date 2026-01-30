@@ -47,7 +47,9 @@ RETURN
 #include <QtGui/QStatusTipEvent>
 #endif
 
-    // QStatusTipEvent(const QString &tip)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStatusTipEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QStatusTipEvent(const QString &tip)
 HB_FUNC_STATIC(QSTATUSTIPEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -60,17 +62,15 @@ HB_FUNC_STATIC(QSTATUSTIPEVENT_NEW)
 
 HB_FUNC_STATIC(QSTATUSTIPEVENT_DELETE)
 {
-  auto obj = static_cast<QStatusTipEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString tip() const
 HB_FUNC_STATIC(QSTATUSTIPEVENT_TIP)
 {
-  auto obj = static_cast<QStatusTipEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

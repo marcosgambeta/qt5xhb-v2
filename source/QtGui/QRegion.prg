@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
+REQUEST QRect
 #endif
 
 CLASS QRegion
@@ -68,6 +68,8 @@ RETURN
 #include <QtGui/QRegion>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QREGION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -102,17 +104,15 @@ HB_FUNC_STATIC(QREGION_NEW)
 
 HB_FUNC_STATIC(QREGION_DELETE)
 {
-  auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void swap(QRegion &other)
 HB_FUNC_STATIC(QREGION_SWAP)
 {
-  auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QREGION_SWAP)
 // bool isEmpty() const
 HB_FUNC_STATIC(QREGION_ISEMPTY)
 {
-  auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QREGION_ISEMPTY)
 // bool isNull() const
 HB_FUNC_STATIC(QREGION_ISNULL)
 {
-  auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,14 +169,14 @@ HB_FUNC_STATIC(QREGION_CONTAINS)
 {
   if (ISNUMPAR(1) && ISQPOINT(1)) {
     // bool contains(const QPoint &p) const
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->contains(*PQPOINT(1)));
     }
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // bool contains(const QRect &r) const
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->contains(*PQRECT(1)));
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void translate(int dx, int dy)
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->translate(PINT(1), PINT(2));
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
     RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void translate(const QPoint &p)
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->translate(*PQPOINT(1));
@@ -215,14 +215,14 @@ HB_FUNC_STATIC(QREGION_TRANSLATED)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QRegion translated(int dx, int dy) const
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQREGION(obj->translated(PINT(1), PINT(2)));
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QRegion translated(const QPoint &p) const
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQREGION(obj->translated(*PQPOINT(1)));
@@ -236,14 +236,14 @@ HB_FUNC_STATIC(QREGION_UNITED)
 {
   if (ISNUMPAR(1) && ISQREGION(1)) {
     // QRegion united(const QRegion &r) const
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQREGION(obj->united(*PQREGION(1)));
     }
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // QRegion united(const QRect &r) const
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQREGION(obj->united(*PQRECT(1)));
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QREGION_UNITED)
 // QRegion subtracted(const QRegion &r) const
 HB_FUNC_STATIC(QREGION_SUBTRACTED)
 {
-  auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QREGION_SUBTRACTED)
 // QRegion xored(const QRegion &r) const
 HB_FUNC_STATIC(QREGION_XORED)
 {
-  auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,14 +293,14 @@ HB_FUNC_STATIC(QREGION_INTERSECTS)
 {
   if (ISNUMPAR(1) && ISQREGION(1)) {
     // bool intersects(const QRegion &r) const
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->intersects(*PQREGION(1)));
     }
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // bool intersects(const QRect &r) const
-    auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->intersects(*PQRECT(1)));
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QREGION_INTERSECTS)
 // QRect boundingRect() const
 HB_FUNC_STATIC(QREGION_BOUNDINGRECT)
 {
-  auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QREGION_BOUNDINGRECT)
 // int rectCount() const
 HB_FUNC_STATIC(QREGION_RECTCOUNT)
 {
-  auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

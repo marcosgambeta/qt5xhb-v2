@@ -54,7 +54,9 @@ RETURN
 #include <QtGui/QOpenGLVertexArrayObject>
 #endif
 
-    // QOpenGLVertexArrayObject(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QOpenGLVertexArrayObject(QObject *parent = nullptr)
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -67,17 +69,15 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_NEW)
 
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DELETE)
 {
-  auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool create()
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_CREATE)
 {
-  auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_CREATE)
 // void destroy()
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DESTROY)
 {
-  auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DESTROY)
 // bool isCreated() const
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_ISCREATED)
 {
-  auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_ISCREATED)
 // GLuint objectId() const
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_OBJECTID)
 {
-  auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_OBJECTID)
 // void bind()
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_BIND)
 {
-  auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_BIND)
 // void release()
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_RELEASE)
 {
-  auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

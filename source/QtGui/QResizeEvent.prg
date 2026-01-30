@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
+REQUEST QSize
 #endif
 
 CLASS QResizeEvent INHERIT QEvent
@@ -49,7 +49,9 @@ RETURN
 #include <QtGui/QResizeEvent>
 #endif
 
-    // QResizeEvent(const QSize &size, const QSize &oldSize)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QResizeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QResizeEvent(const QSize &size, const QSize &oldSize)
 HB_FUNC_STATIC(QRESIZEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2)) {
@@ -62,23 +64,21 @@ HB_FUNC_STATIC(QRESIZEEVENT_NEW)
 
 HB_FUNC_STATIC(QRESIZEEVENT_DELETE)
 {
-  auto obj = static_cast<QResizeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const QSize &size() const
 HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
 {
-  auto obj = static_cast<QResizeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->size();
+      const auto ptr = &obj->size();
       Qt5xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -91,13 +91,13 @@ HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
 // const QSize &oldSize() const
 HB_FUNC_STATIC(QRESIZEEVENT_OLDSIZE)
 {
-  auto obj = static_cast<QResizeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->oldSize();
+      const auto ptr = &obj->oldSize();
       Qt5xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

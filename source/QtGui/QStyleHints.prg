@@ -57,10 +57,12 @@ RETURN
 #include <QtGui/QStyleHints>
 #endif
 
-    // int mouseDoubleClickInterval() const
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// int mouseDoubleClickInterval() const
 HB_FUNC_STATIC(QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL)
 // int startDragDistance() const
 HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGDISTANCE)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGDISTANCE)
 // int startDragTime() const
 HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGTIME)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGTIME)
 // int startDragVelocity() const
 HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGVELOCITY)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGVELOCITY)
 // int keyboardInputInterval() const
 HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDINPUTINTERVAL)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDINPUTINTERVAL)
 // int keyboardAutoRepeatRate() const
 HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDAUTOREPEATRATE)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDAUTOREPEATRATE)
 // int cursorFlashTime() const
 HB_FUNC_STATIC(QSTYLEHINTS_CURSORFLASHTIME)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_CURSORFLASHTIME)
 // bool showIsFullScreen() const
 HB_FUNC_STATIC(QSTYLEHINTS_SHOWISFULLSCREEN)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_SHOWISFULLSCREEN)
 // int passwordMaskDelay() const
 HB_FUNC_STATIC(QSTYLEHINTS_PASSWORDMASKDELAY)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_PASSWORDMASKDELAY)
 // qreal fontSmoothingGamma() const
 HB_FUNC_STATIC(QSTYLEHINTS_FONTSMOOTHINGGAMMA)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +242,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_FONTSMOOTHINGGAMMA)
 // bool useRtlExtensions() const
 HB_FUNC_STATIC(QSTYLEHINTS_USERTLEXTENSIONS)
 {
-  auto obj = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

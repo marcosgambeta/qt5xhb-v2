@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QREGULAREXPRESSION
+REQUEST QRegularExpression
 #endif
 
 CLASS QRegularExpressionValidator INHERIT QValidator
@@ -57,6 +57,9 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QRegularExpressionValidator *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -79,10 +82,8 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_NEW)
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QRegularExpressionValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -91,7 +92,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_DELETE)
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QRegularExpressionValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +112,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION)
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = qobject_cast<QRegularExpressionValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +134,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION)
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto sender = qobject_cast<QRegularExpressionValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -156,7 +157,6 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

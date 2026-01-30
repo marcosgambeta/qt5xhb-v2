@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QKEYSEQUENCE
+REQUEST QKeySequence
 #endif
 
 CLASS QShortcutEvent INHERIT QEvent
@@ -50,7 +50,9 @@ RETURN
 #include <QtGui/QShortcutEvent>
 #endif
 
-    // QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QShortcutEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 HB_FUNC_STATIC(QSHORTCUTEVENT_NEW)
 {
   if (ISBETWEEN(2, 3) && ISQKEYSEQUENCE(1) && HB_ISNUM(2) && ISLOGORNIL(3)) {
@@ -63,23 +65,21 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_NEW)
 
 HB_FUNC_STATIC(QSHORTCUTEVENT_DELETE)
 {
-  auto obj = static_cast<QShortcutEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const QKeySequence &key() const
 HB_FUNC_STATIC(QSHORTCUTEVENT_KEY)
 {
-  auto obj = static_cast<QShortcutEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->key();
+      const auto ptr = &obj->key();
       Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_KEY)
 // int shortcutId() const
 HB_FUNC_STATIC(QSHORTCUTEVENT_SHORTCUTID)
 {
-  auto obj = static_cast<QShortcutEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_SHORTCUTID)
 // bool isAmbiguous() const
 HB_FUNC_STATIC(QSHORTCUTEVENT_ISAMBIGUOUS)
 {
-  auto obj = static_cast<QShortcutEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

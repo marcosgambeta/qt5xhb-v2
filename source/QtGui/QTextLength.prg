@@ -58,6 +58,8 @@ RETURN
 #include <QtGui/QTextLength>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextLength *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTLENGTH_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -75,17 +77,15 @@ HB_FUNC_STATIC(QTEXTLENGTH_NEW)
 
 HB_FUNC_STATIC(QTEXTLENGTH_DELETE)
 {
-  auto obj = static_cast<QTextLength *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QTextLength::Type type() const
 HB_FUNC_STATIC(QTEXTLENGTH_TYPE)
 {
-  auto obj = static_cast<QTextLength *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_TYPE)
 // qreal value(qreal maximumLength) const
 HB_FUNC_STATIC(QTEXTLENGTH_VALUE)
 {
-  auto obj = static_cast<QTextLength *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_VALUE)
 // qreal rawValue() const
 HB_FUNC_STATIC(QTEXTLENGTH_RAWVALUE)
 {
-  auto obj = static_cast<QTextLength *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

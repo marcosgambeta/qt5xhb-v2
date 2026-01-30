@@ -61,7 +61,9 @@ RETURN
 #include <QtGui/QTouchDevice>
 #endif
 
-    // QTouchDevice()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QTouchDevice()
 HB_FUNC_STATIC(QTOUCHDEVICE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -74,17 +76,15 @@ HB_FUNC_STATIC(QTOUCHDEVICE_NEW)
 
 HB_FUNC_STATIC(QTOUCHDEVICE_DELETE)
 {
-  auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString name() const
 HB_FUNC_STATIC(QTOUCHDEVICE_NAME)
 {
-  auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_NAME)
 // QTouchDevice::DeviceType type() const
 HB_FUNC_STATIC(QTOUCHDEVICE_TYPE)
 {
-  auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_TYPE)
 // QTouchDevice::Capabilities capabilities() const
 HB_FUNC_STATIC(QTOUCHDEVICE_CAPABILITIES)
 {
-  auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_CAPABILITIES)
 // void setName(const QString &name)
 HB_FUNC_STATIC(QTOUCHDEVICE_SETNAME)
 {
-  auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_SETNAME)
 // void setType(QTouchDevice::DeviceType devType)
 HB_FUNC_STATIC(QTOUCHDEVICE_SETTYPE)
 {
-  auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_SETTYPE)
 // void setCapabilities(QTouchDevice::Capabilities caps)
 HB_FUNC_STATIC(QTOUCHDEVICE_SETCAPABILITIES)
 {
-  auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

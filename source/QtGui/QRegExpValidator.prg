@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QREGEXP
+REQUEST QRegExp
 #endif
 
 CLASS QRegExpValidator INHERIT QValidator
@@ -52,6 +52,8 @@ RETURN
 #include <QtGui/QRegExpValidator>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QRegExpValidator *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -69,23 +71,21 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
 
 HB_FUNC_STATIC(QREGEXPVALIDATOR_DELETE)
 {
-  auto obj = qobject_cast<QRegExpValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const QRegExp &regExp() const
 HB_FUNC_STATIC(QREGEXPVALIDATOR_REGEXP)
 {
-  auto obj = qobject_cast<QRegExpValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->regExp();
+      const auto ptr = &obj->regExp();
       Qt5xHb::createReturnClass(ptr, "QREGEXP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_REGEXP)
 // void setRegExp(const QRegExp &rx)
 HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
 {
-  auto obj = qobject_cast<QRegExpValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
 // virtual QValidator::State validate(QString &input, int &pos) const
 HB_FUNC_STATIC(QREGEXPVALIDATOR_VALIDATE)
 {
-  auto obj = qobject_cast<QRegExpValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

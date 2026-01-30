@@ -47,7 +47,9 @@ RETURN
 #include <QtGui/QWhatsThisClickedEvent>
 #endif
 
-    // QWhatsThisClickedEvent(const QString &href)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWhatsThisClickedEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QWhatsThisClickedEvent(const QString &href)
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -60,17 +62,15 @@ HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_DELETE)
 {
-  auto obj = static_cast<QWhatsThisClickedEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString href() const
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_HREF)
 {
-  auto obj = static_cast<QWhatsThisClickedEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

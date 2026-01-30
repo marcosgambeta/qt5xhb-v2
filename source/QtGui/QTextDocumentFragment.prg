@@ -60,6 +60,8 @@ RETURN
 #include <QtGui/QTextDocumentFragment>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextDocumentFragment *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -85,17 +87,15 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
 
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_DELETE)
 {
-  auto obj = static_cast<QTextDocumentFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isEmpty() const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_ISEMPTY)
 {
-  auto obj = static_cast<QTextDocumentFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_ISEMPTY)
 // QString toPlainText() const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT)
 {
-  auto obj = static_cast<QTextDocumentFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT)
 // QString toHtml(const QByteArray &encoding = QByteArray()) const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
 {
-  auto obj = static_cast<QTextDocumentFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

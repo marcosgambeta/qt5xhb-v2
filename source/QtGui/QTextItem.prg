@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QFONT
+REQUEST QFont
 #endif
 
 CLASS QTextItem
@@ -61,19 +61,19 @@ RETURN
 #include <QtGui/QTextItem>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTITEM_DELETE)
 {
-  auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // qreal descent() const
 HB_FUNC_STATIC(QTEXTITEM_DESCENT)
 {
-  auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QTEXTITEM_DESCENT)
 // qreal ascent() const
 HB_FUNC_STATIC(QTEXTITEM_ASCENT)
 {
-  auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QTEXTITEM_ASCENT)
 // qreal width() const
 HB_FUNC_STATIC(QTEXTITEM_WIDTH)
 {
-  auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QTEXTITEM_WIDTH)
 // QTextItem::RenderFlags renderFlags() const
 HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
 {
-  auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
 // QString text() const
 HB_FUNC_STATIC(QTEXTITEM_TEXT)
 {
-  auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QTEXTITEM_TEXT)
 // QFont font() const
 HB_FUNC_STATIC(QTEXTITEM_FONT)
 {
-  auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
