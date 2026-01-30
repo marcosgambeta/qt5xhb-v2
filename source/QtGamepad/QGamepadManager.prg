@@ -69,11 +69,13 @@ RETURN
 #endif
 #endif
 
-    // const QList<int> connectedGamepads() const
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// const QList<int> connectedGamepads() const
 HB_FUNC_STATIC(QGAMEPADMANAGER_CONNECTEDGAMEPADS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +113,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_INSTANCE)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ISGAMEPADCONNECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ISGAMEPADCONNECTED)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ISCONFIGURATIONNEEDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ISCONFIGURATIONNEEDED)
 HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREBUTTON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREBUTTON)
 HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +193,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREAXIS)
 HB_FUNC_STATIC(QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +213,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON)
 HB_FUNC_STATIC(QGAMEPADMANAGER_RESETCONFIGURATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +235,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_RESETCONFIGURATION)
 HB_FUNC_STATIC(QGAMEPADMANAGER_SETSETTINGSFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +257,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_SETSETTINGSFILE)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -275,7 +277,6 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -298,7 +299,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADCONNECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -320,7 +321,6 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADCONNECTED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADCONNECTED)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADDISCONNECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -365,7 +365,6 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADDISCONNECTED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -388,7 +387,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADDISCONNECTED)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADAXISEVENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -416,7 +415,6 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADAXISEVENT)
                                  hb_itemRelease(pArg3);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -439,7 +437,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADAXISEVENT)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -467,7 +465,6 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT)
                                  hb_itemRelease(pArg3);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -490,7 +487,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -515,7 +512,6 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -538,7 +534,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ONBUTTONCONFIGURED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -562,7 +558,6 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONBUTTONCONFIGURED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -585,7 +580,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONBUTTONCONFIGURED)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ONAXISCONFIGURED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -609,7 +604,6 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONAXISCONFIGURED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -632,7 +626,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONAXISCONFIGURED)
 HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONFIGURATIONCANCELED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto sender = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -654,7 +648,6 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONFIGURATIONCANCELED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
