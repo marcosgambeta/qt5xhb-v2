@@ -61,7 +61,9 @@ RETURN
 #endif
 #endif
 
-    // QAndroidJniEnvironment()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAndroidJniEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAndroidJniEnvironment()
 HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -78,15 +80,13 @@ HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_NEW)
 HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QAndroidJniEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
 
-// static JavaVM * javaVM()
+// static JavaVM *javaVM()
 HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_JAVAVM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -102,11 +102,11 @@ HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_JAVAVM)
 #endif
 }
 
-// jclass findClass(const char * className)
+// jclass findClass(const char *className)
 HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_FINDCLASS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-  auto obj = static_cast<QAndroidJniEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

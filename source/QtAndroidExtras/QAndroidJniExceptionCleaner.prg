@@ -60,14 +60,15 @@ RETURN
 #endif
 #endif
 
-    // QAndroidJniExceptionCleaner(QAndroidJniExceptionCleaner::OutputMode outputMode =
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAndroidJniExceptionCleaner *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAndroidJniExceptionCleaner(QAndroidJniExceptionCleaner::OutputMode outputMode =
     // QAndroidJniExceptionCleaner::OutputMode::Silent)
 HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    auto obj = new QAndroidJniExceptionCleaner(HB_ISNIL(1) ? static_cast<QAndroidJniExceptionCleaner::OutputMode>(
-                                                                 QAndroidJniExceptionCleaner::OutputMode::Silent)
+    auto obj = new QAndroidJniExceptionCleaner(HB_ISNIL(1) ? QAndroidJniExceptionCleaner::OutputMode::Silent
                                                            : PQANDROIDJNIEXCEPTIONCLEANER_OUTPUTMODE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -80,10 +81,8 @@ HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_NEW)
 HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = static_cast<QAndroidJniExceptionCleaner *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -92,7 +91,7 @@ HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_DELETE)
 HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_CLEAN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = static_cast<QAndroidJniExceptionCleaner *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

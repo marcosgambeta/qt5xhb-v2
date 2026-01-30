@@ -59,16 +59,14 @@ RETURN
 #endif
 #endif
 
-    // QAndroidActivityResultReceiver()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAndroidActivityResultReceiver *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-    // virtual ~QAndroidActivityResultReceiver()
+// virtual ~QAndroidActivityResultReceiver()
 HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QAndroidActivityResultReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -77,7 +75,7 @@ HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_DELETE)
 HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QAndroidActivityResultReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

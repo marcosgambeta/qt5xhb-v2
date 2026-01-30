@@ -68,6 +68,8 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    // QAndroidJniObject(const char * className)
+    // QAndroidJniObject(const char *className)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QAndroidJniObject(PCONSTCHAR(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -102,10 +104,8 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_NEW)
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -113,11 +113,11 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_DELETE)
 // T callMethod(const char *methodName) const
 // T callMethod(const char *methodName, const char *sig, ...) const
 
-// QAndroidJniObject callObjectMethod(const char * methodName) const
+// QAndroidJniObject callObjectMethod(const char *methodName) const
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_CALLOBJECTMETHOD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,18 +138,18 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_CALLOBJECTMETHOD)
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETOBJECTFIELD)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    // QAndroidJniObject getObjectField(const char * fieldName) const
+    // QAndroidJniObject getObjectField(const char *fieldName) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQANDROIDJNIOBJECT(obj->getObjectField(PCONSTCHAR(1)));
     }
 #endif
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    // QAndroidJniObject getObjectField(const char * fieldName, const char * signature) const
+    // QAndroidJniObject getObjectField(const char *fieldName, const char *signature) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-    auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQANDROIDJNIOBJECT(obj->getObjectField(PCONSTCHAR(1), PCONSTCHAR(2)));
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETOBJECTFIELD)
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_TOSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_TOSTRING)
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,12 +213,12 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_ISVALID)
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    // static QAndroidJniObject callStaticObjectMethod(const char * className, const char * methodName)
+    // static QAndroidJniObject callStaticObjectMethod(const char *className, const char *methodName)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     RQANDROIDJNIOBJECT(QAndroidJniObject::callStaticObjectMethod(PCONSTCHAR(1), PCONSTCHAR(2)));
 #endif
   } else if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISCHAR(2)) {
-    // static QAndroidJniObject callStaticObjectMethod(jclass clazz, const char * methodName)
+    // static QAndroidJniObject callStaticObjectMethod(jclass clazz, const char *methodName)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     RQANDROIDJNIOBJECT(QAndroidJniObject::callStaticObjectMethod((jclass)hb_parptr(1), PCONSTCHAR(2)));
 #endif
@@ -265,75 +265,31 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_FROMSTRING)
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    // static QAndroidJniObject getStaticObjectField(const char * className, const char * fieldName)
-HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
-    {
+    // static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-      if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField(PCONSTCHAR(1), PCONSTCHAR(2)));
 #endif
-        RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField(PCONSTCHAR(1), PCONSTCHAR(2)));
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-      } else {
-        hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-      }
-#endif
-#endif
-    }
   } else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
-    // static QAndroidJniObject getStaticObjectField(const char * className, const char * fieldName, const char * sig)
-HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
-    {
+    // static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName, const char *sig)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-      if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
+    RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField(PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3)));
 #endif
-        RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField(PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3)));
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-      } else {
-        hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-      }
-#endif
-#endif
-    }
   } else if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISCHAR(2)) {
-    // static QAndroidJniObject getStaticObjectField(jclass clazz, const char * fieldName)
-HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
-    {
+    // static QAndroidJniObject getStaticObjectField(jclass clazz, const char *fieldName)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-      if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISCHAR(2)) {
+    RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField((jclass)hb_parptr(1), PCONSTCHAR(2)));
 #endif
-        RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField((jclass)hb_parptr(1), PCONSTCHAR(2)));
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-      } else {
-        hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-      }
-#endif
-#endif
-    }
   } else if (ISNUMPAR(3) && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
-    // static QAndroidJniObject getStaticObjectField(jclass clazz, const char * fieldName, const char * sig)
-HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
-    {
+    // static QAndroidJniObject getStaticObjectField(jclass clazz, const char *fieldName, const char *sig)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-      if (ISNUMPAR(3) && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
+    RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField((jclass)hb_parptr(1), PCONSTCHAR(2), PCONSTCHAR(3)));
 #endif
-        RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField((jclass)hb_parptr(1), PCONSTCHAR(2), PCONSTCHAR(3)));
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-      } else {
-        hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-      }
-#endif
-#endif
-    }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-// static bool isClassAvailable(const char * className)
+// static bool isClassAvailable(const char *className)
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_ISCLASSAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

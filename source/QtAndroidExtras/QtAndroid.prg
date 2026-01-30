@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QANDROIDJNIOBJECT
+REQUEST QAndroidJniObject
 #endif
 
 CLASS QtAndroid
@@ -68,7 +68,9 @@ RETURN
 #endif
 #endif
 
-    // static QAndroidJniObject androidActivity()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QtAndroid *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// static QAndroidJniObject androidActivity()
 HB_FUNC_STATIC(QTANDROID_ANDROIDACTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDSDKVERSION)
 }
 
 // static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode,
-// QAndroidActivityResultReceiver * resultReceiver = nullptr)
+// QAndroidActivityResultReceiver *resultReceiver = nullptr)
 HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -120,8 +122,8 @@ HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
 #endif
 }
 
-// static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *
-// resultReceiver = nullptr)
+// static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver
+// *resultReceiver = nullptr)
 HB_FUNC_STATIC(QTANDROID_STARTACTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -198,17 +200,13 @@ HB_FUNC_STATIC(QTANDROID_HIDESPLASHSCREEN)
   if (ISNUMPAR(0)) {
     // static void hideSplashScreen()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-
     QtAndroid::hideSplashScreen();
-
     RETURN_SELF();
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // static void hideSplashScreen(int duration)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-
     QtAndroid::hideSplashScreen(PINT(1));
-
     RETURN_SELF();
 #endif
   } else {
