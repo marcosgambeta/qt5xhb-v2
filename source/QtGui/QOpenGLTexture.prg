@@ -51,7 +51,6 @@ CLASS QOpenGLTexture
    METHOD setMipLevelRange
    METHOD setAutoMipMapGenerationEnabled
    METHOD isAutoMipMapGenerationEnabled
-   METHOD generatedMipMaps
    METHOD generateMipMaps
    METHOD setSwizzleMask
    METHOD swizzleMask
@@ -804,7 +803,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISAUTOMIPMAPGENERATIONENABLED)
 #endif
 }
 
-HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEDMIPMAPS)
+HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEMIPMAPS)
 {
   if (ISNUMPAR(0)) {
     // void generateMipMaps()
