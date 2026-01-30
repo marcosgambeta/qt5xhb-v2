@@ -61,7 +61,9 @@ RETURN
 #include <QtCore/QStandardPaths>
 #endif
 
-    // static QString writableLocation(QStandardPaths::StandardLocation type)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStandardPaths *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// static QString writableLocation(QStandardPaths::StandardLocation type)
 HB_FUNC_STATIC(QSTANDARDPATHS_WRITABLELOCATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,10 +114,9 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
 #endif
-    RQSTRINGLIST(QStandardPaths::locateAll(PQSTANDARDPATHS_STANDARDLOCATION(1), PQSTRING(2),
-                                           HB_ISNIL(3)
-                                               ? static_cast<QStandardPaths::LocateOptions>(QStandardPaths::LocateFile)
-                                               : PQSTANDARDPATHS_LOCATEOPTIONS(3)));
+    RQSTRINGLIST(
+        QStandardPaths::locateAll(PQSTANDARDPATHS_STANDARDLOCATION(1), PQSTRING(2),
+                                  HB_ISNIL(3) ? QStandardPaths::LocateFile : PQSTANDARDPATHS_LOCATEOPTIONS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

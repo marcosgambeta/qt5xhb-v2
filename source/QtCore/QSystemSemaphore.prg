@@ -61,7 +61,9 @@ RETURN
 #include <QtCore/QSystemSemaphore>
 #endif
 
-    // QSystemSemaphore(const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode =
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSystemSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QSystemSemaphore(const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode =
     // QSystemSemaphore::Open)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
 {
@@ -76,17 +78,15 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
 
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_DELETE)
 {
-  auto obj = static_cast<QSystemSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void setKey(const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
 {
-  auto obj = static_cast<QSystemSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
 // QString key() const
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_KEY)
 {
-  auto obj = static_cast<QSystemSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_KEY)
 // bool acquire()
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ACQUIRE)
 {
-  auto obj = static_cast<QSystemSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ACQUIRE)
 // bool release(int n = 1)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
 {
-  auto obj = static_cast<QSystemSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
 // QSystemSemaphore::SystemSemaphoreError error() const
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ERROR)
 {
-  auto obj = static_cast<QSystemSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ERROR)
 // QString errorString() const
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ERRORSTRING)
 {
-  auto obj = static_cast<QSystemSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

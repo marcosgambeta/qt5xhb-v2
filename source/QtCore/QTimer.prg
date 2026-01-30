@@ -59,7 +59,9 @@ RETURN
 #include <QtCore/QTimer>
 #endif
 
-    // QTimer(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QTimer(QObject *parent = nullptr)
 HB_FUNC_STATIC(QTIMER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -72,17 +74,15 @@ HB_FUNC_STATIC(QTIMER_NEW)
 
 HB_FUNC_STATIC(QTIMER_DELETE)
 {
-  auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int interval() const
 HB_FUNC_STATIC(QTIMER_INTERVAL)
 {
-  auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QTIMER_INTERVAL)
 // bool isActive() const
 HB_FUNC_STATIC(QTIMER_ISACTIVE)
 {
-  auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QTIMER_ISACTIVE)
 // bool isSingleShot() const
 HB_FUNC_STATIC(QTIMER_ISSINGLESHOT)
 {
-  auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QTIMER_ISSINGLESHOT)
 // void setInterval(int msec)
 HB_FUNC_STATIC(QTIMER_SETINTERVAL)
 {
-  auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QTIMER_SETINTERVAL)
 // void setSingleShot(bool singleShot)
 HB_FUNC_STATIC(QTIMER_SETSINGLESHOT)
 {
-  auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QTIMER_SETSINGLESHOT)
 // int timerId() const
 HB_FUNC_STATIC(QTIMER_TIMERID)
 {
-  auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QTIMER_START)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void start(int msec)
-    auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->start(PINT(1));
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QTIMER_START)
     RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // void start()
-    auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->start();
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QTIMER_START)
 // void stop()
 HB_FUNC_STATIC(QTIMER_STOP)
 {
-  auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QTIMER_SINGLESHOT)
 // void timeout()
 HB_FUNC_STATIC(QTIMER_ONTIMEOUT)
 {
-  auto sender = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -274,7 +274,6 @@ HB_FUNC_STATIC(QTIMER_ONTIMEOUT)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

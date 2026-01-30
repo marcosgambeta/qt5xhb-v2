@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QObjectCleanupHandler INHERIT QObject
@@ -53,7 +53,9 @@ RETURN
 #include <QtCore/QObjectCleanupHandler>
 #endif
 
-    // QObjectCleanupHandler()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QObjectCleanupHandler()
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -66,17 +68,15 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
 {
-  auto obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QObject *add(QObject *object)
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 {
-  auto obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 // void remove(QObject *object)
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 {
-  auto obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 // bool isEmpty() const
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ISEMPTY)
 {
-  auto obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ISEMPTY)
 // void clear()
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_CLEAR)
 {
-  auto obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

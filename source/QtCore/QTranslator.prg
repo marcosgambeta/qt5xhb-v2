@@ -51,7 +51,9 @@ RETURN
 #include <QtCore/QTranslator>
 #endif
 
-    // QTranslator(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QTranslator(QObject *parent = nullptr)
 HB_FUNC_STATIC(QTRANSLATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -64,17 +66,15 @@ HB_FUNC_STATIC(QTRANSLATOR_NEW)
 
 HB_FUNC_STATIC(QTRANSLATOR_DELETE)
 {
-  auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual bool isEmpty() const
 HB_FUNC_STATIC(QTRANSLATOR_ISEMPTY)
 {
-  auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -94,15 +94,15 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
   if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
     // bool load(const QString &filename, const QString &directory = QString(), const QString &search_delimiters =
     // QString(), const QString &suffix = QString())
-    auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->load(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString())));
     }
   } else if (ISBETWEEN(2, 5) && ISQLOCALE(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
-    // bool load(const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString &
-    // directory = QString(), const QString &suffix = QString())
-    auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // bool load(const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString
+    // &directory = QString(), const QString &suffix = QString())
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->load(*PQLOCALE(1), PQSTRING(2), OPQSTRING(3, QString()), OPQSTRING(4, QString()),
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
     }
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3)) {
     // bool load(const uchar *data, int len, const QString &directory = QString())
-    auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->load(PCONSTUCHAR(1), PINT(2), OPQSTRING(3, QString())));
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
 // -1) const
 HB_FUNC_STATIC(QTRANSLATOR_TRANSLATE)
 {
-  auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

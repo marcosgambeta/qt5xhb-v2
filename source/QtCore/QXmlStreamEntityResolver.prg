@@ -55,19 +55,19 @@ RETURN
 #include <QtCore/QXmlStreamEntityResolver>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlStreamEntityResolver *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLSTREAMENTITYRESOLVER_DELETE)
 {
-  auto obj = static_cast<QXmlStreamEntityResolver *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QString resolveUndeclaredEntity(const QString &name)
 HB_FUNC_STATIC(QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY)
 {
-  auto obj = static_cast<QXmlStreamEntityResolver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -55,6 +55,8 @@ RETURN
 #include <QtCore/QTemporaryFile>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -80,17 +82,15 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
 
 HB_FUNC_STATIC(QTEMPORARYFILE_DELETE)
 {
-  auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool autoRemove() const
 HB_FUNC_STATIC(QTEMPORARYFILE_AUTOREMOVE)
 {
-  auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_AUTOREMOVE)
 // QString fileTemplate() const
 HB_FUNC_STATIC(QTEMPORARYFILE_FILETEMPLATE)
 {
-  auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILETEMPLATE)
 // bool open()
 HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
 {
-  auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
 // void setAutoRemove(bool b)
 HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 {
-  auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 // void setFileTemplate(const QString &name)
 HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 {
-  auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 // virtual QString fileName() const
 HB_FUNC_STATIC(QTEMPORARYFILE_FILENAME)
 {
-  auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,12 +203,10 @@ HB_FUNC_STATIC(QTEMPORARYFILE_CREATENATIVEFILE)
 {
   if (ISNUMPAR(1) && ISQFILE(1)) {
     // static QTemporaryFile *createNativeFile(QFile &file)
-
     auto ptr = QTemporaryFile::createNativeFile(*PQFILE(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QTemporaryFile *createNativeFile(const QString &fileName)
-
     auto ptr = QTemporaryFile::createNativeFile(PQSTRING(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
   } else {

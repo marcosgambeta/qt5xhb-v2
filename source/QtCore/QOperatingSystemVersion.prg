@@ -67,7 +67,9 @@ RETURN
 #endif
 #endif
 
-    // Q_DECL_CONSTEXPR QOperatingSystemVersion(QOperatingSystemVersion::OSType osType, int vmajor, int vminor = -1, int
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QOperatingSystemVersion *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// Q_DECL_CONSTEXPR QOperatingSystemVersion(QOperatingSystemVersion::OSType osType, int vmajor, int vminor = -1, int
     // vmicro = -1)
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_NEW)
 {
@@ -84,10 +86,8 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_NEW)
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QOperatingSystemVersion *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_CURRENTTYPE)
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MAJORVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QOperatingSystemVersion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MAJORVERSION)
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MINORVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QOperatingSystemVersion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MINORVERSION)
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MICROVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QOperatingSystemVersion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MICROVERSION)
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_SEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QOperatingSystemVersion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,11 +205,12 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_SEGMENTCOUNT)
 }
 
 // bool isAnyOfType(std::initializer_list<OSType> types) const
+
 // Q_DECL_CONSTEXPR QOperatingSystemVersion::OSType type() const
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QOperatingSystemVersion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +230,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_TYPE)
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  auto obj = static_cast<QOperatingSystemVersion *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

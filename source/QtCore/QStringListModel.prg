@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
-REQUEST QVARIANT
+REQUEST QModelIndex
+REQUEST QVariant
 #endif
 
 CLASS QStringListModel INHERIT QAbstractListModel
@@ -60,6 +60,8 @@ RETURN
 #include <QtCore/QStringListModel>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
 // void setStringList(const QStringList &strings)
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SETSTRINGLIST)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SETSTRINGLIST)
 // QStringList stringList() const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_STRINGLIST)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_STRINGLIST)
 // virtual QVariant data(const QModelIndex &index, int role) const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_DATA)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +136,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_DATA)
 // virtual Qt::ItemFlags flags(const QModelIndex &index) const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_FLAGS)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +154,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_FLAGS)
 // virtual bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QSTRINGLISTMODEL_INSERTROWS)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_INSERTROWS)
 // virtual bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QSTRINGLISTMODEL_REMOVEROWS)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +190,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_REMOVEROWS)
 // virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_ROWCOUNT)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_ROWCOUNT)
 // virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SETDATA)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +226,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SETDATA)
 // virtual QModelIndex sibling(int row, int column, const QModelIndex &idx) const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SIBLING)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +244,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SIBLING)
 // virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SORT)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +264,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SORT)
 // virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS)
 {
-  auto obj = qobject_cast<QStringListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

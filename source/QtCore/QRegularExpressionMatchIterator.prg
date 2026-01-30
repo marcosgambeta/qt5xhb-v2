@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QREGULAREXPRESSION
-REQUEST QREGULAREXPRESSIONMATCH
+REQUEST QRegularExpression
+REQUEST QRegularExpressionMatch
 #endif
 
 CLASS QRegularExpressionMatchIterator
@@ -65,7 +65,9 @@ RETURN
 #include <QtCore/QRegularExpressionMatchIterator>
 #endif
 
-    // QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator &iterator)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator &iterator)
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_NEW)
 {
   if (ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCHITERATOR(1)) {
@@ -78,17 +80,15 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_NEW)
 
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_DELETE)
 {
-  auto obj = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool hasNext() const
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_HASNEXT)
 {
-  auto obj = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_HASNEXT)
 // bool isValid() const
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_ISVALID)
 {
-  auto obj = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_ISVALID)
 // QRegularExpression::MatchOptions matchOptions() const
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_MATCHOPTIONS)
 {
-  auto obj = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_MATCHOPTIONS)
 // QRegularExpression::MatchType matchType() const
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_MATCHTYPE)
 {
-  auto obj = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_MATCHTYPE)
 // QRegularExpressionMatch next()
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_NEXT)
 {
-  auto obj = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_NEXT)
 // QRegularExpressionMatch peekNext() const
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_PEEKNEXT)
 {
-  auto obj = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_PEEKNEXT)
 // QRegularExpression regularExpression() const
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_REGULAREXPRESSION)
 {
-  auto obj = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_REGULAREXPRESSION)
 // void swap(QRegularExpressionMatchIterator &other)
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_SWAP)
 {
-  auto obj = static_cast<QRegularExpressionMatchIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

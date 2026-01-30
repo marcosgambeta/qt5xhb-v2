@@ -59,7 +59,9 @@ RETURN
 #include <QtCore/QSemaphore>
 #endif
 
-    // QSemaphore(int n = 0)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QSemaphore(int n = 0)
 HB_FUNC_STATIC(QSEMAPHORE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -72,17 +74,15 @@ HB_FUNC_STATIC(QSEMAPHORE_NEW)
 
 HB_FUNC_STATIC(QSEMAPHORE_DELETE)
 {
-  auto obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void acquire(int n = 1)
 HB_FUNC_STATIC(QSEMAPHORE_ACQUIRE)
 {
-  auto obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,14 +103,14 @@ HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // bool tryAcquire(int n = 1)
-    auto obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->tryAcquire(OPINT(1, 1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // bool tryAcquire(int n, int timeout)
-    auto obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->tryAcquire(PINT(1), PINT(2)));
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
 // void release(int n = 1)
 HB_FUNC_STATIC(QSEMAPHORE_RELEASE)
 {
-  auto obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QSEMAPHORE_RELEASE)
 // int available() const
 HB_FUNC_STATIC(QSEMAPHORE_AVAILABLE)
 {
-  auto obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

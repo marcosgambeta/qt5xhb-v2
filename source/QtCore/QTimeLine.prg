@@ -81,7 +81,9 @@ RETURN
 #include <QtCore/QTimeLine>
 #endif
 
-    // QTimeLine(int duration = 1000, QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QTimeLine(int duration = 1000, QObject *parent = nullptr)
 HB_FUNC_STATIC(QTIMELINE_NEW)
 {
   if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQOBJECTORNIL(2)) {
@@ -94,17 +96,15 @@ HB_FUNC_STATIC(QTIMELINE_NEW)
 
 HB_FUNC_STATIC(QTIMELINE_DELETE)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int currentFrame() const
 HB_FUNC_STATIC(QTIMELINE_CURRENTFRAME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTFRAME)
 // int currentTime() const
 HB_FUNC_STATIC(QTIMELINE_CURRENTTIME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTTIME)
 // qreal currentValue() const
 HB_FUNC_STATIC(QTIMELINE_CURRENTVALUE)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTVALUE)
 // QTimeLine::CurveShape curveShape() const
 HB_FUNC_STATIC(QTIMELINE_CURVESHAPE)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QTIMELINE_CURVESHAPE)
 // QTimeLine::Direction direction() const
 HB_FUNC_STATIC(QTIMELINE_DIRECTION)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QTIMELINE_DIRECTION)
 // int duration() const
 HB_FUNC_STATIC(QTIMELINE_DURATION)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QTIMELINE_DURATION)
 // int endFrame() const
 HB_FUNC_STATIC(QTIMELINE_ENDFRAME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QTIMELINE_ENDFRAME)
 // int frameForTime(int msec) const
 HB_FUNC_STATIC(QTIMELINE_FRAMEFORTIME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QTIMELINE_FRAMEFORTIME)
 // int loopCount() const
 HB_FUNC_STATIC(QTIMELINE_LOOPCOUNT)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QTIMELINE_LOOPCOUNT)
 // void setCurveShape(QTimeLine::CurveShape shape)
 HB_FUNC_STATIC(QTIMELINE_SETCURVESHAPE)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURVESHAPE)
 // void setDirection(QTimeLine::Direction direction)
 HB_FUNC_STATIC(QTIMELINE_SETDIRECTION)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDIRECTION)
 // void setDuration(int duration)
 HB_FUNC_STATIC(QTIMELINE_SETDURATION)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDURATION)
 // void setEasingCurve(const QEasingCurve &curve)
 HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
 // void setEndFrame(int frame)
 HB_FUNC_STATIC(QTIMELINE_SETENDFRAME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QTIMELINE_SETENDFRAME)
 // void setFrameRange(int startFrame, int endFrame)
 HB_FUNC_STATIC(QTIMELINE_SETFRAMERANGE)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QTIMELINE_SETFRAMERANGE)
 // void setLoopCount(int count)
 HB_FUNC_STATIC(QTIMELINE_SETLOOPCOUNT)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QTIMELINE_SETLOOPCOUNT)
 // void setStartFrame(int frame)
 HB_FUNC_STATIC(QTIMELINE_SETSTARTFRAME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QTIMELINE_SETSTARTFRAME)
 // void setUpdateInterval(int interval)
 HB_FUNC_STATIC(QTIMELINE_SETUPDATEINTERVAL)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QTIMELINE_SETUPDATEINTERVAL)
 // int startFrame() const
 HB_FUNC_STATIC(QTIMELINE_STARTFRAME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QTIMELINE_STARTFRAME)
 // QTimeLine::State state() const
 HB_FUNC_STATIC(QTIMELINE_STATE)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QTIMELINE_STATE)
 // int updateInterval() const
 HB_FUNC_STATIC(QTIMELINE_UPDATEINTERVAL)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QTIMELINE_UPDATEINTERVAL)
 // virtual qreal valueForTime(int msec) const
 HB_FUNC_STATIC(QTIMELINE_VALUEFORTIME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QTIMELINE_VALUEFORTIME)
 // void resume()
 HB_FUNC_STATIC(QTIMELINE_RESUME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QTIMELINE_RESUME)
 // void setCurrentTime(int msec)
 HB_FUNC_STATIC(QTIMELINE_SETCURRENTTIME)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURRENTTIME)
 // void setPaused(bool paused)
 HB_FUNC_STATIC(QTIMELINE_SETPAUSED)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -578,7 +578,7 @@ HB_FUNC_STATIC(QTIMELINE_SETPAUSED)
 // void start()
 HB_FUNC_STATIC(QTIMELINE_START)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QTIMELINE_START)
 // void stop()
 HB_FUNC_STATIC(QTIMELINE_STOP)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -618,7 +618,7 @@ HB_FUNC_STATIC(QTIMELINE_STOP)
 // void toggleDirection()
 HB_FUNC_STATIC(QTIMELINE_TOGGLEDIRECTION)
 {
-  auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -638,7 +638,7 @@ HB_FUNC_STATIC(QTIMELINE_TOGGLEDIRECTION)
 // void finished()
 HB_FUNC_STATIC(QTIMELINE_ONFINISHED)
 {
-  auto sender = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -657,7 +657,6 @@ HB_FUNC_STATIC(QTIMELINE_ONFINISHED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -676,7 +675,7 @@ HB_FUNC_STATIC(QTIMELINE_ONFINISHED)
 // void frameChanged(int frame)
 HB_FUNC_STATIC(QTIMELINE_ONFRAMECHANGED)
 {
-  auto sender = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -697,7 +696,6 @@ HB_FUNC_STATIC(QTIMELINE_ONFRAMECHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -716,7 +714,7 @@ HB_FUNC_STATIC(QTIMELINE_ONFRAMECHANGED)
 // void stateChanged(QTimeLine::State newState)
 HB_FUNC_STATIC(QTIMELINE_ONSTATECHANGED)
 {
-  auto sender = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -738,7 +736,6 @@ HB_FUNC_STATIC(QTIMELINE_ONSTATECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -757,7 +754,7 @@ HB_FUNC_STATIC(QTIMELINE_ONSTATECHANGED)
 // void valueChanged(qreal value)
 HB_FUNC_STATIC(QTIMELINE_ONVALUECHANGED)
 {
-  auto sender = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -778,7 +775,6 @@ HB_FUNC_STATIC(QTIMELINE_ONVALUECHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

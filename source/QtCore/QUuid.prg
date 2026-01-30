@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
+REQUEST QByteArray
 #endif
 
 CLASS QUuid
@@ -65,6 +65,8 @@ RETURN
 #include <QtCore/QUuid>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QUUID_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -82,17 +84,15 @@ HB_FUNC_STATIC(QUUID_NEW)
 
 HB_FUNC_STATIC(QUUID_DELETE)
 {
-  auto obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isNull() const
 HB_FUNC_STATIC(QUUID_ISNULL)
 {
-  auto obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QUUID_ISNULL)
 // QByteArray toByteArray() const
 HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 {
-  auto obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 // QByteArray toRfc4122() const
 HB_FUNC_STATIC(QUUID_TORFC4122)
 {
-  auto obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QUUID_TORFC4122)
 // QString toString() const
 HB_FUNC_STATIC(QUUID_TOSTRING)
 {
-  auto obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QUUID_TOSTRING)
 // QUuid::Variant variant() const
 HB_FUNC_STATIC(QUUID_VARIANT)
 {
-  auto obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QUUID_VARIANT)
 // QUuid::Version version() const
 HB_FUNC_STATIC(QUUID_VERSION)
 {
-  auto obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

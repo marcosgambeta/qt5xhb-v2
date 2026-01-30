@@ -66,6 +66,8 @@ RETURN
 #include <QtCore/QTextBoundaryFinder>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -87,17 +89,15 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_NEW)
 
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_DELETE)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isValid() const
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_ISVALID)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_ISVALID)
 // QTextBoundaryFinder::BoundaryType type() const
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TYPE)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TYPE)
 // QString string() const
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_STRING)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_STRING)
 // void toStart()
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOSTART)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOSTART)
 // void toEnd()
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOEND)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOEND)
 // int position() const
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_POSITION)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_POSITION)
 // void setPosition(int position)
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_SETPOSITION)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_SETPOSITION)
 // int toNextBoundary()
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TONEXTBOUNDARY)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TONEXTBOUNDARY)
 // int toPreviousBoundary()
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY)
 // bool isAtBoundary() const
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_ISATBOUNDARY)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_ISATBOUNDARY)
 // QTextBoundaryFinder::BoundaryReasons boundaryReasons() const
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_BOUNDARYREASONS)
 {
-  auto obj = static_cast<QTextBoundaryFinder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -57,22 +57,22 @@ RETURN
 #include <QtCore/QRunnable>
 #endif
 
-    // QRunnable()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QRunnable *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QRunnable()
 
     // virtual ~QRunnable()
 HB_FUNC_STATIC(QRUNNABLE_DELETE)
 {
-  auto obj = static_cast<QRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void run() = 0
 HB_FUNC_STATIC(QRUNNABLE_RUN)
 {
-  auto obj = static_cast<QRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QRUNNABLE_RUN)
 // bool autoDelete() const
 HB_FUNC_STATIC(QRUNNABLE_AUTODELETE)
 {
-  auto obj = static_cast<QRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QRUNNABLE_AUTODELETE)
 // void setAutoDelete(bool _autoDelete)
 HB_FUNC_STATIC(QRUNNABLE_SETAUTODELETE)
 {
-  auto obj = static_cast<QRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

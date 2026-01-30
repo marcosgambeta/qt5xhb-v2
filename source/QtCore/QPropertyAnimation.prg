@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QOBJECT
+REQUEST QByteArray
+REQUEST QObject
 #endif
 
 CLASS QPropertyAnimation INHERIT QVariantAnimation
@@ -54,6 +54,8 @@ RETURN
 #include <QtCore/QPropertyAnimation>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -71,17 +73,15 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 
 HB_FUNC_STATIC(QPROPERTYANIMATION_DELETE)
 {
-  auto obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QByteArray propertyName() const
 HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 {
-  auto obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 // void setPropertyName(const QByteArray &propertyName)
 HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 {
-  auto obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 // void setTargetObject(QObject *target)
 HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
 {
-  auto obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
 // QObject *targetObject() const
 HB_FUNC_STATIC(QPROPERTYANIMATION_TARGETOBJECT)
 {
-  auto obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

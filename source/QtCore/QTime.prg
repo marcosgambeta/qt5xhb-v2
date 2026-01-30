@@ -72,6 +72,8 @@ RETURN
 #include <QtCore/QTime>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTIME_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -89,17 +91,15 @@ HB_FUNC_STATIC(QTIME_NEW)
 
 HB_FUNC_STATIC(QTIME_DELETE)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QTime addMSecs(int ms) const
 HB_FUNC_STATIC(QTIME_ADDMSECS)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QTIME_ADDMSECS)
 // QTime addSecs(int s) const
 HB_FUNC_STATIC(QTIME_ADDSECS)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QTIME_ADDSECS)
 // int elapsed() const
 HB_FUNC_STATIC(QTIME_ELAPSED)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QTIME_ELAPSED)
 // int hour() const
 HB_FUNC_STATIC(QTIME_HOUR)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QTIME_HOUR)
 // bool isNull() const
 HB_FUNC_STATIC(QTIME_ISNULL)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,14 +190,13 @@ HB_FUNC_STATIC(QTIME_ISVALID)
 {
   if (ISNUMPAR(0)) {
     // bool isValid() const
-    auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->isValid());
     }
   } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // static bool isValid(int h, int m, int s, int ms = 0)
-
     RBOOL(QTime::isValid(PINT(1), PINT(2), PINT(3), OPINT(4, 0)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -207,7 +206,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
 // int minute() const
 HB_FUNC_STATIC(QTIME_MINUTE)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +224,7 @@ HB_FUNC_STATIC(QTIME_MINUTE)
 // int msec() const
 HB_FUNC_STATIC(QTIME_MSEC)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +242,7 @@ HB_FUNC_STATIC(QTIME_MSEC)
 // int msecsTo(const QTime &t) const
 HB_FUNC_STATIC(QTIME_MSECSTO)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +260,7 @@ HB_FUNC_STATIC(QTIME_MSECSTO)
 // int restart()
 HB_FUNC_STATIC(QTIME_RESTART)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +278,7 @@ HB_FUNC_STATIC(QTIME_RESTART)
 // int second() const
 HB_FUNC_STATIC(QTIME_SECOND)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +296,7 @@ HB_FUNC_STATIC(QTIME_SECOND)
 // int secsTo(const QTime &t) const
 HB_FUNC_STATIC(QTIME_SECSTO)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +314,7 @@ HB_FUNC_STATIC(QTIME_SECSTO)
 // bool setHMS(int h, int m, int s, int ms = 0)
 HB_FUNC_STATIC(QTIME_SETHMS)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,7 +332,7 @@ HB_FUNC_STATIC(QTIME_SETHMS)
 // void start()
 HB_FUNC_STATIC(QTIME_START)
 {
-  auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,14 +353,14 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QString toString(const QString &format) const
-    auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQSTRING(obj->toString(PQSTRING(1)));
     }
   } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // QString toString(Qt::DateFormat format = Qt::TextDate) const
-    auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQSTRING(obj->toString(HB_ISNIL(1) ? Qt::TextDate : PQT_DATEFORMAT(1)));

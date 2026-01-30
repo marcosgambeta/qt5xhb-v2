@@ -65,6 +65,8 @@ RETURN
 #include <QtCore/QProcessEnvironment>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -82,17 +84,15 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_NEW)
 
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_DELETE)
 {
-  auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void swap(QProcessEnvironment &other)
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_SWAP)
 {
-  auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_SWAP)
 // bool isEmpty() const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_ISEMPTY)
 {
-  auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_ISEMPTY)
 // void clear()
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_CLEAR)
 {
-  auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_CLEAR)
 // bool contains(const QString &name) const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_CONTAINS)
 {
-  auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_INSERT)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void insert(const QString &name, const QString &value)
-    auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->insert(PQSTRING(1), PQSTRING(2));
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_INSERT)
     RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1)) {
     // void insert(const QProcessEnvironment &e)
-    auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->insert(*PQPROCESSENVIRONMENT(1));
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_INSERT)
 // void remove(const QString &name)
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_REMOVE)
 {
-  auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_REMOVE)
 // QString value(const QString &name, const QString &defaultValue = QString()) const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_VALUE)
 {
-  auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_VALUE)
 // QStringList toStringList() const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_TOSTRINGLIST)
 {
-  auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_TOSTRINGLIST)
 // QStringList keys() const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_KEYS)
 {
-  auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

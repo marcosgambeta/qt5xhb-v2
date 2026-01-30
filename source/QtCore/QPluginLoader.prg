@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QPluginLoader INHERIT QObject
@@ -59,6 +59,8 @@ RETURN
 #include <QtCore/QPluginLoader>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPLUGINLOADER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -76,17 +78,15 @@ HB_FUNC_STATIC(QPLUGINLOADER_NEW)
 
 HB_FUNC_STATIC(QPLUGINLOADER_DELETE)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString errorString() const
 HB_FUNC_STATIC(QPLUGINLOADER_ERRORSTRING)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_ERRORSTRING)
 // QString fileName() const
 HB_FUNC_STATIC(QPLUGINLOADER_FILENAME)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_FILENAME)
 // QObject *instance()
 HB_FUNC_STATIC(QPLUGINLOADER_INSTANCE)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_INSTANCE)
 // bool isLoaded() const
 HB_FUNC_STATIC(QPLUGINLOADER_ISLOADED)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_ISLOADED)
 // bool load()
 HB_FUNC_STATIC(QPLUGINLOADER_LOAD)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_LOAD)
 // QLibrary::LoadHints loadHints() const
 HB_FUNC_STATIC(QPLUGINLOADER_LOADHINTS)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_LOADHINTS)
 // void setFileName(const QString &fileName)
 HB_FUNC_STATIC(QPLUGINLOADER_SETFILENAME)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_SETFILENAME)
 // void setLoadHints(QLibrary::LoadHints loadHints)
 HB_FUNC_STATIC(QPLUGINLOADER_SETLOADHINTS)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_SETLOADHINTS)
 // bool unload()
 HB_FUNC_STATIC(QPLUGINLOADER_UNLOAD)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_UNLOAD)
 // QObjectList staticInstances()
 HB_FUNC_STATIC(QPLUGINLOADER_STATICINSTANCES)
 {
-  auto obj = qobject_cast<QPluginLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

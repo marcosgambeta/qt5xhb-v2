@@ -50,6 +50,8 @@ RETURN
 #include <QtCore/QWinEventNotifier>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWinEventNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QWINEVENTNOTIFIER_NEW)
 {
 #ifdef Q_OS_WIN
@@ -58,7 +60,6 @@ HB_FUNC_STATIC(QWINEVENTNOTIFIER_NEW)
     // QWinEventNotifier(QObject *parent = nullptr)
     auto obj = new QWinEventNotifier(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -69,10 +70,8 @@ HB_FUNC_STATIC(QWINEVENTNOTIFIER_NEW)
 HB_FUNC_STATIC(QWINEVENTNOTIFIER_DELETE)
 {
 #ifdef Q_OS_WIN
-  auto obj = qobject_cast<QWinEventNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -81,7 +80,7 @@ HB_FUNC_STATIC(QWINEVENTNOTIFIER_DELETE)
 HB_FUNC_STATIC(QWINEVENTNOTIFIER_ISENABLED)
 {
 #ifdef Q_OS_WIN
-  auto obj = qobject_cast<QWinEventNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +100,7 @@ HB_FUNC_STATIC(QWINEVENTNOTIFIER_ISENABLED)
 HB_FUNC_STATIC(QWINEVENTNOTIFIER_SETENABLED)
 {
 #ifdef Q_OS_WIN
-  auto obj = qobject_cast<QWinEventNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
