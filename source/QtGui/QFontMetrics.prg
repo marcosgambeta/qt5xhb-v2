@@ -24,7 +24,6 @@ CLASS QFontMetrics
    METHOD delete
    METHOD ascent
    METHOD averageCharWidth
-   METHOD boudingRect
    METHOD boundingRect
    METHOD descent
    METHOD elidedText
