@@ -25,7 +25,6 @@ CLASS QRadialGradient INHERIT QGradient
    METHOD radius
    METHOD setCenter
    METHOD setCenterRadius
-   METHOD setFocalPointF
    METHOD setFocalPoint
    METHOD setFocalRadius
    METHOD setRadius
@@ -237,7 +236,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTERRADIUS)
   RETURN_SELF();
 }
 
-HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINTF)
+HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void setFocalPoint(const QPointF &focalPoint)
