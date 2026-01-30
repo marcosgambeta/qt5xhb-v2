@@ -279,4 +279,6 @@
 \
   hb_itemReturn(self);
 
+#define THROW_ERROR_3012() hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS)
+
 #endif // QT5XHB_MACROS_HPP
