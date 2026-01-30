@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
+REQUEST QUrl
 #endif
 
 CLASS QFileSelector INHERIT QObject
@@ -55,7 +55,9 @@ RETURN
 
 #include <QtCore/QUrl>
 
-    // QFileSelector(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QFileSelector(QObject *parent = nullptr)
 HB_FUNC_STATIC(QFILESELECTOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -68,10 +70,8 @@ HB_FUNC_STATIC(QFILESELECTOR_NEW)
 
 HB_FUNC_STATIC(QFILESELECTOR_DELETE)
 {
-  auto obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
@@ -79,14 +79,14 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QString select(const QString &filePath) const
-    auto obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQSTRING(obj->select(PQSTRING(1)));
     }
   } else if (ISNUMPAR(1) && ISQURL(1)) {
     // QUrl select(const QUrl &filePath) const
-    auto obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQURL(obj->select(*PQURL(1)));
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
 // QStringList extraSelectors() const
 HB_FUNC_STATIC(QFILESELECTOR_EXTRASELECTORS)
 {
-  auto obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QFILESELECTOR_EXTRASELECTORS)
 // void setExtraSelectors(const QStringList &list)
 HB_FUNC_STATIC(QFILESELECTOR_SETEXTRASELECTORS)
 {
-  auto obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SETEXTRASELECTORS)
 // QStringList allSelectors() const
 HB_FUNC_STATIC(QFILESELECTOR_ALLSELECTORS)
 {
-  auto obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

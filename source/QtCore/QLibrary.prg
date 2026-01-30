@@ -58,6 +58,8 @@ RETURN
 #include <QtCore/QLibrary>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QLIBRARY_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -83,17 +85,15 @@ HB_FUNC_STATIC(QLIBRARY_NEW)
 
 HB_FUNC_STATIC(QLIBRARY_DELETE)
 {
-  auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool load()
 HB_FUNC_STATIC(QLIBRARY_LOAD)
 {
-  auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QLIBRARY_LOAD)
 // bool unload()
 HB_FUNC_STATIC(QLIBRARY_UNLOAD)
 {
-  auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QLIBRARY_UNLOAD)
 // bool isLoaded() const
 HB_FUNC_STATIC(QLIBRARY_ISLOADED)
 {
-  auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QLIBRARY_ISLOADED)
 // void setFileName(const QString &fileName)
 HB_FUNC_STATIC(QLIBRARY_SETFILENAME)
 {
-  auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAME)
 // QString fileName() const
 HB_FUNC_STATIC(QLIBRARY_FILENAME)
 {
-  auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // void setFileNameAndVersion(const QString &fileName, int verNum)
-    auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setFileNameAndVersion(PQSTRING(1), PINT(2));
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
     RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void setFileNameAndVersion(const QString &fileName, const QString &version)
-    auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setFileNameAndVersion(PQSTRING(1), PQSTRING(2));
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
 // QString errorString() const
 HB_FUNC_STATIC(QLIBRARY_ERRORSTRING)
 {
-  auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QLIBRARY_ERRORSTRING)
 // void setLoadHints(QLibrary::LoadHints hints)
 HB_FUNC_STATIC(QLIBRARY_SETLOADHINTS)
 {
-  auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QLIBRARY_SETLOADHINTS)
 // QLibrary::LoadHints loadHints() const
 HB_FUNC_STATIC(QLIBRARY_LOADHINTS)
 {
-  auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

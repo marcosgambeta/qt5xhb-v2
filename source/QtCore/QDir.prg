@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCHAR
-REQUEST QFILEINFO
+REQUEST QChar
+REQUEST QFileInfo
 #endif
 
 CLASS QDir
@@ -111,6 +111,8 @@ RETURN
 #include <QtCore/QDir>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDIR_NEW)
 {
   if (ISNUMPAR(1) && ISQDIR(1)) {
@@ -135,17 +137,15 @@ HB_FUNC_STATIC(QDIR_NEW)
 
 HB_FUNC_STATIC(QDIR_DELETE)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QString absoluteFilePath(const QString &fileName) const
 HB_FUNC_STATIC(QDIR_ABSOLUTEFILEPATH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QDIR_ABSOLUTEFILEPATH)
 // QString absolutePath() const
 HB_FUNC_STATIC(QDIR_ABSOLUTEPATH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QDIR_ABSOLUTEPATH)
 // QString canonicalPath() const
 HB_FUNC_STATIC(QDIR_CANONICALPATH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QDIR_CANONICALPATH)
 // bool cd(const QString &dirName)
 HB_FUNC_STATIC(QDIR_CD)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QDIR_CD)
 // bool cdUp()
 HB_FUNC_STATIC(QDIR_CDUP)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QDIR_CDUP)
 // uint count() const
 HB_FUNC_STATIC(QDIR_COUNT)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QDIR_COUNT)
 // QString dirName() const
 HB_FUNC_STATIC(QDIR_DIRNAME)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
   if (ISBETWEEN(1, 3) && HB_ISARRAY(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QFileInfoList entryInfoList(const QStringList &nameFilters, QDir::Filters filters = QDir::NoFilter,
     // QDir::SortFlags sort = QDir::NoSort) const
-    auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto list = obj->entryInfoList(PQSTRINGLIST(1), HB_ISNIL(2) ? QDir::NoFilter : PQDIR_FILTERS(2),
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
     }
   } else if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
     // QFileInfoList entryInfoList(QDir::Filters filters = QDir::NoFilter, QDir::SortFlags sort = QDir::NoSort) const
-    auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto list = obj->entryInfoList(HB_ISNIL(1) ? QDir::NoFilter : PQDIR_FILTERS(1),
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QDIR_ENTRYLIST)
   if (ISBETWEEN(1, 3) && HB_ISARRAY(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QStringList entryList(const QStringList &nameFilters, QDir::Filters filters = QDir::NoFilter, QDir::SortFlags
     // sort = QDir::NoSort) const
-    auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQSTRINGLIST(obj->entryList(PQSTRINGLIST(1), HB_ISNIL(2) ? QDir::NoFilter : PQDIR_FILTERS(2),
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QDIR_ENTRYLIST)
     }
   } else if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
     // QStringList entryList(QDir::Filters filters = QDir::NoFilter, QDir::SortFlags sort = QDir::NoSort) const
-    auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQSTRINGLIST(obj->entryList(HB_ISNIL(1) ? QDir::NoFilter : PQDIR_FILTERS(1),
@@ -364,14 +364,14 @@ HB_FUNC_STATIC(QDIR_EXISTS)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool exists(const QString &name) const
-    auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->exists(PQSTRING(1)));
     }
   } else if (ISNUMPAR(0)) {
     // bool exists() const
-    auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->exists());
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QDIR_EXISTS)
 // QString filePath(const QString &fileName) const
 HB_FUNC_STATIC(QDIR_FILEPATH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QDIR_FILEPATH)
 // QDir::Filters filter() const
 HB_FUNC_STATIC(QDIR_FILTER)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QDIR_FILTER)
 // bool isAbsolute() const
 HB_FUNC_STATIC(QDIR_ISABSOLUTE)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QDIR_ISABSOLUTE)
 // bool isReadable() const
 HB_FUNC_STATIC(QDIR_ISREADABLE)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QDIR_ISREADABLE)
 // bool isRelative() const
 HB_FUNC_STATIC(QDIR_ISRELATIVE)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QDIR_ISRELATIVE)
 // bool isRoot() const
 HB_FUNC_STATIC(QDIR_ISROOT)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QDIR_ISROOT)
 // bool makeAbsolute()
 HB_FUNC_STATIC(QDIR_MAKEABSOLUTE)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QDIR_MAKEABSOLUTE)
 // bool mkdir(const QString &dirName) const
 HB_FUNC_STATIC(QDIR_MKDIR)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QDIR_MKDIR)
 // bool mkpath(const QString &dirPath) const
 HB_FUNC_STATIC(QDIR_MKPATH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QDIR_MKPATH)
 // QStringList nameFilters() const
 HB_FUNC_STATIC(QDIR_NAMEFILTERS)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QDIR_NAMEFILTERS)
 // QString path() const
 HB_FUNC_STATIC(QDIR_PATH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -582,7 +582,7 @@ HB_FUNC_STATIC(QDIR_PATH)
 // void refresh() const
 HB_FUNC_STATIC(QDIR_REFRESH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QDIR_REFRESH)
 // QString relativeFilePath(const QString &fileName) const
 HB_FUNC_STATIC(QDIR_RELATIVEFILEPATH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -620,7 +620,7 @@ HB_FUNC_STATIC(QDIR_RELATIVEFILEPATH)
 // bool remove(const QString &fileName)
 HB_FUNC_STATIC(QDIR_REMOVE)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -638,7 +638,7 @@ HB_FUNC_STATIC(QDIR_REMOVE)
 // bool removeRecursively()
 HB_FUNC_STATIC(QDIR_REMOVERECURSIVELY)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -656,7 +656,7 @@ HB_FUNC_STATIC(QDIR_REMOVERECURSIVELY)
 // bool rename(const QString &oldName, const QString &newName)
 HB_FUNC_STATIC(QDIR_RENAME)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QDIR_RENAME)
 // bool rmdir(const QString &dirName) const
 HB_FUNC_STATIC(QDIR_RMDIR)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -692,7 +692,7 @@ HB_FUNC_STATIC(QDIR_RMDIR)
 // bool rmpath(const QString &dirPath) const
 HB_FUNC_STATIC(QDIR_RMPATH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -710,7 +710,7 @@ HB_FUNC_STATIC(QDIR_RMPATH)
 // void setFilter(QDir::Filters filters)
 HB_FUNC_STATIC(QDIR_SETFILTER)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -730,7 +730,7 @@ HB_FUNC_STATIC(QDIR_SETFILTER)
 // void setNameFilters(const QStringList &nameFilters)
 HB_FUNC_STATIC(QDIR_SETNAMEFILTERS)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -750,7 +750,7 @@ HB_FUNC_STATIC(QDIR_SETNAMEFILTERS)
 // void setPath(const QString &path)
 HB_FUNC_STATIC(QDIR_SETPATH)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -770,7 +770,7 @@ HB_FUNC_STATIC(QDIR_SETPATH)
 // void setSorting(QDir::SortFlags sort)
 HB_FUNC_STATIC(QDIR_SETSORTING)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -790,7 +790,7 @@ HB_FUNC_STATIC(QDIR_SETSORTING)
 // QDir::SortFlags sorting() const
 HB_FUNC_STATIC(QDIR_SORTING)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -808,7 +808,7 @@ HB_FUNC_STATIC(QDIR_SORTING)
 // void swap(QDir &other)
 HB_FUNC_STATIC(QDIR_SWAP)
 {
-  auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -993,11 +993,9 @@ HB_FUNC_STATIC(QDIR_MATCH)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // static bool match(const QString &filter, const QString &fileName)
-
     RBOOL(QDir::match(PQSTRING(1), PQSTRING(2)));
   } else if (ISNUMPAR(2) && HB_ISARRAY(1) && HB_ISCHAR(2)) {
     // static bool match(const QStringList &filters, const QString &fileName)
-
     RBOOL(QDir::match(PQSTRINGLIST(1), PQSTRING(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

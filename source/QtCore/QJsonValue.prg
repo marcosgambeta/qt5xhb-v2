@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QJSONARRAY
-REQUEST QJSONOBJECT
-REQUEST QVARIANT
+REQUEST QJsonArray
+REQUEST QJsonObject
+REQUEST QVariant
 #endif
 
 CLASS QJsonValue
@@ -80,7 +80,9 @@ RETURN
 #include <QtCore/QJsonObject>
 #include <QtCore/QVariant>
 
-    // QJsonValue(QJsonValue::Type type = QJsonValue::Null)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QJsonValue(QJsonValue::Type type = QJsonValue::Null)
 HB_FUNC_STATIC(QJSONVALUE_NEW1)
 {
   auto obj = new QJsonValue(HB_ISNIL(1) ? QJsonValue::Null : PQJSONVALUE_TYPE(1));
@@ -135,17 +137,15 @@ HB_FUNC_STATIC(QJSONVALUE_NEW)
 
 HB_FUNC_STATIC(QJSONVALUE_DELETE)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isArray() const
 HB_FUNC_STATIC(QJSONVALUE_ISARRAY)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISARRAY)
 // bool isBool() const
 HB_FUNC_STATIC(QJSONVALUE_ISBOOL)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISBOOL)
 // bool isDouble() const
 HB_FUNC_STATIC(QJSONVALUE_ISDOUBLE)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISDOUBLE)
 // bool isNull() const
 HB_FUNC_STATIC(QJSONVALUE_ISNULL)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISNULL)
 // bool isObject() const
 HB_FUNC_STATIC(QJSONVALUE_ISOBJECT)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISOBJECT)
 // bool isString() const
 HB_FUNC_STATIC(QJSONVALUE_ISSTRING)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISSTRING)
 // bool isUndefined() const
 HB_FUNC_STATIC(QJSONVALUE_ISUNDEFINED)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,14 +272,14 @@ HB_FUNC_STATIC(QJSONVALUE_TOARRAY)
 {
   if (ISNUMPAR(1) && ISQJSONARRAY(1)) {
     // QJsonArray toArray(const QJsonArray &defaultValue) const
-    auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQJSONARRAY(obj->toArray(*PQJSONARRAY(1)));
     }
   } else if (ISNUMPAR(0)) {
     // QJsonArray toArray() const
-    auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQJSONARRAY(obj->toArray());
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOARRAY)
 // bool toBool(bool defaultValue = false) const
 HB_FUNC_STATIC(QJSONVALUE_TOBOOL)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOBOOL)
 // double toDouble(double defaultValue = 0) const
 HB_FUNC_STATIC(QJSONVALUE_TODOUBLE)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,14 +329,14 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
 {
   if (ISNUMPAR(1) && ISQJSONOBJECT(1)) {
     // QJsonObject toObject(const QJsonObject &defaultValue) const
-    auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQJSONOBJECT(obj->toObject(*PQJSONOBJECT(1)));
     }
   } else if (ISNUMPAR(0)) {
     // QJsonObject toObject() const
-    auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQJSONOBJECT(obj->toObject());
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
 // QString toString(const QString &defaultValue = QString()) const
 HB_FUNC_STATIC(QJSONVALUE_TOSTRING)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOSTRING)
 // QVariant toVariant() const
 HB_FUNC_STATIC(QJSONVALUE_TOVARIANT)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOVARIANT)
 // QJsonValue::Type type() const
 HB_FUNC_STATIC(QJSONVALUE_TYPE)
 {
-  auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

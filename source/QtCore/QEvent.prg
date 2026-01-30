@@ -62,7 +62,9 @@ RETURN
 #include <QtCore/QEvent>
 #endif
 
-    // QEvent(QEvent::Type type)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QEvent(QEvent::Type type)
 HB_FUNC_STATIC(QEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -75,17 +77,15 @@ HB_FUNC_STATIC(QEVENT_NEW)
 
 HB_FUNC_STATIC(QEVENT_DELETE)
 {
-  auto obj = static_cast<QEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void accept()
 HB_FUNC_STATIC(QEVENT_ACCEPT)
 {
-  auto obj = static_cast<QEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QEVENT_ACCEPT)
 // void ignore()
 HB_FUNC_STATIC(QEVENT_IGNORE)
 {
-  auto obj = static_cast<QEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QEVENT_IGNORE)
 // bool isAccepted() const
 HB_FUNC_STATIC(QEVENT_ISACCEPTED)
 {
-  auto obj = static_cast<QEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QEVENT_ISACCEPTED)
 // void setAccepted(bool accepted)
 HB_FUNC_STATIC(QEVENT_SETACCEPTED)
 {
-  auto obj = static_cast<QEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QEVENT_SETACCEPTED)
 // bool spontaneous() const
 HB_FUNC_STATIC(QEVENT_SPONTANEOUS)
 {
-  auto obj = static_cast<QEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QEVENT_SPONTANEOUS)
 // QEvent::Type type() const
 HB_FUNC_STATIC(QEVENT_TYPE)
 {
-  auto obj = static_cast<QEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

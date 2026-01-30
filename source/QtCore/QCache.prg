@@ -52,6 +52,8 @@ RETURN
 #include <QtCore/QCache>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QCache *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QCACHE_NEWFROM)
 {
   auto self = hb_stackSelfItem();

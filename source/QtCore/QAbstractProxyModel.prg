@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
+REQUEST QModelIndex
 #endif
 
 CLASS QAbstractProxyModel INHERIT QAbstractItemModel
@@ -50,20 +50,20 @@ RETURN
 #include <QtCore/QAbstractProxyModel>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAbstractProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DELETE)
 {
-  auto obj = qobject_cast<QAbstractProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
-// virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
-// parent)
+// virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex
+// &parent)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DROPMIMEDATA)
 {
-  auto obj = qobject_cast<QAbstractProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DROPMIMEDATA)
 // virtual QModelIndex index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_INDEX)
 {
-  auto obj = qobject_cast<QAbstractProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -57,7 +57,9 @@ RETURN
 #include <QtCore/QCollatorSortKey>
 #endif
 
-    // QCollatorSortKey(const QCollatorSortKey &other)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QCollatorSortKey *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QCollatorSortKey(const QCollatorSortKey &other)
 HB_FUNC_STATIC(QCOLLATORSORTKEY_NEW)
 {
   if (ISNUMPAR(1) && ISQCOLLATORSORTKEY(1)) {
@@ -70,17 +72,15 @@ HB_FUNC_STATIC(QCOLLATORSORTKEY_NEW)
 
 HB_FUNC_STATIC(QCOLLATORSORTKEY_DELETE)
 {
-  auto obj = static_cast<QCollatorSortKey *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void swap(QCollatorSortKey &other)
 HB_FUNC_STATIC(QCOLLATORSORTKEY_SWAP)
 {
-  auto obj = static_cast<QCollatorSortKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QCOLLATORSORTKEY_SWAP)
 // int compare(const QCollatorSortKey &key) const
 HB_FUNC_STATIC(QCOLLATORSORTKEY_COMPARE)
 {
-  auto obj = static_cast<QCollatorSortKey *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

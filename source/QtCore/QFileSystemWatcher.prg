@@ -59,6 +59,8 @@ RETURN
 
 #include <QtCore/QStringList>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -76,17 +78,15 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_NEW)
 
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_DELETE)
 {
-  auto obj = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool addPath(const QString &path)
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATH)
 {
-  auto obj = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATH)
 // QStringList addPaths(const QStringList &paths)
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATHS)
 {
-  auto obj = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATHS)
 // QStringList directories() const
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_DIRECTORIES)
 {
-  auto obj = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_DIRECTORIES)
 // QStringList files() const
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_FILES)
 {
-  auto obj = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_FILES)
 // bool removePath(const QString &path)
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATH)
 {
-  auto obj = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATH)
 // QStringList removePaths(const QStringList &paths)
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATHS)
 {
-  auto obj = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATHS)
 // void directoryChanged(const QString &path)
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONDIRECTORYCHANGED)
 {
-  auto sender = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -216,7 +216,6 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONDIRECTORYCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -235,7 +234,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONDIRECTORYCHANGED)
 // void fileChanged(const QString &path)
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONFILECHANGED)
 {
-  auto sender = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -257,7 +256,6 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONFILECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

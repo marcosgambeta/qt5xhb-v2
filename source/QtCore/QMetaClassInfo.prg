@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMETAOBJECT
+REQUEST QMetaObject
 #endif
 
 CLASS QMetaClassInfo
@@ -59,7 +59,9 @@ RETURN
 #include <QtCore/QMetaClassInfo>
 #endif
 
-    // QMetaClassInfo()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QMetaClassInfo()
 HB_FUNC_STATIC(QMETACLASSINFO_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,17 +74,15 @@ HB_FUNC_STATIC(QMETACLASSINFO_NEW)
 
 HB_FUNC_STATIC(QMETACLASSINFO_DELETE)
 {
-  auto obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // const char *name() const
 HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 {
-  auto obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 // const char *value() const
 HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 {
-  auto obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,13 +118,13 @@ HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 // const QMetaObject *enclosingMetaObject() const
 HB_FUNC_STATIC(QMETACLASSINFO_ENCLOSINGMETAOBJECT)
 {
-  auto obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->enclosingMetaObject();
+      const auto ptr = obj->enclosingMetaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

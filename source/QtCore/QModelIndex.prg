@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTITEMMODEL
-REQUEST QVARIANT
+REQUEST QAbstractItemModel
+REQUEST QVariant
 #endif
 
 CLASS QModelIndex
@@ -68,6 +68,8 @@ RETURN
 #include <QtCore/QModelIndex>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QMODELINDEX_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -85,17 +87,15 @@ HB_FUNC_STATIC(QMODELINDEX_NEW)
 
 HB_FUNC_STATIC(QMODELINDEX_DELETE)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QModelIndex child(int row, int column) const
 HB_FUNC_STATIC(QMODELINDEX_CHILD)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QMODELINDEX_CHILD)
 // int column() const
 HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 // QVariant data(int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QMODELINDEX_DATA)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QMODELINDEX_DATA)
 // Qt::ItemFlags flags() const
 HB_FUNC_STATIC(QMODELINDEX_FLAGS)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QMODELINDEX_FLAGS)
 // quintptr internalId() const
 HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 // void *internalPointer() const
 HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 // bool isValid() const
 HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,13 +221,13 @@ HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 // const QAbstractItemModel *model() const
 HB_FUNC_STATIC(QMODELINDEX_MODEL)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->model();
+      const auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QMODELINDEX_MODEL)
 // QModelIndex parent() const
 HB_FUNC_STATIC(QMODELINDEX_PARENT)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QMODELINDEX_PARENT)
 // int row() const
 HB_FUNC_STATIC(QMODELINDEX_ROW)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QMODELINDEX_ROW)
 // QModelIndex sibling(int row, int column) const
 HB_FUNC_STATIC(QMODELINDEX_SIBLING)
 {
-  auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

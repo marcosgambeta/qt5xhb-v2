@@ -55,6 +55,8 @@ RETURN
 #include <QtCore/QEventLoopLocker>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QEventLoopLocker *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QEVENTLOOPLOCKER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -76,10 +78,8 @@ HB_FUNC_STATIC(QEVENTLOOPLOCKER_NEW)
 
 HB_FUNC_STATIC(QEVENTLOOPLOCKER_DELETE)
 {
-  auto obj = static_cast<QEventLoopLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 

@@ -72,6 +72,8 @@ RETURN
 
 #include <QtCore/QStringList>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QMIMETYPE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -89,17 +91,15 @@ HB_FUNC_STATIC(QMIMETYPE_NEW)
 
 HB_FUNC_STATIC(QMIMETYPE_DELETE)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void swap(QMimeType &other)
 HB_FUNC_STATIC(QMIMETYPE_SWAP)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QMIMETYPE_SWAP)
 // bool isValid() const
 HB_FUNC_STATIC(QMIMETYPE_ISVALID)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QMIMETYPE_ISVALID)
 // bool isDefault() const
 HB_FUNC_STATIC(QMIMETYPE_ISDEFAULT)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QMIMETYPE_ISDEFAULT)
 // QString name() const
 HB_FUNC_STATIC(QMIMETYPE_NAME)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QMIMETYPE_NAME)
 // QString comment() const
 HB_FUNC_STATIC(QMIMETYPE_COMMENT)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QMIMETYPE_COMMENT)
 // QString genericIconName() const
 HB_FUNC_STATIC(QMIMETYPE_GENERICICONNAME)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QMIMETYPE_GENERICICONNAME)
 // QString iconName() const
 HB_FUNC_STATIC(QMIMETYPE_ICONNAME)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QMIMETYPE_ICONNAME)
 // QStringList globPatterns() const
 HB_FUNC_STATIC(QMIMETYPE_GLOBPATTERNS)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QMIMETYPE_GLOBPATTERNS)
 // QStringList parentMimeTypes() const
 HB_FUNC_STATIC(QMIMETYPE_PARENTMIMETYPES)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QMIMETYPE_PARENTMIMETYPES)
 // QStringList allAncestors() const
 HB_FUNC_STATIC(QMIMETYPE_ALLANCESTORS)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QMIMETYPE_ALLANCESTORS)
 // QStringList aliases() const
 HB_FUNC_STATIC(QMIMETYPE_ALIASES)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QMIMETYPE_ALIASES)
 // QStringList suffixes() const
 HB_FUNC_STATIC(QMIMETYPE_SUFFIXES)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QMIMETYPE_SUFFIXES)
 // QString preferredSuffix() const
 HB_FUNC_STATIC(QMIMETYPE_PREFERREDSUFFIX)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QMIMETYPE_PREFERREDSUFFIX)
 // bool inherits(const QString &mimeTypeName) const
 HB_FUNC_STATIC(QMIMETYPE_INHERITS)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QMIMETYPE_INHERITS)
 // QString filterString() const
 HB_FUNC_STATIC(QMIMETYPE_FILTERSTRING)
 {
-  auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

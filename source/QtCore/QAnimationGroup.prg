@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTANIMATION
+REQUEST QAbstractAnimation
 #endif
 
 CLASS QAnimationGroup INHERIT QAbstractAnimation
@@ -56,19 +56,19 @@ RETURN
 #include <QtCore/QAnimationGroup>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QANIMATIONGROUP_DELETE)
 {
-  auto obj = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void addAnimation(QAbstractAnimation *animation)
 HB_FUNC_STATIC(QANIMATIONGROUP_ADDANIMATION)
 {
-  auto obj = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_ADDANIMATION)
 // QAbstractAnimation *animationAt(int index) const
 HB_FUNC_STATIC(QANIMATIONGROUP_ANIMATIONAT)
 {
-  auto obj = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_ANIMATIONAT)
 // int animationCount() const
 HB_FUNC_STATIC(QANIMATIONGROUP_ANIMATIONCOUNT)
 {
-  auto obj = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_ANIMATIONCOUNT)
 // void clear()
 HB_FUNC_STATIC(QANIMATIONGROUP_CLEAR)
 {
-  auto obj = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_CLEAR)
 // int indexOfAnimation(QAbstractAnimation *animation) const
 HB_FUNC_STATIC(QANIMATIONGROUP_INDEXOFANIMATION)
 {
-  auto obj = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_INDEXOFANIMATION)
 // void insertAnimation(int index, QAbstractAnimation *animation)
 HB_FUNC_STATIC(QANIMATIONGROUP_INSERTANIMATION)
 {
-  auto obj = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_INSERTANIMATION)
 // void removeAnimation(QAbstractAnimation *animation)
 HB_FUNC_STATIC(QANIMATIONGROUP_REMOVEANIMATION)
 {
-  auto obj = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_REMOVEANIMATION)
 // QAbstractAnimation *takeAnimation(int index)
 HB_FUNC_STATIC(QANIMATIONGROUP_TAKEANIMATION)
 {
-  auto obj = qobject_cast<QAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

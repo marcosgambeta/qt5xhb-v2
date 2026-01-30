@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QFILEINFO
+REQUEST QFileInfo
 #endif
 
 CLASS QDirIterator
@@ -62,20 +62,21 @@ RETURN
 #include <QtCore/QDirIterator>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDIRITERATOR_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQDIR(1) && ISNUMORNIL(2)) {
     // QDirIterator(const QDir &dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
-    auto obj = new QDirIterator(*PQDIR(1), HB_ISNIL(2)
-                                               ? static_cast<QDirIterator::IteratorFlags>(QDirIterator::NoIteratorFlags)
-                                               : PQDIRITERATOR_ITERATORFLAGS(2));
+    auto obj =
+        new QDirIterator(*PQDIR(1), HB_ISNIL(2) ? QDirIterator::NoIteratorFlags : PQDIRITERATOR_ITERATORFLAGS(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // QDirIterator(const QString &path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     auto obj =
         new QDirIterator(PQSTRING(1), HB_ISNIL(2) ? QDirIterator::NoIteratorFlags : PQDIRITERATOR_ITERATORFLAGS(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // QDirIterator(const QString &path, QDir::Filters filters, QDirIterator::IteratorFlags flags =
     // QDirIterator::NoIteratorFlags)
     auto obj = new QDirIterator(PQSTRING(1), PQDIR_FILTERS(2),
@@ -94,17 +95,15 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
 
 HB_FUNC_STATIC(QDIRITERATOR_DELETE)
 {
-  auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QFileInfo fileInfo() const
 HB_FUNC_STATIC(QDIRITERATOR_FILEINFO)
 {
-  auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +121,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILEINFO)
 // QString fileName() const
 HB_FUNC_STATIC(QDIRITERATOR_FILENAME)
 {
-  auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +139,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILENAME)
 // QString filePath() const
 HB_FUNC_STATIC(QDIRITERATOR_FILEPATH)
 {
-  auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +157,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILEPATH)
 // bool hasNext() const
 HB_FUNC_STATIC(QDIRITERATOR_HASNEXT)
 {
-  auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +175,7 @@ HB_FUNC_STATIC(QDIRITERATOR_HASNEXT)
 // QString next()
 HB_FUNC_STATIC(QDIRITERATOR_NEXT)
 {
-  auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +193,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEXT)
 // QString path() const
 HB_FUNC_STATIC(QDIRITERATOR_PATH)
 {
-  auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

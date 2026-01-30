@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTATE
-REQUEST QSTATEMACHINE
+REQUEST QState
+REQUEST QStateMachine
 #endif
 
 CLASS QAbstractState INHERIT QObject
@@ -57,19 +57,19 @@ RETURN
 #include <QtCore/QState>
 #include <QtCore/QStateMachine>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
 {
-  auto obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QStateMachine *machine() const
 HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 {
-  auto obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 // QState *parentState() const
 HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 {
-  auto obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 // void entered()
 HB_FUNC_STATIC(QABSTRACTSTATE_ONENTERED)
 {
-  auto sender = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -126,7 +126,6 @@ HB_FUNC_STATIC(QABSTRACTSTATE_ONENTERED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -145,7 +144,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_ONENTERED)
 // void exited()
 HB_FUNC_STATIC(QABSTRACTSTATE_ONEXITED)
 {
-  auto sender = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -164,7 +163,6 @@ HB_FUNC_STATIC(QABSTRACTSTATE_ONEXITED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

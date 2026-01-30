@@ -59,7 +59,9 @@ RETURN
 #include <QtCore/QBasicTimer>
 #endif
 
-    // QBasicTimer()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QBasicTimer *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QBasicTimer()
 HB_FUNC_STATIC(QBASICTIMER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,17 +74,15 @@ HB_FUNC_STATIC(QBASICTIMER_NEW)
 
 HB_FUNC_STATIC(QBASICTIMER_DELETE)
 {
-  auto obj = static_cast<QBasicTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isActive() const
 HB_FUNC_STATIC(QBASICTIMER_ISACTIVE)
 {
-  auto obj = static_cast<QBasicTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QBASICTIMER_ISACTIVE)
 // void start(int msec, QObject *object)
 HB_FUNC_STATIC(QBASICTIMER_START)
 {
-  auto obj = static_cast<QBasicTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QBASICTIMER_START)
 // void stop()
 HB_FUNC_STATIC(QBASICTIMER_STOP)
 {
-  auto obj = static_cast<QBasicTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QBASICTIMER_STOP)
 // int timerId() const
 HB_FUNC_STATIC(QBASICTIMER_TIMERID)
 {
-  auto obj = static_cast<QBasicTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QJSONVALUE
+REQUEST QJsonValue
 #endif
 
 CLASS QJsonObject
@@ -68,6 +68,8 @@ RETURN
 
 #include <QtCore/QStringList>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QJSONOBJECT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -85,17 +87,15 @@ HB_FUNC_STATIC(QJSONOBJECT_NEW)
 
 HB_FUNC_STATIC(QJSONOBJECT_DELETE)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool contains(const QString &key) const
 HB_FUNC_STATIC(QJSONOBJECT_CONTAINS)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QJSONOBJECT_CONTAINS)
 // int count() const
 HB_FUNC_STATIC(QJSONOBJECT_COUNT)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QJSONOBJECT_COUNT)
 // bool empty() const
 HB_FUNC_STATIC(QJSONOBJECT_EMPTY)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QJSONOBJECT_EMPTY)
 // bool isEmpty() const
 HB_FUNC_STATIC(QJSONOBJECT_ISEMPTY)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QJSONOBJECT_ISEMPTY)
 // QStringList keys() const
 HB_FUNC_STATIC(QJSONOBJECT_KEYS)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QJSONOBJECT_KEYS)
 // int length() const
 HB_FUNC_STATIC(QJSONOBJECT_LENGTH)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QJSONOBJECT_LENGTH)
 // void remove(const QString &key)
 HB_FUNC_STATIC(QJSONOBJECT_REMOVE)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QJSONOBJECT_REMOVE)
 // int size() const
 HB_FUNC_STATIC(QJSONOBJECT_SIZE)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QJSONOBJECT_SIZE)
 // QJsonValue take(const QString &key)
 HB_FUNC_STATIC(QJSONOBJECT_TAKE)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QJSONOBJECT_TAKE)
 // QJsonValue value(const QString &key) const
 HB_FUNC_STATIC(QJSONOBJECT_VALUE)
 {
-  auto obj = static_cast<QJsonObject *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

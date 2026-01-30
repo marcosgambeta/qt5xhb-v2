@@ -169,6 +169,8 @@ RETURN
 #include <QtCore/QList>
 #include <QtCore/QString>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QBYTEARRAY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -183,7 +185,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NEW)
     // QByteArray(const char *data, int size)
     auto obj = new QByteArray(PCONSTCHAR(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2))) {
     // QByteArray(int size, char ch)
     auto obj = new QByteArray(PINT(1), PCHAR(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -198,17 +200,15 @@ HB_FUNC_STATIC(QBYTEARRAY_NEW)
 
 HB_FUNC_STATIC(QBYTEARRAY_DELETE)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QByteArray &append(const QByteArray &ba)
 HB_FUNC_STATIC(QBYTEARRAY_APPEND1)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND1)
 // QByteArray &append(const QString &str)
 HB_FUNC_STATIC(QBYTEARRAY_APPEND2)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND2)
 // QByteArray &append(const char *str)
 HB_FUNC_STATIC(QBYTEARRAY_APPEND3)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND3)
 // QByteArray &append(const char *str, int len)
 HB_FUNC_STATIC(QBYTEARRAY_APPEND4)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND4)
 // QByteArray &append(char ch)
 HB_FUNC_STATIC(QBYTEARRAY_APPEND5)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND5)
 HB_FUNC_STATIC(QBYTEARRAY_APPEND6)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND)
 // char at(int i) const
 HB_FUNC_STATIC(QBYTEARRAY_AT)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QBYTEARRAY_AT)
 // int capacity() const
 HB_FUNC_STATIC(QBYTEARRAY_CAPACITY)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CAPACITY)
 // void chop(int n)
 HB_FUNC_STATIC(QBYTEARRAY_CHOP)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CHOP)
 // void clear()
 HB_FUNC_STATIC(QBYTEARRAY_CLEAR)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CLEAR)
 // const char *constData() const
 HB_FUNC_STATIC(QBYTEARRAY_CONSTDATA)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -436,21 +436,21 @@ HB_FUNC_STATIC(QBYTEARRAY_CONTAINS)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // bool contains(const QByteArray &ba) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->contains(*PQBYTEARRAY(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool contains(const char *str) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->contains(PCONSTCHAR(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && (HB_ISNUM(1) || HB_ISCHAR(1))) {
     // bool contains(char ch) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->contains(PCHAR(1)));
@@ -464,28 +464,28 @@ HB_FUNC_STATIC(QBYTEARRAY_COUNT)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // int count(const QByteArray &ba) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->count(*PQBYTEARRAY(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // int count(const char *str) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->count(PCONSTCHAR(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && (HB_ISNUM(1) || HB_ISCHAR(1))) {
     // int count(char ch) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->count(PCHAR(1)));
     }
   } else if (ISNUMPAR(0)) {
     // int count() const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->count());
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COUNT)
 // const char *data() const
 HB_FUNC_STATIC(QBYTEARRAY_DATA2)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -522,21 +522,21 @@ HB_FUNC_STATIC(QBYTEARRAY_ENDSWITH)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // bool endsWith(const QByteArray &ba) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->endsWith(*PQBYTEARRAY(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool endsWith(const char *str) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->endsWith(PCONSTCHAR(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && (HB_ISNUM(1) || HB_ISCHAR(1))) {
     // bool endsWith(char ch) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->endsWith(PCHAR(1)));
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QBYTEARRAY_ENDSWITH)
 // QByteArray &fill(char ch, int size = -1)
 HB_FUNC_STATIC(QBYTEARRAY_FILL)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -568,7 +568,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FILL)
 // int indexOf(const QByteArray &ba, int from = 0) const
 HB_FUNC_STATIC(QBYTEARRAY_INDEXOF1)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF1)
 // int indexOf(const QString &str, int from = 0) const
 HB_FUNC_STATIC(QBYTEARRAY_INDEXOF2)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -604,7 +604,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF2)
 // int indexOf(const char *str, int from = 0) const
 HB_FUNC_STATIC(QBYTEARRAY_INDEXOF3)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -622,7 +622,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF3)
 // int indexOf(char ch, int from = 0) const
 HB_FUNC_STATIC(QBYTEARRAY_INDEXOF4)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -655,7 +655,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF)
 // QByteArray &insert(int i, const QByteArray &ba)
 HB_FUNC_STATIC(QBYTEARRAY_INSERT1)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT1)
 // QByteArray &insert(int i, const QString &str)
 HB_FUNC_STATIC(QBYTEARRAY_INSERT2)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -693,7 +693,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT2)
 // QByteArray &insert(int i, const char *str)
 HB_FUNC_STATIC(QBYTEARRAY_INSERT3)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -712,7 +712,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT3)
 // QByteArray &insert(int i, const char *str, int len)
 HB_FUNC_STATIC(QBYTEARRAY_INSERT4)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -731,7 +731,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT4)
 // QByteArray &insert(int i, char ch)
 HB_FUNC_STATIC(QBYTEARRAY_INSERT5)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -765,7 +765,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT)
 // bool isEmpty() const
 HB_FUNC_STATIC(QBYTEARRAY_ISEMPTY)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -783,7 +783,7 @@ HB_FUNC_STATIC(QBYTEARRAY_ISEMPTY)
 // bool isNull() const
 HB_FUNC_STATIC(QBYTEARRAY_ISNULL)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QBYTEARRAY_ISNULL)
 // int lastIndexOf(const QByteArray &ba, int from = -1) const
 HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF1)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -819,7 +819,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF1)
 // int lastIndexOf(const QString &str, int from = -1) const
 HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF2)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -837,7 +837,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF2)
 // int lastIndexOf(const char *str, int from = -1) const
 HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF3)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -855,7 +855,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF3)
 // int lastIndexOf(char ch, int from = -1) const
 HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF4)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -888,7 +888,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF)
 // QByteArray left(int len) const
 HB_FUNC_STATIC(QBYTEARRAY_LEFT)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -906,7 +906,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFT)
 // QByteArray leftJustified(int width, char fill = ' ', bool truncate = false) const
 HB_FUNC_STATIC(QBYTEARRAY_LEFTJUSTIFIED)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -924,7 +924,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFTJUSTIFIED)
 // int length() const
 HB_FUNC_STATIC(QBYTEARRAY_LENGTH)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -942,7 +942,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LENGTH)
 // QByteArray mid(int pos, int len = -1) const
 HB_FUNC_STATIC(QBYTEARRAY_MID)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QByteArray &prepend(const QByteArray &ba)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = &obj->prepend(*PQBYTEARRAY(1));
@@ -969,7 +969,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QByteArray &prepend(const char *str)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = &obj->prepend(PCONSTCHAR(1));
@@ -977,15 +977,15 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QByteArray &prepend(const char *str, int len)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = &obj->prepend(PCONSTCHAR(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
-  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && (HB_ISNUM(1) || HB_ISCHAR(1))) {
     // QByteArray &prepend(char ch)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = &obj->prepend(PCHAR(1));
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // void push_back(const QByteArray &other)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->push_back(*PQBYTEARRAY(1));
@@ -1009,16 +1009,16 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
     RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void push_back(const char *str)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->push_back(PCONSTCHAR(1));
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && (HB_ISNUM(1) || HB_ISCHAR(1))) {
     // void push_back(char ch)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->push_back(PCHAR(1));
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // void push_front(const QByteArray &other)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->push_front(*PQBYTEARRAY(1));
@@ -1043,16 +1043,16 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
     RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void push_front(const char *str)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->push_front(PCONSTCHAR(1));
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && (HB_ISNUM(1) || HB_ISCHAR(1))) {
     // void push_front(char ch)
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->push_front(PCHAR(1));
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
 // QByteArray &remove(int pos, int len)
 HB_FUNC_STATIC(QBYTEARRAY_REMOVE)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1086,7 +1086,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REMOVE)
 // QByteArray repeated(int times) const
 HB_FUNC_STATIC(QBYTEARRAY_REPEATED)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1104,7 +1104,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPEATED)
 // QByteArray &replace(int pos, int len, const QByteArray &after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE1)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1123,7 +1123,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE1)
 // QByteArray &replace(int pos, int len, const char *after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE2)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE2)
 // QByteArray &replace(int pos, int len, const char *after, int alen)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE3)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE3)
 // QByteArray &replace(const QByteArray &before, const QByteArray &after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE4)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE4)
 // QByteArray &replace(const char *before, const QByteArray &after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE5)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1199,7 +1199,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE5)
 // QByteArray &replace(const char *before, int bsize, const char *after, int asize)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE6)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1218,7 +1218,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE6)
 // QByteArray &replace(const QByteArray &before, const char *after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE7)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE7)
 // QByteArray &replace(const QString &before, const QByteArray &after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE8)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1256,7 +1256,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE8)
 // QByteArray &replace(const QString &before, const char *after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE9)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1275,7 +1275,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE9)
 // QByteArray &replace(const char *before, const char *after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE10)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE10)
 // QByteArray &replace(char before, const QByteArray &after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE11)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1313,7 +1313,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE11)
 // QByteArray &replace(char before, const QString &after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE12)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE12)
 // QByteArray &replace(char before, const char *after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE13)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1351,7 +1351,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE13)
 // QByteArray &replace(char before, char after)
 HB_FUNC_STATIC(QBYTEARRAY_REPLACE14)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1405,7 +1405,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE)
 // void reserve(int size)
 HB_FUNC_STATIC(QBYTEARRAY_RESERVE)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1425,7 +1425,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RESERVE)
 // void resize(int size)
 HB_FUNC_STATIC(QBYTEARRAY_RESIZE)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RESIZE)
 // QByteArray right(int len) const
 HB_FUNC_STATIC(QBYTEARRAY_RIGHT)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1463,7 +1463,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHT)
 // QByteArray rightJustified(int width, char fill = ' ', bool truncate = false) const
 HB_FUNC_STATIC(QBYTEARRAY_RIGHTJUSTIFIED)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1481,7 +1481,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHTJUSTIFIED)
 // QByteArray &setNum(int n, int base = 10)
 HB_FUNC_STATIC(QBYTEARRAY_SETNUM1)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM1)
 // QByteArray &setNum(uint n, int base = 10)
 HB_FUNC_STATIC(QBYTEARRAY_SETNUM2)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1519,7 +1519,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM2)
 // QByteArray &setNum(short n, int base = 10)
 HB_FUNC_STATIC(QBYTEARRAY_SETNUM3)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM3)
 // QByteArray &setNum(ushort n, int base = 10)
 HB_FUNC_STATIC(QBYTEARRAY_SETNUM4)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1557,7 +1557,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM4)
 // QByteArray &setNum(qlonglong n, int base = 10)
 HB_FUNC_STATIC(QBYTEARRAY_SETNUM5)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1576,7 +1576,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM5)
 // QByteArray &setNum(qulonglong n, int base = 10)
 HB_FUNC_STATIC(QBYTEARRAY_SETNUM6)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1595,7 +1595,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM6)
 // QByteArray &setNum(double n, char f = 'g', int prec = 6)
 HB_FUNC_STATIC(QBYTEARRAY_SETNUM7)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1614,7 +1614,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM7)
 // QByteArray &setNum(float n, char f = 'g', int prec = 6)
 HB_FUNC_STATIC(QBYTEARRAY_SETNUM8)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM)
 // QByteArray &setRawData(const char *data, uint size)
 HB_FUNC_STATIC(QBYTEARRAY_SETRAWDATA)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1661,7 +1661,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETRAWDATA)
 // QByteArray simplified() const
 HB_FUNC_STATIC(QBYTEARRAY_SIMPLIFIED)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1679,7 +1679,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SIMPLIFIED)
 // int size() const
 HB_FUNC_STATIC(QBYTEARRAY_SIZE)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1697,7 +1697,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SIZE)
 // QList<QByteArray> split(char sep) const
 HB_FUNC_STATIC(QBYTEARRAY_SPLIT)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1737,7 +1737,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SPLIT)
 // void squeeze()
 HB_FUNC_STATIC(QBYTEARRAY_SQUEEZE)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1758,21 +1758,21 @@ HB_FUNC_STATIC(QBYTEARRAY_STARTSWITH)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // bool startsWith(const QByteArray &ba) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->startsWith(*PQBYTEARRAY(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool startsWith(const char *str) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->startsWith(PCONSTCHAR(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool startsWith(char ch) const
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->startsWith(PCHAR(1)));
@@ -1785,7 +1785,7 @@ HB_FUNC_STATIC(QBYTEARRAY_STARTSWITH)
 // QByteArray toBase64() const
 HB_FUNC_STATIC(QBYTEARRAY_TOBASE64)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1803,7 +1803,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOBASE64)
 // double toDouble(bool *ok = nullptr) const
 HB_FUNC_STATIC(QBYTEARRAY_TODOUBLE)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1823,7 +1823,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TODOUBLE)
 // float toFloat(bool *ok = nullptr) const
 HB_FUNC_STATIC(QBYTEARRAY_TOFLOAT)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1843,7 +1843,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOFLOAT)
 // QByteArray toHex() const
 HB_FUNC_STATIC(QBYTEARRAY_TOHEX)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1861,7 +1861,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOHEX)
 // int toInt(bool *ok = nullptr, int base = 10) const
 HB_FUNC_STATIC(QBYTEARRAY_TOINT)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1881,7 +1881,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOINT)
 // long toLong(bool *ok = nullptr, int base = 10) const
 HB_FUNC_STATIC(QBYTEARRAY_TOLONG)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1901,7 +1901,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONG)
 // qlonglong toLongLong(bool *ok = nullptr, int base = 10) const
 HB_FUNC_STATIC(QBYTEARRAY_TOLONGLONG)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1921,7 +1921,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONGLONG)
 // QByteArray toLower() const
 HB_FUNC_STATIC(QBYTEARRAY_TOLOWER)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1940,7 +1940,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLOWER)
 // percent = '%') const
 HB_FUNC_STATIC(QBYTEARRAY_TOPERCENTENCODING)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1960,7 +1960,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOPERCENTENCODING)
 // short toShort(bool *ok = nullptr, int base = 10) const
 HB_FUNC_STATIC(QBYTEARRAY_TOSHORT)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1980,7 +1980,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOSHORT)
 // uint toUInt(bool *ok = nullptr, int base = 10) const
 HB_FUNC_STATIC(QBYTEARRAY_TOUINT)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2000,7 +2000,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUINT)
 // ulong toULong(bool *ok = nullptr, int base = 10) const
 HB_FUNC_STATIC(QBYTEARRAY_TOULONG)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2020,7 +2020,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONG)
 // qulonglong toULongLong(bool *ok = nullptr, int base = 10) const
 HB_FUNC_STATIC(QBYTEARRAY_TOULONGLONG)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2040,7 +2040,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONGLONG)
 // ushort toUShort(bool *ok = nullptr, int base = 10) const
 HB_FUNC_STATIC(QBYTEARRAY_TOUSHORT)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2060,7 +2060,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUSHORT)
 // QByteArray toUpper() const
 HB_FUNC_STATIC(QBYTEARRAY_TOUPPER)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2078,7 +2078,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUPPER)
 // QByteArray trimmed() const
 HB_FUNC_STATIC(QBYTEARRAY_TRIMMED)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2096,7 +2096,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TRIMMED)
 // void truncate(int pos)
 HB_FUNC_STATIC(QBYTEARRAY_TRUNCATE)
 {
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2117,12 +2117,10 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMBASE64)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // static QByteArray fromBase64(const QByteArray &base64)
-
     RQBYTEARRAY(QByteArray::fromBase64(*PQBYTEARRAY(1)));
   } else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
     // static QByteArray fromBase64(const QByteArray &base64, QByteArray::Base64Options options)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-
     RQBYTEARRAY(QByteArray::fromBase64(*PQBYTEARRAY(1), PQBYTEARRAY_BASE64OPTIONS(2)));
 #endif
   } else {
@@ -2263,7 +2261,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER)
 HB_FUNC_STATIC(QBYTEARRAY_BACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2285,7 +2283,7 @@ HB_FUNC_STATIC(QBYTEARRAY_BACK)
 HB_FUNC_STATIC(QBYTEARRAY_CHOPPED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2306,7 +2304,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // int compare(const char *c, Qt::CaseSensitivity cs = Qt::CaseSensitive) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->compare(PCONSTCHAR(1), HB_ISNIL(2) ? Qt::CaseSensitive : PQT_CASESENSITIVITY(2)));
@@ -2315,7 +2313,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     // int compare(const QByteArray &a, Qt::CaseSensitivity cs = Qt::CaseSensitive) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-    auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->compare(*PQBYTEARRAY(1), HB_ISNIL(2) ? Qt::CaseSensitive : PQT_CASESENSITIVITY(2)));
@@ -2330,7 +2328,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
 HB_FUNC_STATIC(QBYTEARRAY_ISLOWER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2350,7 +2348,7 @@ HB_FUNC_STATIC(QBYTEARRAY_ISLOWER)
 HB_FUNC_STATIC(QBYTEARRAY_ISUPPER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-  auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

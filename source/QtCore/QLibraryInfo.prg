@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDATE
+REQUEST QDate
 #endif
 
 CLASS QLibraryInfo
@@ -60,12 +60,12 @@ RETURN
 #include <QtCore/QLibraryInfo>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QLibraryInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QLIBRARYINFO_DELETE)
 {
-  auto obj = static_cast<QLibraryInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 

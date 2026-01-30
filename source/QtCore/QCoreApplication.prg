@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_DELETE)
   RETURN_SELF();
 }
 
-// virtual bool notify(QObject * receiver, QEvent * event)
+// virtual bool notify(QObject *receiver, QEvent *event)
 HB_FUNC_STATIC(QCOREAPPLICATION_NOTIFY)
 {
   GET_PTR_FROM_SELF(obj);
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_HASPENDINGEVENTS)
 #endif
 }
 
-// static void installTranslator(QTranslator * translationFile)
+// static void installTranslator(QTranslator *translationFile)
 HB_FUNC_STATIC(QCOREAPPLICATION_INSTALLTRANSLATOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_INSTALLTRANSLATOR)
   RETURN_SELF();
 }
 
-// static QCoreApplication * instance()
+// static QCoreApplication *instance()
 HB_FUNC_STATIC(QCOREAPPLICATION_INSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,11 +401,11 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ORGANIZATIONNAME)
 HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2)) {
-    // static void postEvent(QObject * receiver, QEvent * event)
+    // static void postEvent(QObject *receiver, QEvent *event)
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2));
     RETURN_SELF();
   } else if (ISNUMPAR(3) && ISQOBJECT(1) && ISQEVENT(2) && HB_ISNUM(3)) {
-    // static void postEvent(QObject * receiver, QEvent * event, int priority)
+    // static void postEvent(QObject *receiver, QEvent *event, int priority)
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2), PINT(3));
     RETURN_SELF();
   } else {
@@ -447,11 +447,11 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVELIBRARYPATH)
 HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1)) {
-    // static void removePostedEvents(QObject * receiver)
+    // static void removePostedEvents(QObject *receiver)
     QCoreApplication::removePostedEvents(PQOBJECT(1));
     RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
-    // static void removePostedEvents(QObject * receiver, int eventType)
+    // static void removePostedEvents(QObject *receiver, int eventType)
     QCoreApplication::removePostedEvents(PQOBJECT(1), PINT(2));
     RETURN_SELF();
   } else {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
   }
 }
 
-// static void removeTranslator(QTranslator * translationFile)
+// static void removeTranslator(QTranslator *translationFile)
 HB_FUNC_STATIC(QCOREAPPLICATION_REMOVETRANSLATOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,7 +475,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVETRANSLATOR)
   RETURN_SELF();
 }
 
-// static bool sendEvent(QObject * receiver, QEvent * event)
+// static bool sendEvent(QObject *receiver, QEvent *event)
 HB_FUNC_STATIC(QCOREAPPLICATION_SENDEVENT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SENDEVENT)
 HB_FUNC_STATIC(QCOREAPPLICATION_SENDPOSTEDEVENTS)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
-    // static void sendPostedEvents(QObject * receiver, int event_type)
+    // static void sendPostedEvents(QObject *receiver, int event_type)
     QCoreApplication::sendPostedEvents(PQOBJECT(1), PINT(2));
     RETURN_SELF();
   } else if (ISNUMPAR(0)) {
@@ -628,8 +628,8 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TESTATTRIBUTE)
 #endif
 }
 
-// static QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n
-// = -1)
+// static QString translate(const char *context, const char *sourceText, const char *disambiguation = nullptr, int n =
+// -1)
 HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -699,7 +699,6 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONABOUTTOQUIT)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -738,7 +737,6 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -777,7 +775,6 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -816,7 +813,6 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -855,7 +851,6 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
