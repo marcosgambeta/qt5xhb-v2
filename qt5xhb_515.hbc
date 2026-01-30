@@ -43,6 +43,7 @@ libs=hbqtquickwidgets5
 libs=hbqtscript5
 libs=hbqtscripttools5
 libs=hbqtsensors5
+libs=hbqtserialbus5
 libs=hbqtserialport5
 libs=hbqtsql5
 libs=hbqtsvg5
@@ -119,6 +120,8 @@ libpaths=${QT_LIB_DIR}
 {QTMSYS='yes'}libs=Qt5ScriptTools.dll.
 {!QTMSYS='yes'}libs=Qt5Sensors
 {QTMSYS='yes'}libs=Qt5Sensors.dll.
+{!QTMSYS='yes'}libs=Qt5SerialBus
+{QTMSYS='yes'}libs=Qt5SerialBus.dll.
 {!QTMSYS='yes'}libs=Qt5SerialPort
 {QTMSYS='yes'}libs=Qt5SerialPort.dll.
 {!QTMSYS='yes'}libs=Qt5Sql
