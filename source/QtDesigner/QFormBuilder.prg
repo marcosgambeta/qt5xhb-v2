@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
+REQUEST QDesignerCustomWidgetInterface
 #endif
 
 CLASS QFormBuilder INHERIT QAbstractFormBuilder
@@ -52,7 +52,9 @@ RETURN
 #include <QtDesigner/QFormBuilder>
 #endif
 
-    // QFormBuilder()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QFormBuilder()
 HB_FUNC_STATIC(QFORMBUILDER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -65,17 +67,15 @@ HB_FUNC_STATIC(QFORMBUILDER_NEW)
 
 HB_FUNC_STATIC(QFORMBUILDER_DELETE)
 {
-  auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void addPluginPath(const QString &pluginPath)
 HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 {
-  auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 // void clearPluginPaths()
 HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
 {
-  auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,10 +112,10 @@ HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
   RETURN_SELF();
 }
 
-// QList<QDesignerCustomWidgetInterface*> customWidgets() const
+// QList<QDesignerCustomWidgetInterface *> customWidgets() const
 HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
 {
-  auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
 // QStringList pluginPaths() const
 HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 {
-  auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 // void setPluginPath(const QStringList &pluginPaths)
 HB_FUNC_STATIC(QFORMBUILDER_SETPLUGINPATH)
 {
-  auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDIR
-REQUEST QWIDGET
+REQUEST QDir
+REQUEST QWidget
 #endif
 
 CLASS QAbstractFormBuilder
@@ -61,7 +61,9 @@ RETURN
 #include <QtDesigner/QAbstractFormBuilder>
 #endif
 
-    // QAbstractFormBuilder()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAbstractFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAbstractFormBuilder()
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -74,17 +76,15 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_NEW)
 
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_DELETE)
 {
-  auto obj = static_cast<QAbstractFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QWidget *load(QIODevice *device, QWidget *parent = nullptr)
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_LOAD)
 {
-  auto obj = static_cast<QAbstractFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_LOAD)
 // virtual void save(QIODevice *device, QWidget *widget)
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SAVE)
 {
-  auto obj = static_cast<QAbstractFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SAVE)
 // void setWorkingDirectory(const QDir &directory)
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY)
 {
-  auto obj = static_cast<QAbstractFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY)
 // QDir workingDirectory() const
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_WORKINGDIRECTORY)
 {
-  auto obj = static_cast<QAbstractFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

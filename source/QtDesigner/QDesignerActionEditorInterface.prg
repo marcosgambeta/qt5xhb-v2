@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDESIGNERFORMEDITORINTERFACE
+REQUEST QDesignerFormEditorInterface
 #endif
 
 CLASS QDesignerActionEditorInterface INHERIT QWidget
@@ -53,19 +53,20 @@ RETURN
 
 #include <QtDesigner/QDesignerFormEditorInterface>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_DELETE)
 {
-  auto obj = qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QDesignerFormEditorInterface *core() const
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_CORE)
 {
-  auto obj = qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -84,7 +85,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_CORE)
 // virtual void manageAction(QAction *action) = 0
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION)
 {
-  auto obj = qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +105,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION)
 // virtual void setFormWindow(QDesignerFormWindowInterface *formWindow) = 0
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW)
 {
-  auto obj = qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

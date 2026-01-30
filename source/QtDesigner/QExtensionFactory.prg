@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QEXTENSIONMANAGER
-REQUEST QOBJECT
+REQUEST QExtensionManager
+REQUEST QObject
 #endif
 
 CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
@@ -54,7 +54,9 @@ RETURN
 
 #include <QtDesigner/QExtensionManager>
 
-    // QExtensionFactory(QExtensionManager *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QExtensionFactory(QExtensionManager *parent = nullptr)
 HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQEXTENSIONMANAGERORNIL(1)) {
@@ -67,17 +69,15 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 
 HB_FUNC_STATIC(QEXTENSIONFACTORY_DELETE)
 {
-  auto obj = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QExtensionManager *extensionManager() const
 HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 {
-  auto obj = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 // virtual QObject *extension(QObject *object, const QString &iid) const
 HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 {
-  auto obj = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

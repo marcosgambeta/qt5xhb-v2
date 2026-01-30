@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QDesignerPropertySheetExtension
@@ -72,19 +72,19 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_DELETE)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual int count() const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_COUNT)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_COUNT)
 // virtual bool hasReset(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_HASRESET)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_HASRESET)
 // virtual int indexOf(const QString &name) const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF)
 // virtual bool isAttribute(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE)
 // virtual bool isChanged(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED)
 // virtual bool isVisible(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE)
 // virtual QVariant property(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY)
 // virtual QString propertyGroup(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP)
 // virtual QString propertyName(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME)
 // virtual bool reset(int index) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_RESET)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_RESET)
 // virtual void setAttribute(int index, bool attribute) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE)
 // virtual void setChanged(int index, bool changed) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED)
 // virtual void setProperty(int index, const QVariant &value) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY)
 // virtual void setPropertyGroup(int index, const QString &group) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP)
 // virtual void setVisible(int index, bool visible) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE)
 {
-  auto obj = static_cast<QDesignerPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
