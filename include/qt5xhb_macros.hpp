@@ -264,10 +264,6 @@
 \
   hb_itemReturn(self);
 
-#define NEWFROMOBJECT() HB_FUNC_EXEC(QAXBASE_NEWFROM)
-
-#define NEWFROMPOINTER() HB_FUNC_EXEC(QAXBASE_NEWFROM)
-
 #define SELFDESTRUCTION() hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)))
 
 #define SETSELFDESTRUCTION() \
