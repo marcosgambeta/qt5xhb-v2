@@ -11,8 +11,6 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QModbusDataUnit
-REQUEST QModbusResponse
 #endif
 
 CLASS QModbusReply INHERIT QObject
@@ -21,8 +19,6 @@ CLASS QModbusReply INHERIT QObject
    METHOD type
    METHOD serverAddress
    METHOD isFinished
-   METHOD result
-   METHOD rawResult
    METHOD errorString
    METHOD error
 
@@ -138,48 +134,6 @@ HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 #endif
 }
 
-// QModbusDataUnit result() const
-HB_FUNC_STATIC(QMODBUSREPLY_RESULT)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  GET_PTR_FROM_SELF(obj);
-
-  if (obj != nullptr) {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0)) {
-#endif
-      auto ptr = new QModbusDataUnit(obj->result());
-      Qt5xHb::createReturnClass(ptr, "QMODBUSDATAUNIT", true);
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-    }
-#endif
-  }
-#endif
-}
-
-// QModbusResponse rawResult() const
-HB_FUNC_STATIC(QMODBUSREPLY_RAWRESULT)
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  GET_PTR_FROM_SELF(obj);
-
-  if (obj != nullptr) {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0)) {
-#endif
-      auto ptr = new QModbusResponse(obj->rawResult());
-      Qt5xHb::createReturnClass(ptr, "QMODBUSRESPONSE", true);
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-    }
-#endif
-  }
-#endif
-}
-
 // QString errorString() const
 HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 {
@@ -220,8 +174,6 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 #endif
 }
 
-// void setResult(const QModbusDataUnit &unit)
-// void setRawResult(const QModbusResponse &unit)
 // void setFinished(bool isFinished)
 // void setError(QModbusDevice::Error error, const QString &errorText)
 

@@ -233,4 +233,59 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_SERIALNUMBER)
 #endif
 }
 
+HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEWFROM)
+{
+  auto self = hb_stackSelfItem();
+
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
+    auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    hb_objSendMsg(self, "_POINTER", 1, ptr);
+    hb_itemRelease(ptr);
+    auto des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
+    hb_itemRelease(des);
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
+    auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    hb_objSendMsg(self, "_POINTER", 1, ptr);
+    hb_itemRelease(ptr);
+    auto des = hb_itemPutL(nullptr, false);
+    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
+    hb_itemRelease(des);
+  } else {
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
+
+  hb_itemReturn(self);
+}
+
+HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEWFROMOBJECT)
+{
+  HB_FUNC_EXEC(QCANBUSDEVICEINFO_NEWFROM);
+}
+
+HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEWFROMPOINTER)
+{
+  HB_FUNC_EXEC(QCANBUSDEVICEINFO_NEWFROM);
+}
+
+HB_FUNC_STATIC(QCANBUSDEVICEINFO_SELFDESTRUCTION)
+{
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
+}
+
+HB_FUNC_STATIC(QCANBUSDEVICEINFO_SETSELFDESTRUCTION)
+{
+  auto self = hb_stackSelfItem();
+
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    auto des = hb_itemPutL(nullptr, hb_parl(1));
+    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
+    hb_itemRelease(des);
+  } else {
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
+
+  hb_itemReturn(self);
+}
+
 #pragma ENDDUMP

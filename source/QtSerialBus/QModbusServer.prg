@@ -88,7 +88,6 @@ HB_FUNC_STATIC(QMODBUSSERVER_SERVERADDRESS)
 }
 
 // void setServerAddress(int serverAddress)
-// virtual bool setMap(const QModbusDataUnitMap &map)
 // virtual bool processesBroadcast() const
 HB_FUNC_STATIC(QMODBUSSERVER_PROCESSESBROADCAST)
 {
@@ -111,8 +110,6 @@ HB_FUNC_STATIC(QMODBUSSERVER_PROCESSESBROADCAST)
 
 // virtual QVariant value(int option) const
 // virtual bool setValue(int option, const QVariant &value)
-// bool data(QModbusDataUnit *newData) const
-// bool setData(const QModbusDataUnit &unit)
 // bool setData(QModbusDataUnit::RegisterType table, quint16 address, quint16 data)
 // bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) const
 

@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QCANBUSFACTORYV2_AVAILABLEDEVICES)
       auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (auto &item : list) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);

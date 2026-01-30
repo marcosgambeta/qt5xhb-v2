@@ -89,9 +89,6 @@ HB_FUNC_STATIC(QMODBUSCLIENT_TIMEOUT)
 
 // void setTimeout(int newTimeout)
 
-// QModbusReply *sendReadRequest(const QModbusDataUnit &read, int serverAddress)
-// QModbusReply *sendWriteRequest(const QModbusDataUnit &write, int serverAddress)
-// QModbusReply *sendReadWriteRequest(const QModbusDataUnit &read, const QModbusDataUnit &write, int serverAddress)
 // QModbusReply *sendRawRequest(const QModbusRequest &request, int serverAddress)
 // int numberOfRetries() const
 HB_FUNC_STATIC(QMODBUSCLIENT_NUMBEROFRETRIES)
