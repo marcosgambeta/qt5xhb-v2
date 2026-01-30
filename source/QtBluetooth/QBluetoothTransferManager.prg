@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBLUETOOTHTRANSFERREPLY
+REQUEST QBluetoothTransferReply
 #endif
 
 CLASS QBluetoothTransferManager INHERIT QObject
@@ -58,7 +58,9 @@ RETURN
 
 #include <QtBluetooth/QBluetoothTransferReply>
 
-    // QBluetoothTransferManager(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QBluetoothTransferManager *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QBluetoothTransferManager(QObject *parent = nullptr)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -74,10 +76,8 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_NEW)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QBluetoothTransferManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_DELETE)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_PUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QBluetoothTransferManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_PUT)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QBluetoothTransferManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -129,7 +129,6 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_ONFINISHED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
