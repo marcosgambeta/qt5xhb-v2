@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ERROR)
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FILENAME)
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FLUSH)
       RBOOL(obj->flush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QFILEDEVICE_HANDLE)
       RINT(obj->handle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QFILEDEVICE_PERMISSIONS)
       RENUM(obj->permissions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QFILEDEVICE_RESIZE)
       RBOOL(obj->resize(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SETPERMISSIONS)
       RBOOL(obj->setPermissions(PQFILEDEVICE_PERMISSIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QFILEDEVICE_UNSETERROR)
       obj->unsetError();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ATEND)
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QFILEDEVICE_CLOSE)
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ISSEQUENTIAL)
       RBOOL(obj->isSequential());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QFILEDEVICE_POS)
       RQINT64(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SEEK)
       RBOOL(obj->seek(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SIZE)
       RQINT64(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FILETIME)
       RQDATETIME(obj->fileTime(PQFILEDEVICE_FILETIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SETFILETIME)
       RBOOL(obj->setFileTime(*PQDATETIME(1), PQFILEDEVICE_FILETIME(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

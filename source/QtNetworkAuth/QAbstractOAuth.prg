@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_CLIENTIDENTIFIER)
       RQSTRING(obj->clientIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETCLIENTIDENTIFIER)
       obj->setClientIdentifier(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_TOKEN)
       RQSTRING(obj->token());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETTOKEN)
       obj->setToken(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_STATUS)
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_AUTHORIZATIONURL)
       RQURL(obj->authorizationUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETAUTHORIZATIONURL)
       obj->setAuthorizationUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_CONTENTTYPE)
       RENUM(obj->contentType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETCONTENTTYPE)
       obj->setContentType(PQABSTRACTOAUTH_CONTENTTYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_NETWORKACCESSMANAGER)
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETNETWORKACCESSMANAGER)
       obj->setNetworkAccessManager(PQNETWORKACCESSMANAGER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_REPLYHANDLER)
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTOAUTHREPLYHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETREPLYHANDLER)
       obj->setReplyHandler(PQABSTRACTOAUTHREPLYHANDLER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_GRANT)
       obj->grant();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONTOKENCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONSTATUSCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -557,7 +557,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -601,7 +601,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONCONTENTTYPECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -645,7 +645,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONREQUESTFAILED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -730,7 +730,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONGRANTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -774,7 +774,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONFINISHED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -818,7 +818,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONREPLYDATARECEIVED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

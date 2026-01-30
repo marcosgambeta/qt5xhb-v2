@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEW)
     auto obj = new QVector4D(*PQVECTOR3D(1), PFLOAT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QVECTOR4D_ISNULL)
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QVECTOR4D_X)
       RFLOAT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QVECTOR4D_Y)
       RFLOAT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QVECTOR4D_Z)
       RFLOAT(obj->z());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QVECTOR4D_W)
       RFLOAT(obj->w());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETX)
       obj->setX(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETY)
       obj->setY(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETZ)
       obj->setZ(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETW)
       obj->setW(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QVECTOR4D_LENGTH)
       RFLOAT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QVECTOR4D_LENGTHSQUARED)
       RFLOAT(obj->lengthSquared());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QVECTOR4D_NORMALIZED)
       RQVECTOR4D(obj->normalized());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QVECTOR4D_NORMALIZE)
       obj->normalize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR2D)
       RQVECTOR2D(obj->toVector2D());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR2DAFFINE)
       RQVECTOR2D(obj->toVector2DAffine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR3D)
       RQVECTOR3D(obj->toVector3D());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR3DAFFINE)
       RQVECTOR3D(obj->toVector3DAffine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOPOINT)
       RQPOINT(obj->toPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOPOINTF)
       RQPOINTF(obj->toPointF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -491,7 +491,7 @@ HB_FUNC_STATIC(QVECTOR4D_DOTPRODUCT)
     RFLOAT(QVector4D::dotProduct(*PQVECTOR4D(1), *PQVECTOR4D(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }

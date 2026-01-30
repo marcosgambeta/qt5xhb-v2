@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_NEW)
                                        HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_CURRENTPAGE)
       RINT(obj->currentPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ORIENTATION)
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_PAGECOUNT)
       RINT(obj->pageCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_VIEWMODE)
       RENUM(obj->viewMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMFACTOR)
       RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMMODE)
       RENUM(obj->zoomMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVISIBLE)
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_FITINVIEW)
       obj->fitInView();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_FITTOWIDTH)
       obj->fitToWidth();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_PRINT)
       obj->print();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE)
       obj->setAllPagesViewMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETCURRENTPAGE)
       obj->setCurrentPage(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE)
       obj->setFacingPagesViewMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION)
       obj->setLandscapeOrientation();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETORIENTATION)
       obj->setOrientation(PQPRINTER_ORIENTATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION)
       obj->setPortraitOrientation();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE)
       obj->setSinglePageViewMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVIEWMODE)
       obj->setViewMode(PQPRINTPREVIEWWIDGET_VIEWMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMFACTOR)
       obj->setZoomFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMMODE)
       obj->setZoomMode(PQPRINTPREVIEWWIDGET_ZOOMMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_UPDATEPREVIEW)
       obj->updatePreview();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMIN)
       obj->zoomIn(OPQREAL(1, 1.1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -540,7 +540,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMOUT)
       obj->zoomOut(OPQREAL(1, 1.1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ONPAINTREQUESTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -618,7 +618,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_NEW)
     auto obj = new QPlaceReview();
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_DATETIME)
       RQDATETIME(obj->dateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETDATETIME)
       obj->setDateTime(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_TEXT)
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETTEXT)
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_LANGUAGE)
       RQSTRING(obj->language());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETLANGUAGE)
       obj->setLanguage(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_RATING)
       RQREAL(obj->rating());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETRATING)
       obj->setRating(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_REVIEWID)
       RQSTRING(obj->reviewId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETREVIEWID)
       obj->setReviewId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_TITLE)
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_SETTITLE)
       obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

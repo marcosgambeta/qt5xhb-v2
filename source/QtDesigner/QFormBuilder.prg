@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QFORMBUILDER_NEW)
     auto obj = new QFormBuilder();
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
       obj->addPluginPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
       obj->clearPluginPaths();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
       RQSTRINGLIST(obj->pluginPaths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QFORMBUILDER_SETPLUGINPATH)
       obj->setPluginPath(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

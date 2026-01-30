@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_NEW)
     auto obj = new QMetaProperty();
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_NAME)
       hb_retc(static_cast<const char *>(obj->name()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_TYPENAME)
       hb_retc(static_cast<const char *>(obj->typeName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_TYPE)
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_USERTYPE)
       RINT(obj->userType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_PROPERTYINDEX)
       RINT(obj->propertyIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISREADABLE)
       RBOOL(obj->isReadable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISWRITABLE)
       RBOOL(obj->isWritable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISRESETTABLE)
       RBOOL(obj->isResettable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISDESIGNABLE)
       RBOOL(obj->isDesignable(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISSCRIPTABLE)
       RBOOL(obj->isScriptable(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISSTORED)
       RBOOL(obj->isStored(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISEDITABLE)
       RBOOL(obj->isEditable(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISUSER)
       RBOOL(obj->isUser(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISCONSTANT)
       RBOOL(obj->isConstant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISFINAL)
       RBOOL(obj->isFinal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISFLAGTYPE)
       RBOOL(obj->isFlagType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISENUMTYPE)
       RBOOL(obj->isEnumType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ENUMERATOR)
       RQMETAENUM(obj->enumerator());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -443,7 +443,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_HASNOTIFYSIGNAL)
       RBOOL(obj->hasNotifySignal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -461,7 +461,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_NOTIFYSIGNAL)
       RQMETAMETHOD(obj->notifySignal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -479,7 +479,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_NOTIFYSIGNALINDEX)
       RINT(obj->notifySignalIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_REVISION)
       RINT(obj->revision());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_READ)
       RQVARIANT(obj->read(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_WRITE)
       RBOOL(obj->write(PQOBJECT(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_RESET)
       RBOOL(obj->reset(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_HASSTDCPPSET)
       RBOOL(obj->hasStdCppSet());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISVALID)
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -606,7 +606,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ENCLOSINGMETAOBJECT)
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ACTUALVALUE)
       RQVARIANT(obj->actualValue(PQCAMERAEXPOSURECONTROL_EXPOSUREPARAMETER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED)
       RBOOL(obj->isParameterSupported(PQCAMERAEXPOSURECONTROL_EXPOSUREPARAMETER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_REQUESTEDVALUE)
       RQVARIANT(obj->requestedValue(PQCAMERAEXPOSURECONTROL_EXPOSUREPARAMETER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SETVALUE)
       RBOOL(obj->setValue(PQCAMERAEXPOSURECONTROL_EXPOSUREPARAMETER(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE)
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

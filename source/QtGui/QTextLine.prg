@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QTEXTLINE_NEW)
     auto obj = new QTextLine();
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QTEXTLINE_ISVALID)
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QTEXTLINE_RECT)
       RQRECTF(obj->rect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QTEXTLINE_X)
       RQREAL(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QTEXTLINE_Y)
       RQREAL(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QTEXTLINE_WIDTH)
       RQREAL(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QTEXTLINE_ASCENT)
       RQREAL(obj->ascent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QTEXTLINE_DESCENT)
       RQREAL(obj->descent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QTEXTLINE_HEIGHT)
       RQREAL(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QTEXTLINE_LEADING)
       RQREAL(obj->leading());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLEADINGINCLUDED)
       obj->setLeadingIncluded(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QTEXTLINE_LEADINGINCLUDED)
       RBOOL(obj->leadingIncluded());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QTEXTLINE_NATURALTEXTWIDTH)
       RQREAL(obj->naturalTextWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QTEXTLINE_HORIZONTALADVANCE)
       RQREAL(obj->horizontalAdvance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QTEXTLINE_NATURALTEXTRECT)
       RQRECTF(obj->naturalTextRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
       RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? QTextLine::Leading : PQTEXTLINE_EDGE(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QTEXTLINE_XTOCURSOR)
       RINT(obj->xToCursor(PQREAL(1), HB_ISNIL(2) ? QTextLine::CursorBetweenCharacters : PQTEXTLINE_CURSORPOSITION(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLINEWIDTH)
       obj->setLineWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETPOSITION)
       obj->setPosition(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QTEXTLINE_POSITION)
       RQPOINTF(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QTEXTLINE_TEXTSTART)
       RINT(obj->textStart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QTEXTLINE_TEXTLENGTH)
       RINT(obj->textLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QTEXTLINE_LINENUMBER)
       RINT(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

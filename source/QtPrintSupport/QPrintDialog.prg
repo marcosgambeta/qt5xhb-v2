@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_NEW)
     auto obj = new QPrintDialog(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_OPEN)
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_OPTIONS)
       RENUM(obj->options());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_PRINTER)
       Qt5xHb::createReturnClass(ptr, "QPRINTER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETOPTION)
       obj->setOption(PQPRINTDIALOG_PRINTDIALOGOPTION(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETOPTIONS)
       obj->setOptions(PQPRINTDIALOG_PRINTDIALOGOPTIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_TESTOPTION)
       RBOOL(obj->testOption(PQPRINTDIALOG_PRINTDIALOGOPTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_DONE)
       obj->done(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_EXEC)
       RINT(obj->exec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETVISIBLE)
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_ONACCEPTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_NEW)
     auto obj = new QWinJumpListCategory(OPQSTRING(1, QString()));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_TYPE)
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ISVISIBLE)
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SETVISIBLE)
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_TITLE)
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SETTITLE)
       obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_COUNT)
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ISEMPTY)
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ITEMS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDITEM)
       obj->addItem(PQWINJUMPLISTITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDDESTINATION)
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDLINK)
     }
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDSEPARATOR)
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_CLEAR)
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

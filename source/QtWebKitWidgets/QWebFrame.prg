@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QWEBFRAME_TEXTSIZEMULTIPLIER)
       RQREAL(obj->textSizeMultiplier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETTEXTSIZEMULTIPLIER)
       obj->setTextSizeMultiplier(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QWEBFRAME_ZOOMFACTOR)
       RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETZOOMFACTOR)
       obj->setZoomFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QWEBFRAME_TITLE)
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QWEBFRAME_URL)
       RQURL(obj->url());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETURL)
       obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QWEBFRAME_REQUESTEDURL)
       RQURL(obj->requestedUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QWEBFRAME_BASEURL)
       RQURL(obj->baseUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QWEBFRAME_ICON)
       RQICON(obj->icon());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QWEBFRAME_CONTENTSSIZE)
       RQSIZE(obj->contentsSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLPOSITION)
       RQPOINT(obj->scrollPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLPOSITION)
       obj->setScrollPosition(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QWEBFRAME_HASFOCUS)
       RBOOL(obj->hasFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
                                        HB_ISNIL(3) ? QWebFrame::QtOwnership : PQWEBFRAME_VALUEOWNERSHIP(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QWEBFRAME_CHILDFRAMES)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QWEBFRAME_DOCUMENTELEMENT)
       RQWEBELEMENT(obj->documentElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QWEBFRAME_FINDALLELEMENTS)
       RQWEBELEMENTCOLLECTION(obj->findAllElements(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QWEBFRAME_FINDFIRSTELEMENT)
       RQWEBELEMENT(obj->findFirstElement(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QWEBFRAME_FRAMENAME)
       RQSTRING(obj->frameName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -521,7 +521,7 @@ HB_FUNC_STATIC(QWEBFRAME_GEOMETRY)
       RQRECT(obj->geometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QWEBFRAME_HITTESTCONTENT)
       RQWEBHITTESTRESULT(obj->hitTestContent(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(QWEBFRAME_PAGE)
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -605,7 +605,7 @@ HB_FUNC_STATIC(QWEBFRAME_PARENTFRAME)
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QWEBFRAME_POS)
       RQPOINT(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -650,7 +650,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLL)
       obj->scroll(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARGEOMETRY)
       RQRECT(obj->scrollBarGeometry(PQT_ORIENTATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -704,7 +704,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARMAXIMUM)
       RINT(obj->scrollBarMaximum(PQT_ORIENTATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -722,7 +722,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARMINIMUM)
       RINT(obj->scrollBarMinimum(PQT_ORIENTATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -740,7 +740,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARPOLICY)
       RENUM(obj->scrollBarPolicy(PQT_ORIENTATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -758,7 +758,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARVALUE)
       RINT(obj->scrollBarValue(PQT_ORIENTATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLTOANCHOR)
       obj->scrollToAnchor(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -796,7 +796,7 @@ HB_FUNC_STATIC(QWEBFRAME_SECURITYORIGIN)
       RQWEBSECURITYORIGIN(obj->securityOrigin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -814,7 +814,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
       obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *PQURL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -834,7 +834,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETFOCUS)
       obj->setFocus();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -854,7 +854,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETHTML)
       obj->setHtml(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -874,7 +874,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARPOLICY)
       obj->setScrollBarPolicy(PQT_ORIENTATION(1), PQT_SCROLLBARPOLICY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -894,7 +894,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARVALUE)
       obj->setScrollBarValue(PQT_ORIENTATION(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -914,7 +914,7 @@ HB_FUNC_STATIC(QWEBFRAME_TOHTML)
       RQSTRING(obj->toHtml());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -932,7 +932,7 @@ HB_FUNC_STATIC(QWEBFRAME_TOPLAINTEXT)
       RQSTRING(obj->toPlainText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -950,7 +950,7 @@ HB_FUNC_STATIC(QWEBFRAME_EVALUATEJAVASCRIPT)
       RQVARIANT(obj->evaluateJavaScript(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -969,7 +969,7 @@ HB_FUNC_STATIC(QWEBFRAME_PRINT)
       obj->print(PQPRINTER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -990,7 +990,7 @@ HB_FUNC_STATIC(QWEBFRAME_EVENT)
       RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC(QWEBFRAME_ONCONTENTSSIZECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC(QWEBFRAME_ONICONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC(QWEBFRAME_ONINITIALLAYOUTCOMPLETED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC(QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC(QWEBFRAME_ONLOADFINISHED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1219,7 +1219,7 @@ HB_FUNC_STATIC(QWEBFRAME_ONLOADSTARTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1256,7 +1256,7 @@ HB_FUNC_STATIC(QWEBFRAME_ONPAGECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC(QWEBFRAME_ONTITLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1336,7 +1336,7 @@ HB_FUNC_STATIC(QWEBFRAME_ONURLCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

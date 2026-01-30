@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_ISVALID)
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETNEXTROUTESEGMENT)
       obj->setNextRouteSegment(*PQGEOROUTESEGMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_NEXTROUTESEGMENT)
       RQGEOROUTESEGMENT(obj->nextRouteSegment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETTRAVELTIME)
       obj->setTravelTime(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_TRAVELTIME)
       RINT(obj->travelTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETDISTANCE)
       obj->setDistance(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_DISTANCE)
       RQREAL(obj->distance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETPATH)
       obj->setPath(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_PATH)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_SETMANEUVER)
       obj->setManeuver(*PQGEOMANEUVER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_MANEUVER)
       RQGEOMANEUVER(obj->maneuver());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QGEOROUTESEGMENT_ISLEGLASTSEGMENT)
       RBOOL(obj->isLegLastSegment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

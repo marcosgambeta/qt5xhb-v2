@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_NEW)
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QSCRIPTVALUE_NEW8);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_CALL)
       RQSCRIPTVALUE(obj->call(*PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_CONSTRUCT)
       RQSCRIPTVALUE(obj->construct(*PQSCRIPTVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_DATA)
       RQSCRIPTVALUE(obj->data());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ENGINE)
       Qt5xHb::createReturnQObjectClass(ptr, "QSCRIPTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_EQUALS)
       RBOOL(obj->equals(*PQSCRIPTVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_INSTANCEOF)
       RBOOL(obj->instanceOf(*PQSCRIPTVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISARRAY)
       RBOOL(obj->isArray());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISBOOL)
       RBOOL(obj->isBool());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISDATE)
       RBOOL(obj->isDate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISERROR)
       RBOOL(obj->isError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISFUNCTION)
       RBOOL(obj->isFunction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISNULL)
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -414,7 +414,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISNUMBER)
       RBOOL(obj->isNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISOBJECT)
       RBOOL(obj->isObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISQMETAOBJECT)
       RBOOL(obj->isQMetaObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISQOBJECT)
       RBOOL(obj->isQObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISREGEXP)
       RBOOL(obj->isRegExp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISSTRING)
       RBOOL(obj->isString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -522,7 +522,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISUNDEFINED)
       RBOOL(obj->isUndefined());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -540,7 +540,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISVALID)
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISVARIANT)
       RBOOL(obj->isVariant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_LESSTHAN)
       RBOOL(obj->lessThan(*PQSCRIPTVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_PROTOTYPE)
       RQSCRIPTVALUE(obj->prototype());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SCRIPTCLASS)
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCLASS", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SETDATA)
       obj->setData(*PQSCRIPTVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -651,7 +651,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SETPROTOTYPE)
       obj->setPrototype(*PQSCRIPTVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -671,7 +671,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SETSCRIPTCLASS)
       obj->setScriptClass(PQSCRIPTCLASS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -691,7 +691,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_STRICTLYEQUALS)
       RBOOL(obj->strictlyEquals(*PQSCRIPTVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -709,7 +709,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOBOOL)
       RBOOL(obj->toBool());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -727,7 +727,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TODATETIME)
       RQDATETIME(obj->toDateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -745,7 +745,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOINT32)
       RQINT32(obj->toInt32());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -766,7 +766,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOQMETAOBJECT)
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOQOBJECT)
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -803,7 +803,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOREGEXP)
       RQREGEXP(obj->toRegExp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -821,7 +821,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOSTRING)
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -839,7 +839,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOUINT16)
       RQUINT16(obj->toUInt16());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -857,7 +857,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOUINT32)
       RQUINT32(obj->toUInt32());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -875,7 +875,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOVARIANT)
       RQVARIANT(obj->toVariant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

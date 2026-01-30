@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_NEW)
     auto obj = new QWebHitTestResult(*PQWEBHITTESTRESULT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ALTERNATETEXT)
       RQSTRING(obj->alternateText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_BOUNDINGRECT)
       RQRECT(obj->boundingRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ELEMENT)
       RQWEBELEMENT(obj->element());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT)
       RQWEBELEMENT(obj->enclosingBlockElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_FRAME)
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_IMAGEURL)
       RQURL(obj->imageUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ISCONTENTEDITABLE)
       RBOOL(obj->isContentEditable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ISCONTENTSELECTED)
       RBOOL(obj->isContentSelected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ISNULL)
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKELEMENT)
       RQWEBELEMENT(obj->linkElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTARGETFRAME)
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTEXT)
       RQSTRING(obj->linkText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTITLE)
       RQURL(obj->linkTitle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKURL)
       RQURL(obj->linkUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_PIXMAP)
       RQPIXMAP(obj->pixmap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_POS)
       RQPOINT(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_TITLE)
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTITLESTRING)
       RQSTRING(obj->linkTitleString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_MEDIAURL)
       RQURL(obj->mediaUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

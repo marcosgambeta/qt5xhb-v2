@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSPACERITEM_NEW)
                                HB_ISNIL(4) ? QSizePolicy::Minimum : PQSIZEPOLICY_POLICY(4));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSPACERITEM_CHANGESIZE)
                       HB_ISNIL(4) ? QSizePolicy::Minimum : PQSIZEPOLICY_POLICY(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QSPACERITEM_EXPANDINGDIRECTIONS)
       RENUM(obj->expandingDirections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QSPACERITEM_GEOMETRY)
       RQRECT(obj->geometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QSPACERITEM_ISEMPTY)
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSPACERITEM_MAXIMUMSIZE)
       RQSIZE(obj->maximumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QSPACERITEM_MINIMUMSIZE)
       RQSIZE(obj->minimumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QSPACERITEM_SETGEOMETRY)
       obj->setGeometry(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QSPACERITEM_SIZEHINT)
       RQSIZE(obj->sizeHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QSPACERITEM_SPACERITEM)
       Qt5xHb::createReturnClass(ptr, "QSPACERITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

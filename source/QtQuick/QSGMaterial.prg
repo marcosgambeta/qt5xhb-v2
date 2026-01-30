@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSGMATERIAL_COMPARE)
       RINT(obj->compare(PQSGMATERIAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QSGMATERIAL_CREATESHADER)
       Qt5xHb::createReturnClass(ptr, "QSGMATERIALSHADER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QSGMATERIAL_FLAGS)
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSGMATERIAL_SETFLAG)
       obj->setFlag(PQSGMATERIAL_FLAGS(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QSGMATERIAL_TYPE)
       Qt5xHb::createReturnClass(ptr, "QSGMATERIALTYPE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

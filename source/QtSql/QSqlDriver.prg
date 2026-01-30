@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSQLDRIVER_BEGINTRANSACTION)
       RBOOL(obj->beginTransaction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CLOSE)
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QSQLDRIVER_COMMITTRANSACTION)
       RBOOL(obj->commitTransaction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CREATERESULT)
       Qt5xHb::createReturnClass(ptr, "QSQLRESULT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
       RQSTRING(obj->escapeIdentifier(PQSTRING(1), PQSQLDRIVER_IDENTIFIERTYPE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QSQLDRIVER_FORMATVALUE)
       RQSTRING(obj->formatValue(*PQSQLFIELD(1), OPBOOL(2, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QSQLDRIVER_HANDLE)
       RQVARIANT(obj->handle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QSQLDRIVER_HASFEATURE)
       RBOOL(obj->hasFeature(PQSQLDRIVER_DRIVERFEATURE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISIDENTIFIERESCAPED)
       RBOOL(obj->isIdentifierEscaped(PQSTRING(1), PQSQLDRIVER_IDENTIFIERTYPE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPEN)
       RBOOL(obj->isOpen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPENERROR)
       RBOOL(obj->isOpenError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QSQLDRIVER_LASTERROR)
       RQSQLERROR(obj->lastError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QSQLDRIVER_NUMERICALPRECISIONPOLICY)
       RENUM(obj->numericalPrecisionPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QSQLDRIVER_OPEN)
                       OPINT(5, -1), OPQSTRING(6, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
       RQSQLINDEX(obj->primaryIndex(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QSQLDRIVER_RECORD)
       RQSQLRECORD(obj->record(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ROLLBACKTRANSACTION)
       RBOOL(obj->rollbackTransaction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
       obj->setNumericalPrecisionPolicy(PQSQL_NUMERICALPRECISIONPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
       RQSTRING(obj->sqlStatement(PQSQLDRIVER_STATEMENTTYPE(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
       RQSTRING(obj->stripDelimiters(PQSTRING(1), PQSQLDRIVER_IDENTIFIERTYPE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBETONOTIFICATION)
       RBOOL(obj->subscribeToNotification(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS)
       RQSTRINGLIST(obj->subscribedToNotifications());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QSQLDRIVER_TABLES)
       RQSTRINGLIST(obj->tables(PQSQL_TABLETYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION)
       RBOOL(obj->unsubscribeFromNotification(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CANCELQUERY)
       RBOOL(obj->cancelQuery());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION1)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -633,7 +633,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION2)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

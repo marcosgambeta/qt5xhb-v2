@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QITEMEDITORCREATORBASE_CREATEWIDGET)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QITEMEDITORCREATORBASE_VALUEPROPERTYNAME)
       RQBYTEARRAY(obj->valuePropertyName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

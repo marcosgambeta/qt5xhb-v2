@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_NEW)
     auto obj = new QResizeEvent(*PQSIZE(1), *PQSIZE(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
       Qt5xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_OLDSIZE)
       Qt5xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

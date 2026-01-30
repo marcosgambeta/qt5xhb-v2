@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
     Qt5xHb::returnNewObject(obj, false);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARPOPUP)
       RBOOL(obj->calendarPopup());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARWIDGET)
       Qt5xHb::createReturnQWidgetClass(ptr, "QCALENDARWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATE)
       obj->clearMaximumDate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATETIME)
       obj->clearMaximumDateTime();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMTIME)
       obj->clearMaximumTime();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATE)
       obj->clearMinimumDate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATETIME)
       obj->clearMinimumDateTime();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMTIME)
       obj->clearMinimumTime();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTION)
       RENUM(obj->currentSection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTIONINDEX)
       RINT(obj->currentSectionIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DATE)
       RQDATE(obj->date());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DATETIME)
       RQDATETIME(obj->dateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYFORMAT)
       RQSTRING(obj->displayFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYEDSECTIONS)
       RENUM(obj->displayedSections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATE)
       RQDATE(obj->maximumDate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATETIME)
       RQDATETIME(obj->maximumDateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMTIME)
       RQTIME(obj->maximumTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATE)
       RQDATE(obj->minimumDate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATETIME)
       RQDATETIME(obj->minimumDateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMTIME)
       RQTIME(obj->minimumTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONAT)
       RENUM(obj->sectionAt(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONCOUNT)
       RINT(obj->sectionCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONTEXT)
       RQSTRING(obj->sectionText(PQDATETIMEEDIT_SECTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -582,7 +582,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARPOPUP)
       obj->setCalendarPopup(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARWIDGET)
       obj->setCalendarWidget(PQCALENDARWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -622,7 +622,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTION)
       obj->setCurrentSection(PQDATETIMEEDIT_SECTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -642,7 +642,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTIONINDEX)
       obj->setCurrentSectionIndex(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -662,7 +662,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATERANGE)
       obj->setDateRange(*PQDATE(1), *PQDATE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -682,7 +682,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIMERANGE)
       obj->setDateTimeRange(*PQDATETIME(1), *PQDATETIME(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -702,7 +702,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDISPLAYFORMAT)
       obj->setDisplayFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -722,7 +722,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATE)
       obj->setMaximumDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -742,7 +742,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATETIME)
       obj->setMaximumDateTime(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -762,7 +762,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMTIME)
       obj->setMaximumTime(*PQTIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -782,7 +782,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATE)
       obj->setMinimumDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -802,7 +802,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATETIME)
       obj->setMinimumDateTime(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -822,7 +822,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMTIME)
       obj->setMinimumTime(*PQTIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -842,7 +842,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETSELECTEDSECTION)
       obj->setSelectedSection(PQDATETIMEEDIT_SECTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -862,7 +862,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMERANGE)
       obj->setTimeRange(*PQTIME(1), *PQTIME(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -882,7 +882,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMESPEC)
       obj->setTimeSpec(PQT_TIMESPEC(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -902,7 +902,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_TIME)
       RQTIME(obj->time());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -920,7 +920,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_TIMESPEC)
       RENUM(obj->timeSpec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -938,7 +938,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEAR)
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -958,7 +958,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_EVENT)
       RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SIZEHINT)
       RQSIZE(obj->sizeHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -994,7 +994,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_STEPBY)
       obj->stepBy(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATE)
       obj->setDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIME)
       obj->setDateTime(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIME)
       obj->setTime(*PQTIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONDATECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONDATETIMECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONTIMECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
                                PQT_MOUSEBUTTONS(7), PQT_KEYBOARDMODIFIERS(8));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QWHEELEVENT_PIXELDELTA)
       RQPOINT(obj->pixelDelta());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QWHEELEVENT_ANGLEDELTA)
       RQPOINT(obj->angleDelta());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QWHEELEVENT_DELTA)
       RINT(obj->delta());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QWHEELEVENT_ORIENTATION)
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POS)
       RQPOINT(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
       RQPOINT(obj->globalPos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QWHEELEVENT_X)
       RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QWHEELEVENT_Y)
       RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALX)
       RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALY)
       RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POSF)
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOSF)
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QWHEELEVENT_BUTTONS)
       RENUM(obj->buttons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

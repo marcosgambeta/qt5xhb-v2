@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_TYPE)
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABELFORMAT)
       RQSTRING(obj->itemLabelFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELFORMAT)
       obj->setItemLabelFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISVISIBLE)
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETVISIBLE)
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MESH)
       RENUM(obj->mesh());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESH)
       obj->setMesh(PQABSTRACT3DSERIES_MESH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISMESHSMOOTH)
       RBOOL(obj->isMeshSmooth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHSMOOTH)
       obj->setMeshSmooth(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MESHROTATION)
       RQQUATERNION(obj->meshRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHROTATION)
       obj->setMeshRotation(*PQQUATERNION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_USERDEFINEDMESH)
       RQSTRING(obj->userDefinedMesh());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETUSERDEFINEDMESH)
       obj->setUserDefinedMesh(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_COLORSTYLE)
       RENUM(obj->colorStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETCOLORSTYLE)
       obj->setColorStyle(PQ3DTHEME_COLORSTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASECOLOR)
       RQCOLOR(obj->baseColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASECOLOR)
       obj->setBaseColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASEGRADIENT)
       RQLINEARGRADIENT(obj->baseGradient());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASEGRADIENT)
       obj->setBaseGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR)
       RQCOLOR(obj->singleHighlightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR)
       obj->setSingleHighlightColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT)
       RQLINEARGRADIENT(obj->singleHighlightGradient());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -591,7 +591,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT)
       obj->setSingleHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR)
       RQCOLOR(obj->multiHighlightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -633,7 +633,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR)
       obj->setMultiHighlightColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -655,7 +655,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT)
       RQLINEARGRADIENT(obj->multiHighlightGradient());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -675,7 +675,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT)
       obj->setMultiHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -697,7 +697,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_NAME)
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETNAME)
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -739,7 +739,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABEL)
       RQSTRING(obj->itemLabel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -759,7 +759,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISITEMLABELVISIBLE)
       RBOOL(obj->isItemLabelVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -779,7 +779,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELVISIBLE)
       obj->setItemLabelVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHAXISANDANGLE)
       obj->setMeshAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -844,7 +844,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASECOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -888,7 +888,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -932,7 +932,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONCOLORSTYLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1064,7 +1064,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHROTATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1240,7 +1240,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONNAMECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1373,7 +1373,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1462,7 +1462,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1506,7 +1506,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONVISIBILITYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_NEW)
     auto obj = new QQuickWebEngineScript(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_NAME)
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETNAME)
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SOURCEURL)
       RQURL(obj->sourceUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETSOURCEURL)
       obj->setSourceUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SOURCECODE)
       RQSTRING(obj->sourceCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETSOURCECODE)
       obj->setSourceCode(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_INJECTIONPOINT)
       RENUM(obj->injectionPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT)
       obj->setInjectionPoint(PQQUICKWEBENGINESCRIPT_INJECTIONPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_WORLDID)
       RENUM(obj->worldId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETWORLDID)
       obj->setWorldId(PQQUICKWEBENGINESCRIPT_SCRIPTWORLDID(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_RUNONSUBFRAMES)
       RBOOL(obj->runOnSubframes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETRUNONSUBFRAMES)
       obj->setRunOnSubframes(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_TOSTRING)
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONNAMECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -540,7 +540,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -629,7 +629,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

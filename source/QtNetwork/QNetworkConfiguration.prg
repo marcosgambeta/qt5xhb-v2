@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NEW)
     auto obj = new QNetworkConfiguration(*PQNETWORKCONFIGURATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPE)
       RENUM(obj->bearerType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPEFAMILY)
       RENUM(obj->bearerTypeFamily());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPENAME)
       RQSTRING(obj->bearerTypeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_CHILDREN)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_IDENTIFIER)
       RQSTRING(obj->identifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISROAMINGAVAILABLE)
       RBOOL(obj->isRoamingAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISVALID)
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NAME)
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_PURPOSE)
       RENUM(obj->purpose());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_STATE)
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_TYPE)
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_SWAP)
       obj->swap(*PQNETWORKCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_CONNECTTIMEOUT)
       RINT(obj->connectTimeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_SETCONNECTTIMEOUT)
       RBOOL(obj->setConnectTimeout(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

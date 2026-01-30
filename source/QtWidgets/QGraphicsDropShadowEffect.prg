@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_NEW)
     auto obj = new QGraphicsDropShadowEffect(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS)
       RQREAL(obj->blurRadius());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_COLOR)
       RQCOLOR(obj->color());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_OFFSET)
       RQPOINTF(obj->offset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_XOFFSET)
       RQREAL(obj->xOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_YOFFSET)
       RQREAL(obj->yOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR)
       RQRECTF(obj->boundingRectFor(*PQRECTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS)
       obj->setBlurRadius(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETCOLOR)
       obj->setColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET)
       obj->setXOffset(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET)
       obj->setYOffset(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

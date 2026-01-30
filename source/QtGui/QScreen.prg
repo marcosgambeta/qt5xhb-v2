@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSCREEN_NAME)
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QSCREEN_DEPTH)
       RINT(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSCREEN_SIZE)
       RQSIZE(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QSCREEN_GEOMETRY)
       RQRECT(obj->geometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALSIZE)
       RQSIZEF(obj->physicalSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALDOTSPERINCHX)
       RQREAL(obj->physicalDotsPerInchX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALDOTSPERINCHY)
       RQREAL(obj->physicalDotsPerInchY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALDOTSPERINCH)
       RQREAL(obj->physicalDotsPerInch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QSCREEN_LOGICALDOTSPERINCHX)
       RQREAL(obj->logicalDotsPerInchX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QSCREEN_LOGICALDOTSPERINCHY)
       RQREAL(obj->logicalDotsPerInchY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QSCREEN_LOGICALDOTSPERINCH)
       RQREAL(obj->logicalDotsPerInch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QSCREEN_DEVICEPIXELRATIO)
       RQREAL(obj->devicePixelRatio());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLESIZE)
       RQSIZE(obj->availableSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEGEOMETRY)
       RQRECT(obj->availableGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALSIBLINGS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALSIZE)
       RQSIZE(obj->virtualSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALGEOMETRY)
       RQRECT(obj->virtualGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEVIRTUALSIZE)
       RQSIZE(obj->availableVirtualSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEVIRTUALGEOMETRY)
       RQRECT(obj->availableVirtualGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC(QSCREEN_PRIMARYORIENTATION)
       RENUM(obj->primaryOrientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QSCREEN_ORIENTATION)
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QSCREEN_ORIENTATIONUPDATEMASK)
       RENUM(obj->orientationUpdateMask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QSCREEN_SETORIENTATIONUPDATEMASK)
       obj->setOrientationUpdateMask(PQT_SCREENORIENTATIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QSCREEN_ANGLEBETWEEN)
       RINT(obj->angleBetween(PQT_SCREENORIENTATION(1), PQT_SCREENORIENTATION(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -567,7 +567,7 @@ HB_FUNC_STATIC(QSCREEN_TRANSFORMBETWEEN)
       RQTRANSFORM(obj->transformBetween(PQT_SCREENORIENTATION(1), PQT_SCREENORIENTATION(2), *PQRECT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -585,7 +585,7 @@ HB_FUNC_STATIC(QSCREEN_MAPBETWEEN)
       RQRECT(obj->mapBetween(PQT_SCREENORIENTATION(1), PQT_SCREENORIENTATION(2), *PQRECT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QSCREEN_ISPORTRAIT)
       RBOOL(obj->isPortrait(PQT_SCREENORIENTATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -621,7 +621,7 @@ HB_FUNC_STATIC(QSCREEN_ISLANDSCAPE)
       RBOOL(obj->isLandscape(PQT_SCREENORIENTATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -639,7 +639,7 @@ HB_FUNC_STATIC(QSCREEN_GRABWINDOW)
       RQPIXMAP(obj->grabWindow((WId)hb_parptr(1), OPINT(2, 0), OPINT(3, 0), OPINT(4, -1), OPINT(5, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QSCREEN_REFRESHRATE)
       RQREAL(obj->refreshRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -696,7 +696,7 @@ HB_FUNC_STATIC(QSCREEN_ONGEOMETRYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -736,7 +736,7 @@ HB_FUNC_STATIC(QSCREEN_ONPHYSICALSIZECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QSCREEN_ONPHYSICALDOTSPERINCHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -816,7 +816,7 @@ HB_FUNC_STATIC(QSCREEN_ONLOGICALDOTSPERINCHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -856,7 +856,7 @@ HB_FUNC_STATIC(QSCREEN_ONVIRTUALGEOMETRYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -896,7 +896,7 @@ HB_FUNC_STATIC(QSCREEN_ONPRIMARYORIENTATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -936,7 +936,7 @@ HB_FUNC_STATIC(QSCREEN_ONORIENTATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QSCREEN_ONREFRESHRATECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

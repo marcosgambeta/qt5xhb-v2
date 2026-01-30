@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ISVALID)
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_REQUESTPAIRING)
       obj->requestPairing(*PQBLUETOOTHADDRESS(1), PQBLUETOOTHLOCALDEVICE_PAIRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_PAIRINGSTATUS)
       RENUM(obj->pairingStatus(*PQBLUETOOTHADDRESS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_SETHOSTMODE)
       obj->setHostMode(PQBLUETOOTHLOCALDEVICE_HOSTMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_HOSTMODE)
       RENUM(obj->hostMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_POWERON)
       obj->powerOn();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_NAME)
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ADDRESS)
       RQBLUETOOTHADDRESS(obj->address());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_PAIRINGCONFIRMATION)
       obj->pairingConfirmation(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ALLDEVICES)
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONERROR)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

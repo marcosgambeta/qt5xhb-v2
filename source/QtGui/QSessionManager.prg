@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONID)
       RQSTRING(obj->sessionId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONKEY)
       RQSTRING(obj->sessionKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSINTERACTION)
       RBOOL(obj->allowsInteraction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSERRORINTERACTION)
       RBOOL(obj->allowsErrorInteraction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RELEASE)
       obj->release();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_CANCEL)
       obj->cancel();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTHINT)
       obj->setRestartHint(PQSESSIONMANAGER_RESTARTHINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTHINT)
       RENUM(obj->restartHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
       obj->setRestartCommand(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTCOMMAND)
       RQSTRINGLIST(obj->restartCommand());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
       obj->setDiscardCommand(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_DISCARDCOMMAND)
       RQSTRINGLIST(obj->discardCommand());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ISPHASE2)
       RBOOL(obj->isPhase2());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_REQUESTPHASE2)
       obj->requestPhase2();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

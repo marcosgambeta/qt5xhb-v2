@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_NEW)
     auto obj = new QXmlAttributes();
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_APPEND)
       obj->append(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_CLEAR)
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_COUNT)
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
       RINT(obj->index(PQSTRING(1), PQSTRING(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_LENGTH)
       RINT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_LOCALNAME)
       RQSTRING(obj->localName(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_QNAME)
       RQSTRING(obj->qName(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
       RQSTRING(obj->type(PQSTRING(1), PQSTRING(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_URI)
       RQSTRING(obj->uri(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
       RQSTRING(obj->value(PQSTRING(1), PQSTRING(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 

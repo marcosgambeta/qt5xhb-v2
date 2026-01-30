@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_NEW)
     auto obj = new QDnsDomainNameRecord(*PQDNSDOMAINNAMERECORD(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_NAME)
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_SWAP)
       obj->swap(*PQDNSDOMAINNAMERECORD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_TIMETOLIVE)
       RQUINT32(obj->timeToLive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_VALUE)
       RQSTRING(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

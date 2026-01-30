@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QHELPEVENT_NEW)
     auto obj = new QHelpEvent(PQEVENT_TYPE(1), *PQPOINT(2), *PQPOINT(3));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QHELPEVENT_GLOBALPOS)
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QHELPEVENT_GLOBALX)
       RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QHELPEVENT_GLOBALY)
       RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QHELPEVENT_POS)
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QHELPEVENT_X)
       RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QHELPEVENT_Y)
       RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QXMLNAME_NEW)
     auto obj = new QXmlName(*PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3, QString()), OPQSTRING(4, QString()));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QXMLNAME_ISNULL)
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
       RQSTRING(obj->localName(*PQXMLNAMEPOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
       RQSTRING(obj->namespaceUri(*PQXMLNAMEPOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QXMLNAME_PREFIX)
       RQSTRING(obj->prefix(*PQXMLNAMEPOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QXMLNAME_TOCLARKNAME)
       RQSTRING(obj->toClarkName(*PQXMLNAMEPOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QXMLNAME_FROMCLARKNAME)
     RQXMLNAME(QXmlName::fromClarkName(PQSTRING(1), *PQXMLNAMEPOOL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QXMLNAME_ISNCNAME)
     RBOOL(QXmlName::isNCName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }

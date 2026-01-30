@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QICON_NEW)
     auto obj = new QIcon(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
                              HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
                    HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
                      HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QICON_AVAILABLESIZES)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QICON_CACHEKEY)
       RQINT64(obj->cacheKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QICON_ISNULL)
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QICON_NAME)
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QICON_PAINT)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
                            HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QICON_FROMTHEME)
     RQICON(QIcon::fromTheme(PQSTRING(1), HB_ISNIL(2) ? QIcon() : *PQICON(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QICON_HASTHEMEICON)
     RBOOL(QIcon::hasThemeIcon(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QICON_SETTHEMENAME)
     QIcon::setThemeName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QICON_SETTHEMESEARCHPATHS)
     QIcon::setThemeSearchPaths(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QICON_THEMENAME)
     RQSTRING(QIcon::themeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QICON_THEMESEARCHPATHS)
     RQSTRINGLIST(QIcon::themeSearchPaths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QICON_FALLBACKTHEMENAME)
     RQSTRING(QIcon::fallbackThemeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QICON_SETFALLBACKTHEMENAME)
     QIcon::setFallbackThemeName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QICON_TOVARIANT)
     variant->setValue<QIcon>(*icon);
     Qt5xHb::createReturnClass(variant, "QVARIANT", true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QICON_FROMVARIANT)
     auto icon = new QIcon(variant->value<QIcon>());
     Qt5xHb::createReturnClass(icon, "QICON", true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 

@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QWIDGET_NEW)
     auto obj = new QWidget(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -574,7 +574,7 @@ HB_FUNC_STATIC(QWIDGET_ACCEPTDROPS)
       RBOOL(obj->acceptDrops());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QWIDGET_SETACCEPTDROPS)
       obj->setAcceptDrops(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QWIDGET_ACCESSIBLEDESCRIPTION)
       RQSTRING(obj->accessibleDescription());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -633,7 +633,7 @@ HB_FUNC_STATIC(QWIDGET_SETACCESSIBLEDESCRIPTION)
       obj->setAccessibleDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -655,7 +655,7 @@ HB_FUNC_STATIC(QWIDGET_ACCESSIBLENAME)
       RQSTRING(obj->accessibleName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -675,7 +675,7 @@ HB_FUNC_STATIC(QWIDGET_SETACCESSIBLENAME)
       obj->setAccessibleName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QWIDGET_ACTIONS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -735,7 +735,7 @@ HB_FUNC_STATIC(QWIDGET_ACTIVATEWINDOW)
       obj->activateWindow();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -756,7 +756,7 @@ HB_FUNC_STATIC(QWIDGET_ADDACTION)
       obj->addAction(PQACTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -784,7 +784,7 @@ HB_FUNC_STATIC(QWIDGET_ADDACTIONS)
       obj->addActions(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -805,7 +805,7 @@ HB_FUNC_STATIC(QWIDGET_ADJUSTSIZE)
       obj->adjustSize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -825,7 +825,7 @@ HB_FUNC_STATIC(QWIDGET_AUTOFILLBACKGROUND)
       RBOOL(obj->autoFillBackground());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -843,7 +843,7 @@ HB_FUNC_STATIC(QWIDGET_SETAUTOFILLBACKGROUND)
       obj->setAutoFillBackground(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -863,7 +863,7 @@ HB_FUNC_STATIC(QWIDGET_BACKGROUNDROLE)
       RENUM(obj->backgroundRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(QWIDGET_SETBACKGROUNDROLE)
       obj->setBackgroundRole(PQPALETTE_COLORROLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -901,7 +901,7 @@ HB_FUNC_STATIC(QWIDGET_BASESIZE)
       RQSIZE(obj->baseSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -930,7 +930,7 @@ HB_FUNC_STATIC(QWIDGET_SETBASESIZE)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -955,7 +955,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
     }
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -971,7 +971,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDRENRECT)
       RQRECT(obj->childrenRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -989,7 +989,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDRENREGION)
       RQREGION(obj->childrenRegion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC(QWIDGET_CLEARFOCUS)
       obj->clearFocus();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC(QWIDGET_CLEARMASK)
       obj->clearMask();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC(QWIDGET_CONTENTSMARGINS)
       RQMARGINS(obj->contentsMargins());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC(QWIDGET_CONTENTSRECT)
       RQRECT(obj->contentsRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC(QWIDGET_CONTEXTMENUPOLICY)
       RENUM(obj->contextMenuPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTEXTMENUPOLICY)
       obj->setContextMenuPolicy(PQT_CONTEXTMENUPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC(QWIDGET_CURSOR)
       RQCURSOR(obj->cursor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC(QWIDGET_SETCURSOR)
       obj->setCursor(*PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC(QWIDGET_UNSETCURSOR)
       obj->unsetCursor();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC(QWIDGET_EFFECTIVEWINID)
       hb_retptr(reinterpret_cast<void *>(obj->effectiveWinId()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC(QWIDGET_ENSUREPOLISHED)
       obj->ensurePolished();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC(QWIDGET_FOCUSPOLICY)
       RENUM(obj->focusPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1241,7 +1241,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUSPOLICY)
       obj->setFocusPolicy(PQT_FOCUSPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1262,7 +1262,7 @@ HB_FUNC_STATIC(QWIDGET_FOCUSPROXY)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC(QWIDGET_FOCUSWIDGET)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1300,7 +1300,7 @@ HB_FUNC_STATIC(QWIDGET_FONT)
       Qt5xHb::createReturnClass(ptr, "QFONT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC(QWIDGET_SETFONT)
       obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1338,7 +1338,7 @@ HB_FUNC_STATIC(QWIDGET_FONTINFO)
       RQFONTINFO(obj->fontInfo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1356,7 +1356,7 @@ HB_FUNC_STATIC(QWIDGET_FONTMETRICS)
       RQFONTMETRICS(obj->fontMetrics());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1374,7 +1374,7 @@ HB_FUNC_STATIC(QWIDGET_FOREGROUNDROLE)
       RENUM(obj->foregroundRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOREGROUNDROLE)
       obj->setForegroundRole(PQPALETTE_COLORROLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1412,7 +1412,7 @@ HB_FUNC_STATIC(QWIDGET_FRAMEGEOMETRY)
       RQRECT(obj->frameGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1430,7 +1430,7 @@ HB_FUNC_STATIC(QWIDGET_FRAMESIZE)
       RQSIZE(obj->frameSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC(QWIDGET_GETCONTENTSMARGINS)
       hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1476,7 +1476,7 @@ HB_FUNC_STATIC(QWIDGET_GRABGESTURE)
       obj->grabGesture(PQT_GESTURETYPE(1), HB_ISNIL(2) ? Qt::GestureFlags() : PQT_GESTUREFLAGS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1496,7 +1496,7 @@ HB_FUNC_STATIC(QWIDGET_GRABKEYBOARD)
       obj->grabKeyboard();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1531,7 +1531,7 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
   }
 #endif
   else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -1548,7 +1548,7 @@ HB_FUNC_STATIC(QWIDGET_GRABSHORTCUT)
       RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? Qt::WindowShortcut : PQT_SHORTCUTCONTEXT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1569,7 +1569,7 @@ HB_FUNC_STATIC(QWIDGET_GRAPHICSEFFECT)
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSEFFECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC(QWIDGET_SETGRAPHICSEFFECT)
       obj->setGraphicsEffect(PQGRAPHICSEFFECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC(QWIDGET_GRAPHICSPROXYWIDGET)
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSPROXYWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1632,7 +1632,7 @@ HB_FUNC_STATIC(QWIDGET_HASEDITFOCUS)
       RBOOL(obj->hasEditFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1651,7 +1651,7 @@ HB_FUNC_STATIC(QWIDGET_HASFOCUS)
       RBOOL(obj->hasFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1669,7 +1669,7 @@ HB_FUNC_STATIC(QWIDGET_HASMOUSETRACKING)
       RBOOL(obj->hasMouseTracking());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1687,7 +1687,7 @@ HB_FUNC_STATIC(QWIDGET_SETMOUSETRACKING)
       obj->setMouseTracking(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1707,7 +1707,7 @@ HB_FUNC_STATIC(QWIDGET_HEIGHT)
       RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1725,7 +1725,7 @@ HB_FUNC_STATIC(QWIDGET_HEIGHTFORWIDTH)
       RINT(obj->heightForWidth(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1743,7 +1743,7 @@ HB_FUNC_STATIC(QWIDGET_INPUTMETHODHINTS)
       RENUM(obj->inputMethodHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1761,7 +1761,7 @@ HB_FUNC_STATIC(QWIDGET_SETINPUTMETHODHINTS)
       obj->setInputMethodHints(PQT_INPUTMETHODHINTS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1781,7 +1781,7 @@ HB_FUNC_STATIC(QWIDGET_INPUTMETHODQUERY)
       RQVARIANT(obj->inputMethodQuery(PQT_INPUTMETHODQUERY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1800,7 +1800,7 @@ HB_FUNC_STATIC(QWIDGET_INSERTACTION)
       obj->insertAction(PQACTION(1), PQACTION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1828,7 +1828,7 @@ HB_FUNC_STATIC(QWIDGET_INSERTACTIONS)
       obj->insertActions(PQACTION(1), par2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1849,7 +1849,7 @@ HB_FUNC_STATIC(QWIDGET_ISACTIVEWINDOW)
       RBOOL(obj->isActiveWindow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1867,7 +1867,7 @@ HB_FUNC_STATIC(QWIDGET_ISANCESTOROF)
       RBOOL(obj->isAncestorOf(PQWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1885,7 +1885,7 @@ HB_FUNC_STATIC(QWIDGET_ISENABLEDTO)
       RBOOL(obj->isEnabledTo(PQWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1903,7 +1903,7 @@ HB_FUNC_STATIC(QWIDGET_ISFULLSCREEN)
       RBOOL(obj->isFullScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1921,7 +1921,7 @@ HB_FUNC_STATIC(QWIDGET_ISHIDDEN)
       RBOOL(obj->isHidden());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1939,7 +1939,7 @@ HB_FUNC_STATIC(QWIDGET_ISMAXIMIZED)
       RBOOL(obj->isMaximized());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1957,7 +1957,7 @@ HB_FUNC_STATIC(QWIDGET_ISMINIMIZED)
       RBOOL(obj->isMinimized());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1975,7 +1975,7 @@ HB_FUNC_STATIC(QWIDGET_ISMODAL)
       RBOOL(obj->isModal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1993,7 +1993,7 @@ HB_FUNC_STATIC(QWIDGET_ISVISIBLE)
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2011,7 +2011,7 @@ HB_FUNC_STATIC(QWIDGET_SETVISIBLE)
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2031,7 +2031,7 @@ HB_FUNC_STATIC(QWIDGET_ISVISIBLETO)
       RBOOL(obj->isVisibleTo(PQWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2049,7 +2049,7 @@ HB_FUNC_STATIC(QWIDGET_ISWINDOW)
       RBOOL(obj->isWindow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2067,7 +2067,7 @@ HB_FUNC_STATIC(QWIDGET_ISWINDOWMODIFIED)
       RBOOL(obj->isWindowModified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2085,7 +2085,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWMODIFIED)
       obj->setWindowModified(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2106,7 +2106,7 @@ HB_FUNC_STATIC(QWIDGET_LAYOUT)
       Qt5xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2124,7 +2124,7 @@ HB_FUNC_STATIC(QWIDGET_LAYOUTDIRECTION)
       RENUM(obj->layoutDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2142,7 +2142,7 @@ HB_FUNC_STATIC(QWIDGET_SETLAYOUTDIRECTION)
       obj->setLayoutDirection(PQT_LAYOUTDIRECTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2162,7 +2162,7 @@ HB_FUNC_STATIC(QWIDGET_UNSETLAYOUTDIRECTION)
       obj->unsetLayoutDirection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2182,7 +2182,7 @@ HB_FUNC_STATIC(QWIDGET_LOCALE)
       RQLOCALE(obj->locale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2200,7 +2200,7 @@ HB_FUNC_STATIC(QWIDGET_SETLOCALE)
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2220,7 +2220,7 @@ HB_FUNC_STATIC(QWIDGET_UNSETLOCALE)
       obj->unsetLocale();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2240,7 +2240,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROM)
       RQPOINT(obj->mapFrom(PQWIDGET(1), *PQPOINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2258,7 +2258,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMGLOBAL)
       RQPOINT(obj->mapFromGlobal(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2276,7 +2276,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMPARENT)
       RQPOINT(obj->mapFromParent(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2294,7 +2294,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTO)
       RQPOINT(obj->mapTo(PQWIDGET(1), *PQPOINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2312,7 +2312,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOGLOBAL)
       RQPOINT(obj->mapToGlobal(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2330,7 +2330,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOPARENT)
       RQPOINT(obj->mapToParent(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2348,7 +2348,7 @@ HB_FUNC_STATIC(QWIDGET_MASK)
       RQREGION(obj->mask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2377,7 +2377,7 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -2393,7 +2393,7 @@ HB_FUNC_STATIC(QWIDGET_MAXIMUMHEIGHT)
       RINT(obj->maximumHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2411,7 +2411,7 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMHEIGHT)
       obj->setMaximumHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2431,7 +2431,7 @@ HB_FUNC_STATIC(QWIDGET_MAXIMUMWIDTH)
       RINT(obj->maximumWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2449,7 +2449,7 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMWIDTH)
       obj->setMaximumWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2469,7 +2469,7 @@ HB_FUNC_STATIC(QWIDGET_MINIMUMHEIGHT)
       RINT(obj->minimumHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2487,7 +2487,7 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMHEIGHT)
       obj->setMinimumHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2507,7 +2507,7 @@ HB_FUNC_STATIC(QWIDGET_MINIMUMSIZEHINT)
       RQSIZE(obj->minimumSizeHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2525,7 +2525,7 @@ HB_FUNC_STATIC(QWIDGET_MINIMUMWIDTH)
       RINT(obj->minimumWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2543,7 +2543,7 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMWIDTH)
       obj->setMinimumWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2563,7 +2563,7 @@ HB_FUNC_STATIC(QWIDGET_POS)
       RQPOINT(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2592,7 +2592,7 @@ HB_FUNC_STATIC(QWIDGET_MOVE)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -2609,7 +2609,7 @@ HB_FUNC_STATIC(QWIDGET_NATIVEPARENTWIDGET)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2628,7 +2628,7 @@ HB_FUNC_STATIC(QWIDGET_NEXTINFOCUSCHAIN)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2646,7 +2646,7 @@ HB_FUNC_STATIC(QWIDGET_NORMALGEOMETRY)
       RQRECT(obj->normalGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2664,7 +2664,7 @@ HB_FUNC_STATIC(QWIDGET_OVERRIDEWINDOWFLAGS)
       obj->overrideWindowFlags(PQT_WINDOWFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2685,7 +2685,7 @@ HB_FUNC_STATIC(QWIDGET_PALETTE)
       Qt5xHb::createReturnClass(ptr, "QPALETTE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2703,7 +2703,7 @@ HB_FUNC_STATIC(QWIDGET_SETPALETTE)
       obj->setPalette(*PQPALETTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2724,7 +2724,7 @@ HB_FUNC_STATIC(QWIDGET_PARENTWIDGET)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2743,7 +2743,7 @@ HB_FUNC_STATIC(QWIDGET_PREVIOUSINFOCUSCHAIN)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2761,7 +2761,7 @@ HB_FUNC_STATIC(QWIDGET_RECT)
       RQRECT(obj->rect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2779,7 +2779,7 @@ HB_FUNC_STATIC(QWIDGET_RELEASEKEYBOARD)
       obj->releaseKeyboard();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2799,7 +2799,7 @@ HB_FUNC_STATIC(QWIDGET_RELEASEMOUSE)
       obj->releaseMouse();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2820,7 +2820,7 @@ HB_FUNC_STATIC(QWIDGET_RELEASESHORTCUT)
       obj->releaseShortcut(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2842,7 +2842,7 @@ HB_FUNC_STATIC(QWIDGET_REMOVEACTION)
       obj->removeAction(PQACTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2880,7 +2880,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -2927,7 +2927,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -2954,7 +2954,7 @@ HB_FUNC_STATIC(QWIDGET_RESIZE)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -2970,7 +2970,7 @@ HB_FUNC_STATIC(QWIDGET_RESTOREGEOMETRY)
       RBOOL(obj->restoreGeometry(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -2988,7 +2988,7 @@ HB_FUNC_STATIC(QWIDGET_SAVEGEOMETRY)
       RQBYTEARRAY(obj->saveGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3017,7 +3017,7 @@ HB_FUNC_STATIC(QWIDGET_SCROLL)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3033,7 +3033,7 @@ HB_FUNC_STATIC(QWIDGET_SETATTRIBUTE)
       obj->setAttribute(PQT_WIDGETATTRIBUTE(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3064,7 +3064,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTENTSMARGINS)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3081,7 +3081,7 @@ HB_FUNC_STATIC(QWIDGET_SETEDITFOCUS)
       obj->setEditFocus(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3102,7 +3102,7 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDHEIGHT)
       obj->setFixedHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3133,7 +3133,7 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDSIZE)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3149,7 +3149,7 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDWIDTH)
       obj->setFixedWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3180,7 +3180,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUS)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3196,7 +3196,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUSPROXY)
       obj->setFocusProxy(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3217,7 +3217,7 @@ HB_FUNC_STATIC(QWIDGET_GEOMETRY)
       Qt5xHb::createReturnClass(ptr, "QRECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3246,7 +3246,7 @@ HB_FUNC_STATIC(QWIDGET_SETGEOMETRY)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3262,7 +3262,7 @@ HB_FUNC_STATIC(QWIDGET_SETLAYOUT)
       obj->setLayout(PQLAYOUT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3282,7 +3282,7 @@ HB_FUNC_STATIC(QWIDGET_MAXIMUMSIZE)
       RQSIZE(obj->maximumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3311,7 +3311,7 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMSIZE)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3327,7 +3327,7 @@ HB_FUNC_STATIC(QWIDGET_MINIMUMSIZE)
       RQSIZE(obj->minimumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3356,7 +3356,7 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMSIZE)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3383,7 +3383,7 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3400,7 +3400,7 @@ HB_FUNC_STATIC(QWIDGET_SETSHORTCUTAUTOREPEAT)
       obj->setShortcutAutoRepeat(PINT(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3422,7 +3422,7 @@ HB_FUNC_STATIC(QWIDGET_SETSHORTCUTENABLED)
       obj->setShortcutEnabled(PINT(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3443,7 +3443,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEINCREMENT)
       RQSIZE(obj->sizeIncrement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3472,7 +3472,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEINCREMENT)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3488,7 +3488,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEPOLICY)
       RQSIZEPOLICY(obj->sizePolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3517,7 +3517,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEPOLICY)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3535,7 +3535,7 @@ HB_FUNC_STATIC(QWIDGET_TOOLTIPDURATION)
       RINT(obj->toolTipDuration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3557,7 +3557,7 @@ HB_FUNC_STATIC(QWIDGET_SETTOOLTIPDURATION)
       obj->setToolTipDuration(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3579,7 +3579,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWMODALITY)
       RENUM(obj->windowModality());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3597,7 +3597,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWMODALITY)
       obj->setWindowModality(PQT_WINDOWMODALITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3617,7 +3617,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWROLE)
       obj->setWindowRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3637,7 +3637,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWSTATE)
       obj->setWindowState(PQT_WINDOWSTATES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3657,7 +3657,7 @@ HB_FUNC_STATIC(QWIDGET_SIZE)
       RQSIZE(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3675,7 +3675,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEHINT)
       RQSIZE(obj->sizeHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3693,7 +3693,7 @@ HB_FUNC_STATIC(QWIDGET_STACKUNDER)
       obj->stackUnder(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3714,7 +3714,7 @@ HB_FUNC_STATIC(QWIDGET_STATUSTIP)
       RQSTRING(obj->statusTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3734,7 +3734,7 @@ HB_FUNC_STATIC(QWIDGET_SETSTATUSTIP)
       obj->setStatusTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3756,7 +3756,7 @@ HB_FUNC_STATIC(QWIDGET_STYLE)
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3774,7 +3774,7 @@ HB_FUNC_STATIC(QWIDGET_SETSTYLE)
       obj->setStyle(PQSTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3795,7 +3795,7 @@ HB_FUNC_STATIC(QWIDGET_STYLESHEET)
       RQSTRING(obj->styleSheet());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3815,7 +3815,7 @@ HB_FUNC_STATIC(QWIDGET_SETSTYLESHEET)
       obj->setStyleSheet(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3836,7 +3836,7 @@ HB_FUNC_STATIC(QWIDGET_TESTATTRIBUTE)
       RBOOL(obj->testAttribute(PQT_WIDGETATTRIBUTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3855,7 +3855,7 @@ HB_FUNC_STATIC(QWIDGET_TOOLTIP)
       RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3875,7 +3875,7 @@ HB_FUNC_STATIC(QWIDGET_SETTOOLTIP)
       obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3896,7 +3896,7 @@ HB_FUNC_STATIC(QWIDGET_UNDERMOUSE)
       RBOOL(obj->underMouse());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3915,7 +3915,7 @@ HB_FUNC_STATIC(QWIDGET_UNGRABGESTURE)
       obj->ungrabGesture(PQT_GESTURETYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -3967,7 +3967,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -3983,7 +3983,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATEGEOMETRY)
       obj->updateGeometry();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4003,7 +4003,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATESENABLED)
       RBOOL(obj->updatesEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4021,7 +4021,7 @@ HB_FUNC_STATIC(QWIDGET_SETUPDATESENABLED)
       obj->setUpdatesEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4041,7 +4041,7 @@ HB_FUNC_STATIC(QWIDGET_VISIBLEREGION)
       RQREGION(obj->visibleRegion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4060,7 +4060,7 @@ HB_FUNC_STATIC(QWIDGET_WHATSTHIS)
       RQSTRING(obj->whatsThis());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4080,7 +4080,7 @@ HB_FUNC_STATIC(QWIDGET_SETWHATSTHIS)
       obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4101,7 +4101,7 @@ HB_FUNC_STATIC(QWIDGET_WIDTH)
       RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4119,7 +4119,7 @@ HB_FUNC_STATIC(QWIDGET_WINID)
       hb_retptr(reinterpret_cast<void *>(obj->winId()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4137,7 +4137,7 @@ HB_FUNC_STATIC(QWIDGET_INTERNALWINID)
       hb_retptr(reinterpret_cast<void *>(obj->internalWinId()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4156,7 +4156,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOW)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4174,7 +4174,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWFILEPATH)
       RQSTRING(obj->windowFilePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4192,7 +4192,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWFILEPATH)
       obj->setWindowFilePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4212,7 +4212,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWFLAGS)
       RENUM(obj->windowFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4230,7 +4230,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWFLAGS)
       obj->setWindowFlags(PQT_WINDOWFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4250,7 +4250,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWICON)
       RQICON(obj->windowIcon());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4268,7 +4268,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWICON)
       obj->setWindowIcon(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4288,7 +4288,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWICONTEXT)
       RQSTRING(obj->windowIconText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4306,7 +4306,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWICONTEXT)
       obj->setWindowIconText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4326,7 +4326,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWOPACITY)
       RQREAL(obj->windowOpacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4344,7 +4344,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWOPACITY)
       obj->setWindowOpacity(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4364,7 +4364,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWROLE)
       RQSTRING(obj->windowRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4382,7 +4382,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWSTATE)
       RENUM(obj->windowState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4400,7 +4400,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWTITLE)
       RQSTRING(obj->windowTitle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4418,7 +4418,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWTITLE)
       obj->setWindowTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4438,7 +4438,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWTYPE)
       RENUM(obj->windowType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4456,7 +4456,7 @@ HB_FUNC_STATIC(QWIDGET_X)
       RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4474,7 +4474,7 @@ HB_FUNC_STATIC(QWIDGET_Y)
       RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4493,7 +4493,7 @@ HB_FUNC_STATIC(QWIDGET_PAINTENGINE)
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4511,7 +4511,7 @@ HB_FUNC_STATIC(QWIDGET_CLOSE)
       RBOOL(obj->close());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4529,7 +4529,7 @@ HB_FUNC_STATIC(QWIDGET_HIDE)
       obj->hide();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4549,7 +4549,7 @@ HB_FUNC_STATIC(QWIDGET_LOWER)
       obj->lower();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4569,7 +4569,7 @@ HB_FUNC_STATIC(QWIDGET_RAISE)
       obj->raise();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4589,7 +4589,7 @@ HB_FUNC_STATIC(QWIDGET_SETDISABLED)
       obj->setDisabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4609,7 +4609,7 @@ HB_FUNC_STATIC(QWIDGET_ISENABLED)
       RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4627,7 +4627,7 @@ HB_FUNC_STATIC(QWIDGET_SETENABLED)
       obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4647,7 +4647,7 @@ HB_FUNC_STATIC(QWIDGET_SETHIDDEN)
       obj->setHidden(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4667,7 +4667,7 @@ HB_FUNC_STATIC(QWIDGET_SHOW)
       obj->show();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4687,7 +4687,7 @@ HB_FUNC_STATIC(QWIDGET_SHOWFULLSCREEN)
       obj->showFullScreen();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4707,7 +4707,7 @@ HB_FUNC_STATIC(QWIDGET_SHOWMAXIMIZED)
       obj->showMaximized();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4727,7 +4727,7 @@ HB_FUNC_STATIC(QWIDGET_SHOWMINIMIZED)
       obj->showMinimized();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4747,7 +4747,7 @@ HB_FUNC_STATIC(QWIDGET_SHOWNORMAL)
       obj->showNormal();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4767,7 +4767,7 @@ HB_FUNC_STATIC(QWIDGET_DEVTYPE)
       RINT(obj->devType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4785,7 +4785,7 @@ HB_FUNC_STATIC(QWIDGET_ISTOPLEVEL)
       RBOOL(obj->isTopLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4803,7 +4803,7 @@ HB_FUNC_STATIC(QWIDGET_ISENABLEDTOTLW)
       RBOOL(obj->isEnabledToTLW());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4822,7 +4822,7 @@ HB_FUNC_STATIC(QWIDGET_TOPLEVELWIDGET)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4840,7 +4840,7 @@ HB_FUNC_STATIC(QWIDGET_GRAB)
       RQPIXMAP(obj->grab(HB_ISNIL(1) ? QRect(QPoint(0, 0), QSize(-1, -1)) : *PQRECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4858,7 +4858,7 @@ HB_FUNC_STATIC(QWIDGET_ISRIGHTTOLEFT)
       RBOOL(obj->isRightToLeft());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4876,7 +4876,7 @@ HB_FUNC_STATIC(QWIDGET_ISLEFTTORIGHT)
       RBOOL(obj->isLeftToRight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4894,7 +4894,7 @@ HB_FUNC_STATIC(QWIDGET_OVERRIDEWINDOWSTATE)
       obj->overrideWindowState(PQT_WINDOWSTATES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4915,7 +4915,7 @@ HB_FUNC_STATIC(QWIDGET_BACKINGSTORE)
       Qt5xHb::createReturnClass(ptr, "QBACKINGSTORE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4934,7 +4934,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWHANDLE)
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4952,7 +4952,7 @@ HB_FUNC_STATIC(QWIDGET_HASHEIGHTFORWIDTH)
       RBOOL(obj->hasHeightForWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4970,7 +4970,7 @@ HB_FUNC_STATIC(QWIDGET_COLORCOUNT)
       RINT(obj->colorCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -4988,7 +4988,7 @@ HB_FUNC_STATIC(QWIDGET_DEPTH)
       RINT(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -5006,7 +5006,7 @@ HB_FUNC_STATIC(QWIDGET_HEIGHTMM)
       RINT(obj->heightMM());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -5024,7 +5024,7 @@ HB_FUNC_STATIC(QWIDGET_LOGICALDPIX)
       RINT(obj->logicalDpiX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -5042,7 +5042,7 @@ HB_FUNC_STATIC(QWIDGET_LOGICALDPIY)
       RINT(obj->logicalDpiY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -5060,7 +5060,7 @@ HB_FUNC_STATIC(QWIDGET_PAINTINGACTIVE)
       RBOOL(obj->paintingActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -5078,7 +5078,7 @@ HB_FUNC_STATIC(QWIDGET_PHYSICALDPIX)
       RINT(obj->physicalDpiX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -5096,7 +5096,7 @@ HB_FUNC_STATIC(QWIDGET_PHYSICALDPIY)
       RINT(obj->physicalDpiY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -5114,7 +5114,7 @@ HB_FUNC_STATIC(QWIDGET_WIDTHMM)
       RINT(obj->widthMM());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -5130,7 +5130,7 @@ HB_FUNC_STATIC(QWIDGET_FIND)
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -5145,7 +5145,7 @@ HB_FUNC_STATIC(QWIDGET_KEYBOARDGRABBER)
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -5160,7 +5160,7 @@ HB_FUNC_STATIC(QWIDGET_MOUSEGRABBER)
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -5174,7 +5174,7 @@ HB_FUNC_STATIC(QWIDGET_SETTABORDER)
     QWidget::setTabOrder(PQWIDGET(1), PQWIDGET(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -5192,7 +5192,7 @@ HB_FUNC_STATIC(QWIDGET_CREATEWINDOWCONTAINER)
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -5231,7 +5231,7 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWTITLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -5275,7 +5275,7 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWICONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -5318,7 +5318,7 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWICONTEXTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -5358,7 +5358,7 @@ HB_FUNC_STATIC(QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

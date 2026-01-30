@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QAXBASE_ASVARIANT)
       RQVARIANT(obj->asVariant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QAXBASE_CLEAR)
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QAXBASE_CONTROL)
       RQSTRING(obj->control());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLECLASSINFO)
       obj->disableClassInfo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLEEVENTSINK)
       obj->disableEventSink();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLEMETAOBJECT)
       obj->disableMetaObject();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
       RQVARIANT(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QAXBASE_GENERATEDOCUMENTATION)
       RQSTRING(obj->generateDocumentation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QAXBASE_ISNULL)
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QAXBASE_PROPERTYWRITABLE)
       RBOOL(obj->propertyWritable(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QAXBASE_SETCONTROL)
       RBOOL(obj->setControl(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QAXBASE_SETPROPERTYWRITABLE)
       obj->setPropertyWritable(PCONSTCHAR(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QAXBASE_VERBS)
       RQSTRINGLIST(obj->verbs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QAXBASE_CLASSCONTEXT)
       RUNSIGNEDLONG(obj->classContext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QAXBASE_SETCLASSCONTEXT)
       obj->setClassContext(PUNSIGNEDLONG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

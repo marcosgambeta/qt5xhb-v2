@@ -141,7 +141,7 @@ HB_FUNC_STATIC(Q3DTHEME_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(Q3DTHEME_TYPE)
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETTYPE)
       obj->setType(PQ3DTHEME_THEME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASECOLORS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETBASECOLORS)
       obj->setBaseColors(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(Q3DTHEME_BACKGROUNDCOLOR)
       RQCOLOR(obj->backgroundColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETBACKGROUNDCOLOR)
       obj->setBackgroundColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(Q3DTHEME_WINDOWCOLOR)
       RQCOLOR(obj->windowColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETWINDOWCOLOR)
       obj->setWindowColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELTEXTCOLOR)
       RQCOLOR(obj->labelTextColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLABELTEXTCOLOR)
       obj->setLabelTextColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELBACKGROUNDCOLOR)
       RQCOLOR(obj->labelBackgroundColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLABELBACKGROUNDCOLOR)
       obj->setLabelBackgroundColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(Q3DTHEME_GRIDLINECOLOR)
       RQCOLOR(obj->gridLineColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETGRIDLINECOLOR)
       obj->setGridLineColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTCOLOR)
       RQCOLOR(obj->singleHighlightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR)
       obj->setSingleHighlightColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTCOLOR)
       RQCOLOR(obj->multiHighlightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTCOLOR)
       obj->setMultiHighlightColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -574,7 +574,7 @@ HB_FUNC_STATIC(Q3DTHEME_LIGHTCOLOR)
       RQCOLOR(obj->lightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLIGHTCOLOR)
       obj->setLightColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -638,7 +638,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASEGRADIENTS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -665,7 +665,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETBASEGRADIENTS)
       obj->setBaseGradients(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -687,7 +687,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTGRADIENT)
       RQLINEARGRADIENT(obj->singleHighlightGradient());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT)
       obj->setSingleHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -729,7 +729,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTGRADIENT)
       RQLINEARGRADIENT(obj->multiHighlightGradient());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -749,7 +749,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT)
       obj->setMultiHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -771,7 +771,7 @@ HB_FUNC_STATIC(Q3DTHEME_LIGHTSTRENGTH)
       RFLOAT(obj->lightStrength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -791,7 +791,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLIGHTSTRENGTH)
       obj->setLightStrength(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -813,7 +813,7 @@ HB_FUNC_STATIC(Q3DTHEME_AMBIENTLIGHTSTRENGTH)
       RFLOAT(obj->ambientLightStrength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -833,7 +833,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETAMBIENTLIGHTSTRENGTH)
       obj->setAmbientLightStrength(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -855,7 +855,7 @@ HB_FUNC_STATIC(Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH)
       RFLOAT(obj->highlightLightStrength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -875,7 +875,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH)
       obj->setHighlightLightStrength(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -897,7 +897,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISLABELBORDERENABLED)
       RBOOL(obj->isLabelBorderEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -917,7 +917,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLABELBORDERENABLED)
       obj->setLabelBorderEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -939,7 +939,7 @@ HB_FUNC_STATIC(Q3DTHEME_FONT)
       RQFONT(obj->font());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -959,7 +959,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETFONT)
       obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -981,7 +981,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISBACKGROUNDENABLED)
       RBOOL(obj->isBackgroundEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETBACKGROUNDENABLED)
       obj->setBackgroundEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISGRIDENABLED)
       RBOOL(obj->isGridEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETGRIDENABLED)
       obj->setGridEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISLABELBACKGROUNDENABLED)
       RBOOL(obj->isLabelBackgroundEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLABELBACKGROUNDENABLED)
       obj->setLabelBackgroundEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC(Q3DTHEME_COLORSTYLE)
       RENUM(obj->colorStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETCOLORSTYLE)
       obj->setColorStyle(PQ3DTHEME_COLORSTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1319,7 +1319,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBASECOLORSCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1380,7 +1380,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBASEGRADIENTSCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1424,7 +1424,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONCOLORSTYLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONFONTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1512,7 +1512,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONGRIDENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONGRIDLINECOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1600,7 +1600,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1644,7 +1644,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1688,7 +1688,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1732,7 +1732,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBORDERENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1776,7 +1776,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELTEXTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1820,7 +1820,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLIGHTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1864,7 +1864,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLIGHTSTRENGTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1908,7 +1908,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1952,7 +1952,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1996,7 +1996,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -2040,7 +2040,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -2084,7 +2084,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONTYPECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -2128,7 +2128,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONWINDOWCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QSENSORREADING_TIMESTAMP)
       RQUINT64(obj->timestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QSENSORREADING_SETTIMESTAMP)
       obj->setTimestamp(PQUINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSENSORREADING_VALUECOUNT)
       RINT(obj->valueCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSENSORREADING_VALUE)
       RQVARIANT(obj->value(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

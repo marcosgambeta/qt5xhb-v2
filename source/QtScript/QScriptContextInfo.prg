@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_NEW)
     auto obj = new QScriptContextInfo();
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FILENAME)
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER)
       RINT(obj->functionEndLineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX)
       RINT(obj->functionMetaIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONNAME)
       RQSTRING(obj->functionName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES)
       RQSTRINGLIST(obj->functionParameterNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER)
       RINT(obj->functionStartLineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONTYPE)
       RENUM(obj->functionType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_ISNULL)
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_LINENUMBER)
       RINT(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_SCRIPTID)
       RQINT64(obj->scriptId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

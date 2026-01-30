@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME)
       RQREAL(obj->crossfadeTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED)
       RBOOL(obj->isCrossfadeSupported());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA)
       RQMEDIACONTENT(obj->nextMedia());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME)
       obj->setCrossfadeTime(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA)
       obj->setNextMedia(*PQMEDIACONTENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

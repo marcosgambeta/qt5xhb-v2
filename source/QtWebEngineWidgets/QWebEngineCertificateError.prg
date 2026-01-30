@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_NEW)
     auto obj = new QWebEngineCertificateError(PINT(1), *PQURL(2), PBOOL(3), PQSTRING(4));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERROR)
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_URL)
       RQURL(obj->url());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE)
       RBOOL(obj->isOverridable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION)
       RQSTRING(obj->errorDescription());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

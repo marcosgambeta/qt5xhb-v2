@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_NEW)
     auto obj = new QSqlTableModel(OPQOBJECT(1, nullptr), HB_ISNIL(2) ? QSqlDatabase() : *PQSQLDATABASE(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DATABASE)
       RQSQLDATABASE(obj->database());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_EDITSTRATEGY)
       RENUM(obj->editStrategy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETEDITSTRATEGY)
       obj->setEditStrategy(PQSQLTABLEMODEL_EDITSTRATEGY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FIELDINDEX)
       RINT(obj->fieldIndex(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FILTER)
       RQSTRING(obj->filter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
       obj->setFilter(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
       RBOOL(obj->insertRecord(PINT(1), *PQSQLRECORD(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ISDIRTY)
       RBOOL(obj->isDirty(*PQMODELINDEX(1)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_PRIMARYKEY)
       RQSQLINDEX(obj->primaryKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTROW)
       obj->revertRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SELECT)
       RBOOL(obj->select());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETRECORD)
       RBOOL(obj->setRecord(PINT(1), *PQSQLRECORD(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SORT)
       obj->sort(PINT(1), PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETSORT)
       obj->setSort(PINT(1), PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETTABLE)
       obj->setTable(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_TABLENAME)
       RQSTRING(obj->tableName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_CLEAR)
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DATA)
       RQVARIANT(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETDATA)
       RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FLAGS)
       RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -499,7 +499,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_HEADERDATA)
       RQVARIANT(obj->headerData(PINT(1), PQT_ORIENTATION(2), OPINT(3, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTROWS)
       RBOOL(obj->insertRows(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVECOLUMNS)
       RBOOL(obj->removeColumns(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVEROWS)
       RBOOL(obj->removeRows(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ROWCOUNT)
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERT)
       obj->revert();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTALL)
       obj->revertAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -629,7 +629,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMIT)
       RBOOL(obj->submit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMITALL)
       RBOOL(obj->submitAll());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -670,7 +670,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_RECORD)
       RQSQLRECORD(obj->record(PINT(1)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SELECTROW)
       RBOOL(obj->selectRow(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -724,7 +724,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREDELETE)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -764,7 +764,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREINSERT)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -806,7 +806,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREUPDATE)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -848,7 +848,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONPRIMEINSERT)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ALLOCATE)
       obj->allocate(PINT(1), OPINT(2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ATTRIBUTECOUNT)
       RINT(obj->attributeCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_DRAWINGMODE)
       RGLENUM(obj->drawingMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXCOUNT)
       RINT(obj->indexCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXDATAPATTERN)
       RENUM(obj->indexDataPattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXTYPE)
       RINT(obj->indexType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_LINEWIDTH)
       RFLOAT(obj->lineWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKINDEXDATADIRTY)
       obj->markIndexDataDirty();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKVERTEXDATADIRTY)
       obj->markVertexDataDirty();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETDRAWINGMODE)
       obj->setDrawingMode(PGLENUM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETINDEXDATAPATTERN)
       obj->setIndexDataPattern(PQSGGEOMETRY_DATAPATTERN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETLINEWIDTH)
       obj->setLineWidth(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETVERTEXDATAPATTERN)
       obj->setVertexDataPattern(PQSGGEOMETRY_DATAPATTERN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFINDEX)
       RINT(obj->sizeOfIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFVERTEX)
       RINT(obj->sizeOfVertex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXCOUNT)
       RINT(obj->vertexCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXDATAPATTERN)
       RENUM(obj->vertexDataPattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_UPDATERECTGEOMETRY)
     QSGGeometry::updateRectGeometry(PQSGGEOMETRY(1), *PQRECTF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_UPDATETEXTUREDRECTGEOMETRY)
     QSGGeometry::updateTexturedRectGeometry(PQSGGEOMETRY(1), *PQRECTF(2), *PQRECTF(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 

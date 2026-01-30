@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_NEW)
     auto obj = new QSensorGesture(PQSTRINGLIST(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_ISACTIVE)
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_VALIDIDS)
       RQSTRINGLIST(obj->validIds());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_INVALIDIDS)
       RQSTRINGLIST(obj->invalidIds());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_GESTURESIGNALS)
       RQSTRINGLIST(obj->gestureSignals());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_STARTDETECTION)
       obj->startDetection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_STOPDETECTION)
       obj->stopDetection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

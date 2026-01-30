@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_COLORCOUNT)
       RINT(obj->colorCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_DEPTH)
       RINT(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_HEIGHT)
       RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_HEIGHTMM)
       RINT(obj->heightMM());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIX)
       RINT(obj->logicalDpiX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIY)
       RINT(obj->logicalDpiY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PAINTENGINE)
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PAINTINGACTIVE)
       RBOOL(obj->paintingActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIX)
       RINT(obj->physicalDpiX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIY)
       RINT(obj->physicalDpiY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_WIDTH)
       RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_WIDTHMM)
       RINT(obj->widthMM());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_DEVTYPE)
       RINT(obj->devType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_DEVICEPIXELRATIO)
       RINT(obj->devicePixelRatio());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

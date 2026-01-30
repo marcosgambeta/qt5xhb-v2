@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ACTIVATIONOBJECT)
       RQSCRIPTVALUE(obj->activationObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENT)
       RQSCRIPTVALUE(obj->argument(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENTCOUNT)
       RINT(obj->argumentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENTSOBJECT)
       RQSCRIPTVALUE(obj->argumentsObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_BACKTRACE)
       RQSTRINGLIST(obj->backtrace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_CALLEE)
       RQSCRIPTVALUE(obj->callee());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ENGINE)
       Qt5xHb::createReturnQObjectClass(ptr, "QSCRIPTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR)
       RBOOL(obj->isCalledAsConstructor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_PARENTCONTEXT)
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_SETACTIVATIONOBJECT)
       obj->setActivationObject(*PQSCRIPTVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_SETTHISOBJECT)
       obj->setThisObject(*PQSCRIPTVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_STATE)
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THISOBJECT)
       RQSCRIPTVALUE(obj->thisObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
       RQSCRIPTVALUE(obj->throwError(PQSTRING(1)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWVALUE)
       RQSCRIPTVALUE(obj->throwValue(*PQSCRIPTVALUE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_TOSTRING)
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

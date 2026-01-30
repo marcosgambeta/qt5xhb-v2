@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QGLCONTEXT_NEW)
     auto obj = new QGLContext(*PQGLFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), PQGLCONTEXT_BINDOPTIONS(4)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DELETETEXTURE)
       obj->deleteTexture(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DEVICE)
       Qt5xHb::createReturnClass(ptr, "QPAINTDEVICE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DONECURRENT)
       obj->doneCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QGLCONTEXT_FORMAT)
       RQGLFORMAT(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QGLCONTEXT_ISSHARING)
       RBOOL(obj->isSharing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QGLCONTEXT_ISVALID)
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QGLCONTEXT_MAKECURRENT)
       obj->makeCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QGLCONTEXT_OVERLAYTRANSPARENTCOLOR)
       RQCOLOR(obj->overlayTransparentColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QGLCONTEXT_REQUESTEDFORMAT)
       RQGLFORMAT(obj->requestedFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QGLCONTEXT_RESET)
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SETFORMAT)
       obj->setFormat(*PQGLFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SWAPBUFFERS)
       obj->swapBuffers();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QGLCONTEXT_ARESHARING)
     RBOOL(QGLContext::areSharing(PQGLCONTEXT(1), PQGLCONTEXT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QGLCONTEXT_CURRENTCONTEXT)
     Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SETTEXTURECACHELIMIT)
     QGLContext::setTextureCacheLimit(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QGLCONTEXT_TEXTURECACHELIMIT)
     RINT(QGLContext::textureCacheLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }

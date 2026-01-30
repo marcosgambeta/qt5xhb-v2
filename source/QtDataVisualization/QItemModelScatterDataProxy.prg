@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ITEMMODEL)
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETITEMMODEL)
       obj->setItemModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLE)
       RQSTRING(obj->xPosRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLE)
       obj->setXPosRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLE)
       RQSTRING(obj->yPosRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLE)
       obj->setYPosRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLE)
       RQSTRING(obj->zPosRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLE)
       obj->setZPosRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLE)
       RQSTRING(obj->rotationRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLE)
       obj->setRotationRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLEPATTERN)
       RQREGEXP(obj->xPosRolePattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN)
       obj->setXPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLEPATTERN)
       RQREGEXP(obj->yPosRolePattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN)
       obj->setYPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLEPATTERN)
       RQREGEXP(obj->zPosRolePattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN)
       obj->setZPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLEPATTERN)
       RQREGEXP(obj->rotationRolePattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN)
       obj->setRotationRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLEREPLACE)
       RQSTRING(obj->xPosRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLEREPLACE)
       obj->setXPosRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLEREPLACE)
       RQSTRING(obj->yPosRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -601,7 +601,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLEREPLACE)
       obj->setYPosRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLEREPLACE)
       RQSTRING(obj->zPosRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -643,7 +643,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLEREPLACE)
       obj->setZPosRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -665,7 +665,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLEREPLACE)
       RQSTRING(obj->rotationRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -685,7 +685,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE)
       obj->setRotationRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_REMAP)
       obj->remap(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -751,7 +751,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -795,7 +795,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -840,7 +840,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -885,7 +885,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -929,7 +929,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -974,7 +974,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1153,7 +1153,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1287,7 +1287,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

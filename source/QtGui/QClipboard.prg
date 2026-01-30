@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QCLIPBOARD_CLEAR)
       obj->clear(HB_ISNIL(1) ? QClipboard::Clipboard : PQCLIPBOARD_MODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
       RQIMAGE(obj->image(HB_ISNIL(1) ? QClipboard::Clipboard : PQCLIPBOARD_MODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QCLIPBOARD_MIMEDATA)
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSCLIPBOARD)
       RBOOL(obj->ownsClipboard());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSFINDBUFFER)
       RBOOL(obj->ownsFindBuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSSELECTION)
       RBOOL(obj->ownsSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
       RQPIXMAP(obj->pixmap(HB_ISNIL(1) ? QClipboard::Clipboard : PQCLIPBOARD_MODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
       obj->setImage(*PQIMAGE(1), HB_ISNIL(2) ? QClipboard::Clipboard : PQCLIPBOARD_MODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
       obj->setMimeData(PQMIMEDATA(1), HB_ISNIL(2) ? QClipboard::Clipboard : PQCLIPBOARD_MODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
       obj->setPixmap(*PQPIXMAP(1), HB_ISNIL(2) ? QClipboard::Clipboard : PQCLIPBOARD_MODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETTEXT)
       obj->setText(PQSTRING(1), HB_ISNIL(2) ? QClipboard::Clipboard : PQCLIPBOARD_MODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSFINDBUFFER)
       RBOOL(obj->supportsFindBuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSSELECTION)
       RBOOL(obj->supportsSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
       hb_storc(QSTRINGTOSTRING(par1), 1);
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QCLIPBOARD_ONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QCLIPBOARD_ONDATACHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QCLIPBOARD_ONFINDBUFFERCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QCLIPBOARD_ONSELECTIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

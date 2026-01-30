@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_FLASHMODE)
       RENUM(obj->flashMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED)
       RBOOL(obj->isFlashModeSupported(PQCAMERAEXPOSURE_FLASHMODES(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ISFLASHREADY)
       RBOOL(obj->isFlashReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_SETFLASHMODE)
       obj->setFlashMode(PQCAMERAEXPOSURE_FLASHMODES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ONFLASHREADY)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

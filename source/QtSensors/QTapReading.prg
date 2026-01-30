@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QTAPREADING_TAPDIRECTION)
       RENUM(obj->tapDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QTAPREADING_SETTAPDIRECTION)
       obj->setTapDirection(PQTAPREADING_TAPDIRECTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QTAPREADING_ISDOUBLETAP)
       RBOOL(obj->isDoubleTap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QTAPREADING_SETDOUBLETAP)
       obj->setDoubleTap(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

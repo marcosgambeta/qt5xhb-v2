@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
     auto obj = new QXmlStreamReader(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION)
       obj->addExtraNamespaceDeclaration(*PQXMLSTREAMNAMESPACEDECLARATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ATEND)
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ATTRIBUTES)
       RQXMLSTREAMATTRIBUTES(obj->attributes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_CHARACTEROFFSET)
       RQINT64(obj->characterOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_CLEAR)
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_COLUMNNUMBER)
       RQINT64(obj->columnNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DEVICE)
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTENCODING)
       RQSTRINGREF(obj->documentEncoding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTVERSION)
       RQSTRINGREF(obj->documentVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDNAME)
       RQSTRINGREF(obj->dtdName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDPUBLICID)
       RQSTRINGREF(obj->dtdPublicId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDSYSTEMID)
       RQSTRINGREF(obj->dtdSystemId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYDECLARATIONS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYRESOLVER)
       Qt5xHb::createReturnClass(ptr, "QXMLSTREAMENTITYRESOLVER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ERROR)
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ERRORSTRING)
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_HASERROR)
       RBOOL(obj->hasError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCDATA)
       RBOOL(obj->isCDATA());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCHARACTERS)
       RBOOL(obj->isCharacters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -561,7 +561,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCOMMENT)
       RBOOL(obj->isComment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -579,7 +579,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISDTD)
       RBOOL(obj->isDTD());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDDOCUMENT)
       RBOOL(obj->isEndDocument());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDELEMENT)
       RBOOL(obj->isEndElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -633,7 +633,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENTITYREFERENCE)
       RBOOL(obj->isEntityReference());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -651,7 +651,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION)
       RBOOL(obj->isProcessingInstruction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -669,7 +669,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTANDALONEDOCUMENT)
       RBOOL(obj->isStandaloneDocument());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -687,7 +687,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTDOCUMENT)
       RBOOL(obj->isStartDocument());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -705,7 +705,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTELEMENT)
       RBOOL(obj->isStartElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISWHITESPACE)
       RBOOL(obj->isWhitespace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -741,7 +741,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_LINENUMBER)
       RQINT64(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -759,7 +759,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAME)
       RQSTRINGREF(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -799,7 +799,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEDECLARATIONS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -817,7 +817,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEPROCESSING)
       RBOOL(obj->namespaceProcessing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -835,7 +835,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEURI)
       RQSTRINGREF(obj->namespaceUri());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -875,7 +875,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NOTATIONDECLARATIONS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -893,7 +893,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PREFIX)
       RQSTRINGREF(obj->prefix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -911,7 +911,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONDATA)
       RQSTRINGREF(obj->processingInstructionData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -929,7 +929,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONTARGET)
       RQSTRINGREF(obj->processingInstructionTarget());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -947,7 +947,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_QUALIFIEDNAME)
       RQSTRINGREF(obj->qualifiedName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -965,7 +965,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
       obj->raiseError(OPQSTRING(1, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READELEMENTTEXT)
                                                 : PQXMLSTREAMREADER_READELEMENTTEXTBEHAVIOUR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXT)
       RENUM(obj->readNext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXTSTARTELEMENT)
       RBOOL(obj->readNextStartElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETDEVICE)
       obj->setDevice(PQIODEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETENTITYRESOLVER)
       obj->setEntityResolver(PQXMLSTREAMENTITYRESOLVER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETNAMESPACEPROCESSING)
       obj->setNamespaceProcessing(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SKIPCURRENTELEMENT)
       obj->skipCurrentElement();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TEXT)
       RQSTRINGREF(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TOKENSTRING)
       RQSTRING(obj->tokenString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TOKENTYPE)
       RENUM(obj->tokenType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

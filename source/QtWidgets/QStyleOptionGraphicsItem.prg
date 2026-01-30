@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_NEW)
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM)
     RQREAL(QStyleOptionGraphicsItem::levelOfDetailFromTransform(*PQTRANSFORM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT)
     if (ISNUMPAR(0)) {
       RQRECTF(obj->exposedRect);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT)
     if (ISNUMPAR(1) && ISQRECTF(1)) {
       obj->exposedRect = *PQRECTF(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_MATRIX)
     if (ISNUMPAR(0)) {
       RQMATRIX(obj->matrix);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETMATRIX)
     if (ISNUMPAR(1) && ISQMATRIX(1)) {
       obj->matrix = *PQMATRIX(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL)
     if (ISNUMPAR(0)) {
       RQREAL(obj->levelOfDetail);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->levelOfDetail = PQREAL(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

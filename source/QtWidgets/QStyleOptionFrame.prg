@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_NEW)
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_LINEWIDTH)
     if (ISNUMPAR(0)) {
       RINT(obj->lineWidth);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETLINEWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->lineWidth = PINT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_MIDLINEWIDTH)
     if (ISNUMPAR(0)) {
       RINT(obj->midLineWidth);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETMIDLINEWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->midLineWidth = PINT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_FEATURES)
     if (ISNUMPAR(0)) {
       RENUM(obj->features);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETFEATURES)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->features = PQSTYLEOPTIONFRAME_FRAMEFEATURES(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_FRAMESHAPE)
     if (ISNUMPAR(0)) {
       RENUM(obj->frameShape);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETFRAMESHAPE)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->frameShape = PQFRAME_SHAPE(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

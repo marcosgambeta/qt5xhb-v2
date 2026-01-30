@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QEVENTLOOP_NEW)
     auto obj = new QEventLoop(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXEC)
       RINT(obj->exec(HB_ISNIL(1) ? QEventLoop::AllEvents : PQEVENTLOOP_PROCESSEVENTSFLAGS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXIT)
       obj->exit(OPINT(1, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QEVENTLOOP_ISRUNNING)
       RBOOL(obj->isRunning());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
       obj->wakeUp();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QEVENTLOOP_QUIT)
       obj->quit();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

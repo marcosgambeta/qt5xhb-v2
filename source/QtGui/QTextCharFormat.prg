@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_NEW)
     auto obj = new QTextCharFormat();
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_ISVALID)
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONT)
       obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONT)
       RQFONT(obj->font());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTFAMILY)
       obj->setFontFamily(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTFAMILY)
       RQSTRING(obj->fontFamily());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTPOINTSIZE)
       obj->setFontPointSize(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTPOINTSIZE)
       RQREAL(obj->fontPointSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTWEIGHT)
       obj->setFontWeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTWEIGHT)
       RINT(obj->fontWeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTITALIC)
       obj->setFontItalic(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTITALIC)
       RBOOL(obj->fontItalic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTCAPITALIZATION)
       obj->setFontCapitalization(PQFONT_CAPITALIZATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTCAPITALIZATION)
       RENUM(obj->fontCapitalization());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTLETTERSPACINGTYPE)
       obj->setFontLetterSpacingType(PQFONT_SPACINGTYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTLETTERSPACINGTYPE)
       RENUM(obj->fontLetterSpacingType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTLETTERSPACING)
       obj->setFontLetterSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTLETTERSPACING)
       RQREAL(obj->fontLetterSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTWORDSPACING)
       obj->setFontWordSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTWORDSPACING)
       RQREAL(obj->fontWordSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTUNDERLINE)
       obj->setFontUnderline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTUNDERLINE)
       RBOOL(obj->fontUnderline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTOVERLINE)
       obj->setFontOverline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTOVERLINE)
       RBOOL(obj->fontOverline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTSTRIKEOUT)
       obj->setFontStrikeOut(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -596,7 +596,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTSTRIKEOUT)
       RBOOL(obj->fontStrikeOut());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETUNDERLINECOLOR)
       obj->setUnderlineColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_UNDERLINECOLOR)
       RQCOLOR(obj->underlineColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTFIXEDPITCH)
       obj->setFontFixedPitch(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -672,7 +672,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTFIXEDPITCH)
       RBOOL(obj->fontFixedPitch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -690,7 +690,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTSTRETCH)
       obj->setFontStretch(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -710,7 +710,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTSTRETCH)
       RINT(obj->fontStretch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -728,7 +728,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTSTYLEHINT)
       obj->setFontStyleHint(PQFONT_STYLEHINT(1), HB_ISNIL(2) ? QFont::PreferDefault : PQFONT_STYLESTRATEGY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -748,7 +748,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY)
       obj->setFontStyleStrategy(PQFONT_STYLESTRATEGY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTSTYLEHINT)
       RENUM(obj->fontStyleHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -786,7 +786,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTSTYLESTRATEGY)
       RENUM(obj->fontStyleStrategy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -804,7 +804,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE)
       obj->setFontHintingPreference(PQFONT_HINTINGPREFERENCE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -824,7 +824,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTHINTINGPREFERENCE)
       RENUM(obj->fontHintingPreference());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -842,7 +842,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTKERNING)
       obj->setFontKerning(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -862,7 +862,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTKERNING)
       RBOOL(obj->fontKerning());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -880,7 +880,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETUNDERLINESTYLE)
       obj->setUnderlineStyle(PQTEXTCHARFORMAT_UNDERLINESTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -900,7 +900,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_UNDERLINESTYLE)
       RENUM(obj->underlineStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -918,7 +918,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETVERTICALALIGNMENT)
       obj->setVerticalAlignment(PQTEXTCHARFORMAT_VERTICALALIGNMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -938,7 +938,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_VERTICALALIGNMENT)
       RENUM(obj->verticalAlignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -956,7 +956,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETTEXTOUTLINE)
       obj->setTextOutline(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_TEXTOUTLINE)
       RQPEN(obj->textOutline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -994,7 +994,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETTOOLTIP)
       obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_TOOLTIP)
       RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETANCHOR)
       obj->setAnchor(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1052,7 +1052,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_ISANCHOR)
       RBOOL(obj->isAnchor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETANCHORHREF)
       obj->setAnchorHref(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_ANCHORHREF)
       RQSTRING(obj->anchorHref());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETANCHORNAME)
       obj->setAnchorName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_ANCHORNAME)
       RQSTRING(obj->anchorName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETANCHORNAMES)
       obj->setAnchorNames(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_ANCHORNAMES)
       RQSTRINGLIST(obj->anchorNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETTABLECELLROWSPAN)
       obj->setTableCellRowSpan(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1204,7 +1204,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_TABLECELLROWSPAN)
       RINT(obj->tableCellRowSpan());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1222,7 +1222,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETTABLECELLCOLUMNSPAN)
       obj->setTableCellColumnSpan(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_TABLECELLCOLUMNSPAN)
       RINT(obj->tableCellColumnSpan());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

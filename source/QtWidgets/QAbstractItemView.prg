@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS)
       RBOOL(obj->alternatingRowColors());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS)
       obj->setAlternatingRowColors(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_AUTOSCROLLMARGIN)
       RINT(obj->autoScrollMargin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN)
       obj->setAutoScrollMargin(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CURRENTINDEX)
       RQMODELINDEX(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETCURRENTINDEX)
       obj->setCurrentIndex(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DEFAULTDROPACTION)
       RENUM(obj->defaultDropAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDEFAULTDROPACTION)
       obj->setDefaultDropAction(PQT_DROPACTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGDROPMODE)
       RENUM(obj->dragDropMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPMODE)
       obj->setDragDropMode(PQABSTRACTITEMVIEW_DRAGDROPMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE)
       RBOOL(obj->dragDropOverwriteMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE)
       obj->setDragDropOverwriteMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGENABLED)
       RBOOL(obj->dragEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGENABLED)
       obj->setDragEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDITTRIGGERS)
       RENUM(obj->editTriggers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETEDITTRIGGERS)
       obj->setEditTriggers(PQABSTRACTITEMVIEW_EDITTRIGGERS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_HASAUTOSCROLL)
       RBOOL(obj->hasAutoScroll());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -550,7 +550,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLL)
       obj->setAutoScroll(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE)
       RENUM(obj->horizontalScrollMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE)
       obj->setHorizontalScrollMode(PQABSTRACTITEMVIEW_SCROLLMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -608,7 +608,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ICONSIZE)
       RQSIZE(obj->iconSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -626,7 +626,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETICONSIZE)
       obj->setIconSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXWIDGET)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -665,7 +665,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETINDEXWIDGET)
       obj->setIndexWidget(*PQMODELINDEX(1), PQWIDGET(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -685,7 +685,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR)
       obj->closePersistentEditor(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -705,7 +705,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
       RQMODELINDEX(obj->indexAt(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -732,7 +732,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
     }
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -748,7 +748,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATE)
       obj->setItemDelegate(PQABSTRACTITEMDELEGATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -769,7 +769,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN)
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN)
       obj->setItemDelegateForColumn(PINT(1), PQABSTRACTITEMDELEGATE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -808,7 +808,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORROW)
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -826,7 +826,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW)
       obj->setItemDelegateForRow(PINT(1), PQABSTRACTITEMDELEGATE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_KEYBOARDSEARCH)
       obj->keyboardSearch(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_MODEL)
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -885,7 +885,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETMODEL)
       obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -905,7 +905,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR)
       obj->openPersistentEditor(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -925,7 +925,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ROOTINDEX)
       RQMODELINDEX(obj->rootIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -943,7 +943,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETROOTINDEX)
       obj->setRootIndex(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -966,7 +966,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTO)
                                           : PQABSTRACTITEMVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -986,7 +986,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONBEHAVIOR)
       RENUM(obj->selectionBehavior());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONBEHAVIOR)
       obj->setSelectionBehavior(PQABSTRACTITEMVIEW_SELECTIONBEHAVIOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONMODE)
       RENUM(obj->selectionMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODE)
       obj->setSelectionMode(PQABSTRACTITEMVIEW_SELECTIONMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONMODEL)
       Qt5xHb::createReturnQObjectClass(ptr, "QITEMSELECTIONMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODEL)
       obj->setSelectionModel(PQITEMSELECTIONMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SHOWDROPINDICATOR)
       RBOOL(obj->showDropIndicator());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN)
       obj->setDropIndicatorShown(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_TABKEYNAVIGATION)
       RBOOL(obj->tabKeyNavigation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTABKEYNAVIGATION)
       obj->setTabKeyNavigation(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_TEXTELIDEMODE)
       RENUM(obj->textElideMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTEXTELIDEMODE)
       obj->setTextElideMode(PQT_TEXTELIDEMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_VERTICALSCROLLMODE)
       RENUM(obj->verticalScrollMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1233,7 +1233,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETVERTICALSCROLLMODE)
       obj->setVerticalScrollMode(PQABSTRACTITEMVIEW_SCROLLMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN)
       RINT(obj->sizeHintForColumn(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORINDEX)
       RQSIZE(obj->sizeHintForIndex(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1289,7 +1289,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORROW)
       RINT(obj->sizeHintForRow(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_VISUALRECT)
       RQRECT(obj->visualRect(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INPUTMETHODQUERY)
       RQVARIANT(obj->inputMethodQuery(PQT_INPUTMETHODQUERY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1343,7 +1343,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLEARSELECTION)
       obj->clearSelection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1363,7 +1363,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDIT)
       obj->edit(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_RESET)
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTOBOTTOM)
       obj->scrollToBottom();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1423,7 +1423,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTOTOP)
       obj->scrollToTop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTALL)
       obj->selectAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1504,7 +1504,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DOITEMSLAYOUT)
       obj->doItemsLayout();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1561,7 +1561,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONACTIVATED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1601,7 +1601,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONCLICKED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1641,7 +1641,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONDOUBLECLICKED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1681,7 +1681,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONENTERED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1721,7 +1721,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONPRESSED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -1758,7 +1758,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONVIEWPORTENTERED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

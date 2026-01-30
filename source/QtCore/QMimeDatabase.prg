@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_NEW)
     auto obj = new QMimeDatabase();
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORNAME)
       RQMIMETYPE(obj->mimeTypeForName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
                                       HB_ISNIL(2) ? QMimeDatabase::MatchDefault : PQMIMEDATABASE_MATCHMODE(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPESFORFILENAME)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORDATA)
       RQMIMETYPE(obj->mimeTypeForData(PQIODEVICE(1)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORURL)
       RQMIMETYPE(obj->mimeTypeForUrl(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA)
       RQMIMETYPE(obj->mimeTypeForFileNameAndData(PQSTRING(1), *PQBYTEARRAY(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_SUFFIXFORFILENAME)
       RQSTRING(obj->suffixForFileName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_ALLMIMETYPES)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

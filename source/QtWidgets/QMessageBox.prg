@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_NEW)
     Qt5xHb::returnNewObject(obj, false);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
     }
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTON)
       Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONROLE)
       RENUM(obj->buttonRole(PQABSTRACTBUTTON(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONS)
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_CLICKEDBUTTON)
       Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DEFAULTBUTTON)
       Qt5xHb::createReturnQWidgetClass(ptr, "QPUSHBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DETAILEDTEXT)
       RQSTRING(obj->detailedText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDETAILEDTEXT)
       obj->setDetailedText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ESCAPEBUTTON)
       Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ICON)
       RENUM(obj->icon());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICON)
       obj->setIcon(PQMESSAGEBOX_ICON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ICONPIXMAP)
       RQPIXMAP(obj->iconPixmap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICONPIXMAP)
       obj->setIconPixmap(*PQPIXMAP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATIVETEXT)
       RQSTRING(obj->informativeText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETINFORMATIVETEXT)
       obj->setInformativeText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_OPEN)
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_REMOVEBUTTON)
       obj->removeButton(PQABSTRACTBUTTON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -545,7 +545,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWMODALITY)
       obj->setWindowModality(PQT_WINDOWMODALITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWTITLE)
       obj->setWindowTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -601,7 +601,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTON)
       RENUM(obj->standardButton(PQABSTRACTBUTTON(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -619,7 +619,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTONS)
       RENUM(obj->standardButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETSTANDARDBUTTONS)
       obj->setStandardButtons(PQMESSAGEBOX_STANDARDBUTTONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXT)
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -675,7 +675,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXT)
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -695,7 +695,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXTFORMAT)
       RENUM(obj->textFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -713,7 +713,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTFORMAT)
       obj->setTextFormat(PQT_TEXTFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -734,7 +734,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETVISIBLE)
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -755,7 +755,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_EXEC)
       RINT(obj->exec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -770,7 +770,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUT)
     QMessageBox::about(PQWIDGET(1), PQSTRING(2), PQSTRING(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -786,7 +786,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUTQT)
     QMessageBox::aboutQt(PQWIDGET(1), OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -806,7 +806,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_CRITICAL)
                                 HB_ISNIL(5) ? QMessageBox::NoButton : PQMESSAGEBOX_STANDARDBUTTON(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -824,7 +824,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATION)
                                    HB_ISNIL(5) ? QMessageBox::NoButton : PQMESSAGEBOX_STANDARDBUTTON(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -842,7 +842,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_QUESTION)
                                 HB_ISNIL(5) ? QMessageBox::NoButton : PQMESSAGEBOX_STANDARDBUTTON(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -860,7 +860,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_WARNING)
                                HB_ISNIL(5) ? QMessageBox::NoButton : PQMESSAGEBOX_STANDARDBUTTON(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -877,7 +877,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXTINTERACTIONFLAGS)
       RENUM(obj->textInteractionFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -895,7 +895,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTINTERACTIONFLAGS)
       obj->setTextInteractionFlags(PQT_TEXTINTERACTIONFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -916,7 +916,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_CHECKBOX)
       Qt5xHb::createReturnQWidgetClass(ptr, "QCHECKBOX");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -934,7 +934,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETCHECKBOX)
       obj->setCheckBox(PQCHECKBOX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -951,7 +951,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDICON)
     RQPIXMAP(QMessageBox::standardIcon(PQMESSAGEBOX_ICON(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -968,7 +968,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONTEXT)
       RQSTRING(obj->buttonText(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -986,7 +986,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETBUTTONTEXT)
       obj->setButtonText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ONBUTTONCLICKED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

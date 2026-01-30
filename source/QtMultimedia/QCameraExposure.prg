@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_APERTURE)
       RQREAL(obj->aperture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SHUTTERSPEED)
       RQREAL(obj->shutterSpeed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISOSENSITIVITY)
       RINT(obj->isoSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_EXPOSURECOMPENSATION)
       RQREAL(obj->exposureCompensation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETEXPOSURECOMPENSATION)
       obj->setExposureCompensation(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISFLASHREADY)
       RBOOL(obj->isFlashReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_FLASHMODE)
       RENUM(obj->flashMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETFLASHMODE)
       obj->setFlashMode(PQCAMERAEXPOSURE_FLASHMODES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_EXPOSUREMODE)
       RENUM(obj->exposureMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETEXPOSUREMODE)
       obj->setExposureMode(PQCAMERAEXPOSURE_EXPOSUREMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_METERINGMODE)
       RENUM(obj->meteringMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMETERINGMODE)
       obj->setMeteringMode(PQCAMERAEXPOSURE_METERINGMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISAVAILABLE)
       RBOOL(obj->isAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED)
       RBOOL(obj->isExposureModeSupported(PQCAMERAEXPOSURE_EXPOSUREMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISFLASHMODESUPPORTED)
       RBOOL(obj->isFlashModeSupported(PQCAMERAEXPOSURE_FLASHMODES(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED)
       RBOOL(obj->isMeteringModeSupported(PQCAMERAEXPOSURE_METERINGMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDAPERTURE)
       RQREAL(obj->requestedAperture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDISOSENSITIVITY)
       RINT(obj->requestedIsoSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED)
       RQREAL(obj->requestedShutterSpeed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETSPOTMETERINGPOINT)
       obj->setSpotMeteringPoint(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SPOTMETERINGPOINT)
       RQPOINTF(obj->spotMeteringPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SUPPORTEDAPERTURES)
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES)
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS)
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETAUTOAPERTURE)
       obj->setAutoAperture();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETAUTOISOSENSITIVITY)
       obj->setAutoIsoSensitivity();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETAUTOSHUTTERSPEED)
       obj->setAutoShutterSpeed();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMANUALAPERTURE)
       obj->setManualAperture(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY)
       obj->setManualIsoSensitivity(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED)
       obj->setManualShutterSpeed(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -693,7 +693,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -731,7 +731,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURERANGECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -771,7 +771,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -810,7 +810,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONFLASHREADY)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -850,7 +850,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -890,7 +890,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -928,7 +928,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

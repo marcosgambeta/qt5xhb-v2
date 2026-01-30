@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
     RINT(QMetaType::registerTypedef(PCONSTCHAR(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QMETATYPE_TYPE)
     RINT(QMetaType::type(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QMETATYPE_TYPENAME)
     hb_retc(static_cast<const char *>(QMetaType::typeName(PINT(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QMETATYPE_ISREGISTERED)
     RBOOL(QMetaType::isRegistered(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QMETATYPE_CONSTRUCT)
         QMetaType::construct(PINT(1), static_cast<void *>(hb_parptr(2)), static_cast<const void *>(hb_parptr(3)))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QMETATYPE_DESTROY)
     QMetaType::destroy(PINT(1), static_cast<void *>(hb_parptr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QMETATYPE_SAVE)
     RBOOL(QMetaType::save(*PQDATASTREAM(1), PINT(2), static_cast<const void *>(hb_parptr(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QMETATYPE_LOAD)
     RBOOL(QMetaType::load(*PQDATASTREAM(1), PINT(2), static_cast<void *>(hb_parptr(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }

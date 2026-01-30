@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_NEW)
     auto obj = new QOpenGLShader(PQOPENGLSHADER_SHADERTYPE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SHADERTYPE)
       RENUM(obj->shaderType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE)
       RBOOL(obj->compileSourceCode(PQSTRING(1)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCEFILE)
       RBOOL(obj->compileSourceFile(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SOURCECODE)
       RQBYTEARRAY(obj->sourceCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_ISCOMPILED)
       RBOOL(obj->isCompiled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_LOG)
       RQSTRING(obj->log());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SHADERID)
       RGLUINT(obj->shaderId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_HASOPENGLSHADERS)
     RBOOL(QOpenGLShader::hasOpenGLShaders(PQOPENGLSHADER_SHADERTYPE(1), OPQOPENGLCONTEXT(2, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }

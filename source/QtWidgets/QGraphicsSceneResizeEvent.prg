@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEW)
     auto obj = new QGraphicsSceneResizeEvent();
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEWSIZE)
       RQSIZEF(obj->newSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_OLDSIZE)
       RQSIZEF(obj->oldSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

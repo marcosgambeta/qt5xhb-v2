@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_NEW)
     auto obj = new QDBusConnection(*PQDBUSCONNECTION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_ISCONNECTED)
       RBOOL(obj->isConnected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_BASESERVICE)
       RQSTRING(obj->baseService());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_LASTERROR)
       RQDBUSERROR(obj->lastError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_NAME)
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTIONCAPABILITIES)
       RENUM(obj->connectionCapabilities());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SEND)
       RBOOL(obj->send(*PQDBUSMESSAGE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALLWITHCALLBACK)
       RBOOL(obj->callWithCallback(*PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), OPINT(4, -1)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALL)
       RQDBUSMESSAGE(obj->call(*PQDBUSMESSAGE(1), HB_ISNIL(2) ? QDBus::Block : PQDBUS_CALLMODE(2), OPINT(3, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_ASYNCCALL)
       RQDBUSPENDINGCALL(obj->asyncCall(*PQDBUSMESSAGE(1), OPINT(2, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECT)
                          PCONSTCHAR(8)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECT)
                             PQOBJECT(7), PCONSTCHAR(8)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_REGISTEROBJECT)
                                 HB_ISNIL(3) ? QDBusConnection::ExportAdaptors : PQDBUSCONNECTION_REGISTEROPTIONS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTEROBJECT)
                             HB_ISNIL(2) ? QDBusConnection::UnregisterNode : PQDBUSCONNECTION_UNREGISTERMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_OBJECTREGISTEREDAT)
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_REGISTERSERVICE)
       RBOOL(obj->registerService(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTERSERVICE)
       RBOOL(obj->unregisterService(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_INTERFACE)
       Qt5xHb::createReturnQObjectClass(ptr, "QDBUSCONNECTIONINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_INTERNALPOINTER)
       hb_retptr(static_cast<void *>(obj->internalPointer()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTTOBUS)
     // static QDBusConnection connectToBus(const QString &address, const QString &name)
     RQDBUSCONNECTION(QDBusConnection::connectToBus(PQSTRING(1), PQSTRING(2)));
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTTOPEER)
     RQDBUSCONNECTION(QDBusConnection::connectToPeer(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMBUS)
     QDBusConnection::disconnectFromBus(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -536,7 +536,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMPEER)
     QDBusConnection::disconnectFromPeer(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_LOCALMACHINEID)
     RQBYTEARRAY(QDBusConnection::localMachineId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -566,7 +566,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SESSIONBUS)
     RQDBUSCONNECTION(QDBusConnection::sessionBus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SYSTEMBUS)
     RQDBUSCONNECTION(QDBusConnection::systemBus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SENDER)
     RQDBUSCONNECTION(QDBusConnection::sender());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }

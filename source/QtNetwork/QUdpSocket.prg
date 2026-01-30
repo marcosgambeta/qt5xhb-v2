@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QUDPSOCKET_NEW)
     auto obj = new QUdpSocket(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QUDPSOCKET_JOINMULTICASTGROUP)
       RBOOL(obj->joinMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QUDPSOCKET_LEAVEMULTICASTGROUP)
       RBOOL(obj->leaveMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QUDPSOCKET_MULTICASTINTERFACE)
       RQNETWORKINTERFACE(obj->multicastInterface());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QUDPSOCKET_SETMULTICASTINTERFACE)
       obj->setMulticastInterface(*PQNETWORKINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QUDPSOCKET_HASPENDINGDATAGRAMS)
       RBOOL(obj->hasPendingDatagrams());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QUDPSOCKET_PENDINGDATAGRAMSIZE)
       RQINT64(obj->pendingDatagramSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QUDPSOCKET_RECEIVEDATAGRAM)
       RQNETWORKDATAGRAM(obj->receiveDatagram(OPQINT64(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
       RQINT64(obj->writeDatagram(*PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 

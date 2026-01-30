@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_NEW)
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS)
     if (ISNUMPAR(0)) {
       RENUM(obj->buttonSymbols);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->buttonSymbols = PQABSTRACTSPINBOX_BUTTONSYMBOLS(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_STEPENABLED)
     if (ISNUMPAR(0)) {
       RENUM(obj->stepEnabled);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETSTEPENABLED)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->stepEnabled = PQABSTRACTSPINBOX_STEPENABLED(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_FRAME)
     if (ISNUMPAR(0)) {
       RBOOL(obj->frame);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETFRAME)
     if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->frame = PBOOL(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

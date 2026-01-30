@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QMESSAGELOGGER_NEW)
     auto obj = new QMessageLogger(PCONSTCHAR(1), PINT(2), PCONSTCHAR(3), PCONSTCHAR(4));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 

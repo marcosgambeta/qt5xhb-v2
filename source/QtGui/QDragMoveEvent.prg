@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
                                   PQT_KEYBOARDMODIFIERS(5), HB_ISNIL(6) ? QEvent::DragMove : PQEVENT_TYPE(6));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
       RQRECT(obj->answerRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 

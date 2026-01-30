@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_NEW)
     Qt5xHb::returnNewObject(obj, false);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ALIGNMENT)
       RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_BACKGROUNDBRUSH)
       RQBRUSH(obj->backgroundBrush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CACHEMODE)
       RENUM(obj->cacheMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_DRAGMODE)
       RENUM(obj->dragMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FOREGROUNDBRUSH)
       RQBRUSH(obj->foregroundBrush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ISINTERACTIVE)
       RBOOL(obj->isInteractive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ISTRANSFORMED)
       RBOOL(obj->isTransformed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMAT)
     }
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     }
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     }
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MATRIX)
       RQMATRIX(obj->matrix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_OPTIMIZATIONFLAGS)
       RENUM(obj->optimizationFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDER)
                   HB_ISNIL(4) ? Qt::KeepAspectRatio : PQT_ASPECTRATIOMODE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDERHINTS)
       RENUM(obj->renderHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -607,7 +607,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RESETCACHEDCONTENT)
       obj->resetCachedContent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RESETMATRIX)
       obj->resetMatrix();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RESETTRANSFORM)
       obj->resetTransform();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -667,7 +667,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RESIZEANCHOR)
       RENUM(obj->resizeAnchor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -685,7 +685,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ROTATE)
       obj->rotate(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -705,7 +705,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE)
       RENUM(obj->rubberBandSelectionMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SCALE)
       obj->scale(PQREAL(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -744,7 +744,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SCENE)
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -762,7 +762,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SCENERECT)
       RQRECTF(obj->sceneRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -780,7 +780,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETALIGNMENT)
       obj->setAlignment(PQT_ALIGNMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -800,7 +800,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETBACKGROUNDBRUSH)
       obj->setBackgroundBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -820,7 +820,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETCACHEMODE)
       obj->setCacheMode(PQGRAPHICSVIEW_CACHEMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -840,7 +840,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETDRAGMODE)
       obj->setDragMode(PQGRAPHICSVIEW_DRAGMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -860,7 +860,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETFOREGROUNDBRUSH)
       obj->setForegroundBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -880,7 +880,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETINTERACTIVE)
       obj->setInteractive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -900,7 +900,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETMATRIX)
       obj->setMatrix(*PQMATRIX(1), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -920,7 +920,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETOPTIMIZATIONFLAG)
       obj->setOptimizationFlag(PQGRAPHICSVIEW_OPTIMIZATIONFLAG(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -940,7 +940,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS)
       obj->setOptimizationFlags(PQGRAPHICSVIEW_OPTIMIZATIONFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -960,7 +960,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRENDERHINT)
       obj->setRenderHint(PQPAINTER_RENDERHINT(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -980,7 +980,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRENDERHINTS)
       obj->setRenderHints(PQPAINTER_RENDERHINTS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRESIZEANCHOR)
       obj->setResizeAnchor(PQGRAPHICSVIEW_VIEWPORTANCHOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE)
       obj->setRubberBandSelectionMode(PQT_ITEMSELECTIONMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENE)
       obj->setScene(PQGRAPHICSSCENE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENERECT)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETTRANSFORM)
       obj->setTransform(*PQTRANSFORM(1), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR)
       obj->setTransformationAnchor(PQGRAPHICSVIEW_VIEWPORTANCHOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE)
       obj->setViewportUpdateMode(PQGRAPHICSVIEW_VIEWPORTUPDATEMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SHEAR)
       obj->shear(PQREAL(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1167,7 +1167,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_TRANSFORM)
       RQTRANSFORM(obj->transform());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_TRANSFORMATIONANCHOR)
       RENUM(obj->transformationAnchor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_TRANSLATE)
       obj->translate(PQREAL(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_VIEWPORTTRANSFORM)
       RQTRANSFORM(obj->viewportTransform());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1241,7 +1241,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_VIEWPORTUPDATEMODE)
       RENUM(obj->viewportUpdateMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1259,7 +1259,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INPUTMETHODQUERY)
       RQVARIANT(obj->inputMethodQuery(PQT_INPUTMETHODQUERY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SIZEHINT)
       RQSIZE(obj->sizeHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INVALIDATESCENE)
                            HB_ISNIL(2) ? QGraphicsScene::AllLayers : PQGRAPHICSSCENE_SCENELAYERS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1322,7 +1322,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_UPDATESCENE)
       obj->updateScene(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -1342,7 +1342,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_UPDATESCENERECT)
       obj->updateSceneRect(*PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

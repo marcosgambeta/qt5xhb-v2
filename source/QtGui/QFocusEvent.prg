@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_NEW)
     auto obj = new QFocusEvent(PQEVENT_TYPE(1), HB_ISNIL(2) ? Qt::OtherFocusReason : PQT_FOCUSREASON(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_GOTFOCUS)
       RBOOL(obj->gotFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_LOSTFOCUS)
       RBOOL(obj->lostFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_REASON)
       RENUM(obj->reason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

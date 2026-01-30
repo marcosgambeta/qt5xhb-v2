@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_NEW)
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_MENUITEMTYPE)
     if (ISNUMPAR(0)) {
       RENUM(obj->menuItemType);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETMENUITEMTYPE)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->menuItemType = PQSTYLEOPTIONMENUITEM_MENUITEMTYPE(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_CHECKTYPE)
     if (ISNUMPAR(0)) {
       RENUM(obj->checkType);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETCHECKTYPE)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->checkType = PQSTYLEOPTIONMENUITEM_CHECKTYPE(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_CHECKED)
     if (ISNUMPAR(0)) {
       RBOOL(obj->checked);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETCHECKED)
     if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->checked = PBOOL(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_MENUHASCHECKABLEITEMS)
     if (ISNUMPAR(0)) {
       RBOOL(obj->menuHasCheckableItems);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETMENUHASCHECKABLEITEMS)
     if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->menuHasCheckableItems = PBOOL(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_MENURECT)
     if (ISNUMPAR(0)) {
       RQRECT(obj->menuRect);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETMENURECT)
     if (ISNUMPAR(1) && ISQRECT(1)) {
       obj->menuRect = *PQRECT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_TEXT)
     if (ISNUMPAR(0)) {
       RQSTRING(obj->text);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETTEXT)
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       obj->text = PQSTRING(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_ICON)
     if (ISNUMPAR(0)) {
       RQICON(obj->icon);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETICON)
     if (ISNUMPAR(1) && ISQICON(1)) {
       obj->icon = *PQICON(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_MAXICONWIDTH)
     if (ISNUMPAR(0)) {
       RINT(obj->maxIconWidth);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETMAXICONWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->maxIconWidth = PINT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_TABWIDTH)
     if (ISNUMPAR(0)) {
       RINT(obj->tabWidth);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETTABWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->tabWidth = PINT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_FONT)
     if (ISNUMPAR(0)) {
       RQFONT(obj->font);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETFONT)
     if (ISNUMPAR(1) && ISQFONT(1)) {
       obj->font = *PQFONT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

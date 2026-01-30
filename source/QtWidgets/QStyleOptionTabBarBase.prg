@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_NEW)
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SHAPE)
     if (ISNUMPAR(0)) {
       RENUM(obj->shape);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSHAPE)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->shape = PQTABBAR_SHAPE(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_TABBARRECT)
     if (ISNUMPAR(0)) {
       RQRECT(obj->tabBarRect);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETTABBARRECT)
     if (ISNUMPAR(1) && ISQRECT(1)) {
       obj->tabBarRect = *PQRECT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT)
     if (ISNUMPAR(0)) {
       RQRECT(obj->selectedTabRect);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT)
     if (ISNUMPAR(1) && ISQRECT(1)) {
       obj->selectedTabRect = *PQRECT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_DOCUMENTMODE)
     if (ISNUMPAR(0)) {
       RBOOL(obj->documentMode);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETDOCUMENTMODE)
     if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->documentMode = PBOOL(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

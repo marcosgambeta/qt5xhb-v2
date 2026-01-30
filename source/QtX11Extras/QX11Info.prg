@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QX11INFO_ISPLATFORMX11)
     RBOOL(QX11Info::isPlatformX11());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QX11INFO_APPDPIX)
     RINT(QX11Info::appDpiX(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QX11INFO_APPDPIY)
     RINT(QX11Info::appDpiY(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QX11INFO_APPROOTWINDOW)
     RUNSIGNEDLONG(QX11Info::appRootWindow(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QX11INFO_APPSCREEN)
     RINT(QX11Info::appScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QX11INFO_APPTIME)
     RUNSIGNEDLONG(QX11Info::appTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QX11INFO_APPUSERTIME)
     RUNSIGNEDLONG(QX11Info::appUserTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QX11INFO_SETAPPTIME)
     QX11Info::setAppTime(PUNSIGNEDLONG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QX11INFO_SETAPPUSERTIME)
     QX11Info::setAppUserTime(PUNSIGNEDLONG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QX11INFO_GETTIMESTAMP)
     RUNSIGNEDLONG(QX11Info::getTimestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QX11INFO_DISPLAY)
     hb_retptr(static_cast<Display *>(QX11Info::display()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QX11INFO_CONNECTION)
     hb_retptr(static_cast<xcb_connection_t *>(QX11Info::connection()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QX11INFO_NEXTSTARTUPID)
     RQBYTEARRAY(QX11Info::nextStartupId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QX11INFO_SETNEXTSTARTUPID)
     QX11Info::setNextStartupId(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 

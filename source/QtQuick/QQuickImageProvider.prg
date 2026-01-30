@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
                                                    : PQQMLIMAGEPROVIDERBASE_FLAGS(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
       RENUM(obj->imageType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
       RQIMAGE(obj->requestImage(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
       RQPIXMAP(obj->requestPixmap(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTTEXTURE)
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKTEXTUREFACTORY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

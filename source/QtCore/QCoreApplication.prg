@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_NOTIFY)
       RBOOL(obj->notify(PQOBJECT(1), PQEVENT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_QUIT)
       obj->quit();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ADDLIBRARYPATH)
     QCoreApplication::addLibraryPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONDIRPATH)
     RQSTRING(QCoreApplication::applicationDirPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONFILEPATH)
     RQSTRING(QCoreApplication::applicationFilePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONNAME)
     RQSTRING(QCoreApplication::applicationName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONPID)
     RQINT64(QCoreApplication::applicationPid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONVERSION)
     RQSTRING(QCoreApplication::applicationVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ARGUMENTS)
     RQSTRINGLIST(QCoreApplication::arguments());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_CLOSINGDOWN)
     RBOOL(QCoreApplication::closingDown());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_EXEC)
     RINT(QCoreApplication::exec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_EXIT)
     QCoreApplication::exit(OPINT(1, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_FLUSH)
     QCoreApplication::flush();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_HASPENDINGEVENTS)
     RBOOL(QCoreApplication::hasPendingEvents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_INSTALLTRANSLATOR)
     QCoreApplication::installTranslator(PQTRANSLATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_INSTANCE)
     Qt5xHb::createReturnQObjectClass(ptr, "QCOREAPPLICATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_LIBRARYPATHS)
     RQSTRINGLIST(QCoreApplication::libraryPaths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ORGANIZATIONDOMAIN)
     RQSTRING(QCoreApplication::organizationDomain());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ORGANIZATIONNAME)
     RQSTRING(QCoreApplication::organizationName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2), PINT(3));
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
     QCoreApplication::processEvents(PQEVENTLOOP_PROCESSEVENTSFLAGS(1), PINT(2));
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVELIBRARYPATH)
     QCoreApplication::removeLibraryPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
     QCoreApplication::removePostedEvents(PQOBJECT(1), PINT(2));
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVETRANSLATOR)
     QCoreApplication::removeTranslator(PQTRANSLATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SENDEVENT)
     RBOOL(QCoreApplication::sendEvent(PQOBJECT(1), PQEVENT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SENDPOSTEDEVENTS)
     QCoreApplication::sendPostedEvents();
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONNAME)
     QCoreApplication::setApplicationName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONVERSION)
     QCoreApplication::setApplicationVersion(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -545,7 +545,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETATTRIBUTE)
     QCoreApplication::setAttribute(PQT_APPLICATIONATTRIBUTE(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETLIBRARYPATHS)
     QCoreApplication::setLibraryPaths(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -577,7 +577,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONDOMAIN)
     QCoreApplication::setOrganizationDomain(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -593,7 +593,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONNAME)
     QCoreApplication::setOrganizationName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_STARTINGUP)
     RBOOL(QCoreApplication::startingUp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TESTATTRIBUTE)
     RBOOL(QCoreApplication::testAttribute(PQT_APPLICATIONATTRIBUTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -638,7 +638,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
     RQSTRING(QCoreApplication::translate(PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3, nullptr), OPINT(4, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ISSETUIDALLOWED)
     RBOOL(QCoreApplication::isSetuidAllowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -669,7 +669,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETSETUIDALLOWED)
     QCoreApplication::setSetuidAllowed(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONABOUTTOQUIT)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -745,7 +745,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -783,7 +783,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -821,7 +821,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -859,7 +859,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

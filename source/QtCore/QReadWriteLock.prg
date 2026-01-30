@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_NEW)
     auto obj = new QReadWriteLock(HB_ISNIL(1) ? QReadWriteLock::NonRecursive : PQREADWRITELOCK_RECURSIONMODE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
       obj->lockForRead();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
       RBOOL(obj->tryLockForRead(PINT(1)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORWRITE)
       obj->lockForWrite();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
       RBOOL(obj->tryLockForWrite(PINT(1)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_UNLOCK)
       obj->unlock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

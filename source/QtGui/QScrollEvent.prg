@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_NEW)
     auto obj = new QScrollEvent(*PQPOINTF(1), *PQPOINTF(2), PQSCROLLEVENT_SCROLLSTATE(3));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_CONTENTPOS)
       RQPOINTF(obj->contentPos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_OVERSHOOTDISTANCE)
       RQPOINTF(obj->overshootDistance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_SCROLLSTATE)
       RENUM(obj->scrollState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

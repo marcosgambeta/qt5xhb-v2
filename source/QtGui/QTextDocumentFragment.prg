@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
     auto obj = new QTextDocumentFragment(*PQTEXTDOCUMENTFRAGMENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_ISEMPTY)
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT)
       RQSTRING(obj->toPlainText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
       RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
     RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromPlainText(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
     // static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)
     RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromHtml(PQSTRING(1), PQTEXTDOCUMENT(2)));
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 

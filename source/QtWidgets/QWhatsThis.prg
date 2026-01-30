@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QWHATSTHIS_CREATEACTION)
     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QWHATSTHIS_ENTERWHATSTHISMODE)
     QWhatsThis::enterWhatsThisMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QWHATSTHIS_HIDETEXT)
     QWhatsThis::hideText();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QWHATSTHIS_INWHATSTHISMODE)
     RBOOL(QWhatsThis::inWhatsThisMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
     QWhatsThis::leaveWhatsThisMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QWHATSTHIS_SHOWTEXT)
     QWhatsThis::showText(*PQPOINT(1), PQSTRING(2), OPQWIDGET(3, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 

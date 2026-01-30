@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
     auto obj = new QBitmap(PQSTRING(1), OPCONSTCHAR(2, nullptr));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QBITMAP_CLEAR)
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
       RQBITMAP(obj->transformed(*PQTRANSFORM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
     RQBITMAP(QBitmap::fromData(*PQSIZE(1), PCONSTUCHAR(2), HB_ISNIL(3) ? QImage::Format_MonoLSB : PQIMAGE_FORMAT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
     RQBITMAP(QBitmap::fromImage(*PQIMAGE(1), HB_ISNIL(2) ? Qt::AutoColor : PQT_IMAGECONVERSIONFLAGS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QBITMAP_TOVARIANT)
     variant->setValue<QBitmap>(*bitmap);
     Qt5xHb::createReturnClass(variant, "QVARIANT", true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QBITMAP_FROMVARIANT)
     auto bitmap = new QBitmap(variant->value<QBitmap>());
     Qt5xHb::createReturnClass(bitmap, "QBITMAP", true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 

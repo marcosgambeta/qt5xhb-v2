@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_NEW)
     auto obj = new QAxScriptManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ADDOBJECT)
 
     RETURN_SELF();
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_CALL)
       RQVARIANT(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_FUNCTIONS)
       RQSTRINGLIST(obj->functions(HB_ISNIL(1) ? QAxScript::FunctionNames : PQAXSCRIPT_FUNCTIONFLAGS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_LOAD)
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPT)
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTNAMES)
       RQSTRINGLIST(obj->scriptNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_REGISTERENGINE)
     RBOOL(QAxScriptManager::registerEngine(PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTFILEFILTER)
     RQSTRING(QAxScriptManager::scriptFileFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ONERROR)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
                            HB_ISNIL(4) ? QDBusConnection::sessionBus() : *PQDBUSCONNECTION(4), OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_METAOBJECT)
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_QT_METACAST)
       hb_retptr(static_cast<void *>(obj->qt_metacast(PCONSTCHAR(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

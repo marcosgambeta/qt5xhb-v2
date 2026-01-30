@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_NEW)
     auto obj = new QAccessibleTextSelectionEvent(PQOBJECT(1), PINT(2), PINT(3));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION)
       obj->setSelection(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SELECTIONSTART)
       RINT(obj->selectionStart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SELECTIONEND)
       RINT(obj->selectionEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

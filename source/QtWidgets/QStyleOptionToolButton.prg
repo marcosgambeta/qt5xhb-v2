@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_NEW)
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_FEATURES)
     if (ISNUMPAR(0)) {
       RENUM(obj->features);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETFEATURES)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->features = PQSTYLEOPTIONTOOLBUTTON_TOOLBUTTONFEATURES(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_ICON)
     if (ISNUMPAR(0)) {
       RQICON(obj->icon);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETICON)
     if (ISNUMPAR(1) && ISQICON(1)) {
       obj->icon = *PQICON(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_ICONSIZE)
     if (ISNUMPAR(0)) {
       RQSIZE(obj->iconSize);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETICONSIZE)
     if (ISNUMPAR(1) && ISQSIZE(1)) {
       obj->iconSize = *PQSIZE(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_TEXT)
     if (ISNUMPAR(0)) {
       RQSTRING(obj->text);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETTEXT)
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       obj->text = PQSTRING(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_ARROWTYPE)
     if (ISNUMPAR(0)) {
       RENUM(obj->arrowType);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETARROWTYPE)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->arrowType = PQT_ARROWTYPE(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_TOOLBUTTONSTYLE)
     if (ISNUMPAR(0)) {
       RENUM(obj->toolButtonStyle);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETTOOLBUTTONSTYLE)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->toolButtonStyle = PQT_TOOLBUTTONSTYLE(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_POS)
     if (ISNUMPAR(0)) {
       RQPOINT(obj->pos);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETPOS)
     if (ISNUMPAR(1) && ISQPOINT(1)) {
       obj->pos = *PQPOINT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_FONT)
     if (ISNUMPAR(0)) {
       RQFONT(obj->font);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETFONT)
     if (ISNUMPAR(1) && ISQFONT(1)) {
       obj->font = *PQFONT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

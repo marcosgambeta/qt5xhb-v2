@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_NEW)
     auto obj = new QAccessibleValueChangeEvent(PQOBJECT(1), *PQVARIANT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_SETVALUE)
       obj->setValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_VALUE)
       RQVARIANT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_NEW)
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_FEATURES)
     if (ISNUMPAR(0)) {
       RENUM(obj->features);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETFEATURES)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->features = PQSTYLEOPTIONBUTTON_BUTTONFEATURES(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_TEXT)
     if (ISNUMPAR(0)) {
       RQSTRING(obj->text);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETTEXT)
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       obj->text = PQSTRING(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_ICON)
     if (ISNUMPAR(0)) {
       RQICON(obj->icon);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICON)
     if (ISNUMPAR(1) && ISQICON(1)) {
       obj->icon = *PQICON(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_ICONSIZE)
     if (ISNUMPAR(0)) {
       RQSIZE(obj->iconSize);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICONSIZE)
     if (ISNUMPAR(1) && ISQSIZE(1)) {
       obj->iconSize = *PQSIZE(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QTEXTENCODER_NEW)
     auto obj = new QTextEncoder(PQTEXTCODEC(1), PQTEXTCODEC_CONVERSIONFLAGS(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
       RQBYTEARRAY(obj->fromUnicode(PQCHAR(1), PINT(2)));
     }
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QTEXTENCODER_HASFAILURE)
       RBOOL(obj->hasFailure());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

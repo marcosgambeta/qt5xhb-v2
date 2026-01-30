@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_NEW)
     auto obj = new QSqlRelationalDelegate(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETMODELDATA)
       obj->setModelData(PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

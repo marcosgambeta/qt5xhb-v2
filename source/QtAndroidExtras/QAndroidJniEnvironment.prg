@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_NEW)
     auto obj = new QAndroidJniEnvironment();
     Qt5xHb::returnNewObject(obj, true);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_JAVAVM)
     hb_retptr(static_cast<JavaVM *>(QAndroidJniEnvironment::javaVM()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 #endif
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_FINDCLASS)
       hb_retptr(static_cast<jclass>(obj->findClass(PCONSTCHAR(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }

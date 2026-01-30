@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_NEW)
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TEXT)
     if (ISNUMPAR(0)) {
       RQSTRING(obj->text);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTEXT)
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       obj->text = PQSTRING(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_ICON)
     if (ISNUMPAR(0)) {
       RQICON(obj->icon);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETICON)
     if (ISNUMPAR(1) && ISQICON(1)) {
       obj->icon = *PQICON(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TITLEBARSTATE)
     if (ISNUMPAR(0)) {
       RINT(obj->titleBarState);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->titleBarState = PINT(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TITLEBARFLAGS)
     if (ISNUMPAR(0)) {
       RENUM(obj->titleBarFlags);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->titleBarFlags = PQT_WINDOWFLAGS(1);
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
   }
 

@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWCOMPLEXCONTROL)
       obj->drawComplexControl(PQSTYLE_COMPLEXCONTROL(1), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3), OPQWIDGET(4, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWCONTROL)
       obj->drawControl(PQSTYLE_CONTROLELEMENT(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMPIXMAP)
       obj->drawItemPixmap(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPIXMAP(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMTEXT)
                         HB_ISNIL(7) ? QPalette::NoRole : PQPALETTE_COLORROLE(7));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWPRIMITIVE)
       obj->drawPrimitive(PQSTYLE_PRIMITIVEELEMENT(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QSTYLE_GENERATEDICONPIXMAP)
       RQPIXMAP(obj->generatedIconPixmap(PQICON_MODE(1), *PQPIXMAP(2), PQSTYLEOPTION(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QSTYLE_HITTESTCOMPLEXCONTROL)
                                        OPQWIDGET(4, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMPIXMAPRECT)
       RQRECT(obj->itemPixmapRect(*PQRECT(1), PINT(2), *PQPIXMAP(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMTEXTRECT)
       RQRECT(obj->itemTextRect(*PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QSTYLE_LAYOUTSPACING)
                               HB_ISNIL(4) ? nullptr : PQSTYLEOPTION(4), OPQWIDGET(5, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QSTYLE_PIXELMETRIC)
       RINT(obj->pixelMetric(PQSTYLE_PIXELMETRIC(1), HB_ISNIL(2) ? nullptr : PQSTYLEOPTION(2), OPQWIDGET(3, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QSTYLE_POLISH)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QSTYLE_PROXY)
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QSTYLE_SIZEFROMCONTENTS)
       RQSIZE(obj->sizeFromContents(PQSTYLE_CONTENTSTYPE(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDICON)
                                OPQWIDGET(3, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDPALETTE)
       RQPALETTE(obj->standardPalette());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QSTYLE_STYLEHINT)
                           HB_ISNIL(4) ? nullptr : PQSTYLEHINTRETURN(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QSTYLE_SUBCONTROLRECT)
                                  OPQWIDGET(4, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC(QSTYLE_SUBELEMENTRECT)
       RQRECT(obj->subElementRect(PQSTYLE_SUBELEMENT(1), PQSTYLEOPTION(2), OPQWIDGET(3, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QSTYLE_UNPOLISH)
     RETURN_SELF();
 
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QSTYLE_ALIGNEDRECT)
     RQRECT(QStyle::alignedRect(PQT_LAYOUTDIRECTION(1), PQT_ALIGNMENT(2), *PQSIZE(3), *PQRECT(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QSTYLE_SLIDERPOSITIONFROMVALUE)
     RINT(QStyle::sliderPositionFromValue(PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QSTYLE_SLIDERVALUEFROMPOSITION)
     RINT(QStyle::sliderValueFromPosition(PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -560,7 +560,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALALIGNMENT)
     RENUM(QStyle::visualAlignment(PQT_LAYOUTDIRECTION(1), PQT_ALIGNMENT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -574,7 +574,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALPOS)
     RQPOINT(QStyle::visualPos(PQT_LAYOUTDIRECTION(1), *PQRECT(2), *PQPOINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALRECT)
     RQRECT(QStyle::visualRect(PQT_LAYOUTDIRECTION(1), *PQRECT(2), *PQRECT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 #endif
 }

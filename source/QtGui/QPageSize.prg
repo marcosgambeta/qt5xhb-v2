@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QPAGESIZE_SWAP)
       obj->swap(*PQPAGESIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QPAGESIZE_ISEQUIVALENTTO)
       RBOOL(obj->isEquivalentTo(*PQPAGESIZE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QPAGESIZE_ISVALID)
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QPAGESIZE_KEY)
     RQSTRING(QPageSize::key(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QPAGESIZE_NAME)
     RQSTRING(QPageSize::name(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
     RENUM(QPageSize::id(PINT(1)));
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QPAGESIZE_WINDOWSID)
     RINT(QPageSize::windowsId(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONSIZE)
     RQSIZEF(QPageSize::definitionSize(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONUNITS)
     RENUM(QPageSize::definitionUnits(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZE)
     RQSIZEF(QPageSize::size(PQPAGESIZE_PAGESIZEID(1), PQPAGESIZE_UNIT(2)));
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPOINTS)
     RQSIZE(QPageSize::sizePoints(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPIXELS)
     RQSIZE(QPageSize::sizePixels(PQPAGESIZE_PAGESIZEID(1), PINT(2)));
 #endif
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    THROW_ERROR_3012();
   }
 }
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QPAGESIZE_RECT)
       RQRECTF(obj->rect(PQPAGESIZE_UNIT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QPAGESIZE_RECTPOINTS)
       RQRECT(obj->rectPoints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QPAGESIZE_RECTPIXELS)
       RQRECT(obj->rectPixels(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_3012();
     }
 #endif
   }
