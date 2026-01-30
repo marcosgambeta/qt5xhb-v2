@@ -6,9 +6,7 @@
 
 #include "HAbstractTableModelV2.hpp"
 
-/*
-  método construtor
-*/
+// método construtor
 HAbstractTableModelV2::HAbstractTableModelV2(QObject *parent) : QAbstractTableModel(parent)
 {
   m_rowCountBlock = nullptr;

@@ -4,8 +4,8 @@
 // Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HABSTRACTTABLEMODELV2_H
-#define HABSTRACTTABLEMODELV2_H
+#ifndef HABSTRACTTABLEMODELV2_HPP
+#define HABSTRACTTABLEMODELV2_HPP
 
 #include <QtCore/QAbstractTableModel>
 
@@ -46,4 +46,4 @@ public:
   void reloadData();
 };
 
-#endif // HABSTRACTTABLEMODELV2_H
+#endif // HABSTRACTTABLEMODELV2_HPP

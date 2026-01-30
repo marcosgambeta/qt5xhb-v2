@@ -40,7 +40,9 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-    // HEventFilter(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<HEventFilter *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// HEventFilter(QObject *parent = nullptr)
 HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -54,17 +56,15 @@ HB_FUNC_STATIC(HEVENTFILTER_NEW)
 // ~HEventFilter()
 HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 {
-  auto obj = qobject_cast<HEventFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void setEventFilterCB (PHB_ITEM block)
 HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 {
-  auto obj = qobject_cast<HEventFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

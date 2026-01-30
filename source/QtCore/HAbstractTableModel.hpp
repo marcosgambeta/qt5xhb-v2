@@ -4,8 +4,8 @@
 // Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HABSTRACTTABLEMODEL_H
-#define HABSTRACTTABLEMODEL_H
+#ifndef HABSTRACTTABLEMODEL_HPP
+#define HABSTRACTTABLEMODEL_HPP
 
 #include <QtCore/QAbstractTableModel>
 #include <QtCore/QDate>
@@ -116,9 +116,9 @@ public:
   int rowCount(const QModelIndex &parent = QModelIndex()) const;
   int columnCount(const QModelIndex &parent = QModelIndex()) const;
   void reloadData();
-  // QModelIndex createIndex ( int row, int column );
+  // QModelIndex createIndex(int row, int column);
   Qt::ItemFlags flags(const QModelIndex &index) const;
   bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
 };
 
-#endif // HABSTRACTTABLEMODEL_H
+#endif // HABSTRACTTABLEMODEL_HPP

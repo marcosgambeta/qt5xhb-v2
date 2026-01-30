@@ -4,8 +4,8 @@
 // Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HABSTRACTLISTMODEL_H
-#define HABSTRACTLISTMODEL_H
+#ifndef HABSTRACTLISTMODEL_HPP
+#define HABSTRACTLISTMODEL_HPP
 
 #include <QtCore/QAbstractListModel>
 #include <QtCore/QDate>
@@ -29,16 +29,10 @@ public:
   virtual ~HAbstractListModel();
 
 private:
-  /*
-   linhas
-  */
-
+  // linhas
   PHB_ITEM m_rowCountCB;
 
-  /*
-   células
-  */
-
+  // células
   PHB_ITEM m_itemDisplayCB;               // Qt::DisplayRole
   PHB_ITEM m_itemDecorationCB;            // Qt::DecorationRole
   PHB_ITEM m_itemEditCB;                  // Qt::EditRole
@@ -54,10 +48,7 @@ private:
   PHB_ITEM m_itemAccessibleTextCB;        // Qt::AccessibleTextRole
   PHB_ITEM m_itemAccessibleDescriptionCB; // Qt::AccessibleDescriptionRole
 
-  /*
-   cabeçalho horizontal
-  */
-
+  // cabeçalho horizontal
   PHB_ITEM m_horizontalHeaderDisplayCB;       // Qt::DisplayRole
   PHB_ITEM m_horizontalHeaderDecorationCB;    // Qt::DecorationRole
                                               // Qt::EditRole
@@ -73,10 +64,7 @@ private:
                                               // Qt::AccessibleTextRole
                                               // Qt::AccessibleDescriptionRole
 
-  /*
-   cabeçalho vertical
-  */
-
+  // cabeçalho vertical
   PHB_ITEM m_verticalHeaderDisplayCB;       // Qt::DisplayRole
   PHB_ITEM m_verticalHeaderDecorationCB;    // Qt::DecorationRole
                                             // Qt::EditRole
@@ -96,16 +84,10 @@ private:
   PHB_ITEM m_setDataCB;
 
 public:
-  /*
-   linhas
-  */
-
+  // linhas
   void setRowCountCB(PHB_ITEM block);
 
-  /*
-   células
-  */
-
+  // células
   void setCB(int role, PHB_ITEM block);
   void setDisplayRoleCB(PHB_ITEM block);               // Qt::DisplayRole
   void setDecorationRoleCB(PHB_ITEM block);            // Qt::DecorationRole
@@ -122,10 +104,7 @@ public:
   void setAccessibleTextRoleCB(PHB_ITEM block);        // Qt::AccessibleTextRole
   void setAccessibleDescriptionRoleCB(PHB_ITEM block); // Qt::AccessibleDescriptionRole
 
-  /*
-   cabeçalho horizontal
-  */
-
+  // cabeçalho horizontal
   void setHorizontalHeaderCB(int role, PHB_ITEM block);
   void setHorizontalHeaderDisplayRoleCB(PHB_ITEM block);       // Qt::DisplayRole
   void setHorizontalHeaderDecorationRoleCB(PHB_ITEM block);    // Qt::DecorationRole
@@ -142,10 +121,7 @@ public:
                                                                // Qt::AccessibleTextRole
                                                                // Qt::AccessibleDescriptionRole
 
-  /*
-   cabeçalho vertical
-  */
-
+  // cabeçalho vertical
   void setVerticalHeaderCB(int role, PHB_ITEM block);
   void setVerticalHeaderDisplayRoleCB(PHB_ITEM block);       // Qt::DisplayRole
   void setVerticalHeaderDecorationRoleCB(PHB_ITEM block);    // Qt::DecorationRole
@@ -173,4 +149,4 @@ public:
   bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
 };
 
-#endif // HABSTRACTLISTMODEL_H
+#endif // HABSTRACTLISTMODEL_HPP

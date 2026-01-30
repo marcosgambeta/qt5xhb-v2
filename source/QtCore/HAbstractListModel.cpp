@@ -176,9 +176,7 @@ void HAbstractListModel::setRowCountCB(PHB_ITEM block)
 
 // células
 
-/*
-  define o codeblock para o conteúdo da célula, conforme o 'role'
-*/
+// define o codeblock para o conteúdo da célula, conforme o 'role'
 void HAbstractListModel::setCB(int role, PHB_ITEM block)
 {
   switch (role) {
@@ -369,9 +367,7 @@ void HAbstractListModel::setAccessibleDescriptionRoleCB(PHB_ITEM block)
 
 // cabeçalho horizontal
 
-/*
-  define o codeblock para o conteúdo do cabeçalho horizontal, conforme o 'role'
-*/
+// define o codeblock para o conteúdo do cabeçalho horizontal, conforme o 'role'
 void HAbstractListModel::setHorizontalHeaderCB(int role, PHB_ITEM block)
 {
   switch (role) {
@@ -483,9 +479,7 @@ void HAbstractListModel::setHorizontalHeaderForegroundRoleCB(PHB_ITEM block)
 
 // cabeçalho vertical
 
-/*
-  define o codeblock para o conteúdo do cabeçalho vertical, conforme o 'role'
-*/
+// define o codeblock para o conteúdo do cabeçalho vertical, conforme o 'role'
 void HAbstractListModel::setVerticalHeaderCB(int role, PHB_ITEM block)
 {
   switch (role) {
@@ -596,9 +590,7 @@ void HAbstractListModel::setVerticalHeaderForegroundRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para as flags
-*/
+// define o codeblock para as flags
 void HAbstractListModel::setFlagsCB(PHB_ITEM block)
 {
   if (m_flagsCB != nullptr) {
@@ -609,9 +601,7 @@ void HAbstractListModel::setFlagsCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para a alteração dos dados
-*/
+// define o codeblock para a alteração dos dados
 void HAbstractListModel::setSetDataCB(PHB_ITEM block)
 {
   if (m_setDataCB != nullptr) {
@@ -1276,10 +1266,8 @@ bool HAbstractListModel::setData(const QModelIndex &index, const QVariant &value
   return success;
 }
 
-/*
-  emite o sinal QAbstractItemModel::layoutChanged(), forçando
-  o recarregamento dos dados
-*/
+// emite o sinal QAbstractItemModel::layoutChanged(), forçando
+// o recarregamento dos dados
 void HAbstractListModel::reloadData()
 {
   // Notas da documentação do Qt:

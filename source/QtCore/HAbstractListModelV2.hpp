@@ -4,8 +4,8 @@
 // Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HABSTRACTLISTMODELV2_H
-#define HABSTRACTLISTMODELV2_H
+#ifndef HABSTRACTLISTMODELV2_HPP
+#define HABSTRACTLISTMODELV2_HPP
 
 #include <QtCore/QAbstractListModel>
 
@@ -43,4 +43,4 @@ public:
   void reloadData();
 };
 
-#endif // HABSTRACTLISTMODELV2_H
+#endif // HABSTRACTLISTMODELV2_HPP

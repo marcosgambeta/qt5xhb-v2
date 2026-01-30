@@ -4,8 +4,8 @@
 // Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HEVENTFILTER_H
-#define HEVENTFILTER_H
+#ifndef HEVENTFILTER_HPP
+#define HEVENTFILTER_HPP
 
 #include <QtCore/QObject>
 #include <QtCore/QEvent>
@@ -35,4 +35,4 @@ public:
   PHB_ITEM returnQObject(QObject *ptr, const char *classname);
 };
 
-#endif // HEVENTFILTER_H
+#endif // HEVENTFILTER_HPP
