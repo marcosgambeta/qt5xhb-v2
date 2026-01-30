@@ -49,6 +49,7 @@ libs=hbqtsql5
 libs=hbqtsvg5
 libs=hbqttexttospeech5
 libs=hbqtuitools5
+libs=hbqtvirtualkeyboard5
 libs=hbqtwebchannel5
 {!mingw&!mingw64}libs=hbqtwebengine5
 {!mingw&!mingw64}libs=hbqtwebenginecore5
@@ -131,6 +132,8 @@ libpaths=${QT_LIB_DIR}
 {!QTMSYS='yes'}libs=Qt5TextToSpeech
 {QTMSYS='yes'}libs=Qt5TextToSpeech.dll.
 libs=Qt5UiTools
+{!QTMSYS='yes'}libs=Qt5VirtualKeyboard
+{QTMSYS='yes'}libs=Qt5VirtualKeyboard.dll.
 {!QTMSYS='yes'}libs=Qt5WebChannel
 {QTMSYS='yes'}libs=Qt5WebChannel.dll.
 {!mingw&!mingw64}libs=Qt5WebEngine
