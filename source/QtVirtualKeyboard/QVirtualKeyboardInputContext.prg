@@ -56,8 +56,6 @@ CLASS QVirtualKeyboardInputContext INHERIT QObject
    METHOD onAnimatingChanged
    METHOD onLocaleChanged
    METHOD onSelectionControlVisibleChanged
-   METHOD onAnchorRectIntersectsClipRectChanged
-   METHOD onCursorRectIntersectsClipRectChanged
 
    DESTRUCTOR destroyObject
 
@@ -1036,82 +1034,6 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED)
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QVirtualKeyboardInputContext::selectionControlVisibleChanged, [sender, indexOfCodeBlock]() {
-              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
-
-              if (cb != nullptr) {
-                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTCONTEXT");
-                hb_vmEvalBlockV(cb, 1, pSender);
-                hb_itemRelease(pSender);
-              }
-            });
-        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-        result = true;
-      }
-    } else if (ISNUMPAR(0)) {
-      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      result = true;
-    } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-    }
-  }
-
-  hb_retl(result);
-}
-
-// void anchorRectIntersectsClipRectChanged()
-HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANGED)
-{
-  GET_PTR_FROM_SELF(sender);
-
-  auto result = false;
-
-  if (sender != nullptr) {
-    auto indexOfSignal = sender->metaObject()->indexOfSignal("anchorRectIntersectsClipRectChanged()");
-    auto indexOfCodeBlock = -1;
-
-    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
-        auto connection = QObject::connect(
-            sender, &QVirtualKeyboardInputContext::anchorRectIntersectsClipRectChanged, [sender, indexOfCodeBlock]() {
-              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
-
-              if (cb != nullptr) {
-                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTCONTEXT");
-                hb_vmEvalBlockV(cb, 1, pSender);
-                hb_itemRelease(pSender);
-              }
-            });
-        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-        result = true;
-      }
-    } else if (ISNUMPAR(0)) {
-      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      result = true;
-    } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-    }
-  }
-
-  hb_retl(result);
-}
-
-// void cursorRectIntersectsClipRectChanged()
-HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANGED)
-{
-  GET_PTR_FROM_SELF(sender);
-
-  auto result = false;
-
-  if (sender != nullptr) {
-    auto indexOfSignal = sender->metaObject()->indexOfSignal("cursorRectIntersectsClipRectChanged()");
-    auto indexOfCodeBlock = -1;
-
-    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
-        auto connection = QObject::connect(
-            sender, &QVirtualKeyboardInputContext::cursorRectIntersectsClipRectChanged, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
               if (cb != nullptr) {

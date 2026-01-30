@@ -47,7 +47,6 @@ CLASS QVirtualKeyboardInputEngine INHERIT QObject
    METHOD onInputModeChanged
    METHOD onPatternRecognitionModesChanged
    METHOD onWordCandidateListModelChanged
-   METHOD onWordCandidateListVisibleHintChanged
 
    DESTRUCTOR destroyObject
 
@@ -782,44 +781,6 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED)
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QVirtualKeyboardInputEngine::wordCandidateListModelChanged, [sender, indexOfCodeBlock]() {
-              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
-
-              if (cb != nullptr) {
-                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDINPUTENGINE");
-                hb_vmEvalBlockV(cb, 1, pSender);
-                hb_itemRelease(pSender);
-              }
-            });
-        Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
-        result = true;
-      }
-    } else if (ISNUMPAR(0)) {
-      Qt5xHb::Signals_disconnection(sender, indexOfSignal);
-      QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
-      result = true;
-    } else {
-      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-    }
-  }
-
-  hb_retl(result);
-}
-
-// void wordCandidateListVisibleHintChanged()
-HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGED)
-{
-  GET_PTR_FROM_SELF(sender);
-
-  auto result = false;
-
-  if (sender != nullptr) {
-    auto indexOfSignal = sender->metaObject()->indexOfSignal("wordCandidateListVisibleHintChanged()");
-    auto indexOfCodeBlock = -1;
-
-    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
-        auto connection = QObject::connect(
-            sender, &QVirtualKeyboardInputEngine::wordCandidateListVisibleHintChanged, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
               if (cb != nullptr) {
