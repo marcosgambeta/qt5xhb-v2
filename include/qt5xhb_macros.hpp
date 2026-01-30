@@ -216,67 +216,67 @@
 //#define QSTRINGTOSTRING(x)                                  (const char *) x.toUtf8().data()
 
 // delete qobject macro
-#define DELETE_QOBJECT(object) \
-  if (object != nullptr) { \
-    Qt5xHb::Events_disconnect_all_events(object, true); \
-    Qt5xHb::Signals_disconnect_all_signals(object, true); \
-    delete object; \
-    object = nullptr; \
-    auto ptr = hb_itemPutPtr(nullptr, nullptr); \
+#define DELETE_QOBJECT(object)                             \
+  if (object != nullptr) {                                 \
+    Qt5xHb::Events_disconnect_all_events(object, true);    \
+    Qt5xHb::Signals_disconnect_all_signals(object, true);  \
+    delete object;                                         \
+    object = nullptr;                                      \
+    auto ptr = hb_itemPutPtr(nullptr, nullptr);            \
     hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr); \
-    hb_itemRelease(ptr); \
+    hb_itemRelease(ptr);                                   \
   }
 
 // delete object macro
-#define DELETE_OBJECT(object) \
-  if (obj != nullptr) { \
-    delete obj; \
-    obj = nullptr; \
-    auto ptr = hb_itemPutPtr(nullptr, nullptr); \
+#define DELETE_OBJECT(object)                              \
+  if (obj != nullptr) {                                    \
+    delete obj;                                            \
+    obj = nullptr;                                         \
+    auto ptr = hb_itemPutPtr(nullptr, nullptr);            \
     hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr); \
-    hb_itemRelease(ptr); \
+    hb_itemRelease(ptr);                                   \
   }
 
 #define RETURN_SELF() hb_itemReturn(hb_stackSelfItem())
 
 #define PQTMSGTYPE(n) static_cast<QtMsgType>(hb_parni(n))
 
-#define NEWFROM() \
-  auto self = hb_stackSelfItem(); \
-\
-  if (ISNUMPAR(1) && HB_ISOBJECT(1)) { \
+#define NEWFROM()                                                                                             \
+  auto self = hb_stackSelfItem();                                                                             \
+                                                                                                              \
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {                                                                        \
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0))); \
-    hb_objSendMsg(self, "_POINTER", 1, ptr); \
-    hb_itemRelease(ptr); \
-    auto des = hb_itemPutL(nullptr, false); \
-    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des); \
-    hb_itemRelease(des); \
-  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) { \
-    auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER))); \
-    hb_objSendMsg(self, "_POINTER", 1, ptr); \
-    hb_itemRelease(ptr); \
-    auto des = hb_itemPutL(nullptr, false); \
-    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des); \
-    hb_itemRelease(des); \
-  } else { \
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS); \
-  } \
-\
+    hb_objSendMsg(self, "_POINTER", 1, ptr);                                                                  \
+    hb_itemRelease(ptr);                                                                                      \
+    auto des = hb_itemPutL(nullptr, false);                                                                   \
+    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);                                                         \
+    hb_itemRelease(des);                                                                                      \
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {                                                                \
+    auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));                             \
+    hb_objSendMsg(self, "_POINTER", 1, ptr);                                                                  \
+    hb_itemRelease(ptr);                                                                                      \
+    auto des = hb_itemPutL(nullptr, false);                                                                   \
+    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);                                                         \
+    hb_itemRelease(des);                                                                                      \
+  } else {                                                                                                    \
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);                            \
+  }                                                                                                           \
+                                                                                                              \
   hb_itemReturn(self);
 
 #define SELFDESTRUCTION() hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)))
 
-#define SETSELFDESTRUCTION() \
-  auto self = hb_stackSelfItem(); \
-\
-  if (ISNUMPAR(1) && HB_ISLOG(1)) { \
-    auto des = hb_itemPutL(nullptr, hb_parl(1)); \
-    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des); \
-    hb_itemRelease(des); \
-  } else { \
+#define SETSELFDESTRUCTION()                                                       \
+  auto self = hb_stackSelfItem();                                                  \
+                                                                                   \
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {                                                \
+    auto des = hb_itemPutL(nullptr, hb_parl(1));                                   \
+    hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);                              \
+    hb_itemRelease(des);                                                           \
+  } else {                                                                         \
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS); \
-  } \
-\
+  }                                                                                \
+                                                                                   \
   hb_itemReturn(self);
 
 #define THROW_ERROR_3012() hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS)
