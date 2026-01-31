@@ -70,7 +70,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 #include <QtDataVisualization/QSurface3DSeries>
 

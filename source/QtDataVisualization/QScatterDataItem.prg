@@ -71,7 +71,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem())
 
