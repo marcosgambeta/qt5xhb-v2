@@ -610,14 +610,13 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ONWARNINGS)
                 auto pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
                 auto pArg1 = hb_itemArrayNew(0);
                 if (pDynSym != nullptr) {
-                  for (auto i = 0; i < arg1.count(); i++) {
+                  for (const auto &item : arg1) {
                     hb_vmPushDynSym(pDynSym);
                     hb_vmPushNil();
                     hb_vmDo(0);
                     auto pTempObject = hb_itemNew(nullptr);
                     hb_itemCopy(pTempObject, hb_stackReturnItem());
-                    auto pTempItem = hb_itemNew(nullptr);
-                    hb_itemPutPtr(pTempItem, new QDeclarativeError(arg1[i]));
+                    auto pTempItem = hb_itemPutPtr(nullptr, new QDeclarativeError(item));
                     hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
                     hb_arrayAddForward(pArg1, pTempObject);
                     hb_itemRelease(pTempObject);
