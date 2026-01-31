@@ -937,7 +937,7 @@ HB_FUNC_STATIC(QSENSOR_SENSORTYPES)
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {
-      for (auto &item : list) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
