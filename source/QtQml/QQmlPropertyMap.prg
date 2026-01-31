@@ -61,7 +61,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-    // QQmlPropertyMap(QObject *parent = nullptr)
+// QQmlPropertyMap(QObject *parent = nullptr)
 HB_FUNC_STATIC(QQMLPROPERTYMAP_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
