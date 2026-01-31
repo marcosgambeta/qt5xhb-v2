@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLELOCALES)
       auto pDynSym = hb_dynsymFindName("QLOCALE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (auto &item : list) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLEVOICES)
       auto pDynSym = hb_dynsymFindName("QVOICE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (auto &item : list) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
