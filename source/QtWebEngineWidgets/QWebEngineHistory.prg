@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMS)
       auto pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (auto &item : list) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEMS)
       auto pDynSym = hb_dynsymFindName("QWEBENGINEHISTORYITEM");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (auto &item : list) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
