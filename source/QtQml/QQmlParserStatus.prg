@@ -58,7 +58,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QQmlParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-    HB_FUNC_STATIC(QQMLPARSERSTATUS_DELETE)
+HB_FUNC_STATIC(QQMLPARSERSTATUS_DELETE)
 {
   GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
