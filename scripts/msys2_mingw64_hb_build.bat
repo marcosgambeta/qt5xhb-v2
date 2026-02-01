@@ -21,8 +21,9 @@ rem pacman -S mingw-w64-x86_64-qt5
 
 rem Instructions: 
 rem This file is an example/model. Make a copy and adjust the paths.
-rem Make a folder and copy this script to the folder.
-rem Adjust the paths if necessary.
+rem Make a folder (see note below) and copy this script to the folder.
+rem Note: Try to use a folder with a short path name. Example: "C:\hb34qt5".
+rem If necessary, adjust the paths in the script.
 rem Execute the script and wait.
 rem Check if the all libraries was created (40 files):
 rem qt5xhb-v2\lib\win\mingw64\libhbqaxcontainer5.a
