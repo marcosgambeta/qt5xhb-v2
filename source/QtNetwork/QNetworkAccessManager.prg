@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QHSTSPOLICY", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QHSTSPOLICY");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONSSLERRORS)
                                      hb_itemRelease(pTempItem);
                                    }
                                  } else {
-                                   hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
+                                   THROW_ERROR_1001("QSSLERROR");
                                  }
                                  hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
                                  hb_itemRelease(pSender);

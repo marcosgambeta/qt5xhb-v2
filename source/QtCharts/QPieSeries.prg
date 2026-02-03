@@ -577,7 +577,7 @@ HB_FUNC_STATIC(QPIESERIES_SLICES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QPIESLICE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QPIESERIES_ONADDED)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QPIESLICE");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC(QPIESERIES_ONREMOVED)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QPIESLICE");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);

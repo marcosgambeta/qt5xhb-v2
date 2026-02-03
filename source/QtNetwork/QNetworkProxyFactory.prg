@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QNETWORKPROXY", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QNETWORKPROXY");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_PROXYFORQUERY)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QNETWORKPROXY", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QNETWORKPROXY");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QNETWORKPROXY", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QNETWORKPROXY");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPRINTERINFO", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QPRINTERINFO");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAGESIZES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPAGESIZE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QPAGESIZE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

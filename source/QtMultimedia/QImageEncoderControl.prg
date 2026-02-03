@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSIZE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QSIZE");
       }
       hb_itemReturnRelease(pArray);
       hb_storl(par2, 2);

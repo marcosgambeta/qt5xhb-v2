@@ -227,7 +227,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASECOLORS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QCOLOR", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QCOLOR");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -633,7 +633,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASEGRADIENTS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QLINEARGRADIENT", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QLINEARGRADIENT");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBASECOLORSCHANGED)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QCOLOR", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QCOLOR");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);
@@ -1365,7 +1365,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBASEGRADIENTSCHANGED)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QLINEARGRADIENT", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QLINEARGRADIENT");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);

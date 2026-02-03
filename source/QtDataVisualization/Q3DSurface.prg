@@ -365,7 +365,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SERIESLIST)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSURFACE3DSERIES", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QSURFACE3DSERIES");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QVALUE3DAXIS", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QVALUE3DAXIS");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

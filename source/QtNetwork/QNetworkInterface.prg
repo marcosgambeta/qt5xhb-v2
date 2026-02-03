@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ADDRESSENTRIES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QNETWORKADDRESSENTRY", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QNETWORKADDRESSENTRY");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLADDRESSES)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QHOSTADDRESS", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QHOSTADDRESS");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLINTERFACES)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QNETWORKINTERFACE", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QNETWORKINTERFACE");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

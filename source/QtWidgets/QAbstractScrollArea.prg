@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SCROLLBARWIDGETS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QWIDGET");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

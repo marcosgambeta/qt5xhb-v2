@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDGRAPHICSWIDGETS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGRAPHICSWIDGET", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QGRAPHICSWIDGET");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDWIDGETS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QWIDGET");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC(QACTION_SHORTCUTS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QKEYSEQUENCE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QKEYSEQUENCE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

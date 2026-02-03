@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACTIVEGESTURES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGESTURE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QGESTURE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_CANCELEDGESTURES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGESTURE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QGESTURE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGESTURE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QGESTURE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

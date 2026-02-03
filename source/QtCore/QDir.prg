@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QFILEINFO", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QFILEINFO");
       }
       hb_itemReturnRelease(pArray);
     }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QFILEINFO", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QFILEINFO");
       }
       hb_itemReturnRelease(pArray);
     }
@@ -909,7 +909,7 @@ HB_FUNC_STATIC(QDIR_DRIVES)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QFILEINFO", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QFILEINFO");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

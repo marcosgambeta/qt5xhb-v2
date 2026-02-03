@@ -617,7 +617,7 @@ HB_FUNC_STATIC(Q3DBARS_SERIESLIST)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBAR3DSERIES", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QBAR3DSERIES");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -700,7 +700,7 @@ HB_FUNC_STATIC(Q3DBARS_AXES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QABSTRACT3DAXIS", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QABSTRACT3DAXIS");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

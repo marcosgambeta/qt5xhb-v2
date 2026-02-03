@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_DATABASES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWEBDATABASE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QWEBDATABASE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_ALLORIGINS)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWEBSECURITYORIGIN", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QWEBSECURITYORIGIN");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

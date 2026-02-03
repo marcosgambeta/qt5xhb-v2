@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED)
                                      hb_itemRelease(pTempItem);
                                    }
                                  } else {
-                                   hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS);
+                                   THROW_ERROR_1001("QGEOSATELLITEINFO");
                                  }
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                                  hb_itemRelease(pSender);
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED)
                                      hb_itemRelease(pTempItem);
                                    }
                                  } else {
-                                   hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS);
+                                   THROW_ERROR_1001("QGEOSATELLITEINFO");
                                  }
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                                  hb_itemRelease(pSender);

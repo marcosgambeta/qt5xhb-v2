@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ONWARNINGS)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QDECLARATIVEERROR");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);

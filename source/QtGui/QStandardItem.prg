@@ -1558,7 +1558,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TAKEROW)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSTANDARDITEM", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QSTANDARDITEM");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1595,7 +1595,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TAKECOLUMN)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSTANDARDITEM", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QSTANDARDITEM");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

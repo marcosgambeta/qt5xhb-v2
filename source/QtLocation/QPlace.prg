@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QPLACE_CATEGORIES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPLACECATEGORY", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QPLACECATEGORY");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -822,7 +822,7 @@ HB_FUNC_STATIC(QPLACE_CONTACTDETAILS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPLACECONTACTDETAIL", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QPLACECONTACTDETAIL");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

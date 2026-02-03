@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_BOXSETS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBOXSET", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QBOXSET");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSADDED)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBOXSET", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QBOXSET");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSREMOVED)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBOXSET", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QBOXSET");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);

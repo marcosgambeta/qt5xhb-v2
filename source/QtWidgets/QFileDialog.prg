@@ -981,7 +981,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SIDEBARURLS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QURL", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QURL");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1181,7 +1181,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTEDURLS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QURL", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QURL");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1412,7 +1412,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURLS)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QURL", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QURL");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1702,7 +1702,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONURLSSELECTED)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QURL", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QURL");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);

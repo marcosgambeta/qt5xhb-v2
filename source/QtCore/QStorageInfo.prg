@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_MOUNTEDVOLUMES)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSTORAGEINFO", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QSTORAGEINFO");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

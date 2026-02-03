@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QABSTRACTANIMATION", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QABSTRACTANIMATION");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QABSTRACTSTATE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QABSTRACTSTATE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

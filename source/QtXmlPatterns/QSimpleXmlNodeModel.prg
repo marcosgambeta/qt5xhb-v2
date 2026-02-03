@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QXMLNAME", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QXMLNAME");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NODESBYIDREF)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QXMLNODEMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QXMLNODEMODELINDEX");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SUBJECTINFOATTRIBUTES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QBYTEARRAY");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISSUERINFOATTRIBUTES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QBYTEARRAY");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_EXTENSIONS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSSLCERTIFICATEEXTENSION", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QSSLCERTIFICATEEXTENSION");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,7 +591,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMPATH)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSSLCERTIFICATE", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QSSLCERTIFICATE");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDEVICE)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSSLCERTIFICATE", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QSSLCERTIFICATE");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDATA)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSSLCERTIFICATE", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QSSLCERTIFICATE");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -706,7 +706,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_VERIFY)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QSSLERROR");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

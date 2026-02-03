@@ -933,7 +933,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_INPUTHANDLERS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QABSTRACT3DINPUTHANDLER", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QABSTRACT3DINPUTHANDLER");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_THEMES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "Q3DTHEME", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("Q3DTHEME");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CUSTOMITEMS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QCUSTOM3DITEM", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QCUSTOM3DITEM");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

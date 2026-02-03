@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QWEBFRAME_CHILDFRAMES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWEBFRAME", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QWEBFRAME");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

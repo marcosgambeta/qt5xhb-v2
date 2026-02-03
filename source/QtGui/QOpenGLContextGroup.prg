@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QOPENGLCONTEXT", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QOPENGLCONTEXT");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

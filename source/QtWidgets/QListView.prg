@@ -808,7 +808,7 @@ HB_FUNC_STATIC(QLISTVIEW_ONINDEXESMOVED)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QMODELINDEX");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);

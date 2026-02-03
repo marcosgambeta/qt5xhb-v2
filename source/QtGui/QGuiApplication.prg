@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ALLWINDOWS)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWINDOW", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QWINDOW");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -583,7 +583,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSCREEN", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QSCREEN");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -758,7 +758,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELWINDOWS)
         hb_itemRelease(pObject);
       }
     } else {
-      hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWINDOW", HB_ERR_ARGS_BASEPARAMS);
+      THROW_ERROR_1001("QWINDOW");
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

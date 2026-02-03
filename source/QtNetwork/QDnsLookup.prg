@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_CANONICALNAMERECORDS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDNSDOMAINNAMERECORD", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QDNSDOMAINNAMERECORD");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_HOSTADDRESSRECORDS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDNSHOSTADDRESSRECORD", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QDNSHOSTADDRESSRECORD");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_MAILEXCHANGERECORDS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDNSMAILEXCHANGERECORD", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QDNSMAILEXCHANGERECORD");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVERRECORDS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDNSDOMAINNAMERECORD", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QDNSDOMAINNAMERECORD");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_POINTERRECORDS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDNSDOMAINNAMERECORD", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QDNSDOMAINNAMERECORD");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SERVICERECORDS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDNSSERVICERECORD", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QDNSSERVICERECORD");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_TEXTRECORDS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDNSTEXTRECORD", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QDNSTEXTRECORD");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

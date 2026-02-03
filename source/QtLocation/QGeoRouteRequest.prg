@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_WAYPOINTS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGEOCOORDINATE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QGEOCOORDINATE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_EXCLUDEAREAS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGEORECTANGLE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QGEORECTANGLE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

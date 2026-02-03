@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWEBENGINEHISTORYITEM", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QWEBENGINEHISTORYITEM");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEMS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWEBENGINEHISTORYITEM", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QWEBENGINEHISTORYITEM");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEMS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWEBENGINEHISTORYITEM", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QWEBENGINEHISTORYITEM");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

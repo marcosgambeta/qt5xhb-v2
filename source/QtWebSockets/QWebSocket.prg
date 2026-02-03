@@ -1460,7 +1460,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONSSLERRORS)
                     hb_itemRelease(pTempItem);
                   }
                 } else {
-                  hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
+                  THROW_ERROR_1001("QSSLERROR");
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                 hb_itemRelease(pSender);

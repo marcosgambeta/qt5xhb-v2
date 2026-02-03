@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_PLACES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPLACE", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QPLACE");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

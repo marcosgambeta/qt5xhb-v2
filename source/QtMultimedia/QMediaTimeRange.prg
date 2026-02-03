@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_INTERVALS)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMEDIATIMEINTERVAL", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QMEDIATIMEINTERVAL");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

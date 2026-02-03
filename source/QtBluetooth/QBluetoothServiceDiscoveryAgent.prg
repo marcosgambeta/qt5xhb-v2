@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBLUETOOTHSERVICEINFO", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QBLUETOOTHSERVICEINFO");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_UUIDFILTER)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBLUETOOTHUUID", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QBLUETOOTHUUID");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

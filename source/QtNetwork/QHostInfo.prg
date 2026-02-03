@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QHOSTINFO_ADDRESSES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QHOSTADDRESS", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QHOSTADDRESS");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

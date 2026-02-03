@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QOBJECT_CHILDREN)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QOBJECT");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -434,7 +434,7 @@ HB_FUNC_STATIC(QOBJECT_DYNAMICPROPERTYNAMES)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QBYTEARRAY");
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QOBJECT");
       }
       hb_itemReturnRelease(pArray);
     }
@@ -556,7 +556,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QOBJECT");
       }
       hb_itemReturnRelease(pArray);
     }
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
           hb_itemRelease(pObject);
         }
       } else {
-        hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
+        THROW_ERROR_1001("QOBJECT");
       }
       hb_itemReturnRelease(pArray);
     }
