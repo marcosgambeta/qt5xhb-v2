@@ -215,6 +215,8 @@
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
 //#define QSTRINGTOSTRING(x)                                  (const char *) x.toUtf8().data()
 
+#define ISBOOL(n)                                           HB_ISLOG(n)
+
 // delete qobject macro
 #define DELETE_QOBJECT(object)                             \
   if (object != nullptr) {                                 \
