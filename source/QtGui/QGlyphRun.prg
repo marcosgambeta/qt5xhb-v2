@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETOVERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setOverline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETSTRIKEOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setStrikeOut(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETUNDERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setUnderline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->closable = PBOOL(1);
     } else {
       THROW_ERROR_3012();
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETMOVABLE)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->movable = PBOOL(1);
     } else {
       THROW_ERROR_3012();
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->floatable = PBOOL(1);
     } else {
       THROW_ERROR_3012();
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETVERTICALTITLEBAR)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->verticalTitleBar = PBOOL(1);
     } else {
       THROW_ERROR_3012();

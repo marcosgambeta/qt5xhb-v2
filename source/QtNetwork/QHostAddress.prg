@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
     if (obj != nullptr) {
       RQUINT32(obj->toIPv4Address());
     }
-  } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+  } else if (ISNUMPAR(1) && ISBOOL(1)) {
     // quint32 toIPv4Address(bool *ok) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     GET_PTR_FROM_SELF(obj);

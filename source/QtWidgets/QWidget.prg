@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QWIDGET_SETACCEPTDROPS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAcceptDrops(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -838,7 +838,7 @@ HB_FUNC_STATIC(QWIDGET_SETAUTOFILLBACKGROUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAutoFillBackground(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC(QWIDGET_SETMOUSETRACKING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setMouseTracking(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2006,7 +2006,7 @@ HB_FUNC_STATIC(QWIDGET_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2080,7 +2080,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWMODIFIED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setWindowModified(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -3076,7 +3076,7 @@ HB_FUNC_STATIC(QWIDGET_SETEDITFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setEditFocus(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -4016,7 +4016,7 @@ HB_FUNC_STATIC(QWIDGET_SETUPDATESENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setUpdatesEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -4584,7 +4584,7 @@ HB_FUNC_STATIC(QWIDGET_SETDISABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDisabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -4622,7 +4622,7 @@ HB_FUNC_STATIC(QWIDGET_SETENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -4642,7 +4642,7 @@ HB_FUNC_STATIC(QWIDGET_SETHIDDEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setHidden(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

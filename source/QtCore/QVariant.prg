@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     } else {
       HB_FUNC_EXEC(QVARIANT_NEW7);
     }
-  } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+  } else if (ISNUMPAR(1) && ISBOOL(1)) {
     // QVariant(bool b)
     auto obj = new QVariant(PBOOL(1));
     Qt5xHb::returnNewObject(obj, true);

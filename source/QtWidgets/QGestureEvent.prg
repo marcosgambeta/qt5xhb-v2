@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_MAPTOGRAPHICSSCENE)
 
 HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
 {
-  if (ISNUMPAR(1) && HB_ISLOG(1)) {
+  if (ISNUMPAR(1) && ISBOOL(1)) {
     // void setAccepted(bool accepted)
     GET_PTR_FROM_SELF(obj);
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
 
     RETURN_SELF();
 
-  } else if (ISNUMPAR(2) && ISQGESTURE(1) && HB_ISLOG(2)) {
+  } else if (ISNUMPAR(2) && ISQGESTURE(1) && ISBOOL(2)) {
     // void setAccepted(QGesture *gesture, bool value)
     GET_PTR_FROM_SELF(obj);
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
 
     RETURN_SELF();
 
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
     // void setAccepted(Qt::GestureType gestureType, bool value)
     GET_PTR_FROM_SELF(obj);
 

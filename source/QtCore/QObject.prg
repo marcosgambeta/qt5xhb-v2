@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QOBJECT_BLOCKSIGNALS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       RBOOL(obj->blockSignals(PBOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -963,7 +963,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
     if (ISNUMPAR(0)) {
       Qt5xHb::Events_disconnect_all_events(obj, false);
       Qt5xHb::Signals_disconnect_all_signals(obj, false);
-    } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    } else if (ISNUMPAR(1) && ISBOOL(1)) {
       Qt5xHb::Events_disconnect_all_events(obj, PBOOL(1));
       Qt5xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
     } else {
@@ -981,7 +981,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
       Qt5xHb::Events_disconnect_all_events(obj, false);
-    } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    } else if (ISNUMPAR(1) && ISBOOL(1)) {
       Qt5xHb::Events_disconnect_all_events(obj, PBOOL(1));
     } else {
       THROW_ERROR_3012();
@@ -998,7 +998,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnect_all_signals(obj, false);
-    } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    } else if (ISNUMPAR(1) && ISBOOL(1)) {
       Qt5xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
     } else {
       THROW_ERROR_3012();

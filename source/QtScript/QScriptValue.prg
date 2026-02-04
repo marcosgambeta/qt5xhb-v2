@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QSCRIPTVALUE_NEW5);
-  } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+  } else if (ISNUMPAR(1) && ISBOOL(1)) {
     // QScriptValue(bool value)
     auto obj = new QScriptValue(PBOOL(1));
     Qt5xHb::returnNewObject(obj, true);

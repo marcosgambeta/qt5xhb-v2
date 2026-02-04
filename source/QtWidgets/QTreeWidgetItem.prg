@@ -749,7 +749,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETDISABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDisabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -769,7 +769,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETEXPANDED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setExpanded(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -789,7 +789,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFIRSTCOLUMNSPANNED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFirstColumnSpanned(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -869,7 +869,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETHIDDEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setHidden(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -909,7 +909,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSELECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSelected(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

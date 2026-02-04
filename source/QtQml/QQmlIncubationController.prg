@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEWHILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISBOOL(1) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       obj->incubateWhile(&par1, OPINT(2, 0));

@@ -149,7 +149,7 @@ HB_FUNC_STATIC(Q3DBARS_SETMULTISERIESUNIFORM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setMultiSeriesUniform(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARSPACINGRELATIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setBarSpacingRelative(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

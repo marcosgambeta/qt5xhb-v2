@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAccum(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAlpha(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDepth(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -626,7 +626,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDirectRendering(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -646,7 +646,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDoubleBuffer(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -706,7 +706,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setOverlay(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -786,7 +786,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setRgba(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -806,7 +806,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSampleBuffers(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setStencil(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -886,7 +886,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setStereo(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

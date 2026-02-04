@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QBITARRAY_COUNT)
     if (obj != nullptr) {
       RINT(obj->count());
     }
-  } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+  } else if (ISNUMPAR(1) && ISBOOL(1)) {
     // int count(bool on) const
     GET_PTR_FROM_SELF(obj);
 
@@ -177,14 +177,14 @@ HB_FUNC_STATIC(QBITARRAY_COUNT)
 
 HB_FUNC_STATIC(QBITARRAY_FILL)
 {
-  if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISBOOL(1) && ISNUMORNIL(2)) {
     // bool fill(bool value, int size = -1)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->fill(PBOOL(1), OPINT(2, -1)));
     }
-  } else if (ISNUMPAR(3) && HB_ISLOG(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && ISBOOL(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void fill(bool value, int begin, int end)
     GET_PTR_FROM_SELF(obj);
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
     // void setBit(int i, bool value)
     GET_PTR_FROM_SELF(obj);
 

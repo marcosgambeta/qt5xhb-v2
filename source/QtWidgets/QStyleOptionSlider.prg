@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETUPSIDEDOWN)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->upsideDown = PBOOL(1);
     } else {
       THROW_ERROR_3012();
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETDIALWRAPPING)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->dialWrapping = PBOOL(1);
     } else {
       THROW_ERROR_3012();

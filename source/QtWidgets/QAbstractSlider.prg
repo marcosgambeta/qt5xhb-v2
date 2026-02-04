@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDAPPEARANCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setInvertedAppearance(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDCONTROLS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setInvertedControls(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERDOWN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSliderDown(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,7 +591,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETTRACKING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setTracking(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

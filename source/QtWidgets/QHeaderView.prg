@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETCASCADINGSECTIONRESIZES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setCascadingSectionResizes(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETHIGHLIGHTSECTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setHighlightSections(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -434,7 +434,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATORSHOWN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSortIndicatorShown(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -799,7 +799,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONHIDDEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
 #endif
       obj->setSectionHidden(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -857,7 +857,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSTRETCHLASTSECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setStretchLastSection(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1165,7 +1165,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONSMOVABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSectionsMovable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONSCLICKABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSectionsClickable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

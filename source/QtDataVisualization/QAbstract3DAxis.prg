@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETAUTOADJUSTRANGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAutoAdjustRange(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setTitleVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEFIXED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setTitleFixed(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

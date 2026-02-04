@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETBACKGROUNDVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setBackgroundVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -607,7 +607,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETCENTERONSCROLL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setCenterOnScroll(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETOVERWRITEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setOverwriteMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setReadOnly(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETTABCHANGESFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setTabChangesFocus(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETUNDOREDOENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setUndoRedoEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

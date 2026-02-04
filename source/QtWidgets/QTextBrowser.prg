@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENEXTERNALLINKS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setOpenExternalLinks(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENLINKS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setOpenLinks(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

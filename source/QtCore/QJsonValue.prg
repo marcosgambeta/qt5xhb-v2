@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QJSONVALUE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     HB_FUNC_EXEC(QJSONVALUE_NEW1);
-  } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+  } else if (ISNUMPAR(1) && ISBOOL(1)) {
     // QJsonValue(bool b)
     auto obj = new QJsonValue(PBOOL(1));
     Qt5xHb::returnNewObject(obj, true);

@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETCHECKED)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->checked = PBOOL(1);
     } else {
       THROW_ERROR_3012();
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETMENUHASCHECKABLEITEMS)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->menuHasCheckableItems = PBOOL(1);
     } else {
       THROW_ERROR_3012();

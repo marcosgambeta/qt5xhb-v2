@@ -825,7 +825,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSAMPLECOVERAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
 #endif
       obj->glSampleCoverage(PGLCLAMPF(1), PGLBOOLEAN(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

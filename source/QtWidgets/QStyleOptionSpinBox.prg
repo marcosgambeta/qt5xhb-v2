@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETFRAME)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->frame = PBOOL(1);
     } else {
       THROW_ERROR_3012();

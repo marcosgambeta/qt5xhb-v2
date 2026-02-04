@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETDOCUMENTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDocumentMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETMOVABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setMovable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
 #endif
       obj->setTabEnabled(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -814,7 +814,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETUSESSCROLLBUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setUsesScrollButtons(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -852,7 +852,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABSCLOSABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setTabsClosable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -984,7 +984,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABBARAUTOHIDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setTabBarAutoHide(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

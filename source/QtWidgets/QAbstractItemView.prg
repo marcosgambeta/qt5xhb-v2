@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAlternatingRowColors(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDragDropOverwriteMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDragEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -545,7 +545,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAutoScroll(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDropIndicatorShown(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTABKEYNAVIGATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setTabKeyNavigation(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

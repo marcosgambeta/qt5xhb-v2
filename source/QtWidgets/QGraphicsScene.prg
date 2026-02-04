@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSORTCACHEENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSortCacheEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSTICKYFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setStickyFocus(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

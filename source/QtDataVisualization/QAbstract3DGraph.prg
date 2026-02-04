@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMEASUREFPS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setMeasureFps(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETORTHOPROJECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setOrthoProjection(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETPOLAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setPolar(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -702,7 +702,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setReflection(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

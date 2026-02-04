@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QSPLITTER_SETCHILDRENCOLLAPSIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setChildrenCollapsible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QSPLITTER_SETCOLLAPSIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
 #endif
       obj->setCollapsible(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

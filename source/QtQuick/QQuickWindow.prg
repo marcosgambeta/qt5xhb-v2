@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETCLEARBEFORERENDERING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setClearBeforeRendering(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setPersistentOpenGLContext(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -479,7 +479,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETPERSISTENTSCENEGRAPH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setPersistentSceneGraph(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

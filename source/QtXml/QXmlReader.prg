@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QXMLREADER_SETFEATURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISBOOL(2)) {
 #endif
       obj->setFeature(PQSTRING(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

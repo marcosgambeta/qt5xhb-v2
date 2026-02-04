@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
 #endif
       bool par2;
       auto list = obj->supportedParameterRange(PQCAMERAEXPOSURECONTROL_EXPOSUREPARAMETER(1), &par2);

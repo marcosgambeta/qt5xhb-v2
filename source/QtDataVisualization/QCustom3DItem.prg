@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITIONABSOLUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setPositionAbsolute(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSHADOWCASTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setShadowCasting(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALINGABSOLUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setScalingAbsolute(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

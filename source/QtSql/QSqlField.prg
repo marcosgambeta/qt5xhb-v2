@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETAUTOVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAutoValue(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETGENERATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setGenerated(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setReadOnly(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIRED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setRequired(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

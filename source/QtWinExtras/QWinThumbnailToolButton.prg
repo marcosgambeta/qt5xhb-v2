@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setInteractive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDismissOnClick(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETFLAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFlat(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

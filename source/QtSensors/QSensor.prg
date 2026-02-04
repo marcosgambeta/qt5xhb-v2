@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QSENSOR_SETACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setActive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QSENSOR_SETALWAYSON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAlwaysOn(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QSENSOR_SETSKIPDUPLICATES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSkipDuplicates(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

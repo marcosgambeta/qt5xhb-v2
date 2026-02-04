@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETFLOATABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFloatable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETMOVABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setMovable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

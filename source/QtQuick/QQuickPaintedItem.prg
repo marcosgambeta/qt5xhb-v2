@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETANTIALIASING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAntialiasing(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETMIPMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setMipmap(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETOPAQUEPAINTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setOpaquePainting(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

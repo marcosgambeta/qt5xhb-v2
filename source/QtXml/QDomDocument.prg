@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_IMPORTNODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQDOMNODE(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && ISQDOMNODE(1) && ISBOOL(2)) {
 #endif
       RQDOMNODE(obj->importNode(*PQDOMNODE(1), PBOOL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_NODETYPE)
 
 HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
 {
-  if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISLOG(2) && ISCHARORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && ISBOOL(2) && ISCHARORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // bool setContent(const QByteArray &data, bool namespaceProcessing, QString *errorMsg = nullptr, int *errorLine =
     // nullptr, int *errorColumn = nullptr)
     GET_PTR_FROM_SELF(obj);
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
       hb_storni(par4, 4);
       hb_storni(par5, 5);
     }
-  } else if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISLOG(2) && ISCHARORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && ISBOOL(2) && ISCHARORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // bool setContent(const QString &text, bool namespaceProcessing, QString *errorMsg = nullptr, int *errorLine =
     // nullptr, int *errorColumn = nullptr)
     GET_PTR_FROM_SELF(obj);
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
       hb_storni(par4, 4);
       hb_storni(par5, 5);
     }
-  } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISLOG(2) && ISCHARORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && ISBOOL(2) && ISCHARORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // bool setContent(QIODevice *dev, bool namespaceProcessing, QString *errorMsg = nullptr, int *errorLine = nullptr,
     // int *errorColumn = nullptr)
     GET_PTR_FROM_SELF(obj);
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
       hb_storni(par4, 4);
       hb_storni(par5, 5);
     }
-  } else if (ISBETWEEN(2, 5) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2) && ISCHARORNIL(3) && ISNUMORNIL(4) &&
+  } else if (ISBETWEEN(2, 5) && ISQXMLINPUTSOURCE(1) && ISBOOL(2) && ISCHARORNIL(3) && ISNUMORNIL(4) &&
              ISNUMORNIL(5)) {
     // bool setContent(QXmlInputSource *source, bool namespaceProcessing, QString *errorMsg = nullptr, int *errorLine =
     // nullptr, int *errorColumn = nullptr)

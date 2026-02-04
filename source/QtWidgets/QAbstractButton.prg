@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setCheckable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setChecked(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAutoRepeat(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOEXCLUSIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAutoExclusive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -560,7 +560,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETDOWN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDown(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

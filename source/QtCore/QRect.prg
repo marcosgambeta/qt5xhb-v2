@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     if (obj != nullptr) {
       RBOOL(obj->contains(*PQPOINT(1), OPBOOL(2, false)));
     }
-  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISLOG(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISBOOL(3)) {
     // bool contains(int x, int y, bool proper) const
     GET_PTR_FROM_SELF(obj);
 

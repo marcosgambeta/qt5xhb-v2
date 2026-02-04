@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,14 +262,14 @@ HB_FUNC_STATIC(QFONTDIALOG_SETVISIBLE)
 
 HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
 {
-  if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISQWIDGETORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISBOOL(1) && ISQWIDGETORNIL(2)) {
     // static QFont getFont(bool *ok, QWidget *parent = nullptr)
 
     bool par1;
     RQFONT(QFontDialog::getFont(&par1, OPQWIDGET(2, nullptr)));
     hb_storl(par1, 1);
 
-  } else if (ISBETWEEN(2, 5) && HB_ISLOG(1) && ISQFONT(2) && ISQWIDGETORNIL(3) && ISCHARORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(2, 5) && ISBOOL(1) && ISQFONT(2) && ISQWIDGETORNIL(3) && ISCHARORNIL(4) && ISNUMORNIL(5)) {
     // static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = nullptr, const QString &title = QString(),
     // QFontDialog::FontDialogOptions options = 0)
 

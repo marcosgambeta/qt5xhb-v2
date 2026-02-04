@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTITALIC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFontItalic(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,7 +495,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTUNDERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFontUnderline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTOVERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFontOverline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTSTRIKEOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFontStrikeOut(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTFIXEDPITCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFontFixedPitch(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -837,7 +837,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTKERNING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFontKerning(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETANCHOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAnchor(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

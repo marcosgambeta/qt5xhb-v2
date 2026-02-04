@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETCLIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setClip(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETKEEPMOUSEGRAB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setKeepMouseGrab(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETSMOOTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSmooth(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QFONT_SETBOLD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setBold(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QFONT_SETFIXEDPITCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFixedPitch(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QFONT_SETITALIC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setItalic(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(QFONT_SETKERNING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setKerning(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -692,7 +692,7 @@ HB_FUNC_STATIC(QFONT_SETOVERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setOverline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -772,7 +772,7 @@ HB_FUNC_STATIC(QFONT_SETRAWMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setRawMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -832,7 +832,7 @@ HB_FUNC_STATIC(QFONT_SETSTRIKEOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setStrikeOut(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -912,7 +912,7 @@ HB_FUNC_STATIC(QFONT_SETUNDERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setUnderline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

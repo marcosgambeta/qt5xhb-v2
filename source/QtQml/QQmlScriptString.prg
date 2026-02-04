@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_BOOLEANLITERAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       bool par1;
       RBOOL(obj->booleanLiteral(&par1));
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NUMBERLITERAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       bool par1;
       RQREAL(obj->numberLiteral(&par1));

@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QTABBAR_SETDOCUMENTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDocumentMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QTABBAR_SETDRAWBASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDrawBase(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QTABBAR_SETEXPANDING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setExpanding(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QTABBAR_SETMOVABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setMovable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -605,7 +605,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
 #endif
       obj->setTabEnabled(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -725,7 +725,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABSCLOSABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setTabsClosable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -745,7 +745,7 @@ HB_FUNC_STATIC(QTABBAR_SETUSESSCROLLBUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setUsesScrollButtons(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC(QTABBAR_SETAUTOHIDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAutoHide(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC(QTABBAR_SETCHANGECURRENTONDRAG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setChangeCurrentOnDrag(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

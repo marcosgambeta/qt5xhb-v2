@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETPERSISTENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setPersistent(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

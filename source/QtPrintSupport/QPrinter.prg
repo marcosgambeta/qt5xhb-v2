@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOLLATECOPIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setCollateCopies(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QPRINTER_SETDOUBLESIDEDPRINTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDoubleSidedPrinting(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QPRINTER_SETFONTEMBEDDINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFontEmbeddingEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QPRINTER_SETFULLPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFullPage(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXTVISIBLE)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->textVisible = PBOOL(1);
     } else {
       THROW_ERROR_3012();
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETINVERTEDAPPEARANCE)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->invertedAppearance = PBOOL(1);
     } else {
       THROW_ERROR_3012();
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETBOTTOMTOTOP)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
       obj->bottomToTop = PBOOL(1);
     } else {
       THROW_ERROR_3012();

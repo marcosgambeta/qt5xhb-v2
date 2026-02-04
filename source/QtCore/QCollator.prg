@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QCOLLATOR_SETNUMERICMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setNumericMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QCOLLATOR_SETIGNOREPUNCTUATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setIgnorePunctuation(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

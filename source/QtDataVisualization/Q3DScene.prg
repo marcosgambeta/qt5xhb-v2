@@ -290,7 +290,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSECONDARYSUBVIEWONTOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSecondarySubviewOnTop(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSLICINGACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSlicingActive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

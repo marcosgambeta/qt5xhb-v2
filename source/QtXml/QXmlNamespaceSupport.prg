@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PROCESSNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISLOG(2) && HB_ISCHAR(3) && HB_ISCHAR(4)) {
+    if (ISNUMPAR(4) && HB_ISCHAR(1) && ISBOOL(2) && HB_ISCHAR(3) && HB_ISCHAR(4)) {
 #endif
       QString par3 = hb_parc(3);
       QString par4 = hb_parc(4);

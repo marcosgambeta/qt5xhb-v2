@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETPRESERVEOPACITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setPreserveOpacity(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETUSEHIGHDEFSHADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setUseHighDefShader(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETDRAWSLICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDrawSlices(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETDRAWSLICEFRAMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDrawSliceFrames(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

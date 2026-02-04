@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTOCLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAutoClose(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTORESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAutoReset(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

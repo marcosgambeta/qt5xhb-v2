@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETCOMMITPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setCommitPage(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETFINALPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setFinalPage(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

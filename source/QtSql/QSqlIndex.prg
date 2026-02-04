@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QSQLINDEX_APPEND)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && ISQSQLFIELD(1) && HB_ISLOG(2)) {
+  } else if (ISNUMPAR(2) && ISQSQLFIELD(1) && ISBOOL(2)) {
     // void append(const QSqlField &field, bool desc)
     GET_PTR_FROM_SELF(obj);
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QSQLINDEX_SETDESCENDING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
 #endif
       obj->setDescending(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

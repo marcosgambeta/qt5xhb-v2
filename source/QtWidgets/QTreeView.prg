@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETALLCOLUMNSSHOWFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAllColumnsShowFocus(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETANIMATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setAnimated(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETCOLUMNHIDDEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
 #endif
       obj->setColumnHidden(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -583,7 +583,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETEXPANDED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISBOOL(2)) {
 #endif
       obj->setExpanded(*PQMODELINDEX(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETEXPANDSONDOUBLECLICK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setExpandsOnDoubleClick(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETFIRSTCOLUMNSPANNED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQMODELINDEX(2) && HB_ISLOG(3)) {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQMODELINDEX(2) && ISBOOL(3)) {
 #endif
       obj->setFirstColumnSpanned(PINT(1), *PQMODELINDEX(2), PBOOL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETHEADERHIDDEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setHeaderHidden(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -703,7 +703,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETITEMSEXPANDABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setItemsExpandable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETROOTISDECORATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setRootIsDecorated(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -743,7 +743,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETROWHIDDEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQMODELINDEX(2) && HB_ISLOG(3)) {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQMODELINDEX(2) && ISBOOL(3)) {
 #endif
       obj->setRowHidden(PINT(1), *PQMODELINDEX(2), PBOOL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -763,7 +763,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETSORTINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSortingEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -783,7 +783,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETUNIFORMROWHEIGHTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setUniformRowHeights(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -803,7 +803,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETWORDWRAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setWordWrap(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

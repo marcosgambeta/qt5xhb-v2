@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDynamicSortFilter(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSortLocaleAware(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETRECURSIVEFILTERINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setRecursiveFilteringEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

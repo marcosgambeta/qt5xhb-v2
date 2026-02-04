@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETROWHIDDEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
 #endif
       obj->setRowHidden(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETSELECTIONRECTVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setSelectionRectVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETUNIFORMITEMSIZES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setUniformItemSizes(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETWORDWRAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setWordWrap(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETWRAPPING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setWrapping(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

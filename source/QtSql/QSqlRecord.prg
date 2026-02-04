@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QSQLRECORD_REPLACE)
 
 HB_FUNC_STATIC(QSQLRECORD_SETGENERATED)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2)) {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISBOOL(2)) {
     // void setGenerated(const QString &name, bool generated)
     GET_PTR_FROM_SELF(obj);
 
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETGENERATED)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
     // void setGenerated(int index, bool generated)
     GET_PTR_FROM_SELF(obj);
 

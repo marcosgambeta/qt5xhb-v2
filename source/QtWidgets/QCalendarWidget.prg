@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETDATEEDITENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setDateEditEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -709,7 +709,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETGRIDVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setGridVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -729,7 +729,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETNAVIGATIONBARVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setNavigationBarVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

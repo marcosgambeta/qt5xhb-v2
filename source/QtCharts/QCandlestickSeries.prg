@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setBodyOutlineVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETCAPSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    if (ISNUMPAR(1) && ISBOOL(1)) {
 #endif
       obj->setCapsVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
