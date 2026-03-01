@@ -2,16 +2,16 @@
 
 Bibliotecas de ligação para Harbour++/Harbour/xHarbour e Qt Framework 5.
 
-### Requisitos
+## Requisitos
 
 Qt Framework 5.7 ou superior  
-C++11 ou superior  
+Compilador C++ com padrão C++11 ou superior  
 
-### Passos básicos
+## Passos básicos
 
-1. Instale o Qt Framework 5 de sua escolha.
+1. Instale o Qt Framework 5 de sua escolha (versão 5.7 ou superior).
 
-2. Baixe e compile o [x]Harbour de sua escolha: Harbour++, Harbour 3.2.0dev, Harbour 3.4.0dev (fork de Viktor Szakats) ou xHarbour.
+2. Baixe e compile o Harbour de sua escolha: Harbour++, Harbour 3.2.0dev, Harbour 3.4.0dev (fork de Viktor Szakats) ou xHarbour.
 
 https://github.com/harbour/core  
 https://github.com/vszakats/hb  
@@ -20,6 +20,11 @@ https://github.com/marcosgambeta/harbourpp-v1
 
 3. Baixe e compile o projeto Qt5xHb v2. 
 
-Use a seção 'Issues' caso tenha problemas com a compilação:
+Use a seção 'Issues' caso tenha dúvidas ou problemas com a compilação:
 
 https://github.com/marcosgambeta/qt5xhb-v1/issues  
+
+## Links
+
+Versões comerciais de bibliotecas para Harbour/xHarbour e Qt Framework 5/6  
+https://magsoftinfo.com/
