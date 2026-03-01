@@ -1,7 +1,7 @@
 //
 // Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 //
-// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+// Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
 #define RUNMOC(file) run(cMocExe + " " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
@@ -26,11 +26,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source/QtWidgets/HStyledItemDelegate.hpp")
+      RUNMOC("../source/QtWidgets/HStyledItemDelegate.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source/QtWidgets/HStyledItemDelegateMoc.cpp")
+      ferase("../source/QtWidgets/HStyledItemDelegateMoc.cpp")
 
    ENDSWITCH
 
