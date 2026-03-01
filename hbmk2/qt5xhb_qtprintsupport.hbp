@@ -10,7 +10,7 @@
 
 -inc
 
--workdir=../obj
+-workdir=../obj/${hb_plat}/${hb_comp}
 
 -n
 -w3
