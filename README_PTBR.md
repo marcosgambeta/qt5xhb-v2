@@ -26,5 +26,6 @@ https://github.com/marcosgambeta/qt5xhb-v1/issues
 
 ## Links
 
-Versões comerciais de bibliotecas para Harbour/xHarbour e Qt Framework 5/6  
+Versões comerciais de bibliotecas para Harbour/xHarbour e Qt Framework 5/6, incluindo
+uma versão comercial do Qt5xHb v2 com código-fonte otimizado e módulos extras.  
 https://magsoftinfo.com/
