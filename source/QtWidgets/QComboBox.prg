@@ -107,15 +107,7 @@ CLASS QComboBox INHERIT QWidget
    METHOD onHighlighted          // = onHighlighted1
    METHOD onHighlightedC         // = onHighlighted2
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QComboBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -29,15 +29,7 @@ CLASS QUndoView INHERIT QWidget
    METHOD setGroup
    METHOD setStack
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QUndoView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

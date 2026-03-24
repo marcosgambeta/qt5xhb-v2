@@ -22,15 +22,7 @@ CLASS QHelpSearchQueryWidget INHERIT QWidget
 
    METHOD onSearch
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHelpSearchQueryWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

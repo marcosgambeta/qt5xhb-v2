@@ -107,15 +107,7 @@ CLASS QAbstractSlider INHERIT QWidget
    METHOD onSliderReleased
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractSlider
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

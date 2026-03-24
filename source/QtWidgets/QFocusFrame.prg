@@ -21,15 +21,7 @@ CLASS QFocusFrame INHERIT QWidget
    METHOD setWidget
    METHOD widget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFocusFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

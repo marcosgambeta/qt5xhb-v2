@@ -62,15 +62,7 @@ CLASS QMenu INHERIT QWidget
    METHOD onHovered
    METHOD onTriggered
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMenu
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

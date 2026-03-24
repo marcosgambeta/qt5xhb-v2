@@ -30,15 +30,7 @@ CLASS QDesktopWidget INHERIT QWidget
    METHOD onScreenCountChanged
    METHOD onWorkAreaResized
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDesktopWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

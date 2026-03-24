@@ -24,15 +24,7 @@ CLASS QWebInspector INHERIT QWidget
    METHOD event
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebInspector
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -55,15 +55,7 @@ CLASS QAbstractSpinBox INHERIT QWidget
 
    METHOD onEditingFinished
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractSpinBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

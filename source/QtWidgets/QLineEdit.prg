@@ -98,15 +98,7 @@ CLASS QLineEdit INHERIT QWidget
    METHOD onTextChanged
    METHOD onTextEdited
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLineEdit
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

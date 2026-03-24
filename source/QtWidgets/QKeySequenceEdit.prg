@@ -25,15 +25,7 @@ CLASS QKeySequenceEdit INHERIT QWidget
    METHOD onEditingFinished
    METHOD onKeySequenceChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QKeySequenceEdit
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

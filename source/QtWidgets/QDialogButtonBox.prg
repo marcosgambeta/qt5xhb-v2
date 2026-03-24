@@ -36,15 +36,7 @@ CLASS QDialogButtonBox INHERIT QWidget
    METHOD onHelpRequested
    METHOD onRejected
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDialogButtonBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

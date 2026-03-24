@@ -28,15 +28,7 @@ CLASS QDesignerPropertyEditorInterface INHERIT QWidget
 
    METHOD onPropertyChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDesignerPropertyEditorInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

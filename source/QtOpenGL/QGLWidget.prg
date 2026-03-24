@@ -47,15 +47,7 @@ CLASS QGLWidget INHERIT QWidget
    METHOD updateOverlayGL
    METHOD convertToGLFormat
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGLWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

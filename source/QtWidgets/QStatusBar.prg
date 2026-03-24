@@ -30,15 +30,7 @@ CLASS QStatusBar INHERIT QWidget
 
    METHOD onMessageChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStatusBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

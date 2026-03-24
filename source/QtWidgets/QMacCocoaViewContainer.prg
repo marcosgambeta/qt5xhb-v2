@@ -15,15 +15,7 @@
 
 CLASS QMacCocoaViewContainer INHERIT QWidget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMacCocoaViewContainer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

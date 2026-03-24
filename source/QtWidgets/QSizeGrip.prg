@@ -21,15 +21,7 @@ CLASS QSizeGrip INHERIT QWidget
    METHOD setVisible
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSizeGrip
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

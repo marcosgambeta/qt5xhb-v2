@@ -21,15 +21,7 @@ CLASS QDesignerActionEditorInterface INHERIT QWidget
    METHOD manageAction
    METHOD setFormWindow
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDesignerActionEditorInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

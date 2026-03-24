@@ -23,15 +23,7 @@ CLASS QSvgWidget INHERIT QWidget
    METHOD sizeHint
    METHOD load
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSvgWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

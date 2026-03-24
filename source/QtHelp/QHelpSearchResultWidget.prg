@@ -21,15 +21,7 @@ CLASS QHelpSearchResultWidget INHERIT QWidget
 
    METHOD onRequestShowLink
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHelpSearchResultWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

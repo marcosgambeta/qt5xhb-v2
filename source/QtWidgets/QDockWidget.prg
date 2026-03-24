@@ -38,15 +38,7 @@ CLASS QDockWidget INHERIT QWidget
    METHOD onTopLevelChanged
    METHOD onVisibilityChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDockWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

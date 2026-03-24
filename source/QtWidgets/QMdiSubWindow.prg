@@ -41,15 +41,7 @@ CLASS QMdiSubWindow INHERIT QWidget
    METHOD onAboutToActivate
    METHOD onWindowStateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMdiSubWindow
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

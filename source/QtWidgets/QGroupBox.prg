@@ -33,15 +33,7 @@ CLASS QGroupBox INHERIT QWidget
    METHOD onClicked
    METHOD onToggled
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGroupBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -109,15 +109,7 @@ CLASS QAbstractButton INHERIT QWidget
    METHOD onReleased
    METHOD onToggled
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractButton
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

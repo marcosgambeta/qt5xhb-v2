@@ -20,15 +20,7 @@ CLASS QDesignerObjectInspectorInterface INHERIT QWidget
    METHOD core
    METHOD setFormWindow
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDesignerObjectInspectorInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

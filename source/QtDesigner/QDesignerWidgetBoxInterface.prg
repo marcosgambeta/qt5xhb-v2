@@ -21,15 +21,7 @@ CLASS QDesignerWidgetBoxInterface INHERIT QWidget
    METHOD save
    METHOD setFileName
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDesignerWidgetBoxInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

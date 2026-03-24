@@ -52,15 +52,7 @@ CLASS QWebEngineView INHERIT QWidget
    METHOD onUrlChanged
    METHOD onIconUrlChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebEngineView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -79,15 +79,7 @@ CLASS QTabBar INHERIT QWidget
    METHOD onTabCloseRequested
    METHOD onTabMoved
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTabBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -22,15 +22,7 @@ CLASS QRubberBand INHERIT QWidget
    METHOD setGeometry
    METHOD shape
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRubberBand
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -53,15 +53,7 @@ CLASS QToolBar INHERIT QWidget
    METHOD onTopLevelChanged
    METHOD onVisibilityChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QToolBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

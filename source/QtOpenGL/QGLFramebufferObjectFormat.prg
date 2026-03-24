@@ -26,15 +26,7 @@ CLASS QGLFramebufferObjectFormat INHERIT QWidget
    METHOD setTextureTarget
    METHOD textureTarget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGLFramebufferObjectFormat
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

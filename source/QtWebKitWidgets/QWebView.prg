@@ -69,15 +69,7 @@ CLASS QWebView INHERIT QWidget
    METHOD onTitleChanged
    METHOD onUrlChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

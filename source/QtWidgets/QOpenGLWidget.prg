@@ -34,15 +34,7 @@ CLASS QOpenGLWidget INHERIT QWidget
    METHOD onAboutToResize
    METHOD onResized
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

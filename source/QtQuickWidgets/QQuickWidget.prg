@@ -42,15 +42,7 @@ CLASS QQuickWidget INHERIT QWidget
    METHOD onStatusChanged
    METHOD onSceneGraphError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQuickWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

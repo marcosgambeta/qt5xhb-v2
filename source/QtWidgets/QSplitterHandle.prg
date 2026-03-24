@@ -25,15 +25,7 @@ CLASS QSplitterHandle INHERIT QWidget
    METHOD splitter
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSplitterHandle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

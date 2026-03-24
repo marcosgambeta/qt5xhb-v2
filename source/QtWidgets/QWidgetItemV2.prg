@@ -23,15 +23,7 @@ CLASS QWidgetItemV2 INHERIT QWidgetItem
    METHOD maximumSize
    METHOD heightForWidth
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWidgetItemV2
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

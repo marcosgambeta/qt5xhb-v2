@@ -34,15 +34,7 @@ CLASS QFrame INHERIT QWidget
    METHOD setMidLineWidth
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

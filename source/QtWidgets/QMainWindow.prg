@@ -72,15 +72,7 @@ CLASS QMainWindow INHERIT QWidget
    METHOD onIconSizeChanged
    METHOD onToolButtonStyleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMainWindow
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

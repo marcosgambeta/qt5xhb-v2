@@ -44,15 +44,7 @@ CLASS QPrintPreviewWidget INHERIT QWidget
    METHOD onPaintRequested
    METHOD onPreviewChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPrintPreviewWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

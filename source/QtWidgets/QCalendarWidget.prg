@@ -66,15 +66,7 @@ CLASS QCalendarWidget INHERIT QWidget
    METHOD onCurrentPageChanged
    METHOD onSelectionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCalendarWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

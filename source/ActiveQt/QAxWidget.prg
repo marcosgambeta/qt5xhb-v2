@@ -40,15 +40,7 @@ CLASS QAxWidget INHERIT QWidget,QAxBase
    METHOD setPropertyWritable
    METHOD verbs
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAxWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

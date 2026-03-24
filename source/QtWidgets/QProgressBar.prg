@@ -44,15 +44,7 @@ CLASS QProgressBar INHERIT QWidget
 
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QProgressBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

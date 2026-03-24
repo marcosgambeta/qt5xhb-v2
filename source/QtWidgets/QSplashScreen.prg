@@ -27,15 +27,7 @@ CLASS QSplashScreen INHERIT QWidget
 
    METHOD onMessageChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSplashScreen
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

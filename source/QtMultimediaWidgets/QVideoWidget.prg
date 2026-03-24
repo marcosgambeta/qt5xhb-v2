@@ -40,15 +40,7 @@ CLASS QVideoWidget INHERIT QWidget,QMediaBindableInterface
    METHOD onHueChanged
    METHOD onSaturationChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVideoWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

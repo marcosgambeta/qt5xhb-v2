@@ -42,15 +42,7 @@ CLASS QDialog INHERIT QWidget
    METHOD onFinished
    METHOD onRejected
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

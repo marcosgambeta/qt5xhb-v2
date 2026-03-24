@@ -38,15 +38,7 @@ CLASS QWizardPage INHERIT QWidget
 
    METHOD onCompleteChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWizardPage
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

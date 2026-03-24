@@ -73,15 +73,7 @@ CLASS QTabWidget INHERIT QWidget
    METHOD onTabBarClicked
    METHOD onTabBarDoubleClicked
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTabWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
