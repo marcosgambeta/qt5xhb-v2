@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQVARIANT(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && HB_ISNUM(2) && ISQVARIANT(3)) {
 #endif
       obj->setChannelData(PQSTRING(1), PINT(2), *PQVARIANT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_CHANNELDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       auto list = obj->channelData(PQSTRING(1), OPINT(2, 0), OPINT(3, -1));
       auto pDynSym = hb_dynsymFindName("QVARIANT");

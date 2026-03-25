@@ -30,15 +30,7 @@ CLASS QVirtualKeyboardSelectionListModel INHERIT QAbstractListModel
    METHOD onActiveItemChanged
    METHOD onItemSelected
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVirtualKeyboardSelectionListModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
