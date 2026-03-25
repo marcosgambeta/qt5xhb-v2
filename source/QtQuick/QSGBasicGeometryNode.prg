@@ -20,15 +20,7 @@ CLASS QSGBasicGeometryNode INHERIT QSGNode
    METHOD geometry
    METHOD setGeometry
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGBasicGeometryNode
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -46,15 +46,7 @@ CLASS QQuickPaintedItem INHERIT QQuickItem
    METHOD onFillColorChanged
    METHOD onRenderTargetChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQuickPaintedItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

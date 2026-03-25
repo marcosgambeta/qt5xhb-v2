@@ -23,15 +23,7 @@ CLASS QSGClipNode INHERIT QSGBasicGeometryNode
    METHOD setClipRect
    METHOD setIsRectangular
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGClipNode
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

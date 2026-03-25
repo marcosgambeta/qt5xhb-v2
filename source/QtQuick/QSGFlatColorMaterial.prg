@@ -21,15 +21,7 @@ CLASS QSGFlatColorMaterial INHERIT QSGMaterial
    METHOD color
    METHOD setColor
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGFlatColorMaterial
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

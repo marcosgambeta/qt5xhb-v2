@@ -18,15 +18,7 @@ CLASS QSGVertexColorMaterial INHERIT QSGMaterial
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGVertexColorMaterial
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

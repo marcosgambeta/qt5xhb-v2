@@ -59,15 +59,7 @@ CLASS QQuickWindow INHERIT QWindow
    METHOD onSceneGraphInitialized
    METHOD onSceneGraphInvalidated
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQuickWindow
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

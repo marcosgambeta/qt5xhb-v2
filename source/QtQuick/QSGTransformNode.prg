@@ -18,15 +18,7 @@ CLASS QSGTransformNode INHERIT QSGNode
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGTransformNode
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

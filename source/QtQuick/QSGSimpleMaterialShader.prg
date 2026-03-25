@@ -15,15 +15,7 @@
 
 CLASS QSGSimpleMaterialShader INHERIT QSGMaterialShader
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGSimpleMaterialShader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

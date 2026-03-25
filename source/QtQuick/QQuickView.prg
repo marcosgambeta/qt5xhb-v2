@@ -34,15 +34,7 @@ CLASS QQuickView INHERIT QQuickWindow
 
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQuickView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

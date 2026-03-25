@@ -26,15 +26,7 @@ CLASS QQuickImageProvider INHERIT QQmlImageProviderBase
    METHOD requestPixmap
    METHOD requestTexture
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQuickImageProvider
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -119,7 +111,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && ISQSIZE(2) && ISQSIZE(3)) {
 #endif
       RQIMAGE(obj->requestImage(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +129,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && ISQSIZE(2) && ISQSIZE(3)) {
 #endif
       RQPIXMAP(obj->requestPixmap(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +147,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTTEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && ISQSIZE(2) && ISQSIZE(3)) {
 #endif
       auto ptr = obj->requestTexture(PQSTRING(1), PQSIZE(2), *PQSIZE(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKTEXTUREFACTORY");

@@ -26,15 +26,7 @@ CLASS QSGSimpleTextureNode INHERIT QSGGeometryNode
    METHOD setTexture
    METHOD texture
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGSimpleTextureNode
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -20,15 +20,7 @@ CLASS QSGOpacityNode INHERIT QSGNode
    METHOD opacity
    METHOD setOpacity
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGOpacityNode
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

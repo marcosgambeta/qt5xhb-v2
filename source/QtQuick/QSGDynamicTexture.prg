@@ -17,15 +17,7 @@ CLASS QSGDynamicTexture INHERIT QSGTexture
 
    METHOD updateTexture
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGDynamicTexture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

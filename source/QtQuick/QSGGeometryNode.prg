@@ -23,15 +23,7 @@ CLASS QSGGeometryNode INHERIT QSGBasicGeometryNode
    METHOD setMaterial
    METHOD setOpaqueMaterial
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGGeometryNode
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
