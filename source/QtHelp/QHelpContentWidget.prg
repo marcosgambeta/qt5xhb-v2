@@ -21,15 +21,7 @@ CLASS QHelpContentWidget INHERIT QTreeView
 
    METHOD onLinkActivated
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHelpContentWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
