@@ -15,15 +15,7 @@
 
 CLASS QDBusPendingReplyData INHERIT QDBusPendingCall
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDBusPendingReplyData
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

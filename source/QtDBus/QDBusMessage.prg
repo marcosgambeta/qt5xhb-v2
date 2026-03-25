@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
 
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // QDBusMessage createErrorReply(const QString name, const QString &msg) const
     GET_PTR_FROM_SELF(obj);
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
     if (obj != nullptr) {
       RQDBUSMESSAGE(obj->createErrorReply(*PQDBUSERROR(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
     GET_PTR_FROM_SELF(obj);
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ARGUMENTS)
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
+  if (ISNUMPAR(3) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRING(3)) {
 #endif
     RQDBUSMESSAGE(QDBusMessage::createSignal(PQSTRING(1), PQSTRING(2), PQSTRING(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEMETHODCALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4)) {
+  if (ISNUMPAR(4) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRING(3) && ISQSTRING(4)) {
 #endif
     RQDBUSMESSAGE(QDBusMessage::createMethodCall(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,13 +474,13 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEMETHODCALL)
 
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERROR)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // static QDBusMessage createError(const QString &name, const QString &msg)
     RQDBUSMESSAGE(QDBusMessage::createError(PQSTRING(1), PQSTRING(2)));
   } else if (ISNUMPAR(1) && ISQDBUSERROR(1)) {
     // static QDBusMessage createError(const QDBusError &err)
     RQDBUSMESSAGE(QDBusMessage::createError(*PQDBUSERROR(1)));
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // static QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
     RQDBUSMESSAGE(QDBusMessage::createError(PQDBUSERROR_ERRORTYPE(1), PQSTRING(2)));
   } else {

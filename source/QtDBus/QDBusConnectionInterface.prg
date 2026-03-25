@@ -20,15 +20,7 @@ CLASS QDBusConnectionInterface INHERIT QDBusAbstractInterface
    METHOD onServiceOwnerChanged
    METHOD onCallWithCallbackFailed
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDBusConnectionInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

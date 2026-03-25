@@ -21,15 +21,7 @@ CLASS QDBusInterface INHERIT QDBusAbstractInterface
    METHOD metaObject
    METHOD qt_metacast
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDBusInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -54,10 +46,10 @@ RETURN
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDBusInterface *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // QDBusInterface(const QString &service, const QString &path, const QString &interface = QString(), const
-    // QDBusConnection &connection = QDBusConnection::sessionBus(), QObject *parent = nullptr)
+            // QDBusConnection &connection = QDBusConnection::sessionBus(), QObject *parent = nullptr)
 HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 {
-  if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISQDBUSCONNECTIONORNIL(4) &&
+  if (ISBETWEEN(2, 5) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRINGORNIL(3) && ISQDBUSCONNECTIONORNIL(4) &&
       ISQOBJECTORNIL(5)) {
     auto obj =
         new QDBusInterface(PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()),
