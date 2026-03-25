@@ -23,15 +23,7 @@ CLASS QPlaceMatchReply INHERIT QPlaceReply
    METHOD places
    METHOD request
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPlaceMatchReply
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

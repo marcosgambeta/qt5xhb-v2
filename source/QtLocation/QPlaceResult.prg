@@ -25,15 +25,7 @@ CLASS QPlaceResult INHERIT QPlaceSearchResult
    METHOD isSponsored
    METHOD setSponsored
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPlaceResult
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -20,15 +20,7 @@ CLASS QPlaceSearchSuggestionReply INHERIT QPlaceReply
    METHOD suggestions
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPlaceSearchSuggestionReply
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

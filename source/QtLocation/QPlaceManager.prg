@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_GETPLACEDETAILS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       auto ptr = obj->getPlaceDetails(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEDETAILSREPLY");
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_REMOVEPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       auto ptr = obj->removePlace(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_SAVECATEGORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPLACECATEGORY(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQPLACECATEGORY(1) && ISQSTRINGORNIL(2)) {
 #endif
       auto ptr = obj->saveCategory(*PQPLACECATEGORY(1), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_REMOVECATEGORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       auto ptr = obj->removeCategory(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_PARENTCATEGORYID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->parentCategoryId(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_CHILDCATEGORYIDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+    if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
 #endif
       RQSTRINGLIST(obj->childCategoryIds(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_CATEGORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQPLACECATEGORY(obj->category(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_CHILDCATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+    if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
 #endif
       auto list = obj->childCategories(OPQSTRING(1, QString()));
       auto pDynSym = hb_dynsymFindName("QPLACECATEGORY");

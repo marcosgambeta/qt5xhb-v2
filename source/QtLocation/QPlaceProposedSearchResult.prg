@@ -21,15 +21,7 @@ CLASS QPlaceProposedSearchResult INHERIT QPlaceSearchResult
    METHOD searchRequest
    METHOD setSearchRequest
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPlaceProposedSearchResult
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -61,7 +61,7 @@ ENDCLASS
 HB_FUNC_STATIC(QGEOROUTEREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3)) {
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTRING(2) && ISQOBJECTORNIL(3)) {
     auto obj = new QGeoRouteReply(PQGEOROUTEREPLY_ERROR(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {

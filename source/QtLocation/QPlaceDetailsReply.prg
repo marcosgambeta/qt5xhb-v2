@@ -21,15 +21,7 @@ CLASS QPlaceDetailsReply INHERIT QPlaceReply
    METHOD type
    METHOD place
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPlaceDetailsReply
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

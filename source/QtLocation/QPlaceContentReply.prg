@@ -24,15 +24,7 @@ CLASS QPlaceContentReply INHERIT QPlaceReply
    METHOD previousPageRequest
    METHOD nextPageRequest
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPlaceContentReply
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
