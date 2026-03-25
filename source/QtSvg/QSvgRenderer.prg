@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
     // QSvgRenderer(QObject *parent = nullptr)
     auto obj = new QSvgRenderer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQOBJECTORNIL(2)) {
     // QSvgRenderer(const QString &filename, QObject *parent = nullptr)
     auto obj = new QSvgRenderer(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQRECTF(obj->boundsOnElement(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->elementExists(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQMATRIX(obj->matrixForElement(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QSVGRENDERER_VIEWBOXF)
 
 HB_FUNC_STATIC(QSVGRENDERER_LOAD)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool load(const QString &filename)
     GET_PTR_FROM_SELF(obj);
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && ISQRECTFORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTRING(2) && ISQRECTFORNIL(3)) {
     // void render(QPainter *painter, const QString &elementId, const QRectF &bounds = QRectF())
     GET_PTR_FROM_SELF(obj);
 

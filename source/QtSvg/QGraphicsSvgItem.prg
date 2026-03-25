@@ -30,15 +30,7 @@ CLASS QGraphicsSvgItem INHERIT QGraphicsObject
    METHOD paint
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsSvgItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -70,7 +62,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_NEW)
     // QGraphicsSvgItem(QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsSvgItem(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQGRAPHICSITEMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsSvgItem(const QString &fileName, QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsSvgItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -148,7 +140,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setElementId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
