@@ -20,15 +20,7 @@ CLASS QCameraViewfinder INHERIT QVideoWidget
    METHOD delete
    METHOD mediaObject
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraViewfinder
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -34,15 +34,7 @@ CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
 
    METHOD onNativeSizeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsVideoItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

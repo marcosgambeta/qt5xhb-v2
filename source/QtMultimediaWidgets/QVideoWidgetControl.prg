@@ -37,15 +37,7 @@ CLASS QVideoWidgetControl INHERIT QMediaControl
    METHOD onHueChanged
    METHOD onSaturationChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVideoWidgetControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
