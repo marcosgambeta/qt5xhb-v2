@@ -21,15 +21,7 @@ CLASS QBluetoothUuid INHERIT QUuid
    METHOD toUInt16
    METHOD toUInt32
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBluetoothUuid
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -87,7 +79,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
     auto obj = new QBluetoothUuid(PQUINT32(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QBluetoothUuid(const QString &uuid)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothUuid(PQSTRING(1));

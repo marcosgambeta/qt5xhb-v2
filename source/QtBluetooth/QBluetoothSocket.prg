@@ -44,15 +44,7 @@ CLASS QBluetoothSocket INHERIT QIODevice
    METHOD onError
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBluetoothSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

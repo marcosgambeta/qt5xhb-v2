@@ -94,13 +94,13 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_NEW)
     auto obj = new QBluetoothDeviceInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  } else if (ISNUMPAR(3) && ISQBLUETOOTHADDRESS(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && ISQBLUETOOTHADDRESS(1) && ISQSTRING(2) && HB_ISNUM(3)) {
     // QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothDeviceInfo(*PQBLUETOOTHADDRESS(1), PQSTRING(2), PQUINT32(3));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  } else if (ISNUMPAR(3) && ISQBLUETOOTHUUID(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && ISQBLUETOOTHUUID(1) && ISQSTRING(2) && HB_ISNUM(3)) {
     // QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     auto obj = new QBluetoothDeviceInfo(*PQBLUETOOTHUUID(1), PQSTRING(2), PQUINT32(3));
