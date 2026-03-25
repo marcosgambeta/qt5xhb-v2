@@ -19,15 +19,7 @@ CLASS QOAuthOobReplyHandler INHERIT QAbstractOAuthReplyHandler
    METHOD delete
    METHOD callback
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOAuthOobReplyHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
