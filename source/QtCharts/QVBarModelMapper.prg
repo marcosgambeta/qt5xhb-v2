@@ -38,15 +38,7 @@ CLASS QVBarModelMapper INHERIT QBarModelMapper
    METHOD onRowCountChanged
    METHOD onSeriesReplaced
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVBarModelMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -20,15 +20,7 @@ CLASS QPolarChart INHERIT QChart
    METHOD addAxis
    METHOD axisPolarOrientation
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPolarChart
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

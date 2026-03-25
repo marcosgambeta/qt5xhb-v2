@@ -74,14 +74,14 @@ using namespace QtCharts;
 
 HB_FUNC_STATIC(QBOXSET_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISQOBJECTORNIL(2)) {
+  if (ISBETWEEN(0, 2) && ISQSTRINGORNIL(1) && ISQOBJECTORNIL(2)) {
     // QBoxSet(const QString label = QString(), QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QBoxSet(OPQSTRING(1, QString()), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(5, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-             ISCHARORNIL(6) && ISQOBJECTORNIL(7)) {
+             ISQSTRINGORNIL(6) && ISQOBJECTORNIL(7)) {
     // QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label =
     // QString(), QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QBOXSET_SETLABEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setLabel(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -50,15 +50,7 @@ CLASS QBoxPlotSeries INHERIT QAbstractSeries
    METHOD onPressed
    METHOD onReleased
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBoxPlotSeries
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -588,35 +580,35 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSREMOVED)
 
     if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
-        auto connection = QObject::connect(
-            sender, &QBoxPlotSeries::boxsetsRemoved, [sender, indexOfCodeBlock](QList<QBoxSet *> arg1) {
-              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+        auto connection = QObject::connect(sender, &QBoxPlotSeries::boxsetsRemoved,
+                                           [sender, indexOfCodeBlock](QList<QBoxSet *> arg1) {
+                                             auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr) {
-                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
-                auto pDynSym = hb_dynsymFindName("QBOXSET");
-                auto pArg1 = hb_itemArrayNew(0);
-                if (pDynSym != nullptr) {
-                  for (auto item : arg1) {
-                    hb_vmPushDynSym(pDynSym);
-                    hb_vmPushNil();
-                    hb_vmDo(0);
-                    auto pTempObject = hb_itemNew(nullptr);
-                    hb_itemCopy(pTempObject, hb_stackReturnItem());
-                    auto pTempItem = hb_itemPutPtr(nullptr, item);
-                    hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
-                    hb_arrayAddForward(pArg1, pTempObject);
-                    hb_itemRelease(pTempObject);
-                    hb_itemRelease(pTempItem);
-                  }
-                } else {
-                  THROW_ERROR_1001("QBOXSET");
-                }
-                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
-                hb_itemRelease(pSender);
-                hb_itemRelease(pArg1);
-              }
-            });
+                                             if (cb != nullptr) {
+                                               auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
+                                               auto pDynSym = hb_dynsymFindName("QBOXSET");
+                                               auto pArg1 = hb_itemArrayNew(0);
+                                               if (pDynSym != nullptr) {
+                                                 for (auto item : arg1) {
+                                                   hb_vmPushDynSym(pDynSym);
+                                                   hb_vmPushNil();
+                                                   hb_vmDo(0);
+                                                   auto pTempObject = hb_itemNew(nullptr);
+                                                   hb_itemCopy(pTempObject, hb_stackReturnItem());
+                                                   auto pTempItem = hb_itemPutPtr(nullptr, item);
+                                                   hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                                                   hb_arrayAddForward(pArg1, pTempObject);
+                                                   hb_itemRelease(pTempObject);
+                                                   hb_itemRelease(pTempItem);
+                                                 }
+                                               } else {
+                                                 THROW_ERROR_1001("QBOXSET");
+                                               }
+                                               hb_vmEvalBlockV(cb, 2, pSender, pArg1);
+                                               hb_itemRelease(pSender);
+                                               hb_itemRelease(pArg1);
+                                             }
+                                           });
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

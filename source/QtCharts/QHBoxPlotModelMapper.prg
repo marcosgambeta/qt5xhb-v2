@@ -38,15 +38,7 @@ CLASS QHBoxPlotModelMapper INHERIT QBoxPlotModelMapper
    METHOD onModelReplaced
    METHOD onSeriesReplaced
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHBoxPlotModelMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

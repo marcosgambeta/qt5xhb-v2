@@ -38,15 +38,7 @@ CLASS QVBoxPlotModelMapper INHERIT QBoxPlotModelMapper
    METHOD onRowCountChanged
    METHOD onSeriesReplaced
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVBoxPlotModelMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

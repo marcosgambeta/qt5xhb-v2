@@ -40,15 +40,7 @@ CLASS QVCandlestickModelMapper INHERIT QCandlestickModelMapper
    METHOD onOpenRowChanged
    METHOD onTimestampRowChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVCandlestickModelMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

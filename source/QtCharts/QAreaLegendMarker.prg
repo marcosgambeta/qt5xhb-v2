@@ -21,15 +21,7 @@ CLASS QAreaLegendMarker INHERIT QLegendMarker
    METHOD type
    METHOD series
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAreaLegendMarker
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

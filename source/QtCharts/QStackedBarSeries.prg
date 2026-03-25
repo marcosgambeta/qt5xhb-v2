@@ -19,15 +19,7 @@ CLASS QStackedBarSeries INHERIT QAbstractBarSeries
    METHOD delete
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStackedBarSeries
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

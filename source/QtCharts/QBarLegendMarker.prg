@@ -23,15 +23,7 @@ CLASS QBarLegendMarker INHERIT QLegendMarker
    METHOD series
    METHOD barset
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBarLegendMarker
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -19,15 +19,7 @@ CLASS QHorizontalPercentBarSeries INHERIT QAbstractBarSeries
    METHOD delete
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHorizontalPercentBarSeries
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

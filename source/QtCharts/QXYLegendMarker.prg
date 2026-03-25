@@ -21,15 +21,7 @@ CLASS QXYLegendMarker INHERIT QLegendMarker
    METHOD type
    METHOD series
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QXYLegendMarker
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

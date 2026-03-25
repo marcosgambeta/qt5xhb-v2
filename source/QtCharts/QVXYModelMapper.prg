@@ -38,15 +38,7 @@ CLASS QVXYModelMapper INHERIT QXYModelMapper
    METHOD onXColumnChanged
    METHOD onYColumnChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVXYModelMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

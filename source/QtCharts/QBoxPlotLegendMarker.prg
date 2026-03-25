@@ -21,15 +21,7 @@ CLASS QBoxPlotLegendMarker INHERIT QLegendMarker
    METHOD type
    METHOD series
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBoxPlotLegendMarker
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -38,15 +38,7 @@ CLASS QHXYModelMapper INHERIT QXYModelMapper
    METHOD onXRowChanged
    METHOD onYRowChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHXYModelMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

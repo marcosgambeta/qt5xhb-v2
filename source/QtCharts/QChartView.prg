@@ -22,15 +22,7 @@ CLASS QChartView INHERIT QGraphicsView
    METHOD chart
    METHOD setChart
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QChartView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

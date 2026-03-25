@@ -19,15 +19,7 @@ CLASS QSplineSeries INHERIT QLineSeries
    METHOD delete
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSplineSeries
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

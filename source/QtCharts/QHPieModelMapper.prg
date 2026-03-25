@@ -38,15 +38,7 @@ CLASS QHPieModelMapper INHERIT QPieModelMapper
    METHOD onSeriesReplaced
    METHOD onValuesRowChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHPieModelMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

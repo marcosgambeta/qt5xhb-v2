@@ -60,15 +60,7 @@ CLASS QLegend INHERIT QGraphicsWidget
    METHOD onReverseMarkersChanged
    METHOD onShowToolTipsChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLegend
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -23,15 +23,7 @@ CLASS QPieLegendMarker INHERIT QLegendMarker
    METHOD series
    METHOD slice
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPieLegendMarker
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

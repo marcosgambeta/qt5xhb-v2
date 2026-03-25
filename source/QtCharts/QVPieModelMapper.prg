@@ -38,15 +38,7 @@ CLASS QVPieModelMapper INHERIT QPieModelMapper
    METHOD onSeriesReplaced
    METHOD onValuesColumnChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVPieModelMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

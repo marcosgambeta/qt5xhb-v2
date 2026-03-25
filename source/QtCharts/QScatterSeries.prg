@@ -37,15 +37,7 @@ CLASS QScatterSeries INHERIT QXYSeries
    METHOD onMarkerShapeChanged
    METHOD onMarkerSizeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScatterSeries
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
