@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_NEW)
     auto obj = new QTextToSpeech(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQOBJECTORNIL(2)) {
     // QTextToSpeech(const QString &engine, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QTextToSpeech(PQSTRING(1), OPQOBJECT(2, nullptr));
@@ -434,7 +434,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->say(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
