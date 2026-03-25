@@ -37,15 +37,7 @@ CLASS QMediaRecorderControl INHERIT QMediaControl
    METHOD onStatusChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaRecorderControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

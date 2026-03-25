@@ -27,15 +27,7 @@ CLASS QCameraExposureControl INHERIT QMediaControl
    METHOD onParameterRangeChanged
    METHOD onRequestedValueChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraExposureControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

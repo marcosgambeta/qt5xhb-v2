@@ -74,15 +74,7 @@ CLASS QMediaPlayer INHERIT QMediaObject
    METHOD onVideoAvailableChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaPlayer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -108,7 +100,8 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMediaPlayer *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QMediaPlayer(QObject *parent = nullptr, Flags flags = Flags())
+// QMediaPlayer(QObject *parent = nullptr, Flags flags =
+                                                            // Flags())
 HB_FUNC_STATIC(QMEDIAPLAYER_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISNUMORNIL(2)) {
@@ -760,7 +753,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_STOP)
 HB_FUNC_STATIC(QMEDIAPLAYER_HASSUPPORT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISARRAYORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISARRAYORNIL(2) && ISNUMORNIL(3)) {
 #endif
     RENUM(QMediaPlayer::hasSupport(PQSTRING(1), OPQSTRINGLIST(2, QStringList()),
                                    HB_ISNIL(3) ? QMediaPlayer::Flags() : PQMEDIAPLAYER_FLAGS(3)));

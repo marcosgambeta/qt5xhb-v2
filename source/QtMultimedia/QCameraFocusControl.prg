@@ -33,15 +33,7 @@ CLASS QCameraFocusControl INHERIT QMediaControl
    METHOD onFocusPointModeChanged
    METHOD onFocusZonesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraFocusControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

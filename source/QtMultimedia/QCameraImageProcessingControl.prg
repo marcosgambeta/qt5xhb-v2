@@ -22,15 +22,7 @@ CLASS QCameraImageProcessingControl INHERIT QMediaControl
    METHOD parameter
    METHOD setParameter
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraImageProcessingControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -34,15 +34,7 @@ CLASS QRadioDataControl INHERIT QMediaControl
    METHOD onAlternativeFrequenciesEnabledChanged
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRadioDataControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

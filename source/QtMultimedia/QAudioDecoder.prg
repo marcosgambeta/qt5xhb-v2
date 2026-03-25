@@ -47,15 +47,7 @@ CLASS QAudioDecoder INHERIT QMediaObject
    METHOD onSourceChanged
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAudioDecoder
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -123,7 +115,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setSourceFilename(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,7 +375,7 @@ HB_FUNC_STATIC(QAUDIODECODER_STOP)
 HB_FUNC_STATIC(QAUDIODECODER_HASSUPPORT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISARRAYORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISARRAYORNIL(2)) {
 #endif
     RENUM(QAudioDecoder::hasSupport(PQSTRING(1), OPQSTRINGLIST(2, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

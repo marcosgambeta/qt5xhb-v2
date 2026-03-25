@@ -44,15 +44,7 @@ CLASS QVideoWindowControl INHERIT QMediaControl
    METHOD onSaturationChanged
    METHOD onNativeSizeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVideoWindowControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -103,7 +103,8 @@ ENDCLASS
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMediaRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QMediaRecorder(QMediaObject *mediaObject, QObject *parent = nullptr)
+// QMediaRecorder(QMediaObject *mediaObject, QObject
+                                                                    // *parent = nullptr)
 HB_FUNC_STATIC(QMEDIARECORDER_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQMEDIAOBJECT(1) && ISQOBJECTORNIL(2)) {
@@ -349,7 +350,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_AUDIOCODECDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->audioCodecDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -421,7 +422,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_CONTAINERDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->containerDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -511,7 +512,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_METADATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQVARIANT(obj->metaData(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -549,7 +550,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETCONTAINERFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setContainerFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -570,7 +571,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETENCODINGSETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQAUDIOENCODERSETTINGS(1) && ISQVIDEOENCODERSETTINGSORNIL(2) && ISCHARORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQAUDIOENCODERSETTINGS(1) && ISQVIDEOENCODERSETTINGSORNIL(2) && ISQSTRINGORNIL(3)) {
 #endif
       obj->setEncodingSettings(*PQAUDIOENCODERSETTINGS(1),
                                HB_ISNIL(2) ? QVideoEncoderSettings() : *PQVIDEOENCODERSETTINGS(2),
@@ -592,7 +593,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETMETADATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQVARIANT(2)) {
 #endif
       obj->setMetaData(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -774,7 +775,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_VIDEOCODECDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->videoCodecDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -54,15 +54,7 @@ CLASS QRadioTunerControl INHERIT QMediaControl
    METHOD onStationFound
    METHOD onAntennaConnectedChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRadioTunerControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

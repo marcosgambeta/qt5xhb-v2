@@ -20,15 +20,7 @@ CLASS QMediaVideoProbeControl INHERIT QMediaControl
    METHOD onFlush
    METHOD onVideoFrameProbed
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaVideoProbeControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

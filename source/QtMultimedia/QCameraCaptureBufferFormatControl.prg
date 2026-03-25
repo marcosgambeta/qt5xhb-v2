@@ -22,15 +22,7 @@ CLASS QCameraCaptureBufferFormatControl INHERIT QMediaObject
 
    METHOD onBufferFormatChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraCaptureBufferFormatControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

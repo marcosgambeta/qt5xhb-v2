@@ -64,8 +64,6 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-// QAbstractVideoBuffer(QAbstractVideoBuffer::HandleType type) [ABSTRACT]
-
 // virtual ~QAbstractVideoBuffer()
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_DELETE)
 {

@@ -27,15 +27,7 @@ CLASS QVideoDeviceSelectorControl INHERIT QMediaControl
    METHOD onSelectedDeviceChanged1
    METHOD onSelectedDeviceChanged2
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVideoDeviceSelectorControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

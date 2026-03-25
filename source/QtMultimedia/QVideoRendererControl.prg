@@ -20,15 +20,7 @@ CLASS QVideoRendererControl INHERIT QMediaControl
    METHOD setSurface
    METHOD surface
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVideoRendererControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

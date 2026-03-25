@@ -28,15 +28,7 @@ CLASS QMetaDataWriterControl INHERIT QMediaControl
    METHOD onWritableChanged
    METHOD onMetaDataAvailableChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMetaDataWriterControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -111,7 +103,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_METADATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQVARIANT(obj->metaData(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +121,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_SETMETADATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQVARIANT(2)) {
 #endif
       obj->setMetaData(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

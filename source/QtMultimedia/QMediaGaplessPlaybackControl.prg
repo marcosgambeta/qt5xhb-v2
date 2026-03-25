@@ -27,15 +27,7 @@ CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
    METHOD onCrossfadeTimeChanged
    METHOD onNextMediaChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaGaplessPlaybackControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

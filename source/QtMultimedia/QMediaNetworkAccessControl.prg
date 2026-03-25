@@ -22,15 +22,7 @@ CLASS QMediaNetworkAccessControl INHERIT QMediaControl
 
    METHOD onConfigurationChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaNetworkAccessControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

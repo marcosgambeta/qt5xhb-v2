@@ -20,15 +20,7 @@ CLASS QMediaAvailabilityControl INHERIT QMediaControl
 
    METHOD onAvailabilityChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaAvailabilityControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

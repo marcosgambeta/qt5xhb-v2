@@ -31,15 +31,7 @@ CLASS QCameraZoomControl INHERIT QMediaControl
    METHOD onRequestedDigitalZoomChanged
    METHOD onRequestedOpticalZoomChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraZoomControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -23,15 +23,7 @@ CLASS QCameraFlashControl INHERIT QMediaControl
 
    METHOD onFlashReady
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraFlashControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

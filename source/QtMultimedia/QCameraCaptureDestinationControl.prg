@@ -22,15 +22,7 @@ CLASS QCameraCaptureDestinationControl INHERIT QMediaObject
 
    METHOD onCaptureDestinationChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraCaptureDestinationControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -19,15 +19,7 @@ CLASS QCameraInfoControl INHERIT QMediaControl
    METHOD cameraPosition
    METHOD cameraOrientation
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraInfoControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -73,7 +65,7 @@ HB_FUNC_STATIC(QCAMERAINFOCONTROL_CAMERAPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RENUM(obj->cameraPosition(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,7 +85,7 @@ HB_FUNC_STATIC(QCAMERAINFOCONTROL_CAMERAORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RINT(obj->cameraOrientation(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

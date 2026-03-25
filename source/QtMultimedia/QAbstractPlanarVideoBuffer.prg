@@ -17,15 +17,7 @@ CLASS QAbstractPlanarVideoBuffer INHERIT QAbstractVideoBuffer
 
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractPlanarVideoBuffer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -50,8 +42,6 @@ RETURN
 #endif
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QAbstractPlanarVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem())
-
-// QAbstractPlanarVideoBuffer(QAbstractVideoBuffer::HandleType type) [ABSTRACT]
 
 // virtual ~QAbstractPlanarVideoBuffer()
 HB_FUNC_STATIC(QABSTRACTPLANARVIDEOBUFFER_DELETE)

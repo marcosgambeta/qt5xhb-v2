@@ -90,11 +90,11 @@ HB_FUNC_STATIC(QMEDIARESOURCE_NEW)
     // QMediaResource()
     auto obj = new QMediaResource();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISCHARORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQSTRINGORNIL(2)) {
     // QMediaResource(const QUrl &url, const QString &mimeType = QString())
     auto obj = new QMediaResource(*PQURL(1), OPQSTRING(2, QString()));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && ISQNETWORKREQUEST(1) && ISCHARORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQNETWORKREQUEST(1) && ISQSTRINGORNIL(2)) {
     // QMediaResource(const QNetworkRequest &request, const QString &mimeType = QString())
     auto obj = new QMediaResource(*PQNETWORKREQUEST(1), OPQSTRING(2, QString()));
     Qt5xHb::returnNewObject(obj, true);
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETAUDIOCODEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setAudioCodec(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETLANGUAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setLanguage(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETVIDEOCODEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setVideoCodec(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -57,15 +57,7 @@ CLASS QMediaPlayerControl INHERIT QMediaControl
    METHOD onVideoAvailableChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaPlayerControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

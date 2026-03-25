@@ -20,15 +20,7 @@ CLASS QMediaAudioProbeControl INHERIT QMediaControl
    METHOD onAudioBufferProbed
    METHOD onFlush
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaAudioProbeControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

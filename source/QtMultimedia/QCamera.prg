@@ -61,15 +61,7 @@ CLASS QCamera INHERIT QMediaObject
    METHOD onStateChanged
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCamera
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

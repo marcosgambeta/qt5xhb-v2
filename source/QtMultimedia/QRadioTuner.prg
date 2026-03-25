@@ -58,15 +58,7 @@ CLASS QRadioTuner INHERIT QMediaObject
    METHOD onAntennaConnectedChanged
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRadioTuner
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

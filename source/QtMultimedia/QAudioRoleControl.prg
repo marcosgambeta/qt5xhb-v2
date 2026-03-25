@@ -22,15 +22,7 @@ CLASS QAudioRoleControl INHERIT QMediaControl
 
    METHOD onAudioRoleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAudioRoleControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

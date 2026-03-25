@@ -22,15 +22,7 @@ CLASS QCameraFeedbackControl INHERIT QMediaControl
    METHOD setEventFeedbackEnabled
    METHOD setEventFeedbackSound
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraFeedbackControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -143,7 +135,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       RBOOL(obj->setEventFeedbackSound(PQCAMERAFEEDBACKCONTROL_EVENTTYPE(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

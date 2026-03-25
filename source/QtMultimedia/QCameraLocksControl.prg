@@ -23,15 +23,7 @@ CLASS QCameraLocksControl INHERIT QMediaControl
 
    METHOD onLockStatusChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraLocksControl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
