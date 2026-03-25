@@ -19,15 +19,7 @@ CLASS QTouch3DInputHandler INHERIT Q3DInputHandler
    METHOD delete
    METHOD touchEvent
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTouch3DInputHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

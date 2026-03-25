@@ -98,15 +98,7 @@ CLASS QAbstract3DGraph INHERIT QWindow
    METHOD onSelectionModeChanged
    METHOD onShadowQualityChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstract3DGraph
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

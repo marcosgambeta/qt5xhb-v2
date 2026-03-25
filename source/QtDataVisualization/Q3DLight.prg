@@ -22,15 +22,7 @@ CLASS Q3DLight INHERIT Q3DObject
 
    METHOD onAutoPositionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS Q3DLight
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -31,15 +31,7 @@ CLASS Q3DInputHandler INHERIT QAbstract3DInputHandler
    METHOD onZoomAtTargetEnabledChanged
    METHOD onZoomEnabledChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS Q3DInputHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

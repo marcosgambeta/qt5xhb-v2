@@ -35,15 +35,7 @@ CLASS QScatterDataProxy INHERIT QAbstractDataProxy
    METHOD onItemsRemoved
    METHOD onSeriesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScatterDataProxy
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

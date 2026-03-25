@@ -30,15 +30,7 @@ CLASS QScatter3DSeries INHERIT QAbstract3DSeries
    METHOD onItemSizeChanged
    METHOD onSelectedItemChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScatter3DSeries
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

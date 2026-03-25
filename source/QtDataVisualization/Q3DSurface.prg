@@ -41,15 +41,7 @@ CLASS Q3DSurface INHERIT QAbstract3DGraph
    METHOD onFlipHorizontalGridChanged
    METHOD onSelectedSeriesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS Q3DSurface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

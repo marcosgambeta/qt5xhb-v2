@@ -36,15 +36,7 @@ CLASS QSurfaceDataProxy INHERIT QAbstractDataProxy
    METHOD onRowsRemoved
    METHOD onSeriesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSurfaceDataProxy
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

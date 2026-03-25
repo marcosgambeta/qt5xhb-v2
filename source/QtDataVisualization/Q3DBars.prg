@@ -60,15 +60,7 @@ CLASS Q3DBars INHERIT QAbstract3DGraph
    METHOD onSelectedSeriesChanged
    METHOD onFloorLevelChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS Q3DBars
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

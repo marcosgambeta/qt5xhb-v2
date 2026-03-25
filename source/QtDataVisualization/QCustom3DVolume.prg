@@ -75,15 +75,7 @@ CLASS QCustom3DVolume INHERIT QCustom3DItem
    METHOD onTextureWidthChanged
    METHOD onUseHighDefShaderChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCustom3DVolume
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

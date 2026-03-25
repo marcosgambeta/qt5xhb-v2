@@ -31,15 +31,7 @@ CLASS QBar3DSeries INHERIT QAbstract3DSeries
    METHOD onSelectedBarChanged
    METHOD onMeshAngleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBar3DSeries
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

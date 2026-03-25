@@ -28,15 +28,7 @@ CLASS QLogValue3DAxisFormatter INHERIT QValue3DAxisFormatter
    METHOD onBaseChanged
    METHOD onShowEdgeLabelsChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLogValue3DAxisFormatter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -38,15 +38,7 @@ CLASS Q3DScatter INHERIT QAbstract3DGraph
    METHOD onAxisZChanged
    METHOD onSelectedSeriesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS Q3DScatter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

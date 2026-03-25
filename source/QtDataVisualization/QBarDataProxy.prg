@@ -40,15 +40,7 @@ CLASS QBarDataProxy INHERIT QAbstractDataProxy
    METHOD onRowsRemoved
    METHOD onSeriesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBarDataProxy
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

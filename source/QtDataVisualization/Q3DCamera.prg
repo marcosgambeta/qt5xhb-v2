@@ -49,15 +49,7 @@ CLASS Q3DCamera INHERIT Q3DObject
    METHOD onYRotationChanged
    METHOD onZoomLevelChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS Q3DCamera
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

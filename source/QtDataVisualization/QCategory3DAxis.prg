@@ -22,15 +22,7 @@ CLASS QCategory3DAxis INHERIT QAbstract3DAxis
 
    METHOD onLabelsChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCategory3DAxis
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

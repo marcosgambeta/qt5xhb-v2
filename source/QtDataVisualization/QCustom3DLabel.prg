@@ -42,15 +42,7 @@ CLASS QCustom3DLabel INHERIT QCustom3DItem
    METHOD onTextChanged
    METHOD onTextColorChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCustom3DLabel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -88,7 +80,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
     auto obj = new QCustom3DLabel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  } else if (ISBETWEEN(5, 6) && HB_ISCHAR(1) && ISQFONT(2) && ISQVECTOR3D(3) && ISQVECTOR3D(4) && ISQQUATERNION(5) &&
+  } else if (ISBETWEEN(5, 6) && ISQSTRING(1) && ISQFONT(2) && ISQVECTOR3D(3) && ISQVECTOR3D(4) && ISQQUATERNION(5) &&
              ISQOBJECTORNIL(6)) {
     // QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const
     // QQuaternion &rotation, QObject *parent = nullptr)
@@ -140,7 +132,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
