@@ -37,15 +37,7 @@ CLASS QGLFramebufferObject INHERIT QPaintDevice
    METHOD hasOpenGLFramebufferBlit
    METHOD hasOpenGLFramebufferObjects
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGLFramebufferObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

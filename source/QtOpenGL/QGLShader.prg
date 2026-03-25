@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
     if (obj != nullptr) {
       RBOOL(obj->compileSourceCode(*PQBYTEARRAY(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool compileSourceCode(const QString &source)
     GET_PTR_FROM_SELF(obj);
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->compileSourceFile(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

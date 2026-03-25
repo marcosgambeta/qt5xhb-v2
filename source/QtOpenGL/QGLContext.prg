@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), PQGLCONTEXT_BINDOPTIONS(4)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // GLuint bindTexture(const QString &fileName)
     GET_PTR_FROM_SELF(obj);
 

@@ -37,15 +37,7 @@ CLASS QGLPixelBuffer INHERIT QPaintDevice
    METHOD paintEngine
    METHOD hasOpenGLPbuffers
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGLPixelBuffer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -109,7 +101,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // GLuint bindTexture(const QString &fileName)
     GET_PTR_FROM_SELF(obj);
 

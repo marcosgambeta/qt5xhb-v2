@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), PQGLCONTEXT_BINDOPTIONS(4)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // GLuint bindTexture(const QString &fileName)
     GET_PTR_FROM_SELF(obj);
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERPIXMAP)
 
 HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
 {
-  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISQFONTORNIL(4)) {
+  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSTRING(3) && ISQFONTORNIL(4)) {
     // void renderText(int x, int y, const QString &str, const QFont &font = QFont())
     GET_PTR_FROM_SELF(obj);
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4) && ISQFONTORNIL(5)) {
+  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTRING(4) && ISQFONTORNIL(5)) {
     // void renderText(double x, double y, double z, const QString &str, const QFont &font = QFont())
     GET_PTR_FROM_SELF(obj);
 
