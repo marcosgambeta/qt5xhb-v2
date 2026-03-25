@@ -39,15 +39,7 @@ CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
    METHOD smooth
    METHOD transformOrigin
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDeclarativeItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

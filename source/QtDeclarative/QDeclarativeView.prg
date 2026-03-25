@@ -37,15 +37,7 @@ CLASS QDeclarativeView INHERIT QGraphicsView
    METHOD onSceneResized
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDeclarativeView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
