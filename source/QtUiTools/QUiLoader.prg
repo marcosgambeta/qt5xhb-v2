@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QUILOADER_ADDPLUGINPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->addPluginPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISQSTRINGORNIL(2)) {
 #endif
       auto ptr = obj->createAction(OPQOBJECT(1, nullptr), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTIONGROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISQSTRINGORNIL(2)) {
 #endif
       auto ptr = obj->createActionGroup(OPQOBJECT(1, nullptr), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTIONGROUP");
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QUILOADER_CREATELAYOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQOBJECTORNIL(2) && ISCHARORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISQOBJECTORNIL(2) && ISQSTRINGORNIL(3)) {
 #endif
       auto ptr = obj->createLayout(PQSTRING(1), OPQOBJECT(2, nullptr), OPQSTRING(3, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QLAYOUT");
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISCHARORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISQWIDGETORNIL(2) && ISQSTRINGORNIL(3)) {
 #endif
       auto ptr = obj->createWidget(PQSTRING(1), OPQWIDGET(2, nullptr), OPQSTRING(3, QString()));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
