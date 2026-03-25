@@ -20,15 +20,7 @@ CLASS QAmbientTemperatureSensor INHERIT QSensor
    METHOD delete
    METHOD reading
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAmbientTemperatureSensor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

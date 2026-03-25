@@ -24,15 +24,7 @@ CLASS QLightSensor INHERIT QSensor
 
    METHOD onFieldOfViewChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLightSensor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

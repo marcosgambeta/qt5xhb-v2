@@ -19,15 +19,7 @@ CLASS QAltimeterReading INHERIT QSensorReading
    METHOD altitude
    METHOD setAltitude
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAltimeterReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

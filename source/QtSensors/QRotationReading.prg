@@ -21,15 +21,7 @@ CLASS QRotationReading INHERIT QSensorReading
    METHOD z
    METHOD setFromEuler
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRotationReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

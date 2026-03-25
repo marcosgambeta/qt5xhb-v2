@@ -19,15 +19,7 @@ CLASS QIRProximityReading INHERIT QSensorReading
    METHOD reflectance
    METHOD setReflectance
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QIRProximityReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

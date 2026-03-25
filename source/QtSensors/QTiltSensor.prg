@@ -21,15 +21,7 @@ CLASS QTiltSensor INHERIT QSensor
    METHOD reading
    METHOD calibrate
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTiltSensor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

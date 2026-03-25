@@ -19,15 +19,7 @@ CLASS QHolsterReading INHERIT QSensorReading
    METHOD holstered
    METHOD setHolstered
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHolsterReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -21,15 +21,7 @@ CLASS QCompassReading INHERIT QSensorReading
    METHOD calibrationLevel
    METHOD setCalibrationLevel
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCompassReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

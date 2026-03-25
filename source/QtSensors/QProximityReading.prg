@@ -19,15 +19,7 @@ CLASS QProximityReading INHERIT QSensorReading
    METHOD close
    METHOD setClose
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QProximityReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

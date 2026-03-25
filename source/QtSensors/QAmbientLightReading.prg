@@ -19,15 +19,7 @@ CLASS QAmbientLightReading INHERIT QSensorReading
    METHOD lightLevel
    METHOD setLightLevel
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAmbientLightReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -24,15 +24,7 @@ CLASS QAccelerometer INHERIT QSensor
 
    METHOD onAccelerationModeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccelerometer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

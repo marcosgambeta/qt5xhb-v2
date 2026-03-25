@@ -18,15 +18,7 @@ CLASS QCompassFilter INHERIT QSensorFilter
    METHOD delete
    METHOD filter
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCompassFilter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

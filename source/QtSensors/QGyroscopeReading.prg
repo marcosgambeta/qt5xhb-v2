@@ -23,15 +23,7 @@ CLASS QGyroscopeReading INHERIT QSensorReading
    METHOD z
    METHOD setZ
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGyroscopeReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

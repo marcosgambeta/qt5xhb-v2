@@ -19,15 +19,7 @@ CLASS QOrientationReading INHERIT QSensorReading
    METHOD orientation
    METHOD setOrientation
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOrientationReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

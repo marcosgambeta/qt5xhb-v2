@@ -18,15 +18,7 @@ CLASS QAmbientTemperatureFilter INHERIT QSensorFilter
    METHOD delete
    METHOD filter
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAmbientTemperatureFilter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

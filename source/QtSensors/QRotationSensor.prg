@@ -24,15 +24,7 @@ CLASS QRotationSensor INHERIT QSensor
 
    METHOD onHasZChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRotationSensor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

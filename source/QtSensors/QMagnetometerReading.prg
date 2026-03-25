@@ -22,15 +22,7 @@ CLASS QMagnetometerReading INHERIT QSensorReading
    METHOD calibrationLevel
    METHOD setCalibrationLevel
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMagnetometerReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -24,15 +24,7 @@ CLASS QTapSensor INHERIT QSensor
 
    METHOD onReturnDoubleTapEventsChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTapSensor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

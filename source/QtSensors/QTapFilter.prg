@@ -18,15 +18,7 @@ CLASS QTapFilter INHERIT QSensorFilter
    METHOD delete
    METHOD filter
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTapFilter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

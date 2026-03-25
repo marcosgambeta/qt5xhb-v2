@@ -16,15 +16,7 @@ CLASS QLightReading INHERIT QSensorReading
    METHOD lux
    METHOD setLux
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLightReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

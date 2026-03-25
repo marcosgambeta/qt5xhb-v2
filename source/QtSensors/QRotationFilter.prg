@@ -18,15 +18,7 @@ CLASS QRotationFilter INHERIT QSensorFilter
    METHOD delete
    METHOD filter
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRotationFilter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

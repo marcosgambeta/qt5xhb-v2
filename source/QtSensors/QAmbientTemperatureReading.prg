@@ -19,15 +19,7 @@ CLASS QAmbientTemperatureReading INHERIT QSensorReading
    METHOD temperature
    METHOD setTemperature
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAmbientTemperatureReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

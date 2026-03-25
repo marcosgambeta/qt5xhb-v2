@@ -21,15 +21,7 @@ CLASS QTiltReading INHERIT QSensorReading
    METHOD xRotation
    METHOD setXRotation
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTiltReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

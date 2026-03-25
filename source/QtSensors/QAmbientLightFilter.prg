@@ -18,15 +18,7 @@ CLASS QAmbientLightFilter INHERIT QSensorFilter
    METHOD delete
    METHOD filter
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAmbientLightFilter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

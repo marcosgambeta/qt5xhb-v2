@@ -23,15 +23,7 @@ CLASS QAccelerometerReading INHERIT QSensorReading
    METHOD z
    METHOD setZ
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccelerometerReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -20,15 +20,7 @@ CLASS QTapReading INHERIT QSensorReading
    METHOD isDoubleTap
    METHOD setDoubleTap
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTapReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

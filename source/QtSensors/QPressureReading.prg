@@ -19,15 +19,7 @@ CLASS QPressureReading INHERIT QSensorReading
    METHOD pressure
    METHOD setPressure
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPressureReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -20,15 +20,7 @@ CLASS QProximitySensor INHERIT QSensor
    METHOD delete
    METHOD reading
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QProximitySensor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

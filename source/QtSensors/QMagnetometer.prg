@@ -24,15 +24,7 @@ CLASS QMagnetometer INHERIT QSensor
 
    METHOD onReturnGeoValuesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMagnetometer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
