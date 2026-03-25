@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QJSVALUE_DELETEPROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->deleteProperty(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QJSVALUE_HASOWNPROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->hasOwnProperty(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QJSVALUE_HASPROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->hasProperty(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -479,7 +479,7 @@ HB_FUNC_STATIC(QJSVALUE_ISVARIANT)
 
 HB_FUNC_STATIC(QJSVALUE_PROPERTY)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QJSValue property(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QJSVALUE_PROTOTYPE)
 
 HB_FUNC_STATIC(QJSVALUE_SETPROPERTY)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQJSVALUE(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQJSVALUE(2)) {
     // void setProperty(const QString &name, const QJSValue &value)
     GET_PTR_FROM_SELF(obj);
 

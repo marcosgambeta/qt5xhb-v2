@@ -24,15 +24,7 @@ CLASS QQmlApplicationEngine INHERIT QQmlEngine
 
    METHOD onObjectCreated
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQmlApplicationEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -74,7 +66,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
     auto obj = new QQmlApplicationEngine(*PQURL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQOBJECTORNIL(2)) {
     // QQmlApplicationEngine(const QString &filePath, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = new QQmlApplicationEngine(PQSTRING(1), OPQOBJECT(2, nullptr));
@@ -146,7 +138,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 
     RETURN_SELF();
 #endif
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void load(const QString &filePath)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     GET_PTR_FROM_SELF(obj);

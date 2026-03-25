@@ -54,15 +54,7 @@ CLASS QQmlEngine INHERIT QJSEngine
 
    METHOD onQuit
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQmlEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -115,7 +107,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMAGEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQQMLIMAGEPROVIDERBASE(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQQMLIMAGEPROVIDERBASE(2)) {
 #endif
       obj->addImageProvider(PQSTRING(1), PQQMLIMAGEPROVIDERBASE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +127,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMPORTPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->addImportPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +147,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDNAMEDBUNDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       RBOOL(obj->addNamedBundle(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +165,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDPLUGINPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->addPluginPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +223,7 @@ HB_FUNC_STATIC(QQMLENGINE_IMAGEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       auto ptr = obj->imageProvider(PQSTRING(1));
       Qt5xHb::createReturnClass(ptr, "QQMLIMAGEPROVIDERBASE", false);
@@ -380,7 +372,7 @@ HB_FUNC_STATIC(QQMLENGINE_REMOVEIMAGEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->removeImageProvider(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -499,7 +491,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOFFLINESTORAGEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setOfflineStoragePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

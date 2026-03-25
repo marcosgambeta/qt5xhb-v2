@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_CONTEXTPROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQVARIANT(obj->contextProperty(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTOBJECT)
 
 HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTPROPERTY)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQOBJECT(2)) {
     // void setContextProperty(const QString &name, QObject *value)
     GET_PTR_FROM_SELF(obj);
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTPROPERTY)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQVARIANT(2)) {
     // void setContextProperty(const QString &name, const QVariant &value)
     GET_PTR_FROM_SELF(obj);
 
