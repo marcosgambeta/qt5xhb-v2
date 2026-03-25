@@ -20,15 +20,7 @@ CLASS QAndroidService INHERIT QCoreApplication
    METHOD delete
    METHOD onBind
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAndroidService
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
