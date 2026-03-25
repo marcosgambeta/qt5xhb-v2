@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && ISQSTRING(2)) {
 #endif
       auto ptr = obj->extension(PQOBJECT(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
