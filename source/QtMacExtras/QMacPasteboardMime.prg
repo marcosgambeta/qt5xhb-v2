@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CANCONVERT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       RBOOL(obj->canConvert(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_MIMEFOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->mimeFor(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_FLAVORFOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->flavorFor(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTTOMIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISARRAY(2) && HB_ISCHAR(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && HB_ISARRAY(2) && ISQSTRING(3)) {
 #endif
       QList<QByteArray> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTFROMMIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQVARIANT(2) && HB_ISCHAR(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && ISQVARIANT(2) && ISQSTRING(3)) {
 #endif
       auto list = obj->convertFromMime(PQSTRING(1), *PQVARIANT(2), PQSTRING(3));
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
