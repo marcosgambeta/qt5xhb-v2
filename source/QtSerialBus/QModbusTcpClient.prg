@@ -18,15 +18,7 @@ CLASS QModbusTcpClient INHERIT QModbusClient
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QModbusTcpClient
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -19,15 +19,7 @@ CLASS QModbusRtuSerialMaster INHERIT QModbusClient
    METHOD delete
    METHOD interFrameDelay
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QModbusRtuSerialMaster
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

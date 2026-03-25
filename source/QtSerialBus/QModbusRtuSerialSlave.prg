@@ -19,15 +19,7 @@ CLASS QModbusRtuSerialSlave INHERIT QModbusServer
    METHOD delete
    METHOD processesBroadcast
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QModbusRtuSerialSlave
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

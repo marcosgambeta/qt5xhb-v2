@@ -20,15 +20,7 @@ CLASS QCanBusFactoryV2 INHERIT QCanBusFactory
    METHOD createDevice
    METHOD availableDevices
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCanBusFactoryV2
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -62,7 +54,7 @@ HB_FUNC_STATIC(QCANBUSFACTORYV2_CREATEDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(2) && ISQSTRING(1)) {
 #endif
       auto ptr = obj->createDevice(PQSTRING(1), nullptr);
       Qt5xHb::createReturnQObjectClass(ptr, "QCANBUSDEVICE");

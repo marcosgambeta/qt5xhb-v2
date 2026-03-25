@@ -21,15 +21,7 @@ CLASS QModbusServer INHERIT QModbusDevice
 
    METHOD onDataWritten
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QModbusServer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

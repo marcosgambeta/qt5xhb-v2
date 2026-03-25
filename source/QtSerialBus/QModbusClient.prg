@@ -21,15 +21,7 @@ CLASS QModbusClient INHERIT QModbusDevice
 
    METHOD onTimeoutChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QModbusClient
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
