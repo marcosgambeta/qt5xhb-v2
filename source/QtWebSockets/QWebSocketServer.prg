@@ -85,11 +85,12 @@ ENDCLASS
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWebSocketServer *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QWebSocketServer(const QString &serverName, QWebSocketServer::SslMode secureMode, QObject *parent = nullptr)
+// QWebSocketServer(const QString &serverName, QWebSocketServer::SslMode secureMode,
+                                    // QObject *parent = nullptr)
 HB_FUNC_STATIC(QWEBSOCKETSERVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
+  if (ISBETWEEN(2, 3) && ISQSTRING(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
     auto obj = new QWebSocketServer(PQSTRING(1), PQWEBSOCKETSERVER_SSLMODE(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -464,7 +465,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSERVERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setServerName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -574,7 +575,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SUPPORTEDVERSIONS)
 #endif
       auto list = obj->supportedVersions();
       auto pArray = hb_itemArrayNew(0);
-      for (auto item : list) {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);

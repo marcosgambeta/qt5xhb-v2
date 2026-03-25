@@ -70,7 +70,7 @@ RETURN
 
 HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QWebSocketCorsAuthenticator(const QString &origin)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QWebSocketCorsAuthenticator(PQSTRING(1));
