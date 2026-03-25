@@ -25,15 +25,7 @@ CLASS QPrintPreviewDialog INHERIT QDialog
 
    METHOD onPaintRequested
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPrintPreviewDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

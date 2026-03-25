@@ -33,15 +33,7 @@ CLASS QAbstractPrintDialog INHERIT QDialog
    METHOD enabledOptions
    METHOD isOptionEnabled
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractPrintDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -24,15 +24,7 @@ CLASS QPageSetupDialog INHERIT QDialog
    METHOD exec
    METHOD done
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPageSetupDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
 #endif
       auto list = obj->supportedPaperSizes();
       auto pArray = hb_itemArrayNew(0);
-      for (auto item : list) {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
     auto pDynSym = hb_dynsymFindName("QPRINTERINFO");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {
-      for (auto &item : list) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAGESIZES)
       auto pDynSym = hb_dynsymFindName("QPAGESIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (auto &item : list) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTERNAME)
 HB_FUNC_STATIC(QPRINTERINFO_PRINTERINFO)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RQPRINTERINFO(QPrinterInfo::printerInfo(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
