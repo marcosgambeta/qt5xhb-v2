@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QJSONOBJECT_CONTAINS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->contains(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QJSONOBJECT_REMOVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->remove(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QJSONOBJECT_TAKE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQJSONVALUE(obj->take(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QJSONOBJECT_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQJSONVALUE(obj->value(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

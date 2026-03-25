@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
     // QStringMatcher()
     auto obj = new QStringMatcher();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // QStringMatcher(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     auto obj = new QStringMatcher(PQSTRING(1), HB_ISNIL(2) ? Qt::CaseSensitive : PQT_CASESENSITIVITY(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPattern(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 
 HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // int indexIn(const QString &str, int from = 0) const
     GET_PTR_FROM_SELF(obj);
 

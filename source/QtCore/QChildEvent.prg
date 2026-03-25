@@ -23,15 +23,7 @@ CLASS QChildEvent INHERIT QEvent
    METHOD polished
    METHOD removed
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QChildEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

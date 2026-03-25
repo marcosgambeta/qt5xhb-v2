@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_NEW)
     // QSharedMemory(QObject *parent = nullptr)
     auto obj = new QSharedMemory(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQOBJECTORNIL(2)) {
     // QSharedMemory(const QString &key, QObject *parent = nullptr)
     auto obj = new QSharedMemory(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setKey(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETNATIVEKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setNativeKey(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQMIMETYPE(obj->mimeTypeForName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORNAME)
 
 HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // QMimeType mimeTypeForFile(const QString &fileName, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault)
     // const
     GET_PTR_FROM_SELF(obj);
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPESFORFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       auto list = obj->mimeTypesForFileName(PQSTRING(1));
       auto pDynSym = hb_dynsymFindName("QMIMETYPE");
@@ -208,14 +208,14 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORURL)
 
 HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQIODEVICE(2)) {
     // QMimeType mimeTypeForFileNameAndData(const QString &fileName, QIODevice *device) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQMIMETYPE(obj->mimeTypeForFileNameAndData(PQSTRING(1), PQIODEVICE(2)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQBYTEARRAY(2)) {
     // QMimeType mimeTypeForFileNameAndData(const QString &fileName, const QByteArray &data) const
     GET_PTR_FROM_SELF(obj);
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_SUFFIXFORFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->suffixForFileName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -20,15 +20,7 @@ CLASS QAbstractTableModel INHERIT QAbstractItemModel
    METHOD dropMimeData
    METHOD index
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractTableModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

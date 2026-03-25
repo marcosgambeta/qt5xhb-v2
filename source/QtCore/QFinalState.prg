@@ -18,15 +18,7 @@ CLASS QFinalState INHERIT QAbstractState
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFinalState
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

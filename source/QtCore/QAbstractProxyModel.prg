@@ -20,15 +20,7 @@ CLASS QAbstractProxyModel INHERIT QAbstractItemModel
    METHOD dropMimeData
    METHOD index
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractProxyModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

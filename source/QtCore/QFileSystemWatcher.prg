@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->addPath(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->removePath(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

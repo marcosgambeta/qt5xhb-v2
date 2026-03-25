@@ -23,15 +23,7 @@ CLASS QEventTransition INHERIT QAbstractTransition
    METHOD setEventSource
    METHOD setEventType
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QEventTransition
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

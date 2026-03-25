@@ -30,15 +30,7 @@ CLASS QStringListModel INHERIT QAbstractListModel
    METHOD sort
    METHOD supportedDropActions
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStringListModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

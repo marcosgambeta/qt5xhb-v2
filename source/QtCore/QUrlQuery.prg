@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QURLQUERY_NEW)
     // QUrlQuery(const QUrl &url)
     auto obj = new QUrlQuery(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QUrlQuery(const QString &queryString)
     auto obj = new QUrlQuery(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QURLQUERY_ADDQUERYITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       obj->addQueryItem(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QURLQUERY_ALLQUERYITEMVALUES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
 #endif
       RQSTRINGLIST(obj->allQueryItemValues(PQSTRING(1),
                                            HB_ISNIL(2) ? QUrl::PrettyDecoded : PQURL_COMPONENTFORMATTINGOPTIONS(2)));
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QURLQUERY_HASQUERYITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->hasQueryItem(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYITEMVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
 #endif
       RQSTRING(
           obj->queryItemValue(PQSTRING(1), HB_ISNIL(2) ? QUrl::PrettyDecoded : PQURL_COMPONENTFORMATTINGOPTIONS(2)));
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEALLQUERYITEMS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->removeAllQueryItems(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEQUERYITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->removeQueryItem(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QURLQUERY_SETQUERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setQuery(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

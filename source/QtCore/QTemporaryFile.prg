@@ -25,15 +25,7 @@ CLASS QTemporaryFile INHERIT QFile
    METHOD fileName
    METHOD createNativeFile
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTemporaryFile
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -63,7 +55,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
     // QTemporaryFile()
     auto obj = new QTemporaryFile();
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QTemporaryFile(const QString &templateName)
     auto obj = new QTemporaryFile(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -71,7 +63,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
     // QTemporaryFile(QObject *parent)
     auto obj = new QTemporaryFile(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQOBJECT(2)) {
     // QTemporaryFile(const QString &templateName, QObject *parent)
     auto obj = new QTemporaryFile(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -168,7 +160,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setFileTemplate(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +197,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_CREATENATIVEFILE)
     // static QTemporaryFile *createNativeFile(QFile &file)
     auto ptr = QTemporaryFile::createNativeFile(*PQFILE(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QTemporaryFile *createNativeFile(const QString &fileName)
     auto ptr = QTemporaryFile::createNativeFile(PQSTRING(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");

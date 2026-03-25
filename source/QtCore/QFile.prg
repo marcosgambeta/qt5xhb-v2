@@ -46,15 +46,7 @@ CLASS QFile INHERIT QFileDevice
    METHOD readLink
    METHOD moveToTrash
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFile
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -84,7 +76,7 @@ HB_FUNC_STATIC(QFILE_NEW)
     // QFile()
     auto obj = new QFile();
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QFile(const QString &name)
     auto obj = new QFile(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -92,7 +84,7 @@ HB_FUNC_STATIC(QFILE_NEW)
     // QFile(QObject *parent)
     auto obj = new QFile(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQOBJECT(2)) {
     // QFile(const QString &name, QObject *parent)
     auto obj = new QFile(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -110,14 +102,14 @@ HB_FUNC_STATIC(QFILE_DELETE)
 
 HB_FUNC_STATIC(QFILE_COPY)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool copy(const QString &newName)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->copy(PQSTRING(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // static bool copy(const QString &fileName, const QString &newName)
     RBOOL(QFile::copy(PQSTRING(1), PQSTRING(2)));
   } else {
@@ -152,7 +144,7 @@ HB_FUNC_STATIC(QFILE_EXISTS)
     if (obj != nullptr) {
       RBOOL(obj->exists());
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static bool exists(const QString &fileName)
     RBOOL(QFile::exists(PQSTRING(1)));
   } else {
@@ -216,14 +208,14 @@ HB_FUNC_STATIC(QFILE_HANDLE)
 
 HB_FUNC_STATIC(QFILE_LINK)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool link(const QString &linkName)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->link(PQSTRING(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // static bool link(const QString &fileName, const QString &linkName)
     RBOOL(QFile::link(PQSTRING(1), PQSTRING(2)));
   } else {
@@ -269,7 +261,7 @@ HB_FUNC_STATIC(QFILE_PERMISSIONS)
     if (obj != nullptr) {
       RENUM(obj->permissions());
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QFile::Permissions permissions(const QString &fileName)
     RENUM(QFile::permissions(PQSTRING(1)));
   } else {
@@ -286,7 +278,7 @@ HB_FUNC_STATIC(QFILE_REMOVE)
     if (obj != nullptr) {
       RBOOL(obj->remove());
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static bool remove(const QString &fileName)
     RBOOL(QFile::remove(PQSTRING(1)));
   } else {
@@ -296,14 +288,14 @@ HB_FUNC_STATIC(QFILE_REMOVE)
 
 HB_FUNC_STATIC(QFILE_RENAME)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool rename(const QString &newName)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->rename(PQSTRING(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // static bool rename(const QString &oldName, const QString &newName)
     RBOOL(QFile::rename(PQSTRING(1), PQSTRING(2)));
   } else {
@@ -320,7 +312,7 @@ HB_FUNC_STATIC(QFILE_RESIZE)
     if (obj != nullptr) {
       RBOOL(obj->resize(PQINT64(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISNUM(2)) {
     // static bool resize(const QString &fileName, qint64 sz)
     RBOOL(QFile::resize(PQSTRING(1), PQINT64(2)));
   } else {
@@ -335,7 +327,7 @@ HB_FUNC_STATIC(QFILE_SETFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +349,7 @@ HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
     if (obj != nullptr) {
       RBOOL(obj->setPermissions(PQFILE_PERMISSIONS(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISNUM(2)) {
     // static bool setPermissions(const QString &fileName, QFile::Permissions permissions)
     RBOOL(QFile::setPermissions(PQSTRING(1), PQFILE_PERMISSIONS(2)));
   } else {
@@ -374,7 +366,7 @@ HB_FUNC_STATIC(QFILE_SYMLINKTARGET)
     if (obj != nullptr) {
       RQSTRING(obj->symLinkTarget());
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QString symLinkTarget(const QString &fileName)
     RQSTRING(QFile::symLinkTarget(PQSTRING(1)));
   } else {
@@ -547,7 +539,7 @@ HB_FUNC_STATIC(QFILE_DECODENAME)
 HB_FUNC_STATIC(QFILE_ENCODENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RQBYTEARRAY(QFile::encodeName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -566,7 +558,7 @@ HB_FUNC_STATIC(QFILE_READLINK)
     if (obj != nullptr) {
       RQSTRING(obj->readLink());
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QString readLink(const QString &fileName)
     RQSTRING(QFile::readLink(PQSTRING(1)));
   } else {
@@ -585,7 +577,7 @@ HB_FUNC_STATIC(QFILE_MOVETOTRASH)
       RBOOL(obj->moveToTrash());
     }
 #endif
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
     // static bool moveToTrash(const QString &fileName, QString *pathInTrash = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
     RBOOL(QFile::moveToTrash(PQSTRING(1), nullptr));

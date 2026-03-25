@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NEW)
     auto obj = new QStorageInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QStorageInfo(const QString &path)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QStorageInfo(PQSTRING(1));
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SETPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

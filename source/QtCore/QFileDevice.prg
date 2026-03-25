@@ -34,15 +34,7 @@ CLASS QFileDevice INHERIT QIODevice
    METHOD fileTime
    METHOD setFileTime
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFileDevice
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

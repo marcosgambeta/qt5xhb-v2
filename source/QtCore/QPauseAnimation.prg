@@ -20,15 +20,7 @@ CLASS QPauseAnimation INHERIT QAbstractAnimation
    METHOD setDuration
    METHOD duration
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPauseAnimation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

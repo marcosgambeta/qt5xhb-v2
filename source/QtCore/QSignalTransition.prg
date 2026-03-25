@@ -24,15 +24,7 @@ CLASS QSignalTransition INHERIT QAbstractTransition
    METHOD signal
    METHOD setSignal
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSignalTransition
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -61,7 +61,7 @@ RETURN
 
 // QRunnable()
 
-    // virtual ~QRunnable()
+// virtual ~QRunnable()
 HB_FUNC_STATIC(QRUNNABLE_DELETE)
 {
   GET_PTR_FROM_SELF(obj);

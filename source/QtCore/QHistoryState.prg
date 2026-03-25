@@ -23,15 +23,7 @@ CLASS QHistoryState INHERIT QAbstractState
    METHOD historyType
    METHOD setHistoryType
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHistoryState
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

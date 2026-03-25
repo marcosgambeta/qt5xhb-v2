@@ -34,15 +34,7 @@ CLASS QState INHERIT QAbstractState
    METHOD onFinished
    METHOD onPropertiesAssigned
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QState
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

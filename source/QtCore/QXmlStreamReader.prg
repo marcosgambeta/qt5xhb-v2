@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
     // QXmlStreamReader(const QByteArray &data)
     auto obj = new QXmlStreamReader(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QXmlStreamReader(const QString &data)
     auto obj = new QXmlStreamReader(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void addData(const QString &data)
     GET_PTR_FROM_SELF(obj);
 
@@ -960,7 +960,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+    if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
 #endif
       obj->raiseError(OPQSTRING(1, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

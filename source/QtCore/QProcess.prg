@@ -79,15 +79,7 @@ CLASS QProcess INHERIT QIODevice
    METHOD onStateChanged
    METHOD onErrorOccurred
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QProcess
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -379,7 +371,7 @@ HB_FUNC_STATIC(QPROCESS_SETNATIVEARGUMENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setNativeArguments(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -460,7 +452,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDERRORFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
 #endif
       obj->setStandardErrorFile(PQSTRING(1), HB_ISNIL(2) ? QIODevice::Truncate : PQIODEVICE_OPENMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -480,7 +472,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDINPUTFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setStandardInputFile(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -500,7 +492,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
 #endif
       obj->setStandardOutputFile(PQSTRING(1), HB_ISNIL(2) ? QIODevice::Truncate : PQIODEVICE_OPENMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -540,7 +532,7 @@ HB_FUNC_STATIC(QPROCESS_SETWORKINGDIRECTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWorkingDirectory(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,7 +547,7 @@ HB_FUNC_STATIC(QPROCESS_SETWORKINGDIRECTORY)
 
 HB_FUNC_STATIC(QPROCESS_START)
 {
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(2, 3) && ISQSTRING(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
     // void start(const QString &program, const QStringList &arguments, QIODevice::OpenMode mode = QIODevice::ReadWrite)
     GET_PTR_FROM_SELF(obj);
 
@@ -564,7 +556,7 @@ HB_FUNC_STATIC(QPROCESS_START)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // void start(const QString &command, QIODevice::OpenMode mode = QIODevice::ReadWrite)
     GET_PTR_FROM_SELF(obj);
 
@@ -849,10 +841,10 @@ HB_FUNC_STATIC(QPROCESS_TERMINATE)
 
 HB_FUNC_STATIC(QPROCESS_EXECUTE)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISARRAY(2)) {
     // static int execute(const QString &program, const QStringList &arguments)
     RINT(QProcess::execute(PQSTRING(1), PQSTRINGLIST(2)));
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static int execute(const QString &command)
     RINT(QProcess::execute(PQSTRING(1)));
   } else {
@@ -862,16 +854,16 @@ HB_FUNC_STATIC(QPROCESS_EXECUTE)
 
 HB_FUNC_STATIC(QPROCESS_STARTDETACHED)
 {
-  if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && HB_ISCHAR(3) && ISNUMORNIL(4)) {
+  if (ISBETWEEN(3, 4) && ISQSTRING(1) && HB_ISARRAY(2) && ISQSTRING(3) && ISNUMORNIL(4)) {
     // static bool startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory,
     // qint64 *pid = 0)
     qint64 par4;
     RBOOL(QProcess::startDetached(PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), &par4));
     hb_stornll(par4, 4);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISARRAY(2)) {
     // static bool startDetached(const QString &program, const QStringList &arguments)
     RBOOL(QProcess::startDetached(PQSTRING(1), PQSTRINGLIST(2)));
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static bool startDetached(const QString &program)
     RBOOL(QProcess::startDetached(PQSTRING(1)));
   } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -948,7 +940,7 @@ HB_FUNC_STATIC(QPROCESS_SETPROGRAM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setProgram(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

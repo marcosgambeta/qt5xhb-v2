@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_NEW)
     // QTextBoundaryFinder(const QTextBoundaryFinder &other)
     auto obj = new QTextBoundaryFinder(*PQTEXTBOUNDARYFINDER(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QString &string)
     auto obj = new QTextBoundaryFinder(PQTEXTBOUNDARYFINDER_BOUNDARYTYPE(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);

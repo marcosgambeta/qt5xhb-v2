@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV3)
   if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2)) {
     // static QUuid createUuidV3(const QUuid &ns, const QByteArray &baseData)
     RQUUID(QUuid::createUuidV3(*PQUUID(1), *PQBYTEARRAY(2)));
-  } else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQUUID(1) && ISQSTRING(2)) {
     // static QUuid createUuidV3(const QUuid &ns, const QString &baseData)
     RQUUID(QUuid::createUuidV3(*PQUUID(1), PQSTRING(2)));
   } else {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV5)
   if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2)) {
     // static QUuid createUuidV5(const QUuid &ns, const QByteArray &baseData)
     RQUUID(QUuid::createUuidV5(*PQUUID(1), *PQBYTEARRAY(2)));
-  } else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQUUID(1) && ISQSTRING(2)) {
     // static QUuid createUuidV5(const QUuid &ns, const QString &baseData)
     RQUUID(QUuid::createUuidV5(*PQUUID(1), PQSTRING(2)));
   } else {

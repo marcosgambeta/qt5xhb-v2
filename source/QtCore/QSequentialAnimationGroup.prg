@@ -26,15 +26,7 @@ CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
 
    METHOD onCurrentAnimationChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSequentialAnimationGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

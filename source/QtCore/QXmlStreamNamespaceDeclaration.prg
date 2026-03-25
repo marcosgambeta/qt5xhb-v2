@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NEW)
     // QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration &other)
     auto obj = new QXmlStreamNamespaceDeclaration(*PQXMLSTREAMNAMESPACEDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // QXmlStreamNamespaceDeclaration(const QString &prefix, const QString &namespaceUri)
     auto obj = new QXmlStreamNamespaceDeclaration(PQSTRING(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);

@@ -19,15 +19,7 @@ CLASS QParallelAnimationGroup INHERIT QAnimationGroup
    METHOD delete
    METHOD duration
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QParallelAnimationGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTURED)
     if (obj != nullptr) {
       RQSTRING(obj->captured(OPINT(1, 0)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QString captured(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDEND)
     if (obj != nullptr) {
       RINT(obj->capturedEnd(OPINT(1, 0)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // int capturedEnd(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH)
     if (obj != nullptr) {
       RINT(obj->capturedLength(OPINT(1, 0)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // int capturedLength(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDREF)
     if (obj != nullptr) {
       RQSTRINGREF(obj->capturedRef(OPINT(1, 0)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QStringRef capturedRef(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDSTART)
     if (obj != nullptr) {
       RINT(obj->capturedStart(OPINT(1, 0)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // int capturedStart(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 

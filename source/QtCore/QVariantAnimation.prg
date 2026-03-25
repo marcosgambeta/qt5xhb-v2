@@ -31,15 +31,7 @@ CLASS QVariantAnimation INHERIT QAbstractAnimation
 
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVariantAnimation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

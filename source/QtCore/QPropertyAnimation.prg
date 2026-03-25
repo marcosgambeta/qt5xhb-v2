@@ -24,15 +24,7 @@ CLASS QPropertyAnimation INHERIT QVariantAnimation
    METHOD setTargetObject
    METHOD targetObject
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPropertyAnimation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

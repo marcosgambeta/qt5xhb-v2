@@ -26,15 +26,7 @@ CLASS QAnimationGroup INHERIT QAbstractAnimation
    METHOD removeAnimation
    METHOD takeAnimation
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAnimationGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

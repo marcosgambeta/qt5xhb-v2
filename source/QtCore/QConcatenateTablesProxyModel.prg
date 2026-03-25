@@ -41,15 +41,7 @@ CLASS QConcatenateTablesProxyModel INHERIT QAbstractItemModel
    METHOD sourceModels
    METHOD span
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QConcatenateTablesProxyModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

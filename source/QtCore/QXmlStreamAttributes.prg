@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_DELETE)
 
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
 {
-  if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
+  if (ISNUMPAR(3) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRING(3)) {
     // void append(const QString &namespaceUri, const QString &name, const QString &value)
     GET_PTR_FROM_SELF(obj);
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // void append(const QString &qualifiedName, const QString &value)
     GET_PTR_FROM_SELF(obj);
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
 
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool hasAttribute(const QString &qualifiedName) const
     GET_PTR_FROM_SELF(obj);
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
     if (obj != nullptr) {
       RBOOL(obj->hasAttribute(*PQLATIN1STRING(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // bool hasAttribute(const QString &namespaceUri, const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       RQSTRINGREF(obj->value(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE2)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLATIN1STRING(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQLATIN1STRING(2)) {
 #endif
       RQSTRINGREF(obj->value(PQSTRING(1), *PQLATIN1STRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE4)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRINGREF(obj->value(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

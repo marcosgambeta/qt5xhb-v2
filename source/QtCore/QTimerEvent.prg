@@ -19,15 +19,7 @@ CLASS QTimerEvent INHERIT QEvent
    METHOD delete
    METHOD timerId
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTimerEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

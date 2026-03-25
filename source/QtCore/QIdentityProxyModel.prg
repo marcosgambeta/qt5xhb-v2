@@ -38,15 +38,7 @@ CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
    METHOD removeColumns
    METHOD removeRows
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QIdentityProxyModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
