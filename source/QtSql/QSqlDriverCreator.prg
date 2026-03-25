@@ -15,15 +15,7 @@
 
 CLASS QSqlDriverCreator INHERIT QSqlDriverCreatorBase
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSqlDriverCreator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

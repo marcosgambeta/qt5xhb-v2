@@ -71,11 +71,11 @@ RETURN
 
 HB_FUNC_STATIC(QSQLERROR_NEW)
 {
-  if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  if (ISNUMPAR(4) && ISQSTRING(1) && ISQSTRING(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QSqlError(const QString &driverText, const QString &databaseText, QSqlError::ErrorType type, int number)
     auto obj = new QSqlError(PQSTRING(1), PQSTRING(2), PQSQLERROR_ERRORTYPE(3), PINT(4));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(0, 4) && ISCHARORNIL(1) && ISCHARORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4)) {
+  } else if (ISBETWEEN(0, 4) && ISQSTRINGORNIL(1) && ISQSTRINGORNIL(2) && ISNUMORNIL(3) && ISQSTRINGORNIL(4)) {
     // QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType
     // type = QSqlError::NoError, const QString &errorCode = QString())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setDatabaseText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDRIVERTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setDriverText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

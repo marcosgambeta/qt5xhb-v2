@@ -58,15 +58,7 @@ CLASS QSqlTableModel INHERIT QSqlQueryModel
    METHOD onBeforeUpdate
    METHOD onPrimeInsert
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSqlTableModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -173,7 +165,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FIELDINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RINT(obj->fieldIndex(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +201,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setFilter(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,7 +374,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETTABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setTable(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

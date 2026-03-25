@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
     // QSqlQuery(QSqlResult *result)
     auto obj = new QSqlQuery(PQSQLRESULT(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISQSQLDATABASEORNIL(2)) {
+  } else if (ISBETWEEN(0, 2) && ISQSTRINGORNIL(1) && ISQSQLDATABASEORNIL(2)) {
     // QSqlQuery(const QString &query = QString(), QSqlDatabase db = QSqlDatabase())
     auto obj = new QSqlQuery(OPQSTRING(1, QString()), HB_ISNIL(2) ? QSqlDatabase() : *PQSQLDATABASE(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSQLQUERY_AT)
 
 HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
 {
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(2, 3) && ISQSTRING(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
     // void bindValue(const QString &placeholder, const QVariant &val, QSql::ParamType paramType = QSql::In)
     GET_PTR_FROM_SELF(obj);
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
 
 HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QVariant boundValue(const QString &placeholder) const
     GET_PTR_FROM_SELF(obj);
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QSQLQUERY_DRIVER)
 
 HB_FUNC_STATIC(QSQLQUERY_EXEC)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool exec(const QString &query)
     GET_PTR_FROM_SELF(obj);
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISNULL)
     if (obj != nullptr) {
       RBOOL(obj->isNull(PINT(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool isNull(const QString &name) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     GET_PTR_FROM_SELF(obj);
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QSQLQUERY_PREPARE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->prepare(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -745,7 +745,7 @@ HB_FUNC_STATIC(QSQLQUERY_VALUE)
     if (obj != nullptr) {
       RQVARIANT(obj->value(PINT(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QVariant value(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 

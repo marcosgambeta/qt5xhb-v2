@@ -86,7 +86,7 @@ RETURN
 
 HB_FUNC_STATIC(QSQLFIELD_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(0, 2) && ISQSTRINGORNIL(1) && ISNUMORNIL(2)) {
     // QSqlField(const QString &fieldName = QString(), QVariant::Type type = QVariant::Invalid)
     auto obj = new QSqlField(OPQSTRING(1, QString()), HB_ISNIL(2) ? QVariant::Invalid : PQVARIANT_TYPE(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

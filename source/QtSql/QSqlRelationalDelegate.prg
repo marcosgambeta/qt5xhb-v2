@@ -21,15 +21,7 @@ CLASS QSqlRelationalDelegate INHERIT QItemDelegate
    METHOD createEditor
    METHOD setModelData
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSqlRelationalDelegate
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

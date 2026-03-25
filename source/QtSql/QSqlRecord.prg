@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSQLRECORD_CONTAINS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->contains(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QSQLRECORD_FIELD)
     if (obj != nullptr) {
       RQSQLFIELD(obj->field(PINT(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QSqlField field(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QSQLRECORD_INDEXOF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RINT(obj->indexOf(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QSQLRECORD_ISEMPTY)
 
 HB_FUNC_STATIC(QSQLRECORD_ISGENERATED)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool isGenerated(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QSQLRECORD_ISGENERATED)
 
 HB_FUNC_STATIC(QSQLRECORD_ISNULL)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool isNull(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QSQLRECORD_REPLACE)
 
 HB_FUNC_STATIC(QSQLRECORD_SETGENERATED)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISBOOL(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISBOOL(2)) {
     // void setGenerated(const QString &name, bool generated)
     GET_PTR_FROM_SELF(obj);
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETNULL)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void setNull(const QString &name)
     GET_PTR_FROM_SELF(obj);
 
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETVALUE)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQVARIANT(2)) {
     // void setValue(const QString &name, const QVariant &val)
     GET_PTR_FROM_SELF(obj);
 
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QSQLRECORD_VALUE)
     if (obj != nullptr) {
       RQVARIANT(obj->value(PINT(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QVariant value(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 

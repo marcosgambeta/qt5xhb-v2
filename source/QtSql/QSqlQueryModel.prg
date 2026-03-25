@@ -36,15 +36,7 @@ CLASS QSqlQueryModel INHERIT QAbstractTableModel
    METHOD removeColumns
    METHOD rowCount
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSqlQueryModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -157,7 +149,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_SETQUERY)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQSQLDATABASEORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSQLDATABASEORNIL(2)) {
     // void setQuery(const QString &query, const QSqlDatabase &db = QSqlDatabase())
     GET_PTR_FROM_SELF(obj);
 
