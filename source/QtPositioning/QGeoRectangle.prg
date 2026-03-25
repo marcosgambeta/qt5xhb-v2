@@ -38,15 +38,7 @@ CLASS QGeoRectangle INHERIT QGeoShape
    METHOD translated
    METHOD united
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGeoRectangle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

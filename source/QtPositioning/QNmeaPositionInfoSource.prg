@@ -31,15 +31,7 @@ CLASS QNmeaPositionInfoSource INHERIT QGeoPositionInfoSource
    METHOD stopUpdates
    METHOD requestUpdate
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QNmeaPositionInfoSource
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -67,7 +59,8 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QNmeaPositionInfoSource *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-// QNmeaPositionInfoSource(QNmeaPositionInfoSource::UpdateMode updateMode, QObject *parent = nullptr)
+// QNmeaPositionInfoSource(QNmeaPositionInfoSource::UpdateMode updateMode, QObject *parent =
+// nullptr)
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

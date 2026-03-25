@@ -25,15 +25,7 @@ CLASS QGeoCircle INHERIT QGeoShape
    METHOD translate
    METHOD translated
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGeoCircle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
