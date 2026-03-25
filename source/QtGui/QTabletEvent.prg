@@ -39,15 +39,7 @@ CLASS QTabletEvent INHERIT QInputEvent
    METHOD yTilt
    METHOD z
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTabletEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -69,9 +61,9 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-// QTabletEvent(QEvent::Type type, const QPointF &pos, const QPointF &globalPos, int device, int pointerType, qreal
-    // pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z, Qt::KeyboardModifiers keyState,
-    // qint64 uniqueID)
+// QTabletEvent(QEvent::Type type, const QPointF &pos, const QPointF &globalPos, int device, int
+// pointerType, qreal pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int
+// z, Qt::KeyboardModifiers keyState, qint64 uniqueID)
 HB_FUNC_STATIC(QTABLETEVENT_NEW)
 {
   if (ISNUMPAR(13) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&

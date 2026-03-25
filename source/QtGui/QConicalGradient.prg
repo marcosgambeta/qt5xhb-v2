@@ -23,15 +23,7 @@ CLASS QConicalGradient INHERIT QGradient
    METHOD setAngle
    METHOD setCenter
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QConicalGradient
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

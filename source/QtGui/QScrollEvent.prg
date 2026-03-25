@@ -22,15 +22,7 @@ CLASS QScrollEvent INHERIT QEvent
    METHOD overshootDistance
    METHOD scrollState
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScrollEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

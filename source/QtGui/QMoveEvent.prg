@@ -21,15 +21,7 @@ CLASS QMoveEvent INHERIT QEvent
    METHOD oldPos
    METHOD pos
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMoveEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QFONTDATABASE_BOLD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       RBOOL(obj->bold(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && ISQSTRING(2) && HB_ISNUM(3)) {
 #endif
       RQFONT(obj->font(PQSTRING(1), PQSTRING(2), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISBITMAPSCALABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
 #endif
       RBOOL(obj->isBitmapScalable(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISFIXEDPITCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
 #endif
       RBOOL(obj->isFixedPitch(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSCALABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
 #endif
       RBOOL(obj->isScalable(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSMOOTHLYSCALABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
 #endif
       RBOOL(obj->isSmoothlyScalable(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ITALIC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       RBOOL(obj->italic(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QFONTDATABASE_POINTSIZES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
 #endif
       auto list = obj->pointSizes(PQSTRING(1), OPQSTRING(2, QString()));
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QFONTDATABASE_SMOOTHSIZES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       auto list = obj->smoothSizes(PQSTRING(1), PQSTRING(2));
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QFONTDATABASE_STYLES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRINGLIST(obj->styles(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       RINT(obj->weight(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WEIGHT)
 HB_FUNC_STATIC(QFONTDATABASE_ADDAPPLICATIONFONT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RINT(QFontDatabase::addApplicationFont(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

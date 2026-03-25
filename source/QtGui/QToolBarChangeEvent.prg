@@ -19,15 +19,7 @@ CLASS QToolBarChangeEvent INHERIT QEvent
    METHOD delete
    METHOD toggle
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QToolBarChangeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

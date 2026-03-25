@@ -17,15 +17,7 @@ CLASS QAccessibleStateChangeEvent INHERIT QAccessibleEvent
 
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccessibleStateChangeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

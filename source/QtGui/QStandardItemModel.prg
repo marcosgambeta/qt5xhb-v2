@@ -74,15 +74,7 @@ CLASS QStandardItemModel INHERIT QAbstractItemModel
 
    METHOD onItemChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStandardItemModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -216,7 +208,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_FINDITEMS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       auto list = obj->findItems(PQSTRING(1), HB_ISNIL(2) ? Qt::MatchExactly : PQT_MATCHFLAGS(2), OPINT(3, 0));
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");

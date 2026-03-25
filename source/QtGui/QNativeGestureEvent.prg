@@ -27,15 +27,7 @@ CLASS QNativeGestureEvent INHERIT QInputEvent
    METHOD windowPos
    METHOD screenPos
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QNativeGestureEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -57,8 +49,8 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QNativeGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-// QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos, const QPointF
-    // &screenPos, qreal value, ulong sequenceId, quint64 intArgument)
+// QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos,
+// const QPointF &screenPos, qreal value, ulong sequenceId, quint64 intArgument)
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_NEW)
 {
   if (ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) &&

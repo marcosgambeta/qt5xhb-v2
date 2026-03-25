@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
 
 HB_FUNC_STATIC(QPAINTERPATH_ADDTEXT)
 {
-  if (ISNUMPAR(3) && ISQPOINTF(1) && ISQFONT(2) && HB_ISCHAR(3)) {
+  if (ISNUMPAR(3) && ISQPOINTF(1) && ISQFONT(2) && ISQSTRING(3)) {
     // void addText(const QPointF &point, const QFont &font, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDTEXT)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQFONT(3) && HB_ISCHAR(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQFONT(3) && ISQSTRING(4)) {
     // void addText(qreal x, qreal y, const QFont &font, const QString &text)
     GET_PTR_FROM_SELF(obj);
 

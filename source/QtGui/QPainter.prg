@@ -254,28 +254,28 @@ HB_FUNC_STATIC(QPAINTER_BEGINNATIVEPAINTING)
 
 HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
 {
-  if (ISNUMPAR(3) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
+  if (ISNUMPAR(3) && ISQRECTF(1) && HB_ISNUM(2) && ISQSTRING(3)) {
     // QRectF boundingRect(const QRectF &rectangle, int flags, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQRECTF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3)));
     }
-  } else if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQSTRING(3)) {
     // QRect boundingRect(const QRect &rectangle, int flags, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQRECT(obj->boundingRect(*PQRECT(1), PINT(2), PQSTRING(3)));
     }
-  } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISCHAR(6)) {
+  } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISQSTRING(6)) {
     // QRect boundingRect(int x, int y, int w, int h, int flags, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQRECT(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6)));
     }
-  } else if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISCHAR(2) && ISQTEXTOPTIONORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQRECTF(1) && ISQSTRING(2) && ISQTEXTOPTIONORNIL(3)) {
     // QRectF boundingRect(const QRectF &rectangle, const QString &text, const QTextOption &option = QTextOption())
     GET_PTR_FROM_SELF(obj);
 
@@ -1138,7 +1138,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWSTATICTEXT)
 
 HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
 {
-  if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && ISQPOINTF(1) && ISQSTRING(2)) {
     // void drawText(const QPointF &position, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && ISQPOINT(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSTRING(2)) {
     // void drawText(const QPoint &position, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
@@ -1156,7 +1156,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISQRECTFORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && ISQSTRING(3) && ISQRECTFORNIL(4)) {
     // void drawText(const QRectF &rectangle, int flags, const QString &text, QRectF *boundingRect = nullptr)
     GET_PTR_FROM_SELF(obj);
 
@@ -1165,7 +1165,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(3, 4) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISQRECTORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && ISQRECT(1) && HB_ISNUM(2) && ISQSTRING(3) && ISQRECTORNIL(4)) {
     // void drawText(const QRect &rectangle, int flags, const QString &text, QRect *boundingRect = nullptr)
     GET_PTR_FROM_SELF(obj);
 
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSTRING(3)) {
     // void drawText(int x, int y, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
 
     RETURN_SELF();
   } else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-             HB_ISCHAR(6) && ISQRECTORNIL(7)) {
+             ISQSTRING(6) && ISQRECTORNIL(7)) {
     // void drawText(int x, int y, int width, int height, int flags, const QString &text, QRect *boundingRect = nullptr)
     GET_PTR_FROM_SELF(obj);
 
@@ -1193,7 +1193,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISCHAR(2) && ISQTEXTOPTIONORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQRECTF(1) && ISQSTRING(2) && ISQTEXTOPTIONORNIL(3)) {
     // void drawText(const QRectF &rectangle, const QString &text, const QTextOption &option = QTextOption())
     GET_PTR_FROM_SELF(obj);
 

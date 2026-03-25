@@ -29,15 +29,7 @@ CLASS QDropEvent INHERIT QEvent,QMimeSource
    METHOD setDropAction
    METHOD source
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDropEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -61,8 +53,8 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-// QDropEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
-    // Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop)
+// QDropEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons
+// buttons, Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop)
 HB_FUNC_STATIC(QDROPEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISNUMORNIL(6)) {

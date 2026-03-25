@@ -24,15 +24,7 @@ CLASS QTouchEvent INHERIT QInputEvent
    METHOD touchPointStates
    METHOD device
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTouchEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

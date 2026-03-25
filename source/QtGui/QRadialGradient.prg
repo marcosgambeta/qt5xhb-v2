@@ -29,15 +29,7 @@ CLASS QRadialGradient INHERIT QGradient
    METHOD setFocalRadius
    METHOD setRadius
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRadialGradient
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

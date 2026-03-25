@@ -20,15 +20,7 @@ CLASS QAccessibleTextCursorEvent INHERIT QAccessibleEvent
    METHOD setCursorPosition
    METHOD cursorPosition
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccessibleTextCursorEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

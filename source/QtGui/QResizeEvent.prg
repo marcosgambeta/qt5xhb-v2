@@ -21,15 +21,7 @@ CLASS QResizeEvent INHERIT QEvent
    METHOD size
    METHOD oldSize
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QResizeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -42,15 +42,7 @@ CLASS QTextBlockFormat INHERIT QTextFormat
    METHOD headingLevel
    METHOD setHeadingLevel
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextBlockFormat
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE)
     if (obj != nullptr) {
       RBOOL(obj->addShaderFromSourceCode(PQOPENGLSHADER_SHADERTYPE(1), *PQBYTEARRAY(2)));
     }
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QString &source)
     GET_PTR_FROM_SELF(obj);
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       RBOOL(obj->addShaderFromSourceFile(PQOPENGLSHADER_SHADERTYPE(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

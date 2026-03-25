@@ -21,15 +21,7 @@ CLASS QFileOpenEvent INHERIT QEvent
    METHOD openFile
    METHOD url
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFileOpenEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

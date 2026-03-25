@@ -27,15 +27,7 @@ CLASS QKeyEvent INHERIT QInputEvent
    METHOD nativeVirtualKey
    METHOD text
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QKeyEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -57,11 +49,11 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QKeyEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-// QKeyEvent(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString &text = QString(), bool
-    // autorep = false, ushort count = 1)
+// QKeyEvent(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString &text = QString(),
+// bool autorep = false, ushort count = 1)
 HB_FUNC_STATIC(QKEYEVENT_NEW)
 {
-  if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISCHARORNIL(4) && ISLOGORNIL(5) &&
+  if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTRINGORNIL(4) && ISLOGORNIL(5) &&
       ISNUMORNIL(6)) {
     auto obj = new QKeyEvent(PQEVENT_TYPE(1), PINT(2), PQT_KEYBOARDMODIFIERS(3), OPQSTRING(4, QString()),
                              OPBOOL(5, false), OPUSHORT(6, 1));

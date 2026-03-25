@@ -22,15 +22,7 @@ CLASS QRegExpValidator INHERIT QValidator
    METHOD setRegExp
    METHOD validate
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRegExpValidator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -122,7 +114,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_VALIDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISNUM(2)) {
 #endif
       QString par1 = hb_parc(1);
       int par2;

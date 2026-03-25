@@ -28,15 +28,7 @@ CLASS QAccessibleTableModelChangeEvent INHERIT QAccessibleEvent
    METHOD lastRow
    METHOD lastColumn
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccessibleTableModelChangeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

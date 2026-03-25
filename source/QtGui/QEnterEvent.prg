@@ -29,15 +29,7 @@ CLASS QEnterEvent INHERIT QEvent
    METHOD windowPos
    METHOD screenPos
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QEnterEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

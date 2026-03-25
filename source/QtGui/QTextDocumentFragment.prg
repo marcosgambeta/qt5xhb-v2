@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromPlainText(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,10 +162,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
 
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QTextDocumentFragment fromHtml(const QString &html)
     RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromHtml(PQSTRING(1)));
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTDOCUMENT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQTEXTDOCUMENT(2)) {
     // static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)
     RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromHtml(PQSTRING(1), PQTEXTDOCUMENT(2)));
   } else {

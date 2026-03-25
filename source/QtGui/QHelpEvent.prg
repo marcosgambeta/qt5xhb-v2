@@ -25,15 +25,7 @@ CLASS QHelpEvent INHERIT QEvent
    METHOD x
    METHOD y
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHelpEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

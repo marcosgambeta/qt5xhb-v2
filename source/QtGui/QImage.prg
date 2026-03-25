@@ -82,15 +82,7 @@ CLASS QImage INHERIT QPaintDevice
    METHOD toVariant
    METHOD fromVariant
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QImage
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -130,7 +122,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
     // QImage(int width, int height, QImage::Format format)
     auto obj = new QImage(PINT(1), PINT(2), PQIMAGE_FORMAT(3));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISCHARORNIL(2)) {
     // QImage(const QString &fileName, const char *format = nullptr)
     auto obj = new QImage(PQSTRING(1), OPCONSTCHAR(2, nullptr));
     Qt5xHb::returnNewObject(obj, true);
@@ -287,7 +279,7 @@ HB_FUNC_STATIC(QIMAGE_COLORTABLE)
 #endif
       auto list = obj->colorTable();
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list) {
+      for (auto item : list) {
         auto pItem = hb_itemPutNI(nullptr, item);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -606,7 +598,7 @@ HB_FUNC_STATIC(QIMAGE_ISNULL)
 
 HB_FUNC_STATIC(QIMAGE_LOAD)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISCHARORNIL(2)) {
     // bool load(const QString &fileName, const char *format = nullptr)
     GET_PTR_FROM_SELF(obj);
 
@@ -762,7 +754,7 @@ HB_FUNC_STATIC(QIMAGE_RGBSWAPPED)
 
 HB_FUNC_STATIC(QIMAGE_SAVE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     // bool save(const QString &fileName, const char *format = nullptr, int quality = -1) const
     GET_PTR_FROM_SELF(obj);
 
@@ -981,7 +973,7 @@ HB_FUNC_STATIC(QIMAGE_SETTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       obj->setText(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1039,7 +1031,7 @@ HB_FUNC_STATIC(QIMAGE_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+    if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
 #endif
       RQSTRING(obj->text(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

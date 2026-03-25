@@ -22,15 +22,7 @@ CLASS QShortcutEvent INHERIT QEvent
    METHOD shortcutId
    METHOD isAmbiguous
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QShortcutEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -23,15 +23,7 @@ CLASS QInputMethodEvent INHERIT QEvent
    METHOD replacementStart
    METHOD setCommitString
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QInputMethodEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -154,7 +146,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_SETCOMMITSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       obj->setCommitString(PQSTRING(1), OPINT(2, 0), OPINT(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

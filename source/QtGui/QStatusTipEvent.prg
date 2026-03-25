@@ -19,15 +19,7 @@ CLASS QStatusTipEvent INHERIT QEvent
    METHOD delete
    METHOD tip
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStatusTipEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -52,7 +44,7 @@ RETURN
 // QStatusTipEvent(const QString &tip)
 HB_FUNC_STATIC(QSTATUSTIPEVENT_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     auto obj = new QStatusTipEvent(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {

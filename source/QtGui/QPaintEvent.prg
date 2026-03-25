@@ -22,15 +22,7 @@ CLASS QPaintEvent INHERIT QEvent
    METHOD rect
    METHOD region
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPaintEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

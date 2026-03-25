@@ -21,15 +21,7 @@ CLASS QAccessibleTextSelectionEvent INHERIT QAccessibleTextCursorEvent
    METHOD selectionStart
    METHOD selectionEnd
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccessibleTextSelectionEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -27,15 +27,7 @@ CLASS QAccessibleApplication INHERIT QAccessibleObject
    METHOD text
    METHOD role
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccessibleApplication
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

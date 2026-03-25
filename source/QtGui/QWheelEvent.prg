@@ -33,15 +33,7 @@ CLASS QWheelEvent INHERIT QInputEvent
    METHOD globalPosF
    METHOD buttons
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWheelEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_AVERAGECHARWIDTH)
 
 HB_FUNC_STATIC(QFONTMETRICSF_BOUNDINGRECT)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QRectF boundingRect(const QString &text) const
     GET_PTR_FROM_SELF(obj);
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_BOUNDINGRECT)
     if (obj != nullptr) {
       RQRECTF(obj->boundingRect(*PQCHAR(1)));
     }
-  } else if (ISBETWEEN(3, 5) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(3, 5) && ISQRECTF(1) && HB_ISNUM(2) && ISQSTRING(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // QRectF boundingRect(const QRectF &rect, int flags, const QString &text, int tabStops = 0, int *tabArray =
     // nullptr) const
     GET_PTR_FROM_SELF(obj);
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_ELIDEDTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(3, 4) && ISQSTRING(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
       RQSTRING(obj->elidedText(PQSTRING(1), PQT_TEXTELIDEMODE(2), PQREAL(3), OPINT(4, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && ISQSTRING(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       int par4;
       RQSIZEF(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_TIGHTBOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQRECTF(obj->tightBoundingRect(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQREAL(obj->width(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

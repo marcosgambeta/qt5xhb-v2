@@ -33,15 +33,7 @@ CLASS QTextTableFormat INHERIT QTextFrameFormat
    METHOD setHeaderRowCount
    METHOD headerRowCount
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextTableFormat
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

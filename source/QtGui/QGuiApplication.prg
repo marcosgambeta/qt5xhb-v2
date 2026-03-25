@@ -132,15 +132,7 @@ CLASS QGuiApplication INHERIT QCoreApplication
    METHOD onScreenAdded
    METHOD onScreenRemoved
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGuiApplication
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -173,7 +165,8 @@ RETURN
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGuiApplication *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // QGuiApplication(int &argc, char ** argv)
-HB_FUNC_STATIC(QGUIAPPLICATION_NEW)
+HB_FUNC_STATIC(
+                                                                                                                                                        QGUIAPPLICATION_NEW)
 {
   int argc;
   char **argv;
@@ -597,7 +590,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
 HB_FUNC_STATIC(QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QGuiApplication::setApplicationDisplayName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -933,7 +926,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setDesktopFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QPICTUREIO_NEW)
     // QPictureIO(QIODevice *ioDevice, const char *format)
     auto obj = new QPictureIO(PQIODEVICE(1), PCONSTCHAR(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISCHAR(2)) {
     // QPictureIO(const QString &fileName, const char *format)
     auto obj = new QPictureIO(PQSTRING(1), PCONSTCHAR(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -491,7 +491,7 @@ HB_FUNC_STATIC(QPICTUREIO_WRITE)
 
 HB_FUNC_STATIC(QPICTUREIO_PICTUREFORMAT)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QByteArray pictureFormat(const QString &fileName)
     RQBYTEARRAY(QPictureIO::pictureFormat(PQSTRING(1)));
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {

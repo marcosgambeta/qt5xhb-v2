@@ -21,15 +21,7 @@ CLASS QActionEvent INHERIT QEvent
    METHOD action
    METHOD before
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QActionEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -28,15 +28,7 @@ CLASS QTextFrame INHERIT QTextObject
    METHOD childFrames
    METHOD parentFrame
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

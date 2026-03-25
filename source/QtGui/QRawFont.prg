@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
     // QRawFont()
     auto obj = new QRawFont();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQSTRING(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // QRawFont(const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference =
     // QFont::PreferDefaultHinting)
     auto obj =
@@ -245,11 +245,11 @@ HB_FUNC_STATIC(QRAWFONT_GLYPHINDEXESFORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       auto list = obj->glyphIndexesForString(PQSTRING(1));
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list) {
+      for (auto item : list) {
         auto pItem = hb_itemPutNI(nullptr, item);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->loadFromFile(PQSTRING(1), PQREAL(2), PQFONT_HINTINGPREFERENCE(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

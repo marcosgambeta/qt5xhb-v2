@@ -20,15 +20,7 @@ CLASS QExposeEvent INHERIT QEvent
    METHOD delete
    METHOD region
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QExposeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

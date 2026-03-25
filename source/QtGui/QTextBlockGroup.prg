@@ -15,15 +15,7 @@
 
 CLASS QTextBlockGroup INHERIT QTextObject
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextBlockGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

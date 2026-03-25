@@ -20,15 +20,7 @@ CLASS QWindowStateChangeEvent INHERIT QEvent
    METHOD oldState
    METHOD isOverride
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWindowStateChangeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

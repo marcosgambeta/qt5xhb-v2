@@ -28,15 +28,7 @@ CLASS QTextTableCellFormat INHERIT QTextCharFormat
    METHOD rightPadding
    METHOD setPadding
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextTableCellFormat
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

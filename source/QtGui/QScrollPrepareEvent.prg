@@ -28,15 +28,7 @@ CLASS QScrollPrepareEvent INHERIT QEvent
    METHOD setContentPosRange
    METHOD setContentPos
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScrollPrepareEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

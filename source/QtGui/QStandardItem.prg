@@ -146,11 +146,11 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW)
     // QStandardItem()
     auto obj = new QStandardItem();
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QStandardItem(const QString &text)
     auto obj = new QStandardItem(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     // QStandardItem(const QIcon &icon, const QString &text)
     auto obj = new QStandardItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETTOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETSTATUSTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setStatusTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETWHATSTHIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -651,7 +651,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETACCESSIBLETEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setAccessibleText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETACCESSIBLEDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setAccessibleDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -30,15 +30,7 @@ CLASS QTextList INHERIT QTextBlockGroup
    METHOD setFormat
    METHOD format
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextList
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

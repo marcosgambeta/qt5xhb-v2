@@ -47,15 +47,7 @@ CLASS QTextFrameFormat INHERIT QTextFormat
    METHOD setPageBreakPolicy
    METHOD pageBreakPolicy
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextFrameFormat
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

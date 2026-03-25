@@ -22,15 +22,7 @@ CLASS QInputMethodQueryEvent INHERIT QEvent
    METHOD setValue
    METHOD value
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QInputMethodQueryEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

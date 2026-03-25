@@ -23,15 +23,7 @@ CLASS QRegularExpressionValidator INHERIT QValidator
 
    METHOD onRegularExpressionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRegularExpressionValidator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

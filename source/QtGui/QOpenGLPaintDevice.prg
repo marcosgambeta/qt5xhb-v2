@@ -34,15 +34,7 @@ CLASS QOpenGLPaintDevice INHERIT QPaintDevice
    METHOD paintFlipped
    METHOD ensureActiveTarget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLPaintDevice
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -21,15 +21,7 @@ CLASS QAccessibleValueChangeEvent INHERIT QAccessibleEvent
    METHOD setValue
    METHOD value
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccessibleValueChangeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

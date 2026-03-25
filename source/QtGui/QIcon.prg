@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QICON_NEW)
     // QIcon(const QIcon &other)
     auto obj = new QIcon(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QIcon(const QString &fileName)
     auto obj = new QIcon(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISQSIZEORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && ISQSTRING(1) && ISQSIZEORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->addFile(PQSTRING(1), HB_ISNIL(2) ? QSize() : *PQSIZE(2), HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3),
                    HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4));
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
 HB_FUNC_STATIC(QICON_FROMTHEME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQICONORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQICONORNIL(2)) {
 #endif
     RQICON(QIcon::fromTheme(PQSTRING(1), HB_ISNIL(2) ? QIcon() : *PQICON(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QICON_FROMTHEME)
 HB_FUNC_STATIC(QICON_HASTHEMEICON)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RBOOL(QIcon::hasThemeIcon(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QICON_HASTHEMEICON)
 HB_FUNC_STATIC(QICON_SETTHEMENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QIcon::setThemeName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QICON_SETFALLBACKTHEMENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QIcon::setFallbackThemeName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -22,15 +22,7 @@ CLASS QDragMoveEvent INHERIT QDropEvent
    METHOD answerRect
    METHOD ignore
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDragMoveEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -53,7 +45,7 @@ RETURN
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
 
 // QDragMoveEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
-    // Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove)
+// Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove)
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISNUMORNIL(6)) {

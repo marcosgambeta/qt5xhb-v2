@@ -21,15 +21,7 @@ CLASS QFocusEvent INHERIT QEvent
    METHOD lostFocus
    METHOD reason
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFocusEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

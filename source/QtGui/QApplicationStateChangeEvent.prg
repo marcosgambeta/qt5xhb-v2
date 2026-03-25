@@ -18,15 +18,7 @@ CLASS QApplicationStateChangeEvent INHERIT QEvent
    METHOD new
    METHOD applicationState
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QApplicationStateChangeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

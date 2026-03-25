@@ -23,15 +23,7 @@ CLASS QLinearGradient INHERIT QGradient
    METHOD setStart
    METHOD start
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLinearGradient
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

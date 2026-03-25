@@ -24,15 +24,7 @@ CLASS QBitmap INHERIT QPixmap
    METHOD toVariant
    METHOD fromVariant
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBitmap
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -74,7 +66,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
     // QBitmap(const QSize &size)
     auto obj = new QBitmap(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISCHARORNIL(2)) {
     // QBitmap(const QString &fileName, const char *format = nullptr)
     auto obj = new QBitmap(PQSTRING(1), OPCONSTCHAR(2, nullptr));
     Qt5xHb::returnNewObject(obj, true);

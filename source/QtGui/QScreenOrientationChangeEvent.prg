@@ -21,15 +21,7 @@ CLASS QScreenOrientationChangeEvent INHERIT QEvent
    METHOD screen
    METHOD orientation
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScreenOrientationChangeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

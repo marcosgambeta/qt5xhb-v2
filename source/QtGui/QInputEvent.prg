@@ -18,15 +18,7 @@ CLASS QInputEvent INHERIT QEvent
    METHOD delete
    METHOD modifiers
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QInputEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

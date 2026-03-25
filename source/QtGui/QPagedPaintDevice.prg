@@ -28,15 +28,7 @@ CLASS QPagedPaintDevice INHERIT QPaintDevice
    METHOD setPageOrientation
    METHOD setPageMargins
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPagedPaintDevice
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

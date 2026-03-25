@@ -72,11 +72,11 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
     // QKeySequence()
     auto obj = new QKeySequence();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QKeySequence(const QString &key)
     auto obj = new QKeySequence(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISNUM(2)) {
     // QKeySequence(const QString &key, QKeySequence::SequenceFormat format)
     auto obj = new QKeySequence(PQSTRING(1), PQKEYSEQUENCE_SEQUENCEFORMAT(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
 HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
 #endif
     RQKEYSEQUENCE(QKeySequence::fromString(PQSTRING(1),
                                            HB_ISNIL(2) ? QKeySequence::PortableText : PQKEYSEQUENCE_SEQUENCEFORMAT(2)));
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
 HB_FUNC_STATIC(QKEYSEQUENCE_MNEMONIC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RQKEYSEQUENCE(QKeySequence::mnemonic(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

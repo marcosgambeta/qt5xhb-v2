@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
     if (obj != nullptr) {
       RQRECT(obj->boundingRect(*PQCHAR(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QRect boundingRect(const QString &text) const
     GET_PTR_FROM_SELF(obj);
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
       RQRECT(obj->boundingRect(PQSTRING(1)));
     }
   } else if (ISBETWEEN(6, 8) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-             HB_ISCHAR(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
+             ISQSTRING(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
     // QRect boundingRect(int x, int y, int width, int height, int flags, const QString &text, int tabStops = 0, int
     // *tabArray = nullptr) const
     GET_PTR_FROM_SELF(obj);
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
       RQRECT(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6), OPINT(7, 0), &par8));
       hb_storni(par8, 8);
     }
-  } else if (ISBETWEEN(3, 5) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(3, 5) && ISQRECT(1) && HB_ISNUM(2) && ISQSTRING(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // QRect boundingRect(const QRect &rect, int flags, const QString &text, int tabStops = 0, int *tabArray = nullptr)
     // const
     GET_PTR_FROM_SELF(obj);
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QFONTMETRICS_ELIDEDTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(3, 4) && ISQSTRING(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
       RQSTRING(obj->elidedText(PQSTRING(1), PQT_TEXTELIDEMODE(2), PINT(3), OPINT(4, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QFONTMETRICS_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && ISQSTRING(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       int par4;
       RQSIZE(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QFONTMETRICS_TIGHTBOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQRECT(obj->tightBoundingRect(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QFONTMETRICS_UNDERLINEPOS)
 
 HB_FUNC_STATIC(QFONTMETRICS_WIDTH)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // int width(const QString &text, int len = -1) const
     GET_PTR_FROM_SELF(obj);
 
