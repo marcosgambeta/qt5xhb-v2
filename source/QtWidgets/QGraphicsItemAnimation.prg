@@ -42,15 +42,7 @@ CLASS QGraphicsItemAnimation INHERIT QObject
    METHOD yTranslationAt
    METHOD setStep
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsItemAnimation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

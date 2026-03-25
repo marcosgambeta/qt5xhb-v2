@@ -44,15 +44,7 @@ CLASS QAbstractAudioOutput INHERIT QObject
    METHOD onStateChanged
    METHOD onNotify
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractAudioOutput
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

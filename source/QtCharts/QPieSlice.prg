@@ -77,15 +77,7 @@ CLASS QPieSlice INHERIT QObject
    METHOD onStartAngleChanged
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPieSlice
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

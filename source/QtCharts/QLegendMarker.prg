@@ -47,15 +47,7 @@ CLASS QLegendMarker INHERIT QObject
    METHOD onShapeChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLegendMarker
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

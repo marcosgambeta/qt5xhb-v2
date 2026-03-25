@@ -38,15 +38,7 @@ CLASS QSystemTrayIcon INHERIT QObject
    METHOD onActivated
    METHOD onMessageClicked
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSystemTrayIcon
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

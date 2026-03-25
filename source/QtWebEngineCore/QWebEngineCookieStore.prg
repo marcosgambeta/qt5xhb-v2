@@ -25,15 +25,7 @@ CLASS QWebEngineCookieStore INHERIT QObject
    METHOD onCookieAdded
    METHOD onCookieRemoved
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebEngineCookieStore
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

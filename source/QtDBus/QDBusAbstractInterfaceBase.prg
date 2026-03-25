@@ -17,15 +17,7 @@ CLASS QDBusAbstractInterfaceBase INHERIT QObject
 
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDBusAbstractInterfaceBase
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

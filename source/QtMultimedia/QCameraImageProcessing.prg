@@ -35,15 +35,7 @@ CLASS QCameraImageProcessing INHERIT QObject
    METHOD setColorFilter
    METHOD isColorFilterSupported
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraImageProcessing
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -27,15 +27,7 @@ CLASS QInAppTransaction INHERIT QObject
    METHOD finalize
    METHOD platformProperty
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QInAppTransaction
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

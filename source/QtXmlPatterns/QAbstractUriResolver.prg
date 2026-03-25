@@ -19,15 +19,7 @@ CLASS QAbstractUriResolver INHERIT QObject
    METHOD delete
    METHOD resolve
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractUriResolver
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -22,15 +22,7 @@ CLASS QDBusPendingCallWatcher INHERIT QObject,QDBusPendingCall
 
    METHOD onFinished
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDBusPendingCallWatcher
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

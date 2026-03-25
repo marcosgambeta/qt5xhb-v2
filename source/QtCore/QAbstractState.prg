@@ -24,15 +24,7 @@ CLASS QAbstractState INHERIT QObject
    METHOD onEntered
    METHOD onExited
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractState
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

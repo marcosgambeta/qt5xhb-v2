@@ -61,15 +61,7 @@ CLASS QWebEnginePage INHERIT QObject
    METHOD onUrlChanged
    METHOD onIconUrlChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebEnginePage
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

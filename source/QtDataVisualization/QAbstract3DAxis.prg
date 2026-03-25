@@ -47,15 +47,7 @@ CLASS QAbstract3DAxis INHERIT QObject
    METHOD onTitleVisibilityChanged
    METHOD onTitleFixedChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstract3DAxis
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

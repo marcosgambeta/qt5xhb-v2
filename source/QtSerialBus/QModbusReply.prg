@@ -25,15 +25,7 @@ CLASS QModbusReply INHERIT QObject
    METHOD onFinished
    METHOD onErrorOccurred
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QModbusReply
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

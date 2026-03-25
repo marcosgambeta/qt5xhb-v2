@@ -37,15 +37,7 @@ CLASS QWinThumbnailToolButton INHERIT QObject
    METHOD onClicked
    METHOD onChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWinThumbnailToolButton
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

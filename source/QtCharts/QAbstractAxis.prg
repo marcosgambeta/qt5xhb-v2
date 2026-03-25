@@ -105,15 +105,7 @@ CLASS QAbstractAxis INHERIT QObject
    METHOD onTitleVisibleChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractAxis
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

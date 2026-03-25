@@ -51,15 +51,7 @@ CLASS QTimeLine INHERIT QObject
    METHOD onStateChanged
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTimeLine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

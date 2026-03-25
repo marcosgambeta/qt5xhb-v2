@@ -30,15 +30,7 @@ CLASS QBBSystemLocaleData INHERIT QObject
    METHOD readMeasurementSystem
    METHOD readHourFormat
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBBSystemLocaleData
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

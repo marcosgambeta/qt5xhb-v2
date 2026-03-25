@@ -35,15 +35,7 @@ CLASS QOpenGLShaderProgram INHERIT QObject
    METHOD patchVertexCount
    METHOD hasOpenGLShaderPrograms
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLShaderProgram
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -31,15 +31,7 @@ CLASS QSessionManager INHERIT QObject
    METHOD isPhase2
    METHOD requestPhase2
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSessionManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

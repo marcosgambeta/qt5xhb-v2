@@ -33,15 +33,7 @@ CLASS QQmlContext INHERIT QObject
    METHOD setContextObject
    METHOD setContextProperty
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQmlContext
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

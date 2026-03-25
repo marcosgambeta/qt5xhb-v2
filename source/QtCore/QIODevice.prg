@@ -51,15 +51,7 @@ CLASS QIODevice INHERIT QObject
    METHOD onReadChannelFinished
    METHOD onReadyRead
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QIODevice
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

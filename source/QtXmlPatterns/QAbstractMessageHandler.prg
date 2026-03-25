@@ -18,15 +18,7 @@ CLASS QAbstractMessageHandler INHERIT QObject
    METHOD delete
    METHOD message
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractMessageHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

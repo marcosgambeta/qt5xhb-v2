@@ -32,15 +32,7 @@ CLASS QSignalMapper INHERIT QObject
    METHOD onMappedString
    METHOD onMappedWidget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSignalMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

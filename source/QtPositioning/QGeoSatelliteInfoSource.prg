@@ -33,15 +33,7 @@ CLASS QGeoSatelliteInfoSource INHERIT QObject
    METHOD onRequestTimeout
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGeoSatelliteInfoSource
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

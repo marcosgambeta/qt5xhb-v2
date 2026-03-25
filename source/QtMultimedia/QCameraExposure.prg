@@ -55,15 +55,7 @@ CLASS QCameraExposure INHERIT QObject
    METHOD onShutterSpeedChanged
    METHOD onShutterSpeedRangeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraExposure
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

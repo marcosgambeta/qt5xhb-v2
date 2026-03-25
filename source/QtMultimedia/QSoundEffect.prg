@@ -46,15 +46,7 @@ CLASS QSoundEffect INHERIT QObject
    METHOD onStatusChanged
    METHOD onCategoryChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSoundEffect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

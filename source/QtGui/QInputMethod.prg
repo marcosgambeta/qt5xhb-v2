@@ -41,15 +41,7 @@ CLASS QInputMethod INHERIT QObject
    METHOD onLocaleChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QInputMethod
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -40,15 +40,7 @@ CLASS QAbstractAnimation INHERIT QObject
    METHOD onFinished
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractAnimation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

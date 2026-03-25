@@ -31,15 +31,7 @@ CLASS QNetworkConfigurationManager INHERIT QObject
    METHOD onOnlineStateChanged
    METHOD onUpdateCompleted
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QNetworkConfigurationManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -19,15 +19,7 @@ CLASS QWebEngineUrlSchemeHandler INHERIT QObject
    METHOD delete
    METHOD requestStarted
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebEngineUrlSchemeHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

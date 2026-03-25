@@ -37,15 +37,7 @@ CLASS QQmlComponent INHERIT QObject
    METHOD onProgressChanged
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQmlComponent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

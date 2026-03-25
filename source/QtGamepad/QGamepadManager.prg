@@ -35,15 +35,7 @@ CLASS QGamepadManager INHERIT QObject
    METHOD onAxisConfigured
    METHOD onConfigurationCanceled
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGamepadManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

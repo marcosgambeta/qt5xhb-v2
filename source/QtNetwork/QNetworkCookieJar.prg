@@ -24,15 +24,7 @@ CLASS QNetworkCookieJar INHERIT QObject
    METHOD updateCookie
    METHOD deleteCookie
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QNetworkCookieJar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -28,15 +28,7 @@ CLASS QWinThumbnailToolBar INHERIT QObject
    METHOD count
    METHOD clear
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWinThumbnailToolBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

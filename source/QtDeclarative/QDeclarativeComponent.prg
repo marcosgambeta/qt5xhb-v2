@@ -39,15 +39,7 @@ CLASS QDeclarativeComponent INHERIT QObject
    METHOD onProgressChanged
    METHOD onStatusChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDeclarativeComponent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

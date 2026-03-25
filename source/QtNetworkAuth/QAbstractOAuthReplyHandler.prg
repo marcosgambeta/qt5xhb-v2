@@ -22,15 +22,7 @@ CLASS QAbstractOAuthReplyHandler INHERIT QObject
    METHOD onCallbackDataReceived
    METHOD onReplyDataReceived
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractOAuthReplyHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

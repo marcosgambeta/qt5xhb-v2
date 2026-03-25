@@ -108,15 +108,7 @@ CLASS QTextDocument INHERIT QObject
    METHOD onBlockCountChanged
    METHOD onDocumentLayoutChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextDocument
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

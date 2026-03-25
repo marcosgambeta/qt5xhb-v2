@@ -29,15 +29,7 @@ CLASS QOpenGLDebugLogger INHERIT QObject
 
    METHOD onMessageLogged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLDebugLogger
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

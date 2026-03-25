@@ -50,15 +50,7 @@ CLASS QHelpEngineCore INHERIT QObject
    METHOD onSetupStarted
    METHOD onWarning
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHelpEngineCore
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

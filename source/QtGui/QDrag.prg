@@ -38,15 +38,7 @@ CLASS QDrag INHERIT QObject
    METHOD onActionChanged
    METHOD onTargetChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDrag
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

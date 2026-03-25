@@ -76,15 +76,7 @@ CLASS QSensor INHERIT QObject
    METHOD onEfficientBufferSizeChanged
    METHOD onBufferSizeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSensor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

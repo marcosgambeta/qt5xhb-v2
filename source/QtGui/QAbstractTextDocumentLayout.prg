@@ -38,15 +38,7 @@ CLASS QAbstractTextDocumentLayout INHERIT QObject
    METHOD onUpdate
    METHOD onUpdateBlock
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractTextDocumentLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

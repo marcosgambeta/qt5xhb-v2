@@ -23,15 +23,7 @@ CLASS QVideoProbe INHERIT QObject
    METHOD onFlush
    METHOD onVideoFrameProbed
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVideoProbe
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

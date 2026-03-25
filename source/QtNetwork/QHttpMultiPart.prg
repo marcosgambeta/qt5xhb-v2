@@ -23,15 +23,7 @@ CLASS QHttpMultiPart INHERIT QObject
    METHOD setBoundary
    METHOD setContentType
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHttpMultiPart
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -71,15 +71,7 @@ CLASS QAbstractItemModel INHERIT QObject
    METHOD onRowsMoved
    METHOD onRowsRemoved
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractItemModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

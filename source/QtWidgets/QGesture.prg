@@ -27,15 +27,7 @@ CLASS QGesture INHERIT QObject
    METHOD state
    METHOD unsetHotSpot
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGesture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

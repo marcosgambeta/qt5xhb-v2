@@ -23,15 +23,7 @@ CLASS QInAppProduct INHERIT QObject
    METHOD description
    METHOD purchase
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QInAppProduct
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

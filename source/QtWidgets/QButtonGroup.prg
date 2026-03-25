@@ -42,15 +42,7 @@ CLASS QButtonGroup INHERIT QObject
    METHOD onIdReleased
    METHOD onIdToggled
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QButtonGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

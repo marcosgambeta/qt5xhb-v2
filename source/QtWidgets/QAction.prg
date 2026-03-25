@@ -160,15 +160,7 @@ CLASS QAction INHERIT QObject
    METHOD onToggled
    METHOD onTriggered
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAction
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

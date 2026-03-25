@@ -45,15 +45,7 @@ CLASS QTextToSpeech INHERIT QObject
    METHOD onVolumeChanged1
    METHOD onVolumeChanged2
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextToSpeech
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -27,15 +27,7 @@ CLASS QOpenGLShader INHERIT QObject
    METHOD shaderId
    METHOD hasOpenGLShaders
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLShader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

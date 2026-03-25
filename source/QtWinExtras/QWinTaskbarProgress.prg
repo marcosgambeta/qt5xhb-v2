@@ -43,15 +43,7 @@ CLASS QWinTaskbarProgress INHERIT QObject
    METHOD onPausedChanged
    METHOD onStoppedChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWinTaskbarProgress
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

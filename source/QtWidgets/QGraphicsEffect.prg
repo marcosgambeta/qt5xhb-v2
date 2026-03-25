@@ -25,15 +25,7 @@ CLASS QGraphicsEffect INHERIT QObject
 
    METHOD onEnabledChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsEffect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

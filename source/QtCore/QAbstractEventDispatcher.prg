@@ -39,15 +39,7 @@ CLASS QAbstractEventDispatcher INHERIT QObject
    METHOD onAboutToBlock
    METHOD onAwake
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractEventDispatcher
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

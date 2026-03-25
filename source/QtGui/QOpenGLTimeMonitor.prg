@@ -26,15 +26,7 @@ CLASS QOpenGLTimeMonitor INHERIT QObject
    METHOD isResultAvailable
    METHOD reset
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLTimeMonitor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

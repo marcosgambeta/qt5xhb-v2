@@ -24,15 +24,7 @@ CLASS QOpenGLVertexArrayObject INHERIT QObject
    METHOD bind
    METHOD release
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLVertexArrayObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

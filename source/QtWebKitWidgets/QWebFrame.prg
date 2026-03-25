@@ -82,15 +82,7 @@ CLASS QWebFrame INHERIT QObject
    METHOD onTitleChanged
    METHOD onUrlChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

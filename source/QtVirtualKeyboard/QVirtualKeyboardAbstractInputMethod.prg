@@ -39,15 +39,7 @@ CLASS QVirtualKeyboardAbstractInputMethod INHERIT QObject
    METHOD onSelectionListChanged
    METHOD onSelectionListsChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVirtualKeyboardAbstractInputMethod
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

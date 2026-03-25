@@ -22,15 +22,7 @@ CLASS QGraphicsAnchor INHERIT QObject
    METHOD spacing
    METHOD unsetSpacing
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsAnchor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

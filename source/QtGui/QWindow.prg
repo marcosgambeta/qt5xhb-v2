@@ -150,15 +150,7 @@ CLASS QWindow INHERIT QObject,QSurface
    METHOD onXChanged
    METHOD onYChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWindow
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

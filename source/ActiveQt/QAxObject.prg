@@ -34,15 +34,7 @@ CLASS QAxObject INHERIT QObject,QAxBase
    METHOD setPropertyWritable
    METHOD verbs
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAxObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

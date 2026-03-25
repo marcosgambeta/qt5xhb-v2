@@ -29,15 +29,7 @@ CLASS QAbstract3DInputHandler INHERIT QObject
    METHOD onPositionChanged
    METHOD onSceneChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstract3DInputHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

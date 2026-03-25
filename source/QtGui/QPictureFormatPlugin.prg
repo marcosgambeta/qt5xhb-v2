@@ -20,15 +20,7 @@ CLASS QPictureFormatPlugin INHERIT QObject
    METHOD savePicture
    METHOD installIOHandler
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPictureFormatPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

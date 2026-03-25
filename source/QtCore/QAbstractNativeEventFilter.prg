@@ -18,15 +18,7 @@ CLASS QAbstractNativeEventFilter INHERIT QObject
    METHOD delete
    METHOD nativeEventFilter
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractNativeEventFilter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

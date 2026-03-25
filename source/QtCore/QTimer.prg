@@ -29,15 +29,7 @@ CLASS QTimer INHERIT QObject
 
    METHOD onTimeout
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTimer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

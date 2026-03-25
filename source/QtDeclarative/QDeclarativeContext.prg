@@ -32,15 +32,7 @@ CLASS QDeclarativeContext INHERIT QObject
    METHOD setContextObject
    METHOD setContextProperty
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDeclarativeContext
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

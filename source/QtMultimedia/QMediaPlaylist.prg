@@ -55,15 +55,7 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
    METHOD onMediaRemoved
    METHOD onPlaybackModeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaPlaylist
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

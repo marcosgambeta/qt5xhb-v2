@@ -22,15 +22,7 @@ CLASS QAccessible INHERIT QObject
    METHOD setRootObject
    METHOD cleanup
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccessible
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

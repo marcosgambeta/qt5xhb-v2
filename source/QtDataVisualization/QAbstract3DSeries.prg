@@ -70,15 +70,7 @@ CLASS QAbstract3DSeries INHERIT QObject
    METHOD onUserDefinedMeshChanged
    METHOD onVisibilityChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstract3DSeries
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

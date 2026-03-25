@@ -28,15 +28,7 @@ CLASS QLibrary INHERIT QObject
    METHOD loadHints
    METHOD isLibrary
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLibrary
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

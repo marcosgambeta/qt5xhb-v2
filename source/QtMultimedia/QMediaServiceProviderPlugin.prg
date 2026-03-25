@@ -20,15 +20,7 @@ CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryIn
    METHOD create
    METHOD release
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaServiceProviderPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

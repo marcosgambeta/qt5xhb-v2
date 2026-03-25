@@ -170,15 +170,7 @@ CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
    METHOD onYChanged
    METHOD onZChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

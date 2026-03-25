@@ -51,15 +51,7 @@ CLASS QUndoStack INHERIT QObject
    METHOD onRedoTextChanged
    METHOD onUndoTextChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QUndoStack
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

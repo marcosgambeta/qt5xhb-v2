@@ -18,15 +18,7 @@ CLASS QVirtualKeyboardExtensionPlugin INHERIT QObject
    METHOD delete
    METHOD registerTypes
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVirtualKeyboardExtensionPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

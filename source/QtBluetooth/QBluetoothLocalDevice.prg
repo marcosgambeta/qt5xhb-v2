@@ -36,15 +36,7 @@ CLASS QBluetoothLocalDevice INHERIT QObject
    METHOD onPairingDisplayConfirmation
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBluetoothLocalDevice
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

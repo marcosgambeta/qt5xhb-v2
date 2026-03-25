@@ -50,15 +50,7 @@ CLASS QDataWidgetMapper INHERIT QObject
 
    METHOD onCurrentIndexChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDataWidgetMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

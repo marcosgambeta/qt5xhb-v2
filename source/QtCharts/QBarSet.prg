@@ -62,15 +62,7 @@ CLASS QBarSet INHERIT QObject
    METHOD onValuesAdded
    METHOD onValuesRemoved
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBarSet
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

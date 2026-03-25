@@ -30,15 +30,7 @@ CLASS QAxScriptManager INHERIT QObject
 
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAxScriptManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

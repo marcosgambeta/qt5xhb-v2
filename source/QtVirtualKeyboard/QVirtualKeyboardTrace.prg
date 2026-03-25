@@ -41,15 +41,7 @@ CLASS QVirtualKeyboardTrace INHERIT QObject
    METHOD onCanceledChanged
    METHOD onOpacityChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVirtualKeyboardTrace
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

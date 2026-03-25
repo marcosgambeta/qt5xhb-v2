@@ -31,15 +31,7 @@ CLASS QDBusServiceWatcher INHERIT QObject
    METHOD onServiceUnregistered
    METHOD onServiceOwnerChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDBusServiceWatcher
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

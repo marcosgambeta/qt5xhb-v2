@@ -22,15 +22,7 @@ CLASS QExtensionManager INHERIT QObject,QAbstractExtensionManager
    METHOD registerExtensions
    METHOD unregisterExtensions
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QExtensionManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

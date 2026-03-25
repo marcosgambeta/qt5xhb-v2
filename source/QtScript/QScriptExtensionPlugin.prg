@@ -21,15 +21,7 @@ CLASS QScriptExtensionPlugin INHERIT QObject
    METHOD initialize
    METHOD keys
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScriptExtensionPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

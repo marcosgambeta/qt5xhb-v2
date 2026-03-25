@@ -23,15 +23,7 @@ CLASS QAudioProbe INHERIT QObject
    METHOD onAudioBufferProbed
    METHOD onFlush
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAudioProbe
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -24,15 +24,7 @@ CLASS QEventLoop INHERIT QObject
    METHOD wakeUp
    METHOD quit
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QEventLoop
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

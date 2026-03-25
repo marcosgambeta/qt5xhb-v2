@@ -37,15 +37,7 @@ CLASS QSGTexture INHERIT QObject
    METHOD updateBindOptions
    METHOD verticalWrapMode
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSGTexture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

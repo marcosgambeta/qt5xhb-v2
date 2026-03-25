@@ -44,15 +44,7 @@ CLASS QItemSelectionModel INHERIT QObject
    METHOD onCurrentRowChanged
    METHOD onCurrentColumnChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QItemSelectionModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

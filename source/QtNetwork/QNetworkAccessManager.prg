@@ -66,15 +66,7 @@ CLASS QNetworkAccessManager INHERIT QObject
    METHOD onNetworkSessionConnected
    METHOD onNetworkAccessibleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QNetworkAccessManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

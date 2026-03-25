@@ -40,15 +40,7 @@ CLASS QCanBusDevice INHERIT QObject
    METHOD onFramesWritten
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCanBusDevice
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -35,15 +35,7 @@ CLASS QShortcut INHERIT QObject
    METHOD onActivated
    METHOD onActivatedAmbiguously
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QShortcut
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

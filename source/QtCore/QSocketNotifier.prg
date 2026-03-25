@@ -22,15 +22,7 @@ CLASS QSocketNotifier INHERIT QObject
    METHOD isEnabled
    METHOD setEnabled
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSocketNotifier
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -61,15 +61,7 @@ CLASS QScreen INHERIT QObject
    METHOD onOrientationChanged
    METHOD onRefreshRateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScreen
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

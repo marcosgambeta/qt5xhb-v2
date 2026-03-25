@@ -41,15 +41,7 @@ CLASS QAxFactory INHERIT QObject
    METHOD startServer
    METHOD stopServer
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAxFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

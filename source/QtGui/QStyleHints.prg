@@ -27,15 +27,7 @@ CLASS QStyleHints INHERIT QObject
    METHOD fontSmoothingGamma
    METHOD useRtlExtensions
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleHints
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

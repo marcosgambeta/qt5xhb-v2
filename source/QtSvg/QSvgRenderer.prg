@@ -37,15 +37,7 @@ CLASS QSvgRenderer INHERIT QObject
 
    METHOD onRepaintNeeded
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSvgRenderer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

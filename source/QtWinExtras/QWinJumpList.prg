@@ -27,15 +27,7 @@ CLASS QWinJumpList INHERIT QObject
    METHOD addCategory
    METHOD clear
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWinJumpList
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -27,15 +27,7 @@ CLASS QInAppStore INHERIT QObject
    METHOD onProductUnknown
    METHOD onTransactionReady
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QInAppStore
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

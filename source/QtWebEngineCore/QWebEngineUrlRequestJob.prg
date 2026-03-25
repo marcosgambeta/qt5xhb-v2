@@ -24,15 +24,7 @@ CLASS QWebEngineUrlRequestJob INHERIT QObject
    METHOD fail
    METHOD redirect
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebEngineUrlRequestJob
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

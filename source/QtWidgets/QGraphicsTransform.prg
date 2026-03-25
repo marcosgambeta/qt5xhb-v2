@@ -18,15 +18,7 @@ CLASS QGraphicsTransform INHERIT QObject
    METHOD delete
    METHOD applyTo
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsTransform
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

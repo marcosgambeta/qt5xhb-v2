@@ -25,15 +25,7 @@ CLASS QSensorGestureManager INHERIT QObject
 
    METHOD onNewSensorGestureAvailable
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSensorGestureManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

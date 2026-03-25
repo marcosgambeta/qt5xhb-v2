@@ -32,15 +32,7 @@ CLASS QGeoServiceProvider INHERIT QObject
    METHOD setLocale
    METHOD setAllowExperimental
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGeoServiceProvider
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -37,15 +37,7 @@ CLASS QBluetoothServer INHERIT QObject
    METHOD onNewConnection
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBluetoothServer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

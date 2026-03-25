@@ -39,15 +39,7 @@ CLASS QAbstractSeries INHERIT QObject
    METHOD onUseOpenGLChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractSeries
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

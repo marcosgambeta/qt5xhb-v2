@@ -24,15 +24,7 @@ CLASS QQuickTextureFactory INHERIT QObject
    METHOD textureByteCount
    METHOD textureSize
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQuickTextureFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

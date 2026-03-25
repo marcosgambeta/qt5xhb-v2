@@ -18,15 +18,7 @@ CLASS QValue3DAxisFormatter INHERIT QObject
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QValue3DAxisFormatter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

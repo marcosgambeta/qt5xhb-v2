@@ -18,15 +18,7 @@ CLASS QWebEngineUrlRequestInterceptor INHERIT QObject
    METHOD new
    METHOD interceptRequest
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebEngineUrlRequestInterceptor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

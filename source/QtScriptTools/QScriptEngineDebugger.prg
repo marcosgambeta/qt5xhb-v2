@@ -36,15 +36,7 @@ CLASS QScriptEngineDebugger INHERIT QObject
    METHOD onEvaluationResumed
    METHOD onEvaluationSuspended
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScriptEngineDebugger
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

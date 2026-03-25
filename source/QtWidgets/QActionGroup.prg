@@ -32,15 +32,7 @@ CLASS QActionGroup INHERIT QObject
    METHOD onHovered
    METHOD onTriggered
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QActionGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

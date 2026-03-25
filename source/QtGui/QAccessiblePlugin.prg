@@ -19,15 +19,7 @@ CLASS QAccessiblePlugin INHERIT QObject
    METHOD delete
    METHOD create
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccessiblePlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -37,15 +37,7 @@ CLASS QGeoPositionInfoSource INHERIT QObject
    METHOD onUpdateTimeout
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGeoPositionInfoSource
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

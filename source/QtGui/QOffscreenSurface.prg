@@ -33,15 +33,7 @@ CLASS QOffscreenSurface INHERIT QObject,QSurface
 
    METHOD onScreenChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOffscreenSurface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

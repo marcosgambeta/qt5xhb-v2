@@ -61,15 +61,7 @@ CLASS QCoreApplication INHERIT QObject
    METHOD onOrganizationDomainChanged
    METHOD onOrganizationNameChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCoreApplication
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -33,15 +33,7 @@ CLASS QAbstractVideoSurface INHERIT QObject
    METHOD onSupportedFormatsChanged
    METHOD onNativeResolutionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractVideoSurface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -20,15 +20,7 @@ CLASS QOpenGLContextGroup INHERIT QObject
    METHOD shares
    METHOD currentContextGroup
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLContextGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

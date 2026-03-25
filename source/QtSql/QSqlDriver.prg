@@ -50,15 +50,7 @@ CLASS QSqlDriver INHERIT QObject
    METHOD onNotification1
    METHOD onNotification2
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSqlDriver
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

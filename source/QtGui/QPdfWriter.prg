@@ -34,15 +34,7 @@ CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
    METHOD setPageOrientation
    METHOD setPdfVersion
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPdfWriter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -76,15 +76,7 @@ CLASS QGamepadKeyNavigation INHERIT QObject
    METHOD onButtonL3KeyChanged
    METHOD onButtonR3KeyChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGamepadKeyNavigation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

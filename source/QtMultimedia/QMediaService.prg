@@ -20,15 +20,7 @@ CLASS QMediaService INHERIT QObject
    METHOD releaseControl
    METHOD requestControl
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaService
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

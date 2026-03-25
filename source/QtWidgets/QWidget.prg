@@ -503,15 +503,7 @@ CLASS QWidget INHERIT QObject
    METHOD onWindowIconTextChanged
    METHOD onCustomContextMenuRequested
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

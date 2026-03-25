@@ -77,15 +77,7 @@ CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
    METHOD onStatusChanged
    METHOD onVolumeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaRecorder
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

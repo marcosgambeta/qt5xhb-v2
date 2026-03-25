@@ -42,15 +42,7 @@ CLASS QMimeData INHERIT QObject
    METHOD text
    METHOD urls
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMimeData
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -50,15 +50,7 @@ CLASS QDeclarativeEngine INHERIT QObject
    METHOD onQuit
    METHOD onWarnings
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDeclarativeEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

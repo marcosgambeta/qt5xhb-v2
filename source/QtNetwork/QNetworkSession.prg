@@ -49,15 +49,7 @@ CLASS QNetworkSession INHERIT QObject
    METHOD onStateChanged
    METHOD onUsagePoliciesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QNetworkSession
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

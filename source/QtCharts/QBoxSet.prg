@@ -42,15 +42,7 @@ CLASS QBoxSet INHERIT QObject
    METHOD onValueChanged
    METHOD onValuesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBoxSet
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -39,15 +39,7 @@ CLASS QCameraFocus INHERIT QObject
    METHOD onMaximumOpticalZoomChanged
    METHOD onOpticalZoomChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraFocus
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

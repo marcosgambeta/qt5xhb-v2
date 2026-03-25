@@ -19,15 +19,7 @@ CLASS QMaskGenerator INHERIT QObject
    METHOD seed
    METHOD nextMask
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMaskGenerator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

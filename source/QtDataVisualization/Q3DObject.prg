@@ -26,15 +26,7 @@ CLASS Q3DObject INHERIT QObject
 
    METHOD onPositionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS Q3DObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

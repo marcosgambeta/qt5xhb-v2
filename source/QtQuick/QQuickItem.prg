@@ -108,15 +108,7 @@ CLASS QQuickItem INHERIT QObject,QQmlParserStatus
    METHOD z
    METHOD update
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQuickItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

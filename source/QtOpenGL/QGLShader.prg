@@ -26,15 +26,7 @@ CLASS QGLShader INHERIT QObject
    METHOD shaderType
    METHOD sourceCode
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGLShader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

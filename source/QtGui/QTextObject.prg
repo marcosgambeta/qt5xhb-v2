@@ -22,15 +22,7 @@ CLASS QTextObject INHERIT QObject
    METHOD document
    METHOD objectIndex
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

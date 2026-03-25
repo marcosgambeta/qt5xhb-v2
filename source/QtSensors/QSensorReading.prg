@@ -22,15 +22,7 @@ CLASS QSensorReading INHERIT QObject
    METHOD valueCount
    METHOD value
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSensorReading
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

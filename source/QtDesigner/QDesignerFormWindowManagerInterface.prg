@@ -50,15 +50,7 @@ CLASS QDesignerFormWindowManagerInterface INHERIT QObject
    METHOD onFormWindowAdded
    METHOD onFormWindowRemoved
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDesignerFormWindowManagerInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -43,15 +43,7 @@ CLASS QOpenGLContext INHERIT QObject
 
    METHOD onAboutToBeDestroyed
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLContext
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -22,15 +22,7 @@ CLASS QCanBus INHERIT QObject
    METHOD availableDevices
    METHOD createDevice
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCanBus
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -19,15 +19,7 @@ CLASS QStylePlugin INHERIT QObject
    METHOD delete
    METHOD create
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStylePlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

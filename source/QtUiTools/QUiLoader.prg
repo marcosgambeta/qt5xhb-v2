@@ -37,15 +37,7 @@ CLASS QUiLoader INHERIT QObject
    METHOD setWorkingDirectory
    METHOD workingDirectory
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QUiLoader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

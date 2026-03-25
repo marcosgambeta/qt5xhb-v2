@@ -23,15 +23,7 @@ CLASS QObjectCleanupHandler INHERIT QObject
    METHOD isEmpty
    METHOD clear
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QObjectCleanupHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

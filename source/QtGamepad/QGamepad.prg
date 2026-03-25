@@ -70,15 +70,7 @@ CLASS QGamepad INHERIT QObject
    METHOD onDeviceIdChanged
    METHOD onNameChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGamepad
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

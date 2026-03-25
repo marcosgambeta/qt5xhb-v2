@@ -45,15 +45,7 @@ CLASS QAbstractOAuth INHERIT QObject
    METHOD onFinished
    METHOD onReplyDataReceived
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractOAuth
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

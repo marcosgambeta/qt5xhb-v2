@@ -30,15 +30,7 @@ CLASS QWinTaskbarButton INHERIT QObject
    METHOD progress
    METHOD eventFilter
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWinTaskbarButton
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

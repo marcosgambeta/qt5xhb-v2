@@ -48,15 +48,7 @@ CLASS QVirtualKeyboardInputEngine INHERIT QObject
    METHOD onPatternRecognitionModesChanged
    METHOD onWordCandidateListModelChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QVirtualKeyboardInputEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

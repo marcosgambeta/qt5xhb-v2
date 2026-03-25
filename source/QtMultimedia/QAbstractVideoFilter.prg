@@ -23,15 +23,7 @@ CLASS QAbstractVideoFilter INHERIT QObject
 
    METHOD onActiveChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractVideoFilter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

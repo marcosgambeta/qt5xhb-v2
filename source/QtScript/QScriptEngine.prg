@@ -61,15 +61,7 @@ CLASS QScriptEngine INHERIT QObject
 
    METHOD onSignalHandlerException
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScriptEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

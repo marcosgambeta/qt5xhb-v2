@@ -50,15 +50,7 @@ CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
    METHOD onImageSaved
    METHOD onReadyForCaptureChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCameraImageCapture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

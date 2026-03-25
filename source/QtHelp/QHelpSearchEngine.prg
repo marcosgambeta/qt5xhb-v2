@@ -34,15 +34,7 @@ CLASS QHelpSearchEngine INHERIT QObject
    METHOD onSearchingFinished
    METHOD onSearchingStarted
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHelpSearchEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

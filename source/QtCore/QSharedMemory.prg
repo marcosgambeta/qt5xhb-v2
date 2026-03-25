@@ -32,15 +32,7 @@ CLASS QSharedMemory INHERIT QObject
    METHOD error
    METHOD errorString
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSharedMemory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

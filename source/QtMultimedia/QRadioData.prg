@@ -38,15 +38,7 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
    METHOD onAlternativeFrequenciesEnabledChanged
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QRadioData
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

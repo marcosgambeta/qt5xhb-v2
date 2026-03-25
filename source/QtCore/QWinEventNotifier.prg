@@ -20,15 +20,7 @@ CLASS QWinEventNotifier INHERIT QObject
    METHOD isEnabled
    METHOD setEnabled
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWinEventNotifier
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -42,15 +42,7 @@ CLASS QScroller INHERIT QObject
    METHOD onScrollerPropertiesChanged
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScroller
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -24,15 +24,7 @@ CLASS QDBusServer INHERIT QObject
 
    METHOD onNewConnection
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDBusServer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -29,15 +29,7 @@ CLASS QBluetoothTransferReply INHERIT QObject
    METHOD onFinished
    METHOD onTransferProgress
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBluetoothTransferReply
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -58,15 +58,7 @@ CLASS QPlaceManagerEngine INHERIT QObject
    METHOD onCategoryRemoved
    METHOD onDataChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPlaceManagerEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

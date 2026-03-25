@@ -47,15 +47,7 @@ CLASS QDnsLookup INHERIT QObject
    METHOD onNameserverChanged
    METHOD onTypeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDnsLookup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

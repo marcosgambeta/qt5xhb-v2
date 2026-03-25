@@ -18,15 +18,7 @@ CLASS QDeclarativeExtensionPlugin INHERIT QObject
    METHOD initializeEngine
    METHOD registerTypes
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDeclarativeExtensionPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

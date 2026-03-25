@@ -88,15 +88,7 @@ CLASS Q3DTheme INHERIT QObject
    METHOD onTypeChanged
    METHOD onWindowColorChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS Q3DTheme
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

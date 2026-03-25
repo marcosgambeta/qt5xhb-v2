@@ -33,15 +33,7 @@ CLASS QOpenGLBuffer INHERIT QObject
    METHOD usagePattern
    METHOD write
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLBuffer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

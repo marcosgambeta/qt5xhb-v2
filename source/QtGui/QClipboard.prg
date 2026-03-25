@@ -38,15 +38,7 @@ CLASS QClipboard INHERIT QObject
    METHOD onFindBufferChanged
    METHOD onSelectionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QClipboard
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

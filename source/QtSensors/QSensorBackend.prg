@@ -32,15 +32,7 @@ CLASS QSensorBackend INHERIT QObject
    METHOD sensorBusy
    METHOD sensorError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSensorBackend
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

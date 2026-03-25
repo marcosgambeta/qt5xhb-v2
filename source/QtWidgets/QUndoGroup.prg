@@ -42,15 +42,7 @@ CLASS QUndoGroup INHERIT QObject
    METHOD onRedoTextChanged
    METHOD onUndoTextChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QUndoGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

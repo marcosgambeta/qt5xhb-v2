@@ -50,15 +50,7 @@ CLASS QCustom3DItem INHERIT QObject
    METHOD onTextureFileChanged
    METHOD onVisibleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCustom3DItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

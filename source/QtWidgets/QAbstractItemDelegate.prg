@@ -34,15 +34,7 @@ CLASS QAbstractItemDelegate INHERIT QObject
    METHOD onCommitData
    METHOD onSizeHintChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractItemDelegate
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

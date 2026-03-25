@@ -29,15 +29,7 @@ CLASS QPluginLoader INHERIT QObject
    METHOD unload
    METHOD staticInstances
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPluginLoader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

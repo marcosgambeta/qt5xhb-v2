@@ -25,15 +25,7 @@ CLASS QAudioSystemPlugin INHERIT QObject,QAudioSystemFactoryInterface
    METHOD createOutput
    METHOD createDeviceInfo
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAudioSystemPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

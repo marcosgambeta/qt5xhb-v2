@@ -25,15 +25,7 @@ CLASS QSound INHERIT QObject
    METHOD stop
    METHOD play
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSound
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

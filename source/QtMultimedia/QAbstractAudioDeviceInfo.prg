@@ -27,15 +27,7 @@ CLASS QAbstractAudioDeviceInfo INHERIT QObject
    METHOD supportedByteOrders
    METHOD supportedSampleTypes
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractAudioDeviceInfo
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

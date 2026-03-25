@@ -22,15 +22,7 @@ CLASS QValidator INHERIT QObject
    METHOD setLocale
    METHOD validate
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QValidator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

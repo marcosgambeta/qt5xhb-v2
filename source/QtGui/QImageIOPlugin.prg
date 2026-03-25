@@ -20,15 +20,7 @@ CLASS QImageIOPlugin INHERIT QObject
    METHOD capabilities
    METHOD create
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QImageIOPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

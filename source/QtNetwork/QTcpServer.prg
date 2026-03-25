@@ -42,15 +42,7 @@ CLASS QTcpServer INHERIT QObject
    METHOD onAcceptError
    METHOD onNewConnection
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTcpServer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

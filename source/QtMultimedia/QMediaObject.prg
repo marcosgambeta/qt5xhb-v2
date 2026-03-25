@@ -36,15 +36,7 @@ CLASS QMediaObject INHERIT QObject
    METHOD onMetaDataChanged2
    METHOD onNotifyIntervalChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMediaObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

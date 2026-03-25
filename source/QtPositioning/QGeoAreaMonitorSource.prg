@@ -36,15 +36,7 @@ CLASS QGeoAreaMonitorSource INHERIT QObject
    METHOD onMonitorExpired
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGeoAreaMonitorSource
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

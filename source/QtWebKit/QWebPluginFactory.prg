@@ -20,15 +20,7 @@ CLASS QWebPluginFactory INHERIT QObject
    METHOD create
    METHOD refreshPlugins
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebPluginFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

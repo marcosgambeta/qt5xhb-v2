@@ -23,15 +23,7 @@ CLASS QFileSelector INHERIT QObject
    METHOD setExtraSelectors
    METHOD allSelectors
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFileSelector
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

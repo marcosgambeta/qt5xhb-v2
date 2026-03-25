@@ -63,15 +63,7 @@ CLASS QQuickWebEngineProfile INHERIT QObject
    METHOD onSpellCheckLanguagesChanged
    METHOD onStorageNameChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQuickWebEngineProfile
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

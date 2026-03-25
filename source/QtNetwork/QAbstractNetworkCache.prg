@@ -27,15 +27,7 @@ CLASS QAbstractNetworkCache INHERIT QObject
    METHOD updateMetaData
    METHOD clear
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractNetworkCache
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

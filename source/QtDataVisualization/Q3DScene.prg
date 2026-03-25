@@ -55,15 +55,7 @@ CLASS Q3DScene INHERIT QObject
    METHOD onSlicingActiveChanged
    METHOD onViewportChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS Q3DScene
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

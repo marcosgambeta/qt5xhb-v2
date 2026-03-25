@@ -49,15 +49,7 @@ CLASS QStyle INHERIT QObject
    METHOD visualPos
    METHOD visualRect
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

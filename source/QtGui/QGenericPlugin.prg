@@ -19,15 +19,7 @@ CLASS QGenericPlugin INHERIT QObject
    METHOD delete
    METHOD create
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGenericPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

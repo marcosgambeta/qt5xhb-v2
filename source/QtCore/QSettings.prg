@@ -50,15 +50,7 @@ CLASS QSettings INHERIT QObject
    METHOD setDefaultFormat
    METHOD setPath
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSettings
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

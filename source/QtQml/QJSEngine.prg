@@ -25,15 +25,7 @@ CLASS QJSEngine INHERIT QObject
    METHOD newObject
    METHOD newQObject
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QJSEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

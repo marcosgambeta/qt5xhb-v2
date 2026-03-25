@@ -21,15 +21,7 @@ CLASS QWebHistoryInterface INHERIT QObject
    METHOD defaultInterface
    METHOD setDefaultInterface
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebHistoryInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

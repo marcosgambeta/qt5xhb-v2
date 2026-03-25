@@ -19,15 +19,7 @@ CLASS QSqlDriverPlugin INHERIT QObject
    METHOD delete
    METHOD create
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSqlDriverPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

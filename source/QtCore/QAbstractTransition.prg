@@ -32,15 +32,7 @@ CLASS QAbstractTransition INHERIT QObject
 
    METHOD onTriggered
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractTransition
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

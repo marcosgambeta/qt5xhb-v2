@@ -47,15 +47,7 @@ CLASS QCandlestickSet INHERIT QObject
    METHOD onReleased
    METHOD onTimestampChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCandlestickSet
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -17,15 +17,7 @@ CLASS QDBusAbstractAdaptor INHERIT QObject
 
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDBusAbstractAdaptor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

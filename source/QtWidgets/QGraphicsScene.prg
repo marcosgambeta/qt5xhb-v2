@@ -108,15 +108,7 @@ CLASS QGraphicsScene INHERIT QObject
    METHOD onSceneRectChanged
    METHOD onSelectionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsScene
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

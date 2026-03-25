@@ -19,15 +19,7 @@ CLASS QQmlExtensionPlugin INHERIT QObject
    METHOD initializeEngine
    METHOD registerTypes
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQmlExtensionPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

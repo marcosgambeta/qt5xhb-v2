@@ -39,15 +39,7 @@ CLASS QQuickWebEngineScript INHERIT QObject
    METHOD onSourceUrlChanged
    METHOD onWorldIdChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQuickWebEngineScript
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

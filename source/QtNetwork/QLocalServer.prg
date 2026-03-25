@@ -37,15 +37,7 @@ CLASS QLocalServer INHERIT QObject
 
    METHOD onNewConnection
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLocalServer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

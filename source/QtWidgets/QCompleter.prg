@@ -60,15 +60,7 @@ CLASS QCompleter INHERIT QObject
    METHOD onHighlighted1
    METHOD onHighlighted2
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCompleter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

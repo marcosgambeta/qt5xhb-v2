@@ -22,15 +22,7 @@ CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
    METHOD extensionManager
    METHOD extension
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QExtensionFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

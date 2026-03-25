@@ -54,15 +54,7 @@ CLASS QLayout INHERIT QObject,QLayoutItem
    METHOD setGeometry
    METHOD closestAcceptableSize
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

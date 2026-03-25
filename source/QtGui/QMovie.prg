@@ -61,15 +61,7 @@ CLASS QMovie INHERIT QObject
    METHOD onStateChanged
    METHOD onUpdated
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMovie
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

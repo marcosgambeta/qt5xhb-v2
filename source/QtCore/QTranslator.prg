@@ -21,15 +21,7 @@ CLASS QTranslator INHERIT QObject
    METHOD load
    METHOD translate
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTranslator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

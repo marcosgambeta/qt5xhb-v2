@@ -26,15 +26,7 @@ CLASS QWebChannel INHERIT QObject
 
    METHOD onBlockUpdatesChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebChannel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

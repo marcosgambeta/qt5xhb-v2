@@ -18,15 +18,7 @@ CLASS HEventFilter INHERIT QObject
 
    METHOD setEventFilterCB
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS HEventFilter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

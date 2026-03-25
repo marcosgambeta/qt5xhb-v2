@@ -104,15 +104,7 @@ CLASS QWebPage INHERIT QObject
    METHOD onViewportChangeRequested
    METHOD onWindowCloseRequested
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebPage
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

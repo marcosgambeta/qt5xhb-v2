@@ -37,15 +37,7 @@ CLASS QBluetoothServiceDiscoveryAgent INHERIT QObject
    METHOD onCanceled
    METHOD onError
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBluetoothServiceDiscoveryAgent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

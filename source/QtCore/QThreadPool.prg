@@ -33,15 +33,7 @@ CLASS QThreadPool INHERIT QObject
    METHOD stackSize
    METHOD setStackSize
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QThreadPool
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

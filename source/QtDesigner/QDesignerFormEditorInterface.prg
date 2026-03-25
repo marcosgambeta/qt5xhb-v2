@@ -36,15 +36,7 @@ CLASS QDesignerFormEditorInterface INHERIT QObject
    METHOD topLevel
    METHOD widgetBox
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDesignerFormEditorInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

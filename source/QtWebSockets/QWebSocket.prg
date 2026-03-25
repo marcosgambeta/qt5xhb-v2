@@ -72,15 +72,7 @@ CLASS QWebSocket INHERIT QObject
    METHOD onBytesWritten
    METHOD onSslErrors
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWebSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

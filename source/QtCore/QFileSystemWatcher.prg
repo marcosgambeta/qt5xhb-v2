@@ -27,15 +27,7 @@ CLASS QFileSystemWatcher INHERIT QObject
    METHOD onDirectoryChanged
    METHOD onFileChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFileSystemWatcher
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -28,15 +28,7 @@ CLASS QOpenGLTimerQuery INHERIT QObject
    METHOD isResultAvailable
    METHOD waitForResult
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QOpenGLTimerQuery
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

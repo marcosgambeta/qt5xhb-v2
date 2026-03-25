@@ -28,15 +28,7 @@ CLASS QAnimationDriver INHERIT QObject
    METHOD onStarted
    METHOD onStopped
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAnimationDriver
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -41,15 +41,7 @@ CLASS QThread INHERIT QObject
    METHOD onFinished
    METHOD onStarted
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QThread
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

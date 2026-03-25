@@ -22,15 +22,7 @@ CLASS QSyntaxHighlighter INHERIT QObject
    METHOD rehighlight
    METHOD rehighlightBlock
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSyntaxHighlighter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
