@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_REGISTEROBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQOBJECT(2)) {
 #endif
       obj->registerObject(PQSTRING(1), PQOBJECT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

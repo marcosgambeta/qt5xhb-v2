@@ -20,15 +20,7 @@ CLASS QQmlWebChannel INHERIT QWebChannel
    METHOD connectTo
    METHOD disconnectFrom
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QQmlWebChannel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
