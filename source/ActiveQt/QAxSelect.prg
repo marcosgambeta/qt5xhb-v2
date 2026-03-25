@@ -20,15 +20,7 @@ CLASS QAxSelect INHERIT QDialog
    METHOD clsid
    METHOD sandboxingLevel
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAxSelect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

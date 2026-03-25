@@ -32,7 +32,6 @@ CLASS QAxScript INHERIT QObject
    METHOD onFinished2
    METHOD onFinished3
    METHOD onStateChanged
-
 ENDCLASS
 
 // clang-format on
@@ -62,7 +61,7 @@ ENDCLASS
 // QAxScript(const QString &name, QAxScriptManager *manager)
 HB_FUNC_STATIC(QAXSCRIPT_NEW)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPTMANAGER(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQAXSCRIPTMANAGER(2)) {
     auto obj = new QAxScript(PQSTRING(1), PQAXSCRIPTMANAGER(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -79,7 +78,7 @@ HB_FUNC_STATIC(QAXSCRIPT_DELETE)
 
 HB_FUNC_STATIC(QAXSCRIPT_CALL)
 {
-  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
+  if (ISBETWEEN(1, 9) && ISQSTRING(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
     // QVariant call(const QString &function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
     // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
@@ -93,7 +92,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
                           HB_ISNIL(7) ? QVariant() : *PQVARIANT(7), HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
                           HB_ISNIL(9) ? QVariant() : *PQVARIANT(9)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISARRAY(2)) {
     // QVariant call(const QString &function, QList<QVariant> &arguments)
     GET_PTR_FROM_SELF(obj);
 
@@ -130,7 +129,7 @@ HB_FUNC_STATIC(QAXSCRIPT_LOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
 #endif
       RBOOL(obj->load(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
