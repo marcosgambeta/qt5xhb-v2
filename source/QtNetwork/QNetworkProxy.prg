@@ -88,7 +88,8 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
     // QNetworkProxy()
     auto obj = new QNetworkProxy();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 5) && HB_ISNUM(1) && ISCHARORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
+  } else if (ISBETWEEN(1, 5) && HB_ISNUM(1) && ISQSTRINGORNIL(2) && ISNUMORNIL(3) && ISQSTRINGORNIL(4) &&
+             ISQSTRINGORNIL(5)) {
     // QNetworkProxy(QNetworkProxy::ProxyType type, const QString &hostName = QString(), quint16 port = 0, const QString
     // &user = QString(), const QString &password = QString())
     auto obj = new QNetworkProxy(PQNETWORKPROXY_PROXYTYPE(1), OPQSTRING(2, QString()), OPQUINT16(3, 0),
@@ -230,7 +231,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETUSER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setUser(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +269,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETPASSWORD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPassword(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +307,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETHOSTNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setHostName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

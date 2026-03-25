@@ -28,15 +28,7 @@ CLASS QUdpSocket INHERIT QAbstractSocket
    METHOD receiveDatagram
    METHOD writeDatagram
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QUdpSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

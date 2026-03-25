@@ -63,15 +63,7 @@ CLASS QAbstractSocket INHERIT QIODevice
    METHOD onProxyAuthenticationRequired
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -202,7 +194,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
 
 HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
 {
-  if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+  if (ISBETWEEN(2, 4) && ISQSTRING(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // virtual void connectToHost(const QString &hostName, quint16 port, QIODevice::OpenMode mode =
     // QIODevice::ReadWrite, QAbstractSocket::NetworkLayerProtocol protocol = QAbstractSocket::AnyIPProtocol)
     GET_PTR_FROM_SELF(obj);

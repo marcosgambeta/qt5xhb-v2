@@ -98,15 +98,7 @@ CLASS QSslSocket INHERIT QTcpSocket
    METHOD onPreSharedKeyAuthenticationRequired
    METHOD onSslErrors
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSslSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -135,8 +127,11 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QSslSocket(QObject *parent = nullptr)
-HB_FUNC_STATIC(QSSLSOCKET_NEW)
+// QSslSocket(QObject
+                                                                                                        // *parent =
+                                                                                                        // nullptr)
+HB_FUNC_STATIC(
+                                                                                                            QSSLSOCKET_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QSslSocket(OPQOBJECT(1, nullptr));
@@ -176,7 +171,7 @@ HB_FUNC_STATIC(QSSLSOCKET_RESUME)
 
 HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
 {
-  if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+  if (ISBETWEEN(2, 4) && ISQSTRING(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // void connectToHostEncrypted(const QString &hostName, quint16 port, QIODevice::OpenMode mode =
     // QIODevice::ReadWrite, QAbstractSocket::NetworkLayerProtocol protocol = QAbstractSocket::AnyIPProtocol)
     GET_PTR_FROM_SELF(obj);
@@ -188,7 +183,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(3, 5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(3, 5) && ISQSTRING(1) && HB_ISNUM(2) && ISQSTRING(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // void connectToHostEncrypted(const QString &hostName, quint16 port, const QString &sslPeerName,
     // QIODevice::OpenMode mode = QIODevice::ReadWrite, QAbstractSocket::NetworkLayerProtocol protocol =
     // QAbstractSocket::AnyIPProtocol)
@@ -235,7 +230,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(2, 4) && ISQSTRING(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->connectToHost(PQSTRING(1), PQUINT16(2), HB_ISNIL(3) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(3),
                          HB_ISNIL(4) ? QAbstractSocket::AnyIPProtocol : PQABSTRACTSOCKET_NETWORKLAYERPROTOCOL(4));
@@ -482,7 +477,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPeerVerifyName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -801,7 +796,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATE)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // void setLocalCertificate(const QString &fileName, QSsl::EncodingFormat format = QSsl::Pem)
     GET_PTR_FROM_SELF(obj);
 
@@ -940,7 +935,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISQBYTEARRAYORNIL(4)) {
+  } else if (ISBETWEEN(1, 4) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISQBYTEARRAYORNIL(4)) {
     // void setPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format
     // = QSsl::Pem, const QByteArray &passPhrase = QByteArray())
     GET_PTR_FROM_SELF(obj);
@@ -1033,7 +1028,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETCIPHERS)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void setCiphers(const QString &ciphers)
     GET_PTR_FROM_SELF(obj);
 
@@ -1144,7 +1139,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SUPPORTEDCIPHERS)
 
 HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATES)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // bool addCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax
     // syntax = QRegExp::FixedString)
     GET_PTR_FROM_SELF(obj);
@@ -1279,7 +1274,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATE)
 
 HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATES)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // static bool addDefaultCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem,
     // QRegExp::PatternSyntax syntax = QRegExp::FixedString)
     RBOOL(QSslSocket::addDefaultCaCertificates(PQSTRING(1), HB_ISNIL(2) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(2),
@@ -1887,36 +1882,35 @@ HB_FUNC_STATIC(QSSLSOCKET_ONSSLERRORS)
 
     if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
-        auto connection =
-            QObject::connect(sender, QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors),
-                             [sender, indexOfCodeBlock](const QList<QSslError> &arg1) {
-                               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
+        auto connection = QObject::connect(sender, QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors),
+                                           [sender, indexOfCodeBlock](const QList<QSslError> &arg1) {
+                                             auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr) {
-                                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
-                                 auto pDynSym = hb_dynsymFindName("QSSLERROR");
-                                 auto pArg1 = hb_itemArrayNew(0);
-                                 if (pDynSym != nullptr) {
-                                   for (const auto &item : arg1) {
-                                     hb_vmPushDynSym(pDynSym);
-                                     hb_vmPushNil();
-                                     hb_vmDo(0);
-                                     auto pTempObject = hb_itemNew(nullptr);
-                                     hb_itemCopy(pTempObject, hb_stackReturnItem());
-                                     auto pTempItem = hb_itemPutPtr(nullptr, new QSslError(item));
-                                     hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
-                                     hb_arrayAddForward(pArg1, pTempObject);
-                                     hb_itemRelease(pTempObject);
-                                     hb_itemRelease(pTempItem);
-                                   }
-                                 } else {
-                                   THROW_ERROR_1001("QSSLERROR");
-                                 }
-                                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
-                                 hb_itemRelease(pSender);
-                                 hb_itemRelease(pArg1);
-                               }
-                             });
+                                             if (cb != nullptr) {
+                                               auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSSLSOCKET");
+                                               auto pDynSym = hb_dynsymFindName("QSSLERROR");
+                                               auto pArg1 = hb_itemArrayNew(0);
+                                               if (pDynSym != nullptr) {
+                                                 for (const auto &item : arg1) {
+                                                   hb_vmPushDynSym(pDynSym);
+                                                   hb_vmPushNil();
+                                                   hb_vmDo(0);
+                                                   auto pTempObject = hb_itemNew(nullptr);
+                                                   hb_itemCopy(pTempObject, hb_stackReturnItem());
+                                                   auto pTempItem = hb_itemPutPtr(nullptr, new QSslError(item));
+                                                   hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+                                                   hb_arrayAddForward(pArg1, pTempObject);
+                                                   hb_itemRelease(pTempObject);
+                                                   hb_itemRelease(pTempItem);
+                                                 }
+                                               } else {
+                                                 THROW_ERROR_1001("QSSLERROR");
+                                               }
+                                               hb_vmEvalBlockV(cb, 2, pSender, pArg1);
+                                               hb_itemRelease(pSender);
+                                               hb_itemRelease(pArg1);
+                                             }
+                                           });
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

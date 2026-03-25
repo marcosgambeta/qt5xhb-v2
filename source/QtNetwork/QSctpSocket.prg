@@ -26,15 +26,7 @@ CLASS QSctpSocket INHERIT QTcpSocket
    METHOD readDatagram
    METHOD writeDatagram
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSctpSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

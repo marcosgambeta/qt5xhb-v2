@@ -18,15 +18,7 @@ CLASS QTcpSocket INHERIT QAbstractSocket
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTcpSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

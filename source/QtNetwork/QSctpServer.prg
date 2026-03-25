@@ -22,15 +22,7 @@ CLASS QSctpServer INHERIT QTcpServer
    METHOD maximumChannelCount
    METHOD nextPendingDatagramConnection
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSctpServer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

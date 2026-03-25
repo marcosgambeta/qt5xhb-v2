@@ -47,15 +47,7 @@ CLASS QLocalSocket INHERIT QIODevice
    METHOD onError
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLocalSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -109,7 +101,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // void connectToServer(const QString &name, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     GET_PTR_FROM_SELF(obj);
 
@@ -150,7 +142,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSERVERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setServerName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
