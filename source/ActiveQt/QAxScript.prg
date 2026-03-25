@@ -32,6 +32,7 @@ CLASS QAxScript INHERIT QObject
    METHOD onFinished2
    METHOD onFinished3
    METHOD onStateChanged
+
 ENDCLASS
 
 // clang-format on

@@ -29,6 +29,7 @@ CLASS QAxScriptManager INHERIT QObject
    METHOD scriptFileFilter
 
    METHOD onError
+
 ENDCLASS
 
 // clang-format on
