@@ -326,14 +326,14 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THISOBJECT)
 
 HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // QScriptValue throwError(QScriptContext::Error error, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQSCRIPTVALUE(obj->throwError(PQSCRIPTCONTEXT_ERROR(1), PQSTRING(2)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QScriptValue throwError(const QString &text)
     GET_PTR_FROM_SELF(obj);
 

@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISQSTRINGORNIL(2) && ISNUMORNIL(3)) {
     // QScriptValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)
     GET_PTR_FROM_SELF(obj);
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEXTENSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSCRIPTVALUE(obj->importExtension(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
     if (obj != nullptr) {
       RQSCRIPTVALUE(obj->newRegExp(*PQREGEXP(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // QScriptValue newRegExp(const QString &pattern, const QString &flags)
     GET_PTR_FROM_SELF(obj);
 
@@ -691,7 +691,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOSTRINGHANDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSCRIPTSTRING(obj->toStringHandle(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -778,7 +778,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_UNDEFINEDVALUE)
 HB_FUNC_STATIC(QSCRIPTENGINE_CHECKSYNTAX)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RQSCRIPTSYNTAXCHECKRESULT(QScriptEngine::checkSyntax(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
