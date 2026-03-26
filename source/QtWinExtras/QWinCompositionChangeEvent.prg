@@ -19,15 +19,7 @@ CLASS QWinCompositionChangeEvent INHERIT QWinEvent
    METHOD delete
    METHOD isCompositionEnabled
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWinCompositionChangeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -70,9 +62,7 @@ HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   GET_PTR_FROM_SELF(obj);
-
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }

@@ -79,7 +79,7 @@ RETURN
 HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+  if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
     auto obj = new QWinJumpListCategory(OPQSTRING(1, QString()));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -92,9 +92,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   GET_PTR_FROM_SELF(obj);
-
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -189,7 +187,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SETTITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +310,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDDESTINATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       auto ptr = obj->addDestination(PQSTRING(1));
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
@@ -327,7 +325,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDDESTINATION)
 
 HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDLINK)
 {
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISARRAYORNIL(3)) {
+  if (ISBETWEEN(2, 3) && ISQSTRING(1) && ISQSTRING(2) && ISARRAYORNIL(3)) {
     // QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments =
     // QStringList())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -338,7 +336,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDLINK)
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
     }
 #endif
-  } else if (ISBETWEEN(3, 4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISARRAYORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2) && ISQSTRING(3) && ISARRAYORNIL(4)) {
     // QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const
     // QStringList &arguments = QStringList())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

@@ -18,15 +18,7 @@ CLASS QWinEvent INHERIT QEvent
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWinEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -69,9 +61,7 @@ HB_FUNC_STATIC(QWINEVENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   GET_PTR_FROM_SELF(obj);
-
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }

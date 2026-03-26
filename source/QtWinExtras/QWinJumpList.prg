@@ -72,9 +72,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   GET_PTR_FROM_SELF(obj);
-
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -107,7 +105,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_SETIDENTIFIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setIdentifier(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
