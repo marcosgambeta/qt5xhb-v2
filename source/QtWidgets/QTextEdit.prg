@@ -115,15 +115,7 @@ CLASS QTextEdit INHERIT QAbstractScrollArea
    METHOD onTextChanged
    METHOD onUndoAvailable
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextEdit
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -150,18 +142,17 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTextEdit *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-HB_FUNC_STATIC(QTEXTEDIT_NEW)
+HB_FUNC_STATIC(
+                                                                                                                QTEXTEDIT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     // QTextEdit(QWidget *parent = nullptr)
     auto obj = new QTextEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQWIDGETORNIL(2)) {
     // QTextEdit(const QString &text, QWidget *parent = nullptr)
     auto obj = new QTextEdit(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -274,7 +265,6 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
       auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
-
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QMenu *createStandardContextMenu(const QPoint &position)
     GET_PTR_FROM_SELF(obj);
@@ -283,11 +273,11 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
       auto ptr = obj->createStandardContextMenu(*PQPOINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
-
   } else {
     THROW_ERROR_3012();
   }
 }
+
 // QTextCharFormat currentCharFormat() const
 HB_FUNC_STATIC(QTEXTEDIT_CURRENTCHARFORMAT)
 {
@@ -351,7 +341,6 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
     if (obj != nullptr) {
       RQRECT(obj->cursorRect(*PQTEXTCURSOR(1)));
     }
-
   } else if (ISNUMPAR(0)) {
     // QRect cursorRect() const
     GET_PTR_FROM_SELF(obj);
@@ -359,7 +348,6 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
     if (obj != nullptr) {
       RQRECT(obj->cursorRect());
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -447,7 +435,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FIND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(
           obj->find(PQSTRING(1), HB_ISNIL(2) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(2)));
@@ -824,7 +812,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENTTITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setDocumentTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1206,7 +1194,7 @@ HB_FUNC_STATIC(QTEXTEDIT_APPEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->append(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1286,7 +1274,7 @@ HB_FUNC_STATIC(QTEXTEDIT_INSERTHTML)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->insertHtml(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1306,7 +1294,7 @@ HB_FUNC_STATIC(QTEXTEDIT_INSERTPLAINTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->insertPlainText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1366,7 +1354,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SCROLLTOANCHOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->scrollToAnchor(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1446,7 +1434,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTFAMILY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setFontFamily(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1546,7 +1534,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETHTML)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setHtml(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1566,7 +1554,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETPLAINTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPlainText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1586,7 +1574,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1707,7 +1695,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETMARKDOWN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setMarkdown(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1731,9 +1719,8 @@ HB_FUNC_STATIC(QTEXTEDIT_TOMARKDOWN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(obj->toMarkdown(HB_ISNIL(1)
-                                   ? static_cast<QTextDocument::MarkdownFeatures>(QTextDocument::MarkdownDialectGitHub)
-                                   : PQTEXTDOCUMENT_MARKDOWNFEATURES(1)));
+      RQSTRING(
+          obj->toMarkdown(HB_ISNIL(1) ? QTextDocument::MarkdownDialectGitHub : PQTEXTDOCUMENT_MARKDOWNFEATURES(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       THROW_ERROR_3012();

@@ -23,6 +23,7 @@ CLASS QScroller INHERIT QObject
    METHOD pixelPerMeter
    METHOD scrollerProperties
    METHOD setSnapPositionsX
+   METHOD setSnapPositionY
    METHOD setSnapPositionsY
    METHOD state
    METHOD stop
@@ -157,7 +158,6 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSX)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setSnapPositionsX(qreal first, qreal interval)
     GET_PTR_FROM_SELF(obj);
@@ -167,13 +167,12 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSX)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
 }
 
-HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSY)
+HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONY)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void setSnapPositionsY(const QList<qreal> &positions)
@@ -192,7 +191,6 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSY)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setSnapPositionsY(qreal first, qreal interval)
     GET_PTR_FROM_SELF(obj);
@@ -202,7 +200,6 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSY)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -294,7 +291,6 @@ HB_FUNC_STATIC(QSCROLLER_ENSUREVISIBLE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void ensureVisible(const QRectF &rect, qreal xmargin, qreal ymargin, int scrollTime)
     GET_PTR_FROM_SELF(obj);
@@ -304,7 +300,6 @@ HB_FUNC_STATIC(QSCROLLER_ENSUREVISIBLE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -341,7 +336,6 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLTO)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2)) {
     // void scrollTo(const QPointF &pos, int scrollTime)
     GET_PTR_FROM_SELF(obj);
@@ -351,7 +345,6 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLTO)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -417,9 +410,8 @@ HB_FUNC_STATIC(QSCROLLER_GRABGESTURE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISNUMORNIL(2)) {
 #endif
-    RENUM(QScroller::grabGesture(PQOBJECT(1), HB_ISNIL(2)
-                                                  ? static_cast<QScroller::ScrollerGestureType>(QScroller::TouchGesture)
-                                                  : PQSCROLLER_SCROLLERGESTURETYPE(2)));
+    RENUM(
+        QScroller::grabGesture(PQOBJECT(1), HB_ISNIL(2) ? QScroller::TouchGesture : PQSCROLLER_SCROLLERGESTURETYPE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     THROW_ERROR_3012();

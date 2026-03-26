@@ -64,7 +64,7 @@ ENDCLASS
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QOpenGLWidget(QWidget* parent = nullptr, Qt::WindowFlags f = 0)
+                    // QOpenGLWidget(QWidget* parent = nullptr, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QOPENGLWIDGET_NEW)
 {
 #ifndef QT_NO_OPENGL
@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
   GET_PTR_FROM_SELF(obj);
-
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 #endif

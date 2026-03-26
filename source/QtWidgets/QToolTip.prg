@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QTOOLTIP_SETPALETTE)
 
 HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
 {
-  if (ISNUMPAR(4) && ISQPOINT(1) && HB_ISCHAR(2) && ISQWIDGET(3) && ISQRECT(4)) {
+  if (ISNUMPAR(4) && ISQPOINT(1) && ISQSTRING(2) && ISQWIDGET(3) && ISQRECT(4)) {
     // void showText(const QPoint &pos, const QString &text, QWidget *w, const QRect &rect)
     GET_PTR_FROM_SELF(obj);
 
@@ -198,8 +198,7 @@ HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
     }
 
     RETURN_SELF();
-
-  } else if (ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && ISQWIDGETORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQPOINT(1) && ISQSTRING(2) && ISQWIDGETORNIL(3)) {
     // void showText(const QPoint &pos, const QString &text, QWidget *w = nullptr)
     GET_PTR_FROM_SELF(obj);
 
@@ -208,7 +207,6 @@ HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

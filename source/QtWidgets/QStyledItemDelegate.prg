@@ -30,15 +30,7 @@ CLASS QStyledItemDelegate INHERIT QAbstractItemDelegate
    METHOD setItemEditorFactory
    METHOD displayText
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyledItemDelegate
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

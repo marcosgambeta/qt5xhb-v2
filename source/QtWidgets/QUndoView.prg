@@ -62,17 +62,14 @@ HB_FUNC_STATIC(QUNDOVIEW_NEW)
     // QUndoView(QWidget *parent = nullptr)
     auto obj = new QUndoView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQUNDOSTACK(1) && ISQWIDGETORNIL(2)) {
     // QUndoView(QUndoStack *stack, QWidget *parent = nullptr)
     auto obj = new QUndoView(PQUNDOSTACK(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQUNDOGROUP(1) && ISQWIDGETORNIL(2)) {
     // QUndoView(QUndoGroup *group, QWidget *parent = nullptr)
     auto obj = new QUndoView(PQUNDOGROUP(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -167,7 +164,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETEMPTYLABEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setEmptyLabel(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

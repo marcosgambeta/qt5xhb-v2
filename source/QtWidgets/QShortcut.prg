@@ -65,7 +65,6 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
     // QShortcut(QWidget *parent)
     auto obj = new QShortcut(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && ISCHARORNIL(3) && ISCHARORNIL(4) &&
              ISNUMORNIL(5)) {
     // QShortcut(const QKeySequence &key, QWidget *parent, const char *member = nullptr, const char *ambiguousMember =
@@ -73,7 +72,6 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
     auto obj = new QShortcut(*PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3, nullptr), OPCONSTCHAR(4, nullptr),
                              HB_ISNIL(5) ? Qt::WindowShortcut : PQT_SHORTCUTCONTEXT(5));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -282,7 +280,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

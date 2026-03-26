@@ -20,15 +20,7 @@ CLASS QStyleOptionFocusRect INHERIT QStyleOption
    METHOD backgroundColor
    METHOD setBackgroundColor
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionFocusRect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -56,12 +48,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_NEW)
     // QStyleOptionFocusRect()
     auto obj = new QStyleOptionFocusRect();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1)) {
     // QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
     auto obj = new QStyleOptionFocusRect(*PQSTYLEOPTIONFOCUSRECT(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

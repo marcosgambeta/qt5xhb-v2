@@ -32,15 +32,7 @@ CLASS QStyleOptionComboBox INHERIT QStyleOptionComplex
    METHOD iconSize
    METHOD seticonSize
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionComboBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -68,12 +60,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_NEW)
     // QStyleOptionComboBox()
     auto obj = new QStyleOptionComboBox();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONCOMBOBOX(1)) {
     // QStyleOptionComboBox(const QStyleOptionComboBox &other)
     auto obj = new QStyleOptionComboBox(*PQSTYLEOPTIONCOMBOBOX(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -185,7 +175,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETCURRENTTEXT)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
       obj->currentText = PQSTRING(1);
     } else {
       THROW_ERROR_3012();

@@ -75,7 +75,6 @@ HB_FUNC_STATIC(QRUBBERBAND_MOVE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void move(const QPoint &p)
     GET_PTR_FROM_SELF(obj);
@@ -85,7 +84,6 @@ HB_FUNC_STATIC(QRUBBERBAND_MOVE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -102,7 +100,6 @@ HB_FUNC_STATIC(QRUBBERBAND_RESIZE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void resize(const QSize &size)
     GET_PTR_FROM_SELF(obj);
@@ -112,7 +109,6 @@ HB_FUNC_STATIC(QRUBBERBAND_RESIZE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -129,7 +125,6 @@ HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setGeometry(int x, int y, int width, int height)
     GET_PTR_FROM_SELF(obj);
@@ -139,7 +134,6 @@ HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

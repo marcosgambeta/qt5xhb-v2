@@ -26,15 +26,7 @@ CLASS QStyleOptionToolBox INHERIT QStyleOption
    METHOD selectedPosition
    METHOD setSelectedPosition
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionToolBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -62,12 +54,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_NEW)
     // QStyleOptionToolBox()
     auto obj = new QStyleOptionToolBox();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBOX(1)) {
     // QStyleOptionToolBox(const QStyleOptionToolBox &other)
     auto obj = new QStyleOptionToolBox(*PQSTYLEOPTIONTOOLBOX(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -92,7 +82,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETTEXT)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
       obj->text = PQSTRING(1);
     } else {
       THROW_ERROR_3012();

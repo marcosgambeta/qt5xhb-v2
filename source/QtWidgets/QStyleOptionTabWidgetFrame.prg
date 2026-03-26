@@ -35,15 +35,7 @@ CLASS QStyleOptionTabWidgetFrame INHERIT QStyleOption
    METHOD selectedTabRect
    METHOD setSelectedTabRect
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionTabWidgetFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -71,12 +63,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_NEW)
     // QStyleOptionTabWidgetFrame()
     auto obj = new QStyleOptionTabWidgetFrame();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTABWIDGETFRAME(1)) {
     // QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame &other)
     auto obj = new QStyleOptionTabWidgetFrame(*PQSTYLEOPTIONTABWIDGETFRAME(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

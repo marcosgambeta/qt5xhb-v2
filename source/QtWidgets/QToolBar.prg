@@ -82,16 +82,14 @@ ENDCLASS
 
 HB_FUNC_STATIC(QTOOLBAR_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQWIDGETORNIL(2)) {
     // QToolBar(const QString &title, QWidget *parent = nullptr)
     auto obj = new QToolBar(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     // QToolBar(QWidget *parent = nullptr)
     auto obj = new QToolBar(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -114,7 +112,6 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
       auto ptr = obj->actionAt(PINT(1), PINT(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QAction *actionAt(const QPoint &p) const
     GET_PTR_FROM_SELF(obj);
@@ -123,7 +120,6 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
       auto ptr = obj->actionAt(*PQPOINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -140,8 +136,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
     }
 
     RETURN_SELF();
-
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QAction *addAction(const QString &text)
     GET_PTR_FROM_SELF(obj);
 
@@ -149,8 +144,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
       auto ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     // QAction *addAction(const QIcon &icon, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
@@ -158,8 +152,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
-  } else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && ISQSTRING(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
     // QAction *addAction(const QString &text, const QObject *receiver, const char *member)
     GET_PTR_FROM_SELF(obj);
 
@@ -167,8 +160,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
       auto ptr = obj->addAction(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
-  } else if (ISNUMPAR(4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4)) {
+  } else if (ISNUMPAR(4) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2) && ISQOBJECT(3) && HB_ISCHAR(4)) {
     // QAction *addAction(const QIcon &icon, const QString &text, const QObject *receiver, const char *member)
     GET_PTR_FROM_SELF(obj);
 
@@ -177,7 +169,6 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
           obj->addAction(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
   } else {
     THROW_ERROR_3012();
   }

@@ -31,15 +31,7 @@ CLASS QStackedLayout INHERIT QLayout
    METHOD onCurrentChanged
    METHOD onWidgetRemoved
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStackedLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -69,17 +61,14 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_NEW)
     // QStackedLayout()
     auto obj = new QStackedLayout();
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // QStackedLayout(QWidget *parent)
     auto obj = new QStackedLayout(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
     // QStackedLayout(QLayout *parentLayout)
     auto obj = new QStackedLayout(PQLAYOUT(1));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }

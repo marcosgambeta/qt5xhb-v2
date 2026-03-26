@@ -29,15 +29,7 @@ CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout
    METHOD hitTest
    METHOD pageCount
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPlainTextDocumentLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

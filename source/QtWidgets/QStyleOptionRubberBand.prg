@@ -21,15 +21,7 @@ CLASS QStyleOptionRubberBand INHERIT QStyleOption
    METHOD opaque
    METHOD setOpaque
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionRubberBand
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -57,12 +49,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
     // QStyleOptionRubberBand()
     auto obj = new QStyleOptionRubberBand();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1)) {
     // QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
     auto obj = new QStyleOptionRubberBand(*PQSTYLEOPTIONRUBBERBAND(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

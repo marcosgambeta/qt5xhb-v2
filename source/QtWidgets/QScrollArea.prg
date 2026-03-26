@@ -31,15 +31,7 @@ CLASS QScrollArea INHERIT QAbstractScrollArea
    METHOD focusNextPrevChild
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScrollArea
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

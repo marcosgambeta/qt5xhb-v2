@@ -104,23 +104,19 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_NEW)
     // QTableWidgetItem(int type = QTableWidgetItem::Type)
     auto obj = new QTableWidgetItem(OPINT(1, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // QTableWidgetItem(const QString &text, int type = QTableWidgetItem::Type)
     auto obj = new QTableWidgetItem(PQSTRING(1), OPINT(2, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
-  } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2) && ISNUMORNIL(3)) {
     // QTableWidgetItem(const QIcon &icon, const QString &text, int type = QTableWidgetItem::Type)
     auto obj = new QTableWidgetItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2),
                                     OPINT(3, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1)) {
     // QTableWidgetItem(const QTableWidgetItem &other)
     auto obj = new QTableWidgetItem(*PQTABLEWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -539,7 +535,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETSTATUSTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setStatusTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -559,7 +555,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -599,7 +595,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETTOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -619,7 +615,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETWHATSTHIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

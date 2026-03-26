@@ -36,15 +36,7 @@ CLASS QStyleOptionHeader INHERIT QStyleOption
    METHOD orientation
    METHOD setOrientation
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionHeader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -72,12 +64,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_NEW)
     // QStyleOptionHeader()
     auto obj = new QStyleOptionHeader();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONHEADER(1)) {
     // QStyleOptionHeader(const QStyleOptionHeader &other)
     auto obj = new QStyleOptionHeader(*PQSTYLEOPTIONHEADER(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -131,7 +121,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETTEXT)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
       obj->text = PQSTRING(1);
     } else {
       THROW_ERROR_3012();

@@ -26,15 +26,7 @@ CLASS QStyleOptionTabBarBase INHERIT QStyleOption
    METHOD documentMode
    METHOD setDocumentMode
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionTabBarBase
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -62,12 +54,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_NEW)
     // QStyleOptionTabBarBase()
     auto obj = new QStyleOptionTabBarBase();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1)) {
     // QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
     auto obj = new QStyleOptionTabBarBase(*PQSTYLEOPTIONTABBARBASE(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

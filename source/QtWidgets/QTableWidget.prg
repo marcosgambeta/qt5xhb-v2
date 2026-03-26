@@ -79,15 +79,7 @@ CLASS QTableWidget INHERIT QTableView
    METHOD onItemPressed
    METHOD onItemSelectionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTableWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -117,12 +109,10 @@ HB_FUNC_STATIC(QTABLEWIDGET_NEW)
     // QTableWidget(QWidget *parent = nullptr)
     auto obj = new QTableWidget(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGETORNIL(3)) {
     // QTableWidget(int rows, int columns, QWidget *parent = nullptr)
     auto obj = new QTableWidget(PINT(1), PINT(2), OPQWIDGET(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -333,7 +323,6 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEMAT)
       auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
     }
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QTableWidgetItem *itemAt(int ax, int ay) const
     GET_PTR_FROM_SELF(obj);
@@ -342,7 +331,6 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEMAT)
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -475,7 +463,6 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTCELL)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void setCurrentCell(int row, int column, QItemSelectionModel::SelectionFlags command)
     GET_PTR_FROM_SELF(obj);
@@ -485,7 +472,6 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTCELL)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -502,7 +488,6 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTITEM)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && ISQTABLEWIDGETITEM(1) && HB_ISNUM(2)) {
     // void setCurrentItem(QTableWidgetItem *item, QItemSelectionModel::SelectionFlags command)
     GET_PTR_FROM_SELF(obj);
@@ -512,7 +497,6 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTITEM)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

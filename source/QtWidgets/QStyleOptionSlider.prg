@@ -41,15 +41,7 @@ CLASS QStyleOptionSlider INHERIT QStyleOptionComplex
    METHOD dialWrapping
    METHOD setDialWrapping
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionSlider
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -77,12 +69,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_NEW)
     // QStyleOptionSlider()
     auto obj = new QStyleOptionSlider();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONSLIDER(1)) {
     // QStyleOptionSlider(const QStyleOptionSlider &other)
     auto obj = new QStyleOptionSlider(*PQSTYLEOPTIONSLIDER(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

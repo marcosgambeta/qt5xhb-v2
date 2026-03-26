@@ -620,7 +620,7 @@ HB_FUNC_STATIC(QWIDGET_SETACCESSIBLEDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setAccessibleDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -662,7 +662,7 @@ HB_FUNC_STATIC(QWIDGET_SETACCESSIBLENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setAccessibleName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -910,7 +910,6 @@ HB_FUNC_STATIC(QWIDGET_SETBASESIZE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setBaseSize(int basew, int baseh)
     GET_PTR_FROM_SELF(obj);
@@ -920,7 +919,6 @@ HB_FUNC_STATIC(QWIDGET_SETBASESIZE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -936,7 +934,6 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
       auto ptr = obj->childAt(PINT(1), PINT(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
     }
-
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QWidget *childAt(const QPoint &p) const
     GET_PTR_FROM_SELF(obj);
@@ -945,7 +942,6 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
       auto ptr = obj->childAt(*PQPOINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1288,7 +1284,7 @@ HB_FUNC_STATIC(QWIDGET_FONT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->font();
+      const auto ptr = &obj->font();
       Qt5xHb::createReturnClass(ptr, "QFONT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1507,7 +1503,6 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
     }
 
     RETURN_SELF();
-
   }
 #ifndef QT_NO_CURSOR
   else if (ISNUMPAR(1) && ISQCURSOR(1)) {
@@ -1519,7 +1514,6 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
     }
 
     RETURN_SELF();
-
   }
 #endif
   else {
@@ -2357,7 +2351,6 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void setMask(const QRegion &region)
     GET_PTR_FROM_SELF(obj);
@@ -2367,7 +2360,6 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -2572,7 +2564,6 @@ HB_FUNC_STATIC(QWIDGET_MOVE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void move(int x, int y)
     GET_PTR_FROM_SELF(obj);
@@ -2582,7 +2573,6 @@ HB_FUNC_STATIC(QWIDGET_MOVE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -2673,7 +2663,7 @@ HB_FUNC_STATIC(QWIDGET_PALETTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->palette();
+      const auto ptr = &obj->palette();
       Qt5xHb::createReturnClass(ptr, "QPALETTE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -2857,7 +2847,6 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     }
 
     RETURN_SELF();
-
   } else if (ISBETWEEN(1, 4) && HB_ISOBJECT(1) && ISQPOINTORNIL(2) && ISQREGIONORNIL(3) && ISNUMORNIL(4)) {
     // void render(QPainter *painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
     // QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
@@ -2870,7 +2859,6 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -2887,7 +2875,6 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // void repaint(const QRect &rect)
     GET_PTR_FROM_SELF(obj);
@@ -2897,7 +2884,6 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void repaint(const QRegion &rgn)
     GET_PTR_FROM_SELF(obj);
@@ -2907,7 +2893,6 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(0)) {
     // void repaint()
     GET_PTR_FROM_SELF(obj);
@@ -2917,7 +2902,6 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -2934,7 +2918,6 @@ HB_FUNC_STATIC(QWIDGET_RESIZE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void resize(int w, int h)
     GET_PTR_FROM_SELF(obj);
@@ -2944,7 +2927,6 @@ HB_FUNC_STATIC(QWIDGET_RESIZE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -2997,7 +2979,6 @@ HB_FUNC_STATIC(QWIDGET_SCROLL)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3)) {
     // void scroll(int dx, int dy, const QRect &r)
     GET_PTR_FROM_SELF(obj);
@@ -3007,7 +2988,6 @@ HB_FUNC_STATIC(QWIDGET_SCROLL)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3044,7 +3024,6 @@ HB_FUNC_STATIC(QWIDGET_SETCONTENTSMARGINS)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQMARGINS(1)) {
     // void setContentsMargins(const QMargins &margins)
     GET_PTR_FROM_SELF(obj);
@@ -3054,7 +3033,6 @@ HB_FUNC_STATIC(QWIDGET_SETCONTENTSMARGINS)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3113,7 +3091,6 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDSIZE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setFixedSize(int w, int h)
     GET_PTR_FROM_SELF(obj);
@@ -3123,7 +3100,6 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDSIZE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3160,7 +3136,6 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUS)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(0)) {
     // void setFocus()
     GET_PTR_FROM_SELF(obj);
@@ -3170,7 +3145,6 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUS)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3205,7 +3179,7 @@ HB_FUNC_STATIC(QWIDGET_GEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = &obj->geometry();
+      const auto ptr = &obj->geometry();
       Qt5xHb::createReturnClass(ptr, "QRECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -3226,7 +3200,6 @@ HB_FUNC_STATIC(QWIDGET_SETGEOMETRY)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setGeometry(int x, int y, int w, int h)
     GET_PTR_FROM_SELF(obj);
@@ -3236,7 +3209,6 @@ HB_FUNC_STATIC(QWIDGET_SETGEOMETRY)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3291,7 +3263,6 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMSIZE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setMaximumSize(int maxw, int maxh)
     GET_PTR_FROM_SELF(obj);
@@ -3301,7 +3272,6 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMSIZE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3336,7 +3306,6 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMSIZE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setMinimumSize(int minw, int minh)
     GET_PTR_FROM_SELF(obj);
@@ -3346,7 +3315,6 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMSIZE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3363,7 +3331,6 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2)) {
     // void setParent(QWidget *parent, Qt::WindowFlags f)
     GET_PTR_FROM_SELF(obj);
@@ -3373,7 +3340,6 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3452,7 +3418,6 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEINCREMENT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setSizeIncrement(int w, int h)
     GET_PTR_FROM_SELF(obj);
@@ -3462,7 +3427,6 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEINCREMENT)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3497,7 +3461,6 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEPOLICY)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical)
     GET_PTR_FROM_SELF(obj);
@@ -3507,7 +3470,6 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEPOLICY)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -3604,7 +3566,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWindowRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -3721,7 +3683,7 @@ HB_FUNC_STATIC(QWIDGET_SETSTATUSTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setStatusTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -3802,7 +3764,7 @@ HB_FUNC_STATIC(QWIDGET_SETSTYLESHEET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setStyleSheet(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -3862,7 +3824,7 @@ HB_FUNC_STATIC(QWIDGET_SETTOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -3927,7 +3889,6 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // void update(const QRect &rect)
     GET_PTR_FROM_SELF(obj);
@@ -3937,7 +3898,6 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void update(const QRegion &rgn)
     GET_PTR_FROM_SELF(obj);
@@ -3947,7 +3907,6 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(0)) {
     // void update()
     GET_PTR_FROM_SELF(obj);
@@ -3957,7 +3916,6 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -4067,7 +4025,7 @@ HB_FUNC_STATIC(QWIDGET_SETWHATSTHIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -4179,7 +4137,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWFILEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWindowFilePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -4293,7 +4251,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWICONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWindowIconText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -4405,7 +4363,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWTITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWindowTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

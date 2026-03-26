@@ -29,15 +29,7 @@ CLASS QStyleOptionToolBar INHERIT QStyleOption
    METHOD midLineWidth
    METHOD setMidLineWidth
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionToolBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -65,12 +57,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_NEW)
     // QStyleOptionToolBar()
     auto obj = new QStyleOptionToolBar();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBAR(1)) {
     // QStyleOptionToolBar(const QStyleOptionToolBar &other)
     auto obj = new QStyleOptionToolBar(*PQSTYLEOPTIONTOOLBAR(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

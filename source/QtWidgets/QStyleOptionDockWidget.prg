@@ -27,15 +27,7 @@ CLASS QStyleOptionDockWidget INHERIT QStyleOption
    METHOD verticalTitleBar
    METHOD setVerticalTitleBar
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionDockWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -63,12 +55,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_NEW)
     // QStyleOptionDockWidget()
     auto obj = new QStyleOptionDockWidget();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1)) {
     // QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
     auto obj = new QStyleOptionDockWidget(*PQSTYLEOPTIONDOCKWIDGET(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -93,7 +83,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETTITLE)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
       obj->title = PQSTRING(1);
     } else {
       THROW_ERROR_3012();

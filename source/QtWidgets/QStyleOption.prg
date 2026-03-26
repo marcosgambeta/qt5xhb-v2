@@ -85,12 +85,10 @@ HB_FUNC_STATIC(QSTYLEOPTION_NEW)
     // QStyleOption(int version = QStyleOption::Version, int type = QStyleOption::SO_Default)
     auto obj = new QStyleOption(OPINT(1, QStyleOption::Version), OPINT(2, QStyleOption::SO_Default));
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTION(1)) {
     // QStyleOption(const QStyleOption &other)
     auto obj = new QStyleOption(*PQSTYLEOPTION(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

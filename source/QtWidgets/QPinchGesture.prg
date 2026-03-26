@@ -40,15 +40,7 @@ CLASS QPinchGesture INHERIT QGesture
    METHOD totalRotationAngle
    METHOD totalScaleFactor
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPinchGesture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

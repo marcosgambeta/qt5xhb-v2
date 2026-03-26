@@ -68,15 +68,7 @@ CLASS QTableView INHERIT QAbstractItemView
    METHOD resizeColumnToContents
    METHOD resizeColumnsToContents
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTableView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -702,9 +694,8 @@ HB_FUNC_STATIC(QTABLEVIEW_SCROLLTO)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
-      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2)
-                                          ? static_cast<QAbstractItemView::ScrollHint>(QAbstractItemView::EnsureVisible)
-                                          : PQABSTRACTITEMVIEW_SCROLLHINT(2));
+      obj->scrollTo(*PQMODELINDEX(1),
+                    HB_ISNIL(2) ? QAbstractItemView::EnsureVisible : PQABSTRACTITEMVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       THROW_ERROR_3012();

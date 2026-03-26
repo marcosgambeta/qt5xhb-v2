@@ -32,15 +32,7 @@ CLASS QStackedWidget INHERIT QFrame
    METHOD onCurrentChanged
    METHOD onWidgetRemoved
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStackedWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

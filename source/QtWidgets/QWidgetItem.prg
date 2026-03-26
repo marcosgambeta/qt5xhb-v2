@@ -32,15 +32,7 @@ CLASS QWidgetItem INHERIT QLayoutItem
    METHOD sizeHint
    METHOD widget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWidgetItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

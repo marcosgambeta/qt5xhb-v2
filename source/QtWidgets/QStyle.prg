@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(6, 7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && ISBOOL(5) && HB_ISCHAR(6) &&
+    if (ISBETWEEN(6, 7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && ISBOOL(5) && ISQSTRING(6) &&
         ISNUMORNIL(7)) {
 #endif
       obj->drawItemText(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6),
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMTEXTRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && ISBOOL(4) && HB_ISCHAR(5)) {
+    if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && ISBOOL(4) && ISQSTRING(5)) {
 #endif
       RQRECT(obj->itemTextRect(*PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +312,6 @@ HB_FUNC_STATIC(QSTYLE_POLISH)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void polish(QApplication *application)
     GET_PTR_FROM_SELF(obj);
@@ -322,7 +321,6 @@ HB_FUNC_STATIC(QSTYLE_POLISH)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQPALETTE(1)) {
     // virtual void polish(QPalette &palette)
     GET_PTR_FROM_SELF(obj);
@@ -332,7 +330,6 @@ HB_FUNC_STATIC(QSTYLE_POLISH)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -347,7 +344,7 @@ HB_FUNC_STATIC(QSTYLE_PROXY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->proxy();
+      const auto ptr = obj->proxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -484,7 +481,6 @@ HB_FUNC_STATIC(QSTYLE_UNPOLISH)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void unpolish(QApplication *application)
     GET_PTR_FROM_SELF(obj);
@@ -494,7 +490,6 @@ HB_FUNC_STATIC(QSTYLE_UNPOLISH)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

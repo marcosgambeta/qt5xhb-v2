@@ -130,47 +130,38 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_NEW)
     // QTreeWidgetItem(int type = QTreeWidgetItem::Type)
     auto obj = new QTreeWidgetItem(OPINT(1, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISNUMORNIL(2)) {
     // QTreeWidgetItem(const QStringList &strings, int type = QTreeWidgetItem::Type)
     auto obj = new QTreeWidgetItem(PQSTRINGLIST(1), OPINT(2, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQTREEWIDGET(1) && ISNUMORNIL(2)) {
     // QTreeWidgetItem(QTreeWidget *view, int type = QTreeWidgetItem::Type)
     auto obj = new QTreeWidgetItem(PQTREEWIDGET(1), OPINT(2, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
     // QTreeWidgetItem(QTreeWidget *view, const QStringList &strings, int type = QTreeWidgetItem::Type)
     auto obj = new QTreeWidgetItem(PQTREEWIDGET(1), PQSTRINGLIST(2), OPINT(3, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && ISQTREEWIDGETITEM(2) && ISNUMORNIL(3)) {
     // QTreeWidgetItem(QTreeWidget *view, QTreeWidgetItem *after, int type = QTreeWidgetItem::Type)
     auto obj = new QTreeWidgetItem(PQTREEWIDGET(1), PQTREEWIDGETITEM(2), OPINT(3, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && ISNUMORNIL(2)) {
     // QTreeWidgetItem(QTreeWidgetItem *parent, int type = QTreeWidgetItem::Type)
     auto obj = new QTreeWidgetItem(PQTREEWIDGETITEM(1), OPINT(2, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
     // QTreeWidgetItem(QTreeWidgetItem *parent, const QStringList &strings, int type = QTreeWidgetItem::Type)
     auto obj = new QTreeWidgetItem(PQTREEWIDGETITEM(1), PQSTRINGLIST(2), OPINT(3, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && ISQTREEWIDGETITEM(2) && ISNUMORNIL(3)) {
     // QTreeWidgetItem(QTreeWidgetItem *parent, QTreeWidgetItem *after, int type = QTreeWidgetItem::Type)
     auto obj = new QTreeWidgetItem(PQTREEWIDGETITEM(1), PQTREEWIDGETITEM(2), OPINT(3, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1)) {
     // QTreeWidgetItem(const QTreeWidgetItem &other)
     auto obj = new QTreeWidgetItem(*PQTREEWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -949,7 +940,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSTATUSTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setStatusTip(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -969,7 +960,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1009,7 +1000,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setToolTip(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1029,7 +1020,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETWHATSTHIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setWhatsThis(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

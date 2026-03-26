@@ -58,13 +58,11 @@ HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
     auto obj = new QSplashScreen(HB_ISNIL(1) ? QPixmap() : *PQPIXMAP(1),
                                  HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISQPIXMAPORNIL(2) && ISNUMORNIL(3)) {
     // QSplashScreen(QWidget *parent, const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
     auto obj = new QSplashScreen(PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *PQPIXMAP(2),
                                  HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -106,7 +104,8 @@ HB_FUNC_STATIC(QSPLASHSCREEN_PIXMAP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      RQPIXMAP(obj->pixmap());
+      auto ptr = new QPixmap(obj->pixmap());
+      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       THROW_ERROR_3012();
@@ -182,7 +181,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISQCOLORORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISQCOLORORNIL(3)) {
 #endif
       obj->showMessage(PQSTRING(1), OPINT(2, Qt::AlignLeft), HB_ISNIL(3) ? Qt::black : *PQCOLOR(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

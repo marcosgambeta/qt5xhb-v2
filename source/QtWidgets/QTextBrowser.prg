@@ -48,15 +48,7 @@ CLASS QTextBrowser INHERIT QTextEdit
    METHOD onHistoryChanged
    METHOD onSourceChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTextBrowser
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

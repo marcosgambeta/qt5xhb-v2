@@ -19,15 +19,7 @@ CLASS QStyleOptionSizeGrip INHERIT QStyleOptionComplex
    METHOD corner
    METHOD setCorner
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionSizeGrip
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -55,12 +47,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_NEW)
     // QStyleOptionSizeGrip()
     auto obj = new QStyleOptionSizeGrip();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1)) {
     // QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
     auto obj = new QStyleOptionSizeGrip(*PQSTYLEOPTIONSIZEGRIP(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

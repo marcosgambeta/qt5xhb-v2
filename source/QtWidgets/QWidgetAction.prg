@@ -23,15 +23,7 @@ CLASS QWidgetAction INHERIT QAction
    METHOD requestWidget
    METHOD setDefaultWidget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QWidgetAction
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

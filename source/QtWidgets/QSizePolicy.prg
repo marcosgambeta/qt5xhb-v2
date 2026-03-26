@@ -79,14 +79,12 @@ HB_FUNC_STATIC(QSIZEPOLICY_NEW)
     // QSizePolicy()
     auto obj = new QSizePolicy();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type =
     // QSizePolicy::DefaultType)
     auto obj = new QSizePolicy(PQSIZEPOLICY_POLICY(1), PQSIZEPOLICY_POLICY(2),
                                HB_ISNIL(3) ? QSizePolicy::DefaultType : PQSIZEPOLICY_CONTROLTYPE(3));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

@@ -22,15 +22,7 @@ CLASS QTapAndHoldGesture INHERIT QGesture
    METHOD setTimeout
    METHOD timeout
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTapAndHoldGesture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -21,15 +21,7 @@ CLASS QScrollBar INHERIT QAbstractSlider
    METHOD event
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QScrollBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -59,12 +51,10 @@ HB_FUNC_STATIC(QSCROLLBAR_NEW)
     // QScrollBar(QWidget *parent = nullptr)
     auto obj = new QScrollBar(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
     // QScrollBar(Qt::Orientation orientation, QWidget *parent = nullptr)
     auto obj = new QScrollBar(PQT_ORIENTATION(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }

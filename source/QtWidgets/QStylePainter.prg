@@ -25,15 +25,7 @@ CLASS QStylePainter INHERIT QPainter
    METHOD drawItemPixmap
    METHOD style
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStylePainter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -61,17 +53,14 @@ HB_FUNC_STATIC(QSTYLEPAINTER_NEW)
     // QStylePainter()
     auto obj = new QStylePainter();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // QStylePainter(QWidget *w)
     auto obj = new QStylePainter(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(2) && ISQPAINTDEVICE(1) && ISQWIDGET(2)) {
     // QStylePainter(QPaintDevice *pd, QWidget *w)
     auto obj = new QStylePainter(PQPAINTDEVICE(1), PQWIDGET(2));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -86,7 +75,6 @@ HB_FUNC_STATIC(QSTYLEPAINTER_BEGIN)
     if (obj != nullptr) {
       RBOOL(obj->begin(PQWIDGET(1)));
     }
-
   } else if (ISNUMPAR(2) && ISQPAINTDEVICE(1) && ISQWIDGET(2)) {
     // bool begin(QPaintDevice *pd, QWidget *w)
     GET_PTR_FROM_SELF(obj);
@@ -94,7 +82,6 @@ HB_FUNC_STATIC(QSTYLEPAINTER_BEGIN)
     if (obj != nullptr) {
       RBOOL(obj->begin(PQPAINTDEVICE(1), PQWIDGET(2)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -168,7 +155,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(5, 6) && ISQRECT(1) && HB_ISNUM(2) && ISQPALETTE(3) && ISBOOL(4) && HB_ISCHAR(5) && ISNUMORNIL(6)) {
+    if (ISBETWEEN(5, 6) && ISQRECT(1) && HB_ISNUM(2) && ISQPALETTE(3) && ISBOOL(4) && ISQSTRING(5) && ISNUMORNIL(6)) {
 #endif
       obj->drawItemText(*PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5),
                         HB_ISNIL(6) ? QPalette::NoRole : PQPALETTE_COLORROLE(6));

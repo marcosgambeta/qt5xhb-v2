@@ -70,12 +70,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_NEW)
     // QSystemTrayIcon(QObject *parent = nullptr)
     auto obj = new QSystemTrayIcon(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQOBJECTORNIL(2)) {
     // QSystemTrayIcon(const QIcon &icon, QObject *parent = nullptr)
     auto obj = new QSystemTrayIcon(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -208,7 +206,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +227,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(2, 4) && ISQSTRING(1) && ISQSTRING(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->showMessage(PQSTRING(1), PQSTRING(2),
                        HB_ISNIL(3) ? QSystemTrayIcon::Information : PQSYSTEMTRAYICON_MESSAGEICON(3), OPINT(4, 10000));
@@ -368,7 +366,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ONACTIVATED)
 
                                              if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSYSTEMTRAYICON");
-                                               auto pArg1 = hb_itemPutNI(nullptr, (int)arg1);
+                                               auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                                                hb_itemRelease(pSender);
                                                hb_itemRelease(pArg1);

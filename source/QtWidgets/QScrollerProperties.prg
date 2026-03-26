@@ -68,12 +68,10 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_NEW)
     // QScrollerProperties()
     auto obj = new QScrollerProperties();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1)) {
     // QScrollerProperties(const QScrollerProperties &sp)
     auto obj = new QScrollerProperties(*PQSCROLLERPROPERTIES(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

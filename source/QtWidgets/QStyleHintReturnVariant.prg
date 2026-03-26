@@ -18,15 +18,7 @@ CLASS QStyleHintReturnVariant INHERIT QStyleHintReturn
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleHintReturnVariant
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -67,15 +67,7 @@ CLASS QTreeWidget INHERIT QTreeView
    METHOD onItemPressed
    METHOD onItemSelectionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTreeWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -394,7 +386,6 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMAT)
       auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
     }
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QTreeWidgetItem *itemAt(int x, int y) const
     GET_PTR_FROM_SELF(obj);
@@ -403,7 +394,6 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMAT)
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -498,7 +488,6 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && ISQTREEWIDGETITEM(1) && HB_ISNUM(2)) {
     // void setCurrentItem(QTreeWidgetItem *item, int column)
     GET_PTR_FROM_SELF(obj);
@@ -508,7 +497,6 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(3) && ISQTREEWIDGETITEM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void setCurrentItem(QTreeWidgetItem *item, int column, QItemSelectionModel::SelectionFlags command)
     GET_PTR_FROM_SELF(obj);
@@ -518,7 +506,6 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -571,7 +558,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setHeaderLabel(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

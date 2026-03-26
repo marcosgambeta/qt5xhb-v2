@@ -29,15 +29,7 @@ CLASS QSpacerItem INHERIT QLayoutItem
    METHOD sizeHint
    METHOD spacerItem
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSpacerItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -60,7 +52,7 @@ RETURN
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QSpacerItem *>(Qt5xHb::itemGetPtrStackSelfItem())
 
 // QSpacerItem(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy =
-    // QSizePolicy::Minimum)
+// QSizePolicy::Minimum)
 HB_FUNC_STATIC(QSPACERITEM_NEW)
 {
   if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {

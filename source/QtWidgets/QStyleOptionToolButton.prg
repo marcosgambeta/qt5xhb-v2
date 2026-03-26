@@ -37,15 +37,7 @@ CLASS QStyleOptionToolButton INHERIT QStyleOptionComplex
    METHOD font
    METHOD setFont
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionToolButton
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -73,12 +65,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_NEW)
     // QStyleOptionToolButton()
     auto obj = new QStyleOptionToolButton();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBUTTON(1)) {
     // QStyleOptionToolButton(const QStyleOptionToolButton &other)
     auto obj = new QStyleOptionToolButton(*PQSTYLEOPTIONTOOLBUTTON(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -190,7 +180,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETTEXT)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
       obj->text = PQSTRING(1);
     } else {
       THROW_ERROR_3012();

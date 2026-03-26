@@ -25,15 +25,7 @@ CLASS QPanGesture INHERIT QGesture
    METHOD setLastOffset
    METHOD setOffset
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QPanGesture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

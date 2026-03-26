@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISQSTRINGORNIL(2)) {
 #endif
       auto ptr = obj->createRedoAction(PQOBJECT(1), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISQSTRINGORNIL(2)) {
 #endif
       auto ptr = obj->createUndoAction(PQOBJECT(1), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");

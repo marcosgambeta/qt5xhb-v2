@@ -38,15 +38,7 @@ CLASS QSlider INHERIT QAbstractSlider
    METHOD minimumSizeHint
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSlider
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -76,12 +68,10 @@ HB_FUNC_STATIC(QSLIDER_NEW)
     // QSlider(QWidget *parent = nullptr)
     auto obj = new QSlider(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
     // QSlider(Qt::Orientation orientation, QWidget *parent = nullptr)
     auto obj = new QSlider(PQT_ORIENTATION(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }

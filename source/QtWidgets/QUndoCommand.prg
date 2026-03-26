@@ -72,12 +72,10 @@ HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
     // QUndoCommand(QUndoCommand *parent = nullptr)
     auto obj = new QUndoCommand(HB_ISNIL(1) ? nullptr : PQUNDOCOMMAND(1));
     Qt5xHb::returnNewObject(obj, false);
-
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQUNDOCOMMANDORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQUNDOCOMMANDORNIL(2)) {
     // QUndoCommand(const QString &text, QUndoCommand *parent = nullptr)
     auto obj = new QUndoCommand(PQSTRING(1), HB_ISNIL(2) ? nullptr : PQUNDOCOMMAND(2));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -117,7 +115,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_CHILD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = obj->child(PINT(1));
+      const auto ptr = obj->child(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QUNDOCOMMAND", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -208,7 +206,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -35,15 +35,7 @@ CLASS QStyleOptionProgressBar INHERIT QStyleOption
    METHOD bottomToTop
    METHOD setBottomToTop
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionProgressBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -71,12 +63,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_NEW)
     // QStyleOptionProgressBar()
     auto obj = new QStyleOptionProgressBar();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONPROGRESSBAR(1)) {
     // QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
     auto obj = new QStyleOptionProgressBar(*PQSTYLEOPTIONPROGRESSBAR(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -188,7 +178,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXT)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
       obj->text = PQSTRING(1);
     } else {
       THROW_ERROR_3012();

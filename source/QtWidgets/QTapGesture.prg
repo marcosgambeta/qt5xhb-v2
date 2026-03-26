@@ -20,15 +20,7 @@ CLASS QTapGesture INHERIT QGesture
    METHOD position
    METHOD setPosition
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QTapGesture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

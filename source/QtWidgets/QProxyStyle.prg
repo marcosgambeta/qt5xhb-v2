@@ -46,15 +46,7 @@ CLASS QProxyStyle INHERIT QCommonStyle
    METHOD polish
    METHOD unpolish
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QProxyStyle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -80,16 +72,14 @@ RETURN
 
 HB_FUNC_STATIC(QPROXYSTYLE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISOBJECTORNIL(1)) {
+  if (ISBETWEEN(0, 1) && ISQSTYLEORNIL(1)) {
     // QProxyStyle(QStyle *style = nullptr)
     auto obj = new QProxyStyle(OPQSTYLE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QProxyStyle(const QString &key)
     auto obj = new QProxyStyle(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -212,7 +202,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(6, 7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && ISBOOL(5) && HB_ISCHAR(6) &&
+    if (ISBETWEEN(6, 7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && ISBOOL(5) && ISQSTRING(6) &&
         ISNUMORNIL(7)) {
 #endif
       obj->drawItemText(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6),
@@ -311,7 +301,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMTEXTRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && ISBOOL(4) && HB_ISCHAR(5)) {
+    if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && ISBOOL(4) && ISQSTRING(5)) {
 #endif
       RQRECT(obj->itemTextRect(*PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -505,7 +495,6 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQPALETTE(1)) {
     // void polish(QPalette &pal)
     GET_PTR_FROM_SELF(obj);
@@ -515,7 +504,6 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // void polish(QApplication *app)
     GET_PTR_FROM_SELF(obj);
@@ -525,7 +513,6 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -542,7 +529,6 @@ HB_FUNC_STATIC(QPROXYSTYLE_UNPOLISH)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // void unpolish(QApplication *app)
     GET_PTR_FROM_SELF(obj);
@@ -552,7 +538,6 @@ HB_FUNC_STATIC(QPROXYSTYLE_UNPOLISH)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

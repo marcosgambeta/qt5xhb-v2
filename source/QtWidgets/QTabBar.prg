@@ -126,22 +126,20 @@ HB_FUNC_STATIC(QTABBAR_DELETE)
 
 HB_FUNC_STATIC(QTABBAR_ADDTAB)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // int addTab(const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->addTab(PQSTRING(1)));
     }
-
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     // int addTab(const QIcon &icon, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->addTab(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -275,22 +273,20 @@ HB_FUNC_STATIC(QTABBAR_ICONSIZE)
 
 HB_FUNC_STATIC(QTABBAR_INSERTTAB)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // int insertTab(int index, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->insertTab(PINT(1), PQSTRING(2)));
     }
-
-  } else if (ISNUMPAR(3) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && ISQSTRING(3)) {
     // int insertTab(int index, const QIcon &icon, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->insertTab(PINT(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)), PQSTRING(3)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -637,7 +633,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setTabText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -677,7 +673,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setTabToolTip(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -697,7 +693,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABWHATSTHIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setTabWhatsThis(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

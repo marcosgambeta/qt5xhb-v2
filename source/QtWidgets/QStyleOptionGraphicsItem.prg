@@ -26,15 +26,7 @@ CLASS QStyleOptionGraphicsItem INHERIT QStyleOption
    METHOD levelOfDetail
    METHOD setLevelOfDetail
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionGraphicsItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -62,12 +54,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_NEW)
     // QStyleOptionGraphicsItem()
     auto obj = new QStyleOptionGraphicsItem();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1)) {
     // QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem &other)
     auto obj = new QStyleOptionGraphicsItem(*PQSTYLEOPTIONGRAPHICSITEM(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

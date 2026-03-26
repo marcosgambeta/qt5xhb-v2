@@ -21,15 +21,7 @@ CLASS QSwipeGesture INHERIT QGesture
    METHOD swipeAngle
    METHOD verticalDirection
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QSwipeGesture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -25,15 +25,7 @@ CLASS QStyleOptionFrame INHERIT QStyleOption
    METHOD frameShape
    METHOD setFrameShape
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -61,12 +53,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_NEW)
     // QStyleOptionFrame()
     auto obj = new QStyleOptionFrame();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONFRAME(1)) {
     // QStyleOptionFrame(const QStyleOptionFrame &other)
     auto obj = new QStyleOptionFrame(*PQSTYLEOPTIONFRAME(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

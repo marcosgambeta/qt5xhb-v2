@@ -43,15 +43,7 @@ CLASS QStyleOptionTab INHERIT QStyleOption
    METHOD features
    METHOD setFeatures
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionTab
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -79,12 +71,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_NEW)
     // QStyleOptionTab()
     auto obj = new QStyleOptionTab();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTAB(1)) {
     // QStyleOptionTab(const QStyleOptionTab &other)
     auto obj = new QStyleOptionTab(*PQSTYLEOPTIONTAB(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -138,7 +128,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETTEXT)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
       obj->text = PQSTRING(1);
     } else {
       THROW_ERROR_3012();

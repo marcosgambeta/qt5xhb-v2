@@ -30,15 +30,7 @@ CLASS QStyleOptionGroupBox INHERIT QStyleOptionComplex
    METHOD midLineWidth
    METHOD setMidLineWidth
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QStyleOptionGroupBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -66,12 +58,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_NEW)
     // QStyleOptionGroupBox()
     auto obj = new QStyleOptionGroupBox();
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1)) {
     // QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
     auto obj = new QStyleOptionGroupBox(*PQSTYLEOPTIONGROUPBOX(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -125,7 +115,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXT)
   GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
       obj->text = PQSTRING(1);
     } else {
       THROW_ERROR_3012();
