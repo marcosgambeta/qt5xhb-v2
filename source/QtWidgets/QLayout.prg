@@ -330,81 +330,56 @@ HB_FUNC_STATIC(QLAYOUT_REMOVEWIDGET)
   RETURN_SELF();
 }
 
-// bool setAlignment(QWidget *w, Qt::Alignment alignment)
-void QLayout_setAlignment1()
-{
-  GET_PTR_FROM_SELF(obj);
-
-  if (obj != nullptr) {
-    RBOOL(obj->setAlignment(PQWIDGET(1), PQT_ALIGNMENT(2)));
-  }
-}
-
-// void setAlignment(Qt::Alignment alignment)
-void QLayout_setAlignment2()
-{
-  GET_PTR_FROM_SELF(obj);
-
-  if (obj != nullptr) {
-    obj->setAlignment(PQT_ALIGNMENT(1));
-  }
-
-  RETURN_SELF();
-}
-
-// bool setAlignment(QLayout *l, Qt::Alignment alignment)
-void QLayout_setAlignment3()
-{
-  GET_PTR_FROM_SELF(obj);
-
-  if (obj != nullptr) {
-    RBOOL(obj->setAlignment(PQLAYOUT(1), PQT_ALIGNMENT(2)));
-  }
-}
-
 HB_FUNC_STATIC(QLAYOUT_SETALIGNMENT)
 {
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2)) {
-    QLayout_setAlignment1();
+    // bool setAlignment(QWidget *w, Qt::Alignment alignment)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != nullptr) {
+      RBOOL(obj->setAlignment(PQWIDGET(1), PQT_ALIGNMENT(2)));
+    }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    QLayout_setAlignment2();
+    // void setAlignment(Qt::Alignment alignment)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != nullptr) {
+      obj->setAlignment(PQT_ALIGNMENT(1));
+    }
+
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2)) {
-    QLayout_setAlignment3();
+    // bool setAlignment(QLayout *l, Qt::Alignment alignment)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != nullptr) {
+      RBOOL(obj->setAlignment(PQLAYOUT(1), PQT_ALIGNMENT(2)));
+    }
   } else {
     THROW_ERROR_3012();
   }
 }
 
-// void setContentsMargins(int left, int top, int right, int bottom)
-void QLayout_setContentsMargins1()
-{
-  GET_PTR_FROM_SELF(obj);
-
-  if (obj != nullptr) {
-    obj->setContentsMargins(PINT(1), PINT(2), PINT(3), PINT(4));
-  }
-
-  RETURN_SELF();
-}
-
-// void setContentsMargins(const QMargins &margins)
-void QLayout_setContentsMargins2()
-{
-  GET_PTR_FROM_SELF(obj);
-
-  if (obj != nullptr) {
-    obj->setContentsMargins(*PQMARGINS(1));
-  }
-
-  RETURN_SELF();
-}
-
 HB_FUNC_STATIC(QLAYOUT_SETCONTENTSMARGINS)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    QLayout_setContentsMargins1();
+    // void setContentsMargins(int left, int top, int right, int bottom)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != nullptr) {
+      obj->setContentsMargins(PINT(1), PINT(2), PINT(3), PINT(4));
+    }
+
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQMARGINS(1)) {
-    QLayout_setContentsMargins2();
+    // void setContentsMargins(const QMargins &margins)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != nullptr) {
+      obj->setContentsMargins(*PQMARGINS(1));
+    }
+
+    RETURN_SELF();
   } else {
     THROW_ERROR_3012();
   }
