@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLITEM(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQXMLITEM(2)) {
     // void bindVariable(const QString &localName, const QXmlItem &value)
     GET_PTR_FROM_SELF(obj);
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQIODEVICE(2)) {
     // void bindVariable(const QString &localName, QIODevice *device)
     GET_PTR_FROM_SELF(obj);
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLQUERY(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQXMLQUERY(2)) {
     // void bindVariable(const QString &localName, const QXmlQuery &query)
     GET_PTR_FROM_SELF(obj);
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     if (obj != nullptr) {
       RBOOL(obj->setFocus(PQIODEVICE(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool setFocus(const QString &focus)
     GET_PTR_FROM_SELF(obj);
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
     }
 
     RETURN_SELF();
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void setInitialTemplateName(const QString &localName)
     GET_PTR_FROM_SELF(obj);
 
@@ -434,7 +434,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     }
 
     RETURN_SELF();
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQURLORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQURLORNIL(2)) {
     // void setQuery(const QString &sourceCode, const QUrl &documentURI = QUrl())
     GET_PTR_FROM_SELF(obj);
 

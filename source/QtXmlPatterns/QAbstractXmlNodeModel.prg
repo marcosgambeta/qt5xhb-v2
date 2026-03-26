@@ -34,15 +34,7 @@ CLASS QAbstractXmlNodeModel INHERIT QSharedData
    METHOD stringValue
    METHOD typedValue
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractXmlNodeModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -198,7 +190,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
       auto pDynSym = hb_dynsymFindName("QXMLNAME");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (auto &item : list) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);

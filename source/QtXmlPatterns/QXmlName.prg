@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QXMLNAME_NEW)
     // QXmlName()
     auto obj = new QXmlName();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 4) && ISQXMLNAMEPOOL(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
+  } else if (ISBETWEEN(2, 4) && ISQXMLNAMEPOOL(1) && ISQSTRING(2) && ISQSTRINGORNIL(3) && ISQSTRINGORNIL(4)) {
     // QXmlName(QXmlNamePool &namePool, const QString &localName, const QString &namespaceURI = QString(), const QString
     // &prefix = QString())
     auto obj = new QXmlName(*PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3, QString()), OPQSTRING(4, QString()));
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QXMLNAME_TOCLARKNAME)
 HB_FUNC_STATIC(QXMLNAME_FROMCLARKNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLNAMEPOOL(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQXMLNAMEPOOL(2)) {
 #endif
     RQXMLNAME(QXmlName::fromClarkName(PQSTRING(1), *PQXMLNAMEPOOL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QXMLNAME_FROMCLARKNAME)
 HB_FUNC_STATIC(QXMLNAME_ISNCNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RBOOL(QXmlName::isNCName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
