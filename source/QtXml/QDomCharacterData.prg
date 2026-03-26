@@ -27,15 +27,7 @@ CLASS QDomCharacterData INHERIT QDomNode
    METHOD setData
    METHOD substringData
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDomCharacterData
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -86,7 +78,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_APPENDDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->appendData(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +136,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_INSERTDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->insertData(PUNSIGNEDLONG(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +192,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_REPLACEDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSTRING(3)) {
 #endif
       obj->replaceData(PUNSIGNEDLONG(1), PUNSIGNEDLONG(2), PQSTRING(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +212,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_SETDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setData(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -20,15 +20,7 @@ CLASS QXmlSimpleReader INHERIT QXmlReader
    METHOD parse
    METHOD parseContinue
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QXmlSimpleReader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -22,15 +22,7 @@ CLASS QDomProcessingInstruction INHERIT QDomNode
    METHOD setData
    METHOD target
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDomProcessingInstruction
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -117,7 +109,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setData(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

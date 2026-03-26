@@ -22,15 +22,7 @@ CLASS QDomEntity INHERIT QDomNode
    METHOD publicId
    METHOD systemId
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDomEntity
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

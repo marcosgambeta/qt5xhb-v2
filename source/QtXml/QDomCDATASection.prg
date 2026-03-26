@@ -19,15 +19,7 @@ CLASS QDomCDATASection INHERIT QDomText
    METHOD delete
    METHOD nodeType
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDomCDATASection
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

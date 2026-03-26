@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->prefix(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIXES)
     if (obj != nullptr) {
       RQSTRINGLIST(obj->prefixes());
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QStringList prefixes(const QString &uri) const
     GET_PTR_FROM_SELF(obj);
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PROCESSNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISCHAR(1) && ISBOOL(2) && HB_ISCHAR(3) && HB_ISCHAR(4)) {
+    if (ISNUMPAR(4) && ISQSTRING(1) && ISBOOL(2) && ISQSTRING(3) && ISQSTRING(4)) {
 #endif
       QString par3 = hb_parc(3);
       QString par4 = hb_parc(4);
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SETPREFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       obj->setPrefix(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SPLITNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRING(3)) {
 #endif
       QString par2 = hb_parc(2);
       QString par3 = hb_parc(3);
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_URI)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->uri(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

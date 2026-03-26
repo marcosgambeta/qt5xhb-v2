@@ -19,15 +19,7 @@ CLASS QDomEntityReference INHERIT QDomNode
    METHOD delete
    METHOD nodeType
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDomEntityReference
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

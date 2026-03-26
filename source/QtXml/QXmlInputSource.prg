@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_RESET)
 
 HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // virtual void setData(const QString &dat)
     GET_PTR_FROM_SELF(obj);
 

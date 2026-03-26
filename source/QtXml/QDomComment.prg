@@ -19,15 +19,7 @@ CLASS QDomComment INHERIT QDomCharacterData
    METHOD delete
    METHOD nodeType
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDomComment
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

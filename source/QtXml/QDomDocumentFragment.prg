@@ -19,15 +19,7 @@ CLASS QDomDocumentFragment INHERIT QDomNode
    METHOD delete
    METHOD nodeType
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDomDocumentFragment
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

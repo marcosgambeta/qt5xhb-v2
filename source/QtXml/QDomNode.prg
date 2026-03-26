@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QDOMNODE_FIRSTCHILDELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+    if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
 #endif
       RQDOMELEMENT(obj->firstChildElement(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QDOMNODE_ISSUPPORTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       RBOOL(obj->isSupported(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -669,7 +669,7 @@ HB_FUNC_STATIC(QDOMNODE_LASTCHILDELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+    if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
 #endif
       RQDOMELEMENT(obj->lastChildElement(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QDOMNODE_NAMEDITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQDOMNODE(obj->namedItem(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -777,7 +777,7 @@ HB_FUNC_STATIC(QDOMNODE_NEXTSIBLINGELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+    if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
 #endif
       RQDOMELEMENT(obj->nextSiblingElement(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -941,7 +941,7 @@ HB_FUNC_STATIC(QDOMNODE_PREVIOUSSIBLINGELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+    if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
 #endif
       RQDOMELEMENT(obj->previousSiblingElement(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC(QDOMNODE_SETNODEVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setNodeValue(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC(QDOMNODE_SETPREFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPrefix(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

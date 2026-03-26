@@ -25,15 +25,7 @@ CLASS QDomAttr INHERIT QDomNode
    METHOD specified
    METHOD value
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDomAttr
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -138,7 +130,7 @@ HB_FUNC_STATIC(QDOMATTR_SETVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setValue(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

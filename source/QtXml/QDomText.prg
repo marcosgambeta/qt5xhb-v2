@@ -20,15 +20,7 @@ CLASS QDomText INHERIT QDomCharacterData
    METHOD nodeType
    METHOD splitText
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDomText
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
