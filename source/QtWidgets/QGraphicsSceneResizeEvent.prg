@@ -21,15 +21,7 @@ CLASS QGraphicsSceneResizeEvent INHERIT QGraphicsSceneEvent
    METHOD newSize
    METHOD oldSize
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsSceneResizeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DEFAULTFACTORY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = QItemEditorFactory::defaultFactory();
+    const auto ptr = QItemEditorFactory::defaultFactory();
     Qt5xHb::createReturnClass(ptr, "QITEMEDITORFACTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

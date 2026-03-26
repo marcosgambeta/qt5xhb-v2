@@ -77,15 +77,7 @@ CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
 
    METHOD onGeometryChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -111,7 +103,8 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QGraphicsWidget(QGraphicsItem *parent = nullptr, Qt::WindowFlags wFlags = 0)
+// QGraphicsWidget(QGraphicsItem *parent = nullptr,
+                                                        // Qt::WindowFlags wFlags = 0)
 HB_FUNC_STATIC(QGRAPHICSWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
@@ -471,7 +464,6 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_RESIZE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void resize(qreal w, qreal h)
     GET_PTR_FROM_SELF(obj);
@@ -481,7 +473,6 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_RESIZE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -598,7 +589,6 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETGEOMETRY)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // virtual void setGeometry(const QRectF &rect)
     GET_PTR_FROM_SELF(obj);
@@ -608,7 +598,6 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETGEOMETRY)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -781,7 +770,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETWINDOWTITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWindowTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

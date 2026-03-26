@@ -66,18 +66,16 @@ ENDCLASS
 
 HB_FUNC_STATIC(QDOCKWIDGET_NEW)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     // QDockWidget(const QString &title, QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
     auto obj = new QDockWidget(PQSTRING(1), OPQWIDGET(2, nullptr),
                                HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     // QDockWidget(QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
     auto obj =
         new QDockWidget(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -378,7 +376,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONDOCKLOCATIONCHANGED)
 
                                              if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDOCKWIDGET");
-                                               auto pArg1 = hb_itemPutNI(nullptr, (int)arg1);
+                                               auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                                                hb_itemRelease(pSender);
                                                hb_itemRelease(pArg1);

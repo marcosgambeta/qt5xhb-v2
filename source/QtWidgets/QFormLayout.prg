@@ -53,15 +53,7 @@ CLASS QFormLayout INHERIT QLayout
    METHOD sizeHint
    METHOD takeAt
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFormLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -114,7 +106,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && ISQWIDGET(1) && ISQLAYOUT(2)) {
     // void addRow(QWidget *label, QLayout *field)
     GET_PTR_FROM_SELF(obj);
@@ -124,8 +115,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     RETURN_SELF();
-
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQWIDGET(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQWIDGET(2)) {
     // void addRow(const QString &labelText, QWidget *field)
     GET_PTR_FROM_SELF(obj);
 
@@ -134,8 +124,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     RETURN_SELF();
-
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLAYOUT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQLAYOUT(2)) {
     // void addRow(const QString &labelText, QLayout *field)
     GET_PTR_FROM_SELF(obj);
 
@@ -144,7 +133,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // void addRow(QWidget *widget)
     GET_PTR_FROM_SELF(obj);
@@ -154,7 +142,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
     // void addRow(QLayout *layout)
     GET_PTR_FROM_SELF(obj);
@@ -164,7 +151,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -235,7 +221,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && ISQLAYOUT(3)) {
     // void insertRow(int row, QWidget *label, QLayout *field)
     GET_PTR_FROM_SELF(obj);
@@ -245,8 +230,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     RETURN_SELF();
-
-  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQWIDGET(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQSTRING(2) && ISQWIDGET(3)) {
     // void insertRow(int row, const QString &labelText, QWidget *field)
     GET_PTR_FROM_SELF(obj);
 
@@ -255,8 +239,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     RETURN_SELF();
-
-  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQLAYOUT(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQSTRING(2) && ISQLAYOUT(3)) {
     // void insertRow(int row, const QString &labelText, QLayout *field)
     GET_PTR_FROM_SELF(obj);
 
@@ -265,7 +248,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2)) {
     // void insertRow(int row, QWidget *widget)
     GET_PTR_FROM_SELF(obj);
@@ -275,8 +257,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     RETURN_SELF();
-
-  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQLAYOUT(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQLAYOUT(2)) {
     // void insertRow(int row, QLayout *layout)
     GET_PTR_FROM_SELF(obj);
 
@@ -285,7 +266,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -301,7 +281,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_ITEMAT)
       auto ptr = obj->itemAt(PINT(1), PQFORMLAYOUT_ITEMROLE(2));
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
-
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // virtual QLayoutItem *itemAt(int index) const
     GET_PTR_FROM_SELF(obj);
@@ -310,7 +289,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_ITEMAT)
       auto ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -344,7 +322,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_LABELFORFIELD)
       auto ptr = obj->labelForField(PQWIDGET(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
     }
-
   } else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
     // QWidget *labelForField(QLayout *field) const
     GET_PTR_FROM_SELF(obj);
@@ -353,7 +330,6 @@ HB_FUNC_STATIC(QFORMLAYOUT_LABELFORFIELD)
       auto ptr = obj->labelForField(PQLAYOUT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
     }
-
   } else {
     THROW_ERROR_3012();
   }

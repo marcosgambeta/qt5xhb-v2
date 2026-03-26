@@ -26,15 +26,7 @@ CLASS QGraphicsSceneHoverEvent INHERIT QGraphicsSceneEvent
    METHOD scenePos
    METHOD screenPos
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsSceneHoverEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QMENUBAR_ACTIVEACTION)
 
 HB_FUNC_STATIC(QMENUBAR_ADDACTION)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QAction *addAction(const QString &text)
     GET_PTR_FROM_SELF(obj);
 
@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDACTION)
       auto ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
-  } else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && ISQSTRING(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
     // QAction *addAction(const QString &text, const QObject *receiver, const char *member)
     GET_PTR_FROM_SELF(obj);
 
@@ -131,7 +130,6 @@ HB_FUNC_STATIC(QMENUBAR_ADDACTION)
       auto ptr = obj->addAction(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
   } else if (ISNUMPAR(1) && ISQACTION(1)) {
     // void addAction(QAction *action)
     GET_PTR_FROM_SELF(obj);
@@ -141,7 +139,6 @@ HB_FUNC_STATIC(QMENUBAR_ADDACTION)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -157,8 +154,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDMENU)
       auto ptr = obj->addMenu(PQMENU(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QMenu *addMenu(const QString &title)
     GET_PTR_FROM_SELF(obj);
 
@@ -166,8 +162,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDMENU)
       auto ptr = obj->addMenu(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
-
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     // QMenu *addMenu(const QIcon &icon, const QString &title)
     GET_PTR_FROM_SELF(obj);
 
@@ -175,7 +170,6 @@ HB_FUNC_STATIC(QMENUBAR_ADDMENU)
       auto ptr = obj->addMenu(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
-
   } else {
     THROW_ERROR_3012();
   }

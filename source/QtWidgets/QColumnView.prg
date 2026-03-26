@@ -46,15 +46,7 @@ CLASS QColumnView INHERIT QAbstractItemView
 
    METHOD onUpdatePreviewWidget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QColumnView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -47,15 +47,7 @@ CLASS QDial INHERIT QAbstractSlider
    METHOD setNotchesVisible
    METHOD setWrapping
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDial
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -34,15 +34,7 @@ CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
    METHOD removeAt
    METHOD setGeometry
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsAnchorLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

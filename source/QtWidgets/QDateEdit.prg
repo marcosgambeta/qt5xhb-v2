@@ -18,15 +18,7 @@ CLASS QDateEdit INHERIT QDateTimeEdit
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDateEdit
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -56,12 +48,10 @@ HB_FUNC_STATIC(QDATEEDIT_NEW)
     // QDateEdit(QWidget *parent = nullptr)
     auto obj = new QDateEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQDATE(1) && ISQWIDGETORNIL(2)) {
     // QDateEdit(const QDate &date, QWidget *parent = nullptr)
     auto obj = new QDateEdit(*PQDATE(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }

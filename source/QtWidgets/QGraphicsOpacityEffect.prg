@@ -26,15 +26,7 @@ CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect
    METHOD onOpacityChanged
    METHOD onOpacityMaskChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsOpacityEffect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

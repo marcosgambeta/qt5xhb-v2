@@ -62,14 +62,12 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_NEW)
     auto obj = new QKeySequenceEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-
   } else if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISQWIDGETORNIL(2)) {
     // QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QKeySequenceEdit(*PQKEYSEQUENCE(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-
   } else {
     THROW_ERROR_3012();
   }
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   GET_PTR_FROM_SELF(obj);
-
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }

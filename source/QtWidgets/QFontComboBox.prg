@@ -29,15 +29,7 @@ CLASS QFontComboBox INHERIT QComboBox
 
    METHOD onCurrentFontChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFontComboBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

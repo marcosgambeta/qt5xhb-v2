@@ -27,15 +27,7 @@ CLASS QGraphicsBlurEffect INHERIT QGraphicsWidget
    METHOD onBlurHintsChanged
    METHOD onBlurRadiusChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsBlurEffect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

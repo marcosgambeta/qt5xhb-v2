@@ -32,15 +32,7 @@ CLASS QFontDialog INHERIT QDialog
    METHOD onCurrentFontChanged
    METHOD onFontSelected
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFontDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -70,12 +62,10 @@ HB_FUNC_STATIC(QFONTDIALOG_NEW)
     // QFontDialog(QWidget *parent = nullptr)
     auto obj = new QFontDialog(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQFONT(1) && ISQWIDGETORNIL(2)) {
     // QFontDialog(const QFont &initial, QWidget *parent = nullptr)
     auto obj = new QFontDialog(*PQFONT(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -264,21 +254,17 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
 {
   if (ISBETWEEN(1, 2) && ISBOOL(1) && ISQWIDGETORNIL(2)) {
     // static QFont getFont(bool *ok, QWidget *parent = nullptr)
-
     bool par1;
     RQFONT(QFontDialog::getFont(&par1, OPQWIDGET(2, nullptr)));
     hb_storl(par1, 1);
-
-  } else if (ISBETWEEN(2, 5) && ISBOOL(1) && ISQFONT(2) && ISQWIDGETORNIL(3) && ISCHARORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(2, 5) && ISBOOL(1) && ISQFONT(2) && ISQWIDGETORNIL(3) && ISQSTRINGORNIL(4) && ISNUMORNIL(5)) {
     // static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = nullptr, const QString &title = QString(),
     // QFontDialog::FontDialogOptions options = 0)
-
     bool par1;
     RQFONT(QFontDialog::getFont(&par1, *PQFONT(2), OPQWIDGET(3, nullptr), OPQSTRING(4, QString()),
                                 HB_ISNIL(5) ? static_cast<QFontDialog::FontDialogOptions>(0)
                                             : PQFONTDIALOG_FONTDIALOGOPTIONS(5)));
     hb_storl(par1, 1);
-
   } else {
     THROW_ERROR_3012();
   }

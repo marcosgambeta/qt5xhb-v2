@@ -106,7 +106,6 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3)) {
     // void addMapping(QWidget *widget, int section, const QByteArray &propertyName)
     GET_PTR_FROM_SELF(obj);
@@ -116,7 +115,6 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

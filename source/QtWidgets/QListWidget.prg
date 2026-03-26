@@ -58,15 +58,7 @@ CLASS QListWidget INHERIT QListView
    METHOD onItemPressed
    METHOD onItemSelectionChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QListWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -110,7 +102,7 @@ HB_FUNC_STATIC(QLISTWIDGET_DELETE)
 
 HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void addItem(const QString &label)
     GET_PTR_FROM_SELF(obj);
 
@@ -119,7 +111,6 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
     // void addItem(QListWidgetItem *item)
     GET_PTR_FROM_SELF(obj);
@@ -129,7 +120,6 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -261,8 +251,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
     }
 
     RETURN_SELF();
-
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // void insertItem(int row, const QString &label)
     GET_PTR_FROM_SELF(obj);
 
@@ -271,7 +260,6 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -344,7 +332,6 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
       auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QListWidgetItem *itemAt(int x, int y) const
     GET_PTR_FROM_SELF(obj);
@@ -353,7 +340,6 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -447,7 +433,6 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && HB_ISNUM(2)) {
     // void setCurrentItem(QListWidgetItem *item, QItemSelectionModel::SelectionFlags command)
     GET_PTR_FROM_SELF(obj);
@@ -457,7 +442,6 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -474,7 +458,6 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setCurrentRow(int row, QItemSelectionModel::SelectionFlags command)
     GET_PTR_FROM_SELF(obj);
@@ -484,7 +467,6 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

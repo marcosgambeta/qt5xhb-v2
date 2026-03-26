@@ -74,15 +74,7 @@ CLASS QInputDialog INHERIT QDialog
    METHOD onTextValueChanged
    METHOD onTextValueSelected
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QInputDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -106,7 +98,8 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QInputDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
+                                                            // QInputDialog(QWidget *parent = nullptr, Qt::WindowFlags
+                                                            // flags = 0)
 HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
@@ -150,7 +143,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setCancelButtonText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -606,7 +599,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setLabelText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -644,7 +637,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setOkButtonText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -856,7 +849,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setTextValue(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -951,7 +944,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SIZEHINT)
 HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(3, 9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5) &&
+  if (ISBETWEEN(3, 9) && ISQWIDGET(1) && ISQSTRING(2) && ISQSTRING(3) && ISNUMORNIL(4) && ISNUMORNIL(5) &&
       ISNUMORNIL(6) && ISNUMORNIL(7) && ISLOGORNIL(8) && ISNUMORNIL(9)) {
 #endif
     bool par8;
@@ -971,7 +964,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
 HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(3, 9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5) &&
+  if (ISBETWEEN(3, 9) && ISQWIDGET(1) && ISQSTRING(2) && ISQSTRING(3) && ISNUMORNIL(4) && ISNUMORNIL(5) &&
       ISNUMORNIL(6) && ISNUMORNIL(7) && ISLOGORNIL(8) && ISNUMORNIL(9)) {
 #endif
     bool par8;
@@ -992,7 +985,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
 HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(4, 9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISARRAY(4) && ISNUMORNIL(5) &&
+  if (ISBETWEEN(4, 9) && ISQWIDGET(1) && ISQSTRING(2) && ISQSTRING(3) && HB_ISARRAY(4) && ISNUMORNIL(5) &&
       ISLOGORNIL(6) && ISLOGORNIL(7) && ISNUMORNIL(8) && ISNUMORNIL(9)) {
 #endif
     bool par7;
@@ -1013,7 +1006,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
 HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(3, 8) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISCHARORNIL(5) &&
+  if (ISBETWEEN(3, 8) && ISQWIDGET(1) && ISQSTRING(2) && ISQSTRING(3) && ISNUMORNIL(4) && ISQSTRINGORNIL(5) &&
       ISLOGORNIL(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
 #endif
     bool par6;
@@ -1034,7 +1027,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
 HB_FUNC_STATIC(QINPUTDIALOG_GETMULTILINETEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(3, 7) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISCHARORNIL(4) && ISLOGORNIL(5) &&
+  if (ISBETWEEN(3, 7) && ISQWIDGET(1) && ISQSTRING(2) && ISQSTRING(3) && ISQSTRINGORNIL(4) && ISLOGORNIL(5) &&
       ISNUMORNIL(6) && ISNUMORNIL(7)) {
 #endif
     bool par5;

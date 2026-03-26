@@ -19,15 +19,7 @@ CLASS QGraphicsSceneEvent INHERIT QEvent
    METHOD delete
    METHOD widget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsSceneEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

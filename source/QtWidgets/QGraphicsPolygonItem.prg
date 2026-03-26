@@ -32,15 +32,7 @@ CLASS QGraphicsPolygonItem INHERIT QAbstractGraphicsShapeItem
    METHOD shape
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsPolygonItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -68,12 +60,10 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
     // QGraphicsPolygonItem(QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsPolygonItem(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsPolygonItem(const QPolygonF &polygon, QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsPolygonItem(*PQPOLYGONF(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

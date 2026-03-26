@@ -55,15 +55,7 @@ CLASS QMdiArea INHERIT QAbstractScrollArea
 
    METHOD onSubWindowActivated
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QMdiArea
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

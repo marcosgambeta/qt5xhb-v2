@@ -57,15 +57,7 @@ CLASS QGridLayout INHERIT QLayout
    METHOD sizeHint
    METHOD takeAt
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGridLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -95,12 +87,10 @@ HB_FUNC_STATIC(QGRIDLAYOUT_NEW)
     // QGridLayout(QWidget *parent)
     auto obj = new QGridLayout(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISNUMPAR(0)) {
     // QGridLayout()
     auto obj = new QGridLayout();
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -147,7 +137,6 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
     }
 
     RETURN_SELF();
-
   } else if (ISBETWEEN(5, 6) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              ISNUMORNIL(6)) {
     // void addLayout(QLayout *layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0)
@@ -159,7 +148,6 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -176,7 +164,6 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
     }
 
     RETURN_SELF();
-
   } else if (ISBETWEEN(5, 6) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              ISNUMORNIL(6)) {
     // void addWidget(QWidget *widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment
@@ -189,7 +176,6 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

@@ -26,15 +26,7 @@ CLASS QGraphicsColorizeEffect INHERIT QGraphicsEffect
    METHOD onColorChanged
    METHOD onStrengthChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsColorizeEffect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

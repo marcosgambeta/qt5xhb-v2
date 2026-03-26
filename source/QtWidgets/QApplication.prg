@@ -134,15 +134,7 @@ CLASS QApplication INHERIT QGuiApplication
 
    METHOD onFocusChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QApplication
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -331,7 +323,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTYLESHEET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setStyleSheet(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -589,19 +581,13 @@ HB_FUNC_STATIC(QAPPLICATION_FONT)
 {
   if (ISNUMPAR(0)) {
     // static QFont font()
-
     RQFONT(QApplication::font());
-
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // static QFont font(const QWidget *widget)
-
     RQFONT(QApplication::font(PQWIDGET(1)));
-
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QFont font(const char *className)
-
     RQFONT(QApplication::font(PCONSTCHAR(1)));
-
   } else {
     THROW_ERROR_3012();
   }
@@ -752,19 +738,13 @@ HB_FUNC_STATIC(QAPPLICATION_PALETTE)
 {
   if (ISNUMPAR(0)) {
     // static QPalette palette()
-
     RQPALETTE(QApplication::palette());
-
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // static QPalette palette(const QWidget *widget)
-
     RQPALETTE(QApplication::palette(PQWIDGET(1)));
-
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QPalette palette(const char *className)
-
     RQPALETTE(QApplication::palette(PCONSTCHAR(1)));
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1056,19 +1036,14 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTARTDRAGTIME)
 
 HB_FUNC_STATIC(QAPPLICATION_SETSTYLE)
 {
-  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
+  if (ISNUMPAR(1) && ISQSTYLE(1)) {
     // static void setStyle(QStyle *style)
-
     QApplication::setStyle(PQSTYLE(1));
-
     RETURN_SELF();
-
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QStyle *setStyle(const QString &style)
-
     auto ptr = QApplication::setStyle(PQSTRING(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1153,16 +1128,12 @@ HB_FUNC_STATIC(QAPPLICATION_TOPLEVELAT)
 {
   if (ISNUMPAR(1) && ISQPOINT(1)) {
     // static QWidget *topLevelAt(const QPoint &point)
-
     auto ptr = QApplication::topLevelAt(*PQPOINT(1));
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static QWidget *topLevelAt(int x, int y)
-
     auto ptr = QApplication::topLevelAt(PINT(1), PINT(2));
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1219,16 +1190,12 @@ HB_FUNC_STATIC(QAPPLICATION_WIDGETAT)
 {
   if (ISNUMPAR(1) && ISQPOINT(1)) {
     // static QWidget *widgetAt(const QPoint &point)
-
     auto ptr = QApplication::widgetAt(*PQPOINT(1));
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static QWidget *widgetAt(int x, int y)
-
     auto ptr = QApplication::widgetAt(PINT(1), PINT(2));
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
-
   } else {
     THROW_ERROR_3012();
   }

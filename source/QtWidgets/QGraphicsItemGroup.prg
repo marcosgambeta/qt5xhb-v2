@@ -27,15 +27,7 @@ CLASS QGraphicsItemGroup INHERIT QGraphicsItem
    METHOD paint
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsItemGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

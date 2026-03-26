@@ -75,15 +75,7 @@ CLASS QDateTimeEdit INHERIT QAbstractSpinBox
    METHOD onDateTimeChanged
    METHOD onTimeChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDateTimeEdit
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -115,22 +107,18 @@ HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
     // QDateTimeEdit(QWidget *parent = nullptr)
     auto obj = new QDateTimeEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQDATETIME(1) && ISQWIDGETORNIL(2)) {
     // QDateTimeEdit(const QDateTime &datetime, QWidget *parent = nullptr)
     auto obj = new QDateTimeEdit(*PQDATETIME(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQDATE(1) && ISQWIDGETORNIL(2)) {
     // QDateTimeEdit(const QDate &date, QWidget *parent = nullptr)
     auto obj = new QDateTimeEdit(*PQDATE(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQTIME(1) && ISQWIDGETORNIL(2)) {
     // QDateTimeEdit(const QTime &time, QWidget *parent = nullptr)
     auto obj = new QDateTimeEdit(*PQTIME(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -697,7 +685,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDISPLAYFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setDisplayFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

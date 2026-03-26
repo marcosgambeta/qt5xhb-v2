@@ -177,15 +177,7 @@ CLASS QAbstractItemView INHERIT QAbstractScrollArea
    METHOD onPressed
    METHOD onViewportEntered
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractItemView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -721,7 +713,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
       auto ptr = obj->itemDelegate();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
-
   } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     // QAbstractItemDelegate *itemDelegate(const QModelIndex &index) const
     GET_PTR_FROM_SELF(obj);
@@ -730,7 +721,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
       auto ptr = obj->itemDelegate(*PQMODELINDEX(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -841,7 +831,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_KEYBOARDSEARCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->keyboardSearch(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -961,9 +951,8 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTO)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
-      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2)
-                                          ? static_cast<QAbstractItemView::ScrollHint>(QAbstractItemView::EnsureVisible)
-                                          : PQABSTRACTITEMVIEW_SCROLLHINT(2));
+      obj->scrollTo(*PQMODELINDEX(1),
+                    HB_ISNIL(2) ? QAbstractItemView::EnsureVisible : PQABSTRACTITEMVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       THROW_ERROR_3012();
@@ -1462,7 +1451,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // void update(const QRect &rect)
     GET_PTR_FROM_SELF(obj);
@@ -1472,7 +1460,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void update(const QRegion &rgn)
     GET_PTR_FROM_SELF(obj);
@@ -1482,7 +1469,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(0)) {
     // void update()
     GET_PTR_FROM_SELF(obj);
@@ -1492,7 +1478,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     // void update(const QModelIndex &index)
     GET_PTR_FROM_SELF(obj);
@@ -1502,7 +1487,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

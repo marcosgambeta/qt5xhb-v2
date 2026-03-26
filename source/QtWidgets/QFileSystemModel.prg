@@ -74,15 +74,7 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
    METHOD onFileRenamed
    METHOD onRootPathChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QFileSystemModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -278,14 +270,13 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETICONPROVIDER)
 
 HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // QModelIndex index(const QString &path, int column = 0) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQMODELINDEX(obj->index(PQSTRING(1), OPINT(2, 0)));
     }
-
   } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
     // QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
     GET_PTR_FROM_SELF(obj);
@@ -293,7 +284,6 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
     if (obj != nullptr) {
       RQMODELINDEX(obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -380,7 +370,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MKDIR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQSTRING(2)) {
 #endif
       RQMODELINDEX(obj->mkdir(*PQMODELINDEX(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -620,7 +610,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETROOTPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQMODELINDEX(obj->setRootPath(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

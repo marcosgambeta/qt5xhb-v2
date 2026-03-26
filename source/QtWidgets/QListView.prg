@@ -115,15 +115,7 @@ CLASS QListView INHERIT QAbstractItemView
 
    METHOD onIndexesMoved
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QListView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

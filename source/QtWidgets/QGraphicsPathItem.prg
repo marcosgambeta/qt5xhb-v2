@@ -29,15 +29,7 @@ CLASS QGraphicsPathItem INHERIT QAbstractGraphicsShapeItem
    METHOD shape
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsPathItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -65,12 +57,10 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_NEW)
     // QGraphicsPathItem(QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsPathItem(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsPathItem(const QPainterPath &path, QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsPathItem(*PQPAINTERPATH(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }

@@ -86,15 +86,7 @@ CLASS QGraphicsView INHERIT QAbstractScrollArea
    METHOD updateScene
    METHOD updateSceneRect
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -127,12 +119,10 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_NEW)
     // QGraphicsView(QWidget *parent = nullptr)
     auto obj = new QGraphicsView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQGRAPHICSSCENE(1) && ISQWIDGETORNIL(2)) {
     // QGraphicsView(QGraphicsScene *scene, QWidget *parent = nullptr)
     auto obj = new QGraphicsView(PQGRAPHICSSCENE(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -210,7 +200,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void centerOn(qreal x, qreal y)
     GET_PTR_FROM_SELF(obj);
@@ -220,7 +209,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
     // void centerOn(const QGraphicsItem *item)
     GET_PTR_FROM_SELF(obj);
@@ -230,7 +218,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -265,7 +252,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     }
 
     RETURN_SELF();
-
   } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5) &&
              ISNUMORNIL(6)) {
     // void ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50)
@@ -276,8 +262,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     }
 
     RETURN_SELF();
-
-  } else if (ISBETWEEN(1, 3) && HB_ISOBJECT(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // void ensureVisible(const QGraphicsItem *item, int xmargin = 50, int ymargin = 50)
     GET_PTR_FROM_SELF(obj);
 
@@ -286,7 +271,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -303,7 +287,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     }
 
     RETURN_SELF();
-
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // void fitInView(qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio)
     GET_PTR_FROM_SELF(obj);
@@ -314,8 +297,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     }
 
     RETURN_SELF();
-
-  } else if (ISBETWEEN(1, 2) && HB_ISOBJECT(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2)) {
     // void fitInView(const QGraphicsItem *item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio)
     GET_PTR_FROM_SELF(obj);
 
@@ -324,7 +306,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -394,7 +375,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMAT)
       auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QGraphicsItem *itemAt(int x, int y) const
     GET_PTR_FROM_SELF(obj);
@@ -403,7 +383,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMAT)
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -418,7 +397,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     if (obj != nullptr) {
       RQPOINT(obj->mapFromScene(*PQPOINTF(1)));
     }
-
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // QPolygon mapFromScene(const QRectF &rect) const
     GET_PTR_FROM_SELF(obj);
@@ -426,7 +404,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     if (obj != nullptr) {
       RQPOLYGON(obj->mapFromScene(*PQRECTF(1)));
     }
-
   } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     // QPolygon mapFromScene(const QPolygonF &polygon) const
     GET_PTR_FROM_SELF(obj);
@@ -434,7 +411,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     if (obj != nullptr) {
       RQPOLYGON(obj->mapFromScene(*PQPOLYGONF(1)));
     }
-
   } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     // QPainterPath mapFromScene(const QPainterPath &path) const
     GET_PTR_FROM_SELF(obj);
@@ -442,7 +418,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     if (obj != nullptr) {
       RQPAINTERPATH(obj->mapFromScene(*PQPAINTERPATH(1)));
     }
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QPoint mapFromScene(qreal x, qreal y) const
     GET_PTR_FROM_SELF(obj);
@@ -450,7 +425,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     if (obj != nullptr) {
       RQPOINT(obj->mapFromScene(PQREAL(1), PQREAL(2)));
     }
-
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QPolygon mapFromScene(qreal x, qreal y, qreal w, qreal h) const
     GET_PTR_FROM_SELF(obj);
@@ -458,7 +432,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     if (obj != nullptr) {
       RQPOLYGON(obj->mapFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -473,7 +446,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     if (obj != nullptr) {
       RQPOINTF(obj->mapToScene(*PQPOINT(1)));
     }
-
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // QPolygonF mapToScene(const QRect &rect) const
     GET_PTR_FROM_SELF(obj);
@@ -481,7 +453,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     if (obj != nullptr) {
       RQPOLYGONF(obj->mapToScene(*PQRECT(1)));
     }
-
   } else if (ISNUMPAR(1) && ISQPOLYGON(1)) {
     // QPolygonF mapToScene(const QPolygon &polygon) const
     GET_PTR_FROM_SELF(obj);
@@ -489,7 +460,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     if (obj != nullptr) {
       RQPOLYGONF(obj->mapToScene(*PQPOLYGON(1)));
     }
-
   } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     // QPainterPath mapToScene(const QPainterPath &path) const
     GET_PTR_FROM_SELF(obj);
@@ -497,7 +467,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     if (obj != nullptr) {
       RQPAINTERPATH(obj->mapToScene(*PQPAINTERPATH(1)));
     }
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QPointF mapToScene(int x, int y) const
     GET_PTR_FROM_SELF(obj);
@@ -505,7 +474,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     if (obj != nullptr) {
       RQPOINTF(obj->mapToScene(PINT(1), PINT(2)));
     }
-
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QPolygonF mapToScene(int x, int y, int w, int h) const
     GET_PTR_FROM_SELF(obj);
@@ -513,7 +481,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     if (obj != nullptr) {
       RQPOLYGONF(obj->mapToScene(PINT(1), PINT(2), PINT(3), PINT(4)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1059,7 +1026,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENERECT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setSceneRect(qreal x, qreal y, qreal w, qreal h)
     GET_PTR_FROM_SELF(obj);
@@ -1069,7 +1035,6 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENERECT)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

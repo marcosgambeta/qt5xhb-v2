@@ -138,23 +138,21 @@ ENDCLASS
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsScene *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
+HB_FUNC_STATIC(
+                                                                                                            QGRAPHICSSCENE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     // QGraphicsScene(QObject *parent = nullptr)
     auto obj = new QGraphicsScene(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISQOBJECTORNIL(2)) {
     // QGraphicsScene(const QRectF &sceneRect, QObject *parent = nullptr)
     auto obj = new QGraphicsScene(*PQRECTF(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQOBJECTORNIL(5)) {
     // QGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject *parent = nullptr)
     auto obj = new QGraphicsScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -215,7 +213,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
       auto ptr = obj->addEllipse(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *PQPEN(2), HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
-
   } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQPENORNIL(5) &&
              ISQBRUSHORNIL(6)) {
     // QGraphicsEllipseItem *addEllipse(qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush
@@ -227,7 +224,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
                                  HB_ISNIL(6) ? QBrush() : *PQBRUSH(6));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -263,7 +259,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
       auto ptr = obj->addLine(*PQLINEF(1), HB_ISNIL(2) ? QPen() : *PQPEN(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
     }
-
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQPENORNIL(5)) {
     // QGraphicsLineItem *addLine(qreal x1, qreal y1, qreal x2, qreal y2, const QPen &pen = QPen())
     GET_PTR_FROM_SELF(obj);
@@ -272,7 +267,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
       auto ptr = obj->addLine(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? QPen() : *PQPEN(5));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -347,7 +341,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
       auto ptr = obj->addRect(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *PQPEN(2), HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
-
   } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQPENORNIL(5) &&
              ISQBRUSHORNIL(6)) {
     // QGraphicsRectItem *addRect(qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &brush =
@@ -359,7 +352,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
                               HB_ISNIL(6) ? QBrush() : *PQBRUSH(6));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -372,7 +364,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDSIMPLETEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQFONTORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQFONTORNIL(2)) {
 #endif
       auto ptr = obj->addSimpleText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *PQFONT(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSSIMPLETEXTITEM", false);
@@ -391,7 +383,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQFONTORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQFONTORNIL(2)) {
 #endif
       auto ptr = obj->addText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *PQFONT(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSTEXTITEM");
@@ -646,7 +638,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_INVALIDATE)
     }
 
     RETURN_SELF();
-
   } else if (ISBETWEEN(0, 2) && ISQRECTFORNIL(1) && ISNUMORNIL(2)) {
     // void invalidate(const QRectF &rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers)
     GET_PTR_FROM_SELF(obj);
@@ -657,7 +648,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_INVALIDATE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -709,7 +699,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMAT)
       auto ptr = obj->itemAt(*PQPOINTF(1), *PQTRANSFORM(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
-
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTRANSFORM(3)) {
     // QGraphicsItem *itemAt(qreal x, qreal y, const QTransform &deviceTransform) const
     GET_PTR_FROM_SELF(obj);
@@ -718,7 +707,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMAT)
       auto ptr = obj->itemAt(PQREAL(1), PQREAL(2), *PQTRANSFORM(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1104,7 +1092,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSCENERECT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setSceneRect(qreal x, qreal y, qreal w, qreal h)
     GET_PTR_FROM_SELF(obj);
@@ -1114,7 +1101,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSCENERECT)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1131,7 +1117,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSELECTIONAREA)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(3) && ISQPAINTERPATH(1) && HB_ISNUM(2) && ISQTRANSFORM(3)) {
     // void setSelectionArea(const QPainterPath &path, Qt::ItemSelectionMode mode, const QTransform &deviceTransform)
     GET_PTR_FROM_SELF(obj);
@@ -1141,7 +1126,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSELECTIONAREA)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1255,7 +1239,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_UPDATE)
     }
 
     RETURN_SELF();
-
   } else if (ISBETWEEN(0, 1) && ISQRECTFORNIL(1)) {
     // void update(const QRectF &rect = QRectF())
     GET_PTR_FROM_SELF(obj);
@@ -1265,7 +1248,6 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_UPDATE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

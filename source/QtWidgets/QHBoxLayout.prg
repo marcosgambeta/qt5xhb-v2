@@ -18,15 +18,7 @@ CLASS QHBoxLayout INHERIT QBoxLayout
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHBoxLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -56,12 +48,10 @@ HB_FUNC_STATIC(QHBOXLAYOUT_NEW)
     // QHBoxLayout()
     auto obj = new QHBoxLayout();
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // QHBoxLayout(QWidget *parent)
     auto obj = new QHBoxLayout(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }

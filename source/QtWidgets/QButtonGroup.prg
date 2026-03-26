@@ -97,7 +97,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2)) {
     // void addButton(QAbstractButton *button, int id)
     GET_PTR_FROM_SELF(obj);
@@ -107,7 +106,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

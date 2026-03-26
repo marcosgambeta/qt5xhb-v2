@@ -27,15 +27,7 @@ CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
    METHOD setGeometry
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsProxyWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

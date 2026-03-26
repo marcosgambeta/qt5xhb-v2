@@ -63,15 +63,7 @@ CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
    METHOD setGeometry
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsGridLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -125,7 +117,6 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
     }
 
     RETURN_SELF();
-
   } else if (ISBETWEEN(3, 4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // void addItem(QGraphicsLayoutItem *item, int row, int column, Qt::Alignment alignment = 0)
     GET_PTR_FROM_SELF(obj);
@@ -136,7 +127,6 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -314,7 +304,6 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
-
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // virtual QGraphicsLayoutItem *itemAt(int index) const
     GET_PTR_FROM_SELF(obj);
@@ -323,7 +312,6 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
       auto ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
-
   } else {
     THROW_ERROR_3012();
   }

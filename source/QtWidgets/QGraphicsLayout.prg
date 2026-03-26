@@ -30,15 +30,7 @@ CLASS QGraphicsLayout INHERIT QGraphicsLayoutItem
    METHOD instantInvalidatePropagation
    METHOD setInstantInvalidatePropagation
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

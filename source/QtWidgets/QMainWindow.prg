@@ -131,7 +131,6 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQDOCKWIDGET(2) && HB_ISNUM(3)) {
     // void addDockWidget(Qt::DockWidgetArea area, QDockWidget *dockwidget, Qt::Orientation orientation)
     GET_PTR_FROM_SELF(obj);
@@ -141,7 +140,6 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -158,7 +156,6 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQTOOLBAR(1)) {
     // void addToolBar(QToolBar *toolbar)
     GET_PTR_FROM_SELF(obj);
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
     }
 
     RETURN_SELF();
-
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QToolBar *addToolBar(const QString &title)
     GET_PTR_FROM_SELF(obj);
 
@@ -177,7 +173,6 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
       auto ptr = obj->addToolBar(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QTOOLBAR");
     }
-
   } else {
     THROW_ERROR_3012();
   }

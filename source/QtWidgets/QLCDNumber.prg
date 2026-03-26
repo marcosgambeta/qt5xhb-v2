@@ -38,15 +38,7 @@ CLASS QLCDNumber INHERIT QFrame
 
    METHOD onOverflow
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLCDNumber
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -76,12 +68,10 @@ HB_FUNC_STATIC(QLCDNUMBER_NEW)
     // QLCDNumber(QWidget *parent = nullptr)
     auto obj = new QLCDNumber(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
     // QLCDNumber(uint numDigits, QWidget *parent = nullptr)
     auto obj = new QLCDNumber(PUINT(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -106,7 +96,6 @@ HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW)
         if (obj != nullptr) {
           RBOOL(obj->checkOverflow(PDOUBLE(1)));
         }
-
       } else if (HB_IS_INTEGER(pNum)) {
         // bool checkOverflow(int num) const
         GET_PTR_FROM_SELF(obj);
@@ -114,7 +103,6 @@ HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW)
         if (obj != nullptr) {
           RBOOL(obj->checkOverflow(PINT(1)));
         }
-
       } else {
         THROW_ERROR_3012();
       }
@@ -324,7 +312,6 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
       }
 
       RETURN_SELF();
-
     } else if (HB_ISNUM(1)) {
       PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
       if (pNum) {
@@ -337,7 +324,6 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
           }
 
           RETURN_SELF();
-
         } else if (HB_IS_INTEGER(pNum)) {
           // void display(int num)
           GET_PTR_FROM_SELF(obj);
@@ -347,7 +333,6 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
           }
 
           RETURN_SELF();
-
         } else {
           THROW_ERROR_3012();
         }

@@ -92,12 +92,10 @@ HB_FUNC_STATIC(QMENU_NEW)
     // QMenu(QWidget *parent = nullptr)
     auto obj = new QMenu(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQWIDGETORNIL(2)) {
     // QMenu(const QString &title, QWidget *parent = nullptr)
     auto obj = new QMenu(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -188,7 +186,7 @@ HB_FUNC_STATIC(QMENU_SETACTIVEACTION)
 
 HB_FUNC_STATIC(QMENU_ADDACTION)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QAction *addAction(const QString &text)
     GET_PTR_FROM_SELF(obj);
 
@@ -196,8 +194,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       auto ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     // QAction *addAction(const QIcon &icon, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
@@ -205,8 +202,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
-  } else if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQKEYSEQUENCEORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && ISQSTRING(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQKEYSEQUENCEORNIL(4)) {
     // QAction *addAction(const QString &text, const QObject *receiver, const char *member, const QKeySequence &shortcut
     // = 0)
     GET_PTR_FROM_SELF(obj);
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       auto ptr = obj->addAction(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3), HB_ISNIL(4) ? 0 : *PQKEYSEQUENCE(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
-  } else if (ISBETWEEN(4, 5) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) &&
+  } else if (ISBETWEEN(4, 5) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2) && ISQOBJECT(3) && HB_ISCHAR(4) &&
              ISQKEYSEQUENCEORNIL(5)) {
     // QAction *addAction(const QIcon &icon, const QString &text, const QObject *receiver, const char *member, const
     // QKeySequence &shortcut = 0)
@@ -227,7 +222,6 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
                                 PCONSTCHAR(4), HB_ISNIL(5) ? 0 : *PQKEYSEQUENCE(5));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
   } else if (ISNUMPAR(1) && ISQACTION(1)) {
     // void addAction(QAction *action)
     GET_PTR_FROM_SELF(obj);
@@ -237,7 +231,6 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -253,8 +246,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
       auto ptr = obj->addMenu(PQMENU(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QMenu *addMenu(const QString &title)
     GET_PTR_FROM_SELF(obj);
 
@@ -262,8 +254,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
       auto ptr = obj->addMenu(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
-
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     // QMenu *addMenu(const QIcon &icon, const QString &title)
     GET_PTR_FROM_SELF(obj);
 
@@ -271,7 +262,6 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
       auto ptr = obj->addMenu(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -365,7 +355,6 @@ HB_FUNC_STATIC(QMENU_EXEC)
       auto ptr = obj->exec();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
   } else if (ISBETWEEN(1, 2) && ISQPOINT(1) && ISQACTIONORNIL(2)) {
     // QAction *exec(const QPoint &pos, QAction *at = nullptr)
     GET_PTR_FROM_SELF(obj);
@@ -374,10 +363,8 @@ HB_FUNC_STATIC(QMENU_EXEC)
       auto ptr = obj->exec(*PQPOINT(1), OPQACTION(2, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-
   } else if (ISBETWEEN(2, 4) && HB_ISARRAY(1) && ISQPOINT(2) && ISQACTIONORNIL(3) && ISQWIDGETORNIL(4)) {
     // static QAction *exec(QList<QAction *> actions, const QPoint &pos, QAction *at = 0, QWidget *parent = 0)
-
     QList<QAction *> par1;
     auto aList1 = hb_param(1, HB_IT_ARRAY);
     int nLen1 = hb_arrayLen(aList1);
@@ -386,7 +373,6 @@ HB_FUNC_STATIC(QMENU_EXEC)
     }
     auto ptr = QMenu::exec(par1, *PQPOINT(2), OPQACTION(3, 0), OPQWIDGET(4, 0));
     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
-
   } else {
     THROW_ERROR_3012();
   }
@@ -664,7 +650,7 @@ HB_FUNC_STATIC(QMENU_SETTITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -728,7 +714,6 @@ HB_FUNC_STATIC(QMENU_ADDSECTION)
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 #endif
-
   } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
     // QAction *addSection(const QIcon &icon, const QString &text)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -739,7 +724,6 @@ HB_FUNC_STATIC(QMENU_ADDSECTION)
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 #endif
-
   } else {
     THROW_ERROR_3012();
   }
@@ -759,7 +743,6 @@ HB_FUNC_STATIC(QMENU_INSERTSECTION)
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 #endif
-
   } else if (ISNUMPAR(3) && ISQACTION(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
     // QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -770,7 +753,6 @@ HB_FUNC_STATIC(QMENU_INSERTSECTION)
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 #endif
-
   } else {
     THROW_ERROR_3012();
   }

@@ -37,15 +37,7 @@ CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
    METHOD shape
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsPixmapItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -73,12 +65,10 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_NEW)
     // QGraphicsPixmapItem(QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsPixmapItem(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsPixmapItem(const QPixmap &pixmap, QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsPixmapItem(*PQPIXMAP(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -138,7 +128,6 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SETOFFSET)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setOffset(qreal x, qreal y)
     GET_PTR_FROM_SELF(obj);
@@ -148,7 +137,6 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SETOFFSET)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

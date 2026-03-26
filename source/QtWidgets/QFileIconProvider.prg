@@ -87,7 +87,6 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     if (obj != nullptr) {
       RQICON(obj->icon(PQFILEICONPROVIDER_ICONTYPE(1)));
     }
-
   } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {
     // virtual QIcon icon(const QFileInfo &info) const
     GET_PTR_FROM_SELF(obj);
@@ -95,7 +94,6 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     if (obj != nullptr) {
       RQICON(obj->icon(*PQFILEINFO(1)));
     }
-
   } else {
     THROW_ERROR_3012();
   }

@@ -51,15 +51,7 @@ CLASS QBoxLayout INHERIT QLayout
    METHOD sizeHint
    METHOD takeAt
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QBoxLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -83,7 +75,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QBoxLayout *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QBoxLayout(QBoxLayout::Direction dir, QWidget *parent = nullptr)
+                                // QBoxLayout(QBoxLayout::Direction dir, QWidget *parent = nullptr)
 HB_FUNC_STATIC(QBOXLAYOUT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
@@ -409,7 +401,6 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCHFACTOR)
     if (obj != nullptr) {
       RBOOL(obj->setStretchFactor(PQWIDGET(1), PINT(2)));
     }
-
   } else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2)) {
     // bool setStretchFactor(QLayout *layout, int stretch)
     GET_PTR_FROM_SELF(obj);
@@ -417,7 +408,6 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCHFACTOR)
     if (obj != nullptr) {
       RBOOL(obj->setStretchFactor(PQLAYOUT(1), PINT(2)));
     }
-
   } else {
     THROW_ERROR_3012();
   }

@@ -30,15 +30,7 @@ CLASS QGraphicsRotation INHERIT QGraphicsTransform
    METHOD onAxisChanged
    METHOD onOriginChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsRotation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -156,7 +148,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETANGLE)
 
 HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
 {
-  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
+  if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
     // void setAxis(const QVector3D &axis)
     GET_PTR_FROM_SELF(obj);
 
@@ -165,7 +157,6 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setAxis(Qt::Axis axis)
     GET_PTR_FROM_SELF(obj);
@@ -175,7 +166,6 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

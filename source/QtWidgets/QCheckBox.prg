@@ -35,15 +35,7 @@ CLASS QCheckBox INHERIT QAbstractButton
 
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QCheckBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -73,12 +65,10 @@ HB_FUNC_STATIC(QCHECKBOX_NEW)
     // QCheckBox(QWidget *parent = nullptr)
     auto obj = new QCheckBox(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQWIDGETORNIL(2)) {
     // QCheckBox(const QString &text, QWidget *parent = nullptr)
     auto obj = new QCheckBox(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }

@@ -37,15 +37,7 @@ CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
    METHOD doAction
    METHOD keyBindingsForAction
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAccessibleWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -69,10 +61,11 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-// QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString &name = QString())
+                    // QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString &name =
+                    // QString())
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_NEW)
 {
-  if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISCHARORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISQSTRINGORNIL(3)) {
     auto obj = new QAccessibleWidget(PQWIDGET(1), HB_ISNIL(2) ? QAccessible::Client : PQACCESSIBLE_ROLE(2),
                                      OPQSTRING(3, QString()));
     Qt5xHb::returnNewObject(obj, true);
@@ -344,7 +337,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->doAction(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +357,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_KEYBINDINGSFORACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRINGLIST(obj->keyBindingsForAction(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

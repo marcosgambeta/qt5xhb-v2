@@ -70,7 +70,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     if (obj != nullptr) {
       RQRECT(obj->availableGeometry(OPINT(1, -1)));
     }
-
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // const QRect availableGeometry(const QWidget *widget) const
     GET_PTR_FROM_SELF(obj);
@@ -78,7 +77,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     if (obj != nullptr) {
       RQRECT(obj->availableGeometry(PQWIDGET(1)));
     }
-
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // const QRect availableGeometry(const QPoint &p) const
     GET_PTR_FROM_SELF(obj);
@@ -86,7 +84,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     if (obj != nullptr) {
       RQRECT(obj->availableGeometry(*PQPOINT(1)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -174,7 +171,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     if (obj != nullptr) {
       RQRECT(obj->screenGeometry(OPINT(1, -1)));
     }
-
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // const QRect screenGeometry(const QWidget *widget) const
     GET_PTR_FROM_SELF(obj);
@@ -182,7 +178,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     if (obj != nullptr) {
       RQRECT(obj->screenGeometry(PQWIDGET(1)));
     }
-
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // const QRect screenGeometry(const QPoint &p) const
     GET_PTR_FROM_SELF(obj);
@@ -190,7 +185,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     if (obj != nullptr) {
       RQRECT(obj->screenGeometry(*PQPOINT(1)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -205,7 +199,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
     if (obj != nullptr) {
       RINT(obj->screenNumber(OPQWIDGET(1, nullptr)));
     }
-
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // int screenNumber(const QPoint &point) const
     GET_PTR_FROM_SELF(obj);
@@ -213,7 +206,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
     if (obj != nullptr) {
       RINT(obj->screenNumber(*PQPOINT(1)));
     }
-
   } else {
     THROW_ERROR_3012();
   }

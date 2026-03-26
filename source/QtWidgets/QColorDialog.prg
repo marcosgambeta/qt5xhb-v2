@@ -37,15 +37,7 @@ CLASS QColorDialog INHERIT QDialog
    METHOD onColorSelected
    METHOD onCurrentColorChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QColorDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -75,12 +67,10 @@ HB_FUNC_STATIC(QCOLORDIALOG_NEW)
     // QColorDialog(QWidget *parent = nullptr)
     auto obj = new QColorDialog(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQWIDGETORNIL(2)) {
     // QColorDialog(const QColor &initial, QWidget *parent = nullptr)
     auto obj = new QColorDialog(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -143,7 +133,6 @@ HB_FUNC_STATIC(QCOLORDIALOG_OPEN)
     }
 
     RETURN_SELF();
-
 #endif
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     // void open(QObject *receiver, const char *member)
@@ -154,7 +143,6 @@ HB_FUNC_STATIC(QCOLORDIALOG_OPEN)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -323,7 +311,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_CUSTOMCOUNT)
 HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 4) && ISQCOLORORNIL(1) && ISQWIDGETORNIL(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
+  if (ISBETWEEN(0, 4) && ISQCOLORORNIL(1) && ISQWIDGETORNIL(2) && ISQSTRINGORNIL(3) && ISNUMORNIL(4)) {
 #endif
     RQCOLOR(QColorDialog::getColor(
         HB_ISNIL(1) ? Qt::white : *PQCOLOR(1), OPQWIDGET(2, nullptr), OPQSTRING(3, QString()),
@@ -334,8 +322,6 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
   }
 #endif
 }
-
-#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QColorDialog *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // static QColor standardColor(int index)
 HB_FUNC_STATIC(QCOLORDIALOG_STANDARDCOLOR)

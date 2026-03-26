@@ -26,15 +26,7 @@ CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem
    METHOD isObscuredBy
    METHOD opaqueArea
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QAbstractGraphicsShapeItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

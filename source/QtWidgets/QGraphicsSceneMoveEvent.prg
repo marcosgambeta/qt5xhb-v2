@@ -21,15 +21,7 @@ CLASS QGraphicsSceneMoveEvent INHERIT QGraphicsSceneEvent
    METHOD newPos
    METHOD oldPos
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsSceneMoveEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

@@ -31,15 +31,7 @@ CLASS QGestureEvent INHERIT QEvent
    METHOD setAccepted
    METHOD widget
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGestureEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -96,7 +88,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQGESTURE(1)) {
     // void accept(QGesture *gesture)
     GET_PTR_FROM_SELF(obj);
@@ -106,7 +97,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void accept(Qt::GestureType gestureType)
     GET_PTR_FROM_SELF(obj);
@@ -116,7 +106,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -263,7 +252,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && ISQGESTURE(1)) {
     // void ignore(QGesture *gesture)
     GET_PTR_FROM_SELF(obj);
@@ -273,7 +261,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void ignore(Qt::GestureType gestureType)
     GET_PTR_FROM_SELF(obj);
@@ -283,7 +270,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -298,7 +284,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
     if (obj != nullptr) {
       RBOOL(obj->isAccepted());
     }
-
   } else if (ISNUMPAR(1) && ISQGESTURE(1)) {
     // bool isAccepted(QGesture *gesture) const
     GET_PTR_FROM_SELF(obj);
@@ -306,7 +291,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
     if (obj != nullptr) {
       RBOOL(obj->isAccepted(PQGESTURE(1)));
     }
-
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool isAccepted(Qt::GestureType gestureType) const
     GET_PTR_FROM_SELF(obj);
@@ -314,7 +298,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
     if (obj != nullptr) {
       RBOOL(obj->isAccepted(PQT_GESTURETYPE(1)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -349,7 +332,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && ISQGESTURE(1) && ISBOOL(2)) {
     // void setAccepted(QGesture *gesture, bool value)
     GET_PTR_FROM_SELF(obj);
@@ -359,7 +341,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISBOOL(2)) {
     // void setAccepted(Qt::GestureType gestureType, bool value)
     GET_PTR_FROM_SELF(obj);
@@ -369,7 +350,6 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

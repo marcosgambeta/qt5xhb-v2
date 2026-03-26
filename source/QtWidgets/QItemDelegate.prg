@@ -23,15 +23,7 @@ CLASS QItemDelegate INHERIT QAbstractItemDelegate
    METHOD setClipping
    METHOD setItemEditorFactory
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QItemDelegate
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

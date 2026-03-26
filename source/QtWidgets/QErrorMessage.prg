@@ -20,15 +20,7 @@ CLASS QErrorMessage INHERIT QDialog
    METHOD showMessage
    METHOD qtHandler
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QErrorMessage
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -72,7 +64,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_DELETE)
 
 HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void showMessage(const QString &message)
     GET_PTR_FROM_SELF(obj);
 
@@ -81,8 +73,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
     }
 
     RETURN_SELF();
-
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // void showMessage(const QString &message, const QString &type)
     GET_PTR_FROM_SELF(obj);
 
@@ -91,7 +82,6 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

@@ -34,15 +34,7 @@ CLASS QGraphicsScale INHERIT QGraphicsTransform
    METHOD onYScaleChanged
    METHOD onZScaleChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsScale
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 

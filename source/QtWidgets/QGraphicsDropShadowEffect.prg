@@ -36,15 +36,7 @@ CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
    METHOD onColorChanged
    METHOD onOffsetChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsDropShadowEffect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -245,7 +237,6 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setOffset(qreal dx, qreal dy)
     GET_PTR_FROM_SELF(obj);
@@ -255,7 +246,6 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setOffset(qreal d)
     GET_PTR_FROM_SELF(obj);
@@ -265,7 +255,6 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

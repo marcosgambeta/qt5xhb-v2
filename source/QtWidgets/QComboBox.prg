@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QCOMBOBOX_DELETE)
 
 HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQVARIANTORNIL(2)) {
     // void addItem(const QString &text, const QVariant &userData = QVariant())
     GET_PTR_FROM_SELF(obj);
 
@@ -164,8 +164,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
     }
 
     RETURN_SELF();
-
-  } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQVARIANTORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2) && ISQVARIANTORNIL(3)) {
     // void addItem(const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
     GET_PTR_FROM_SELF(obj);
 
@@ -175,7 +174,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -319,11 +317,9 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
 #endif
-      RINT(obj->findText(PQSTRING(1), HB_ISNIL(2)
-                                          ? static_cast<Qt::MatchFlags>(Qt::MatchExactly | Qt::MatchCaseSensitive)
-                                          : PQT_MATCHFLAGS(2)));
+      RINT(obj->findText(PQSTRING(1), HB_ISNIL(2) ? Qt::MatchExactly | Qt::MatchCaseSensitive : PQT_MATCHFLAGS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       THROW_ERROR_3012();
@@ -390,7 +386,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ICONSIZE)
 
 HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
 {
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQVARIANTORNIL(3)) {
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTRING(2) && ISQVARIANTORNIL(3)) {
     // void insertItem(int index, const QString &text, const QVariant &userData = QVariant())
     GET_PTR_FROM_SELF(obj);
 
@@ -399,8 +395,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
     }
 
     RETURN_SELF();
-
-  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3) && ISQVARIANTORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && ISQSTRING(3) && ISQVARIANTORNIL(4)) {
     // void insertItem(int index, const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
     GET_PTR_FROM_SELF(obj);
 
@@ -410,7 +405,6 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -900,7 +894,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setItemText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1310,7 +1304,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETEDITTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setEditText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

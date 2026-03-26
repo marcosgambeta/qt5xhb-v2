@@ -133,15 +133,7 @@ CLASS QHeaderView INHERIT QAbstractItemView
    METHOD onSectionResized
    METHOD onSortIndicatorChanged
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QHeaderView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -492,7 +484,6 @@ HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
     if (obj != nullptr) {
       RINT(obj->logicalIndexAt(PINT(1)));
     }
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // int logicalIndexAt(int x, int y) const
     GET_PTR_FROM_SELF(obj);
@@ -500,7 +491,6 @@ HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
     if (obj != nullptr) {
       RINT(obj->logicalIndexAt(PINT(1), PINT(2)));
     }
-
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // int logicalIndexAt(const QPoint &pos) const
     GET_PTR_FROM_SELF(obj);
@@ -508,7 +498,6 @@ HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
     if (obj != nullptr) {
       RINT(obj->logicalIndexAt(*PQPOINT(1)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1263,7 +1252,6 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONRESIZEMODE)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setSectionResizeMode(int logicalIndex, QHeaderView::ResizeMode mode)
     GET_PTR_FROM_SELF(obj);
@@ -1273,7 +1261,6 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONRESIZEMODE)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }
@@ -1759,7 +1746,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSORTINDICATORCHANGED)
                                              if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEADERVIEW");
                                                auto pArg1 = hb_itemPutNI(nullptr, arg1);
-                                               auto pArg2 = hb_itemPutNI(nullptr, (int)arg2);
+                                               auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
                                                hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
                                                hb_itemRelease(pSender);
                                                hb_itemRelease(pArg1);

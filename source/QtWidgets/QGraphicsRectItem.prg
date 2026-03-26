@@ -29,15 +29,7 @@ CLASS QGraphicsRectItem INHERIT QAbstractGraphicsShapeItem
    METHOD shape
    METHOD type
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsRectItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -65,18 +57,15 @@ HB_FUNC_STATIC(QGRAPHICSRECTITEM_NEW)
     // QGraphicsRectItem(QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsRectItem(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISQGRAPHICSITEMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsRectItem(const QRectF &rect, QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsRectItem(*PQRECTF(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQGRAPHICSITEMORNIL(5)) {
     // QGraphicsRectItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = nullptr)
     auto obj =
         new QGraphicsRectItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? nullptr : PQGRAPHICSITEM(5));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -118,7 +107,6 @@ HB_FUNC_STATIC(QGRAPHICSRECTITEM_SETRECT)
     }
 
     RETURN_SELF();
-
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setRect(qreal x, qreal y, qreal width, qreal height)
     GET_PTR_FROM_SELF(obj);
@@ -128,7 +116,6 @@ HB_FUNC_STATIC(QGRAPHICSRECTITEM_SETRECT)
     }
 
     RETURN_SELF();
-
   } else {
     THROW_ERROR_3012();
   }

@@ -58,15 +58,7 @@ CLASS QDirModel INHERIT QAbstractItemModel
    METHOD fileInfo
    METHOD refresh
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QDirModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -96,12 +88,10 @@ HB_FUNC_STATIC(QDIRMODEL_NEW)
     // QDirModel(const QStringList &nameFilters, QDir::Filters filters, QDir::SortFlags sort, QObject *parent = nullptr)
     auto obj = new QDirModel(PQSTRINGLIST(1), PQDIR_FILTERS(2), PQDIR_SORTFLAGS(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     // QDirModel(QObject *parent = nullptr)
     auto obj = new QDirModel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -123,15 +113,13 @@ HB_FUNC_STATIC(QDIRMODEL_INDEX)
     if (obj != nullptr) {
       RQMODELINDEX(obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
     }
-
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // QModelIndex index(const QString &path, int column = 0) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQMODELINDEX(obj->index(PQSTRING(1), OPINT(2, 0)));
     }
-
   } else {
     THROW_ERROR_3012();
   }
@@ -629,7 +617,7 @@ HB_FUNC_STATIC(QDIRMODEL_MKDIR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQSTRING(2)) {
 #endif
       RQMODELINDEX(obj->mkdir(*PQMODELINDEX(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

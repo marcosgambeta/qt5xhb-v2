@@ -60,15 +60,7 @@ CLASS QLabel INHERIT QFrame
    METHOD onLinkActivated
    METHOD onLinkHovered
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QLabel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -100,13 +92,11 @@ HB_FUNC_STATIC(QLABEL_NEW)
     // QLabel(QWidget *parent = nullptr, Qt::WindowFlags f = 0)
     auto obj = new QLabel(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
-
-  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     // QLabel(const QString &text, QWidget *parent = nullptr, Qt::WindowFlags f = 0)
     auto obj = new QLabel(PQSTRING(1), OPQWIDGET(2, nullptr),
                           HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt5xHb::returnNewObject(obj, false);
-
   } else {
     THROW_ERROR_3012();
   }
@@ -274,7 +264,7 @@ HB_FUNC_STATIC(QLABEL_PICTURE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->picture();
+      const auto ptr = obj->picture();
       Qt5xHb::createReturnClass(ptr, "QPICTURE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -293,7 +283,7 @@ HB_FUNC_STATIC(QLABEL_PIXMAP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->pixmap();
+      const auto ptr = obj->pixmap();
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -702,7 +692,6 @@ HB_FUNC_STATIC(QLABEL_SETNUM)
         }
 
         RETURN_SELF();
-
       } else if (HB_IS_INTEGER(pNum)) {
         // void setNum(int num)
         GET_PTR_FROM_SELF(obj);
@@ -712,7 +701,6 @@ HB_FUNC_STATIC(QLABEL_SETNUM)
         }
 
         RETURN_SELF();
-
       } else {
         THROW_ERROR_3012();
       }
@@ -769,7 +757,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

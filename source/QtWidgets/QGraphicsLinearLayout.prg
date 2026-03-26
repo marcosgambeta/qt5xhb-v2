@@ -41,15 +41,7 @@ CLASS QGraphicsLinearLayout INHERIT QGraphicsLayout
    METHOD setGeometry
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
 ENDCLASS
-
-PROCEDURE destroyObject() CLASS QGraphicsLinearLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
 
 // clang-format on
 
@@ -77,12 +69,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_NEW)
     // QGraphicsLinearLayout(QGraphicsLayoutItem *parent = nullptr)
     auto obj = new QGraphicsLinearLayout(HB_ISNIL(1) ? nullptr : PQGRAPHICSLAYOUTITEM(1));
     Qt5xHb::returnNewObject(obj, true);
-
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQGRAPHICSLAYOUTITEMORNIL(2)) {
     // QGraphicsLinearLayout(Qt::Orientation orientation, QGraphicsLayoutItem *parent = nullptr)
     auto obj = new QGraphicsLinearLayout(PQT_ORIENTATION(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSLAYOUTITEM(2));
     Qt5xHb::returnNewObject(obj, true);
-
   } else {
     THROW_ERROR_3012();
   }
