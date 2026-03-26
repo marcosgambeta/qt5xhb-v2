@@ -428,8 +428,6 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATESHADER)
   }
 }
 
-// void glDeleteBuffers(GLsizei n, const GLuint *buffers)
-// void glDeleteFramebuffers(GLsizei n, const GLuint *framebuffers)
 // void glDeleteProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
 {
@@ -450,7 +448,6 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
   RETURN_SELF();
 }
 
-// void glDeleteRenderbuffers(GLsizei n, const GLuint *renderbuffers)
 // void glDeleteShader(GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETESHADER)
 {
@@ -591,9 +588,6 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D)
   RETURN_SELF();
 }
 
-// void glGenBuffers(GLsizei n, GLuint *buffers)
-// void glGenFramebuffers(GLsizei n, GLuint *framebuffers)
-// void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers)
 // void glGenerateMipmap(GLenum target)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
 {
@@ -614,11 +608,6 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
   RETURN_SELF();
 }
 
-// void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei *length, GLint *size, GLenum *type,
-// char *name)
-// void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei *length, GLint *size, GLenum *type,
-// char *name)
-// void glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei *count, GLuint *shaders)
 // int glGetAttribLocation(GLuint program, const char *name)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
 {
@@ -637,15 +626,6 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
   }
 }
 
-// void glGetBufferParameteriv(GLenum target, GLenum pname, GLint *params)
-// void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint *params)
-// void glGetProgramInfoLog(GLuint program, GLsizei bufsize, GLsizei *length, char *infolog)
-// void glGetProgramiv(GLuint program, GLenum pname, GLint *params)
-// void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint *params)
-// void glGetShaderInfoLog(GLuint shader, GLsizei bufsize, GLsizei *length, char *infolog)
-// void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint *range, GLint *precision)
-// void glGetShaderSource(GLuint shader, GLsizei bufsize, GLsizei *length, char *source)
-// void glGetShaderiv(GLuint shader, GLenum pname, GLint *params)
 // int glGetUniformLocation(GLuint program, const char *name)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
 {
@@ -664,10 +644,6 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
   }
 }
 
-// void glGetUniformfv(GLuint program, GLint location, GLfloat *params)
-// void glGetUniformiv(GLuint program, GLint location, GLint *params)
-// void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat *params)
-// void glGetVertexAttribiv(GLuint index, GLenum pname, GLint *params)
 // GLboolean glIsBuffer(GLuint buffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISBUFFER)
 {
