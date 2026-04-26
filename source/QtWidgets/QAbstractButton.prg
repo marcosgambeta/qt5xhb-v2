@@ -30,12 +30,12 @@ CLASS QAbstractButton INHERIT QWidget
    ASSIGN lAutoRepeat(l) INLINE ::setAutoRepeat(l)
 
    // autoRepeatDelay : int
-   ACCESS lAutoRepeatDelay INLINE ::autoRepeatDelay()
-   ASSIGN lAutoRepeatDelay(n) INLINE ::setAutoRepeatDelay(n)
+   ACCESS nAutoRepeatDelay INLINE ::autoRepeatDelay()
+   ASSIGN nAutoRepeatDelay(n) INLINE ::setAutoRepeatDelay(n)
 
    // autoRepeatInterval : int
-   ACCESS lAutoRepeatInterval INLINE ::autoRepeatInterval()
-   ASSIGN lAutoRepeatInterval(n) INLINE ::setAutoRepeatInterval(n)
+   ACCESS nAutoRepeatInterval INLINE ::autoRepeatInterval()
+   ASSIGN nAutoRepeatInterval(n) INLINE ::setAutoRepeatInterval(n)
 
    // checkable : bool
    ACCESS lCheckable INLINE ::isCheckable()
