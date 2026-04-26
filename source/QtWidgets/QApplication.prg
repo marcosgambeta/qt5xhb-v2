@@ -57,7 +57,7 @@ CLASS QApplication INHERIT QGuiApplication
 
    // wheelScrollLines : int
    ACCESS nWheelScrollLines INLINE ::wheelScrollLines()
-   ASSIGN nWheelScrollLines(n) INLINE ::setWheelScrollLines*(n)
+   ASSIGN nWheelScrollLines(n) INLINE ::setWheelScrollLines(n)
 
    // windowIcon : QIcon
    ACCESS oWindowIcon INLINE ::windowIcon()
